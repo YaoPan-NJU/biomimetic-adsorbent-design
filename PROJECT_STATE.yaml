@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: finalist_round_3
+phase: final_delivery_compilation
 status: in_progress
-last_completed_step: all five concepts completed two rounds; D1 is working primary and four original alternatives were terminated
-next_action: complete third-round design, attack and review for D1-A synthetic clamp and reopened D1-B PBP biohybrid backup
+last_completed_step: D1-A and D1-B completed third-round attack, revision and limited re-review; both passed design review
+next_action: finish the Chinese delivery package, run repository and credential checks, then validate continuity from a fresh clone
 active_branch: main
 last_verified_commit: 6b8b976
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -24,8 +24,8 @@ deep_concepts:
   - PFOA/hL-FABP
   - nitrate/NrtA
   - O-desmethylvenlafaxine/SERT
-primary_design: null
-backup_design: null
+primary_design: D1-A synthetic double-arm phosphate peptide clamp (93/100 design pass)
+backup_design: D1-B C-terminally immobilized PBP trace-polishing bed (89/100 design pass)
 open_issues:
   - id: INIT-001
     severity: high
@@ -45,11 +45,11 @@ open_issues:
     text: Attempt 1 was confounded by a changed evidence ledger; results were invalidated and a hash-locked rerun was specified.
   - id: DESIGN-001
     severity: high
-    status: open
+    status: resolved
     text: Complete at least two adversarial rounds for all five admitted concepts and a third round for the top two.
   - id: DESIGN-D1-R1
     severity: high
-    status: open
+    status: resolved
     text: D1 requires a frozen receptor structure and design-level closure of five water/selectivity/dynamic/engineering/regeneration issues.
   - id: DESIGN-D2-R1
     severity: high
@@ -69,8 +69,12 @@ open_issues:
     text: D5 salt-responsive shell is not a SERT dynamic hard correspondence; current architecture rejected.
   - id: DESIGN-D1B-R3
     severity: high
-    status: open
+    status: resolved
     text: Design and independently review the oriented PBP/PiBP biohybrid as a mechanism-preserving backup with explicit capacity, regeneration, stability and leakage gates.
+  - id: FINAL-001
+    severity: high
+    status: open
+    text: Complete the final Chinese report, attachment index, state synchronization, credential scan and fresh-clone continuity validation.
 artifacts:
   contract: research_contract.yaml
   rules: SOUL.md
@@ -104,8 +108,15 @@ artifacts:
   gate_g3: orchestration/gates/G3_CONCEPTS.yaml
   round2_summary: rounds/round_2/REVIEW.md
   gate_g4_round2: orchestration/gates/G4_ADVERSARIAL_ROUND2.yaml
+  round3_primary: rounds/round_3/D1A_FINAL.md
+  round3_primary_review: rounds/round_3/REVIEW_D1A.md
+  round3_backup: rounds/round_3/D1B_FINAL.md
+  round3_backup_review: rounds/round_3/REVIEW_D1B.md
+  pbp_construct_provenance: research/evidence/PBP_CONSTRUCT_PROVENANCE.md
+  pbp_construct_fasta: deliverables/attachments/PBP_CONSTRUCTS.fasta
+  gate_g5_finalists: orchestration/gates/G5_FINALISTS.yaml
 checks:
   secrets_scan: passed_before_model_only_checkpoint
   state_paths: passed_before_model_only_checkpoint
   remote_push: model_only_checkpoint_pushed
-  fresh_clone: pending
+  fresh_clone: pending_final_delivery

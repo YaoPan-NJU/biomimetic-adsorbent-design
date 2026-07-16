@@ -1,0 +1,21 @@
+gate: G5_FINALISTS
+stage: after_round_3
+status: passed_design_review
+date: 2026-07-16
+primary:
+  id: D1-A
+  name: PstS/PBP-inspired synthetic double-arm phosphate peptide clamp
+  final_score: 93
+  unresolved_critical: 0
+  unresolved_high: 0
+  decision: pass
+backup:
+  id: D1-B
+  name: C-terminally immobilized PBP trace-phosphate polishing bed
+  final_score: 89
+  unresolved_critical: 0
+  unresolved_high: 0
+  decision: pass
+interpretation: design pass only; no experimental performance has been generated
+switch_rule: D1-B starts only when a D1-A mechanism or regeneration switch condition is met and D1-B prechecks pass
+supervisor_decision: ADVANCE_TO_FINAL_DELIVERY

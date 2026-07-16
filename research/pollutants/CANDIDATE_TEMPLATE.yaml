@@ -1,0 +1,35 @@
+pollutant_id: null
+canonical_name: null
+class: null
+secondary_effluent_relevance:
+  occurrence: null
+  environmental_significance: null
+  evidence_ids: []
+engineering_problem:
+  common_bottleneck: null
+  pollutant_specific_expression: null
+  conventional_capability_gap: null
+selectivity:
+  target_state_at_neutral_ph: null
+  principal_competitors: []
+  matrix_interferences: []
+  discriminating_feature: null
+biomimetic_opportunity:
+  required_static_capability: null
+  required_dynamic_capability: null
+  prototype_search_terms: []
+publication_case:
+  novelty_opportunity: null
+  crowded_routes: []
+  falsifiable_claim: null
+scores:
+  selective_challenge: null
+  uniquely_biomimetic_capability: null
+  static_dynamic_synergy: null
+  engineering_generality: null
+  environmental_significance: null
+  novelty_and_evidence_opportunity: null
+  total: null
+risks: []
+status: candidate
+

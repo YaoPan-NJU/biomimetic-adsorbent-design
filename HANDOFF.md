@@ -16,13 +16,15 @@ Develop one primary and one backup biomimetic material for selective adsorption 
 
 ## Current state
 
-The repository skeleton and governing contract are established and pushed. A PostgreSQL BMDL snapshot was exported with both default and transaction read-only settings confirmed as `on`. The structural audit found 48 prototypes, 44 pollutant profiles, 130 matches, and 3015 raw performance rows that collapse to 1076 unique rows after removing surrogate IDs. BMDL is provisionally restricted to evidence checking until the paired evaluation is complete.
+The governing contract, ten-pollutant shortlist, evidence ledger, key-claim spot check, and isolated model-only baseline are complete. A PostgreSQL BMDL snapshot was exported with both default and transaction read-only settings confirmed as `on`. The structural audit found 48 prototypes, 44 pollutant profiles, 130 matches, and 3015 raw performance rows that collapse to 1076 unique rows after removing surrogate IDs.
 
-Primary-source retrieval for the ten-pollutant shortlist is in progress. No pollutant or material has been selected. The next action is to merge and verify the retrieval evidence, lock the ten pollutant problem briefs, and then run the paired model-only versus BMDL-assisted benchmark.
+The frozen model-only ranking is led by phosphate/PstS (91), nitrate/NrtA (87), ODV/SERT (84), clarithromycin/ribosome (82), and PFOA/FABP (80). Scores are design triage values, not predicted performance. Evidence spot checking narrowed five of ten high-impact claims; in particular, NrtA and SERT sources do not independently establish complete open-to-closed cycles, and hL-FABP evidence does not yet establish a transferable dynamic gate.
+
+BMDL remains provisionally restricted to evidence checking. The exact next action is to let isolated roles generate BMDL-assisted variants from `research/bmdl/paired_inputs/`, anonymize the paired concepts, obtain blind scores, and apply the numerical gate in `research_contract.yaml`. The model-only files must not be edited after this checkpoint.
 
 ## Resume instructions
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
-2. Verify the active branch and inspect only artifacts listed in `PROJECT_STATE.yaml`.
-3. Continue the single `next_action` recorded there.
+2. Verify `main` and confirm that `research/bmdl/paired/model_only_batch_a.md` and `model_only_batch_b.md` remain unchanged.
+3. Continue the single BMDL paired-evaluation action recorded in `PROJECT_STATE.yaml`.
 4. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

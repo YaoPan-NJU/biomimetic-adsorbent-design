@@ -1,0 +1,152 @@
+[
+  {
+    "candidate": "pfoa",
+    "query": "PFOA",
+    "profile_hit": true,
+    "match_count": 3,
+    "lanes": [
+      "exploratory",
+      "exploratory",
+      "exploratory"
+    ],
+    "prototype_ids": [
+      "chitosan",
+      "diatom-frustule",
+      "polydopamine-coating"
+    ]
+  },
+  {
+    "candidate": "pfos",
+    "query": "PFOS",
+    "profile_hit": true,
+    "match_count": 4,
+    "lanes": [
+      "exploratory",
+      "exploratory",
+      "exploratory",
+      "exploratory"
+    ],
+    "prototype_ids": [
+      "chitosan",
+      "diatom-frustule",
+      "lotus-leaf",
+      "polydopamine-coating"
+    ]
+  },
+  {
+    "candidate": "genx",
+    "query": "HFPO-DA (GenX)",
+    "profile_hit": true,
+    "match_count": 0,
+    "lanes": [],
+    "prototype_ids": []
+  },
+  {
+    "candidate": "clarithromycin",
+    "query": "Clarithromycin",
+    "profile_hit": false,
+    "match_count": 0,
+    "lanes": [],
+    "prototype_ids": []
+  },
+  {
+    "candidate": "odv",
+    "query": "O-desmethylvenlafaxine",
+    "profile_hit": false,
+    "match_count": 0,
+    "lanes": [],
+    "prototype_ids": []
+  },
+  {
+    "candidate": "smx",
+    "query": "SMX",
+    "profile_hit": true,
+    "match_count": 3,
+    "lanes": [
+      "exploratory",
+      "exploratory",
+      "exploratory"
+    ],
+    "prototype_ids": [
+      "chitosan",
+      "plant-tannin",
+      "polydopamine-coating"
+    ]
+  },
+  {
+    "candidate": "bpa",
+    "query": "BPA",
+    "profile_hit": true,
+    "match_count": 3,
+    "lanes": [
+      "exploratory",
+      "exploratory",
+      "exploratory"
+    ],
+    "prototype_ids": [
+      "chitosan",
+      "plant-tannin",
+      "polydopamine-coating"
+    ]
+  },
+  {
+    "candidate": "phosphate",
+    "query": "PO43-",
+    "profile_hit": true,
+    "match_count": 5,
+    "lanes": [
+      "lead",
+      "exploratory",
+      "exploratory",
+      "lead",
+      "fact"
+    ],
+    "prototype_ids": [
+      "bone-structure",
+      "sulfate-reducing-bacteria",
+      "chitosan",
+      "oyster-shell",
+      "iron-oxidizing-bacteria"
+    ]
+  },
+  {
+    "candidate": "nitrate",
+    "query": "NO3-",
+    "profile_hit": true,
+    "match_count": 5,
+    "lanes": [
+      "lead",
+      "exploratory",
+      "lead",
+      "exploratory",
+      "lead"
+    ],
+    "prototype_ids": [
+      "bone-structure",
+      "oyster-shell",
+      "chitosan",
+      "plant-tannin",
+      "polydopamine-coating"
+    ]
+  },
+  {
+    "candidate": "as_iii",
+    "query": "As(III)",
+    "profile_hit": true,
+    "match_count": 5,
+    "lanes": [
+      "lead",
+      "fact",
+      "exploratory",
+      "exploratory",
+      "lead"
+    ],
+    "prototype_ids": [
+      "bone-structure",
+      "iron-oxidizing-bacteria",
+      "oyster-shell",
+      "sulfate-reducing-bacteria",
+      "silk-fibroin"
+    ]
+  }
+]

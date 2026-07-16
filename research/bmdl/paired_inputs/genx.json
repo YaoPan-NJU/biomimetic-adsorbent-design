@@ -1,0 +1,32 @@
+{
+  "candidate": "genx",
+  "query": "HFPO-DA (GenX)",
+  "exact_profile_hit": true,
+  "profile": {
+    "applicable_prototypes": [],
+    "canonical_name": "HFPO-DA (GenX)",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "疏水",
+      "静电(阴离子)",
+      "界面/CMC"
+    ],
+    "molecular_features": [
+      "全氟醚羧酸尾",
+      "羧酸头基",
+      "C-F键"
+    ],
+    "pollutant_class": "PFAS_ether_carboxylate",
+    "pollutant_id": "HFPO-DA (GenX)",
+    "profile_basis": "database"
+  },
+  "matches": [],
+  "prototypes": [],
+  "use_constraints": {
+    "BMDL_weight_is_not_performance": true,
+    "exploratory_and_inference_are_leads_only": true,
+    "outside_prototype_search_remains_allowed": true
+  }
+}

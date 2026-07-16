@@ -1,13 +1,23 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: pollutant_research
+phase: bmdl_paired_evaluation
 status: in_progress
-last_completed_step: strictly read-only BMDL snapshot and structural audit completed
-next_action: merge primary-source retrieval into the ten-pollutant shortlist
+last_completed_step: ten-pollutant shortlist and isolated model-only baseline frozen
+next_action: generate BMDL-assisted variants from minimal paired inputs and run blind review
 active_branch: main
-last_verified_commit: 4cdd8a3
+last_verified_commit: 6b8b976
 bmdl_policy: provisional_evidence_only_pending_paired_evaluation
-candidate_pollutants: []
+candidate_pollutants:
+  - PFOA
+  - PFOS
+  - HFPO-DA (GenX)
+  - clarithromycin
+  - O-desmethylvenlafaxine
+  - sulfamethoxazole
+  - bisphenol A
+  - phosphate
+  - nitrate
+  - As(III)
 deep_concepts: []
 primary_design: null
 backup_design: null
@@ -18,8 +28,12 @@ open_issues:
     text: BMDL snapshot exported with both default and transaction read-only set to on; structural audit completed.
   - id: INIT-002
     severity: high
-    status: open
+    status: resolved
     text: Establish the evidence-backed ten-pollutant shortlist for secondary effluent.
+  - id: BMDL-001
+    severity: high
+    status: open
+    text: Complete paired blind evaluation before allowing BMDL into any creative design stage.
 artifacts:
   contract: research_contract.yaml
   rules: SOUL.md
@@ -28,8 +42,16 @@ artifacts:
   bmdl_manifest: data/bmdl_snapshot/manifest.json
   bmdl_audit: research/bmdl/BMDL_AUDIT.md
   bmdl_audit_metrics: research/bmdl/audit_metrics.json
+  bmdl_pair_inputs: research/bmdl/paired_inputs/index.json
+  model_only_batch_a: research/bmdl/paired/model_only_batch_a.md
+  model_only_batch_b: research/bmdl/paired/model_only_batch_b.md
+  pollutant_shortlist: research/pollutants/POLLUTANT_SHORTLIST.md
+  evidence_ledger: research/evidence/evidence_ledger.csv
+  key_claim_verification: research/evidence/KEY_CLAIM_VERIFICATION.md
+  orchestration_protocol: orchestration/PROTOCOL.md
+  gate_g1: orchestration/gates/G1_SHORTLIST.yaml
 checks:
-  secrets_scan: passed_at_bootstrap
-  state_paths: passed_at_bootstrap
+  secrets_scan: passed_before_model_only_checkpoint
+  state_paths: passed_before_model_only_checkpoint
   remote_push: bootstrap_pushed
   fresh_clone: pending

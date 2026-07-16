@@ -1,0 +1,15 @@
+gate: G1_shortlist
+status: passed
+reviewer: Codex_primary
+date: 2026-07-16
+inputs:
+  - research/pollutants/POLLUTANT_SHORTLIST.md
+  - research/evidence/evidence_ledger.csv
+  - research/evidence/KEY_CLAIM_VERIFICATION.md
+checks:
+  frozen_problem_statement: passed
+  candidate_count_is_ten: passed
+  primary_matrix_is_secondary_effluent: passed
+  claim_boundaries_spot_checked: passed_with_five_narrowed_claims
+decision: CONTINUE
+next_gate: G2_BMDL

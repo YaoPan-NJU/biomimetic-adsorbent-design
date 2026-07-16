@@ -1,0 +1,13 @@
+{
+  "candidate": "odv",
+  "query": "O-desmethylvenlafaxine",
+  "exact_profile_hit": false,
+  "profile": null,
+  "matches": [],
+  "prototypes": [],
+  "use_constraints": {
+    "BMDL_weight_is_not_performance": true,
+    "exploratory_and_inference_are_leads_only": true,
+    "outside_prototype_search_remains_allowed": true
+  }
+}

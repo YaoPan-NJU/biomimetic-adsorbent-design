@@ -1,0 +1,41 @@
+review_scope: ten paired pollutant concepts
+identity_blind: true
+score_total: 100
+dimensions:
+  scientific_correctness: 15
+  causal_closure: 20
+  biomimetic_fidelity: 15
+  selective_mechanism: 15
+  originality_and_diversity: 15
+  evidence_quality: 10
+  falsifiability: 10
+required_outputs_per_pollutant:
+  - variant_scores
+  - preferred_variant
+  - score_difference
+  - causal_dimension_difference
+  - evidence_dimension_difference
+  - originality_difference
+  - severe_misleading_links
+  - concise_rationale
+review_rules:
+  - Do not infer or name the generation method.
+  - Score only the supplied concept body and the frozen evidence ledger.
+  - Penalize a biological name that does not causally determine the material structure.
+  - Penalize unsupported dynamic closure or evidence overstatement.
+  - A generic bio-derived material is not a biomimetic hard correspondence.
+  - Record severe misleading links separately from ordinary weaknesses.
+bmdl_decision_contract:
+  design_assist:
+    minimum_wins: 6
+    minimum_mean_gain: 5
+    causal_and_evidence_dimensions_must_both_improve: true
+    maximum_originality_drop: 2
+    maximum_severe_misleading_links: 1
+  evidence_only:
+    condition: evidence_improves_but_design_assist_gate_fails
+  exclude_design_stage:
+    any_of:
+      - mean_score_declines
+      - diversity_ratio_below_0.80
+      - severe_misleading_links_at_least_2

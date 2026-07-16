@@ -2,8 +2,8 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: bmdl_paired_evaluation
 status: in_progress
-last_completed_step: ten-pollutant shortlist and isolated model-only baseline frozen
-next_action: generate BMDL-assisted variants from minimal paired inputs and run blind review
+last_completed_step: first BMDL paired evaluation archived as invalid because evidence versions differed
+next_action: rerun both paired arms in fresh contexts using the identical frozen input manifest
 active_branch: main
 last_verified_commit: 6b8b976
 bmdl_policy: provisional_evidence_only_pending_paired_evaluation
@@ -34,6 +34,10 @@ open_issues:
     severity: high
     status: open
     text: Complete paired blind evaluation before allowing BMDL into any creative design stage.
+  - id: BMDL-002
+    severity: high
+    status: resolved
+    text: Attempt 1 was confounded by a changed evidence ledger; results were invalidated and a hash-locked rerun was specified.
 artifacts:
   contract: research_contract.yaml
   rules: SOUL.md
@@ -50,8 +54,11 @@ artifacts:
   key_claim_verification: research/evidence/KEY_CLAIM_VERIFICATION.md
   orchestration_protocol: orchestration/PROTOCOL.md
   gate_g1: orchestration/gates/G1_SHORTLIST.yaml
+  bmdl_attempt1_incident: research/bmdl/PAIRED_EVALUATION_INCIDENT.md
+  bmdl_attempt1_review: research/bmdl/paired/BLIND_REVIEW.md
+  bmdl_rerun_manifest: research/bmdl/rerun/FROZEN_INPUT_MANIFEST.yaml
 checks:
   secrets_scan: passed_before_model_only_checkpoint
   state_paths: passed_before_model_only_checkpoint
-  remote_push: bootstrap_pushed
+  remote_push: model_only_checkpoint_pushed
   fresh_clone: pending

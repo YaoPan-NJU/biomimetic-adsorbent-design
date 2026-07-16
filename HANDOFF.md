@@ -20,11 +20,13 @@ The governing contract, ten-pollutant shortlist, evidence ledger, key-claim spot
 
 The frozen model-only ranking is led by phosphate/PstS (91), nitrate/NrtA (87), ODV/SERT (84), clarithromycin/ribosome (82), and PFOA/FABP (80). Scores are design triage values, not predicted performance. Evidence spot checking narrowed five of ten high-impact claims; in particular, NrtA and SERT sources do not independently establish complete open-to-closed cycles, and hL-FABP evidence does not yet establish a transferable dynamic gate.
 
-BMDL remains provisionally restricted to evidence checking. The exact next action is to let isolated roles generate BMDL-assisted variants from `research/bmdl/paired_inputs/`, anonymize the paired concepts, obtain blind scores, and apply the numerical gate in `research_contract.yaml`. The model-only files must not be edited after this checkpoint.
+BMDL remains provisionally restricted to evidence checking. The first anonymous comparison appeared to favor the assisted variants by 5.8 points on average, but the comparison is invalid: the evidence ledger was updated between the two arms, and the reviewer explicitly rewarded those evidence corrections. The invalid attempt and its blind scores are preserved rather than erased.
+
+The exact next action is a controlled rerun. Fresh isolated contexts must use the hash-locked common inputs in `research/bmdl/rerun/FROZEN_INPUT_MANIFEST.yaml`; only the assisted arm may additionally read the per-candidate BMDL packages. New anonymous variants are then reviewed without access to the identity mapping. No BMDL policy may be upgraded from the invalid first attempt.
 
 ## Resume instructions
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
-2. Verify `main` and confirm that `research/bmdl/paired/model_only_batch_a.md` and `model_only_batch_b.md` remain unchanged.
-3. Continue the single BMDL paired-evaluation action recorded in `PROJECT_STATE.yaml`.
+2. Verify `main`, the frozen input hashes, and the invalid-attempt record.
+3. Continue only the controlled BMDL rerun recorded in `PROJECT_STATE.yaml`.
 4. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

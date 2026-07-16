@@ -1,0 +1,51 @@
+attempt: 2
+purpose: controlled paired comparison with identical non-BMDL evidence
+frozen_at: 2026-07-16
+common_inputs:
+  - path: SOUL.md
+    sha256: d2c631f69cf7e0ab8dc7c20bd28805b072f927eeb88c909e076ea005808ba650
+  - path: research_contract.yaml
+    sha256: df8e92758eb985cfedf2c8e54ce5c9122df7f3e15cf6b271ee51c8e40d6d6e58
+  - path: research/pollutants/POLLUTANT_SHORTLIST.md
+    sha256: 229f53618e181745e41f7a8849fa7553ae5ca28fcac33993623b884a5540a62f
+  - path: research/evidence/evidence_ledger.csv
+    sha256: a30e87aa82d1dbc0dcdd8775e3b3c0249aead56ce9ba66618fe6761ce2da04d8
+  - path: research/evidence/KEY_CLAIM_VERIFICATION.md
+    sha256: 7aa3a4de47bd8c505f041a6223c2e64eef05f3192da13a54e624861b23cfa197
+model_only_additional_inputs: []
+bmdl_assisted_additional_inputs:
+  - research/bmdl/paired_inputs/index.json
+  - research/bmdl/paired_inputs/<candidate>.json
+generation_contract:
+  candidates:
+    - PFOA
+    - PFOS
+    - HFPO-DA (GenX)
+    - clarithromycin
+    - O-desmethylvenlafaxine
+    - sulfamethoxazole
+    - bisphenol A
+    - phosphate
+    - nitrate
+    - As(III)
+  concept_fields:
+    - prototype_and_evidence_boundary
+    - static_hard_correspondence
+    - dynamic_hard_correspondence
+    - material_realization
+    - selectivity_competitors
+    - measurements
+    - causal_controls
+    - falsifiable_predictions
+    - risks
+  scoring_dimensions:
+    - scientific_correctness_15
+    - causal_closure_20
+    - biomimetic_fidelity_15
+    - selective_mechanism_15
+    - originality_15
+    - evidence_quality_10
+    - falsifiability_10
+  self_scores_hidden_from_blind_reviewer: true
+  no_web_access: true
+  fresh_isolated_context_required: true

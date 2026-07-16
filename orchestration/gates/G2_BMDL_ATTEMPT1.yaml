@@ -1,0 +1,16 @@
+gate: G2_BMDL
+attempt: 1
+status: invalid
+date: 2026-07-16
+reason: evidence ledger changed between model-only and assisted generation
+observed_blind_result:
+  assisted_wins: 10
+  mean_gain: 5.8
+  usable_for_causal_decision: false
+corrective_action: rerun both sides with identical frozen evidence in fresh isolated contexts
+retained_artifacts:
+  - research/bmdl/paired/model_only_batch_a.md
+  - research/bmdl/paired/model_only_batch_b.md
+  - research/bmdl/paired/bmdl_assisted_batch_a.md
+  - research/bmdl/paired/bmdl_assisted_batch_b.md
+  - research/bmdl/paired/BLIND_REVIEW.md

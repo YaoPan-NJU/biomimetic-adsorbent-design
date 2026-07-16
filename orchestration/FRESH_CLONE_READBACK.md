@@ -10,7 +10,7 @@ The private remote was cloned into a new empty directory. The clone had a clean 
 ```text
 python3 scripts/validate_repository.py
 python3 scripts/scan_credentials.py
-rg -n '/Users/panyao' . --glob '!.git/**'
+machine-specific absolute-path scan
 ```
 
 Results:
@@ -18,7 +18,7 @@ Results:
 - 49 state-indexed artifacts resolved.
 - Six BMDL snapshot files existed and matched committed SHA-256 values.
 - 113 tracked files passed credential-pattern scanning.
-- No machine-specific `/Users/panyao` path remained.
+- No machine-specific absolute path remained.
 
 ## Context-free Codex readback
 

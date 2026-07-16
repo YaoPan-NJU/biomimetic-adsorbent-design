@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: deep_concept_round_1
+phase: deep_concept_round_2
 status: in_progress
-last_completed_step: controlled BMDL attempt-2 completed and BMDL excluded from the design stage
-next_action: generate round-1 deep designs for the five admitted pollutant-prototype pairs
+last_completed_step: five round-1 designs attacked and independently cross-reviewed; none passed
+next_action: revise D1-D3 and complete termination audits for D4-D5, then run round-2 attack and review
 active_branch: main
 last_verified_commit: 6b8b976
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -47,6 +47,26 @@ open_issues:
     severity: high
     status: open
     text: Complete at least two adversarial rounds for all five admitted concepts and a third round for the top two.
+  - id: DESIGN-D1-R1
+    severity: high
+    status: open
+    text: D1 requires a frozen receptor structure and design-level closure of five water/selectivity/dynamic/engineering/regeneration issues.
+  - id: DESIGN-D2-R1
+    severity: high
+    status: open
+    text: D2 requires a chemically defined local gate and must not treat bound-state A2062 heterogeneity as proven target-induced gating.
+  - id: DESIGN-D3-R1
+    severity: critical
+    status: open
+    text: D3 lacks PFOA-specific biological dynamic evidence and must first pass the two-site and chain-length static gates.
+  - id: DESIGN-D4-R1
+    severity: critical
+    status: open
+    text: D4 lacks experimental NrtA apo/bound dynamic evidence; full concept rejected pending a new prototype or direct evidence.
+  - id: DESIGN-D5-R1
+    severity: critical
+    status: open
+    text: D5 salt-responsive shell is not a SERT dynamic hard correspondence; current architecture rejected.
 artifacts:
   contract: research_contract.yaml
   rules: SOUL.md
@@ -76,6 +96,8 @@ artifacts:
   bmdl_rerun_identity_reveal: research/bmdl/rerun/IDENTITY_REVEAL.yaml
   bmdl_final_evaluation: research/bmdl/BMDL_PAIRED_EVALUATION.md
   gate_g2: orchestration/gates/G2_BMDL_ATTEMPT2.yaml
+  round1_summary: rounds/round_1/REVIEW.md
+  gate_g3: orchestration/gates/G3_CONCEPTS.yaml
 checks:
   secrets_scan: passed_before_model_only_checkpoint
   state_paths: passed_before_model_only_checkpoint

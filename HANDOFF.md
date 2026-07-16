@@ -24,7 +24,9 @@ BMDL remains provisionally restricted to evidence checking. The first anonymous 
 
 The controlled second comparison is complete. The assisted arm won 8/10 but improved the mean score by only 2.3 points, below the required 5. BMDL inputs also contained at least four severe cross-pollutant or mislabeled associations. The final policy is `exclude_design_stage_allow_posthoc_negative_audit_only`: designers must not read BMDL; after a design is frozen, the supervisor may use the snapshot only to add conventional baselines or detect known bad associations.
 
-Five concepts are admitted to adversarial development: phosphate/PstS-PBP, clarithromycin/ribosomal exit tunnel, PFOA/hL-FABP, nitrate/NrtA, and ODV/SERT. As(III) was not admitted despite a strong ArsR mechanism because ordinary municipal secondary-effluent relevance is conditional. SMX and BPA were displaced by stronger dynamic or structural evidence. The exact next action is round-1 design for all five, using the two translation-evidence dossiers but no BMDL content.
+Five concepts completed round-1 design, attack, and cross-review. None passed. D1 phosphate scored 78 and is the strongest revision candidate; D2 clarithromycin scored 70 and remains the likely backup route; D3 PFOA scored 63 with a dynamic critical; D4 nitrate scored 62 and the full static-dynamic concept was rejected; D5 ODV scored 51 and its SERT dynamic mapping was rejected. Exact issue tables are in the two reviewer files and summarized in `rounds/round_1/REVIEW.md`.
+
+The exact next action is Round 2: revise D1-D3 within the reviewer-authorized boundaries, produce explicit termination audits for D4-D5, then run cross-attack and cross-review. No BMDL material may enter these revisions.
 
 Translation-evidence dossiers were prepared in parallel but are deliberately excluded from the rerun manifest. They strengthen the later deep-design gate: PBP has an experimental apo/bound pair and direct fluorescence/FRET precedents; NrtA still lacks an experimental apo structure; clarithromycin has a direct 3.3 Å ribosome structure with local A2062 heterogeneity; hL-FABP supports PFOA binding and local portal mobility but not a large global closure; ODV binds hSERT functionally but lacks a target-bound structure.
 
@@ -32,5 +34,5 @@ Translation-evidence dossiers were prepared in parallel but are deliberately exc
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
 2. Verify `main`, read the G2 decision, and ensure no design role receives BMDL paths.
-3. Continue the single round-1 deep-design action recorded in `PROJECT_STATE.yaml`.
+3. Continue the single round-2 action recorded in `PROJECT_STATE.yaml`.
 4. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

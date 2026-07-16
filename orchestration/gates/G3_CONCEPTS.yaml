@@ -1,0 +1,20 @@
+gate: G3_CONCEPTS
+status: passed_with_no_round1_pass
+date: 2026-07-17
+deep_concepts_completed: 5
+all_have_static_candidate: true
+all_have_dynamic_candidate_or_explicit_failure_boundary: true
+round1_scores:
+  D1_phosphate: 78
+  D2_clarithromycin: 70
+  D3_pfoa: 63
+  D4_nitrate: 62
+  D5_odv: 51
+round1_decisions:
+  D1_phosphate: revise
+  D2_clarithromycin: revise
+  D3_pfoa: revise_at_risk
+  D4_nitrate: reject_full_concept
+  D5_odv: reject
+decision: CONTINUE_TO_ROUND_2
+next_gate: G4_ADVERSARIAL

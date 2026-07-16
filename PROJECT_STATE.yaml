@@ -5,7 +5,7 @@ status: revision_in_progress
 last_completed_step: Pan Yao rejected the nutrient-led finalist scope, made environmental significance and secondary-effluent relevance pre-scoring hard gates, and added 2,6-dichlorophenol to the priority verification group
 next_action: Build an auditable pollutant_kb 20-to-10 screening matrix that first applies pass/fail secondary-effluent and environmental-significance gates, then scores only admitted organic pollutants; do not resume biomimetic design until the ten are refrozen
 active_branch: main
-last_verified_commit: 53014c468f2e174f5ff69737f7a64e66ff7fee06
+last_verified_commit: 2cc07773650c834fc39c9b1ba880a41312f9637c
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: reopened_not_frozen
 candidate_pollutants: []
@@ -147,10 +147,10 @@ artifacts:
   gate_g6_delivery: orchestration/gates/G6_DELIVERY.yaml
   fresh_clone_readback: orchestration/FRESH_CLONE_READBACK.md
 checks:
-  secrets_scan: passed_on_fresh_clone_53014c4_113_tracked_files
-  state_paths: passed_on_fresh_clone_53014c4_49_artifacts
-  snapshot_checksums: passed_on_fresh_clone_53014c4_6_files
-  machine_specific_paths: none_found_on_fresh_clone_53014c4
-  remote_push: delivery_checkpoint_53014c4_pushed
-  fresh_clone: passed_at_53014c468f2e174f5ff69737f7a64e66ff7fee06
-  context_free_codex_readback: passed
+  secrets_scan: passed_on_fresh_clone_2cc0777_115_tracked_files
+  state_paths: passed_on_fresh_clone_2cc0777_51_artifacts
+  snapshot_checksums: passed_on_fresh_clone_2cc0777_6_files
+  machine_specific_paths: none_found_on_fresh_clone_2cc0777
+  remote_push: scope_revision_checkpoint_2cc0777_pushed
+  fresh_clone: passed_at_2cc07773650c834fc39c9b1ba880a41312f9637c
+  context_free_codex_readback: last_full_delivery_pass_53014c4; current_unique_next_action_validated_on_fresh_clone_2cc0777

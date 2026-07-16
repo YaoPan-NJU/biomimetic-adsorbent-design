@@ -33122,7 +33122,7 @@
             "key_features": "必须保留非对称润湿性（Janus界面）、微纳层级粗糙度及厚度方向润湿梯度；可灵活调整纤维形貌（圆柱/串珠/多孔/核壳）、聚合物基材（PS/PAN/PU/PCL等）及拓扑结构密度（纳米针间距/层厚比）。",
             "problem_definition": "自然界中干旱/高湿环境生物面临高效定向收集与传输水分的挑战；对应水处理领域传统分离膜存在的渗透方向不可控、液/液分离效率低、易污染及高盐/表面活性剂环境下润湿失效等问题。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-Penetration-separation-membrane-hierarchical-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2021-Penetration-separation-membrane-hierarchical-review.json"
         },
         {
           "paper_id": "Yu2022_Fog_Harvesting_Devices_Multiple_Creatures_Review",
@@ -33133,7 +33133,7 @@
             "key_features": "必须保留特征：微纳分级粗糙度、润湿性梯度（亲/疏水或超滑）、非对称几何形态（锥形/纺锤结）；可灵活调整特征：基底材料（织物/金属网/泡沫）、图案比例（如SHL:SHB=1:3）、阵列排列方式（对称/交替）、润滑剂固定策略。",
             "problem_definition": "自然界挑战：干旱/半干旱地区生物面临极度缺水，需从稀薄雾气中高效获取水分；水处理对应：传统雾水收集装置受限于空气动力学效率低、液滴易滞留或二次蒸发，难以实现高效捕获、定向输运与快速脱离的协同。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Progress-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2022-Progress-review.json"
         },
         {
           "paper_id": "yu2022_fog_harvesting_biomimetic_review",
@@ -33144,7 +33144,7 @@
             "key_features": "必须保留特征：亲疏水异质界面、非对称几何构型（锥形/纺锤节/楔形）、定向输运驱动力（Laplace压差/表面能梯度/毛细力）；可灵活调整特征：材料基底类型（织物/金属网/高分子/生物质）、微纳结构尺度与排列密度、表面化学修饰工艺（喷涂/光刻/剪纸/自组装）。",
             "problem_definition": "自然界挑战：干旱沙漠环境中液态水极度匮乏，生物需从稀薄雾气中高效捕获水分；水处理对应：低浓度气溶胶/雾水的高效收集与淡水化，突破传统冷凝/吸附的能耗与效率瓶颈。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Progress-review 2.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2022-Progress-review 2.json"
         }
       ]
     },
@@ -42368,7 +42368,7 @@
             "key_features": "必须保留特征：微纳双重粗糙度几何拓扑、低表面能化学组分（如氟硅烷/PTFE）、Cassie-Baxter态空气层截留机制。可灵活调整特征：基底材质（金属网/织物/气凝胶/聚合物）、制备工艺路线（水热/溶胶凝胶/刻蚀/静电纺丝/涂覆等）、宏观孔径分布与材料机械柔性。",
             "problem_definition": "自然界挑战：荷叶与水黾需在潮湿或水面环境中保持干燥与清洁，避免水浸润导致失重、污染或功能丧失。水处理对应：含油废水及复杂乳液分离过程中，传统过滤/吸附材料易被水润湿，导致通量衰减、油水选择性差、膜污染与孔道堵塞。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2020-李-超疏水-油水分离-综述-研究进展 2.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2020-李-超疏水-油水分离-综述-研究进展 2.json"
         },
         {
           "paper_id": "2023-Sun-green-superhydrophobic-coating-review",
@@ -42379,7 +42379,7 @@
             "key_features": "必须保留特征：微/纳米层级粗糙结构、低表面能（确保Cassie-Baxter态的实现）。可灵活调整特征：绿色低表面能材料的选择（天然蜡/脂肪酸/纤维素/生物质）、制备工艺（涂覆/模板/刻蚀/电纺）、自修复刺激源（光/温/湿响应）。",
             "problem_definition": "自然界中植物叶片需排斥水分和灰尘以维持光合作用并防止病原体附着；在水处理领域，面临油类、染料和有机溶剂等污染物的高效分离挑战，同时传统含氟超疏水材料存在严重的生态毒性和二次污染问题。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-孙-纤维素-超疏水-油水分离-综述.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2023-孙-纤维素-超疏水-油水分离-综述.json"
         },
         {
           "paper_id": "2021-Yang-Ag-superhydrophobic-cotton-oil-water-separation",
@@ -42390,7 +42390,7 @@
             "key_features": "必须保留特征：微-纳米复合阶层结构（微米级基底空隙+纳米级粗糙度）与低表面能化学修饰层的协同；可灵活调整特征：纳米粗糙化材料种类（如替换其他金属/氧化物纳米粒子）、低表面能修饰剂（如替换为氟硅烷）、多孔柔性基底材质。",
             "problem_definition": "自然界中荷叶需在潮湿泥泞环境中保持表面干燥与自清洁；水处理中对应含油废水（轻油、重油及三相混合物）的高效分离难题，以及分离材料在复杂水质（强酸碱、高盐）和机械摩擦下的稳定性挑战。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2020-杨-超疏水-油水分离.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2020-杨-超疏水-油水分离.json"
         },
         {
           "paper_id": "2022-Attachment-review",
@@ -42401,7 +42401,7 @@
             "key_features": "必须保留：特征尺寸小于细菌、高长径比结构、极端润湿性(超疏/超亲)、表面负电荷排斥；可灵活调整：纳米柱具体长径比、排列规则性(均匀/非均匀)、单/双高度组合、基底合成工艺(软光刻/刻蚀/水热等)。",
             "problem_definition": "自然界中生物表面面临微生物定殖与生物膜形成的生存挑战，对应水处理中吸附材料与膜表面的细菌粘附、生物污损及通量衰减问题。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Attachment-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2022-Attachment-review.json"
         },
         {
           "paper_id": "2023-You-superhydrophobic-preparation-application-review",
@@ -42412,7 +42412,7 @@
             "key_features": "必须保留特征：微纳双重粗糙度、低表面能化学修饰、空气垫层维持的Cassie态；可灵活调整特征：微纳结构的具体几何尺寸与拓扑排列、低表面能改性剂种类（如PDMS、硅烷、脂肪酸）、表面粘附力水平（可依据需求调控为低粘附自清洁或高粘附捕获）。",
             "problem_definition": "自然界挑战：荷叶生长于淤泥水体中需保持表面清洁、干燥与结构完整；水处理对应：吸附/分离材料在处理油类、染料及有机溶剂时易发生表面污染、润湿性失效与腐蚀，需开发抗污染、易再生且稳定的界面材料。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-尤-超疏水-研究进展-综述.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2023-尤-超疏水-研究进展-综述.json"
         },
         {
           "paper_id": "2020-Han-antifouling-review",
@@ -42423,7 +42423,7 @@
             "key_features": "必须保留特征：临界表面张力20-30 mN/m区间、微纳级拓扑物理屏障、界面水合/抗蛋白吸附层、动态响应或自修复能力；可灵活调整特征：聚合物基体类型(PDMS/PEG/两性离子)、微结构具体几何尺寸与排列方式、自修复触发条件(光/温/化学)、弹性模量与表面张力的具体配比。",
             "problem_definition": "自然界挑战：海洋生物污损经历有机调节膜形成、微生物生物膜附着、孢子永久交联定殖到大型生物附着四阶段，导致航行阻力剧增与维护成本高昂；水处理对应：水处理膜与设备表面面临相似的生物膜污染与沉积物附着，造成通量衰减、能耗上升及频繁化学清洗需求。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2020-Han-antifouling-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2020-Han-antifouling-review.json"
         },
         {
           "paper_id": "Omar2024_Superhydrophobic_Omniphobic_MD_Desalination_Review",
@@ -42434,7 +42434,7 @@
             "key_features": "必须保留特征：微纳米级表面粗糙度、低表面能化学特性、Cassie-Baxter气穴态；可灵活调整特征：纳米颗粒材质（CuO/Co3O4/SiO2/TiO2/ZnO）、粗糙度具体尺寸（0.3~0.8 μm）、基材类型（陶瓷/聚合物）及膜组件构型（中空纤维/平板/管式）。",
             "problem_definition": "自然界植物叶片需抵抗灰尘和水分附着以维持光合作用；在水处理膜蒸馏（MD）过程中，膜表面面临高盐度、油类、表面活性剂等复杂污染物的润湿与污染挑战，导致通量衰减和脱盐率失效。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2024-Omar-superhydrophobic-hydrophobic-separation-membrane-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2024-Omar-superhydrophobic-hydrophobic-separation-membrane-review.json"
         },
         {
           "paper_id": "Zheng2024_wettability_membrane_review",
@@ -42445,7 +42445,7 @@
             "key_features": "必须保留微纳层级粗糙结构与低表面能修饰的协同作用，以稳定Cassie-Baxter超疏水态或水下超疏油态；可灵活调整智能响应聚合物(如PNIPAM温敏、PDEAEMA CO2/pH响应)、光催化/抗菌组分(ZIF-8、MXene)及Janus不对称拓扑，以适配不同污染物体系与动态工况。",
             "problem_definition": "自然界中植物叶片需应对雨水附着与污染物沉积，进化出自清洁机制以维持生理功能；对应水处理中油水分离、乳化液破乳及有机染料去除面临的膜表面润湿性失控、油污染堵塞及选择性分离效率低下的工程挑战。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2024-Zheng-silk-superhydrophobic-hydrophobic-separation-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2024-Zheng-silk-superhydrophobic-hydrophobic-separation-review.json"
         },
         {
           "paper_id": "2023-Aijaz-electrospun-MD-antifouling-desalination-review",
@@ -42456,7 +42456,7 @@
             "key_features": "必须保留特征：层级微纳粗糙结构、re-entrant表面纹理（如圆柱形/蘑菇形）、超低表面能化学修饰（<30 mN/m）。可灵活调整特征：粗化纳米颗粒种类（优选ZnO以兼顾杀菌与环保）、聚合物基底材料（PVDF/PTFE等）、Janus膜亲水层成分（壳聚糖/PEI等）。",
             "problem_definition": "自然界中荷叶和水黾需要在水环境中保持表面干燥与清洁；在膜蒸馏（MD）脱盐及废水处理中，膜材料面临高盐度、表面活性剂及油类污染物导致的膜孔润湿、通量衰减和严重污染挑战。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-Aijaz-superhydrophobic-hydrophobic-membrane-wastewater-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2023-Aijaz-superhydrophobic-hydrophobic-membrane-wastewater-review.json"
         },
         {
           "paper_id": "Jing2023_Superwetting_OilWater_Separation_Review",
@@ -42467,7 +42467,7 @@
             "key_features": "必须保留特征：微/纳米级表面粗糙结构（如乳突状或放射状）、特定的表面化学组成（低表面能或亲水基团）以构建超浸润性。可灵活调整特征：基底材料选择、微纳粒子的具体种类与尺寸、智能响应基团（如仿贻贝pH响应邻苯二酚）的引入方式。",
             "problem_definition": "自然界中荷叶需保持表面清洁以进行光合作用，鱼鳞需在水下抵抗油污附着；在水处理中，这对应着如何高效分离复杂乳化油（水包油/油包水乳液）及分层油，并防止膜污染和通量下降的工程挑战。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-景-超疏水-油水分离-膜-综述.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2023-景-超疏水-油水分离-膜-综述.json"
         },
         {
           "paper_id": "2022-Mao-superwetting-membrane-nanofiber-oil-water-review",
@@ -42478,7 +42478,7 @@
             "key_features": "必须保留特征：微纳多级粗糙拓扑结构、表面能化学修饰（低/高表面能涂层）、三相界面稳定机制（气/液/固或水/油/固）。可灵活调整特征：基材类型（棉织物/纳米纤维/金属网）、响应性模块（光/pH/温/等离子体）、膜构型（对称/Janus不对称/全疏/全亲）、制备工艺（电纺/喷涂/原位聚合/激光蚀刻）。",
             "problem_definition": "自然界中生物表面需应对复杂流体环境（如雨水冲刷、油污附着、高湿环境）以实现自清洁、防污或定向集水；水处理领域对应油水混合物及表面活性剂稳定乳化液的高效分离难题，传统分离膜易受油污染导致通量骤降、选择性差且能耗高。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Mao-superhydrophobic-hydrophobic-separation-membrane-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2022-Mao-superhydrophobic-hydrophobic-separation-membrane-review.json"
         },
         {
           "paper_id": "Tan2023_Antifouling_Nanofibrous_MD_Review",
@@ -42489,7 +42489,7 @@
             "key_features": "必须保留：微纳粗糙度与低表面能协同、Cassie-Baxter态稳定性(WCA>150°且滞后<10°)、不对称润湿梯度、re-entrant抗润湿拓扑。可灵活调整：基底聚合物(PVDF/PTFE/PAN)、纳米填料类型(ZnO/TiO2/CNT/GO/MOF)、表面氟化/硅烷化试剂、光热/亲水功能层厚度与沉积工艺。",
             "problem_definition": "自然界中荷叶与海洋生物长期面临水滴滞留、油污附着及盐分结晶挑战；对应水处理中，膜蒸馏(MD)膜极易受有机物、无机盐及表面活性剂污染，导致微孔润湿、蒸汽扩散受阻、通量骤降与脱盐失效。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-Tan-membrane-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2023-Tan-membrane-review.json"
         },
         {
           "paper_id": "2022-Khan-functional-materials-wastewater-review",
@@ -42500,7 +42500,7 @@
             "key_features": "必须保留特征：微纳复合粗糙度、低/高表面能化学修饰、强界面粘附层（PDA）；可灵活调整特征：基材类型（棉织物/金属网/海绵/气凝胶）、纳米粒子负载浓度、交联方式（辐照/化学/热固）及涂层厚度。",
             "problem_definition": "自然界生物（如荷叶、贻贝）在极端湿润或动态水流环境中面临附着与分离挑战，对应水处理中油水乳化液难分离、传统吸附剂易流失及基材表面兼容性差等工程瓶颈。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Khan-wastewater-water-treatment-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2022-Khan-wastewater-water-treatment-review.json"
         },
         {
           "paper_id": "Halim2022_cellulose_oily_wastewater_review",
@@ -42511,7 +42511,7 @@
             "key_features": "必须保留：微纳层级粗糙度、低表面能涂层、双面润湿性反差（Janus）、气/水缓冲层；可灵活调整：纤维素基底形态（气凝胶/海绵/织物/滤纸）、粗糙增强纳米颗粒种类（SiO2/ZnO/Fe3O4等）、疏水聚合物类型（PDMS/PVDF/PS等）及交联网络密度。",
             "problem_definition": "自然界中生物面临泥水污染附着、油污排斥及干旱集水等极端润湿挑战；水处理中对应复杂油水乳液（水包油/油包水）的高效分离难题，传统膜受限于孔径匹配瓶颈与易污染堵塞。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2018-Halim-cellulose-superhydrophobic-hydrophobic-oil-water-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2018-Halim-cellulose-superhydrophobic-hydrophobic-oil-water-review.json"
         },
         {
           "paper_id": "2020-Zheng-special-wettability-oily-wastewater-review",
@@ -42522,7 +42522,7 @@
             "key_features": "必须保留特征：微纳复合粗糙度、低/高表面能化学组分、三相界面润湿态（Cassie-Baxter态）的精准调控；可灵活调整特征：基底材质（织物/金属网格/海绵）、功能涂层（PDA/PDMS/ZIF-8/水凝胶）、智能响应机制（光催化自清洁/配位自修复/Janus膜翻转切换）。",
             "problem_definition": "自然界挑战：生物体在复杂水环境中需维持表面干燥、清洁或定向导流（如荷叶防污、鱼鳞防油粘附）；水处理对应：含油废水及表面活性剂稳定乳液分离面临膜污染严重、通量快速衰减、油水界面张力高及传统材料选择性差等工程难题。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2020-Zheng-self-cleaning-separation-wastewater-water-treatment-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2020-Zheng-self-cleaning-separation-wastewater-water-treatment-review.json"
         },
         {
           "paper_id": "Usman2021_Superhydrophobic_Ceramic_OilWater_Review",
@@ -42533,7 +42533,7 @@
             "key_features": "必须保留：微纳分级粗糙度、低表面能化学修饰、Cassie-Baxter气垫态、接触角滞后<10°；可灵活调整：基底材质（氧化铝、氧化锆、碳布等）、低表面能试剂种类（FAS、C88、PDMS、氟化硅纳米颗粒）及涂覆工艺（浸渍、CVD、溶胶-凝胶）。",
             "problem_definition": "自然界中植物叶片面临水分滞留、污垢附着及微生物滋生挑战；在水处理中对应油水乳液分离困难、膜污染严重及通量衰减问题。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-Usman-superhydrophobic-hydrophobic-oil-water-separation-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2021-Usman-superhydrophobic-hydrophobic-oil-water-separation-review.json"
         },
         {
           "paper_id": "2022-Yong-femtosecond-laser-superwettability-review",
@@ -42544,7 +42544,7 @@
             "key_features": "必须保留：微纳层级粗糙度、特定表面化学能（低表面能修饰或亲水化）、几何拓扑约束（如reentrant角满足θ≥ψ）、多孔储液网络。可灵活调整：基底材质（硅/金属/聚合物）、激光加工参数（脉冲能量/扫描策略）、表面修饰剂类型（氟硅烷/等离子体处理）、润滑液种类（全氟化合物/硅油）。",
             "problem_definition": "自然界生物面临极端润湿与防粘附挑战（如荷叶防污自洁、鱼鳞水下抗油粘附、弹尾虫广谱拒液、猪笼草防粘捕虫），对应水处理中膜材料易受油污/微生物污染、油水分离效率低、复杂污染物广谱排斥难及表面易结垢堵塞等问题。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Finally-superhydrophobic-hydrophobic-porous-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2022-Finally-superhydrophobic-hydrophobic-porous-review.json"
         },
         {
           "paper_id": "Li2020_superhydrophobic_review",
@@ -42555,7 +42555,7 @@
             "key_features": "必须保留特征：微纳米级粗糙结构（构建空气垫）、低表面能化学组成（降低固液界面能）。可灵活调整特征：基底材料形态（如不锈钢网、纤维膜、海绵、泡沫铜、气凝胶）、制备工艺（涂覆、静电纺丝、水热、刻蚀等7种方法）、孔隙率与孔径大小。",
             "problem_definition": "自然界中，水生植物和昆虫面临在水环境中保持干燥、自清洁或在水面行走的挑战；在水处理领域，这对应于含油废水和有机溶剂泄漏的高效分离需求，亟需开发能够选择性排斥水并吸附或透过油的超疏水/超亲油材料。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2020-李-超疏水-油水分离-综述-研究进展.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2020-李-超疏水-油水分离-综述-研究进展.json"
         },
         {
           "paper_id": "Kim2022_Electrospun_Nanofibrous_Membrane_MD_Review",
@@ -42566,7 +42566,7 @@
             "key_features": "必须保留微纳粗糙拓扑与低表面能化学修饰以维持Cassie态超疏水；可灵活调整基底几何形态（如引入re-entrant结构）或采用多层/Janus构型，以突破单一荷叶效应的局限并适配复杂废水体系。",
             "problem_definition": "自然界中荷叶需应对灰尘附着与水滴滞留的污染挑战，对应水处理中膜表面润湿失效、污染物吸附及低表面张力液体（油、表面活性剂）穿透导致的通量下降与分离失效问题。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Kim-superhydrophobic-hydrophobic-membrane-porous-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2022-Kim-superhydrophobic-hydrophobic-membrane-porous-review.json"
         },
         {
           "paper_id": "2021-Penetration-separation-membrane-hierarchical-review",
@@ -42577,7 +42577,7 @@
             "key_features": "必须保留非对称润湿性（Janus界面）、微纳层级粗糙度及厚度方向润湿梯度；可灵活调整纤维形貌（圆柱/串珠/多孔/核壳）、聚合物基材（PS/PAN/PU/PCL等）及拓扑结构密度（纳米针间距/层厚比）。",
             "problem_definition": "自然界中干旱/高湿环境生物面临高效定向收集与传输水分的挑战；对应水处理领域传统分离膜存在的渗透方向不可控、液/液分离效率低、易污染及高盐/表面活性剂环境下润湿失效等问题。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-Penetration-separation-membrane-hierarchical-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2021-Penetration-separation-membrane-hierarchical-review.json"
         },
         {
           "paper_id": "jing2023_superwetting_oil_water_separation_membrane_review",
@@ -42588,7 +42588,7 @@
             "key_features": "必须保留：表面张力调控（使膜材料表面张力介于油水之间）、纳微多级结构（增大表面粗糙度）。可灵活调整：化学组成（亲水/疏水基团）、制备方法（静电纺丝/喷涂/相分离等）、膜孔径（小于乳液尺寸）。",
             "problem_definition": "石油开采、运输、加工过程中产生大量含油废水，特别是乳化油（<20μm）和溶解油的分离极具挑战性。传统分离方法对复杂油水混合物存在效率低、成本高、二次污染等问题。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-景-超疏水-油水分离-膜-综述 2.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2023-景-超疏水-油水分离-膜-综述 2.json"
         },
         {
           "paper_id": "2023-Li-oil-water-separation-wastewater-review",
@@ -42599,7 +42599,7 @@
             "key_features": "必须保留的特征是：1）微/纳米多级粗糙结构的构建能力；2）对表面化学能的精确调控（如引入氟基团或保留含氧官能团）。可灵活调整的特征包括：具体的二维材料基底（MXene、GO、MOF、COF、LDH等）、膜的支撑结构（不锈钢网、聚合物膜、海绵）以及制备工艺（真空过滤、水热法、静电自组装）。",
             "problem_definition": "自然界中，荷叶通过其表面的微米级乳突和纳米级蜡质晶体结构，能有效排斥灰尘和水滴，实现自清洁。在水处理领域，面临的核心挑战是如何高效、选择性地从水相中分离出油类污染物，包括游离油、油包水乳液和水包油乳液，这与荷叶排斥非极性污染物的机制高度相似。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-Li-oil-water-separation-wastewater-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2023-Li-oil-water-separation-wastewater-review.json"
         },
         {
           "paper_id": "2025-Wang-biomimetic-superhydrophobic-review",
@@ -42610,7 +42610,7 @@
             "key_features": "必须保留特征：微/纳双尺度粗糙结构、低固体接触面积分数（高空气分数）、低表面能化学特性。可灵活调整特征：结构的具体几何形态（如乳突、刚毛、纳米柱、沟槽）、各向异性程度、粘附力大小（如玫瑰花瓣的高粘附与荷叶的低粘附）。",
             "problem_definition": "自然界中生物面临表面润湿、污染、结冰和浮力支撑等挑战；在水处理领域，这对应着膜污染、油水分离效率低、表面结冰及生物附着等核心痛点。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2025-Wang-superhydrophobic-hydrophobic-self-cleaning-separation-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2025-Wang-superhydrophobic-hydrophobic-self-cleaning-separation-review.json"
         },
         {
           "paper_id": "App2022_biofouling_mitigation_review",
@@ -42621,7 +42621,7 @@
             "key_features": "必须保留微纳多级粗糙度拓扑结构与低表面能界面特性，以稳定维持Cassie-Baxter态空气截留层；可灵活调整基底材料体系（如PDMS、TiO2纳米颗粒或两性离子聚合物）、微结构几何尺度与空间排布密度，以及表面化学修饰策略，以适配不同水处理工况与目标污染物。",
             "problem_definition": "自然界中船舶与海洋设施面临严重的生物附着问题，导致流体阻力剧增与温室气体排放上升；在水处理与膜分离领域，生物污染占比高达45%，且生物膜内细菌抗药性提升千倍，传统化学防污策略面临环保禁令与抗性瓶颈，亟需长效、无毒的物理抗污方案。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-App-antifouling-water-treatment-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2022-App-antifouling-water-treatment-review.json"
         },
         {
           "paper_id": "2023-Li-superhydrophobic-hydrophobic-self-cleaning-review",
@@ -42632,7 +42632,7 @@
             "key_features": "必须保留特征：微米与纳米相结合的双尺度粗糙结构、低表面能化学修饰（构建Cassie态空气层）；可灵活调整特征：微纳结构的具体形貌与尺寸（如微柱间距）、低表面能修饰剂种类（如TEOS、各类硅烷偶联剂）、基底与骨架材料（如PVDF、PDMS、SiO2颗粒）。",
             "problem_definition": "自然界中水生或潮湿环境下的动植物需要保持表面干燥、清洁及防污；在水处理领域，油水分离膜和吸附材料需要构建超疏水/超亲油界面，以实现高效油水分离、抗污染和自清洁功能。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-Li-superhydrophobic-hydrophobic-self-cleaning-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2023-Li-superhydrophobic-hydrophobic-self-cleaning-review.json"
         },
         {
           "paper_id": "2021-Zhao-special-wettability-nanofiber-oil-water-separation",
@@ -42643,7 +42643,7 @@
             "key_features": "必须保留特征：微纳多级粗糙拓扑结构、低表面能/高亲水化学基团修饰、高孔隙率与互连孔道网络、Cassie态界面气垫效应。可灵活调整特征：环境响应触发阈值（pH/光照波长/温度区间）、膜孔径分布梯度（适配0.1-10μm乳化液滴）、表面修饰化学体系（以环保聚合物替代含氟试剂）。",
             "problem_definition": "自然界中生物界面需在复杂流体环境中抵抗污染并实现选择性物质交换；对应水处理中传统分离膜易被油污堵塞、分离能耗高、且难以高效处理含表面活性剂的稳定乳化油。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-赵-超疏水-油水分离-膜-综述.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2021-赵-超疏水-油水分离-膜-综述.json"
         },
         {
           "paper_id": "2022-Bazyar-nature-inspired-gating-membranes-review",
@@ -42654,7 +42654,7 @@
             "key_features": "必须保留微纳双重粗糙度与低表面能化学特性以维持超疏水态；可灵活调整多孔基底材质、注入润滑液表面能、响应性聚合物（如PNIPAM）接枝密度及孔道曲率半径，以适配不同污染物分离与工况需求。",
             "problem_definition": "自然界中荷叶需在潮湿泥泞环境中保持表面清洁与水分排斥，对应水处理中膜材料面临的油污附着、生物污染及复杂离子/有机物高效分离难题。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Chem-membrane-magnetic-dye-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2022-Chem-membrane-magnetic-dye-review.json"
         },
         {
           "paper_id": "2022-Yang-superwetting-on-demand-oil-water-separation-review",
@@ -42665,7 +42665,7 @@
             "key_features": "必须保留特征：层级微纳结构（增强润湿性并维持鲁棒性）、表面化学与微观形貌的协同调控。可灵活调整特征：智能响应触发器类型（pH/热/光/电/溶剂/离子/气体）、Janus膜的不对称润湿方向、液体灌注的润滑液选择及3D孔隙结构。",
             "problem_definition": "自然界中生物需在水、油、气等多相复杂环境中实现自清洁、捕食或水面行走；在水处理领域，这对应于高效分离油水乳液、多层油水混合物及多相不混溶有机液体的严苛需求，传统材料难以兼顾高通量、高选择性与多相适应性。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Yang-separation-membrane-porous-wastewater-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2022-Yang-separation-membrane-porous-wastewater-review.json"
         },
         {
           "paper_id": "2024-Kang-hierarchical-superhydrophobic-copper-mesh",
@@ -42676,7 +42676,7 @@
             "key_features": "必须保留特征：三级微纳层级粗糙结构、低表面能修饰、Cassie-Baxter态空气间隙；可灵活调整特征：微纳结构的具体尺寸（如Cu颗粒大小、纳米棒长度）、基材种类与目数。",
             "problem_definition": "自然界中荷叶需在水生和泥泞环境中保持表面干燥与清洁；水处理领域面临油水混合物高效分离及分离材料易污染、耐久性差的挑战。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2024-Kang-superhydrophobic-hydrophobic-self-cleaning-separation.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2024-Kang-superhydrophobic-hydrophobic-self-cleaning-separation.json"
         },
         {
           "paper_id": "gao2021_superhydrophobic_antibacterial_review",
@@ -42687,7 +42687,7 @@
             "key_features": "必须保留特征：微纳分级粗糙结构、低表面能化学修饰、疏水排斥与主动杀菌的协同机制。可灵活调整特征：抗菌剂种类（无机纳米粒子、有机季铵盐、天然壳聚糖）、基底材料（棉织物、玻璃、聚合物）、制备工艺（相分离、喷涂、电沉积、多巴胺黏附）。",
             "problem_definition": "自然界中荷叶面临水生环境中微生物附着和污物沉积的挑战；在水处理中，分离膜和涂层表面极易受油类污染、细菌（如大肠杆菌、金黄色葡萄球菌）黏附及生物膜形成影响，导致分离效率下降、通量衰减和二次污染。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-高-超疏水-油水分离-综述-研究进展 2.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2021-高-超疏水-油水分离-综述-研究进展 2.json"
         },
         {
           "paper_id": "2021-Gao-superhydrophobic-antibacterial-surface-review",
@@ -42698,7 +42698,7 @@
             "key_features": "必须保留微纳粗糙拓扑形貌与低表面能化学修饰以维持超疏水抗黏附基底；可灵活调整抗菌活性组分（无机金属/有机季铵盐）、载体封装形式（SiO2核壳/多孔碳）及智能响应模块（pH/光催化）以适配不同水质与分离场景。",
             "problem_definition": "自然界中荷叶长期暴露于高湿、多菌及潜在油污环境，面临微生物定植与表面污染挑战；水处理领域对应膜组件生物污染、油水乳化分离困难及传统抗菌剂易流失失效的痛点。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-高-超疏水-油水分离-综述-研究进展.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2021-高-超疏水-油水分离-综述-研究进展.json"
         },
         {
           "paper_id": "Yan2021_Superhydrophobic_Review",
@@ -42709,7 +42709,7 @@
             "key_features": "必须保留特征：微纳分级粗糙结构、低表面能化学修饰、超疏水接触角(>150°)与低滚动角；可灵活调整特征：微纳形貌具体构型（乳突/珊瑚状/台阶状等）、基底材料类型（金属/高分子/陶瓷）、低表面能修饰剂种类（硅烷/脂肪酸/聚合物）。",
             "problem_definition": "自然界挑战：荷叶在潮湿泥泞环境中易受水分滞留与污染物附着，影响光合作用与生存；水处理对应：吸附/分离材料在含油、粉尘及高盐废水中易发生润湿、结垢与腐蚀，导致通量下降与再生困难。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-闫-超疏水-油水分离-综述.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2021-闫-超疏水-油水分离-综述.json"
         },
         {
           "paper_id": "CN114874407A",
@@ -42720,7 +42720,7 @@
             "key_features": "必须保留：微米级针状/棒状粒子（类荷叶微米乳突）+ 纳米级球形粒子（类荷叶纳米蜡晶）构建层级粗糙结构；氟硅烷低表面能修饰（类蜡质层）。可灵活调整：粒子种类（TiO2/Al2O3/SiO2）、粒子比例、氟硅烷种类。",
             "problem_definition": "荷叶表面具有微纳层级粗糙结构和低表面能蜡质层，实现超疏水自清洁效应；水处理中含油废水（如石油泄漏）需要高效油水分离材料，传统海绵亲水亲油无法选择性分离。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/专利/json/2022-CN114874407A-超疏水-海绵.json"
+          "source_file": "tools/litextract/outputs/extractions/专利/json/2022-CN114874407A-超疏水-海绵.json"
         }
       ]
     },
@@ -46815,7 +46815,7 @@
             "key_features": "必须保留特征：微纳双重粗糙度几何拓扑、低表面能化学组分（如氟硅烷/PTFE）、Cassie-Baxter态空气层截留机制。可灵活调整特征：基底材质（金属网/织物/气凝胶/聚合物）、制备工艺路线（水热/溶胶凝胶/刻蚀/静电纺丝/涂覆等）、宏观孔径分布与材料机械柔性。",
             "problem_definition": "自然界挑战：荷叶与水黾需在潮湿或水面环境中保持干燥与清洁，避免水浸润导致失重、污染或功能丧失。水处理对应：含油废水及复杂乳液分离过程中，传统过滤/吸附材料易被水润湿，导致通量衰减、油水选择性差、膜污染与孔道堵塞。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2020-李-超疏水-油水分离-综述-研究进展 2.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2020-李-超疏水-油水分离-综述-研究进展 2.json"
         },
         {
           "paper_id": "2022-Li-hydrophobic-separation-membrane-porous-review",
@@ -46826,7 +46826,7 @@
             "key_features": "必须保留特征：C-F键赋予的低表面能与高热化学稳定性、微孔粗糙结构以维持Cassie-Baxter超疏水状态。可灵活调整特征：膜构型（DCMD/VMD/AGMD/SGMD）、聚合物种类（PVDF/PTFE/ECTFE）、制备工艺（NIPS/TIPS/VIPS/电纺/拉伸烧结）及绿色溶剂体系。",
             "problem_definition": "自然界中极端疏水表面面临液体粘附和污染挑战；在水处理工程中，高盐废水、RO浓水及含油废水的处理面临膜润湿、无机/有机结垢污染以及苛刻化学和热环境下的材料降解问题。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Li-hydrophobic-separation-membrane-porous-review 2.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2022-Li-hydrophobic-separation-membrane-porous-review 2.json"
         },
         {
           "paper_id": "gao2021_superhydrophobic_antibacterial_review",
@@ -46837,7 +46837,7 @@
             "key_features": "必须保留特征：微纳分级粗糙结构、低表面能化学修饰、疏水排斥与主动杀菌的协同机制。可灵活调整特征：抗菌剂种类（无机纳米粒子、有机季铵盐、天然壳聚糖）、基底材料（棉织物、玻璃、聚合物）、制备工艺（相分离、喷涂、电沉积、多巴胺黏附）。",
             "problem_definition": "自然界中荷叶面临水生环境中微生物附着和污物沉积的挑战；在水处理中，分离膜和涂层表面极易受油类污染、细菌（如大肠杆菌、金黄色葡萄球菌）黏附及生物膜形成影响，导致分离效率下降、通量衰减和二次污染。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-高-超疏水-油水分离-综述-研究进展 2.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2021-高-超疏水-油水分离-综述-研究进展 2.json"
         },
         {
           "paper_id": "CN114874407A",
@@ -46848,7 +46848,7 @@
             "key_features": "必须保留：微米级针状/棒状粒子（类荷叶微米乳突）+ 纳米级球形粒子（类荷叶纳米蜡晶）构建层级粗糙结构；氟硅烷低表面能修饰（类蜡质层）。可灵活调整：粒子种类（TiO2/Al2O3/SiO2）、粒子比例、氟硅烷种类。",
             "problem_definition": "荷叶表面具有微纳层级粗糙结构和低表面能蜡质层，实现超疏水自清洁效应；水处理中含油废水（如石油泄漏）需要高效油水分离材料，传统海绵亲水亲油无法选择性分离。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/专利/json/2022-CN114874407A-超疏水-海绵.json"
+          "source_file": "tools/litextract/outputs/extractions/专利/json/2022-CN114874407A-超疏水-海绵.json"
         }
       ]
     },
@@ -50968,7 +50968,7 @@
             "key_features": "必须保留特征：微纳双重粗糙度几何拓扑、低表面能化学组分（如氟硅烷/PTFE）、Cassie-Baxter态空气层截留机制。可灵活调整特征：基底材质（金属网/织物/气凝胶/聚合物）、制备工艺路线（水热/溶胶凝胶/刻蚀/静电纺丝/涂覆等）、宏观孔径分布与材料机械柔性。",
             "problem_definition": "自然界挑战：荷叶与水黾需在潮湿或水面环境中保持干燥与清洁，避免水浸润导致失重、污染或功能丧失。水处理对应：含油废水及复杂乳液分离过程中，传统过滤/吸附材料易被水润湿，导致通量衰减、油水选择性差、膜污染与孔道堵塞。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2020-李-超疏水-油水分离-综述-研究进展 2.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2020-李-超疏水-油水分离-综述-研究进展 2.json"
         },
         {
           "paper_id": "2023-Aijaz-electrospun-MD-antifouling-desalination-review",
@@ -50979,7 +50979,7 @@
             "key_features": "必须保留特征：层级微纳粗糙结构、re-entrant表面纹理（如圆柱形/蘑菇形）、超低表面能化学修饰（<30 mN/m）。可灵活调整特征：粗化纳米颗粒种类（优选ZnO以兼顾杀菌与环保）、聚合物基底材料（PVDF/PTFE等）、Janus膜亲水层成分（壳聚糖/PEI等）。",
             "problem_definition": "自然界中荷叶和水黾需要在水环境中保持表面干燥与清洁；在膜蒸馏（MD）脱盐及废水处理中，膜材料面临高盐度、表面活性剂及油类污染物导致的膜孔润湿、通量衰减和严重污染挑战。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-Aijaz-superhydrophobic-hydrophobic-membrane-wastewater-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2023-Aijaz-superhydrophobic-hydrophobic-membrane-wastewater-review.json"
         },
         {
           "paper_id": "2021-Penetration-separation-membrane-hierarchical-review",
@@ -50990,7 +50990,7 @@
             "key_features": "必须保留非对称润湿性（Janus界面）、微纳层级粗糙度及厚度方向润湿梯度；可灵活调整纤维形貌（圆柱/串珠/多孔/核壳）、聚合物基材（PS/PAN/PU/PCL等）及拓扑结构密度（纳米针间距/层厚比）。",
             "problem_definition": "自然界中干旱/高湿环境生物面临高效定向收集与传输水分的挑战；对应水处理领域传统分离膜存在的渗透方向不可控、液/液分离效率低、易污染及高盐/表面活性剂环境下润湿失效等问题。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2021-Penetration-separation-membrane-hierarchical-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2021-Penetration-separation-membrane-hierarchical-review.json"
         },
         {
           "paper_id": "2025-Wang-biomimetic-superhydrophobic-review",
@@ -51001,7 +51001,7 @@
             "key_features": "必须保留特征：微/纳双尺度粗糙结构、低固体接触面积分数（高空气分数）、低表面能化学特性。可灵活调整特征：结构的具体几何形态（如乳突、刚毛、纳米柱、沟槽）、各向异性程度、粘附力大小（如玫瑰花瓣的高粘附与荷叶的低粘附）。",
             "problem_definition": "自然界中生物面临表面润湿、污染、结冰和浮力支撑等挑战；在水处理领域，这对应着膜污染、油水分离效率低、表面结冰及生物附着等核心痛点。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2025-Wang-superhydrophobic-hydrophobic-self-cleaning-separation-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2025-Wang-superhydrophobic-hydrophobic-self-cleaning-separation-review.json"
         },
         {
           "paper_id": "2022-Yang-superwetting-on-demand-oil-water-separation-review",
@@ -51012,7 +51012,7 @@
             "key_features": "必须保留特征：层级微纳结构（增强润湿性并维持鲁棒性）、表面化学与微观形貌的协同调控。可灵活调整特征：智能响应触发器类型（pH/热/光/电/溶剂/离子/气体）、Janus膜的不对称润湿方向、液体灌注的润滑液选择及3D孔隙结构。",
             "problem_definition": "自然界中生物需在水、油、气等多相复杂环境中实现自清洁、捕食或水面行走；在水处理领域，这对应于高效分离油水乳液、多层油水混合物及多相不混溶有机液体的严苛需求，传统材料难以兼顾高通量、高选择性与多相适应性。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Yang-separation-membrane-porous-wastewater-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2022-Yang-separation-membrane-porous-wastewater-review.json"
         }
       ]
     },
@@ -51287,7 +51287,7 @@
             "key_features": "必须保留：微纳层级粗糙度、低表面能涂层、双面润湿性反差（Janus）、气/水缓冲层；可灵活调整：纤维素基底形态（气凝胶/海绵/织物/滤纸）、粗糙增强纳米颗粒种类（SiO2/ZnO/Fe3O4等）、疏水聚合物类型（PDMS/PVDF/PS等）及交联网络密度。",
             "problem_definition": "自然界中生物面临泥水污染附着、油污排斥及干旱集水等极端润湿挑战；水处理中对应复杂油水乳液（水包油/油包水）的高效分离难题，传统膜受限于孔径匹配瓶颈与易污染堵塞。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2018-Halim-cellulose-superhydrophobic-hydrophobic-oil-water-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2018-Halim-cellulose-superhydrophobic-hydrophobic-oil-water-review.json"
         },
         {
           "paper_id": "yu2022_fog_harvesting_biomimetic_review",
@@ -51298,7 +51298,7 @@
             "key_features": "必须保留特征：亲疏水异质界面、非对称几何构型（锥形/纺锤节/楔形）、定向输运驱动力（Laplace压差/表面能梯度/毛细力）；可灵活调整特征：材料基底类型（织物/金属网/高分子/生物质）、微纳结构尺度与排列密度、表面化学修饰工艺（喷涂/光刻/剪纸/自组装）。",
             "problem_definition": "自然界挑战：干旱沙漠环境中液态水极度匮乏，生物需从稀薄雾气中高效捕获水分；水处理对应：低浓度气溶胶/雾水的高效收集与淡水化，突破传统冷凝/吸附的能耗与效率瓶颈。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Progress-review 2.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2022-Progress-review 2.json"
         }
       ]
     },
@@ -57205,7 +57205,7 @@
             "key_features": "必须保留：特征尺寸小于细菌、高长径比结构、极端润湿性(超疏/超亲)、表面负电荷排斥；可灵活调整：纳米柱具体长径比、排列规则性(均匀/非均匀)、单/双高度组合、基底合成工艺(软光刻/刻蚀/水热等)。",
             "problem_definition": "自然界中生物表面面临微生物定殖与生物膜形成的生存挑战，对应水处理中吸附材料与膜表面的细菌粘附、生物污损及通量衰减问题。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-Attachment-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2022-Attachment-review.json"
         },
         {
           "paper_id": "2020-Han-antifouling-review",
@@ -57216,7 +57216,7 @@
             "key_features": "必须保留特征：临界表面张力20-30 mN/m区间、微纳级拓扑物理屏障、界面水合/抗蛋白吸附层、动态响应或自修复能力；可灵活调整特征：聚合物基体类型(PDMS/PEG/两性离子)、微结构具体几何尺寸与排列方式、自修复触发条件(光/温/化学)、弹性模量与表面张力的具体配比。",
             "problem_definition": "自然界挑战：海洋生物污损经历有机调节膜形成、微生物生物膜附着、孢子永久交联定殖到大型生物附着四阶段，导致航行阻力剧增与维护成本高昂；水处理对应：水处理膜与设备表面面临相似的生物膜污染与沉积物附着，造成通量衰减、能耗上升及频繁化学清洗需求。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2020-Han-antifouling-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2020-Han-antifouling-review.json"
         },
         {
           "paper_id": "App2022_biofouling_mitigation_review",
@@ -57227,7 +57227,7 @@
             "key_features": "必须保留微纳多级粗糙度拓扑结构与低表面能界面特性，以稳定维持Cassie-Baxter态空气截留层；可灵活调整基底材料体系（如PDMS、TiO2纳米颗粒或两性离子聚合物）、微结构几何尺度与空间排布密度，以及表面化学修饰策略，以适配不同水处理工况与目标污染物。",
             "problem_definition": "自然界中船舶与海洋设施面临严重的生物附着问题，导致流体阻力剧增与温室气体排放上升；在水处理与膜分离领域，生物污染占比高达45%，且生物膜内细菌抗药性提升千倍，传统化学防污策略面临环保禁令与抗性瓶颈，亟需长效、无毒的物理抗污方案。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2022-App-antifouling-water-treatment-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2022-App-antifouling-water-treatment-review.json"
         },
         {
           "paper_id": "2023-Li-superhydrophobic-hydrophobic-self-cleaning-review",
@@ -57238,7 +57238,7 @@
             "key_features": "必须保留特征：微米与纳米相结合的双尺度粗糙结构、低表面能化学修饰（构建Cassie态空气层）；可灵活调整特征：微纳结构的具体形貌与尺寸（如微柱间距）、低表面能修饰剂种类（如TEOS、各类硅烷偶联剂）、基底与骨架材料（如PVDF、PDMS、SiO2颗粒）。",
             "problem_definition": "自然界中水生或潮湿环境下的动植物需要保持表面干燥、清洁及防污；在水处理领域，油水分离膜和吸附材料需要构建超疏水/超亲油界面，以实现高效油水分离、抗污染和自清洁功能。"
           },
-          "source_file": "/Users/panyao/Desktop/Biomimetic-design-library/tools/litextract/outputs/extractions/论文/json/2023-Li-superhydrophobic-hydrophobic-self-cleaning-review.json"
+          "source_file": "tools/litextract/outputs/extractions/论文/json/2023-Li-superhydrophobic-hydrophobic-self-cleaning-review.json"
         }
       ]
     },

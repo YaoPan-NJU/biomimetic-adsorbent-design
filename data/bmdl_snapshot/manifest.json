@@ -11,31 +11,31 @@
   "exported_at": "2026-07-16T16:00:46.540460+00:00",
   "files": {
     "biological_prototypes": {
-      "bytes": 3342018,
-      "path": "/Users/panyao/Documents/Codex/biomimetic-adsorbent-design/data/bmdl_snapshot/biological_prototypes.json",
-      "sha256": "3a9b9967a7d0f7f5679300c6cbe6307540f84e3da4c3c0ca99d1353c8982887e"
+      "bytes": 3339570,
+      "path": "data/bmdl_snapshot/biological_prototypes.json",
+      "sha256": "288fcfa71c604f9db054b8167ab7380707c4128f7490184e721c6fff7a2fe854"
     },
     "manifest": {
       "path": "data/bmdl_snapshot/manifest.json"
     },
     "match_weights": {
       "bytes": 43359,
-      "path": "/Users/panyao/Documents/Codex/biomimetic-adsorbent-design/data/bmdl_snapshot/match_weights.json",
+      "path": "data/bmdl_snapshot/match_weights.json",
       "sha256": "ed8b12863f4e66cfa816bc885b329c20bd6c053280df82566ef7dbded3aed532"
     },
     "performance_data_deduplicated": {
       "bytes": 421426,
-      "path": "/Users/panyao/Documents/Codex/biomimetic-adsorbent-design/data/bmdl_snapshot/performance_data_deduplicated.json",
+      "path": "data/bmdl_snapshot/performance_data_deduplicated.json",
       "sha256": "30632316053ef14998a7c2c327c5cae3c3cd6154e9ca61921205a2e7eb5458c2"
     },
     "pollutant_aliases": {
       "bytes": 25931,
-      "path": "/Users/panyao/Documents/Codex/biomimetic-adsorbent-design/data/bmdl_snapshot/pollutant_aliases.json",
+      "path": "data/bmdl_snapshot/pollutant_aliases.json",
       "sha256": "3b3491c08568c3dd7d00e98fb8f03b87723ae951669addc6a0deed5766ac9e1c"
     },
     "pollutant_profiles": {
       "bytes": 22805,
-      "path": "/Users/panyao/Documents/Codex/biomimetic-adsorbent-design/data/bmdl_snapshot/pollutant_profiles.json",
+      "path": "data/bmdl_snapshot/pollutant_profiles.json",
       "sha256": "a6a7422740a25518a46f443763e93ef14519cee0978cc8f54f7a2fd1662db341"
     }
   },

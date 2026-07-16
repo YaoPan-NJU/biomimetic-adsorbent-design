@@ -34,11 +34,13 @@ Round 3 is complete. D1-A passed at 93/100 after the single-arm controls and acc
 
 D1-A is the primary because it has the stronger original materials contribution, a pure-organic receptor, and a tighter delete/lock causal chain. D1-B is a trace-polishing backup for `Cin≤0.10 mg P/L`; its exact PBP protein sequences and SHA-256 records are committed, while DNA, sortase lot and resin lot remain procurement hold points that prohibit experimental startup until recorded.
 
+The Chinese main report and all final attachments are compiled under `deliverables/`. The only remaining portability action is to commit and push that package, clone the private repository into a clean directory, and run both repository validation scripts there. Pan Yao's final scientific approval remains pending and must not be inferred from design-review pass scores.
+
 Translation-evidence dossiers were prepared in parallel but are deliberately excluded from the rerun manifest. They strengthen the later deep-design gate: PBP has an experimental apo/bound pair and direct fluorescence/FRET precedents; NrtA still lacks an experimental apo structure; clarithromycin has a direct 3.3 Å ribosome structure with local A2062 heterogeneity; hL-FABP supports PFOA binding and local portal mobility but not a large global closure; ODV binds hSERT functionally but lacks a target-bound structure.
 
 ## Resume instructions
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
 2. Verify `main`, read the G2 decision, and ensure no design role receives BMDL paths.
-3. Continue the single final-delivery action recorded in `PROJECT_STATE.yaml`.
+3. Continue the single fresh-clone validation action recorded in `PROJECT_STATE.yaml`.
 4. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

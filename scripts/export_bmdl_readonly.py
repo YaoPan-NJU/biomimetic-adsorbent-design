@@ -43,11 +43,27 @@ def canonical_json(value: Any) -> str:
     return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"), default=str)
 
 
-def write_json(path: Path, value: Any) -> dict[str, Any]:
+def portable_snapshot_value(value: Any) -> Any:
+    """Remove machine-specific BMDL checkout prefixes from provenance paths."""
+    if isinstance(value, list):
+        return [portable_snapshot_value(item) for item in value]
+    if isinstance(value, dict):
+        portable = {}
+        for key, item in value.items():
+            if key == "source_file" and isinstance(item, str):
+                marker = "Biomimetic-design-library/"
+                portable[key] = item.split(marker, 1)[1] if marker in item else item
+            else:
+                portable[key] = portable_snapshot_value(item)
+        return portable
+    return value
+
+
+def write_json(path: Path, value: Any, *, recorded_path: str | None = None) -> dict[str, Any]:
     text = json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True, default=str) + "\n"
     path.write_text(text, encoding="utf-8")
     return {
-        "path": path.as_posix(),
+        "path": recorded_path or path.as_posix(),
         "bytes": len(text.encode("utf-8")),
         "sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(),
     }
@@ -111,10 +127,14 @@ def main() -> None:
                     sql.Identifier(schema), sql.Identifier(table)
                 )
             )
-            rows = [record["row"] for record in cur.fetchall()]
+            rows = [portable_snapshot_value(record["row"]) for record in cur.fetchall()]
             rows.sort(key=canonical_json)
             filename = f"{table}.json"
-            manifest["files"][table] = write_json(output / filename, rows)
+            manifest["files"][table] = write_json(
+                output / filename,
+                rows,
+                recorded_path=(Path("data/bmdl_snapshot") / filename).as_posix(),
+            )
             manifest["counts"][table] = len(rows)
 
         cur.execute(
@@ -122,7 +142,7 @@ def main() -> None:
                 sql.Identifier(schema), sql.Identifier("performance_data")
             )
         )
-        raw_performance = [record["row"] for record in cur.fetchall()]
+        raw_performance = [portable_snapshot_value(record["row"]) for record in cur.fetchall()]
         normalized: dict[str, Any] = {}
         for row in raw_performance:
             row = dict(row)
@@ -130,7 +150,9 @@ def main() -> None:
             normalized[canonical_json(row)] = row
         performance_rows = [normalized[key] for key in sorted(normalized)]
         manifest["files"]["performance_data_deduplicated"] = write_json(
-            output / "performance_data_deduplicated.json", performance_rows
+            output / "performance_data_deduplicated.json",
+            performance_rows,
+            recorded_path="data/bmdl_snapshot/performance_data_deduplicated.json",
         )
         manifest["counts"]["performance_data_raw"] = len(raw_performance)
         manifest["counts"]["performance_data_deduplicated"] = len(performance_rows)
@@ -163,4 +185,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

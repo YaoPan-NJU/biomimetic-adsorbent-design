@@ -1,7 +1,7 @@
 gate: G4_ADVERSARIAL
 stage: after_round_2
 status: continue_to_final_review
-date: 2026-07-17
+date: 2026-07-16
 all_five_completed_two_rounds: true
 round2_scores:
   D1_phosphate_synthetic_clamp: 83

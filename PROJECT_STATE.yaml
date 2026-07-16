@@ -1,11 +1,11 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: final_delivery_compilation
+phase: delivery_ready_for_clone_validation
 status: in_progress
-last_completed_step: D1-A and D1-B completed third-round attack, revision and limited re-review; both passed design review
-next_action: finish the Chinese delivery package, run repository and credential checks, then validate continuity from a fresh clone
+last_completed_step: Chinese main report, scorecard, issue ledger, revision log, execution index and user-review ledger compiled
+next_action: commit and push the delivery package, then verify state restoration and all checks from a fresh clone
 active_branch: main
-last_verified_commit: 6b8b976
+last_verified_commit: 280d36c
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pollutants:
   - PFOA
@@ -115,8 +115,18 @@ artifacts:
   pbp_construct_provenance: research/evidence/PBP_CONSTRUCT_PROVENANCE.md
   pbp_construct_fasta: deliverables/attachments/PBP_CONSTRUCTS.fasta
   gate_g5_finalists: orchestration/gates/G5_FINALISTS.yaml
+  main_report_zh: deliverables/MAIN_REPORT_ZH.md
+  delivery_index: deliverables/README.md
+  final_scorecard: deliverables/attachments/FINAL_SCORECARD.md
+  review_issue_ledger: deliverables/attachments/REVIEW_ISSUE_LEDGER.md
+  revision_log: deliverables/attachments/REVISION_LOG.md
+  user_review_log: deliverables/attachments/USER_REVIEW_LOG.md
+  experiment_execution_index: deliverables/attachments/EXPERIMENT_EXECUTION_INDEX.md
+  repository_validator: scripts/validate_repository.py
+  credential_scanner: scripts/scan_credentials.py
+  gate_g6_delivery: orchestration/gates/G6_DELIVERY.yaml
 checks:
-  secrets_scan: passed_before_model_only_checkpoint
-  state_paths: passed_before_model_only_checkpoint
-  remote_push: model_only_checkpoint_pushed
+  secrets_scan: pending_final_delivery_commit
+  state_paths: pending_final_delivery_commit
+  remote_push: finalist_checkpoint_280d36c_pushed
   fresh_clone: pending_final_delivery

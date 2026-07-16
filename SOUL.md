@@ -19,6 +19,8 @@ Selective adsorption is mandatory. Capacity alone cannot establish success. The 
 - Primary water matrix: municipal/domestic wastewater-treatment secondary effluent.
 - Ultrapure water: intrinsic-mechanism and causal-control experiments.
 - Surface or drinking water: optional external validation only.
+- Pollutant scope: organic pollutants, with priority given to emerging contaminants. Nutrients and inorganic pollutants do not compete in the main funnel unless Pan Yao explicitly reopens that scope.
+- Candidate admission requires independently verified secondary-effluent relevance and environmental or health concern. These are pass/fail gates before scoring, not weighted score items; failure at either gate cannot be offset by biomimetic tractability, novelty, or evidence maturity. Database coverage counts are discovery metadata, not risk scores.
 - Funnel: 10 pollutants -> 5 deep pollutant-material concepts -> 1 primary + 1 backup.
 - Experimental complexity is an optimization concern, not a veto, unless the chemistry is implausible, the claim is not testable, or the risk is unacceptable.
 - ADRMATS is outside project scope.
@@ -58,4 +60,3 @@ Later rounds receive the current proposal and unresolved issues, not the full co
 ## Acceptance
 
 The primary design passes only when it scores at least 85/100, has no unresolved critical/high issue, contains static and dynamic hard correspondences, provides a credible bench-scale synthesis SOP, and maps every central claim to a measurement and causal control. Pan Yao gives the final approval.
-

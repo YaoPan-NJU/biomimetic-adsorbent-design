@@ -16,6 +16,14 @@ Develop one primary and one backup biomimetic material for selective adsorption 
 
 ## Current state
 
+Pan Yao's scientific review reopened the project at the pollutant-selection gate. The previous funnel mixed nutrients and inorganic pollutants with emerging organic contaminants, while its scoring strongly rewarded mature static-dynamic biomimetic evidence. That objective allowed phosphate to win despite being misaligned with the intended paper scope. The former ten-pollutant ranking, D1-A primary and D1-B backup remain preserved as historical artifacts but are no longer active selections and must not be presented as approved deliverables.
+
+The active scope is organic pollutants, with priority given to emerging contaminants in municipal secondary effluent. `pollutant_kb.pollutant_index` is the candidate seed, not a risk authority. PFOA, PFBS, roxithromycin, bisphenol A and 2,6-dichlorophenol form the initial priority verification group. The exact ten candidates are not frozen. Secondary-effluent relevance and environmental or health concern are binary admission gates applied before scoring; neither receives weighted points, and failure cannot be rescued by a strong biomimetic concept. Only admitted candidates are scored for selective-adsorption difficulty, biomimetic capability, static-dynamic synergy, engineering generality and novelty/evidence opportunity.
+
+The unique next action is to build the auditable 20-to-10 screening matrix. No designer role may resume biological-prototype search or material design until the revised ten-pollutant problem statements are frozen.
+
+## Superseded completed cycle
+
 The governing contract, ten-pollutant shortlist, evidence ledger, key-claim spot check, and isolated model-only baseline are complete. A PostgreSQL BMDL snapshot was exported with both default and transaction read-only settings confirmed as `on`. The structural audit found 48 prototypes, 44 pollutant profiles, 130 matches, and 3015 raw performance rows that collapse to 1076 unique rows after removing surrogate IDs.
 
 The frozen model-only ranking is led by phosphate/PstS (91), nitrate/NrtA (87), ODV/SERT (84), clarithromycin/ribosome (82), and PFOA/FABP (80). Scores are design triage values, not predicted performance. Evidence spot checking narrowed five of ten high-impact claims; in particular, NrtA and SERT sources do not independently establish complete open-to-closed cycles, and hL-FABP evidence does not yet establish a transferable dynamic gate.
@@ -41,6 +49,6 @@ Translation-evidence dossiers were prepared in parallel but are deliberately exc
 ## Resume instructions
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
-2. Verify `main`, read the G2 decision, and ensure no design role receives BMDL paths.
-3. Continue the single Pan Yao review action recorded in `PROJECT_STATE.yaml`; do not start experiments before explicit approval.
+2. Verify `main`, read `research/pollutants/REOPENED_SCOPE.md`, and treat all former finalists as historical only.
+3. Execute the single 20-to-10 rescreening action recorded in `PROJECT_STATE.yaml`; keep BMDL excluded from design and do not start experiments.
 4. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

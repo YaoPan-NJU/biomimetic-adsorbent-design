@@ -31,6 +31,27 @@ water_context:
     - surface water
     - drinking water
 
+pollutant_admission:
+  scope: organic_pollutants_with_priority_for_emerging_contaminants
+  seed_source: pollutant_kb.pollutant_index
+  seed_source_role: candidate_discovery_not_risk_authority
+  hard_gates:
+    - organic_pollutant
+    - independently_verified_secondary_effluent_relevance
+    - independently_verified_environmental_or_health_concern
+    - meaningful_selective_adsorption_problem
+    - falsifiable_biomimetic_design_opportunity
+  priority_verification_group:
+    - PFOA
+    - PFBS
+    - roxithromycin
+    - bisphenol A
+    - 2,6-dichlorophenol
+  prohibited_shortcuts:
+    - rank_by_paper_count_or_knowledge_item_count
+    - treat_database_text_as_independently_verified_risk_evidence
+    - admit_nutrients_or_inorganic_pollutants_without_explicit_scope_reopening
+
 funnel:
   pollutants: 10
   deep_concepts: 5
@@ -39,12 +60,13 @@ funnel:
   backup: 1
 
 pollutant_scoring:
-  selective_challenge: 20
-  uniquely_biomimetic_capability: 20
+  applies_only_after_all_admission_gates_pass: true
+  environmental_significance_is_weighted: false
+  selective_challenge: 25
+  uniquely_biomimetic_capability: 25
   static_dynamic_synergy: 20
   engineering_generality: 15
-  environmental_significance: 15
-  novelty_and_evidence_opportunity: 10
+  novelty_and_evidence_opportunity: 15
 
 final_scoring:
   causal_closure: 20
@@ -84,4 +106,3 @@ adversarial_process:
   required_rounds_all_concepts: 2
   final_review_rounds_top_two: 1
   persist_hidden_reasoning: false
-

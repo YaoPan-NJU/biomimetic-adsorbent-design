@@ -1,13 +1,21 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: awaiting_user_review
-status: awaiting_pan_yao_approval
-last_completed_step: final delivery commit was pushed and restored from a fresh clone; mechanical checks and context-free Codex readback passed
-next_action: Pan Yao reviews deliverables/MAIN_REPORT_ZH.md and records approval or revision requests in deliverables/attachments/USER_REVIEW_LOG.md
+phase: pollutant_rescreening
+status: revision_in_progress
+last_completed_step: Pan Yao rejected the nutrient-led finalist scope, made environmental significance and secondary-effluent relevance pre-scoring hard gates, and added 2,6-dichlorophenol to the priority verification group
+next_action: Build an auditable pollutant_kb 20-to-10 screening matrix that first applies pass/fail secondary-effluent and environmental-significance gates, then scores only admitted organic pollutants; do not resume biomimetic design until the ten are refrozen
 active_branch: main
 last_verified_commit: 53014c468f2e174f5ff69737f7a64e66ff7fee06
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
-candidate_pollutants:
+candidate_pool_status: reopened_not_frozen
+candidate_pollutants: []
+priority_verification_group:
+  - PFOA
+  - PFBS
+  - roxithromycin
+  - bisphenol A
+  - 2,6-dichlorophenol
+superseded_candidate_pollutants:
   - PFOA
   - PFOS
   - HFPO-DA (GenX)
@@ -24,8 +32,11 @@ deep_concepts:
   - PFOA/hL-FABP
   - nitrate/NrtA
   - O-desmethylvenlafaxine/SERT
-primary_design: D1-A synthetic double-arm phosphate peptide clamp (93/100 design pass)
-backup_design: D1-B C-terminally immobilized PBP trace-polishing bed (89/100 design pass)
+primary_design: null
+backup_design: null
+superseded_finalists:
+  - D1-A synthetic double-arm phosphate peptide clamp (93/100 historical design pass)
+  - D1-B C-terminally immobilized PBP trace-polishing bed (89/100 historical design pass)
 open_issues:
   - id: INIT-001
     severity: high
@@ -75,10 +86,14 @@ open_issues:
     severity: high
     status: resolved
     text: Complete the final Chinese report, attachment index, state synchronization, credential scan and fresh-clone continuity validation.
-  - id: APPROVAL-001
+  - id: SCOPE-001
     severity: high
     status: open
-    text: Pan Yao reviews the final package; any requested changes enter the user-review ledger and explicit approval is required before Zhou Jiaqi starts experiments.
+    text: Rebuild the pollutant funnel around organic and emerging contaminants using pollutant_kb as a candidate source; apply independently verified secondary-effluent relevance and environmental significance as pass/fail gates before any weighted scoring, and include 2,6-dichlorophenol in the priority verification group.
+  - id: APPROVAL-001
+    severity: high
+    status: deferred
+    text: Final approval is deferred until the reopened pollutant screening and all downstream design stages are completed again.
 artifacts:
   contract: research_contract.yaml
   rules: SOUL.md
@@ -91,6 +106,7 @@ artifacts:
   model_only_batch_a: research/bmdl/paired/model_only_batch_a.md
   model_only_batch_b: research/bmdl/paired/model_only_batch_b.md
   pollutant_shortlist: research/pollutants/POLLUTANT_SHORTLIST.md
+  pollutant_scope_revision: research/pollutants/REOPENED_SCOPE.md
   evidence_ledger: research/evidence/evidence_ledger.csv
   key_claim_verification: research/evidence/KEY_CLAIM_VERIFICATION.md
   inorganic_translation_evidence: research/evidence/INORGANIC_TRANSLATION_EVIDENCE.md

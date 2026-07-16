@@ -26,7 +26,9 @@ The controlled second comparison is complete. The assisted arm won 8/10 but impr
 
 Five concepts completed round-1 design, attack, and cross-review. None passed. D1 phosphate scored 78 and is the strongest revision candidate; D2 clarithromycin scored 70 and remains the likely backup route; D3 PFOA scored 63 with a dynamic critical; D4 nitrate scored 62 and the full static-dynamic concept was rejected; D5 ODV scored 51 and its SERT dynamic mapping was rejected. Exact issue tables are in the two reviewer files and summarized in `rounds/round_1/REVIEW.md`.
 
-The exact next action is Round 2: revise D1-D3 within the reviewer-authorized boundaries, produce explicit termination audits for D4-D5, then run cross-attack and cross-review. No BMDL material may enter these revisions.
+Round 2 is complete. D1 phosphate improved to 83 and is the only working primary; D2 clarithromycin was rejected as a finalist at 74 because bound-state A2062 heterogeneity is not a supported biological gate; D3-D5 remain terminated. No original concept passed the 85/no-open-high threshold.
+
+The threshold was not lowered. A limited backup implementation was reopened: D1-B, an oriented PBP/PiBP protein–porous-carrier hybrid. Round 3 compares D1-A synthetic peptide clamp and D1-B biohybrid, requires a full bench SOP for both, and must define complementary switch conditions. D1-B may not inherit adsorption capacity, regeneration, or stability from protein-sensor precedents.
 
 Translation-evidence dossiers were prepared in parallel but are deliberately excluded from the rerun manifest. They strengthen the later deep-design gate: PBP has an experimental apo/bound pair and direct fluorescence/FRET precedents; NrtA still lacks an experimental apo structure; clarithromycin has a direct 3.3 Å ribosome structure with local A2062 heterogeneity; hL-FABP supports PFOA binding and local portal mobility but not a large global closure; ODV binds hSERT functionally but lacks a target-bound structure.
 
@@ -34,5 +36,5 @@ Translation-evidence dossiers were prepared in parallel but are deliberately exc
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
 2. Verify `main`, read the G2 decision, and ensure no design role receives BMDL paths.
-3. Continue the single round-2 action recorded in `PROJECT_STATE.yaml`.
+3. Continue the single finalist-round action recorded in `PROJECT_STATE.yaml`.
 4. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

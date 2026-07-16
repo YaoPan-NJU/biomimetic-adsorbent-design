@@ -1,0 +1,22 @@
+gate: G4_ADVERSARIAL
+stage: after_round_2
+status: continue_to_final_review
+date: 2026-07-17
+all_five_completed_two_rounds: true
+round2_scores:
+  D1_phosphate_synthetic_clamp: 83
+  D2_clarithromycin_local_gate: 74
+  D3_pfoa_portal: 57
+  D4_nitrate_clamp: 47
+  D5_odv_sert_shell: 43
+terminated:
+  - D2_clarithromycin_local_gate
+  - D3_pfoa_portal
+  - D4_nitrate_clamp
+  - D5_odv_sert_shell
+no_original_concept_passed: true
+threshold_not_lowered: true
+limited_reopen:
+  working_primary: D1-A synthetic peptide clamp
+  new_backup: D1-B oriented PBP/PiBP biohybrid
+decision: CONTINUE_TOP_TWO_TO_ROUND_3

@@ -1,0 +1,954 @@
+[
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "2,6-Dichlorophenol",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "π-π",
+      "疏水",
+      "氢键",
+      "静电"
+    ],
+    "molecular_features": [
+      "2邻位Cl",
+      "可电离",
+      "可配位",
+      "弱酸性",
+      "氯代",
+      "水溶性",
+      "疏水性",
+      "芳香环",
+      "酚羟基"
+    ],
+    "pollutant_class": "chlorophenol",
+    "pollutant_id": "2,6-Dichlorophenol",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "As(III)",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "配位",
+      "沉淀",
+      "氧化"
+    ],
+    "molecular_features": [
+      "三价砷",
+      "中性分子",
+      "亲硫性"
+    ],
+    "pollutant_class": "重金属",
+    "pollutant_id": "As(III)",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "As(V)",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "静电吸引",
+      "配位",
+      "沉淀"
+    ],
+    "molecular_features": [
+      "五价砷",
+      "含氧阴离子",
+      "弱酸性"
+    ],
+    "pollutant_class": "重金属",
+    "pollutant_id": "As(V)",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "BPA（Bisphenol A）",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "氢键",
+      "π-π堆积",
+      "疏水分配",
+      "静电吸引"
+    ],
+    "molecular_features": [
+      "内分泌干扰",
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "水溶性",
+      "疏水性",
+      "芳香环",
+      "酚羟基"
+    ],
+    "pollutant_class": "内分泌干扰物/酚类化合物",
+    "pollutant_id": "BPA",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "CIP（Ciprofloxacin）",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "氢键",
+      "π-π堆积",
+      "静电吸引",
+      "配位"
+    ],
+    "molecular_features": [
+      "芳香环",
+      "羧酸基团",
+      "哌嗪环",
+      "氟原子",
+      "两性离子"
+    ],
+    "pollutant_class": "抗生素/氟喹诺酮类",
+    "pollutant_id": "CIP",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "CR（Congo Red）",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "静电吸引",
+      "π-π堆积",
+      "氢键"
+    ],
+    "molecular_features": [
+      "芳香环",
+      "负电荷",
+      "偶氮键",
+      "大平面结构"
+    ],
+    "pollutant_class": "阴离子染料",
+    "pollutant_id": "CR",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "Cd(II)",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "配位",
+      "静电吸引",
+      "离子交换"
+    ],
+    "molecular_features": [
+      "二价阳离子",
+      "软酸",
+      "中等电荷密度"
+    ],
+    "pollutant_class": "重金属",
+    "pollutant_id": "Cd(II)",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "Cr(VI)",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "静电吸引",
+      "还原沉淀",
+      "配位"
+    ],
+    "molecular_features": [
+      "六价铬",
+      "含氧阴离子",
+      "强氧化性"
+    ],
+    "pollutant_class": "重金属",
+    "pollutant_id": "Cr(VI)",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "Cu(II)",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "配位",
+      "静电吸引",
+      "离子交换"
+    ],
+    "molecular_features": [
+      "二价阳离子",
+      "交界酸",
+      "可与含氮配体配位"
+    ],
+    "pollutant_class": "重金属",
+    "pollutant_id": "Cu(II)",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "DDE",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "π-π",
+      "疏水",
+      "卤键"
+    ],
+    "molecular_features": [
+      "二氯乙烯",
+      "二氯二苯",
+      "可电离",
+      "可配位",
+      "疏水性",
+      "芳香环"
+    ],
+    "pollutant_class": "organochlorine_metabolite",
+    "pollutant_id": "DDE",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "DDT",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "π-π",
+      "疏水",
+      "卤键"
+    ],
+    "molecular_features": [
+      "三氯乙基",
+      "二氯二苯",
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "水溶性",
+      "疏水性",
+      "芳香环"
+    ],
+    "pollutant_class": "organochlorine_pesticide",
+    "pollutant_id": "DDT",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "Decabromodiphenyl ether (BDE-209)",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "π-π",
+      "强疏水",
+      "卤键"
+    ],
+    "molecular_features": [
+      "10个Br",
+      "二苯醚",
+      "可配位",
+      "氯代",
+      "疏水性",
+      "芳香环"
+    ],
+    "pollutant_class": "PBDE",
+    "pollutant_id": "Decabromodiphenyl ether (BDE-209)",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "Dieldrin",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "疏水",
+      "卤键",
+      "氢键(环氧)"
+    ],
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "氯代双环",
+      "水溶性",
+      "环氧",
+      "疏水性",
+      "芳香环"
+    ],
+    "pollutant_class": "organochlorine_pesticide",
+    "pollutant_id": "Dieldrin",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "Endosulfan",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "疏水",
+      "卤键"
+    ],
+    "molecular_features": [
+      "氯代双环",
+      "亚硫酸酯"
+    ],
+    "pollutant_class": "organochlorine_pesticide",
+    "pollutant_id": "Endosulfan",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "F⁻（氟离子）",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "静电吸引",
+      "氢键",
+      "配位"
+    ],
+    "molecular_features": [
+      "单价阴离子",
+      "小半径",
+      "高电负性"
+    ],
+    "pollutant_class": "无机非金属污染物",
+    "pollutant_id": "F-",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "HFPO-DA (GenX)",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "疏水",
+      "静电(阴离子)",
+      "界面/CMC"
+    ],
+    "molecular_features": [
+      "全氟醚羧酸尾",
+      "羧酸头基",
+      "C-F键"
+    ],
+    "pollutant_class": "PFAS_ether_carboxylate",
+    "pollutant_id": "HFPO-DA (GenX)",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "Hexachlorobutadiene (HCBD)",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "疏水",
+      "卤键",
+      "范德华"
+    ],
+    "molecular_features": [
+      "六氯丁二烯"
+    ],
+    "pollutant_class": "chlorinated_diene",
+    "pollutant_id": "Hexachlorobutadiene (HCBD)",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "Hg(II)",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "配位",
+      "离子交换",
+      "沉淀"
+    ],
+    "molecular_features": [
+      "二价阳离子",
+      "软酸",
+      "高亲硫性"
+    ],
+    "pollutant_class": "重金属",
+    "pollutant_id": "Hg(II)",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "MB（Methylene Blue）",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "静电吸引",
+      "π-π堆积",
+      "氢键"
+    ],
+    "molecular_features": [
+      "芳香环",
+      "正电荷",
+      "平面结构",
+      "水溶性"
+    ],
+    "pollutant_class": "阳离子染料",
+    "pollutant_id": "MB",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "MO（Methyl Orange）",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "静电吸引",
+      "π-π堆积",
+      "氢键"
+    ],
+    "molecular_features": [
+      "芳香环",
+      "负电荷",
+      "偶氮键",
+      "平面结构"
+    ],
+    "pollutant_class": "阴离子染料",
+    "pollutant_id": "MO",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "NH₄⁺（铵根）",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "静电吸引",
+      "氢键",
+      "离子交换"
+    ],
+    "molecular_features": [
+      "正电荷",
+      "四面体结构",
+      "可与酸性基团形成氢键"
+    ],
+    "pollutant_class": "无机非金属污染物",
+    "pollutant_id": "NH4+",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "NO₃⁻（硝酸盐）",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "静电吸引",
+      "离子交换"
+    ],
+    "molecular_features": [
+      "含氧阴离子",
+      "平面结构",
+      "弱配位能力"
+    ],
+    "pollutant_class": "无机非金属污染物",
+    "pollutant_id": "NO3-",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "Ni(II)",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "配位",
+      "静电吸引",
+      "离子交换"
+    ],
+    "molecular_features": [
+      "二价阳离子",
+      "交界酸",
+      "可与含氮配体配位"
+    ],
+    "pollutant_class": "重金属",
+    "pollutant_id": "Ni(II)",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "Nonylphenol",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "π-π",
+      "强疏水",
+      "氢键"
+    ],
+    "molecular_features": [
+      "酚羟基",
+      "C9支链"
+    ],
+    "pollutant_class": "alkylphenol_EDC",
+    "pollutant_id": "Nonylphenol",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "Octocrylene",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "π-π",
+      "强疏水"
+    ],
+    "molecular_features": [
+      "二苯基丙烯酸酯",
+      "长支链酯"
+    ],
+    "pollutant_class": "UV_filter_ester",
+    "pollutant_id": "Octocrylene",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "PCB-209",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "π-π",
+      "强疏水",
+      "卤键"
+    ],
+    "molecular_features": [
+      "两芳环",
+      "十氯联苯",
+      "可配位",
+      "氯代",
+      "疏水性",
+      "芳香环"
+    ],
+    "pollutant_class": "PCB",
+    "pollutant_id": "PCB-209",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "PFBS",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "疏水",
+      "静电(阴离子)"
+    ],
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "氟碳链",
+      "疏水性",
+      "短全氟尾",
+      "磺酸头基"
+    ],
+    "pollutant_class": "PFAS_sulfonate_short",
+    "pollutant_id": "PFBS",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "PFHxS",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "疏水",
+      "静电(阴离子)"
+    ],
+    "molecular_features": [
+      "C6全氟尾",
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "氟碳链",
+      "疏水性",
+      "磺酸头基",
+      "芳香环"
+    ],
+    "pollutant_class": "PFAS_sulfonate",
+    "pollutant_id": "PFHxS",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "PFOA（Perfluorooctanoic acid）",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "疏水分配",
+      "氢键",
+      "静电吸引",
+      "孔道限域"
+    ],
+    "molecular_features": [
+      "两亲性",
+      "化学稳定性",
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱酸性",
+      "氟碳链",
+      "水溶性",
+      "疏水性",
+      "羧酸基团",
+      "芳香环",
+      "长链全氟烷基"
+    ],
+    "pollutant_class": "PFASs（全氟和多氟烷基物质）",
+    "pollutant_id": "PFOA",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "PFOS（Perfluorooctanesulfonic acid）",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "疏水分配",
+      "氢键",
+      "静电吸引",
+      "孔道限域"
+    ],
+    "molecular_features": [
+      "长链全氟烷基",
+      "磺酸基团",
+      "疏水性",
+      "两亲性",
+      "化学稳定性"
+    ],
+    "pollutant_class": "PFASs（全氟和多氟烷基物质）",
+    "pollutant_id": "PFOS",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "PO₄³⁻（磷酸盐）",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "配位",
+      "静电吸引",
+      "沉淀"
+    ],
+    "molecular_features": [
+      "含氧阴离子",
+      "四面体结构",
+      "可与金属离子配位"
+    ],
+    "pollutant_class": "无机非金属污染物",
+    "pollutant_id": "PO43-",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "Pb(II)",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "配位",
+      "静电吸引",
+      "离子交换",
+      "络合"
+    ],
+    "molecular_features": [
+      "二价阳离子",
+      "软酸",
+      "高电荷密度",
+      "可与含硫/氮配体配位"
+    ],
+    "pollutant_class": "重金属",
+    "pollutant_id": "Pb(II)",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "Pentachlorophenol",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "π-π",
+      "疏水",
+      "静电(阴离子)",
+      "卤键"
+    ],
+    "molecular_features": [
+      "酚羟基",
+      "5个Cl"
+    ],
+    "pollutant_class": "chlorophenol",
+    "pollutant_id": "Pentachlorophenol",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "RhB（Rhodamine B）",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "静电吸引",
+      "π-π堆积",
+      "氢键"
+    ],
+    "molecular_features": [
+      "芳香环",
+      "正电荷",
+      "大平面结构",
+      "水溶性"
+    ],
+    "pollutant_class": "阳离子染料",
+    "pollutant_id": "RhB",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "Roxithromycin",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "氢键",
+      "疏水",
+      "静电(质子化胺)"
+    ],
+    "molecular_features": [
+      "大环内酯",
+      "多羟基",
+      "叔胺"
+    ],
+    "pollutant_class": "macrolide_antibiotic",
+    "pollutant_id": "Roxithromycin",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "SCCPs",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "疏水",
+      "范德华",
+      "卤键"
+    ],
+    "molecular_features": [
+      "C10-13氯代烷",
+      "多Cl"
+    ],
+    "pollutant_class": "chlorinated_paraffin",
+    "pollutant_id": "SCCPs",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "SMX（Sulfamethoxazole）",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "氢键",
+      "π-π堆积",
+      "静电吸引",
+      "疏水分配"
+    ],
+    "molecular_features": [
+      "芳香环",
+      "磺酰胺基",
+      "异恶唑环",
+      "弱酸性"
+    ],
+    "pollutant_class": "抗生素/磺胺类",
+    "pollutant_id": "SMX",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "TCDD",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "π-π",
+      "电子供受体(EDA)",
+      "强疏水"
+    ],
+    "molecular_features": [
+      "可电离",
+      "可配位",
+      "大分子",
+      "平面二噁英",
+      "弱酸性",
+      "氯代",
+      "氯代芳环",
+      "水溶性",
+      "疏水性",
+      "芳香环"
+    ],
+    "pollutant_class": "dioxin",
+    "pollutant_id": "TCDD",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "TCE（Trichloroethylene）",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "疏水分配",
+      "π-π堆积",
+      "孔道限域"
+    ],
+    "molecular_features": [
+      "氯代烯烃",
+      "疏水性",
+      "挥发性",
+      "弱极性"
+    ],
+    "pollutant_class": "卤代烃/VOCs",
+    "pollutant_id": "TCE",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "TC（Tetracycline）",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "氢键",
+      "π-π堆积",
+      "静电吸引",
+      "配位"
+    ],
+    "molecular_features": [
+      "二甲氨基",
+      "可电离",
+      "可配位",
+      "大分子",
+      "弱碱性",
+      "弱酸性",
+      "氯代",
+      "水溶性",
+      "疏水性",
+      "芳香环",
+      "酚羟基",
+      "酰胺基"
+    ],
+    "pollutant_class": "抗生素",
+    "pollutant_id": "TC",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "Trichloromethane (Chloroform)",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "疏水",
+      "弱范德华"
+    ],
+    "molecular_features": [
+      "三氯甲烷小分子"
+    ],
+    "pollutant_class": "chlorinated_solvent",
+    "pollutant_id": "Trichloromethane (Chloroform)",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "U(VI)",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "配位",
+      "离子交换",
+      "沉淀"
+    ],
+    "molecular_features": [
+      "铀酰离子",
+      "二价阳离子",
+      "可与碳酸根/磷酸根配位"
+    ],
+    "pollutant_class": "放射性元素",
+    "pollutant_id": "U(VI)",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "Zn(II)",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "配位",
+      "静电吸引",
+      "离子交换"
+    ],
+    "molecular_features": [
+      "二价阳离子",
+      "交界酸",
+      "可与含氧/氮配体配位"
+    ],
+    "pollutant_class": "重金属",
+    "pollutant_id": "Zn(II)",
+    "profile_basis": "database"
+  },
+  {
+    "applicable_prototypes": [],
+    "canonical_name": "β-HCH",
+    "cas_number": null,
+    "created_at": "2026-06-26T13:10:21.999518+08:00",
+    "hydrophobicity": null,
+    "likely_interactions": [
+      "疏水",
+      "范德华",
+      "卤键"
+    ],
+    "molecular_features": [
+      "六氯环己烷"
+    ],
+    "pollutant_class": "organochlorine",
+    "pollutant_id": "β-HCH",
+    "profile_basis": "database"
+  }
+]

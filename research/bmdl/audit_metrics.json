@@ -1,0 +1,263 @@
+{
+  "snapshot_counts": {
+    "biological_prototypes": 48,
+    "match_weights": 130,
+    "performance_data_deduplicated": 1076,
+    "performance_data_duplicate_rows": 1939,
+    "performance_data_raw": 3015,
+    "pollutant_aliases": 216,
+    "pollutant_profiles": 44
+  },
+  "source_categories": {
+    "primary": 44,
+    "quarantined": 4
+  },
+  "statuses": {
+    "active": 41,
+    "parked_separation": 5,
+    "needs_literature": 2
+  },
+  "biomimetic_dimensions": {
+    "结构仿生": 15,
+    "missing": 6,
+    "过程仿生": 6,
+    "分子仿生": 5,
+    "功能仿生": 2,
+    "algal_biopolymer": 1,
+    "arthropod_exoskeleton_polysaccharide": 1,
+    "keratin_biopolymer": 1,
+    "lignocellulosic_biomineralization": 1,
+    "microbial_amphiphilic_biopolymer": 1,
+    "microbial_biopolymer": 1,
+    "microbial_biosorption": 1,
+    "microbial_mineral_precipitation": 1,
+    "microbial_polysaccharide_membrane": 1,
+    "phytolith_biomineralization": 1,
+    "plant_biopolymer": 1,
+    "superhydrophobic_surface": 1,
+    "形态仿生": 1,
+    "系统仿生": 1
+  },
+  "prototype_field_coverage": {
+    "with_design_translation": 48,
+    "with_honesty_ledger": 48,
+    "with_mechanisms": 48
+  },
+  "total_mechanisms": 812,
+  "mechanism_basis_occurrences": {
+    "from_source": 3123,
+    "llm_inferred": 1213,
+    "corroborated": 138,
+    "from_mechanism_description": 116
+  },
+  "mechanism_verification_occurrences": {
+    "needs_review": 976,
+    "unverified": 422,
+    "partial": 262,
+    "literature_aggregate": 129,
+    "corroborated": 25,
+    "mechanism_context": 17,
+    "causal_chain_source": 14,
+    "verified": 14,
+    "llm_inferred": 5,
+    "knowledge_gap": 3
+  },
+  "total_design_translations": 49,
+  "design_translation_source_tiers": {
+    "llm_inference": 39,
+    "literature": 10
+  },
+  "match_lanes": {
+    "exploratory": 68,
+    "lead": 54,
+    "fact": 8
+  },
+  "match_direct_evidence": {
+    "false": 84,
+    "true": 46
+  },
+  "candidate_honesty": {
+    "inference": 68,
+    "lead": 54,
+    "fact": 8
+  },
+  "top_retrieved_prototypes": [
+    [
+      "chitosan",
+      27
+    ],
+    [
+      "polydopamine-coating",
+      19
+    ],
+    [
+      "bone-structure",
+      17
+    ],
+    [
+      "oyster-shell",
+      14
+    ],
+    [
+      "plant-tannin",
+      13
+    ],
+    [
+      "silk-fibroin",
+      8
+    ],
+    [
+      "sulfate-reducing-bacteria",
+      7
+    ],
+    [
+      "iron-oxidizing-bacteria",
+      5
+    ],
+    [
+      "diatom-frustule",
+      5
+    ],
+    [
+      "chlorella-cell-wall",
+      4
+    ],
+    [
+      "mussel-foot-adhesion",
+      4
+    ],
+    [
+      "fish-scale-hydroxyapatite",
+      3
+    ]
+  ],
+  "organic_target_queries": {
+    "PFOA": {
+      "rows": 3,
+      "lanes": {
+        "exploratory": 3
+      },
+      "direct_evidence": 0,
+      "prototypes": [
+        "polydopamine-coating",
+        "chitosan",
+        "diatom-frustule"
+      ]
+    },
+    "PFOS": {
+      "rows": 4,
+      "lanes": {
+        "exploratory": 4
+      },
+      "direct_evidence": 0,
+      "prototypes": [
+        "polydopamine-coating",
+        "chitosan",
+        "lotus-leaf",
+        "diatom-frustule"
+      ]
+    },
+    "BPA": {
+      "rows": 3,
+      "lanes": {
+        "exploratory": 3
+      },
+      "direct_evidence": 0,
+      "prototypes": [
+        "polydopamine-coating",
+        "plant-tannin",
+        "chitosan"
+      ]
+    },
+    "SMX": {
+      "rows": 3,
+      "lanes": {
+        "exploratory": 3
+      },
+      "direct_evidence": 0,
+      "prototypes": [
+        "polydopamine-coating",
+        "plant-tannin",
+        "chitosan"
+      ]
+    },
+    "CIP": {
+      "rows": 4,
+      "lanes": {
+        "exploratory": 4
+      },
+      "direct_evidence": 0,
+      "prototypes": [
+        "polydopamine-coating",
+        "bone-structure",
+        "plant-tannin",
+        "chitosan"
+      ]
+    },
+    "Roxithromycin": {
+      "rows": 1,
+      "lanes": {
+        "exploratory": 1
+      },
+      "direct_evidence": 0,
+      "prototypes": [
+        "chitosan"
+      ]
+    }
+  },
+  "organic_prototype_frequency": [
+    [
+      "chitosan",
+      6
+    ],
+    [
+      "polydopamine-coating",
+      5
+    ],
+    [
+      "plant-tannin",
+      3
+    ],
+    [
+      "diatom-frustule",
+      2
+    ],
+    [
+      "lotus-leaf",
+      1
+    ],
+    [
+      "bone-structure",
+      1
+    ]
+  ],
+  "profile_classes": {
+    "重金属": 9,
+    "无机非金属污染物": 4,
+    "organochlorine_pesticide": 3,
+    "PFASs（全氟和多氟烷基物质）": 2,
+    "chlorophenol": 2,
+    "阳离子染料": 2,
+    "阴离子染料": 2,
+    "PBDE": 1,
+    "PCB": 1,
+    "PFAS_ether_carboxylate": 1,
+    "PFAS_sulfonate": 1,
+    "PFAS_sulfonate_short": 1,
+    "UV_filter_ester": 1,
+    "alkylphenol_EDC": 1,
+    "chlorinated_diene": 1,
+    "chlorinated_paraffin": 1,
+    "chlorinated_solvent": 1,
+    "dioxin": 1,
+    "macrolide_antibiotic": 1,
+    "organochlorine": 1,
+    "organochlorine_metabolite": 1,
+    "内分泌干扰物/酚类化合物": 1,
+    "卤代烃/VOCs": 1,
+    "抗生素": 1,
+    "抗生素/氟喹诺酮类": 1,
+    "抗生素/磺胺类": 1,
+    "放射性元素": 1
+  }
+}

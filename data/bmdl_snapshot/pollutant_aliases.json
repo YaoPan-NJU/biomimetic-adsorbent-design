@@ -1,0 +1,1082 @@
+[
+  {
+    "alias": "104-40-5",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Nonylphenol"
+  },
+  {
+    "alias": "115-29-7",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Endosulfan"
+  },
+  {
+    "alias": "1163-19-5",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Decabromodiphenyl ether (BDE-209)"
+  },
+  {
+    "alias": "13252-13-6",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "HFPO-DA (GenX)"
+  },
+  {
+    "alias": "1746-01-6",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "TCDD"
+  },
+  {
+    "alias": "2,3,7,8-四氯二苯并-p-二噁英",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "TCDD"
+  },
+  {
+    "alias": "2,6-Dichlorophenol",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "2,6-Dichlorophenol"
+  },
+  {
+    "alias": "2,6-二氯苯酚",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "2,6-Dichlorophenol"
+  },
+  {
+    "alias": "2051-24-3",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PCB-209"
+  },
+  {
+    "alias": "319-85-7",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "β-HCH"
+  },
+  {
+    "alias": "355-46-4",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PFHxS"
+  },
+  {
+    "alias": "375-73-5",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PFBS"
+  },
+  {
+    "alias": "50-29-3",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "DDT"
+  },
+  {
+    "alias": "60-57-1",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Dieldrin"
+  },
+  {
+    "alias": "6197-30-4",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Octocrylene"
+  },
+  {
+    "alias": "67-66-3",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Trichloromethane (Chloroform)"
+  },
+  {
+    "alias": "72-55-9",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "DDE"
+  },
+  {
+    "alias": "80214-83-1",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Roxithromycin"
+  },
+  {
+    "alias": "85535-84-8",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "SCCPs"
+  },
+  {
+    "alias": "87-65-0",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "2,6-Dichlorophenol"
+  },
+  {
+    "alias": "87-68-3",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Hexachlorobutadiene (HCBD)"
+  },
+  {
+    "alias": "87-86-5",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Pentachlorophenol"
+  },
+  {
+    "alias": "Alkanes",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "SCCPs"
+  },
+  {
+    "alias": "Ammonium",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "NH4+"
+  },
+  {
+    "alias": "As(III)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "As(III)"
+  },
+  {
+    "alias": "As(V)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "As(V)"
+  },
+  {
+    "alias": "As3+",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "As(III)"
+  },
+  {
+    "alias": "As5+",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "As(V)"
+  },
+  {
+    "alias": "As³⁺",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "As(III)"
+  },
+  {
+    "alias": "As⁵⁺",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "As(V)"
+  },
+  {
+    "alias": "BPA",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "BPA"
+  },
+  {
+    "alias": "BPA（Bisphenol A）",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "BPA"
+  },
+  {
+    "alias": "Bisphenol A",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "BPA"
+  },
+  {
+    "alias": "CIP",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "CIP"
+  },
+  {
+    "alias": "CIP（Ciprofloxacin）",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "CIP"
+  },
+  {
+    "alias": "CR (Congo Red)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "CR"
+  },
+  {
+    "alias": "CR",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "CR"
+  },
+  {
+    "alias": "Cd",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cd(II)"
+  },
+  {
+    "alias": "Cd(II)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cd(II)"
+  },
+  {
+    "alias": "Cd2+",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cd(II)"
+  },
+  {
+    "alias": "Cd²⁺",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cd(II)"
+  },
+  {
+    "alias": "Ciprofloxacin",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "CIP"
+  },
+  {
+    "alias": "Congo Red",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "CR"
+  },
+  {
+    "alias": "Congo red CR",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "CR"
+  },
+  {
+    "alias": "Congo red",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "CR"
+  },
+  {
+    "alias": "Cr",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cr(VI)"
+  },
+  {
+    "alias": "Cr(VI)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cr(VI)"
+  },
+  {
+    "alias": "Cr6+",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cr(VI)"
+  },
+  {
+    "alias": "Cr⁶⁺",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cr(VI)"
+  },
+  {
+    "alias": "Cu",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cu(II)"
+  },
+  {
+    "alias": "Cu(II)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cu(II)"
+  },
+  {
+    "alias": "Cu2+",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cu(II)"
+  },
+  {
+    "alias": "Cu²⁺",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cu(II)"
+  },
+  {
+    "alias": "DDE",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "DDE"
+  },
+  {
+    "alias": "DDT",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "DDT"
+  },
+  {
+    "alias": "Decabromodiphenyl ether (BDE-209)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Decabromodiphenyl ether (BDE-209)"
+  },
+  {
+    "alias": "Decabromodiphenyl ether",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Decabromodiphenyl ether (BDE-209)"
+  },
+  {
+    "alias": "Dieldrin",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Dieldrin"
+  },
+  {
+    "alias": "Endosulfan",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Endosulfan"
+  },
+  {
+    "alias": "F-",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "F-"
+  },
+  {
+    "alias": "Fluoride",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "F-"
+  },
+  {
+    "alias": "F⁻",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "F-"
+  },
+  {
+    "alias": "HFPO-DA (GenX)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "HFPO-DA (GenX)"
+  },
+  {
+    "alias": "HFPO-DA",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "HFPO-DA (GenX)"
+  },
+  {
+    "alias": "Hexachlorobutadiene (HCBD)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Hexachlorobutadiene (HCBD)"
+  },
+  {
+    "alias": "Hexachlorobutadiene",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Hexachlorobutadiene (HCBD)"
+  },
+  {
+    "alias": "Hexafluoropropylene Oxide Dimer Acid",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "HFPO-DA (GenX)"
+  },
+  {
+    "alias": "Hg",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Hg(II)"
+  },
+  {
+    "alias": "Hg(II)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Hg(II)"
+  },
+  {
+    "alias": "Hg2+",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Hg(II)"
+  },
+  {
+    "alias": "Hg²⁺",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Hg(II)"
+  },
+  {
+    "alias": "MB (Methylene Blue)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "MB"
+  },
+  {
+    "alias": "MB",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "MB"
+  },
+  {
+    "alias": "MO (Methyl Orange)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "MO"
+  },
+  {
+    "alias": "MO",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "MO"
+  },
+  {
+    "alias": "Methyl Orange",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "MO"
+  },
+  {
+    "alias": "Methyl orange",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "MO"
+  },
+  {
+    "alias": "Methylene Blue",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "MB"
+  },
+  {
+    "alias": "Methylene blue MB",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "MB"
+  },
+  {
+    "alias": "Methylene blue",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "MB"
+  },
+  {
+    "alias": "NH4+",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "NH4+"
+  },
+  {
+    "alias": "NH4+-N",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "NH4+"
+  },
+  {
+    "alias": "NH₄⁺",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "NH4+"
+  },
+  {
+    "alias": "NO3-",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "NO3-"
+  },
+  {
+    "alias": "NO3--N",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "NO3-"
+  },
+  {
+    "alias": "NO₃⁻",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "NO3-"
+  },
+  {
+    "alias": "Ni",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Ni(II)"
+  },
+  {
+    "alias": "Ni(II)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Ni(II)"
+  },
+  {
+    "alias": "Ni2+",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Ni(II)"
+  },
+  {
+    "alias": "Nitrate",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "NO3-"
+  },
+  {
+    "alias": "Ni²⁺",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Ni(II)"
+  },
+  {
+    "alias": "Nonylphenol",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Nonylphenol"
+  },
+  {
+    "alias": "Octocrylene",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Octocrylene"
+  },
+  {
+    "alias": "PCB-209",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PCB-209"
+  },
+  {
+    "alias": "PFBS",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PFBS"
+  },
+  {
+    "alias": "PFHxS",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PFHxS"
+  },
+  {
+    "alias": "PFOA",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PFOA"
+  },
+  {
+    "alias": "PFOA（Perfluorooctanoic acid）",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PFOA"
+  },
+  {
+    "alias": "PFOS",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PFOS"
+  },
+  {
+    "alias": "PFOS（Perfluorooctanesulfonic acid）",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PFOS"
+  },
+  {
+    "alias": "PO43-",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PO43-"
+  },
+  {
+    "alias": "PO₄³⁻",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PO43-"
+  },
+  {
+    "alias": "Pb",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Pb(II)"
+  },
+  {
+    "alias": "Pb(II)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Pb(II)"
+  },
+  {
+    "alias": "Pb2+",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Pb(II)"
+  },
+  {
+    "alias": "Pb²⁺",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Pb(II)"
+  },
+  {
+    "alias": "Pentachlorophenol",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Pentachlorophenol"
+  },
+  {
+    "alias": "Perfluorooctanesulfonic acid",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PFOS"
+  },
+  {
+    "alias": "Perfluorooctanoic acid",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PFOA"
+  },
+  {
+    "alias": "Phosphate",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PO43-"
+  },
+  {
+    "alias": "RhB (Rhodamine B)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "RhB"
+  },
+  {
+    "alias": "RhB",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "RhB"
+  },
+  {
+    "alias": "Rhodamine B",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "RhB"
+  },
+  {
+    "alias": "Rhodamine b",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "RhB"
+  },
+  {
+    "alias": "Roxithromycin",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Roxithromycin"
+  },
+  {
+    "alias": "SCCPs",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "SCCPs"
+  },
+  {
+    "alias": "SMX",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "SMX"
+  },
+  {
+    "alias": "SMX（Sulfamethoxazole）",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "SMX"
+  },
+  {
+    "alias": "Sulfamethoxazole",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "SMX"
+  },
+  {
+    "alias": "TC",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "TC"
+  },
+  {
+    "alias": "TCDD",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "TCDD"
+  },
+  {
+    "alias": "TCE",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "TCE"
+  },
+  {
+    "alias": "TCE（Trichloroethylene）",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "TCE"
+  },
+  {
+    "alias": "TC·HCl",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "TC"
+  },
+  {
+    "alias": "TC（Tetracycline）",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "TC"
+  },
+  {
+    "alias": "Tetracycline",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "TC"
+  },
+  {
+    "alias": "Trichloroethylene",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "TCE"
+  },
+  {
+    "alias": "Trichloromethane (Chloroform)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Trichloromethane (Chloroform)"
+  },
+  {
+    "alias": "Trichloromethane",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Trichloromethane (Chloroform)"
+  },
+  {
+    "alias": "U",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "U(VI)"
+  },
+  {
+    "alias": "U(VI)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "U(VI)"
+  },
+  {
+    "alias": "U6+",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "U(VI)"
+  },
+  {
+    "alias": "U⁶⁺",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "U(VI)"
+  },
+  {
+    "alias": "Zn",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Zn(II)"
+  },
+  {
+    "alias": "Zn(II)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Zn(II)"
+  },
+  {
+    "alias": "Zn2+",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Zn(II)"
+  },
+  {
+    "alias": "Zn²⁺",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Zn(II)"
+  },
+  {
+    "alias": "ammonium",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "NH4+"
+  },
+  {
+    "alias": "arsenate",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "As(V)"
+  },
+  {
+    "alias": "arsenite",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "As(III)"
+  },
+  {
+    "alias": "cadmium ion",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cd(II)"
+  },
+  {
+    "alias": "chromium(VI)",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cr(VI)"
+  },
+  {
+    "alias": "ciprofloxacin hydrochloride",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "CIP"
+  },
+  {
+    "alias": "congo red",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "CR"
+  },
+  {
+    "alias": "copper ion",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cu(II)"
+  },
+  {
+    "alias": "fluoride",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "F-"
+  },
+  {
+    "alias": "lead ion",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Pb(II)"
+  },
+  {
+    "alias": "mercury ion",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Hg(II)"
+  },
+  {
+    "alias": "methyl orange",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "MO"
+  },
+  {
+    "alias": "methylene blue",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "MB"
+  },
+  {
+    "alias": "nickel ion",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Ni(II)"
+  },
+  {
+    "alias": "nitrate",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "NO3-"
+  },
+  {
+    "alias": "phosphate",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PO43-"
+  },
+  {
+    "alias": "rhodamine B",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "RhB"
+  },
+  {
+    "alias": "tetracycline hydrochloride",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "TC"
+  },
+  {
+    "alias": "uranyl",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "U(VI)"
+  },
+  {
+    "alias": "zinc ion",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Zn(II)"
+  },
+  {
+    "alias": "β-HCH",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "β-HCH"
+  },
+  {
+    "alias": "β-Hexachlorocyclohexane",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "β-HCH"
+  },
+  {
+    "alias": "β-六氯环己烷",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "β-HCH"
+  },
+  {
+    "alias": "三价砷",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "As(III)"
+  },
+  {
+    "alias": "三氯乙烯",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "TCE"
+  },
+  {
+    "alias": "三氯甲烷",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Trichloromethane (Chloroform)"
+  },
+  {
+    "alias": "二价汞",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Hg(II)"
+  },
+  {
+    "alias": "二价铅",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Pb(II)"
+  },
+  {
+    "alias": "二价铜",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cu(II)"
+  },
+  {
+    "alias": "二价锌",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Zn(II)"
+  },
+  {
+    "alias": "二价镉",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cd(II)"
+  },
+  {
+    "alias": "二价镍",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Ni(II)"
+  },
+  {
+    "alias": "五价砷",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "As(V)"
+  },
+  {
+    "alias": "五氯苯酚",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Pentachlorophenol"
+  },
+  {
+    "alias": "亚甲基蓝",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "MB"
+  },
+  {
+    "alias": "亚砷酸盐",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "As(III)"
+  },
+  {
+    "alias": "全氟丁烷磺酸",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PFBS"
+  },
+  {
+    "alias": "全氟己烷磺酸",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PFHxS"
+  },
+  {
+    "alias": "全氟辛烷磺酸",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PFOS"
+  },
+  {
+    "alias": "全氟辛酸",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PFOA"
+  },
+  {
+    "alias": "六价铀",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "U(VI)"
+  },
+  {
+    "alias": "六价铬",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cr(VI)"
+  },
+  {
+    "alias": "六氟环氧丙烷二聚酸",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "HFPO-DA (GenX)"
+  },
+  {
+    "alias": "六氯丁二烯",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Hexachlorobutadiene (HCBD)"
+  },
+  {
+    "alias": "刚果红",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "CR"
+  },
+  {
+    "alias": "十溴二苯醚",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Decabromodiphenyl ether (BDE-209)"
+  },
+  {
+    "alias": "双酚A",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "BPA"
+  },
+  {
+    "alias": "四环素",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "TC"
+  },
+  {
+    "alias": "壬基酚",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Nonylphenol"
+  },
+  {
+    "alias": "多氯联苯-209",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PCB-209"
+  },
+  {
+    "alias": "奥克立林",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Octocrylene"
+  },
+  {
+    "alias": "无机磷",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PO43-"
+  },
+  {
+    "alias": "氟化物",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "F-"
+  },
+  {
+    "alias": "氟离子",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "F-"
+  },
+  {
+    "alias": "氨氮",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "NH4+"
+  },
+  {
+    "alias": "汞离子",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Hg(II)"
+  },
+  {
+    "alias": "滴滴伊",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "DDE"
+  },
+  {
+    "alias": "滴滴涕",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "DDT"
+  },
+  {
+    "alias": "狄氏剂",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Dieldrin"
+  },
+  {
+    "alias": "环丙沙星",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "CIP"
+  },
+  {
+    "alias": "甲基橙",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "MO"
+  },
+  {
+    "alias": "短链氯化石蜡",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "SCCPs"
+  },
+  {
+    "alias": "砷酸盐",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "As(V)"
+  },
+  {
+    "alias": "硝酸根",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "NO3-"
+  },
+  {
+    "alias": "硝酸盐",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "NO3-"
+  },
+  {
+    "alias": "硫丹",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Endosulfan"
+  },
+  {
+    "alias": "磷酸根",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PO43-"
+  },
+  {
+    "alias": "磷酸盐",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "PO43-"
+  },
+  {
+    "alias": "磺胺甲恶唑",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "SMX"
+  },
+  {
+    "alias": "罗丹明B",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "RhB"
+  },
+  {
+    "alias": "罗红霉素",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Roxithromycin"
+  },
+  {
+    "alias": "铀酰离子",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "U(VI)"
+  },
+  {
+    "alias": "铅离子",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Pb(II)"
+  },
+  {
+    "alias": "铜离子",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cu(II)"
+  },
+  {
+    "alias": "铬酸根",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cr(VI)"
+  },
+  {
+    "alias": "铵根",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "NH4+"
+  },
+  {
+    "alias": "锌离子",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Zn(II)"
+  },
+  {
+    "alias": "镉离子",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Cd(II)"
+  },
+  {
+    "alias": "镍离子",
+    "created_at": "2026-06-26T13:10:22.261654+08:00",
+    "pollutant_id": "Ni(II)"
+  }
+]

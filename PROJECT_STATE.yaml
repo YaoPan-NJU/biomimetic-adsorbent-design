@@ -1,12 +1,12 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: bootstrap
+phase: pollutant_research
 status: in_progress
-last_completed_step: plan approved by Pan Yao
-next_action: create and audit a strictly read-only BMDL snapshot
+last_completed_step: strictly read-only BMDL snapshot and structural audit completed
+next_action: merge primary-source retrieval into the ten-pollutant shortlist
 active_branch: main
-last_verified_commit: null
-bmdl_policy: undecided_pending_paired_evaluation
+last_verified_commit: 4cdd8a3
+bmdl_policy: provisional_evidence_only_pending_paired_evaluation
 candidate_pollutants: []
 deep_concepts: []
 primary_design: null
@@ -14,8 +14,8 @@ backup_design: null
 open_issues:
   - id: INIT-001
     severity: high
-    status: open
-    text: Complete BMDL read-only snapshot and objective audit.
+    status: resolved
+    text: BMDL snapshot exported with both default and transaction read-only set to on; structural audit completed.
   - id: INIT-002
     severity: high
     status: open
@@ -25,9 +25,11 @@ artifacts:
   rules: SOUL.md
   handoff: HANDOFF.md
   source_brief: docs/source/仿生吸附材料设计任务总纲.md
+  bmdl_manifest: data/bmdl_snapshot/manifest.json
+  bmdl_audit: research/bmdl/BMDL_AUDIT.md
+  bmdl_audit_metrics: research/bmdl/audit_metrics.json
 checks:
-  secrets_scan: pending
-  state_paths: pending
-  remote_push: pending
+  secrets_scan: passed_at_bootstrap
+  state_paths: passed_at_bootstrap
+  remote_push: bootstrap_pushed
   fresh_clone: pending
-

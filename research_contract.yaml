@@ -1,0 +1,87 @@
+project:
+  name: biomimetic-adsorbent-design
+  owner: Pan Yao
+  executor: Codex
+  experimental_handoff: Zhou Jiaqi
+  independence: ADRMATS is out of scope and is not a dependency
+
+deliverable:
+  language: zh-CN
+  primary_designs: 1
+  backup_designs: 1
+  includes:
+    - scientific causal chain
+    - biomimetic correspondence matrix
+    - material architecture and selective mechanism
+    - bench-scale synthesis SOP
+    - characterization and causal controls
+    - adsorption, selectivity, matrix, regeneration, leaching, and stability experiments
+    - success and failure criteria
+    - evidence ledger and adversarial audit trail
+  excludes:
+    - actual laboratory execution
+    - experimental results
+    - full English manuscript
+    - user-facing CLI or agent product
+
+water_context:
+  primary: municipal wastewater treatment secondary effluent
+  mechanism_control: ultrapure water
+  optional_external_validation:
+    - surface water
+    - drinking water
+
+funnel:
+  pollutants: 10
+  deep_concepts: 5
+  finalists: 2
+  primary: 1
+  backup: 1
+
+pollutant_scoring:
+  selective_challenge: 20
+  uniquely_biomimetic_capability: 20
+  static_dynamic_synergy: 20
+  engineering_generality: 15
+  environmental_significance: 15
+  novelty_and_evidence_opportunity: 10
+
+final_scoring:
+  causal_closure: 20
+  selective_adsorption_mechanism: 20
+  biomimetic_fidelity: 20
+  originality: 15
+  experimental_falsifiability_and_controls: 15
+  evidence_integrity: 10
+  pass_score: 85
+  unresolved_critical_allowed: 0
+  unresolved_high_allowed: 0
+
+hard_correspondence:
+  required_static: 1
+  required_dynamic: 1
+  required_fields:
+    - biological_feature
+    - source_support
+    - material_realization
+    - expected_function
+    - measurement
+    - causal_control
+
+bmdl_gate:
+  baseline_must_be_frozen_first: true
+  design_assist:
+    minimum_pairwise_wins: 6
+    minimum_mean_gain: 5
+    maximum_originality_drop: 2
+    maximum_severe_misleading_links: 1
+  exclude_from_design:
+    diversity_ratio_below: 0.80
+    severe_misleading_links_at_least: 2
+
+adversarial_process:
+  isolated_roles: true
+  required_rounds_all_concepts: 2
+  final_review_rounds_top_two: 1
+  persist_hidden_reasoning: false
+

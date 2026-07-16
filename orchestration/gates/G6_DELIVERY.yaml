@@ -1,6 +1,6 @@
 gate: G6_DELIVERY
 stage: final_package
-status: pending_fresh_clone
+status: continuity_passed_awaiting_user_approval
 date: 2026-07-16
 required:
   private_remote: true
@@ -12,5 +12,8 @@ required:
   credential_scan: scripts/scan_credentials.py
   repository_validation: scripts/validate_repository.py
   user_approval: pending
-fresh_clone_commit: null
-decision: HOLD_FOR_CONTINUITY_VALIDATION
+fresh_clone_commit: 53014c468f2e174f5ff69737f7a64e66ff7fee06
+mechanical_validation: passed
+credential_scan: passed
+context_free_codex_readback: passed
+decision: HOLD_FOR_PAN_YAO_REVIEW

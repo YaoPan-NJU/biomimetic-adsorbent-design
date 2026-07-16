@@ -1,11 +1,11 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: delivery_ready_for_clone_validation
-status: in_progress
-last_completed_step: Chinese main report, scorecard, issue ledger, revision log, execution index and user-review ledger compiled
-next_action: commit and push the delivery package, then verify state restoration and all checks from a fresh clone
+phase: awaiting_user_review
+status: awaiting_pan_yao_approval
+last_completed_step: final delivery commit was pushed and restored from a fresh clone; mechanical checks and context-free Codex readback passed
+next_action: Pan Yao reviews deliverables/MAIN_REPORT_ZH.md and records approval or revision requests in deliverables/attachments/USER_REVIEW_LOG.md
 active_branch: main
-last_verified_commit: 280d36c
+last_verified_commit: 53014c468f2e174f5ff69737f7a64e66ff7fee06
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pollutants:
   - PFOA
@@ -73,8 +73,12 @@ open_issues:
     text: Design and independently review the oriented PBP/PiBP biohybrid as a mechanism-preserving backup with explicit capacity, regeneration, stability and leakage gates.
   - id: FINAL-001
     severity: high
-    status: open
+    status: resolved
     text: Complete the final Chinese report, attachment index, state synchronization, credential scan and fresh-clone continuity validation.
+  - id: APPROVAL-001
+    severity: high
+    status: open
+    text: Pan Yao reviews the final package; any requested changes enter the user-review ledger and explicit approval is required before Zhou Jiaqi starts experiments.
 artifacts:
   contract: research_contract.yaml
   rules: SOUL.md
@@ -125,8 +129,12 @@ artifacts:
   repository_validator: scripts/validate_repository.py
   credential_scanner: scripts/scan_credentials.py
   gate_g6_delivery: orchestration/gates/G6_DELIVERY.yaml
+  fresh_clone_readback: orchestration/FRESH_CLONE_READBACK.md
 checks:
-  secrets_scan: pending_final_delivery_commit
-  state_paths: pending_final_delivery_commit
-  remote_push: finalist_checkpoint_280d36c_pushed
-  fresh_clone: pending_final_delivery
+  secrets_scan: passed_on_fresh_clone_53014c4_113_tracked_files
+  state_paths: passed_on_fresh_clone_53014c4_49_artifacts
+  snapshot_checksums: passed_on_fresh_clone_53014c4_6_files
+  machine_specific_paths: none_found_on_fresh_clone_53014c4
+  remote_push: delivery_checkpoint_53014c4_pushed
+  fresh_clone: passed_at_53014c468f2e174f5ff69737f7a64e66ff7fee06
+  context_free_codex_readback: passed

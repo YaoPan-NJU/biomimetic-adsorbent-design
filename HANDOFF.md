@@ -24,6 +24,8 @@ BMDL remains provisionally restricted to evidence checking. The first anonymous 
 
 The exact next action is a controlled rerun. Fresh isolated contexts must use the hash-locked common inputs in `research/bmdl/rerun/FROZEN_INPUT_MANIFEST.yaml`; only the assisted arm may additionally read the per-candidate BMDL packages. New anonymous variants are then reviewed without access to the identity mapping. No BMDL policy may be upgraded from the invalid first attempt.
 
+Translation-evidence dossiers were prepared in parallel but are deliberately excluded from the rerun manifest. They strengthen the later deep-design gate: PBP has an experimental apo/bound pair and direct fluorescence/FRET precedents; NrtA still lacks an experimental apo structure; clarithromycin has a direct 3.3 Å ribosome structure with local A2062 heterogeneity; hL-FABP supports PFOA binding and local portal mobility but not a large global closure; ODV binds hSERT functionally but lacks a target-bound structure.
+
 ## Resume instructions
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.

@@ -2,8 +2,8 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: bmdl_paired_evaluation
 status: in_progress
-last_completed_step: first BMDL paired evaluation archived as invalid because evidence versions differed
-next_action: rerun both paired arms in fresh contexts using the identical frozen input manifest
+last_completed_step: controlled attempt-2 model-only arm generated in fresh contexts from hash-locked inputs
+next_action: generate attempt-2 BMDL-assisted arm from the same locked inputs plus per-candidate snapshot packages
 active_branch: main
 last_verified_commit: 6b8b976
 bmdl_policy: provisional_evidence_only_pending_paired_evaluation
@@ -59,6 +59,8 @@ artifacts:
   bmdl_attempt1_incident: research/bmdl/PAIRED_EVALUATION_INCIDENT.md
   bmdl_attempt1_review: research/bmdl/paired/BLIND_REVIEW.md
   bmdl_rerun_manifest: research/bmdl/rerun/FROZEN_INPUT_MANIFEST.yaml
+  bmdl_rerun_model_a: research/bmdl/rerun/model_only_attempt2_batch_a.md
+  bmdl_rerun_model_b: research/bmdl/rerun/model_only_attempt2_batch_b.md
 checks:
   secrets_scan: passed_before_model_only_checkpoint
   state_paths: passed_before_model_only_checkpoint

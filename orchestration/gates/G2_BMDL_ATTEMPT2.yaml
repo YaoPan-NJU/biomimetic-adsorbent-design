@@ -1,0 +1,25 @@
+gate: G2_BMDL
+attempt: 2
+status: passed
+date: 2026-07-17
+common_inputs_hash_locked: true
+fresh_isolated_contexts: true
+blind_review_completed_before_reveal: true
+metrics:
+  assisted_wins: 8
+  mean_gain: 2.3
+  causal_gain: 0.6
+  evidence_gain: 0.1
+  originality_gain: 0.9
+  diversity_ratio: 1.0
+  misleading_links_in_final_concepts: 0
+  severe_misleading_associations_in_inputs_at_least: 4
+contract_evaluation:
+  design_assist: failed_mean_gain_below_5
+  evidence_only: not_selected_because_input_associations_are_not_safe_evidence
+  exclude_design_stage: triggered_by_two_or_more_severe_input_associations
+decision: EXCLUDE_FROM_DESIGN_STAGE
+allowed_after_independent_design:
+  - conventional-baseline checklist
+  - negative audit for known cross-pollutant associations
+next_gate: G3_CONCEPTS

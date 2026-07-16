@@ -1,12 +1,12 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: bmdl_paired_evaluation
+phase: deep_concept_round_1
 status: in_progress
-last_completed_step: controlled attempt-2 model-only arm generated in fresh contexts from hash-locked inputs
-next_action: generate attempt-2 BMDL-assisted arm from the same locked inputs plus per-candidate snapshot packages
+last_completed_step: controlled BMDL attempt-2 completed and BMDL excluded from the design stage
+next_action: generate round-1 deep designs for the five admitted pollutant-prototype pairs
 active_branch: main
 last_verified_commit: 6b8b976
-bmdl_policy: provisional_evidence_only_pending_paired_evaluation
+bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pollutants:
   - PFOA
   - PFOS
@@ -18,7 +18,12 @@ candidate_pollutants:
   - phosphate
   - nitrate
   - As(III)
-deep_concepts: []
+deep_concepts:
+  - phosphate/PstS-PBP
+  - clarithromycin/ribosomal-exit-tunnel
+  - PFOA/hL-FABP
+  - nitrate/NrtA
+  - O-desmethylvenlafaxine/SERT
 primary_design: null
 backup_design: null
 open_issues:
@@ -32,12 +37,16 @@ open_issues:
     text: Establish the evidence-backed ten-pollutant shortlist for secondary effluent.
   - id: BMDL-001
     severity: high
-    status: open
+    status: resolved
     text: Complete paired blind evaluation before allowing BMDL into any creative design stage.
   - id: BMDL-002
     severity: high
     status: resolved
     text: Attempt 1 was confounded by a changed evidence ledger; results were invalidated and a hash-locked rerun was specified.
+  - id: DESIGN-001
+    severity: high
+    status: open
+    text: Complete at least two adversarial rounds for all five admitted concepts and a third round for the top two.
 artifacts:
   contract: research_contract.yaml
   rules: SOUL.md
@@ -61,6 +70,12 @@ artifacts:
   bmdl_rerun_manifest: research/bmdl/rerun/FROZEN_INPUT_MANIFEST.yaml
   bmdl_rerun_model_a: research/bmdl/rerun/model_only_attempt2_batch_a.md
   bmdl_rerun_model_b: research/bmdl/rerun/model_only_attempt2_batch_b.md
+  bmdl_rerun_assisted_a: research/bmdl/rerun/assisted_attempt2_batch_a.md
+  bmdl_rerun_assisted_b: research/bmdl/rerun/assisted_attempt2_batch_b.md
+  bmdl_rerun_blind_review: research/bmdl/rerun/BLIND_REVIEW_ATTEMPT2.md
+  bmdl_rerun_identity_reveal: research/bmdl/rerun/IDENTITY_REVEAL.yaml
+  bmdl_final_evaluation: research/bmdl/BMDL_PAIRED_EVALUATION.md
+  gate_g2: orchestration/gates/G2_BMDL_ATTEMPT2.yaml
 checks:
   secrets_scan: passed_before_model_only_checkpoint
   state_paths: passed_before_model_only_checkpoint

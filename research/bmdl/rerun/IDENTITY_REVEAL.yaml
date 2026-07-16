@@ -1,0 +1,37 @@
+attempt: 2
+revealed_after_blind_review: true
+mapping:
+  A-U: model_only
+  A-V: bmdl_assisted
+  B-W: bmdl_assisted
+  B-X: model_only
+actual_arm_metrics:
+  model_only:
+    wins: 2
+    mean_total: 84.1
+    mean_causal_closure: 17.7
+    mean_evidence_quality: 9.2
+    mean_originality: 11.4
+    independent_prototype_families: 8
+    severe_misleading_links_in_final_concepts: 0
+  bmdl_assisted:
+    wins: 8
+    mean_total: 86.4
+    mean_causal_closure: 18.3
+    mean_evidence_quality: 9.3
+    mean_originality: 12.3
+    independent_prototype_families: 8
+    severe_misleading_links_in_final_concepts: 0
+  assisted_minus_model:
+    mean_total: 2.3
+    mean_causal_closure: 0.6
+    mean_evidence_quality: 0.1
+    mean_originality: 0.9
+    diversity_ratio: 1.0
+bmdl_input_severe_misleading_associations:
+  count_at_least: 4
+  examples:
+    - PFOA profile claimed aromatic-ring and macromolecule features that do not describe PFOA.
+    - Phosphate matched an As(III) schwertmannite mechanism under an iron-oxidizing-bacteria direct-evidence record.
+    - As(III) matched a silk-fibroin record labeled direct evidence although its contents were generic interactions.
+    - Multiple SMX BPA nitrate and PFOS matches transferred dye or heavy-metal mechanisms across pollutants.

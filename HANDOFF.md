@@ -22,15 +22,15 @@ The frozen model-only ranking is led by phosphate/PstS (91), nitrate/NrtA (87), 
 
 BMDL remains provisionally restricted to evidence checking. The first anonymous comparison appeared to favor the assisted variants by 5.8 points on average, but the comparison is invalid: the evidence ledger was updated between the two arms, and the reviewer explicitly rewarded those evidence corrections. The invalid attempt and its blind scores are preserved rather than erased.
 
-The exact next action is a controlled rerun. Fresh isolated contexts must use the hash-locked common inputs in `research/bmdl/rerun/FROZEN_INPUT_MANIFEST.yaml`; only the assisted arm may additionally read the per-candidate BMDL packages. New anonymous variants are then reviewed without access to the identity mapping. No BMDL policy may be upgraded from the invalid first attempt.
+The controlled second comparison is complete. The assisted arm won 8/10 but improved the mean score by only 2.3 points, below the required 5. BMDL inputs also contained at least four severe cross-pollutant or mislabeled associations. The final policy is `exclude_design_stage_allow_posthoc_negative_audit_only`: designers must not read BMDL; after a design is frozen, the supervisor may use the snapshot only to add conventional baselines or detect known bad associations.
 
-The controlled model-only arm is now frozen in two files under `research/bmdl/rerun/`. Both fresh child contexts verified all five common-input hashes, did not use the network, and did not read BMDL or earlier paired outputs. Those two files must not be edited. The next role may create only the assisted arm.
+Five concepts are admitted to adversarial development: phosphate/PstS-PBP, clarithromycin/ribosomal exit tunnel, PFOA/hL-FABP, nitrate/NrtA, and ODV/SERT. As(III) was not admitted despite a strong ArsR mechanism because ordinary municipal secondary-effluent relevance is conditional. SMX and BPA were displaced by stronger dynamic or structural evidence. The exact next action is round-1 design for all five, using the two translation-evidence dossiers but no BMDL content.
 
 Translation-evidence dossiers were prepared in parallel but are deliberately excluded from the rerun manifest. They strengthen the later deep-design gate: PBP has an experimental apo/bound pair and direct fluorescence/FRET precedents; NrtA still lacks an experimental apo structure; clarithromycin has a direct 3.3 Å ribosome structure with local A2062 heterogeneity; hL-FABP supports PFOA binding and local portal mobility but not a large global closure; ODV binds hSERT functionally but lacks a target-bound structure.
 
 ## Resume instructions
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
-2. Verify `main`, the frozen input hashes, and the invalid-attempt record.
-3. Continue only the controlled BMDL rerun recorded in `PROJECT_STATE.yaml`.
+2. Verify `main`, read the G2 decision, and ensure no design role receives BMDL paths.
+3. Continue the single round-1 deep-design action recorded in `PROJECT_STATE.yaml`.
 4. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

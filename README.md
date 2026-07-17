@@ -10,7 +10,7 @@ Pan Yao 已纠正此前的路线偏移：生物组织分布和蛋白结合证据
 
 此前的 **S1-SYN** PFOA 路线暂停但未终止。当前组合首位为 **BPA-1**：ERRγ 静态化学功能启发、非模板化、非蛋白的选择性吸附路线。它在组合攻击后为 84/100，尚不是主方案。Pan Yao 已授权继续深化 BPA-1；首轮从 `2E2R` 坐标得到 BPA 两酚氧间距约 9.27 Å，并曾冻结 1,2-di(pyridin-4-yl)ethyne（`R1-BPE`）作为可溶机制探针，见 [`GEOMETRY_AND_RECEPTOR_TRIAGE.md`](rounds/bpa1_deep_design_1/GEOMETRY_AND_RECEPTOR_TRIAGE.md)。随后的化学攻击发现 R1 两端吡啶氮向外发散，原子间距接近并不等于氢键方向会聚，因此 R1 已被降为负面对照，BPA-1 新评分为 68/100、`revise`，见 [`R1_CHEMISTRY_ATTACK.md`](rounds/bpa1_deep_design_1/R1_CHEMISTRY_ATTACK.md)。
 
-对 ERRγ 功能证据的复核进一步表明，对称双端夹并非原型强制要求：关键证据更支持“一个酚羟基的互补极性主锚 + 疏水芳香包围”，单羟基类似物仍可强结合。当前已提出确切的可聚合小分子探针 `P1-MAPy`（2-methacrylamidopyridine，162.19 g/mol），其相邻吡啶/酰胺位点和聚合入口均有文献基础；但尚无 BPA 水相结合证据，只作为机制探针候选，见 [`ASYMMETRIC_ANCHOR_REDIRECTION.md`](rounds/bpa1_deep_design_1/ASYMMETRIC_ANCHOR_REDIRECTION.md)。现已冻结供体删除、受体删除、邻位破坏和疏水空白四级对照及水相停止门，见 [`P1_MAPY_CONTROL_AND_GATE.md`](rounds/bpa1_deep_design_1/P1_MAPY_CONTROL_AND_GATE.md)。下一动作是攻击这些阈值能否排除自缔合和假结合；在此之前不选择材料架构、不订购、不合成、不开展实验，也不继续 S11 Gate 1b/Gate 2。
+对 ERRγ 功能证据的复核进一步表明，对称双端夹并非原型强制要求：关键证据更支持“一个酚羟基的互补极性主锚 + 疏水芳香包围”，单羟基类似物仍可强结合。当前已提出确切的可聚合小分子探针 `P1-MAPy`（2-methacrylamidopyridine，162.19 g/mol），并冻结供体删除、受体删除、邻位破坏和疏水空白四级对照及水相停止门，见 [`P1_MAPY_CONTROL_AND_GATE.md`](rounds/bpa1_deep_design_1/P1_MAPY_CONTROL_AND_GATE.md)。随后攻击发现，acylaminopyridine 的成熟两点识别对象是具有两个氧的羧酸，而不是 BPA 的单个酚氧；直接水凝胶先例也表现为一般酚吸附且体积增大时容量下降。故 P1 只保留为实验探针，BPA-1 当前 `70/100, experiment-gated`，不进入材料化，见 [`P1_MAPY_ATTACK.md`](rounds/bpa1_deep_design_1/P1_MAPY_ATTACK.md)。下一段纸面资源动态转向 BPA-2；当前仍不订购、不合成、不开展实验，也不继续 S11 Gate 1b/Gate 2。
 
 ## 阅读入口
 
@@ -82,3 +82,4 @@ Pan Yao 复核后确认，强制“静态＋动态硬对应”使项目从机制
 4. 首轮曾冻结 `R1-BPE` 及删除/错配系列；下一次化学攻击发现其受体方向发散且控制组同时改变多项性质，故 R1 终止为完整受体，只保留为负面对照。该修订追加记录，没有覆盖首轮文件。
 5. 再复核 ERRγ 的突变与单羟基类似物证据后，撤销“必须跨两个羟基对称夹持”的错误约束，转为单端互补主锚与疏水包围。`P1-MAPy` 已作为确切、轻质、可聚合的机制探针候选记录，但尚未通过水相 BPA 结合门。
 6. 已冻结 `P1/C1-NHoff/C2-Noff/C3-meta/C4-H` 对照组和可溶门：P1–BPA 至少达到 `100 M-1`、高于三个结构对照中最强者 3 倍，且两种正交方法的 `Ka` 相差不超过 3 倍；这些是待攻击的预注册设计，不是实验结果。
+7. 对抗审查确认 P1 的经典两点证据属于羧酸受体化学，不能直接转给单酚氧；水相酚吸附先例的体积趋势也不利。P1 保留为高信息量实验探针，BPA-1 暂停材料化，纸面深化转向 BPA-2 保险路线。

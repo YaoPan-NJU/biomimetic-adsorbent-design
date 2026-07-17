@@ -1,11 +1,11 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: bpa1_asymmetric_anchor_probe_design
+phase: bpa2_insurance_route_paper_deepening
 status: in_progress
-last_completed_step: The exact P1-MAPy soluble control series and pre-registered aqueous stop contract were frozen with donor deletion acceptor deletion adjacency disruption hydrophobic blank self-association handling and total-material capacity discipline
-next_action: Adversarially test whether the P1-MAPy aqueous gate and its thresholds can distinguish complementary anchoring from protonation self-association and nonspecific hydrophobic partitioning; do not select a material architecture before this review
+last_completed_step: P1-MAPy attack found that established acylaminopyridine two-point evidence is carboxylic-acid-specific and a direct aqueous phenol-hydrogel precedent shows decreasing uptake with steric bulk; BPA-1 is 70/revise/experiment-gated and is not materialized
+next_action: Dynamically reallocate paper design effort to BPA-2 as an insurance route and first attack beta-cyclodextrin mass capacity cavity stoichiometry and polar-site colocalization before freezing any material recipe
 active_branch: main
-last_verified_commit: 2cf1345
+last_verified_commit: 70539b8
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: four_pollutant_twenty_scheme_portfolio_frozen_and_ranked
 candidate_pollutants:
@@ -62,10 +62,10 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
-active_deep_concept: BPA-1 ERRgamma asymmetric primary-anchor translation with exact P1-MAPy mechanism-probe candidate not yet validated as a BPA receptor
+active_deep_concept: BPA-2 beta-cyclodextrin plus polar-site insurance route entering paper attack; BPA-1 P1-MAPy retained as experiment-gated probe
 paused_candidates:
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused pending owner review of the four-pollutant portfolio; not terminated)
-portfolio_20_status: owner_authorized_bpa1_only_deepening
+portfolio_20_status: dynamic_reallocation_bpa1_experiment_gated_bpa2_paper_deepening
 portfolio_20_allocation:
   BPA: 6
   PFBS: 5
@@ -188,8 +188,8 @@ open_issues:
     text: Prevent inactive carrier mass from being hidden by receptor-normalized capacity; compare total-dry-composite mg/g, packed-bed mg/mL, accessible-site density, site utilization and blank-carrier uptake without requiring silica, resin, carbon or any other material class.
   - id: PORTFOLIO-20-001
     severity: high
-    status: resolved_by_owner_continuation
-    text: Pan Yao authorized continued work after the twenty-scheme portfolio and post-attack ranking; only BPA-1 advances to exact soluble-receptor design and no candidate is yet a finalist.
+    status: superseded_by_owner_dynamic_allocation
+    text: Pan Yao authorized continued work and dynamic allocation by success potential; BPA-1 advanced first and is now experiment-gated so BPA-2 receives the next paper-design allocation while no candidate is a finalist.
   - id: BPA1-S0-001
     severity: high
     status: superseded_by_directional_geometry_failure
@@ -200,8 +200,12 @@ open_issues:
     text: The symmetric two-ended convergent receptor requirement was withdrawn after ERRgamma mutagenesis and the single-hydroxyl strong-binding analog showed that the primary anchor is asymmetric.
   - id: BPA1-P1-001
     severity: high
-    status: controls_and_contract_frozen_pending_attack
-    text: P1-MAPy is exact synthesizable and polymerizable but has no direct aqueous BPA binding evidence; the four-level controls and aqueous thresholds are frozen and must survive adversarial review before materialization.
+    status: experiment_gated_no_materialization
+    text: P1-MAPy remains a high-information probe with frozen controls but the central phenol two-contact geometry is unproven and direct aqueous precedent shows general phenol uptake; no paper materialization before experimental pass.
+  - id: BPA2-S0-001
+    severity: high
+    status: in_progress
+    text: Before BPA-2 deep design freeze beta-cyclodextrin stoichiometric total-material capacity and determine whether a polar site can be covalently colocalized at the cavity rim rather than randomly copolymerized.
   - id: APPROVAL-001
     severity: high
     status: deferred
@@ -232,6 +236,7 @@ artifacts:
   bpa1_r1_chemistry_attack: rounds/bpa1_deep_design_1/R1_CHEMISTRY_ATTACK.md
   bpa1_asymmetric_anchor_redirection: rounds/bpa1_deep_design_1/ASYMMETRIC_ANCHOR_REDIRECTION.md
   bpa1_p1_mapy_control_and_gate: rounds/bpa1_deep_design_1/P1_MAPY_CONTROL_AND_GATE.md
+  bpa1_p1_mapy_attack: rounds/bpa1_deep_design_1/P1_MAPY_ATTACK.md
   gate_g12_bpa1_soluble_receptor: orchestration/gates/G12_BPA1_SOLUBLE_RECEPTOR.yaml
   gate_g7_portfolio_approval: orchestration/gates/G7_PORTFOLIO_APPROVAL.yaml
   top5_round1_design: rounds/top5_round_1/DESIGNER_DOSSIERS.md
@@ -314,4 +319,4 @@ checks:
   remote_push: portfolio_20_review_280855c_pushed
   fresh_clone: passed_at_280855c078eaa4fe975499a52c69a17798328c1b
   context_free_codex_readback: last_passed_at_739c39d; not_repeated_for_portfolio_20_checkpoint
-  bpa1_exact_probe: P1_MAPy_control_series_and_aqueous_stop_contract_frozen_pending_attack
+  bpa1_exact_probe: P1_MAPy_retained_as_experiment_gated_probe_no_materialization

@@ -1,5 +1,5 @@
 gate: G13_BPA2_COLOCALIZATION
-status: paper_attack_complete_split_required
+status: paper_attack_complete_engineering_branch_control_only
 owner_authorization: Pan Yao authorized continued paper design and dynamic allocation by success potential
 scope:
   target: BPA-2
@@ -21,7 +21,7 @@ aqueous_baseline:
   total_material_capacity_formula: 201.14_times_accessible_betaCD_mass_fraction
 split_routes:
   - id: BPA-2E
-    status: revise_engineering_baseline
+    status: control_only_engineering_positive_baseline
     score: 72
     claim_boundary: betaCD_inclusion_and_engineering_only_no_added_dual_site_biomimetic_claim
   - id: BPA-2R
@@ -35,4 +35,4 @@ pass_requires:
   - soluble_complete_deletion_and_positional_mismatch_controls
   - aqueous_interaction_increment_over_unmodified_betaCD_and_polar_unit
   - increment_retained_against_BPF_BPS_and_DOM
-next_action: compare high-betaCD-fraction light organic architectures for BPA-2E as an engineering baseline while keeping BPA-2R unfrozen
+next_action: retain BPA-2E as a positive engineering control keep BPA-2R unfrozen and dynamically reallocate paper attack to PFBS-1

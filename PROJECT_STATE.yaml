@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: bpa2_engineering_baseline_architecture_comparison
+phase: pfbs1_paper_attack
 status: in_progress
-last_completed_step: BPA-2 paper attack confirmed strong 1:1 aqueous beta-CD BPA inclusion but rejected random polar-comonomer synergy; the route is split into BPA-2E engineering baseline at 72 and unfrozen exact-rim BPA-2R at 63
-next_action: Compare high-accessible-betaCD-fraction lightweight organic architectures for BPA-2E using total-material capacity bed-volume accessibility regeneration and blank-framework uptake; do not materialize BPA-2R without an exact secondary-rim receptor
+last_completed_step: BPA-2E architecture comparison found mature high-betaCD self-supporting networks with rapid adsorption regeneration and real-water precedents; it is now control-only because a new crosslinker recipe would not provide the required selective biomimetic contribution
+next_action: Attack PFBS-1 by checking short-chain PFAS beta-CD cavity fit same-host cationic-rim colocalization counterion and DOM competition and total-material site capacity before any exact material freeze
 active_branch: main
 last_verified_commit: 70539b8
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -62,10 +62,10 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
-active_deep_concept: BPA-2E high-betaCD-fraction engineering baseline entering architecture comparison; BPA-2R exact secondary-rim research variant remains unfrozen and BPA-1 P1-MAPy remains experiment-gated
+active_deep_concept: PFBS-1 cationic shallow-cavity beta-CD route entering paper attack; BPA-2E is control-only BPA-2R remains unfrozen and BPA-1 remains experiment-gated
 paused_candidates:
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused pending owner review of the four-pollutant portfolio; not terminated)
-portfolio_20_status: dynamic_reallocation_bpa1_experiment_gated_bpa2_split_engineering_baseline_active
+portfolio_20_status: dynamic_reallocation_bpa1_experiment_gated_bpa2_control_only_pfbs1_active
 portfolio_20_allocation:
   BPA: 6
   PFBS: 5
@@ -206,6 +206,14 @@ open_issues:
     severity: high
     status: resolved_by_split
     text: Beta-CD has a 1:1 BPA aqueous baseline and a 201.14 mg/g pure-site ceiling; random polar-comonomer proximity is rejected. BPA-2E continues only as an engineering baseline while BPA-2R requires an exact secondary-rim receptor before materialization.
+  - id: BPA2-E-001
+    severity: high
+    status: control_only
+    text: Mature self-supporting high-betaCD networks already provide rapid BPA uptake regeneration matrix-tolerance and real-wastewater precedents; BPA-2E is retained as a positive engineering baseline rather than spending a design round on crosslinker optimization.
+  - id: PFBS1-S0-001
+    severity: high
+    status: in_progress
+    text: Before PFBS-1 material freeze verify short-chain PFBS cavity occupancy exact same-host cationic-rim colocalization counterion and DOM competition and total-dry-material site capacity.
   - id: APPROVAL-001
     severity: high
     status: deferred

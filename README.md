@@ -10,7 +10,9 @@ Pan Yao 已纠正此前的路线偏移：生物组织分布和蛋白结合证据
 
 此前的 **S1-SYN** PFOA 路线暂停但未终止。当前组合首位为 **BPA-1**：ERRγ 静态化学功能启发、非模板化、非蛋白的选择性吸附路线。它在组合攻击后为 84/100，尚不是主方案。Pan Yao 已授权继续深化 BPA-1；首轮从 `2E2R` 坐标得到 BPA 两酚氧间距约 9.27 Å，并曾冻结 1,2-di(pyridin-4-yl)ethyne（`R1-BPE`）作为可溶机制探针，见 [`GEOMETRY_AND_RECEPTOR_TRIAGE.md`](rounds/bpa1_deep_design_1/GEOMETRY_AND_RECEPTOR_TRIAGE.md)。随后的化学攻击发现 R1 两端吡啶氮向外发散，原子间距接近并不等于氢键方向会聚，因此 R1 已被降为负面对照，BPA-1 新评分为 68/100、`revise`，见 [`R1_CHEMISTRY_ATTACK.md`](rounds/bpa1_deep_design_1/R1_CHEMISTRY_ATTACK.md)。
 
-对 ERRγ 功能证据的复核进一步表明，对称双端夹并非原型强制要求：关键证据更支持“一个酚羟基的互补极性主锚 + 疏水芳香包围”，单羟基类似物仍可强结合。当前已提出确切的可聚合小分子探针 `P1-MAPy`（2-methacrylamidopyridine，162.19 g/mol），并冻结供体删除、受体删除、邻位破坏和疏水空白四级对照及水相停止门，见 [`P1_MAPY_CONTROL_AND_GATE.md`](rounds/bpa1_deep_design_1/P1_MAPY_CONTROL_AND_GATE.md)。随后攻击发现，acylaminopyridine 的成熟两点识别对象是具有两个氧的羧酸，而不是 BPA 的单个酚氧；直接水凝胶先例也表现为一般酚吸附且体积增大时容量下降。故 P1 只保留为实验探针，BPA-1 当前 `70/100, experiment-gated`，不进入材料化，见 [`P1_MAPY_ATTACK.md`](rounds/bpa1_deep_design_1/P1_MAPY_ATTACK.md)。下一段纸面资源动态转向 BPA-2；当前仍不订购、不合成、不开展实验，也不继续 S11 Gate 1b/Gate 2。
+对 ERRγ 功能证据的复核进一步表明，对称双端夹并非原型强制要求：关键证据更支持“一个酚羟基的互补极性主锚 + 疏水芳香包围”，单羟基类似物仍可强结合。当前已提出确切的可聚合小分子探针 `P1-MAPy`（2-methacrylamidopyridine，162.19 g/mol），并冻结供体删除、受体删除、邻位破坏和疏水空白四级对照及水相停止门，见 [`P1_MAPY_CONTROL_AND_GATE.md`](rounds/bpa1_deep_design_1/P1_MAPY_CONTROL_AND_GATE.md)。随后攻击发现，acylaminopyridine 的成熟两点识别对象是具有两个氧的羧酸，而不是 BPA 的单个酚氧；直接水凝胶先例也表现为一般酚吸附且体积增大时容量下降。故 P1 只保留为实验探针，BPA-1 当前 `70/100, experiment-gated`，不进入材料化，见 [`P1_MAPY_ATTACK.md`](rounds/bpa1_deep_design_1/P1_MAPY_ATTACK.md)。
+
+BPA-2 的纸面攻击已完成。β-CD 对 BPA 的 `1:1` 水相包合有直接 NMR 支持，`Ka` 约 `3.62–4.10×10^3 M^-1`；但“β-CD 与随机双氢键单体共聚”不能证明同一个 BPA 同时接触两个位点。路线因此拆为 `BPA-2E` 工程基线（72/100，只主张高 β-CD 位点密度与工程化）和 `BPA-2R` 研究变体（63/100，必须先冻结同一 β-CD 次级宽口上的确切共价极性站）。纯 β-CD 的 `1:1` 理论上限仅 `201.14 mg BPA/g β-CD`，最终材料上限为 `201.14 × w_betaCD mg/g`，所以交联剂与骨架质量必须严格计入。完整记录见 [`BPA2_BASELINE_AND_COLOCALIZATION_ATTACK.md`](rounds/bpa2_deep_design_1/BPA2_BASELINE_AND_COLOCALIZATION_ATTACK.md)。当前仍无主方案或备选方案，不订购、不合成、不开展实验。
 
 ## 阅读入口
 
@@ -83,3 +85,4 @@ Pan Yao 复核后确认，强制“静态＋动态硬对应”使项目从机制
 5. 再复核 ERRγ 的突变与单羟基类似物证据后，撤销“必须跨两个羟基对称夹持”的错误约束，转为单端互补主锚与疏水包围。`P1-MAPy` 已作为确切、轻质、可聚合的机制探针候选记录，但尚未通过水相 BPA 结合门。
 6. 已冻结 `P1/C1-NHoff/C2-Noff/C3-meta/C4-H` 对照组和可溶门：P1–BPA 至少达到 `100 M-1`、高于三个结构对照中最强者 3 倍，且两种正交方法的 `Ka` 相差不超过 3 倍；这些是待攻击的预注册设计，不是实验结果。
 7. 对抗审查确认 P1 的经典两点证据属于羧酸受体化学，不能直接转给单酚氧；水相酚吸附先例的体积趋势也不利。P1 保留为高信息量实验探针，BPA-1 暂停材料化，纸面深化转向 BPA-2 保险路线。
+8. BPA-2 攻击确认 β-CD 是可靠的水相 BPA 工程受体，却否定随机极性共聚单体的“同腔协同”主张；新增 `BPA-2E` 工程基线与 `BPA-2R` 精确次级口研究变体，两者均未成为最终方案。

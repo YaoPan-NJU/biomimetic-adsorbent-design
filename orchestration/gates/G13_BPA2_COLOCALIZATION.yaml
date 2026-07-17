@@ -1,0 +1,38 @@
+gate: G13_BPA2_COLOCALIZATION
+status: paper_attack_complete_split_required
+owner_authorization: Pan Yao authorized continued paper design and dynamic allocation by success potential
+scope:
+  target: BPA-2
+  allowed:
+    - aqueous beta-cyclodextrin BPA host-guest evidence review
+    - total-dry-material capacity accounting
+    - exact same-host rim colocalization analysis
+    - engineering baseline comparison
+  prohibited:
+    - random_copolymer_dual_site_synergy_claim
+    - bench_synthesis_SOP
+    - procurement
+    - synthesis
+    - experiment
+aqueous_baseline:
+  stoichiometry_betaCD_to_BPA: 1_to_1
+  Ka_M_inverse_range: [3620, 4100]
+  pure_betaCD_theoretical_capacity_mg_BPA_g: 201.14
+  total_material_capacity_formula: 201.14_times_accessible_betaCD_mass_fraction
+split_routes:
+  - id: BPA-2E
+    status: revise_engineering_baseline
+    score: 72
+    claim_boundary: betaCD_inclusion_and_engineering_only_no_added_dual_site_biomimetic_claim
+  - id: BPA-2R
+    status: revise_exact_rim_receptor_not_frozen
+    score: 63
+    claim_boundary: exact_secondary_rim_covalent_polar_site_required_before_materialization
+critical_boundary: random_copolymer_proximity_does_not_establish_same_guest_colocalization
+pass_requires:
+  - exact_secondary_rim_derivative_and_substitution_pattern
+  - auditable_synthesis_and_regiochemical_characterization
+  - soluble_complete_deletion_and_positional_mismatch_controls
+  - aqueous_interaction_increment_over_unmodified_betaCD_and_polar_unit
+  - increment_retained_against_BPF_BPS_and_DOM
+next_action: compare high-betaCD-fraction light organic architectures for BPA-2E as an engineering baseline while keeping BPA-2R unfrozen

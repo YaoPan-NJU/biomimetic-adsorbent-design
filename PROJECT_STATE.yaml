@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: bpa2_insurance_route_paper_deepening
+phase: bpa2_engineering_baseline_architecture_comparison
 status: in_progress
-last_completed_step: P1-MAPy attack found that established acylaminopyridine two-point evidence is carboxylic-acid-specific and a direct aqueous phenol-hydrogel precedent shows decreasing uptake with steric bulk; BPA-1 is 70/revise/experiment-gated and is not materialized
-next_action: Dynamically reallocate paper design effort to BPA-2 as an insurance route and first attack beta-cyclodextrin mass capacity cavity stoichiometry and polar-site colocalization before freezing any material recipe
+last_completed_step: BPA-2 paper attack confirmed strong 1:1 aqueous beta-CD BPA inclusion but rejected random polar-comonomer synergy; the route is split into BPA-2E engineering baseline at 72 and unfrozen exact-rim BPA-2R at 63
+next_action: Compare high-accessible-betaCD-fraction lightweight organic architectures for BPA-2E using total-material capacity bed-volume accessibility regeneration and blank-framework uptake; do not materialize BPA-2R without an exact secondary-rim receptor
 active_branch: main
 last_verified_commit: 70539b8
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -62,10 +62,10 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
-active_deep_concept: BPA-2 beta-cyclodextrin plus polar-site insurance route entering paper attack; BPA-1 P1-MAPy retained as experiment-gated probe
+active_deep_concept: BPA-2E high-betaCD-fraction engineering baseline entering architecture comparison; BPA-2R exact secondary-rim research variant remains unfrozen and BPA-1 P1-MAPy remains experiment-gated
 paused_candidates:
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused pending owner review of the four-pollutant portfolio; not terminated)
-portfolio_20_status: dynamic_reallocation_bpa1_experiment_gated_bpa2_paper_deepening
+portfolio_20_status: dynamic_reallocation_bpa1_experiment_gated_bpa2_split_engineering_baseline_active
 portfolio_20_allocation:
   BPA: 6
   PFBS: 5
@@ -204,8 +204,8 @@ open_issues:
     text: P1-MAPy remains a high-information probe with frozen controls but the central phenol two-contact geometry is unproven and direct aqueous precedent shows general phenol uptake; no paper materialization before experimental pass.
   - id: BPA2-S0-001
     severity: high
-    status: in_progress
-    text: Before BPA-2 deep design freeze beta-cyclodextrin stoichiometric total-material capacity and determine whether a polar site can be covalently colocalized at the cavity rim rather than randomly copolymerized.
+    status: resolved_by_split
+    text: Beta-CD has a 1:1 BPA aqueous baseline and a 201.14 mg/g pure-site ceiling; random polar-comonomer proximity is rejected. BPA-2E continues only as an engineering baseline while BPA-2R requires an exact secondary-rim receptor before materialization.
   - id: APPROVAL-001
     severity: high
     status: deferred

@@ -1,14 +1,18 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: four_pollutant_twenty_scheme_portfolio
-status: in_progress
-last_completed_step: Pan Yao approved reopening the portfolio around BPA, PFBS, roxithromycin and 2,6-dichlorophenol for twenty material-class-neutral artificial adsorbent schemes with dynamic allocation and unified ranking; no primary or backup has passed
-next_action: Independently attack BPA-1, PFBS-1, PFBS-2, BPA-2 and ROX-1 for chemical determinacy, real-secondary-effluent selectivity, inactive-mass efficiency, prior-art crowding and falsifiable controls; no primary, backup, ordering, synthesis, protein, folded peptide, S11 Gate 1b, or Gate 2 work is authorized
+phase: four_pollutant_portfolio_owner_review
+status: awaiting_owner_review
+last_completed_step: Twenty material-class-neutral nonprotein schemes were frozen and ranked for BPA, PFBS, roxithromycin and 2,6-dichlorophenol; a role-separated top-five attack left BPA-1 first at 84/revise and no primary or backup passed
+next_action: Pan Yao reviews the full twenty-scheme portfolio and post-attack ranking; if continued, deepen only BPA-1 into an exact nonimprinted receptor and soluble deletion/mismatch series before any carrier SOP, ordering, synthesis or experiment
 active_branch: main
 last_verified_commit: c8972adaace4a4c06485fe18640a9391160a8039
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
-candidate_pool_status: s1_synthetic_material_route_reopened_pollutant_pool_not_frozen
-candidate_pollutants: []
+candidate_pool_status: four_pollutant_twenty_scheme_portfolio_frozen_and_ranked
+candidate_pollutants:
+  - bisphenol A
+  - PFBS
+  - roxithromycin
+  - 2,6-dichlorophenol
 priority_verification_group:
   - PFOA
   - PFBS
@@ -57,11 +61,11 @@ deep_concepts:
   - S4 PFBS-PFHxS-PFOS/HSA chain-length gate
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
-  - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (active recovery brief; exact receptor not yet frozen)
+  - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
 active_deep_concept: null
 paused_candidates:
-  - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused while the four-pollutant portfolio is attacked; not terminated)
-portfolio_20_status: frozen_ranked_pending_top5_attack
+  - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused pending owner review of the four-pollutant portfolio; not terminated)
+portfolio_20_status: frozen_ranked_top5_attacked_awaiting_owner_review
 portfolio_20_allocation:
   BPA: 6
   PFBS: 5
@@ -176,12 +180,16 @@ open_issues:
     text: The mandatory dynamic-correspondence rule caused the design to drift from artificial material translation into folded-peptide and protein replication; the rule now requires one artificial-material functional correspondence and makes dynamics optional.
   - id: S1-SYN-001
     severity: high
-    status: in_progress
+    status: paused_by_portfolio_reopen
     text: Freeze one exact nonpeptidic guanidinium-amide and finite low-polar-chain receptor, matched deletion/mismatch controls, a material-class-neutral carrier or self-supporting architecture comparison, and a complete SOP for the selected route before any order or experiment.
   - id: CARRIER-001
     severity: high
     status: in_progress
     text: Prevent inactive carrier mass from being hidden by receptor-normalized capacity; compare total-dry-composite mg/g, packed-bed mg/mL, accessible-site density, site utilization and blank-carrier uptake without requiring silica, resin, carbon or any other material class.
+  - id: PORTFOLIO-20-001
+    severity: high
+    status: awaiting_owner_review
+    text: Pan Yao reviews the twenty frozen schemes, evidence audit, original ranking and top-five attack; no candidate advances to a full SOP or finalist until this review is recorded.
   - id: APPROVAL-001
     severity: high
     status: deferred
@@ -205,6 +213,9 @@ artifacts:
   four_pollutant_evidence_audit: rounds/portfolio_20_reopen/EVIDENCE_AUDIT.md
   four_pollutant_twenty_scheme_portfolio: rounds/portfolio_20_reopen/TWENTY_SCHEME_PORTFOLIO.md
   four_pollutant_ranking: rounds/portfolio_20_reopen/RANKING.yaml
+  four_pollutant_top5_attack: rounds/portfolio_20_reopen/ATTACK.md
+  four_pollutant_post_attack_ranking: rounds/portfolio_20_reopen/POST_ATTACK_RANKING.yaml
+  four_pollutant_review: rounds/portfolio_20_reopen/REVIEW.md
   gate_g7_portfolio_approval: orchestration/gates/G7_PORTFOLIO_APPROVAL.yaml
   top5_round1_design: rounds/top5_round_1/DESIGNER_DOSSIERS.md
   top5_round1_attack: rounds/top5_round_1/ATTACK.md

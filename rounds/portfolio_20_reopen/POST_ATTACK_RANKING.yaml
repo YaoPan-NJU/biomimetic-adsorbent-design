@@ -1,0 +1,45 @@
+schema_version: 1
+scope: frozen_pre_attack_top_five_only
+independence: main_executor_role_separated_not_independent_agent
+ranked_top_five:
+  - rank: 1
+    id: BPA-1
+    pre_attack_total: 88
+    post_attack_scores: [17, 20, 16, 13, 9, 9]
+    post_attack_total: 84
+    disposition: revise
+    blocking_issue: exact_nonimprinted_receptor_and_aqueous_geometry_not_frozen
+  - rank: 2
+    id: BPA-2
+    pre_attack_total: 79
+    post_attack_scores: [13, 17, 17, 10, 8, 9]
+    post_attack_total: 74
+    disposition: revise
+    blocking_issue: beta_cd_and_polar_site_colocalization_not_demonstrated
+  - rank: 3
+    id: PFBS-1
+    pre_attack_total: 82
+    post_attack_scores: [13, 16, 18, 11, 8, 8]
+    post_attack_total: 74
+    disposition: revise
+    blocking_issue: short_chain_capture_may_collapse_to_salt_sensitive_ion_exchange
+  - rank: 4
+    id: PFBS-2
+    pre_attack_total: 80
+    post_attack_scores: [14, 15, 14, 14, 9, 7]
+    post_attack_total: 73
+    disposition: revise
+    blocking_issue: aqueous_sulfonate_cage_and_c4_slot_increment_unproven
+  - rank: 5
+    id: ROX-1
+    pre_attack_total: 78
+    post_attack_scores: [12, 16, 17, 6, 8, 8]
+    post_attack_total: 67
+    disposition: control_only
+    blocking_issue: crowded_prior_art_template_leakage_and_real_matrix_gap
+decision:
+  primary_design: null
+  backup_design: null
+  recommended_next_deep_design: BPA-1
+  parallel_evidence_routes: [BPA-2, PFBS-1, PFBS-2]
+  engineering_control: ROX-1

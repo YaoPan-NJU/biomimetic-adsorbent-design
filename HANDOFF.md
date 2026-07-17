@@ -19,6 +19,12 @@ Develop one primary and one backup biomimetic material for selective adsorption 
 
 ## Current state
 
+Pan Yao reopened portfolio design because S1-SYN alone did not provide enough success insurance. A new material-class-neutral portfolio now contains 20 nonprotein artificial adsorbent schemes for BPA (6), PFBS (5), roxithromycin (5), and 2,6-dichlorophenol (4). The full schemes, pre-attack ranking, evidence audit, and top-five attack are under `rounds/portfolio_20_reopen/`. Historical schemes and scores remain intact.
+
+The pre-attack top five were BPA-1, PFBS-1, PFBS-2, BPA-2, and ROX-1. A role-separated main-executor attack reduced them to BPA-1 84/revise, BPA-2 74/revise, PFBS-1 74/revise, PFBS-2 73/revise, and ROX-1 67/control-only. No scheme passes the 85/no-open-high final gate. BPA-1 is the recommended next deep-design target because it has the strongest direct structural prototype and a nonprotein, nonimprinted causal route, but its exact receptor is not frozen. S1-SYN is paused, not terminated.
+
+The next action is Pan Yao's review of the twenty-scheme portfolio and post-attack ranking. If work continues, only BPA-1 should receive a full exact-receptor and soluble-control design first; BPA-2, PFBS-1, and PFBS-2 remain evidence routes, and ROX-1 is an engineering control. No order, synthesis, experiment, protein, folded peptide, S11 Gate 1b, or Gate 2 work is authorized.
+
 Pan Yao reviewed the complete post-Round-2 trajectory and identified a direction error. The original S1 translated hL-FABP evidence into an artificial headgroup site, finite low-polar chain region and hydrophilic porous carrier. The mandatory static-plus-dynamic gate then rewarded increasingly literal portal, folded-peptide and protein implementations. That gate optimized biomimetic fidelity instead of the intended material translation and caused the Round-3 S1 and later S11 routes to leave the intended synthetic-adsorbent scope.
 
 The governing rules are now corrected. One hard functional correspondence in a manufacturable artificial material is required; dynamics are optional and must add selective function if claimed. Proteins, expressed constructs and folded peptides are excluded by default. All earlier rounds remain committed as historical audit evidence and no score or decision has been erased.

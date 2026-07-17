@@ -1,11 +1,11 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: four_pollutant_portfolio_owner_review
-status: awaiting_owner_review
-last_completed_step: Twenty material-class-neutral nonprotein schemes were frozen and ranked for BPA, PFBS, roxithromycin and 2,6-dichlorophenol; a role-separated top-five attack left BPA-1 first at 84/revise and no primary or backup passed
-next_action: Pan Yao reviews the full twenty-scheme portfolio and post-attack ranking; if continued, deepen only BPA-1 into an exact nonimprinted receptor and soluble deletion/mismatch series before any carrier SOP, ordering, synthesis or experiment
+phase: bpa1_exact_receptor_soluble_gate_design
+status: in_progress
+last_completed_step: Pan Yao authorized continuation; BPA-1 geometry was recalculated from 2E2R and one exact low-mass probe R1-BPE plus deletion and distance-mismatch controls were frozen for soluble validation, without selecting a carrier or material route
+next_action: Attack R1-BPE for neutral-water solubility, synthetic/control comparability and analytical identifiability; only if the soluble geometry gate remains credible may a polymerizable derivative and material-class-neutral architecture comparison be designed
 active_branch: main
-last_verified_commit: 280855c078eaa4fe975499a52c69a17798328c1b
+last_verified_commit: 8c74087dcabe8610d7521b38776cffa8a55fba75
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: four_pollutant_twenty_scheme_portfolio_frozen_and_ranked
 candidate_pollutants:
@@ -62,10 +62,10 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
-active_deep_concept: null
+active_deep_concept: BPA-1 ERRgamma static geometry translated to R1-BPE soluble nonimprinted probe
 paused_candidates:
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused pending owner review of the four-pollutant portfolio; not terminated)
-portfolio_20_status: frozen_ranked_top5_attacked_awaiting_owner_review
+portfolio_20_status: owner_authorized_bpa1_only_deepening
 portfolio_20_allocation:
   BPA: 6
   PFBS: 5
@@ -188,8 +188,12 @@ open_issues:
     text: Prevent inactive carrier mass from being hidden by receptor-normalized capacity; compare total-dry-composite mg/g, packed-bed mg/mL, accessible-site density, site utilization and blank-carrier uptake without requiring silica, resin, carbon or any other material class.
   - id: PORTFOLIO-20-001
     severity: high
-    status: awaiting_owner_review
-    text: Pan Yao reviews the twenty frozen schemes, evidence audit, original ranking and top-five attack; no candidate advances to a full SOP or finalist until this review is recorded.
+    status: resolved_by_owner_continuation
+    text: Pan Yao authorized continued work after the twenty-scheme portfolio and post-attack ranking; only BPA-1 advances to exact soluble-receptor design and no candidate is yet a finalist.
+  - id: BPA1-S0-001
+    severity: high
+    status: in_progress
+    text: R1-BPE is frozen only as a soluble mechanism probe; neutral-water solubility, aggregation-free speciation, BPA binding, distance-specific increment and secondary-effluent retention must pass before any polymerizable derivative, carrier or material SOP is selected.
   - id: APPROVAL-001
     severity: high
     status: deferred
@@ -216,6 +220,8 @@ artifacts:
   four_pollutant_top5_attack: rounds/portfolio_20_reopen/ATTACK.md
   four_pollutant_post_attack_ranking: rounds/portfolio_20_reopen/POST_ATTACK_RANKING.yaml
   four_pollutant_review: rounds/portfolio_20_reopen/REVIEW.md
+  bpa1_geometry_and_receptor_triage: rounds/bpa1_deep_design_1/GEOMETRY_AND_RECEPTOR_TRIAGE.md
+  gate_g12_bpa1_soluble_receptor: orchestration/gates/G12_BPA1_SOLUBLE_RECEPTOR.yaml
   gate_g7_portfolio_approval: orchestration/gates/G7_PORTFOLIO_APPROVAL.yaml
   top5_round1_design: rounds/top5_round_1/DESIGNER_DOSSIERS.md
   top5_round1_attack: rounds/top5_round_1/ATTACK.md
@@ -297,3 +303,4 @@ checks:
   remote_push: portfolio_20_review_280855c_pushed
   fresh_clone: passed_at_280855c078eaa4fe975499a52c69a17798328c1b
   context_free_codex_readback: last_passed_at_739c39d; not_repeated_for_portfolio_20_checkpoint
+  bpa1_exact_probe: R1_BPE_and_deletion_distance_controls_frozen_for_design_only

@@ -19,19 +19,21 @@ Develop one primary and one backup biomimetic material for selective adsorption 
 
 ## Current state
 
-Pan Yao reopened portfolio design because S1-SYN alone did not provide enough success insurance. A new material-class-neutral portfolio now contains 20 nonprotein artificial adsorbent schemes for BPA (6), PFBS (5), roxithromycin (5), and 2,6-dichlorophenol (4). The full schemes, pre-attack ranking, evidence audit, and top-five attack are under `rounds/portfolio_20_reopen/`. Historical schemes and scores remain intact.
+Pan Yao reopened portfolio design because S1-SYN alone did not provide enough success insurance. The material-class-neutral portfolio contains 20 nonprotein artificial adsorbent schemes for BPA (6), PFBS (5), roxithromycin (5), and 2,6-dichlorophenol (4). The full schemes, pre-attack ranking, evidence audit, and top-five attack are under `rounds/portfolio_20_reopen/`; all earlier files and scores remain intact.
 
-The pre-attack top five were BPA-1, PFBS-1, PFBS-2, BPA-2, and ROX-1. A role-separated main-executor attack reduced them to BPA-1 84/revise, BPA-2 74/revise, PFBS-1 74/revise, PFBS-2 73/revise, and ROX-1 67/control-only. No scheme passes the 85/no-open-high final gate. BPA-1 is the recommended next deep-design target because it has the strongest direct structural prototype and a nonprotein, nonimprinted causal route, but its exact receptor is not frozen. S1-SYN is paused, not terminated.
+The pre-attack top five were BPA-1, PFBS-1, PFBS-2, BPA-2, and ROX-1. Attack reduced them to BPA-1 84/revise, BPA-2 74/revise, PFBS-1 74/revise, PFBS-2 73/revise, and ROX-1 67/control-only. No scheme passes the 85/no-open-high final gate. S1-SYN remains paused, not terminated.
 
-The next action is Pan Yao's review of the twenty-scheme portfolio and post-attack ranking. If work continues, only BPA-1 should receive a full exact-receptor and soluble-control design first; BPA-2, PFBS-1, and PFBS-2 remain evidence routes, and ROX-1 is an engineering control. No order, synthesis, experiment, protein, folded peptide, S11 Gate 1b, or Gate 2 work is authorized.
+Pan Yao has now authorized continued work and only BPA-1 advances. The first deep-design checkpoint is `rounds/bpa1_deep_design_1/GEOMETRY_AND_RECEPTOR_TRIAGE.md`. Official `2E2R` coordinates give a derived BPA phenolic O-O distance of 9.274 Å and an approximately 87.4-degree acute inter-ring angle. The translated feature is a preorganized static two-ended polar geometry with a hydrophobic environment; no ERRgamma sequence, fold, Helix 12, protein or dynamic gate enters the material.
+
+One exact low-mass soluble mechanism probe is frozen: `R1-BPE`, 1,2-di(pyridin-4-yl)ethyne (`C12H8N2`, 180.20 g/mol). Its PubChem 3D terminal N-N distance is 9.651 Å, within 0.377 Å of the bound BPA O-O distance. This geometric match, a reported 75% isolated synthesis, and its high theoretical site-per-mass ceiling make it the preferred probe. It is not yet a proven BPA receptor or a final material.
+
+The frozen causal series contains full R1-BPE, one-end deletion 4-ethynylpyridine, no-nitrogen hydrophobic control diphenylacetylene, short-distance 4,4'-bipyridine and long-distance 1,4-bis(pyridin-4-yl)benzene. The next action is an adversarial chemistry review of neutral-water solubility, aggregation-free speciation, analytical identifiability, control comparability and later polymerization compatibility. Only after the soluble geometry gate remains credible may a polymerizable derivative and material-class-neutral architecture comparison be designed. No carrier, order, synthesis, experiment, S11 Gate 1b or Gate 2 work is authorized.
 
 Pan Yao reviewed the complete post-Round-2 trajectory and identified a direction error. The original S1 translated hL-FABP evidence into an artificial headgroup site, finite low-polar chain region and hydrophilic porous carrier. The mandatory static-plus-dynamic gate then rewarded increasingly literal portal, folded-peptide and protein implementations. That gate optimized biomimetic fidelity instead of the intended material translation and caused the Round-3 S1 and later S11 routes to leave the intended synthetic-adsorbent scope.
 
 The governing rules are now corrected. One hard functional correspondence in a manufacturable artificial material is required; dynamics are optional and must add selective function if claimed. Proteins, expressed constructs and folded peptides are excluded by default. All earlier rounds remain committed as historical audit evidence and no score or decision has been erased.
 
-The active candidate is now `S1-SYN`, an hL-FABP-informed but nonprotein artificial material. Its recognition unit remains one exact nonpeptidic receptor with a guanidinium/amide carboxylate site and a finite low-polar chain-accommodation unit. Pan Yao's carrier-efficiency correction removed the prior assumption that OEG-passivated mesoporous silica would be the final carrier: silica remains eligible as a mechanism platform, while porous carbon, activated carbon, porous polymers, other supports and self-supporting architectures remain equally eligible. The exact receptor, carrier choice and bench SOP are not yet frozen, so `S1-SYN` is not a primary or backup.
-
-The unique next action is an isolated design of one exact nonpeptidic receptor and matched controls, a material-class-neutral comparison of carrier or self-supporting routes, and a complete SOP for the selected route under `rounds/synthetic_recovery_1/S1_SYNTHETIC_RECOVERY_BRIEF.md`. The comparison must expose total-composite gravimetric capacity, packed-bed capacity, accessible sites and blank-carrier uptake. No ordering, synthesis or experiment is authorized. S11 Gate 1b and Gate 2 are scope-superseded unless Pan Yao explicitly reopens a protein/biohybrid project.
+`S1-SYN` was the first corrected artificial-material candidate and remains a preserved paused route. Pan Yao's carrier-efficiency correction removed the prior assumption that OEG-passivated mesoporous silica would be the final carrier: silica, porous carbon, activated carbon, porous polymers, other supports and self-supporting architectures are only candidates. Any later BPA-1 material must expose total-composite gravimetric capacity, packed-bed capacity, accessible sites and blank-architecture uptake; inactive support mass cannot be hidden.
 
 ## Preserved trajectory
 
@@ -80,6 +82,7 @@ Translation-evidence dossiers were prepared in parallel but are deliberately exc
 ## Resume instructions
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
-2. Verify `main`, read `rounds/synthetic_recovery_1/S1_SYNTHETIC_RECOVERY_BRIEF.md`, and treat all former finalists and S11 as historical only.
-3. Keep BMDL excluded, preserve every phosphate, top-five, S1 and S11 artifact, and do not order materials or start experiments.
-4. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.
+2. Verify `main`, then read `rounds/bpa1_deep_design_1/GEOMETRY_AND_RECEPTOR_TRIAGE.md`; treat all former finalists and S11 as historical only, and S1-SYN as paused.
+3. Attack R1-BPE at the soluble chemistry layer before designing a polymerizable derivative or any carrier/material architecture.
+4. Keep BMDL excluded, preserve every phosphate, top-five, S1, S11 and portfolio artifact, and do not order materials or start experiments.
+5. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

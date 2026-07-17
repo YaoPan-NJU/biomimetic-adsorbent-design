@@ -1,0 +1,40 @@
+gate: G12_BPA1_SOLUBLE_RECEPTOR
+status: in_progress
+owner_authorization: Pan Yao instructed Codex to continue and monitorable GitHub pushes are required
+scope:
+  target: BPA-1
+  allowed:
+    - exact low-mass nonprotein soluble receptor design
+    - deletion hydrophobic and distance-mismatch controls
+    - evidence review and adversarial chemistry review
+    - total-material capacity ceiling calculation
+  prohibited_before_pass:
+    - carrier selection
+    - polymerizable derivative freeze
+    - bench synthesis SOP
+    - procurement
+    - synthesis
+    - experiment
+frozen_probe:
+  id: R1-BPE
+  name: 1,2-di(pyridin-4-yl)ethyne
+  formula: C12H8N2
+  molecular_weight_g_mol: 180.20
+  status: soluble_mechanism_probe_not_proven_receptor
+controls:
+  - 4-ethynylpyridine
+  - diphenylacetylene
+  - 4,4'-bipyridine
+  - 1,4-bis(pyridin-4-yl)benzene
+pass_requires:
+  - aggregation_free_neutral_water_speciation
+  - interpretable_orthogonal_binding_measurement
+  - geometry_specific_increment_over_deletion_hydrophobic_and_mismatch_controls
+  - increment_retained_in_secondary_effluent
+  - no_unresolved_critical_or_high_chemistry_issue
+current_blockers:
+  - neutral_water_solubility_unknown
+  - aqueous_BPA_binding_unproven
+  - polymerization_handle_absent
+next_action: adversarial chemistry review of R1-BPE and its frozen control series
+

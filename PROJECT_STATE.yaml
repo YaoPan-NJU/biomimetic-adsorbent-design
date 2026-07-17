@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: rox2_nonimprinted_slit_paper_attack
+phase: dcp1_soluble_recognition_paper_attack
 status: in_progress
-last_completed_step: PFBS-2 soluble-receptor attack found no exact low-mass nonfluorinated C4-selective receptor and showed guanidinium urea motifs risk preferential sulfate and phosphate capture; PFBS-2 is 52/revise/exact-receptor-not-found
-next_action: Attack ROX-2 nonimprinted rigid slit for exact geometry practical synthesis water compatibility macrolide selectivity and prior art before any material freeze
+last_completed_step: ROX-2 was terminated at independent-review 40 because no ROX-specific ribosomal geometry exists; BPA-5 was then terminated at independent-review 40 because the two-ended ERRgamma claim is not necessary biology no exact aqueous calix4 receptor passed and direct polycalix4 BPA prior art exists
+next_action: Attack DCP-1 at the soluble-recognition and environmental gates for aqueous halogen-bond plausibility 2,6-DCP significance exact receptor chemistry analog selectivity and prior art before any POP design
 active_branch: main
 last_verified_commit: 70539b8
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -62,10 +62,10 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
-active_deep_concept: ROX-2 nonimprinted rigid macrolide slit entering paper attack; PFBS-2 is experiment-gated without an exact receptor and PFBS-1 and BPA-2E are control-only
+active_deep_concept: DCP-1 ortho-chlorine geometry and urea recognition entering paper attack; ROX-2 and BPA-5 are terminated while PFBS-2 and BPA-2R remain unfrozen and PFBS-1 BPA-2E and downgraded ROX-2 are controls only
 paused_candidates:
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused pending owner review of the four-pollutant portfolio; not terminated)
-portfolio_20_status: dynamic_reallocation_bpa_and_pfbs_leads_gated_or_control_only_rox2_active
+portfolio_20_status: dynamic_reallocation_rox2_and_bpa5_terminated_dcp1_active
 portfolio_20_allocation:
   BPA: 6
   PFBS: 5
@@ -220,8 +220,16 @@ open_issues:
     text: No exact low-mass nonfluorinated C4-selective PFBS receptor was found; guanidinium and urea motifs have strong sulfate and phosphate competition and no demonstrated nonmonotonic PFBS preference, so no materialization is allowed.
   - id: ROX2-S0-001
     severity: high
+    status: terminated
+    text: ROX-2 lacks a ROX-specific ribosomal geometry and exact artificial slit; independent review scored 40 and terminated the ROX-specific candidate while retaining only a macrolide-class nonimprinted pore control.
+  - id: BPA5-S0-001
+    severity: critical
+    status: terminated
+    text: BPA-5 has no retrieved exact bifunctional calix4 receptor that passes the aqueous analog gate; the two-ended ERRgamma necessity claim is unsupported and direct polycalix4 BPA water prior art exists; independent review scored 40.
+  - id: DCP1-S0-001
+    severity: high
     status: in_progress
-    text: Before ROX-2 material freeze determine an exact nonimprinted slit geometry and synthesis that can distinguish ROX from other macrolides in water without merely sorting by hydrophobicity charge or size.
+    text: Before any POP design determine whether aqueous halogen bonding or halogen-affinity geometry can distinguish 2,6-DCP from positional isomers and hydrophobicity pKa controls and independently confirm the secondary-effluent environmental gate.
   - id: APPROVAL-001
     severity: high
     status: deferred
@@ -254,6 +262,15 @@ artifacts:
   bpa1_p1_mapy_control_and_gate: rounds/bpa1_deep_design_1/P1_MAPY_CONTROL_AND_GATE.md
   bpa1_p1_mapy_attack: rounds/bpa1_deep_design_1/P1_MAPY_ATTACK.md
   gate_g12_bpa1_soluble_receptor: orchestration/gates/G12_BPA1_SOLUBLE_RECEPTOR.yaml
+  rox2_evidence_audit: rounds/rox2_deep_design_1/EVIDENCE_AUDIT.md
+  rox2_paper_attack: rounds/rox2_deep_design_1/ROX2_PAPER_ATTACK.md
+  rox2_independent_review: rounds/rox2_deep_design_1/REVIEW.md
+  rox2_supervisor_reallocation: rounds/rox2_deep_design_1/SUPERVISOR_REALLOCATION.md
+  gate_g16_rox2_rigid_slit: orchestration/gates/G16_ROX2_RIGID_SLIT.yaml
+  bpa5_evidence_audit: rounds/bpa5_deep_design_1/EVIDENCE_AUDIT.md
+  bpa5_paper_attack: rounds/bpa5_deep_design_1/BPA5_PAPER_ATTACK.md
+  bpa5_independent_review: rounds/bpa5_deep_design_1/REVIEW.md
+  gate_g17_bpa5_calixarene: orchestration/gates/G17_BPA5_CALIXARENE.yaml
   gate_g7_portfolio_approval: orchestration/gates/G7_PORTFOLIO_APPROVAL.yaml
   top5_round1_design: rounds/top5_round_1/DESIGNER_DOSSIERS.md
   top5_round1_attack: rounds/top5_round_1/ATTACK.md
@@ -336,3 +353,6 @@ checks:
   fresh_clone: passed_at_280855c078eaa4fe975499a52c69a17798328c1b
   context_free_codex_readback: last_passed_at_739c39d; not_repeated_for_portfolio_20_checkpoint
   bpa1_exact_probe: P1_MAPy_retained_as_experiment_gated_probe_no_materialization
+  rox2_disposition: terminated_at_independent_review_40_macrolide_class_pore_control_only
+  bpa5_disposition: terminated_at_independent_review_40_no_exact_aqueous_calix4_receptor_and_direct_prior_art
+  citation_verification: bpa5_titles_cycle_metric_fulltext_table_locators_and_nonexistence_language_corrected

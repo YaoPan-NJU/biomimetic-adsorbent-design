@@ -14,7 +14,9 @@ Pan Yao 已纠正此前的路线偏移：生物组织分布和蛋白结合证据
 
 BPA-2 的纸面攻击已完成。β-CD 对 BPA 的 `1:1` 水相包合有直接 NMR 支持，`Ka` 约 `3.62–4.10×10^3 M^-1`；但“β-CD 与随机双氢键单体共聚”不能证明同一个 BPA 同时接触两个位点。路线因此拆为 `BPA-2E` 工程基线（72/100，只主张高 β-CD 位点密度与工程化）和 `BPA-2R` 研究变体（63/100，必须先冻结同一 β-CD 次级宽口上的确切共价极性站）。纯 β-CD 的 `1:1` 理论上限仅 `201.14 mg BPA/g β-CD`，最终材料上限为 `201.14 × w_betaCD mg/g`，所以交联剂与骨架质量必须严格计入。完整记录见 [`BPA2_BASELINE_AND_COLOCALIZATION_ATTACK.md`](rounds/bpa2_deep_design_1/BPA2_BASELINE_AND_COLOCALIZATION_ATTACK.md)。架构比较又确认，已有自支撑高 β-CD 网络同时覆盖快速吸附、再生、腐殖酸/离子耐受和实际废水场景，再做交联剂优化不足以形成新的选择性贡献；故 `BPA-2E` 已降为工程阳性对照，见 [`BPA2E_ARCHITECTURE_COMPARISON.md`](rounds/bpa2_deep_design_1/BPA2E_ARCHITECTURE_COMPARISON.md)。
 
-PFBS-1 的攻击也已完成。2022 年已有工作几乎原样实现了“七位苯乙烯化 β-CD + 阳离子甲基丙烯酸共聚单体 + 永久多孔网络”，因此该路线不存在足够的材料原创空间；更关键的是，`1 mM Na2SO4` 使 PFBS 去除率从约 `94%` 降至 `38%`，而 PFOS 仍约为 `79%`，说明它在盐竞争下并不优先保留短链 PFBS。PFBS-1 新增处置为 `58/100, control-only`，历史 82/74 分保留，见 [`PFBS1_PRIOR_ART_AND_SALT_ATTACK.md`](rounds/pfbs1_deep_design_1/PFBS1_PRIOR_ART_AND_SALT_ATTACK.md)。PFBS-2 的可溶受体攻击随后未找到确切、轻质、非氟化且在盐水中 C4 优先的受体；胍基/脲反而有优先捕获硫酸根和磷酸根的直接风险，故为 `52/100, exact-receptor-not-found`，不进入材料化，见 [`PFBS2_SOLUBLE_RECEPTOR_ATTACK.md`](rounds/pfbs2_deep_design_1/PFBS2_SOLUBLE_RECEPTOR_ATTACK.md)。PFBS-3/4/5 分别受含氟材料生命周期、模板泄漏和普通离子交换原创性限制，不继续消耗深设轮次；下一纸面路线转向 ROX-2。当前仍无主方案或备选方案，不订购、不合成、不开展实验。
+PFBS-1 的攻击也已完成。2022 年已有工作几乎原样实现了“七位苯乙烯化 β-CD + 阳离子甲基丙烯酸共聚单体 + 永久多孔网络”，因此该路线不存在足够的材料原创空间；更关键的是，`1 mM Na2SO4` 使 PFBS 去除率从约 `94%` 降至 `38%`，而 PFOS 仍约为 `79%`，说明它在盐竞争下并不优先保留短链 PFBS。PFBS-1 新增处置为 `58/100, control-only`，历史 82/74 分保留，见 [`PFBS1_PRIOR_ART_AND_SALT_ATTACK.md`](rounds/pfbs1_deep_design_1/PFBS1_PRIOR_ART_AND_SALT_ATTACK.md)。PFBS-2 的可溶受体攻击随后未找到确切、轻质、非氟化且在盐水中 C4 优先的受体；胍基/脲反而有优先捕获硫酸根和磷酸根的直接风险，故为 `52/100, exact-receptor-not-found`，不进入材料化，见 [`PFBS2_SOLUBLE_RECEPTOR_ATTACK.md`](rounds/pfbs2_deep_design_1/PFBS2_SOLUBLE_RECEPTOR_ATTACK.md)。PFBS-3/4/5 不继续消耗深设轮次。
+
+随后完成的 ROX-2 深审确认，`1JZZ` 只能支持大环内酯共同占位，ROX 特有 etheroxime 链没有可冻结的受体接触；独立审查为 `40/100, terminate`，降级孔道只保留为大环内酯类别对照，见 [`rounds/rox2_deep_design_1/REVIEW.md`](rounds/rox2_deep_design_1/REVIEW.md)。动态转配后的 BPA-5 也未通过：本轮未检得满足水相类似物门的双功能杯[4]芳烃受体，ERRγ 证据不支持双端羟基均为必要锚点，而 2018 年已有 CalP4 多孔杯[4]芳烃网络直接用于水中 BPA 去除。其独立审查同为 `40/100, terminate`，见 [`rounds/bpa5_deep_design_1/REVIEW.md`](rounds/bpa5_deep_design_1/REVIEW.md)。下一纸面候选为 DCP-1，但必须先过环境意义、水中卤键/卤亲和合理性、确切可溶体和异构体竞争门，未过不得设计 POP。当前仍无主方案或备选方案，不订购、不合成、不开展实验。
 
 ## 阅读入口
 
@@ -91,3 +93,5 @@ Pan Yao 复核后确认，强制“静态＋动态硬对应”使项目从机制
 9. 架构比较确认高 β-CD 自支撑网络已有拥挤先例，且低密度接枝会受载体质量惩罚；`BPA-2E` 固定为阳性对照，下一纸面攻击转向 PFBS-1。
 10. PFBS-1 与 2022 年阳离子 β-CD 多孔平台直接重合，且 PFBS 在硫酸盐中显著失效；该路线固定为阳性对照，下一纸面攻击转向 PFBS-2。
 11. PFBS-2 未找到能在水和无机阴离子竞争下产生 C4 非单调选择性的确切受体，停止于可溶受体门；动态资源转向 ROX-2。
+12. ROX-2 因不存在可转译的 ROX 专属核糖体几何而终止；降级后的极性孔道只作为大环内酯类别对照。
+13. BPA-5 因双端 ERRγ 因果不成立、未检得确切水相杯[4]芳烃受体且已有直接 polycalix[4]arene–BPA 先例而终止；动态资源转向 DCP-1 的可溶识别纸面门。

@@ -1,0 +1,30 @@
+gate: G17_BPA5_CALIXARENE
+status: independent_review_complete_terminated
+owner_authorization: Pan Yao authorized automatic dynamic reallocation by success potential
+scope:
+  target: BPA-5
+  prohibited_after_termination:
+    - polymer_handle_selection
+    - porous_network_freeze
+    - bench_synthesis_SOP
+    - procurement
+    - synthesis
+    - experiment
+disposition:
+  attack_score: 41
+  independent_review_score: 40
+  label: terminate
+  retained_controls:
+    - CalP4_polycalix4_engineering_positive_control
+    - sulfonated_calix6_aqueous_binding_selectivity_boundary
+central_blockers:
+  - ERRgamma_does_not_establish_two_phenolic_anchors_as_both_necessary
+  - no_retrieved_exact_bifunctional_calix4_receptor_passes_the_aqueous_analog_gate
+  - direct_polycalix4_BPA_water_prior_art
+  - hydrophobicity_and_pore_effects_are_unresolved_alternative_explanations
+reopen_requires:
+  - exact_soluble_complete_deletion_mismatch_and_acyclic_receptors
+  - orthogonal_aqueous_binding_methods
+  - cooperative_BPA_advantage_over_BPF_BPS_and_BPB
+  - matched_network_causal_controls_and_total_material_mass_accounting
+next_action: attack DCP-1 soluble recognition chemistry environmental gate and prior art before any POP design

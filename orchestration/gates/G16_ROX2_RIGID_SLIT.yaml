@@ -1,0 +1,27 @@
+gate: G16_ROX2_RIGID_SLIT
+status: paper_attack_complete_terminated
+owner_authorization: Pan Yao authorized automatic dynamic reallocation by success potential
+scope:
+  target: ROX-2
+  prohibited_after_termination:
+    - ROX_specific_material_freeze
+    - receptor_or_framework_SOP
+    - procurement
+    - synthesis
+    - experiment
+disposition:
+  attack_score: 47
+  independent_review_score: 40
+  label: terminate
+  downgraded_control: nonimprinted_polar_pore_for_macrolide_class_capture_only
+central_blockers:
+  - no_ROX_specific_ribosomal_geometry
+  - flexible_etheroxime_chain_has_no_frozen_receptor_contact
+  - charge_hydrophobicity_and_shared_ring_size_are_complete_alternative_explanations
+  - no_exact_nonimprinted_material_entity
+reopen_requires:
+  - direct_ROX_specific_contact_or_aqueous_conformational_evidence
+  - exact_artificial_receptor_coordinates
+  - nonmonotonic_ROX_advantage_over_ERY_CLA_AZI
+  - matched_deletion_and_mismatch_controls
+next_action: BPA-5 soluble calixarene receptor and prior-art paper attack

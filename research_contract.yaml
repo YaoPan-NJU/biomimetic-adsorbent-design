@@ -97,6 +97,14 @@ material_translation:
   default_material_class: synthetic_nonbiological_adsorbent
   biological_source_role: prototype_discovery_and_mechanism_evidence
   organ_enrichment_role: discovery_signal_not_causal_proof
+  organ_enrichment_heuristic:
+    status: optional_non_scoring_reference
+    purpose: discover_candidate_binding_partitioning_or_transport_mechanisms
+    required_before_material_translation:
+      - reproducible_tissue_or_organ_enrichment
+      - toxicokinetic_and_nonspecific_partitioning_alternatives_considered
+      - direct_molecular_or_microenvironment_mechanism_evidence
+    active_route_or_next_action_unchanged: true
   protein_peptide_or_biohybrid_requires_explicit_owner_scope_reopening: true
   prohibited_shortcuts:
     - introduce_protein_or_folded_peptide_only_to_satisfy_dynamic_correspondence

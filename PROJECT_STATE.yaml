@@ -215,6 +215,7 @@ artifacts:
   key_claim_verification: research/evidence/KEY_CLAIM_VERIFICATION.md
   inorganic_translation_evidence: research/evidence/INORGANIC_TRANSLATION_EVIDENCE.md
   organic_translation_evidence: research/evidence/ORGANIC_TRANSLATION_EVIDENCE.md
+  organ_enrichment_biomimetic_heuristic: research/evidence/ORGAN_ENRICHMENT_BIOMIMETIC_HEURISTIC.md
   orchestration_protocol: orchestration/PROTOCOL.md
   gate_g1: orchestration/gates/G1_SHORTLIST.yaml
   bmdl_attempt1_incident: research/bmdl/PAIRED_EVALUATION_INCIDENT.md

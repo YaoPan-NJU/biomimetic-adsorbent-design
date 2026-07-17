@@ -10,7 +10,7 @@ Develop one primary and one backup biomimetic material for selective adsorption 
 - Primary matrix is municipal/domestic secondary effluent; ultrapure water is the mechanism control.
 - Funnel is 10 pollutants, 5 deep concepts, 1 primary and 1 backup.
 - Main design requires at least one hard functional correspondence translated into an artificial material. Dynamic correspondence is optional and cannot force protein, folded peptide or a generic responsive unit into the design.
-- Tissue or organ enrichment is a prototype-discovery signal, not proof that a specific protein causes accumulation.
+- Tissue or organ enrichment is an optional, non-scoring prototype-discovery signal, not proof that a specific protein causes accumulation. The evidence ladder and pre-exposure interception idea are recorded in `research/evidence/ORGAN_ENRICHMENT_BIOMIMETIC_HEURISTIC.md`; they do not alter the active route or next action.
 - The default deliverable is a manufacturable nonprotein artificial adsorbent; protein, folded-peptide or biohybrid routes require an explicit scope reopening by Pan Yao.
 - Codex supervises isolated designer, attacker, and reviewer roles.
 - BMDL is evaluated against a frozen model-only baseline before any design use.

@@ -188,6 +188,7 @@ artifacts:
   scheme_portfolio: DEEP_RESEARCH_BIOMIMETIC_SCHEME_PORTFOLIO.md
   synthetic_recovery_brief: rounds/synthetic_recovery_1/S1_SYNTHETIC_RECOVERY_BRIEF.md
   four_pollutant_portfolio_spec: rounds/portfolio_20_reopen/PORTFOLIO_DESIGN_SPEC.md
+  four_pollutant_evidence_audit: rounds/portfolio_20_reopen/EVIDENCE_AUDIT.md
   gate_g7_portfolio_approval: orchestration/gates/G7_PORTFOLIO_APPROVAL.yaml
   top5_round1_design: rounds/top5_round_1/DESIGNER_DOSSIERS.md
   top5_round1_attack: rounds/top5_round_1/ATTACK.md

@@ -1,13 +1,13 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: pollutant_rescreening
-status: revision_in_progress
-last_completed_step: Pan Yao rejected the nutrient-led finalist scope, made environmental significance and secondary-effluent relevance pre-scoring hard gates, and added 2,6-dichlorophenol to the priority verification group
-next_action: Build an auditable pollutant_kb 20-to-10 screening matrix that first applies pass/fail secondary-effluent and environmental-significance gates, then scores only admitted organic pollutants; do not resume biomimetic design until the ten are refrozen
+phase: scheme_portfolio_review
+status: awaiting_pan_yao_review
+last_completed_step: Screened the 20 pollutant_kb top-level pollutants for environmental meaning and schemeability, generated 10 mechanism-distinct complete concepts, and ranked the five recommended schemes
+next_action: Pan Yao reviews DEEP_RESEARCH_BIOMIMETIC_SCHEME_PORTFOLIO.md; after review, deepen the approved top five through isolated design, attack, and reviewer rounds
 active_branch: main
 last_verified_commit: 2cc07773650c834fc39c9b1ba880a41312f9637c
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
-candidate_pool_status: reopened_not_frozen
+candidate_pool_status: scheme_portfolio_generated_pollutant_pool_not_frozen
 candidate_pollutants: []
 priority_verification_group:
   - PFOA
@@ -26,12 +26,24 @@ superseded_candidate_pollutants:
   - phosphate
   - nitrate
   - As(III)
-deep_concepts:
-  - phosphate/PstS-PBP
-  - clarithromycin/ribosomal-exit-tunnel
-  - PFOA/hL-FABP
-  - nitrate/NrtA
-  - O-desmethylvenlafaxine/SERT
+scheme_portfolio:
+  - S1 PFOA/hL-FABP two-stage portal
+  - S2 PFOA-PFOS-PFHxS-PFBS/beta-cyclodextrin host-guest network
+  - S3 HFPO-DA (GenX)/HSA branched ether-acid pocket
+  - S4 PFBS-PFHxS-PFOS/HSA chain-length gate
+  - S5 BPA/ERRgamma bidentate aromatic clamp
+  - S6 roxithromycin/23S rRNA exit-tunnel local gate
+  - S7 nonylphenol/ER-GPER phenol-tail pocket
+  - S8 octocrylene/protein hydrophobic-polar pocket
+  - S9 pentachlorophenol/TTR halogenated-phenol channel
+  - S10 2,6-dichlorophenol/chlorophenol-hydroxylase pocket
+recommended_top5:
+  - S1 PFOA/hL-FABP two-stage portal
+  - S5 BPA/ERRgamma bidentate aromatic clamp
+  - S3 HFPO-DA (GenX)/HSA branched ether-acid pocket
+  - S4 PFBS-PFHxS-PFOS/HSA chain-length gate
+  - S6 roxithromycin/23S rRNA exit-tunnel local gate
+deep_concepts: []
 primary_design: null
 backup_design: null
 superseded_finalists:
@@ -88,8 +100,12 @@ open_issues:
     text: Complete the final Chinese report, attachment index, state synchronization, credential scan and fresh-clone continuity validation.
   - id: SCOPE-001
     severity: high
-    status: open
+    status: resolved
     text: Rebuild the pollutant funnel around organic and emerging contaminants using pollutant_kb as a candidate source; apply independently verified secondary-effluent relevance and environmental significance as pass/fail gates before any weighted scoring, and include 2,6-dichlorophenol in the priority verification group.
+  - id: SCHEME-001
+    severity: high
+    status: open
+    text: Pan Yao must review the ten-scheme portfolio and approve or revise the recommended top five before isolated deep-design rounds begin.
   - id: APPROVAL-001
     severity: high
     status: deferred
@@ -107,6 +123,7 @@ artifacts:
   model_only_batch_b: research/bmdl/paired/model_only_batch_b.md
   pollutant_shortlist: research/pollutants/POLLUTANT_SHORTLIST.md
   pollutant_scope_revision: research/pollutants/REOPENED_SCOPE.md
+  scheme_portfolio: DEEP_RESEARCH_BIOMIMETIC_SCHEME_PORTFOLIO.md
   evidence_ledger: research/evidence/evidence_ledger.csv
   key_claim_verification: research/evidence/KEY_CLAIM_VERIFICATION.md
   inorganic_translation_evidence: research/evidence/INORGANIC_TRANSLATION_EVIDENCE.md

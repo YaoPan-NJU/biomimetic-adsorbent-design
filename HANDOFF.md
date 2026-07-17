@@ -20,7 +20,9 @@ Pan Yao's scientific review reopened the project at the pollutant-selection gate
 
 The active scope is organic pollutants, with priority given to emerging contaminants in municipal secondary effluent. `pollutant_kb.pollutant_index` is the candidate seed, not a risk authority. PFOA, PFBS, roxithromycin, bisphenol A and 2,6-dichlorophenol form the initial priority verification group. The exact ten candidates are not frozen. Secondary-effluent relevance and environmental or health concern are binary admission gates applied before scoring; neither receives weighted points, and failure cannot be rescued by a strong biomimetic concept. Only admitted candidates are scored for selective-adsorption difficulty, biomimetic capability, static-dynamic synergy, engineering generality and novelty/evidence opportunity.
 
-The unique next action is to build the auditable 20-to-10 screening matrix. No designer role may resume biological-prototype search or material design until the revised ten-pollutant problem statements are frozen.
+The revised work has now produced an auditable pre-screen and ten mechanism-distinct schemes. The recommended five are S1 PFOA/hL-FABP two-stage portal, S5 BPA/ERRγ bidentate aromatic clamp, S3 HFPO-DA (GenX)/HSA branched ether-acid pocket, S4 PFBS/PFHxS/PFOS HSA chain-length gate, and S6 roxithromycin/23S rRNA local gate. These are portfolio recommendations, not approved finalists. S10 2,6-dichlorophenol remains conditional because direct municipal secondary-effluent evidence is insufficient.
+
+The unique next action is for Pan Yao to review `DEEP_RESEARCH_BIOMIMETIC_SCHEME_PORTFOLIO.md`. Only the approved top five may enter isolated deep-design, attack, and reviewer rounds.
 
 ## Superseded completed cycle
 
@@ -49,6 +51,6 @@ Translation-evidence dossiers were prepared in parallel but are deliberately exc
 ## Resume instructions
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
-2. Verify `main`, read `research/pollutants/REOPENED_SCOPE.md`, and treat all former finalists as historical only.
-3. Execute the single 20-to-10 rescreening action recorded in `PROJECT_STATE.yaml`; keep BMDL excluded from design and do not start experiments.
+2. Verify `main`, read `DEEP_RESEARCH_BIOMIMETIC_SCHEME_PORTFOLIO.md`, and treat all former finalists as historical only.
+3. Continue the single Pan Yao portfolio-review action recorded in `PROJECT_STATE.yaml`; keep BMDL excluded from design and do not start experiments.
 4. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

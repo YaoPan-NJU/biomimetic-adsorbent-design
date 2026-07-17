@@ -53,7 +53,9 @@ pollutant_admission:
     - admit_nutrients_or_inorganic_pollutants_without_explicit_scope_reopening
 
 funnel:
-  pollutants: 10
+  source_pollutants: 20
+  scheme_portfolio: 10
+  recommended_schemes: 5
   deep_concepts: 5
   finalists: 2
   primary: 1

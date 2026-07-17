@@ -3,7 +3,7 @@ project: biomimetic-adsorbent-design
 phase: four_pollutant_twenty_scheme_portfolio
 status: in_progress
 last_completed_step: Pan Yao approved reopening the portfolio around BPA, PFBS, roxithromycin and 2,6-dichlorophenol for twenty material-class-neutral artificial adsorbent schemes with dynamic allocation and unified ranking; no primary or backup has passed
-next_action: Verify direct evidence, allocate at least three schemes per target and the remaining eight by success potential, freeze twenty mechanism-distinct nonprotein artificial-material schemes, and rank them under the project final-scoring contract; no ordering, synthesis, protein, folded peptide, S11 Gate 1b, or Gate 2 work is authorized
+next_action: Independently attack BPA-1, PFBS-1, PFBS-2, BPA-2 and ROX-1 for chemical determinacy, real-secondary-effluent selectivity, inactive-mass efficiency, prior-art crowding and falsifiable controls; no primary, backup, ordering, synthesis, protein, folded peptide, S11 Gate 1b, or Gate 2 work is authorized
 active_branch: main
 last_verified_commit: c8972adaace4a4c06485fe18640a9391160a8039
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -58,7 +58,21 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (active recovery brief; exact receptor not yet frozen)
-active_deep_concept: S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent
+active_deep_concept: null
+paused_candidates:
+  - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused while the four-pollutant portfolio is attacked; not terminated)
+portfolio_20_status: frozen_ranked_pending_top5_attack
+portfolio_20_allocation:
+  BPA: 6
+  PFBS: 5
+  ROX: 5
+  2,6-DCP: 4
+portfolio_20_top5:
+  - BPA-1 ERRgamma rigid dual-ended geometry clamp
+  - PFBS-1 cationic shallow-cavity beta-CD copolymer
+  - PFBS-2 guanidinium-bis-urea headgroup cage with C4 finite slot
+  - BPA-2 beta-CD dual-hydrogen-bond porous bead
+  - ROX-1 water-compatible COF thin-layer surface imprint
 primary_design: null
 backup_design: null
 superseded_finalists:
@@ -189,6 +203,8 @@ artifacts:
   synthetic_recovery_brief: rounds/synthetic_recovery_1/S1_SYNTHETIC_RECOVERY_BRIEF.md
   four_pollutant_portfolio_spec: rounds/portfolio_20_reopen/PORTFOLIO_DESIGN_SPEC.md
   four_pollutant_evidence_audit: rounds/portfolio_20_reopen/EVIDENCE_AUDIT.md
+  four_pollutant_twenty_scheme_portfolio: rounds/portfolio_20_reopen/TWENTY_SCHEME_PORTFOLIO.md
+  four_pollutant_ranking: rounds/portfolio_20_reopen/RANKING.yaml
   gate_g7_portfolio_approval: orchestration/gates/G7_PORTFOLIO_APPROVAL.yaml
   top5_round1_design: rounds/top5_round_1/DESIGNER_DOSSIERS.md
   top5_round1_attack: rounds/top5_round_1/ATTACK.md

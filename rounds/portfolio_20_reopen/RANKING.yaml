@@ -1,0 +1,39 @@
+schema_version: 1
+portfolio: four_pollutant_twenty_scheme
+allocation:
+  BPA: 6
+  PFBS: 5
+  ROX: 5
+  2,6-DCP: 4
+score_dimensions:
+  causal_closure: 20
+  competitive_selectivity: 25
+  artificial_material_translatability: 20
+  originality: 15
+  experimental_falsifiability: 10
+  evidence_integrity: 10
+ranked_schemes:
+  - {rank: 1, id: BPA-1, target: BPA, scores: [18, 22, 17, 13, 9, 9], total: 88, disposition: advance}
+  - {rank: 2, id: PFBS-1, target: PFBS, scores: [15, 21, 18, 11, 8, 9], total: 82, disposition: advance}
+  - {rank: 3, id: PFBS-2, target: PFBS, scores: [16, 19, 15, 14, 9, 7], total: 80, disposition: advance}
+  - {rank: 4, id: BPA-2, target: BPA, scores: [14, 20, 18, 10, 8, 9], total: 79, disposition: advance}
+  - {rank: 5, id: ROX-1, target: ROX, scores: [14, 19, 18, 10, 8, 9], total: 78, disposition: advance}
+  - {rank: 6, id: ROX-2, target: ROX, scores: [16, 18, 14, 14, 9, 6], total: 77, disposition: revise}
+  - {rank: 7, id: BPA-3, target: BPA, scores: [16, 18, 14, 14, 9, 6], total: 77, disposition: revise}
+  - {rank: 8, id: BPA-4, target: BPA, scores: [13, 19, 18, 8, 8, 9], total: 75, disposition: revise}
+  - {rank: 9, id: DCP-1, target: "2,6-DCP", scores: [15, 17, 14, 14, 9, 6], total: 75, disposition: revise}
+  - {rank: 10, id: PFBS-3, target: PFBS, scores: [13, 18, 17, 10, 8, 8], total: 74, disposition: revise}
+  - {rank: 11, id: DCP-2, target: "2,6-DCP", scores: [13, 19, 15, 9, 8, 8], total: 72, disposition: revise}
+  - {rank: 12, id: ROX-3, target: ROX, scores: [12, 18, 17, 8, 8, 8], total: 71, disposition: revise}
+  - {rank: 13, id: BPA-5, target: BPA, scores: [13, 17, 15, 12, 8, 6], total: 71, disposition: revise}
+  - {rank: 14, id: PFBS-4, target: PFBS, scores: [12, 17, 16, 10, 8, 7], total: 70, disposition: revise}
+  - {rank: 15, id: ROX-4, target: ROX, scores: [13, 16, 13, 13, 8, 5], total: 68, disposition: control_only}
+  - {rank: 16, id: PFBS-5, target: PFBS, scores: [11, 16, 18, 7, 8, 7], total: 67, disposition: control_only}
+  - {rank: 17, id: DCP-3, target: "2,6-DCP", scores: [10, 15, 15, 8, 7, 7], total: 62, disposition: control_only}
+  - {rank: 18, id: ROX-5, target: ROX, scores: [10, 15, 17, 7, 7, 6], total: 62, disposition: control_only}
+  - {rank: 19, id: BPA-6, target: BPA, scores: [12, 13, 11, 12, 8, 5], total: 61, disposition: control_only}
+  - {rank: 20, id: DCP-4, target: "2,6-DCP", scores: [10, 14, 16, 7, 7, 5], total: 59, disposition: terminate}
+status:
+  primary_design: null
+  backup_design: null
+  next_gate: independent_attack_of_top_five

@@ -95,6 +95,22 @@ hard_correspondence:
 
 material_translation:
   default_material_class: synthetic_nonbiological_adsorbent
+  carrier_class: not_preselected
+  carrier_mass_efficiency:
+    principle: minimize_inactive_mass_without_sacrificing_selectivity_or_operability
+    eligible_examples:
+      - activated_or_engineered_porous_carbon
+      - porous_polymer
+      - inorganic_porous_support
+      - self_supporting_porous_adsorbent
+    no_example_is_mandatory: true
+    required_reporting_basis:
+      - mg_target_per_g_total_dry_composite
+      - mg_target_per_mL_packed_bed
+      - mmol_accessible_sites_per_g_total_dry_composite
+      - receptor_mass_fraction_and_site_utilization
+      - blank_carrier_uptake_under_matching_conditions
+    rejection_rule: reject_if_inactive_mass_penalty_is_not_compensated_by_selectivity_matrix_tolerance_regeneration_stability_or_bed_performance
   biological_source_role: prototype_discovery_and_mechanism_evidence
   organ_enrichment_role: discovery_signal_not_causal_proof
   organ_enrichment_heuristic:
@@ -111,6 +127,9 @@ material_translation:
     - copy_protein_architecture_without_a_manufacturing_or_selectivity_necessity
     - infer_responsible_protein_from_tissue_enrichment_alone
     - treat_capacity_gain_as_selectivity_or_biomimetic_causality
+    - preselect_carrier_only_for_coupling_convenience
+    - report_capacity_only_per_receptor_or_active_fraction
+    - ignore_inert_carrier_mass_in_gravimetric_comparisons
 
 bmdl_gate:
   baseline_must_be_frozen_first: true

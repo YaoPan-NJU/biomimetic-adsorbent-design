@@ -16,6 +16,8 @@ Each claimed correspondence requires a supported biological feature, a concrete 
 
 Selective adsorption is mandatory. Capacity alone cannot establish success. The experimental plan must include realistic competitors and secondary-effluent matrix effects.
 
+Carrier selection is material-class neutral and must account for inactive mass. Report adsorption per total dry composite mass and per packed-bed volume, together with accessible site density and the blank carrier contribution. A carrier cannot be locked merely because its coupling chemistry is convenient. An inert or heavy support is rejected when its mass penalty is not compensated by measured selectivity, matrix tolerance, regeneration, stability, or bed performance; supports that contribute useful porosity or adsorption and self-supporting porous architectures remain eligible.
+
 ## Research boundaries
 
 - Primary water matrix: municipal/domestic wastewater-treatment secondary effluent.

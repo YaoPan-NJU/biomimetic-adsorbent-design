@@ -2,8 +2,8 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: synthetic_material_direction_recovery
 status: in_progress
-last_completed_step: Pan Yao reviewed the post-Round-2 trajectory, rejected the drift from mechanism translation into protein and folded-peptide replication, reset the dynamic-correspondence gate, and opened the S1-SYN artificial-material recovery route; no primary or backup has passed
-next_action: An isolated designer submits one exact nonpeptidic receptor plus OEG-passivated mesoporous-silica immobilization SOP under the synthetic recovery brief; no protein, folded peptide, ordering, synthesis, S11 Gate 1b, or Gate 2 work is authorized
+last_completed_step: Pan Yao corrected the S1-SYN carrier assumption; carrier class is now neutral, mesoporous silica is only an eligible mechanism platform, and inactive carrier mass must be accounted for in total-composite and packed-bed capacity; no primary or backup has passed
+next_action: An isolated designer submits one exact nonpeptidic receptor, matched controls, a material-class-neutral carrier or self-supporting architecture comparison, and a complete SOP for the selected route with total-mass and bed-capacity accounting; no protein, folded peptide, ordering, synthesis, S11 Gate 1b, or Gate 2 work is authorized
 active_branch: main
 last_verified_commit: f7a5980705d22a7d1297482184dd996269f95924
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -163,7 +163,11 @@ open_issues:
   - id: S1-SYN-001
     severity: high
     status: in_progress
-    text: Freeze one exact nonpeptidic guanidinium-amide and finite low-polar-chain receptor, matched deletion/mismatch controls, and an OEG-passivated mesoporous-silica bench SOP before any order or experiment.
+    text: Freeze one exact nonpeptidic guanidinium-amide and finite low-polar-chain receptor, matched deletion/mismatch controls, a material-class-neutral carrier or self-supporting architecture comparison, and a complete SOP for the selected route before any order or experiment.
+  - id: CARRIER-001
+    severity: high
+    status: in_progress
+    text: Prevent inactive carrier mass from being hidden by receptor-normalized capacity; compare total-dry-composite mg/g, packed-bed mg/mL, accessible-site density, site utilization and blank-carrier uptake without requiring silica, resin, carbon or any other material class.
   - id: APPROVAL-001
     severity: high
     status: deferred

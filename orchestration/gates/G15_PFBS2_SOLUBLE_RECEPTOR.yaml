@@ -1,0 +1,27 @@
+gate: G15_PFBS2_SOLUBLE_RECEPTOR
+status: paper_attack_complete_exact_receptor_not_found
+owner_authorization: Pan Yao authorized continued paper design and dynamic allocation by success potential
+scope:
+  target: PFBS-2
+  prohibited_before_pass:
+    - polymer_handle_selection
+    - carrier_or_framework_selection
+    - bench_synthesis_SOP
+    - procurement
+    - synthesis
+    - experiment
+disposition:
+  score: 52
+  label: revise_exact_receptor_not_found
+  historical_scores_preserved: [80, 73]
+central_blockers:
+  - no_exact_low_mass_nonfluorinated_PFBS_receptor
+  - guanidinium_and_urea_motifs_compete_strongly_for_sulfate_and_phosphate
+  - no_C4_nonmonotonic_preference_over_C6_and_C8_PFSA
+reopen_requires:
+  - exact_structure_mass_speciation_and_water_solubility
+  - equal_charge_disordered_no_slot_and_C2_C4_C6_controls
+  - orthogonal_binding_in_water_sulfate_chloride_and_secondary_effluent_simulant
+  - PFBS_nonmonotonic_C4_peak_over_PFPeS_PFHxS_PFOS
+  - total_dry_material_capacity_ceiling
+next_action: attack ROX-2 nonimprinted rigid slit feasibility and novelty before any material freeze

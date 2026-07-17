@@ -12,7 +12,9 @@ Pan Yao 已纠正此前的路线偏移：生物组织分布和蛋白结合证据
 
 对 ERRγ 功能证据的复核进一步表明，对称双端夹并非原型强制要求：关键证据更支持“一个酚羟基的互补极性主锚 + 疏水芳香包围”，单羟基类似物仍可强结合。当前已提出确切的可聚合小分子探针 `P1-MAPy`（2-methacrylamidopyridine，162.19 g/mol），并冻结供体删除、受体删除、邻位破坏和疏水空白四级对照及水相停止门，见 [`P1_MAPY_CONTROL_AND_GATE.md`](rounds/bpa1_deep_design_1/P1_MAPY_CONTROL_AND_GATE.md)。随后攻击发现，acylaminopyridine 的成熟两点识别对象是具有两个氧的羧酸，而不是 BPA 的单个酚氧；直接水凝胶先例也表现为一般酚吸附且体积增大时容量下降。故 P1 只保留为实验探针，BPA-1 当前 `70/100, experiment-gated`，不进入材料化，见 [`P1_MAPY_ATTACK.md`](rounds/bpa1_deep_design_1/P1_MAPY_ATTACK.md)。
 
-BPA-2 的纸面攻击已完成。β-CD 对 BPA 的 `1:1` 水相包合有直接 NMR 支持，`Ka` 约 `3.62–4.10×10^3 M^-1`；但“β-CD 与随机双氢键单体共聚”不能证明同一个 BPA 同时接触两个位点。路线因此拆为 `BPA-2E` 工程基线（72/100，只主张高 β-CD 位点密度与工程化）和 `BPA-2R` 研究变体（63/100，必须先冻结同一 β-CD 次级宽口上的确切共价极性站）。纯 β-CD 的 `1:1` 理论上限仅 `201.14 mg BPA/g β-CD`，最终材料上限为 `201.14 × w_betaCD mg/g`，所以交联剂与骨架质量必须严格计入。完整记录见 [`BPA2_BASELINE_AND_COLOCALIZATION_ATTACK.md`](rounds/bpa2_deep_design_1/BPA2_BASELINE_AND_COLOCALIZATION_ATTACK.md)。架构比较又确认，已有自支撑高 β-CD 网络同时覆盖快速吸附、再生、腐殖酸/离子耐受和实际废水场景，再做交联剂优化不足以形成新的选择性贡献；故 `BPA-2E` 已降为工程阳性对照，见 [`BPA2E_ARCHITECTURE_COMPARISON.md`](rounds/bpa2_deep_design_1/BPA2E_ARCHITECTURE_COMPARISON.md)。纸面资源继续转向 PFBS-1；当前仍无主方案或备选方案，不订购、不合成、不开展实验。
+BPA-2 的纸面攻击已完成。β-CD 对 BPA 的 `1:1` 水相包合有直接 NMR 支持，`Ka` 约 `3.62–4.10×10^3 M^-1`；但“β-CD 与随机双氢键单体共聚”不能证明同一个 BPA 同时接触两个位点。路线因此拆为 `BPA-2E` 工程基线（72/100，只主张高 β-CD 位点密度与工程化）和 `BPA-2R` 研究变体（63/100，必须先冻结同一 β-CD 次级宽口上的确切共价极性站）。纯 β-CD 的 `1:1` 理论上限仅 `201.14 mg BPA/g β-CD`，最终材料上限为 `201.14 × w_betaCD mg/g`，所以交联剂与骨架质量必须严格计入。完整记录见 [`BPA2_BASELINE_AND_COLOCALIZATION_ATTACK.md`](rounds/bpa2_deep_design_1/BPA2_BASELINE_AND_COLOCALIZATION_ATTACK.md)。架构比较又确认，已有自支撑高 β-CD 网络同时覆盖快速吸附、再生、腐殖酸/离子耐受和实际废水场景，再做交联剂优化不足以形成新的选择性贡献；故 `BPA-2E` 已降为工程阳性对照，见 [`BPA2E_ARCHITECTURE_COMPARISON.md`](rounds/bpa2_deep_design_1/BPA2E_ARCHITECTURE_COMPARISON.md)。
+
+PFBS-1 的攻击也已完成。2022 年已有工作几乎原样实现了“七位苯乙烯化 β-CD + 阳离子甲基丙烯酸共聚单体 + 永久多孔网络”，因此该路线不存在足够的材料原创空间；更关键的是，`1 mM Na2SO4` 使 PFBS 去除率从约 `94%` 降至 `38%`，而 PFOS 仍约为 `79%`，说明它在盐竞争下并不优先保留短链 PFBS。PFBS-1 新增处置为 `58/100, control-only`，历史 82/74 分保留，见 [`PFBS1_PRIOR_ART_AND_SALT_ATTACK.md`](rounds/pfbs1_deep_design_1/PFBS1_PRIOR_ART_AND_SALT_ATTACK.md)。纸面资源转向 PFBS-2 的可溶受体门；当前仍无主方案或备选方案，不订购、不合成、不开展实验。
 
 ## 阅读入口
 
@@ -87,3 +89,4 @@ Pan Yao 复核后确认，强制“静态＋动态硬对应”使项目从机制
 7. 对抗审查确认 P1 的经典两点证据属于羧酸受体化学，不能直接转给单酚氧；水相酚吸附先例的体积趋势也不利。P1 保留为高信息量实验探针，BPA-1 暂停材料化，纸面深化转向 BPA-2 保险路线。
 8. BPA-2 攻击确认 β-CD 是可靠的水相 BPA 工程受体，却否定随机极性共聚单体的“同腔协同”主张；新增 `BPA-2E` 工程基线与 `BPA-2R` 精确次级口研究变体，两者均未成为最终方案。
 9. 架构比较确认高 β-CD 自支撑网络已有拥挤先例，且低密度接枝会受载体质量惩罚；`BPA-2E` 固定为阳性对照，下一纸面攻击转向 PFBS-1。
+10. PFBS-1 与 2022 年阳离子 β-CD 多孔平台直接重合，且 PFBS 在硫酸盐中显著失效；该路线固定为阳性对照，下一纸面攻击转向 PFBS-2。

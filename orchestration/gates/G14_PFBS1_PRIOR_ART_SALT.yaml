@@ -1,0 +1,30 @@
+gate: G14_PFBS1_PRIOR_ART_SALT
+status: control_only_direct_prior_art_and_salt_limited
+owner_authorization: Pan Yao authorized continued paper design and dynamic allocation by success potential
+scope:
+  target: PFBS-1
+  prohibited:
+    - formulation_optimization_as_new_candidate
+    - bench_synthesis_SOP
+    - procurement
+    - synthesis
+    - experiment
+direct_prior_art:
+  doi: 10.1021/acscentsci.2c00478
+  overlap:
+    - sevenfold_primary_rim_styrene_functionalized_betaCD
+    - cationic_methacrylate_comonomer
+    - permanently_porous_radical_copolymer
+    - PFBS_to_PFOS_chain_series
+    - sulfate_chloride_and_calcium_matrix_comparison
+critical_result:
+  PFBS_removal_nanopure_percent: 94
+  PFBS_removal_1mM_sodium_sulfate_percent: 38
+  PFOS_removal_nanopure_percent: 97
+  PFOS_removal_1mM_sodium_sulfate_percent: 79
+  interpretation: short_chain_capture_is_primarily_electrostatic_and_loses_relative_to_long_chain_capture_under_salt
+disposition:
+  score: 58
+  label: control_only
+  historical_scores_preserved: [82, 74]
+next_action: attack PFBS-2 soluble headgroup cage in water and salt before any materialization

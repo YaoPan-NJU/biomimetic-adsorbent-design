@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: pfbs1_paper_attack
+phase: pfbs2_soluble_receptor_paper_attack
 status: in_progress
-last_completed_step: BPA-2E architecture comparison found mature high-betaCD self-supporting networks with rapid adsorption regeneration and real-water precedents; it is now control-only because a new crosslinker recipe would not provide the required selective biomimetic contribution
-next_action: Attack PFBS-1 by checking short-chain PFAS beta-CD cavity fit same-host cationic-rim colocalization counterion and DOM competition and total-material site capacity before any exact material freeze
+last_completed_step: PFBS-1 was found to duplicate a 2022 styrenyl-betaCD cationic methacrylate porous polymer and that direct precedent loses PFBS removal from about 94 to 38 percent in 1 mM sulfate; PFBS-1 is 58/control-only
+next_action: Attack PFBS-2 at the soluble receptor level by requiring an exact low-mass nonfluorinated headgroup cage and C2 C4 C6 controls in water sulfate and chloride before materialization
 active_branch: main
 last_verified_commit: 70539b8
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -62,10 +62,10 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
-active_deep_concept: PFBS-1 cationic shallow-cavity beta-CD route entering paper attack; BPA-2E is control-only BPA-2R remains unfrozen and BPA-1 remains experiment-gated
+active_deep_concept: PFBS-2 guanidinium bis-urea headgroup cage with finite C4 slot entering soluble-receptor paper attack; PFBS-1 and BPA-2E are control-only
 paused_candidates:
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused pending owner review of the four-pollutant portfolio; not terminated)
-portfolio_20_status: dynamic_reallocation_bpa1_experiment_gated_bpa2_control_only_pfbs1_active
+portfolio_20_status: dynamic_reallocation_bpa1_experiment_gated_bpa2_control_only_pfbs1_control_only_pfbs2_active
 portfolio_20_allocation:
   BPA: 6
   PFBS: 5
@@ -212,8 +212,12 @@ open_issues:
     text: Mature self-supporting high-betaCD networks already provide rapid BPA uptake regeneration matrix-tolerance and real-wastewater precedents; BPA-2E is retained as a positive engineering baseline rather than spending a design round on crosslinker optimization.
   - id: PFBS1-S0-001
     severity: high
+    status: control_only
+    text: The exact styrenyl-betaCD cationic-methacrylate porous platform was published in 2022 and PFBS removal fell from about 94 to 38 percent in 1 mM sulfate while PFOS retained about 79 percent; retain as a strong positive control only.
+  - id: PFBS2-S0-001
+    severity: high
     status: in_progress
-    text: Before PFBS-1 material freeze verify short-chain PFBS cavity occupancy exact same-host cationic-rim colocalization counterion and DOM competition and total-dry-material site capacity.
+    text: Require one exact low-mass nonfluorinated guanidinium-bis-urea receptor and matched C2 C4 C6 soluble controls to survive water sulfate and chloride before any polymer or carrier design.
   - id: APPROVAL-001
     severity: high
     status: deferred

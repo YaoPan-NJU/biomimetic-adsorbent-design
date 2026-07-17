@@ -5,7 +5,7 @@ status: awaiting_owner_review
 last_completed_step: Twenty material-class-neutral nonprotein schemes were frozen and ranked for BPA, PFBS, roxithromycin and 2,6-dichlorophenol; a role-separated top-five attack left BPA-1 first at 84/revise and no primary or backup passed
 next_action: Pan Yao reviews the full twenty-scheme portfolio and post-attack ranking; if continued, deepen only BPA-1 into an exact nonimprinted receptor and soluble deletion/mismatch series before any carrier SOP, ordering, synthesis or experiment
 active_branch: main
-last_verified_commit: c8972adaace4a4c06485fe18640a9391160a8039
+last_verified_commit: 280855c078eaa4fe975499a52c69a17798328c1b
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: four_pollutant_twenty_scheme_portfolio_frozen_and_ranked
 candidate_pollutants:
@@ -285,14 +285,15 @@ artifacts:
   gate_g6_delivery: orchestration/gates/G6_DELIVERY.yaml
   fresh_clone_readback: orchestration/FRESH_CLONE_READBACK.md
 checks:
-  direction_recovery: passed_on_fresh_clone_c8972ad
-  organ_enrichment_heuristic: optional_non_scoring_reference_validated_on_fresh_clone_c8972ad
-  carrier_mass_efficiency: material_class_neutral_contract_validated_on_fresh_clone_c8972ad
-  secrets_scan: passed_on_fresh_clone_c8972ad_148_tracked_files
-  state_paths: passed_on_fresh_clone_c8972ad_82_artifacts
-  snapshot_checksums: passed_on_fresh_clone_c8972ad_6_files
-  s11_constructs: passed_on_fresh_clone_c8972ad_8_records_and_file_hash
-  machine_specific_paths: none_found_on_fresh_clone_c8972ad
-  remote_push: carrier_mass_efficiency_c8972ad_pushed
-  fresh_clone: passed_at_c8972adaace4a4c06485fe18640a9391160a8039
-  context_free_codex_readback: last_passed_at_739c39d; not_repeated_for_carrier_efficiency_checkpoint
+  direction_recovery: passed_on_fresh_clone_280855c
+  organ_enrichment_heuristic: optional_non_scoring_reference_validated_on_fresh_clone_280855c
+  carrier_mass_efficiency: material_class_neutral_contract_validated_on_fresh_clone_280855c
+  portfolio_20: twenty_schemes_allocation_score_sums_and_top5_attack_validated_on_fresh_clone_280855c
+  secrets_scan: passed_on_fresh_clone_280855c_155_tracked_files
+  state_paths: passed_on_fresh_clone_280855c_89_artifacts
+  snapshot_checksums: passed_on_fresh_clone_280855c_6_files
+  s11_constructs: passed_on_fresh_clone_280855c_8_records_and_file_hash
+  machine_specific_paths: none_found_on_fresh_clone_280855c
+  remote_push: portfolio_20_review_280855c_pushed
+  fresh_clone: passed_at_280855c078eaa4fe975499a52c69a17798328c1b
+  context_free_codex_readback: last_passed_at_739c39d; not_repeated_for_portfolio_20_checkpoint

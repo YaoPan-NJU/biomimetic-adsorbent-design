@@ -2,8 +2,8 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: bpa1_exact_receptor_soluble_gate_design
 status: in_progress
-last_completed_step: Pan Yao authorized continuation; BPA-1 geometry was recalculated from 2E2R and one exact low-mass probe R1-BPE plus deletion and distance-mismatch controls were frozen for soluble validation, without selecting a carrier or material route
-next_action: Attack R1-BPE for neutral-water solubility, synthetic/control comparability and analytical identifiability; only if the soluble geometry gate remains credible may a polymerizable derivative and material-class-neutral architecture comparison be designed
+last_completed_step: R1-BPE was adversarially rejected as a complete BPA receptor because its two terminal pyridine acceptors are divergent and atom-distance equality omitted hydrogen-bond direction sterics solubility and control confounding; BPA-1 fell to 68/revise with no exact receptor frozen
+next_action: Search and three-dimensionally prefilter exact low-mass convergent receptors against the 2E2R BPA conformation; do not design a polymerizable derivative carrier or material SOP until one receptor passes directional geometry and aqueous-speciation review
 active_branch: main
 last_verified_commit: 8c74087dcabe8610d7521b38776cffa8a55fba75
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -62,7 +62,7 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
-active_deep_concept: BPA-1 ERRgamma static geometry translated to R1-BPE soluble nonimprinted probe
+active_deep_concept: BPA-1 ERRgamma static geometry; exact convergent nonimprinted receptor not frozen
 paused_candidates:
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused pending owner review of the four-pollutant portfolio; not terminated)
 portfolio_20_status: owner_authorized_bpa1_only_deepening
@@ -192,8 +192,12 @@ open_issues:
     text: Pan Yao authorized continued work after the twenty-scheme portfolio and post-attack ranking; only BPA-1 advances to exact soluble-receptor design and no candidate is yet a finalist.
   - id: BPA1-S0-001
     severity: high
+    status: superseded_by_directional_geometry_failure
+    text: R1-BPE was rejected as the complete receptor because its divergent acceptors do not establish a convergent BPA pocket; retain it only as a possible negative control.
+  - id: BPA1-R2-001
+    severity: critical
     status: in_progress
-    text: R1-BPE is frozen only as a soluble mechanism probe; neutral-water solubility, aggregation-free speciation, BPA binding, distance-specific increment and secondary-effluent retention must pass before any polymerizable derivative, carrier or material SOP is selected.
+    text: Identify one exact low-mass convergent receptor whose two acceptors satisfy BPA hydrogen-bond distance angle and steric constraints in three dimensions before any soluble assay or materialization contract is frozen.
   - id: APPROVAL-001
     severity: high
     status: deferred
@@ -221,6 +225,7 @@ artifacts:
   four_pollutant_post_attack_ranking: rounds/portfolio_20_reopen/POST_ATTACK_RANKING.yaml
   four_pollutant_review: rounds/portfolio_20_reopen/REVIEW.md
   bpa1_geometry_and_receptor_triage: rounds/bpa1_deep_design_1/GEOMETRY_AND_RECEPTOR_TRIAGE.md
+  bpa1_r1_chemistry_attack: rounds/bpa1_deep_design_1/R1_CHEMISTRY_ATTACK.md
   gate_g12_bpa1_soluble_receptor: orchestration/gates/G12_BPA1_SOLUBLE_RECEPTOR.yaml
   gate_g7_portfolio_approval: orchestration/gates/G7_PORTFOLIO_APPROVAL.yaml
   top5_round1_design: rounds/top5_round_1/DESIGNER_DOSSIERS.md
@@ -303,4 +308,4 @@ checks:
   remote_push: portfolio_20_review_280855c_pushed
   fresh_clone: passed_at_280855c078eaa4fe975499a52c69a17798328c1b
   context_free_codex_readback: last_passed_at_739c39d; not_repeated_for_portfolio_20_checkpoint
-  bpa1_exact_probe: R1_BPE_and_deletion_distance_controls_frozen_for_design_only
+  bpa1_exact_probe: R1_BPE_rejected_as_complete_receptor_after_directional_geometry_attack

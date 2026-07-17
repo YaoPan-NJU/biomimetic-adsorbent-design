@@ -77,3 +77,28 @@ Mechanical results:
 - No local Windows, prior Mac user, or temporary-clone absolute path was found in tracked project content.
 
 The fresh clone identifies `synthetic_material_direction_recovery` as the active phase, `S1-SYN` as the only active deep concept, no primary or backup, and one next action: submit an exact nonpeptidic receptor plus OEG-passivated mesoporous-silica immobilization SOP. No context-free model readback was repeated for this checkpoint; the recorded validation is mechanical and document-consistency based.
+
+## ROX-2 and BPA-5 termination checkpoint
+
+Validation date: 2026-07-18
+
+Validated commit: `7c573bb857281994a5bb1201edde84db621fb3ee`
+
+The private remote was cloned into a new empty directory after both paper attacks and independent reviews had been pushed. The clone was clean and matched `origin/main`.
+
+Mechanical results:
+
+- `scripts/validate_repository.py`: 104 state-indexed artifacts resolved and six BMDL snapshot checksums passed.
+- `scripts/scan_credentials.py`: 177 tracked files passed; no credential pattern was found.
+- `PROJECT_STATE.yaml` and all gate YAML files parsed successfully.
+
+A context-free Codex reading only the clone correctly recovered:
+
+- the artificial-material objective, municipal-secondary-effluent matrix and absence of a primary or backup;
+- the 40/100 termination of ROX-2 because no ROX-specific ribosomal geometry or exact artificial slit exists;
+- the 40/100 termination of BPA-5 because the two-ended ERRgamma necessity claim is unsupported, no exact aqueous calix[4]arene receptor passed, and direct CalP4 prior art exists;
+- BPA-2E, PFBS-1, downgraded ROX-2 and CalP4 as controls rather than candidates;
+- DCP-1 environmental relevance and soluble-recognition paper attack as the unique next action;
+- the prohibition on POP design, procurement, synthesis and experiment at this stage.
+
+The repository is sufficient for another Codex instance to continue without the original chat at this checkpoint.

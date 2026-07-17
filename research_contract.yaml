@@ -66,16 +66,16 @@ pollutant_scoring:
   environmental_significance_is_weighted: false
   selective_challenge: 25
   uniquely_biomimetic_capability: 25
-  static_dynamic_synergy: 20
+  mechanism_to_material_translatability: 20
   engineering_generality: 15
   novelty_and_evidence_opportunity: 15
 
 final_scoring:
   causal_closure: 20
-  selective_adsorption_mechanism: 20
-  biomimetic_fidelity: 20
+  selective_adsorption_mechanism: 25
+  artificial_material_translatability: 20
   originality: 15
-  experimental_falsifiability_and_controls: 15
+  experimental_falsifiability_and_controls: 10
   evidence_integrity: 10
   pass_score: 85
   unresolved_critical_allowed: 0
@@ -83,7 +83,8 @@ final_scoring:
 
 hard_correspondence:
   required_static: 1
-  required_dynamic: 1
+  required_dynamic: 0
+  dynamic_is_optional_and_must_add_selective_function: true
   required_fields:
     - biological_feature
     - source_support
@@ -91,6 +92,17 @@ hard_correspondence:
     - expected_function
     - measurement
     - causal_control
+
+material_translation:
+  default_material_class: synthetic_nonbiological_adsorbent
+  biological_source_role: prototype_discovery_and_mechanism_evidence
+  organ_enrichment_role: discovery_signal_not_causal_proof
+  protein_peptide_or_biohybrid_requires_explicit_owner_scope_reopening: true
+  prohibited_shortcuts:
+    - introduce_protein_or_folded_peptide_only_to_satisfy_dynamic_correspondence
+    - copy_protein_architecture_without_a_manufacturing_or_selectivity_necessity
+    - infer_responsible_protein_from_tissue_enrichment_alone
+    - treat_capacity_gain_as_selectivity_or_biomimetic_causality
 
 bmdl_gate:
   baseline_must_be_frozen_first: true

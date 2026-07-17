@@ -10,7 +10,9 @@ The project must preserve this chain:
 
 engineering bottleneck -> conventional capability gap -> biological solution -> translatable material feature -> selective adsorption mechanism -> falsifiable experiment -> paper claim.
 
-The primary design must contain at least one static hard correspondence and one dynamic hard correspondence. Each hard correspondence requires a supported biological feature, a concrete material implementation, a measurable consequence, and a causal control. Morphological resemblance, a familiar bio-derived polymer, or a generic functional group is insufficient.
+The primary design must contain at least one hard functional correspondence that is translated into a concrete artificial-material feature. A dynamic correspondence is optional: it may strengthen a design only when it solves a selective-adsorption problem that the static material cannot solve and has its own measurement and causal control. Missing dynamic evidence cannot force a protein, peptide fold, hinge, or responsive unit into the material.
+
+Each claimed correspondence requires a supported biological feature, a concrete material implementation, a measurable consequence, and a causal control. Morphological resemblance, a familiar bio-derived polymer, or a generic functional group is insufficient.
 
 Selective adsorption is mandatory. Capacity alone cannot establish success. The experimental plan must include realistic competitors and secondary-effluent matrix effects.
 
@@ -23,6 +25,8 @@ Selective adsorption is mandatory. Capacity alone cannot establish success. The 
 - Candidate admission requires independently verified secondary-effluent relevance and environmental or health concern. These are pass/fail gates before scoring, not weighted score items; failure at either gate cannot be offset by biomimetic tractability, novelty, or evidence maturity. Database coverage counts are discovery metadata, not risk scores.
 - Funnel: 20 pollutant_kb pollutants -> environmental/schemeability pre-screen -> 10 mechanism-distinct schemes -> 5 recommended schemes -> 1 primary + 1 backup.
 - Experimental complexity is an optimization concern, not a veto, unless the chemistry is implausible, the claim is not testable, or the risk is unacceptable.
+- The default deliverable is a manufacturable artificial adsorbent. Proteins, expressed constructs, folded peptides, and protein-derived biohybrids require an explicit scope reopening by Pan Yao; they cannot enter by default to satisfy a biomimetic-fidelity or dynamic-correspondence score.
+- Tissue or organ enrichment is a prototype-discovery signal, not proof that a specific protein causes accumulation. Direct binding, structural, perturbation, or transport evidence is required before a molecular feature is translated.
 - ADRMATS is outside project scope.
 
 ## Evidence rules
@@ -59,4 +63,4 @@ Later rounds receive the current proposal and unresolved issues, not the full co
 
 ## Acceptance
 
-The primary design passes only when it scores at least 85/100, has no unresolved critical/high issue, contains static and dynamic hard correspondences, provides a credible bench-scale synthesis SOP, and maps every central claim to a measurement and causal control. Pan Yao gives the final approval.
+The primary design passes only when it scores at least 85/100, has no unresolved critical/high issue, contains at least one hard functional correspondence implemented in an artificial material, provides a credible bench-scale synthesis SOP, and maps every central claim to a measurement and causal control. If a dynamic correspondence is claimed, it must independently satisfy the same evidence and causal-control standard; it is not required for passage. Pan Yao gives the final approval.

@@ -9,12 +9,24 @@ Develop one primary and one backup biomimetic material for selective adsorption 
 - ADRMATS is unrelated to this implementation.
 - Primary matrix is municipal/domestic secondary effluent; ultrapure water is the mechanism control.
 - Funnel is 10 pollutants, 5 deep concepts, 1 primary and 1 backup.
-- Main design requires at least one static and one dynamic hard biomimetic correspondence.
+- Main design requires at least one hard functional correspondence translated into an artificial material. Dynamic correspondence is optional and cannot force protein, folded peptide or a generic responsive unit into the design.
+- Tissue or organ enrichment is a prototype-discovery signal, not proof that a specific protein causes accumulation.
+- The default deliverable is a manufacturable nonprotein artificial adsorbent; protein, folded-peptide or biohybrid routes require an explicit scope reopening by Pan Yao.
 - Codex supervises isolated designer, attacker, and reviewer roles.
 - BMDL is evaluated against a frozen model-only baseline before any design use.
 - Final approval belongs to Pan Yao; no laboratory work is performed in this repository.
 
 ## Current state
+
+Pan Yao reviewed the complete post-Round-2 trajectory and identified a direction error. The original S1 translated hL-FABP evidence into an artificial headgroup site, finite low-polar chain region and hydrophilic porous carrier. The mandatory static-plus-dynamic gate then rewarded increasingly literal portal, folded-peptide and protein implementations. That gate optimized biomimetic fidelity instead of the intended material translation and caused the Round-3 S1 and later S11 routes to leave the intended synthetic-adsorbent scope.
+
+The governing rules are now corrected. One hard functional correspondence in a manufacturable artificial material is required; dynamics are optional and must add selective function if claimed. Proteins, expressed constructs and folded peptides are excluded by default. All earlier rounds remain committed as historical audit evidence and no score or decision has been erased.
+
+The active candidate is now `S1-SYN`, an hL-FABP-informed but nonprotein artificial material. The first-generation boundary is an OEG-passivated mesoporous-silica carrier bearing one exact nonpeptidic receptor with a guanidinium/amide carboxylate site and a finite low-polar chain-accommodation unit. Its intended advantage is competitive PFOA or adjacent long-chain-PFCA selectivity in real secondary effluent, not maximum pure-water capacity. The exact receptor and bench SOP are not yet frozen, so `S1-SYN` is not a primary or backup.
+
+The unique next action is an isolated design of one exact nonpeptidic receptor and matched controls, followed by an OEG-silica immobilization SOP under `rounds/synthetic_recovery_1/S1_SYNTHETIC_RECOVERY_BRIEF.md`. No ordering, synthesis or experiment is authorized. S11 Gate 1b and Gate 2 are scope-superseded unless Pan Yao explicitly reopens a protein/biohybrid project.
+
+## Preserved trajectory
 
 Pan Yao's scientific review reopened the project at the pollutant-selection gate. The previous funnel mixed nutrients and inorganic pollutants with emerging organic contaminants, while its scoring strongly rewarded mature static-dynamic biomimetic evidence. That objective allowed phosphate to win despite being misaligned with the intended paper scope. The former ten-pollutant ranking, D1-A primary and D1-B backup remain preserved as historical artifacts but are no longer active selections and must not be presented as approved deliverables.
 
@@ -32,7 +44,7 @@ The only reopened candidate is S11, an actual FABP4 biohybrid. Its initial desig
 
 S11 has **not** passed as a primary or backup. Gate 1b procurement/manufacturing records are pending and prohibit ordering or experiments. Gate 2 still has three experimental critical issues and four high issues: soluble second occupancy, Phe58 residue-level dynamic causality, independent activity normalization, immobilized accessibility and real secondary-effluent competitive selectivity. This repository intentionally stops before actual laboratory work, consistent with the first-delivery boundary.
 
-The unique next action is Pan Yao's review of the S11 Gate 1a package. If laboratory execution is later authorized, complete Gate 1b first and then run only the frozen soluble-state Gate 2 preexperiments. BMDL remains excluded from design.
+Under the former contract, the unique next action was Pan Yao's review of the S11 Gate 1a package. That action is preserved here as historical state but is superseded by the artificial-material direction correction above. BMDL remains excluded from design.
 
 ## Superseded completed cycle
 
@@ -61,6 +73,6 @@ Translation-evidence dossiers were prepared in parallel but are deliberately exc
 ## Resume instructions
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
-2. Verify `main`, read `DEEP_RESEARCH_BIOMIMETIC_SCHEME_PORTFOLIO.md`, and treat all former finalists as historical only.
-3. Read `rounds/prototype_reopen_1/GATE1_REVIEW_2.md` and `S11_GATE1_REVISION.md`; keep BMDL excluded, preserve phosphate history, and do not order materials or start experiments while Gate 1b is pending.
+2. Verify `main`, read `rounds/synthetic_recovery_1/S1_SYNTHETIC_RECOVERY_BRIEF.md`, and treat all former finalists and S11 as historical only.
+3. Keep BMDL excluded, preserve every phosphate, top-five, S1 and S11 artifact, and do not order materials or start experiments.
 4. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

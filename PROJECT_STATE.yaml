@@ -1,13 +1,13 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: prototype_reopen_s11_gate1a_complete
+phase: synthetic_material_direction_recovery
 status: in_progress
-last_completed_step: Completed top-five Round 2, terminated the only Round 3 candidate, reopened external prototypes, and passed S11 Gate 1a scientific-design review; no primary or backup has passed
-next_action: Pan Yao reviews the S11 Gate 1a package; if laboratory work is authorized later, complete Gate 1b procurement/manufacturing records before any order or experiment, then run the frozen soluble-state Gate 2 preexperiments
+last_completed_step: Pan Yao reviewed the post-Round-2 trajectory, rejected the drift from mechanism translation into protein and folded-peptide replication, reset the dynamic-correspondence gate, and opened the S1-SYN artificial-material recovery route; no primary or backup has passed
+next_action: An isolated designer submits one exact nonpeptidic receptor plus OEG-passivated mesoporous-silica immobilization SOP under the synthetic recovery brief; no protein, folded peptide, ordering, synthesis, S11 Gate 1b, or Gate 2 work is authorized
 active_branch: main
 last_verified_commit: 739c39d83d120aa4d70ae143f874029b335986eb
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
-candidate_pool_status: scheme_portfolio_generated_pollutant_pool_not_frozen
+candidate_pool_status: s1_synthetic_material_route_reopened_pollutant_pool_not_frozen
 candidate_pollutants: []
 priority_verification_group:
   - PFOA
@@ -49,18 +49,24 @@ approved_top5:
   - S3 HFPO-DA (GenX)/HSA branched ether-acid pocket
   - S4 PFBS-PFHxS-PFOS/HSA chain-length gate
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
+approved_top5_status: historical_completed_under_former_contract
 deep_concepts:
   - S1 PFOA/hL-FABP two-stage portal
   - S5 BPA/ERRgamma bidentate aromatic clamp
   - S3 HFPO-DA (GenX)/HSA branched ether-acid pocket
   - S4 PFBS-PFHxS-PFOS/HSA chain-length gate
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
-  - S11 FABP4 dual-site/Phe58 local-gate biohybrid (Gate 1a pass; paused before preexperiment)
+  - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
+  - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (active recovery brief; exact receptor not yet frozen)
+active_deep_concept: S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent
 primary_design: null
 backup_design: null
 superseded_finalists:
   - D1-A synthetic double-arm phosphate peptide clamp (93/100 historical design pass)
   - D1-B C-terminally immobilized PBP trace-polishing bed (89/100 historical design pass)
+historical_nonfinalists:
+  - S1 hL-FABP plus iLBP portal folded-peptide design (56/100 terminated)
+  - S11 FABP4 biohybrid (Gate 1a design-only pass; scope-superseded before procurement or experiment)
 open_issues:
   - id: INIT-001
     severity: high
@@ -144,12 +150,20 @@ open_issues:
     text: Correct S11 sequence and numbering, replace the invalid bifunctional-amine surface route, freeze constructs, methods, models, causal endpoint and statistics, and obtain independent Gate 1a review; passed with zero design-layer critical/high issues.
   - id: S11-G1B
     severity: high
-    status: deferred
+    status: scope_superseded
     text: Procurement/manufacturing release requires a plasmid map, supplier-returned FASTA, masses, primers, reagent identities/lots, reaction equivalents and batch templates; no ordering or experiment is authorized before this gate passes.
   - id: S11-G2
     severity: critical
-    status: paused_for_preexperiment
+    status: scope_superseded
     text: Experimental closure is still required for soluble dual occupancy, Phe58 residue-level dynamic causality, independent active-site normalization, immobilized accessibility and secondary-effluent competitive selectivity; current count is three critical and four high.
+  - id: DIRECTION-001
+    severity: critical
+    status: resolved
+    text: The mandatory dynamic-correspondence rule caused the design to drift from artificial material translation into folded-peptide and protein replication; the rule now requires one artificial-material functional correspondence and makes dynamics optional.
+  - id: S1-SYN-001
+    severity: high
+    status: in_progress
+    text: Freeze one exact nonpeptidic guanidinium-amide and finite low-polar-chain receptor, matched deletion/mismatch controls, and an OEG-passivated mesoporous-silica bench SOP before any order or experiment.
   - id: APPROVAL-001
     severity: high
     status: deferred
@@ -168,6 +182,7 @@ artifacts:
   pollutant_shortlist: research/pollutants/POLLUTANT_SHORTLIST.md
   pollutant_scope_revision: research/pollutants/REOPENED_SCOPE.md
   scheme_portfolio: DEEP_RESEARCH_BIOMIMETIC_SCHEME_PORTFOLIO.md
+  synthetic_recovery_brief: rounds/synthetic_recovery_1/S1_SYNTHETIC_RECOVERY_BRIEF.md
   gate_g7_portfolio_approval: orchestration/gates/G7_PORTFOLIO_APPROVAL.yaml
   top5_round1_design: rounds/top5_round_1/DESIGNER_DOSSIERS.md
   top5_round1_attack: rounds/top5_round_1/ATTACK.md
@@ -236,11 +251,12 @@ artifacts:
   gate_g6_delivery: orchestration/gates/G6_DELIVERY.yaml
   fresh_clone_readback: orchestration/FRESH_CLONE_READBACK.md
 checks:
+  direction_recovery: pending_validation_current_worktree
   secrets_scan: passed_on_fresh_clone_739c39d_145_tracked_files
   state_paths: passed_on_fresh_clone_739c39d_80_artifacts
   snapshot_checksums: passed_on_fresh_clone_739c39d_6_files
   s11_constructs: passed_on_fresh_clone_739c39d_8_records_and_file_hash
   machine_specific_paths: none_found_on_fresh_clone_739c39d
-  remote_push: research_checkpoint_739c39d_pushed
+  remote_push: current_checkpoint_pending
   fresh_clone: passed_at_739c39d83d120aa4d70ae143f874029b335986eb
   context_free_codex_readback: passed_at_739c39d_objective_current_stage_dispositions_historical_phosphate_bmdl_and_next_action_recovered

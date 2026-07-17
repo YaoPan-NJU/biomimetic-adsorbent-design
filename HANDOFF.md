@@ -24,7 +24,11 @@ The revised work has now produced an auditable pre-screen and ten mechanism-dist
 
 Pan Yao approved the recommended top five for isolated deep-design: S1 PFOA, S5 BPA, S3 HFPO-DA/GenX, S4 PFBS/PFHxS/PFOS and S6 roxithromycin. The historical phosphate D1-A and D1-B packages remain committed and accessible in GitHub; they are superseded for the current paper scope, not deleted.
 
-The unique next action is to complete round-1 designer dossiers for all five approved schemes and then run isolated attacker and reviewer roles. BMDL remains excluded from design.
+Round 1 is complete. No scheme passed. S1 scored 82/revise, S5 81/revise, S3 79/revise, S6 77/revise and S4 73/revise-or-static-only. The common blocking issue is that direct target-recognition evidence is mostly static while the proposed material motion is not supported as a target-specific biological dynamic. S3 also risks misreading the HSA–HFPO-DA–myristate ternary structure; S4 currently supports only a static chain-length engineering bed; S6 cannot transfer all A2062/A2503 dynamics from related macrolides to roxithromycin.
+
+The isolated designer and attacker agents did not return artifacts within the bounded run. Main-agent fallbacks are explicitly labeled in the round-1 files, and no pass was issued. Round 2 must restore independent role review before any scheme can pass.
+
+The unique next action is a limited Round 2: resolve or terminate dynamic-prototype gaps and ordinary-adsorption relabeling. BMDL remains excluded from design.
 
 ## Superseded completed cycle
 
@@ -54,5 +58,5 @@ Translation-evidence dossiers were prepared in parallel but are deliberately exc
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
 2. Verify `main`, read `DEEP_RESEARCH_BIOMIMETIC_SCHEME_PORTFOLIO.md`, and treat all former finalists as historical only.
-3. Continue the top-five round-1 action recorded in `PROJECT_STATE.yaml`; keep BMDL excluded from design, preserve phosphate history, and do not start experiments.
+3. Continue the limited top-five Round 2 action recorded in `PROJECT_STATE.yaml`; keep BMDL excluded from design, preserve phosphate history, and do not start experiments.
 4. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

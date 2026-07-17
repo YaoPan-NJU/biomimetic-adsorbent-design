@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: top5_deep_design_round1
+phase: top5_deep_design_round1_complete
 status: in_progress
-last_completed_step: Pan Yao approved advancing the recommended top five schemes and confirmed that the historical phosphate D1-A and D1-B packages must remain accessible in GitHub
-next_action: Complete isolated round-1 designer dossiers for the five approved schemes, then run attacker and reviewer roles without BMDL exposure
+last_completed_step: Completed round-1 design, explicit attack, reviewer scoring, and a primary-source audit of dynamic biological evidence for all five approved schemes; no scheme passed
+next_action: Run round-2 limited revisions focused on the unresolved dynamic-prototype and ordinary-adsorption-relabeling issues; terminate any scheme that cannot close these gaps without overclaiming
 active_branch: main
 last_verified_commit: ce2f60e93f6329c882d13363426e8ba4dd5f850a
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -119,8 +119,16 @@ open_issues:
     text: Pan Yao must review the ten-scheme portfolio and approve or revise the recommended top five before isolated deep-design rounds begin.
   - id: TOP5-R1-001
     severity: high
-    status: open
+    status: resolved_with_execution_deviation
     text: Complete isolated round-1 designer, attacker, and reviewer outputs for all five approved schemes; BMDL remains excluded from design and historical phosphate files remain immutable audit artifacts.
+  - id: TOP5-R1-002
+    severity: high
+    status: open
+    text: Isolated designer and attacker agents did not return artifacts within the bounded run; main-agent fallbacks are explicit in round-1 files, so round 2 must restore independent role review before any pass decision.
+  - id: TOP5-R2-001
+    severity: high
+    status: open
+    text: Resolve or terminate the target-specific dynamic hard-correspondence gaps for S1, S3, S4, S5 and S6 without using generic responsive materials as evidence substitutes.
   - id: APPROVAL-001
     severity: high
     status: deferred
@@ -140,6 +148,10 @@ artifacts:
   pollutant_scope_revision: research/pollutants/REOPENED_SCOPE.md
   scheme_portfolio: DEEP_RESEARCH_BIOMIMETIC_SCHEME_PORTFOLIO.md
   gate_g7_portfolio_approval: orchestration/gates/G7_PORTFOLIO_APPROVAL.yaml
+  top5_round1_design: rounds/top5_round_1/DESIGNER_DOSSIERS.md
+  top5_round1_attack: rounds/top5_round_1/ATTACK.md
+  top5_round1_review: rounds/top5_round_1/REVIEW.md
+  top5_dynamic_evidence_audit: research/evidence/TOP5_DYNAMIC_EVIDENCE_AUDIT.md
   evidence_ledger: research/evidence/evidence_ledger.csv
   key_claim_verification: research/evidence/KEY_CLAIM_VERIFICATION.md
   inorganic_translation_evidence: research/evidence/INORGANIC_TRANSLATION_EVIDENCE.md

@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: Pan Yao corrected the S1-SYN carrier assumption; carrier class is now neutral, mesoporous silica is only an eligible mechanism platform, and inactive carrier mass must be accounted for in total-composite and packed-bed capacity; no primary or backup has passed
 next_action: An isolated designer submits one exact nonpeptidic receptor, matched controls, a material-class-neutral carrier or self-supporting architecture comparison, and a complete SOP for the selected route with total-mass and bed-capacity accounting; no protein, folded peptide, ordering, synthesis, S11 Gate 1b, or Gate 2 work is authorized
 active_branch: main
-last_verified_commit: f7a5980705d22a7d1297482184dd996269f95924
+last_verified_commit: c8972adaace4a4c06485fe18640a9391160a8039
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: s1_synthetic_material_route_reopened_pollutant_pool_not_frozen
 candidate_pollutants: []
@@ -256,13 +256,14 @@ artifacts:
   gate_g6_delivery: orchestration/gates/G6_DELIVERY.yaml
   fresh_clone_readback: orchestration/FRESH_CLONE_READBACK.md
 checks:
-  direction_recovery: passed_on_fresh_clone_f7a5980
-  organ_enrichment_heuristic: optional_non_scoring_reference_validated_on_fresh_clone_f7a5980
-  secrets_scan: passed_on_fresh_clone_f7a5980_148_tracked_files
-  state_paths: passed_on_fresh_clone_f7a5980_82_artifacts
-  snapshot_checksums: passed_on_fresh_clone_f7a5980_6_files
-  s11_constructs: passed_on_fresh_clone_f7a5980_8_records_and_file_hash
-  machine_specific_paths: none_found_on_fresh_clone_f7a5980
-  remote_push: organ_enrichment_heuristic_f7a5980_pushed
-  fresh_clone: passed_at_f7a5980705d22a7d1297482184dd996269f95924
-  context_free_codex_readback: last_passed_at_739c39d; not_repeated_for_optional_heuristic_checkpoint
+  direction_recovery: passed_on_fresh_clone_c8972ad
+  organ_enrichment_heuristic: optional_non_scoring_reference_validated_on_fresh_clone_c8972ad
+  carrier_mass_efficiency: material_class_neutral_contract_validated_on_fresh_clone_c8972ad
+  secrets_scan: passed_on_fresh_clone_c8972ad_148_tracked_files
+  state_paths: passed_on_fresh_clone_c8972ad_82_artifacts
+  snapshot_checksums: passed_on_fresh_clone_c8972ad_6_files
+  s11_constructs: passed_on_fresh_clone_c8972ad_8_records_and_file_hash
+  machine_specific_paths: none_found_on_fresh_clone_c8972ad
+  remote_push: carrier_mass_efficiency_c8972ad_pushed
+  fresh_clone: passed_at_c8972adaace4a4c06485fe18640a9391160a8039
+  context_free_codex_readback: last_passed_at_739c39d; not_repeated_for_carrier_efficiency_checkpoint

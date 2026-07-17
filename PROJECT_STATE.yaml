@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: synthetic_material_direction_recovery
+phase: four_pollutant_twenty_scheme_portfolio
 status: in_progress
-last_completed_step: Pan Yao corrected the S1-SYN carrier assumption; carrier class is now neutral, mesoporous silica is only an eligible mechanism platform, and inactive carrier mass must be accounted for in total-composite and packed-bed capacity; no primary or backup has passed
-next_action: An isolated designer submits one exact nonpeptidic receptor, matched controls, a material-class-neutral carrier or self-supporting architecture comparison, and a complete SOP for the selected route with total-mass and bed-capacity accounting; no protein, folded peptide, ordering, synthesis, S11 Gate 1b, or Gate 2 work is authorized
+last_completed_step: Pan Yao approved reopening the portfolio around BPA, PFBS, roxithromycin and 2,6-dichlorophenol for twenty material-class-neutral artificial adsorbent schemes with dynamic allocation and unified ranking; no primary or backup has passed
+next_action: Verify direct evidence, allocate at least three schemes per target and the remaining eight by success potential, freeze twenty mechanism-distinct nonprotein artificial-material schemes, and rank them under the project final-scoring contract; no ordering, synthesis, protein, folded peptide, S11 Gate 1b, or Gate 2 work is authorized
 active_branch: main
 last_verified_commit: c8972adaace4a4c06485fe18640a9391160a8039
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -187,6 +187,7 @@ artifacts:
   pollutant_scope_revision: research/pollutants/REOPENED_SCOPE.md
   scheme_portfolio: DEEP_RESEARCH_BIOMIMETIC_SCHEME_PORTFOLIO.md
   synthetic_recovery_brief: rounds/synthetic_recovery_1/S1_SYNTHETIC_RECOVERY_BRIEF.md
+  four_pollutant_portfolio_spec: rounds/portfolio_20_reopen/PORTFOLIO_DESIGN_SPEC.md
   gate_g7_portfolio_approval: orchestration/gates/G7_PORTFOLIO_APPROVAL.yaml
   top5_round1_design: rounds/top5_round_1/DESIGNER_DOSSIERS.md
   top5_round1_attack: rounds/top5_round_1/ATTACK.md

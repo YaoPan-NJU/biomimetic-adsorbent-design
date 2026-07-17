@@ -1,11 +1,11 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: bpa1_exact_receptor_soluble_gate_design
+phase: bpa1_asymmetric_anchor_probe_design
 status: in_progress
-last_completed_step: R1-BPE was adversarially rejected as a complete BPA receptor because its two terminal pyridine acceptors are divergent and atom-distance equality omitted hydrogen-bond direction sterics solubility and control confounding; BPA-1 fell to 68/revise with no exact receptor frozen
-next_action: Search and three-dimensionally prefilter exact low-mass convergent receptors against the 2E2R BPA conformation; do not design a polymerizable derivative carrier or material SOP until one receptor passes directional geometry and aqueous-speciation review
+last_completed_step: ERRgamma evidence was retranslated from a mandatory symmetric two-ended clamp to one complementary phenol primary anchor plus hydrophobic enclosure; exact polymerizable low-mass P1-MAPy was recorded as an unvalidated mechanism-probe candidate with an explicit total-material capacity equation
+next_action: Freeze attributable donor acceptor positional and hydrophobic controls for P1-MAPy and define an aqueous binding and self-association stop contract before selecting any material architecture
 active_branch: main
-last_verified_commit: 8c74087dcabe8610d7521b38776cffa8a55fba75
+last_verified_commit: ec9aaad
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: four_pollutant_twenty_scheme_portfolio_frozen_and_ranked
 candidate_pollutants:
@@ -62,7 +62,7 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
-active_deep_concept: BPA-1 ERRgamma static geometry; exact convergent nonimprinted receptor not frozen
+active_deep_concept: BPA-1 ERRgamma asymmetric primary-anchor translation with exact P1-MAPy mechanism-probe candidate not yet validated as a BPA receptor
 paused_candidates:
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused pending owner review of the four-pollutant portfolio; not terminated)
 portfolio_20_status: owner_authorized_bpa1_only_deepening
@@ -196,8 +196,12 @@ open_issues:
     text: R1-BPE was rejected as the complete receptor because its divergent acceptors do not establish a convergent BPA pocket; retain it only as a possible negative control.
   - id: BPA1-R2-001
     severity: critical
+    status: superseded_by_asymmetric_primary_anchor_translation
+    text: The symmetric two-ended convergent receptor requirement was withdrawn after ERRgamma mutagenesis and the single-hydroxyl strong-binding analog showed that the primary anchor is asymmetric.
+  - id: BPA1-P1-001
+    severity: high
     status: in_progress
-    text: Identify one exact low-mass convergent receptor whose two acceptors satisfy BPA hydrogen-bond distance angle and steric constraints in three dimensions before any soluble assay or materialization contract is frozen.
+    text: P1-MAPy is exact synthesizable and polymerizable but has no direct aqueous BPA binding evidence; freeze attributable controls and close water competition self-association analog selectivity and signal identifiability before materialization.
   - id: APPROVAL-001
     severity: high
     status: deferred
@@ -226,6 +230,7 @@ artifacts:
   four_pollutant_review: rounds/portfolio_20_reopen/REVIEW.md
   bpa1_geometry_and_receptor_triage: rounds/bpa1_deep_design_1/GEOMETRY_AND_RECEPTOR_TRIAGE.md
   bpa1_r1_chemistry_attack: rounds/bpa1_deep_design_1/R1_CHEMISTRY_ATTACK.md
+  bpa1_asymmetric_anchor_redirection: rounds/bpa1_deep_design_1/ASYMMETRIC_ANCHOR_REDIRECTION.md
   gate_g12_bpa1_soluble_receptor: orchestration/gates/G12_BPA1_SOLUBLE_RECEPTOR.yaml
   gate_g7_portfolio_approval: orchestration/gates/G7_PORTFOLIO_APPROVAL.yaml
   top5_round1_design: rounds/top5_round_1/DESIGNER_DOSSIERS.md
@@ -308,4 +313,4 @@ checks:
   remote_push: portfolio_20_review_280855c_pushed
   fresh_clone: passed_at_280855c078eaa4fe975499a52c69a17798328c1b
   context_free_codex_readback: last_passed_at_739c39d; not_repeated_for_portfolio_20_checkpoint
-  bpa1_exact_probe: R1_BPE_rejected_as_complete_receptor_after_directional_geometry_attack
+  bpa1_exact_probe: P1_MAPy_recorded_as_asymmetric_probe_candidate_not_validated_BPA_receptor

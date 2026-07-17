@@ -8,9 +8,9 @@
 
 Pan Yao 已纠正此前的路线偏移：生物组织分布和蛋白结合证据用于发现、解释并约束人工材料机制，不能自动把蛋白、表达构建体或折叠肽带入最终材料。主方案必须具有至少一个落实到人工材料的硬功能对应；动态对应改为可选，不再是通过门槛。
 
-此前的 **S1-SYN** PFOA 路线暂停但未终止。当前组合首位为 **BPA-1**：ERRγ 静态几何启发、非模板化、非蛋白的刚性双端夹持路线。它在组合攻击后为 84/100，尚不是主方案。Pan Yao 已授权继续深化 BPA-1；首轮从 `2E2R` 坐标得到 BPA 两酚氧间距约 9.27 Å，并曾冻结 1,2-di(pyridin-4-yl)ethyne（`R1-BPE`）作为可溶机制探针，见 [`GEOMETRY_AND_RECEPTOR_TRIAGE.md`](rounds/bpa1_deep_design_1/GEOMETRY_AND_RECEPTOR_TRIAGE.md)。随后的化学攻击发现 R1 两端吡啶氮向外发散，原子间距接近并不等于氢键方向会聚，因此 R1 已被降为负面对照，BPA-1 新评分为 68/100、`revise`，见 [`R1_CHEMISTRY_ATTACK.md`](rounds/bpa1_deep_design_1/R1_CHEMISTRY_ATTACK.md)。
+此前的 **S1-SYN** PFOA 路线暂停但未终止。当前组合首位为 **BPA-1**：ERRγ 静态化学功能启发、非模板化、非蛋白的选择性吸附路线。它在组合攻击后为 84/100，尚不是主方案。Pan Yao 已授权继续深化 BPA-1；首轮从 `2E2R` 坐标得到 BPA 两酚氧间距约 9.27 Å，并曾冻结 1,2-di(pyridin-4-yl)ethyne（`R1-BPE`）作为可溶机制探针，见 [`GEOMETRY_AND_RECEPTOR_TRIAGE.md`](rounds/bpa1_deep_design_1/GEOMETRY_AND_RECEPTOR_TRIAGE.md)。随后的化学攻击发现 R1 两端吡啶氮向外发散，原子间距接近并不等于氢键方向会聚，因此 R1 已被降为负面对照，BPA-1 新评分为 68/100、`revise`，见 [`R1_CHEMISTRY_ATTACK.md`](rounds/bpa1_deep_design_1/R1_CHEMISTRY_ATTACK.md)。
 
-当前下一动作是搜索并三维预筛确切的低分子会聚型受体，同时检查氢键距离、角度和骨架碰撞。找到一个通过纸面/计算门的受体后才重开可溶门；在此之前不设计可聚合衍生物、不选择载体、不订购、不合成、不开展实验，也不继续 S11 Gate 1b/Gate 2。
+对 ERRγ 功能证据的复核进一步表明，对称双端夹并非原型强制要求：关键证据更支持“一个酚羟基的互补极性主锚 + 疏水芳香包围”，单羟基类似物仍可强结合。当前已提出确切的可聚合小分子探针 `P1-MAPy`（2-methacrylamidopyridine，162.19 g/mol），其相邻吡啶/酰胺位点和聚合入口均有文献基础；但尚无 BPA 水相结合证据，只作为机制探针候选，见 [`ASYMMETRIC_ANCHOR_REDIRECTION.md`](rounds/bpa1_deep_design_1/ASYMMETRIC_ANCHOR_REDIRECTION.md)。下一动作是冻结可归因对照并攻击水竞争、自缔合和 BPA 同系物选择性；在此之前不选择材料架构、不订购、不合成、不开展实验，也不继续 S11 Gate 1b/Gate 2。
 
 ## 阅读入口
 
@@ -80,3 +80,4 @@ Pan Yao 复核后确认，强制“静态＋动态硬对应”使项目从机制
 2. 攻击后 BPA-1 为 84/100、`revise`；其余前五均不高于 74，当前仍无主方案或备选方案。
 3. Pan Yao 授权只继续深化 BPA-1。首个检查点把蛋白结构压缩为静态几何：`2E2R` 中 BPA 两酚氧约相距 9.27 Å、芳环接近正交；不转译蛋白序列、折叠或动态。
 4. 首轮曾冻结 `R1-BPE` 及删除/错配系列；下一次化学攻击发现其受体方向发散且控制组同时改变多项性质，故 R1 终止为完整受体，只保留为负面对照。该修订追加记录，没有覆盖首轮文件。
+5. 再复核 ERRγ 的突变与单羟基类似物证据后，撤销“必须跨两个羟基对称夹持”的错误约束，转为单端互补主锚与疏水包围。`P1-MAPy` 已作为确切、轻质、可聚合的机制探针候选记录，但尚未通过水相 BPA 结合门。

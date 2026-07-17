@@ -1,11 +1,11 @@
 gate: G12_BPA1_SOLUBLE_RECEPTOR
-status: failed_r1_returned_to_convergent_receptor_search
+status: reframed_to_asymmetric_primary_anchor_probe_design
 owner_authorization: Pan Yao instructed Codex to continue and monitorable GitHub pushes are required
 scope:
   target: BPA-1
   allowed:
     - exact low-mass nonprotein soluble receptor design
-    - deletion hydrophobic and distance-mismatch controls
+    - donor acceptor positional and hydrophobic controls
     - evidence review and adversarial chemistry review
     - total-material capacity ceiling calculation
   prohibited_before_pass:
@@ -21,11 +21,15 @@ frozen_probe:
   formula: C12H8N2
   molecular_weight_g_mol: 180.20
   status: rejected_as_complete_receptor_retain_as_negative_control_only
-controls:
-  - 4-ethynylpyridine
-  - diphenylacetylene
-  - 4,4'-bipyridine
-  - 1,4-bis(pyridin-4-yl)benzene
+candidate_probe:
+  id: P1-MAPy
+  name: 2-methacrylamidopyridine
+  formula: C9H10N2O
+  molecular_weight_g_mol: 162.19
+  smiles: CC(=C)C(=O)NC1=CC=CC=N1
+  status: exact_asymmetric_mechanism_probe_candidate_not_proven_BPA_receptor
+  theoretical_one_to_one_capacity_mg_BPA_g_MAPy: 1407.6
+controls_status: exact_matched_series_not_yet_frozen
 pass_requires:
   - aggregation_free_neutral_water_speciation
   - interpretable_orthogonal_binding_measurement
@@ -33,7 +37,8 @@ pass_requires:
   - increment_retained_in_secondary_effluent
   - no_unresolved_critical_or_high_chemistry_issue
 current_blockers:
-  - exact_convergent_receptor_not_frozen
-  - three_dimensional_hydrogen_bond_geometry_not_closed
+  - exact_attributable_control_series_not_frozen
+  - complementary_single_phenol_anchor_geometry_not_closed
   - aqueous_speciation_and_binding_unproven
-next_action: prefilter exact convergent receptors before reopening the soluble gate
+  - MAPy_self_association_may_preoccupy_sites
+next_action: freeze P1-MAPy control series and aqueous stop contract before any material architecture

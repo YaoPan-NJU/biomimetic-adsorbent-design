@@ -29,7 +29,11 @@ The first exact low-mass probe was `R1-BPE`, 1,2-di(pyridin-4-yl)ethyne (`C12H8N
 
 The subsequent chemistry attack rejected R1 as the complete receptor. Its two terminal 4-pyridine acceptors point outward as a divergent linker; equality of O-O and N-N distances omitted lone-pair direction, hydrogen-bond length/angle and aromatic-framework collision. The proposed short/long/hydrophobic controls also changed solubility, mass, aromatic area and basicity simultaneously. `R1_CHEMISTRY_ATTACK.md` therefore returns BPA-1 to `exact receptor not frozen`, scores the refined proposal 68/100 with two critical and four high issues, and retains R1 only as a possible negative control.
 
-The next action is exact convergent-receptor search and three-dimensional prefiltering against the `2E2R` BPA conformation. `1,2-bis(2-pyridylethynyl)benzene` is a synthesis-backed convergent topology lead whose approximately 4.3 Å inward N-N cavity is proven by Ag(I)/Pd(II) complexes, but it has not been shown to fit or bind BPA in water and is not frozen. No soluble assay contract is reopened until a candidate satisfies acceptor direction, distance, angle and steric constraints. No carrier, order, synthesis, experiment, S11 Gate 1b or Gate 2 work is authorized.
+The next review corrected a deeper translation error. ERRgamma mutagenesis places the chief and corroborative interactions on the same BPA phenol hydroxyl, and single-hydroxyl 4-alpha-cumylphenol still binds strongly. A symmetric 9.27-angstrom two-ended clamp is therefore no longer mandatory. The active translation is one complementary polar primary anchor plus hydrophobic aromatic enclosure, with the second hydroxyl retained only as an optional discriminator. The prior symmetric geometry files remain preserved as history.
+
+`rounds/bpa1_deep_design_1/ASYMMETRIC_ANCHOR_REDIRECTION.md` defines exact candidate probe `P1-MAPy`, 2-methacrylamidopyridine (`C9H10N2O`, 162.19 g/mol). Its adjacent pyridine/amide donor-acceptor environment and methacryloyl polymer handle are synthesis- and polymerization-backed. It is not a proven BPA receptor: aqueous BPA binding, water competition, self-association and analog selectivity remain open. Its pure-site 1:1 ceiling is 1407.6 mg BPA/g MAPy, so any final dry material has the upper bound `1407.6 × w_MAPy mg/g`; this explicitly charges all pore-wall, crosslinker and carrier mass to the denominator.
+
+The next action is to freeze attributable donor-deletion, acceptor-deletion, positional and hydrophobic controls, then define a falsifiable aqueous speciation/binding contract for P1-MAPy. No material architecture, order, synthesis, experiment, S11 Gate 1b or Gate 2 work is authorized.
 
 Pan Yao reviewed the complete post-Round-2 trajectory and identified a direction error. The original S1 translated hL-FABP evidence into an artificial headgroup site, finite low-polar chain region and hydrophilic porous carrier. The mandatory static-plus-dynamic gate then rewarded increasingly literal portal, folded-peptide and protein implementations. That gate optimized biomimetic fidelity instead of the intended material translation and caused the Round-3 S1 and later S11 routes to leave the intended synthetic-adsorbent scope.
 
@@ -85,6 +89,6 @@ Translation-evidence dossiers were prepared in parallel but are deliberately exc
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
 2. Verify `main`, then read `rounds/bpa1_deep_design_1/GEOMETRY_AND_RECEPTOR_TRIAGE.md`; treat all former finalists and S11 as historical only, and S1-SYN as paused.
-3. Read `rounds/bpa1_deep_design_1/R1_CHEMISTRY_ATTACK.md`, then search and prefilter convergent receptors; do not restore R1 from atom-distance matching alone.
+3. Read `rounds/bpa1_deep_design_1/R1_CHEMISTRY_ATTACK.md` and `ASYMMETRIC_ANCHOR_REDIRECTION.md`; attack P1-MAPy and its controls without restoring R1 or the symmetric-clamp requirement.
 4. Keep BMDL excluded, preserve every phosphate, top-five, S1, S11 and portfolio artifact, and do not order materials or start experiments.
 5. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

@@ -60,3 +60,20 @@ A context-free Codex with no inherited conversation read only the fresh clone an
 - Pan Yao review as the unique current action, followed by Gate 1b only if laboratory work is later authorized.
 
 The repository is sufficient for another Codex instance to continue without the original chat. This validation does not convert S11 into a passed material and does not authorize ordering or experiments.
+
+## Synthetic-material direction recovery checkpoint
+
+Validation date: 2026-07-17
+
+Validated commit: `266df42e09800974262f68361ae1ea7bdd257ebf`
+
+The checkpoint that corrected the protein/peptide design drift was pushed to `origin/main` and cloned into a new directory. Repository-level `eol=lf` handling removed the prior Mac/Windows byte-hash mismatch.
+
+Mechanical results:
+
+- `scripts/validate_repository.py`: 81 state-indexed artifacts resolved and six BMDL snapshot checksums passed.
+- `scripts/scan_credentials.py`: 147 tracked files passed.
+- `scripts/validate_s11_constructs.py`: all eight historical constructs and the whole-file SHA-256 passed; the S11 record remains intact although its route is scope-superseded.
+- No local Windows, prior Mac user, or temporary-clone absolute path was found in tracked project content.
+
+The fresh clone identifies `synthetic_material_direction_recovery` as the active phase, `S1-SYN` as the only active deep concept, no primary or backup, and one next action: submit an exact nonpeptidic receptor plus OEG-passivated mesoporous-silica immobilization SOP. No context-free model readback was repeated for this checkpoint; the recorded validation is mechanical and document-consistency based.

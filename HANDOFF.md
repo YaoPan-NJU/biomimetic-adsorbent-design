@@ -33,7 +33,7 @@ The next review corrected a deeper translation error. ERRgamma mutagenesis place
 
 `rounds/bpa1_deep_design_1/ASYMMETRIC_ANCHOR_REDIRECTION.md` defines exact candidate probe `P1-MAPy`, 2-methacrylamidopyridine (`C9H10N2O`, 162.19 g/mol). Its adjacent pyridine/amide donor-acceptor environment and methacryloyl polymer handle are synthesis- and polymerization-backed. It is not a proven BPA receptor: aqueous BPA binding, water competition, self-association and analog selectivity remain open. Its pure-site 1:1 ceiling is 1407.6 mg BPA/g MAPy, so any final dry material has the upper bound `1407.6 × w_MAPy mg/g`; this explicitly charges all pore-wall, crosslinker and carrier mass to the denominator.
 
-The next action is to freeze attributable donor-deletion, acceptor-deletion, positional and hydrophobic controls, then define a falsifiable aqueous speciation/binding contract for P1-MAPy. No material architecture, order, synthesis, experiment, S11 Gate 1b or Gate 2 work is authorized.
+`P1_MAPY_CONTROL_AND_GATE.md` now freezes `C1-NHoff` (N-methyl-N-(2-pyridyl)acrylamide), `C2-Noff` (N-phenylmethacrylamide), `C3-meta` (N-(pyridin-3-yl)methacrylamide), and styrene `C4-H`. The pre-registered aqueous gate requires P1-BPA `Ka >= 100 M-1`, at least a threefold advantage over the strongest C1/C2/C3 control, and no more than threefold disagreement between two orthogonal methods after self-association is modeled. These are design thresholds, not experimental results. The next action is an adversarial review of whether this contract can distinguish complementary anchoring from self-association, protonation and nonspecific partitioning. No material architecture, order, synthesis, experiment, S11 Gate 1b or Gate 2 work is authorized.
 
 Pan Yao reviewed the complete post-Round-2 trajectory and identified a direction error. The original S1 translated hL-FABP evidence into an artificial headgroup site, finite low-polar chain region and hydrophilic porous carrier. The mandatory static-plus-dynamic gate then rewarded increasingly literal portal, folded-peptide and protein implementations. That gate optimized biomimetic fidelity instead of the intended material translation and caused the Round-3 S1 and later S11 routes to leave the intended synthetic-adsorbent scope.
 
@@ -89,6 +89,6 @@ Translation-evidence dossiers were prepared in parallel but are deliberately exc
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
 2. Verify `main`, then read `rounds/bpa1_deep_design_1/GEOMETRY_AND_RECEPTOR_TRIAGE.md`; treat all former finalists and S11 as historical only, and S1-SYN as paused.
-3. Read `rounds/bpa1_deep_design_1/R1_CHEMISTRY_ATTACK.md` and `ASYMMETRIC_ANCHOR_REDIRECTION.md`; attack P1-MAPy and its controls without restoring R1 or the symmetric-clamp requirement.
+3. Read `rounds/bpa1_deep_design_1/R1_CHEMISTRY_ATTACK.md`, `ASYMMETRIC_ANCHOR_REDIRECTION.md`, and `P1_MAPY_CONTROL_AND_GATE.md`; attack the aqueous contract without restoring R1 or the symmetric-clamp requirement.
 4. Keep BMDL excluded, preserve every phosphate, top-five, S1, S11 and portfolio artifact, and do not order materials or start experiments.
 5. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

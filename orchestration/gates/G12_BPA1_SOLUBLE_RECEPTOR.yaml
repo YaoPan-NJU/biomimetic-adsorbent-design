@@ -29,7 +29,12 @@ candidate_probe:
   smiles: CC(=C)C(=O)NC1=CC=CC=N1
   status: exact_asymmetric_mechanism_probe_candidate_not_proven_BPA_receptor
   theoretical_one_to_one_capacity_mg_BPA_g_MAPy: 1407.6
-controls_status: exact_matched_series_not_yet_frozen
+controls_status: soluble_control_series_frozen_with_polymer_reactivity_boundary
+controls:
+  - {id: C1-NHoff, role: amide_NH_donor_deletion, compound: N-methyl-N-(2-pyridyl)acrylamide}
+  - {id: C2-Noff, role: pyridine_acceptor_deletion, compound: N-phenylmethacrylamide}
+  - {id: C3-meta, role: adjacency_disruption, compound: N-(pyridin-3-yl)methacrylamide}
+  - {id: C4-H, role: hydrophobic_aromatic_blank, compound: styrene}
 pass_requires:
   - aggregation_free_neutral_water_speciation
   - interpretable_orthogonal_binding_measurement
@@ -37,8 +42,12 @@ pass_requires:
   - increment_retained_in_secondary_effluent
   - no_unresolved_critical_or_high_chemistry_issue
 current_blockers:
-  - exact_attributable_control_series_not_frozen
   - complementary_single_phenol_anchor_geometry_not_closed
   - aqueous_speciation_and_binding_unproven
   - MAPy_self_association_may_preoccupy_sites
-next_action: freeze P1-MAPy control series and aqueous stop contract before any material architecture
+gate_thresholds:
+  minimum_Ka_P1_BPA_M_inverse: 100
+  minimum_fold_over_strongest_C1_C2_C3: 3
+  orthogonal_method_Ka_agreement_max_fold: 3
+  filter_loss_max_percent: 10
+next_action: adversarially review the frozen P1-MAPy aqueous contract and stop rather than materialize if its thresholds are not chemically or analytically defensible

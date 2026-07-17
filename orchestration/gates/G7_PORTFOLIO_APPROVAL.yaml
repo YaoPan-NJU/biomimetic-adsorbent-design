@@ -1,0 +1,17 @@
+gate: G7_PORTFOLIO_APPROVAL
+status: passed_user_review
+reviewer: Pan Yao
+decision_date: 2026-07-17
+approved_for_round1:
+  - S1 PFOA/hL-FABP two-stage portal
+  - S5 BPA/ERRgamma bidentate aromatic clamp
+  - S3 HFPO-DA (GenX)/HSA branched ether-acid pocket
+  - S4 PFBS-PFHxS-PFOS/HSA chain-length gate
+  - S6 roxithromycin/23S rRNA exit-tunnel local gate
+historical_preservation:
+  phosphate_designs:
+    - D1-A synthetic double-arm phosphate peptide clamp
+    - D1-B C-terminally immobilized PBP trace-polishing bed
+  policy: retained_as_historical_design_pass_not_active_current_scope
+bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
+next_gate: isolated_round1_designer_attacker_reviewer

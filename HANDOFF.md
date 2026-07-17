@@ -22,7 +22,9 @@ The active scope is organic pollutants, with priority given to emerging contamin
 
 The revised work has now produced an auditable pre-screen and ten mechanism-distinct schemes. The recommended five are S1 PFOA/hL-FABP two-stage portal, S5 BPA/ERRγ bidentate aromatic clamp, S3 HFPO-DA (GenX)/HSA branched ether-acid pocket, S4 PFBS/PFHxS/PFOS HSA chain-length gate, and S6 roxithromycin/23S rRNA local gate. These are portfolio recommendations, not approved finalists. S10 2,6-dichlorophenol remains conditional because direct municipal secondary-effluent evidence is insufficient.
 
-The unique next action is for Pan Yao to review `DEEP_RESEARCH_BIOMIMETIC_SCHEME_PORTFOLIO.md`. Only the approved top five may enter isolated deep-design, attack, and reviewer rounds.
+Pan Yao approved the recommended top five for isolated deep-design: S1 PFOA, S5 BPA, S3 HFPO-DA/GenX, S4 PFBS/PFHxS/PFOS and S6 roxithromycin. The historical phosphate D1-A and D1-B packages remain committed and accessible in GitHub; they are superseded for the current paper scope, not deleted.
+
+The unique next action is to complete round-1 designer dossiers for all five approved schemes and then run isolated attacker and reviewer roles. BMDL remains excluded from design.
 
 ## Superseded completed cycle
 
@@ -52,5 +54,5 @@ Translation-evidence dossiers were prepared in parallel but are deliberately exc
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
 2. Verify `main`, read `DEEP_RESEARCH_BIOMIMETIC_SCHEME_PORTFOLIO.md`, and treat all former finalists as historical only.
-3. Continue the single Pan Yao portfolio-review action recorded in `PROJECT_STATE.yaml`; keep BMDL excluded from design and do not start experiments.
+3. Continue the top-five round-1 action recorded in `PROJECT_STATE.yaml`; keep BMDL excluded from design, preserve phosphate history, and do not start experiments.
 4. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

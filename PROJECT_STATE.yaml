@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: scheme_portfolio_review
-status: awaiting_pan_yao_review
-last_completed_step: Screened the 20 pollutant_kb top-level pollutants for environmental meaning and schemeability, generated 10 mechanism-distinct complete concepts, and ranked the five recommended schemes
-next_action: Pan Yao reviews DEEP_RESEARCH_BIOMIMETIC_SCHEME_PORTFOLIO.md; after review, deepen the approved top five through isolated design, attack, and reviewer rounds
+phase: top5_deep_design_round1
+status: in_progress
+last_completed_step: Pan Yao approved advancing the recommended top five schemes and confirmed that the historical phosphate D1-A and D1-B packages must remain accessible in GitHub
+next_action: Complete isolated round-1 designer dossiers for the five approved schemes, then run attacker and reviewer roles without BMDL exposure
 active_branch: main
 last_verified_commit: ce2f60e93f6329c882d13363426e8ba4dd5f850a
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -43,7 +43,18 @@ recommended_top5:
   - S3 HFPO-DA (GenX)/HSA branched ether-acid pocket
   - S4 PFBS-PFHxS-PFOS/HSA chain-length gate
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
-deep_concepts: []
+approved_top5:
+  - S1 PFOA/hL-FABP two-stage portal
+  - S5 BPA/ERRgamma bidentate aromatic clamp
+  - S3 HFPO-DA (GenX)/HSA branched ether-acid pocket
+  - S4 PFBS-PFHxS-PFOS/HSA chain-length gate
+  - S6 roxithromycin/23S rRNA exit-tunnel local gate
+deep_concepts:
+  - S1 PFOA/hL-FABP two-stage portal
+  - S5 BPA/ERRgamma bidentate aromatic clamp
+  - S3 HFPO-DA (GenX)/HSA branched ether-acid pocket
+  - S4 PFBS-PFHxS-PFOS/HSA chain-length gate
+  - S6 roxithromycin/23S rRNA exit-tunnel local gate
 primary_design: null
 backup_design: null
 superseded_finalists:
@@ -104,8 +115,12 @@ open_issues:
     text: Rebuild the pollutant funnel around organic and emerging contaminants using pollutant_kb as a candidate source; apply independently verified secondary-effluent relevance and environmental significance as pass/fail gates before any weighted scoring, and include 2,6-dichlorophenol in the priority verification group.
   - id: SCHEME-001
     severity: high
-    status: open
+    status: resolved
     text: Pan Yao must review the ten-scheme portfolio and approve or revise the recommended top five before isolated deep-design rounds begin.
+  - id: TOP5-R1-001
+    severity: high
+    status: open
+    text: Complete isolated round-1 designer, attacker, and reviewer outputs for all five approved schemes; BMDL remains excluded from design and historical phosphate files remain immutable audit artifacts.
   - id: APPROVAL-001
     severity: high
     status: deferred
@@ -124,6 +139,7 @@ artifacts:
   pollutant_shortlist: research/pollutants/POLLUTANT_SHORTLIST.md
   pollutant_scope_revision: research/pollutants/REOPENED_SCOPE.md
   scheme_portfolio: DEEP_RESEARCH_BIOMIMETIC_SCHEME_PORTFOLIO.md
+  gate_g7_portfolio_approval: orchestration/gates/G7_PORTFOLIO_APPROVAL.yaml
   evidence_ledger: research/evidence/evidence_ledger.csv
   key_claim_verification: research/evidence/KEY_CLAIM_VERIFICATION.md
   inorganic_translation_evidence: research/evidence/INORGANIC_TRANSLATION_EVIDENCE.md

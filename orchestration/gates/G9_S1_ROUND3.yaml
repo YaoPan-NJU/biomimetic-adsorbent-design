@@ -1,0 +1,9 @@
+gate: G9_S1_ROUND3
+status: terminated
+decision_date: 2026-07-17
+score: 56
+unresolved_critical: 3
+unresolved_high: 4
+static_hard_correspondence: provisional_only
+dynamic_hard_correspondence: failed
+decision: reopen_external_biological_prototypes_without_lowering_threshold

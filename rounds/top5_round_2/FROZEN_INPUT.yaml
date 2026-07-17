@@ -1,0 +1,30 @@
+round: top5_round_2
+scope: limited_revision_or_termination
+bmdl_exposed: false
+allowed_inputs:
+  - path: SOUL.md
+    sha256: e42831c9e963aba5ded16cde69ef10a45acd2eac824e7a57d6592b2d979532ca
+  - path: research_contract.yaml
+    sha256: 61612942f491d9247ae92106acdd54a7e3eee2de256965e542e4b836282ce3f6
+  - path: research/evidence/SCHEME_CLAIM_VERIFICATION.md
+    sha256: 6f14a49446696964b7db903d5da9c61105c83ebcd1c0f368165c839c1f38b1f9
+  - path: research/evidence/TOP5_DYNAMIC_EVIDENCE_AUDIT.md
+    sha256: b3958a2a146baab404aade004b3259354d2202f3dc60db251506cc5b07b42696
+  - path: rounds/top5_round_1/DESIGNER_DOSSIERS.md
+    sha256: c3380926a16f029b0cb2fdc5671913027105de3b65f568e2cb3f3ec2af431f08
+  - path: rounds/top5_round_1/ATTACK.md
+    sha256: 500d5a62ad2a373b4aa58a402249115da4b136c9165d272e42ede36d5175b981
+  - path: rounds/top5_round_1/REVIEW.md
+    sha256: 94c562d579480fac5734d20299fc87e4b797fc40aae07de5f34d615cd624fac1
+required_outputs:
+  - revised_or_terminated_design_for_each_scheme
+  - issue_by_issue_disposition
+  - static_and_dynamic_evidence_boundary
+  - ordinary_adsorption_relabeling_controls
+  - explicit_stop_conditions
+prohibited_moves:
+  - use_bmdl_in_design
+  - replace_missing_biological_dynamics_with_generic_responsive_materials
+  - lower_pass_threshold
+  - restore_a_terminated_scheme_without_new_direct_evidence
+  - modify_historical_phosphate_artifacts

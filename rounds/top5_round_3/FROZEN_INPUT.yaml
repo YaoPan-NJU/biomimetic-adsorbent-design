@@ -1,0 +1,31 @@
+round: top5_round_3
+candidate: S1 PFOA hL-FABP static plus iLBP-family portal dynamic
+bmdl_exposed: false
+allowed_inputs:
+  - path: SOUL.md
+    sha256: e42831c9e963aba5ded16cde69ef10a45acd2eac824e7a57d6592b2d979532ca
+  - path: research_contract.yaml
+    sha256: 61612942f491d9247ae92106acdd54a7e3eee2de256965e542e4b836282ce3f6
+  - path: research/evidence/TOP5_DYNAMIC_EVIDENCE_AUDIT.md
+    sha256: b3958a2a146baab404aade004b3259354d2202f3dc60db251506cc5b07b42696
+  - path: rounds/top5_round_2/DESIGNER_PFAS.md
+    sha256: fd2e066d8ffc54486ba31d4d432d0ecb53a65f76ef2f0d46557f7659c5f2fa3c
+  - path: rounds/top5_round_2/DESIGNER_ORGANICS.md
+    sha256: fc98e70b75c48476a7a188269d28701f6d02e5ea82f93568ed642088486b7f9e
+  - path: rounds/top5_round_2/ATTACK.md
+    sha256: f703e2b41a63ace4a3cf2410d8323e8295e45b4aa9639f9c262f464c5dc32725
+  - path: rounds/top5_round_2/REVIEW.md
+    sha256: 16f8c48b04b5ab7061f3ec5ee68a761a4d1139d0f68a6f1caf52a63607cdf05d
+required_repairs:
+  - chemically concrete portal component and matched lock-open and lock-closed controls
+  - explicit separation of hL-FABP static source from iLBP-family dynamic source
+  - no claim that PFOA induces native hL-FABP portal motion
+  - preregistered dynamic-state-by-static-geometry interaction endpoint
+  - equivalence checks for charge, pore structure, accessible site number, aggregation and mass transfer
+  - mixed competitor panel including PFNA, shorter PFCAs, oil/fatty acids, bile acids, anionic surfactants and DOM
+pass_rule:
+  minimum_score: 85
+  unresolved_critical: 0
+  unresolved_high: 0
+  static_hard_correspondence: required
+  dynamic_hard_correspondence: required

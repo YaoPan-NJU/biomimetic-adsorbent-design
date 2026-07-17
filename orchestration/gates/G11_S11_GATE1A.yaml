@@ -1,0 +1,16 @@
+gate: G11_S11_GATE1A
+status: passed_design_only
+decision_date: 2026-07-17
+candidate_status: pause_for_preexperiment
+gate1a_design_layer:
+  unresolved_critical: 0
+  unresolved_high: 0
+gate1b_procurement_manufacturing:
+  status: pending
+  blocks_ordering_and_experiments: true
+gate2_experimental:
+  status: not_started
+  unresolved_critical: 3
+  unresolved_high: 4
+primary_or_backup_pass: false
+next_action: Pan Yao review, then Gate 1b only if laboratory execution is authorized

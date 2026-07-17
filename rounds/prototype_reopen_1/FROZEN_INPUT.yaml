@@ -1,0 +1,37 @@
+schema_version: 1
+round: prototype_reopen_1
+candidate: S11 FABP4 dual-site/Phe57 local-gate biohybrid
+input_hashes:
+  SOUL.md: e42831c9e963aba5ded16cde69ef10a45acd2eac824e7a57d6592b2d979532ca
+  research_contract.yaml: 61612942f491d9247ae92106acdd54a7e3eee2de256965e542e4b836282ce3f6
+  research/evidence/REOPENED_PROTOTYPE_SEARCH.md: 1392e8ddc3cbb5e63df18eef55a89a73545469288c1a5482235b7a771f79125b
+  rounds/top5_round_3/REVIEW.md: 30e31614815e6905da7ee587bfadea2530adaa0c898a6d94101dc8441b81fd26
+allowed_new_direct_sources:
+  - doi: 10.1021/jacsau.5c00504
+    pdb:
+      - 9OB7
+      - 9MIW
+      - 9MIZ
+      - 9MP2
+constraints:
+  bmdl_visible_to_designers: false
+  inherit_old_s1_score_or_status: false
+  claim_pfoa_specificity_without_direct_comparator_data: false
+  claim_global_protein_closure: false
+  dynamic_coordinate: FABP4_Phe57_local_side_chain_state_only
+  required_static_controls:
+    - headgroup_anchor_mutation
+    - secondary_site_mutation
+  required_dynamic_controls:
+    - Phe57_gate_mutation_or_constraint
+  required_matrix:
+    - ultrapure_water_mechanism
+    - mixed_PFAS
+    - natural_fatty_acid_and_surfactant_competitors
+    - municipal_secondary_effluent
+decision_rule:
+  pass_score: 85
+  unresolved_critical_allowed: 0
+  unresolved_high_allowed: 0
+  static_hard_correspondence_required: true
+  dynamic_hard_correspondence_required: true

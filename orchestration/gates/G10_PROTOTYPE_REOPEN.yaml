@@ -1,0 +1,14 @@
+gate: G10_PROTOTYPE_REOPEN
+status: one_candidate_admitted
+decision_date: 2026-07-17
+admitted:
+  - S11 FABP4 dual-site/Phe58 local-gate biohybrid
+not_admitted:
+  - PFOA-PPARgamma dynamic route
+  - PFOS-FadL dynamic route
+  - roxithromycin-ribosome dynamic route
+direct_source:
+  doi: 10.1021/jacsau.5c00504
+  pdb: [9OB7, 9MIW]
+bmdl_used_in_design: false
+next_gate: G11_S11_GATE1A

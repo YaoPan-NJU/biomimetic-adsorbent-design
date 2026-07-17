@@ -1,0 +1,13 @@
+gate: G8_TOP5_ROUND2
+status: no_pass
+decision_date: 2026-07-17
+role_isolation: restored
+decisions:
+  S1: revise_to_round3
+  S3: terminate
+  S4: control_only
+  S5: control_only
+  S6: terminate
+review_score_S1: 82
+next_gate: G9_S1_ROUND3
+bmdl_used_in_design: false

@@ -24,11 +24,15 @@ The revised work has now produced an auditable pre-screen and ten mechanism-dist
 
 Pan Yao approved the recommended top five for isolated deep-design: S1 PFOA, S5 BPA, S3 HFPO-DA/GenX, S4 PFBS/PFHxS/PFOS and S6 roxithromycin. The historical phosphate D1-A and D1-B packages remain committed and accessible in GitHub; they are superseded for the current paper scope, not deleted.
 
-Round 1 is complete. No scheme passed. S1 scored 82/revise, S5 81/revise, S3 79/revise, S6 77/revise and S4 73/revise-or-static-only. The common blocking issue is that direct target-recognition evidence is mostly static while the proposed material motion is not supported as a target-specific biological dynamic. S3 also risks misreading the HSA–HFPO-DA–myristate ternary structure; S4 currently supports only a static chain-length engineering bed; S6 cannot transfer all A2062/A2503 dynamics from related macrolides to roxithromycin.
+Round 1 produced no pass. Round 2 restored independent designer, attacker and reviewer roles and disposed of all five schemes: S3 and S6 terminated, S4 and S5 became control-only, and S1 alone entered Round 3 at 82/revise. Round 3 converted S1 into an explicit hL-FABP plus iLBP-derived artificial portal proposal, but independent review terminated it at 56/100 with three critical and four high issues. The artificial portal was not a determined chemical state and the iLBP family evidence did not establish a target-specific dynamic hard correspondence.
 
-The isolated designer and attacker agents did not return artifacts within the bounded run. Main-agent fallbacks are explicitly labeled in the round-1 files, and no pass was issued. Round 2 must restore independent role review before any scheme can pass.
+The contract-required external prototype reopening is complete. A 2025 peer-reviewed JACS Au study and PDB structures `9OB7/9MIW` directly show apo versus PFOA-bound FABP4, two PFOA positions and a local Phe57 author-numbered state difference. PFOA-PPARgamma was rejected as a dynamic prototype because its reported partial agonism is Helix-12-independent; PFOS-FadL remains simulation-led; roxithromycin still lacks target-specific ribosome dynamic evidence.
 
-The unique next action is a limited Round 2: resolve or terminate dynamic-prototype gaps and ordinary-adsorption relabeling. BMDL remains excluded from design.
+The only reopened candidate is S11, an actual FABP4 biohybrid. Its initial design was attacked and scored 60/100, pause-for-preexperiment. The attack caught an `ST/TS` sequence transcription error and a numbering offset: PDB author Phe57/Thr29/Arg126 correspond to UniProt P15090 F58/T30/R127. It also rejected the original bifunctional-amine GGG surface route. Gate 1a now passes after freezing eight machine-validated constructs, a `GGGGC` thiol-maleimide surface route, native-MS plus equilibrium-dialysis occupancy tests, residue-level NMR, T30A as the unique dynamic causal control, PFOA/octanoate as the unique primary selectivity endpoint, batch statistics and stop rules. Gate 1a has zero design-layer critical/high issues.
+
+S11 has **not** passed as a primary or backup. Gate 1b procurement/manufacturing records are pending and prohibit ordering or experiments. Gate 2 still has three experimental critical issues and four high issues: soluble second occupancy, Phe58 residue-level dynamic causality, independent activity normalization, immobilized accessibility and real secondary-effluent competitive selectivity. This repository intentionally stops before actual laboratory work, consistent with the first-delivery boundary.
+
+The unique next action is Pan Yao's review of the S11 Gate 1a package. If laboratory execution is later authorized, complete Gate 1b first and then run only the frozen soluble-state Gate 2 preexperiments. BMDL remains excluded from design.
 
 ## Superseded completed cycle
 
@@ -58,5 +62,5 @@ Translation-evidence dossiers were prepared in parallel but are deliberately exc
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
 2. Verify `main`, read `DEEP_RESEARCH_BIOMIMETIC_SCHEME_PORTFOLIO.md`, and treat all former finalists as historical only.
-3. Continue the limited top-five Round 2 action recorded in `PROJECT_STATE.yaml`; keep BMDL excluded from design, preserve phosphate history, and do not start experiments.
+3. Read `rounds/prototype_reopen_1/GATE1_REVIEW_2.md` and `S11_GATE1_REVISION.md`; keep BMDL excluded, preserve phosphate history, and do not order materials or start experiments while Gate 1b is pending.
 4. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

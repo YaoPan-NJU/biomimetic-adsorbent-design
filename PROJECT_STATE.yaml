@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: framework_correction_and_portfolio_reassessment
+phase: pfoa_deep_design_with_corrected_framework
 status: in_progress
-last_completed_step: 100-scheme portfolio (5 pollutants x 20 schemes) completed with cull and ranking at f7f797c; framework correction identified need to shift from approach-3 (find proteins that bind pollutants) back to approach-2 (solve engineering problems) + approach-1 (mechanism matching) as documented in source brief
-next_action: Reassess portfolio_100 schemes against corrected biomimetic framework requiring multi-dimensional correspondence (at least 2 hard dimensions), clear pain-point-to-capability causal chain, and honest labeling of biomimetic strength; update PROJECT_STATE and HANDOFF with framework correction before sub-agents continue deep design
+last_completed_step: Framework correction documented in BIOMIMETIC_DESIGN_FRAMEWORK.md; PFOA workflow completed (62/100, failed review) revealing guanidinium bridge effect and cell membrane approaches already published; material priority corrected to activated-carbon-based modification as primary, COF/polymer/MIP as secondary, MOF avoided due to cost and stability; next direction is option-2 (focus on unsolved engineering problems like DOM tolerance, short-chain PFAS, mild regeneration) with option-1 (novel biological prototypes) as secondary consideration
+next_action: Redesign PFOA scheme focusing on unsolved engineering problems (DOM tolerance, short-chain PFAS selectivity, mild regeneration) using activated-carbon-based modification as primary material platform; search for 1-2 clear biological prototypes that solve these specific problems; ensure novelty by checking against published literature on guanidinium polymers, cell membrane mimics, cyclodextrin polymers, and MIPs for PFAS
 active_branch: GLM
 executor: Claude Code
 working_branch: GLM

@@ -289,3 +289,26 @@ adversarial_process:
   additional_cycle_trigger: any_resolvable_critical_or_high_issue
   no_fixed_top_two_or_finalist_count: true
   persist_hidden_reasoning: false
+
+rox_mac_if1_rescue:
+  status: conditional_lead_B0_M0_not_passed_E1_not_ready
+  owner_authorized_directional_redesign: true
+  target_scope: macrolide_class_joint_removal
+  primary_biological_observation: mature_inactivated_wastewater_biofilm_joint_CLA_ERY_ROX_partition
+  supporting_biophysical_mechanism: shallow_macrolide_partition_at_anionic_lipid_interfaces
+  causal_link_between_observation_and_mechanism_is_already_proven: false
+  artificial_spatial_rule: low_coverage_weak_anionic_shallow_zone_adjacent_to_exposed_low_polarity_pore_wall
+  primary_manufacturing_hypothesis: short_time_benzophenone_UV_AA_photograft_on_mm_porous_St_DVB
+  baseline_retention:
+    uniform_MAC_BI1_deleted: false
+    role: uniform_mixed_mode_causal_control
+  required_pre_E1_gates:
+    B0: biological_interface_class_boundary_against_matched_cationic_amphiphiles
+    M0: same_batch_shallow_deep_uniform_spatial_manufacture_and_characterization
+    C0: spatial_causal_gain_over_composition_pore_and_commercial_controls
+  prohibited_claims_before_gate_pass:
+    - biofilm_EPS_or_lipid_component_is_already_causally_localized
+    - ROX_atomic_interfacial_orientation_is_known
+    - carboxylate_plus_hydrophobicity_is_macrolide_specific
+    - surface_carboxylated_or_core_shell_beads_are_novel_by_themselves
+    - MAC_IF1_is_E1_ready

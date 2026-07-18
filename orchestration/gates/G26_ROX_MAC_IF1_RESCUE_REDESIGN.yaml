@@ -1,0 +1,85 @@
+gate_id: G26_ROX_MAC_IF1_RESCUE_REDESIGN
+date: 2026-07-18
+trigger: owner_requests_rescue_and_highest_quality_reoptimization_after_G25_audit
+status: conditional_redesign_open_B0_M0_required_no_E1_release
+owner_decision:
+  rescue_requested: true
+  uniform_MAC_BI1_deleted: false
+  uniform_MAC_BI1_role: uniform_mixed_mode_causal_baseline
+design:
+  id: MAC-IF1
+  name: macrolide_directional_shallow_interface_porous_bead
+  selectivity_scope: pollutant_class
+  target_class:
+    - roxithromycin
+    - erythromycin
+    - clarithromycin
+    - azithromycin
+  biological_prototype:
+    primary_observation: mature_inactivated_wastewater_biofilm_jointly_enriched_CLA_ERY_ROX_in_secondary_effluent
+    supporting_mechanism: macrolide_shallow_partition_at_anionic_phospholipid_interfaces
+    prohibited_overclaim: causal_biofilm_EPS_or_lipid_component_already_localized
+  artificial_rule: low_coverage_water_accessible_weak_anionic_shallow_zone_adjacent_to_exposed_low_polarity_pore_wall
+  primary_material_route: short_time_benzophenone_UV_acrylic_acid_photograft_on_same_batch_mm_porous_St_DVB_beads
+  innovation_boundary:
+    not_novel:
+      - hydrolyzed_MAn_St_DVB
+      - mm_polyDVB_plus_maleic_acid_graft_hydrolysis
+      - hydrophobic_plus_weak_cation_exchange
+      - surface_carboxylation_or_core_shell_alone
+    conditional_claim: spatially_measured_shallow_adjacency_outperforms_same_chemistry_deep_uniform_and_mixed_controls
+release_gates:
+  B0:
+    status: not_passed_protocol_not_frozen
+    purpose: distinguish_shared_macrolide_interface_response_from_charge_logD_behavior_of_unrelated_cationic_amphiphiles
+    mandatory_targets:
+      - ROX
+      - ERY
+      - CLA
+      - AZI
+    mandatory_counterexamples:
+      - propranolol
+      - venlafaxine
+      - citalopram
+    stop_rule: terminate_strong_class_biomimicry_if_only_charge_and_logD_explain_partition
+  M0:
+    status: not_passed_protocol_not_frozen
+    purpose: directly_demonstrate_shallow_deep_uniform_spatial_difference_without_pore_blocking
+    mandatory_materials:
+      - IF1_SHALLOW
+      - IF1_DEEP
+      - IF1_HIGH_COVERAGE
+      - PS_DVB_blank
+      - UNIFORM_MAC_BI1
+    mandatory_measurements:
+      - total_and_water_accessible_carboxylate
+      - wet_pore_volume_and_swelling
+      - cross_section_fluorescent_probe_confocal_profile
+      - XPS_or_ToF_SIMS_surface_analysis
+      - companion_flat_PS_layer_thickness_and_wet_state_behavior
+      - leaching_and_residual_monomer
+    stop_rule: elemental_composition_without_spatial_evidence_fails_M0
+  C0:
+    status: blocked_by_B0_and_M0
+    purpose: isolate_spatial_causal_gain_in_pure_water_and_secondary_effluent
+    mandatory_controls:
+      - same_batch_deep_or_uniform_distribution
+      - unmodified_hydrophobic_bead
+      - weak_acid_only_control
+      - physical_mixture
+      - commercial_mixed_mode_resin
+      - GAC
+    stop_rule: downgrade_to_ordinary_mixed_mode_if_gain_is_explained_by_acid_amount_pore_structure_or_surface_area
+experiment_release:
+  E1_ready: false
+  E2_ready: false
+  procurement_or_full_synthesis_authorized: false
+next_action: freeze_one_combined_B0_plus_M0_minimum_discrimination_package_before_C0_or_full_adsorption_optimization
+evidence_update:
+  report: DEEP_RESEARCH_ROX_MAC_IF1_RESCUE_DESIGN.md
+  attack: rounds/mac_if1_rescue_1/ATTACK.md
+  review: rounds/mac_if1_rescue_1/REVIEW.md
+  high_impact_claims_checked: 8
+  supported: 5
+  partial_rewritten: 3
+  unsupported_retained: 0

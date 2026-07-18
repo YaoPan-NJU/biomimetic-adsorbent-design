@@ -102,3 +102,20 @@ A context-free Codex reading only the clone correctly recovered:
 - the prohibition on POP design, procurement, synthesis and experiment at this stage.
 
 The repository is sufficient for another Codex instance to continue without the original chat at this checkpoint.
+
+## Two-branch selective integration checkpoint
+
+Validation date: 2026-07-18
+
+Validated commit: `a0222b8f5cc9fc6f61f85e1fab26c141bbe60630`
+
+The private remote was cloned after reviewing `origin/GLM` and `origin/worktree-framework-correction`. The clone was clean and matched `origin/main`.
+
+Mechanical results:
+
+- `scripts/validate_repository.py`: 110 state-indexed artifacts resolved and six BMDL snapshot checksums passed.
+- `scripts/scan_credentials.py`: 193 tracked files passed; no credential pattern was found.
+- YAML parsing and machine-state assertions confirmed `portfolio_100_supervisor_reassessment`, `primary_design: null`, `backup_design: null`, and the unique reclassification next action.
+- The corrected framework and portfolio supervisor audit both resolved from the clone.
+
+The clone does not treat the imported branch ranking as current state. It identifies the 100-scheme files as a hypothesis archive, keeps DCP-1 paused, and requires biomimetic-strength reclassification before any rescore or material freeze.

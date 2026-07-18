@@ -74,6 +74,37 @@ discovery_strategy:
     preferred_primary: 1
     maximum_supporting_without_scope_review: 1
     supporting_requires_distinct_necessary_testable_function: true
+  wastewater_bioprocess_discovery:
+    eligible_systems:
+      - activated_sludge
+      - wastewater_biofilm
+      - aerobic_granular_sludge
+      - anaerobic_sludge
+      - other_wastewater_biological_multiphase_systems
+    candidate_observations:
+      - sludge_water_partitioning
+      - rapid_initial_sorption
+      - desorption_hysteresis
+      - biomass_or_EPS_enrichment
+      - differential_behavior_across_sludge_structures
+    evidence_ladder:
+      WW_0: overall_removal_or_sludge_detection_discovery_signal_only
+      WW_1: mass_balance_and_inhibited_or_inactivated_control_support_process_hypothesis
+      WW_2: EPS_removal_readdition_fractionation_enzymatic_or_surface_perturbation_localizes_function
+      WW_3: repeatable_causal_perturbation_with_alternative_explanations_excluded_supports_hard_correspondence
+    required_alternative_explanations:
+      - biodegradation_or_cometabolism
+      - volatilization_or_photolysis
+      - precipitation_or_inorganic_solid_association
+      - colloid_entrapment
+      - cellular_uptake
+      - sampling_filtration_and_analytical_loss
+    EPS_extraction_artifact_checks:
+      - cell_lysis_and_intracellular_release
+      - floc_disruption
+      - changed_ionic_bridging
+      - extraction_mass_recovery
+    translation_rule: identify_and_translate_the_functional_organization_not_raw_EPS_as_default_material
 
 pollutant_scoring:
   applies_only_after_all_admission_gates_pass: true

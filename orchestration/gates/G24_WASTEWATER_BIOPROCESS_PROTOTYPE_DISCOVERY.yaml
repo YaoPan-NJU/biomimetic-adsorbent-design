@@ -1,0 +1,30 @@
+gate_id: G24_WASTEWATER_BIOPROCESS_PROTOTYPE_DISCOVERY
+date: 2026-07-18
+trigger: owner_expanded_prototype_discovery_to_wastewater_biological_treatment_processes
+status: completed_framework_extension
+accepted_discovery_environments:
+  - activated_sludge
+  - wastewater_biofilm
+  - aerobic_granular_sludge
+  - anaerobic_sludge
+evidence_progression:
+  WW_0: overall_removal_or_sludge_detection_search_lead_only
+  WW_1: mass_balance_and_inhibited_or_inactivated_control_support_sorption_hypothesis
+  WW_2: component_fractionation_or_perturbation_localizes_EPS_cell_surface_or_other_interface
+  WW_3: causal_feature_perturbation_changes_partitioning_after_alternatives_are_excluded
+mandatory_separation:
+  - sorption
+  - biodegradation_or_cometabolism
+  - cellular_uptake
+  - precipitation_or_inorganic_association
+  - colloid_entrapment
+  - volatilization_or_photolysis
+  - analytical_loss
+translation_boundary:
+  default: translate_functional_organization_into_stable_nonbiological_adsorbent
+  prohibited_shortcut: use_raw_or_extracted_EPS_as_default_material_without_scope_and_stability_review
+  EPS_extraction_requires_artifact_audit: true
+effect_on_current_MAC_BI1:
+  biological_prototype_strengthened_as_search_and_evidence_route: true
+  current_status_unchanged: concept_valid_commercial_prescreen_protocol_not_frozen_E1_not_ready
+  next_action_unchanged: true

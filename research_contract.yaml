@@ -65,6 +65,16 @@ funnel:
     - lower_a_gate_because_no_scheme_has_passed
     - delay_a_ready_design_until_a_fixed_batch_is_full
 
+discovery_strategy:
+  primary_spine: unsolved_secondary_effluent_engineering_problem
+  mechanism_method: retrieve_real_biological_processes_that_address_the_frozen_problem
+  pollutant_role: environmental_boundary_competitor_definition_and_validation_case
+  prohibited_shortcut: assume_nature_has_a_pollutant_specific_prototype
+  prototype_budget:
+    preferred_primary: 1
+    maximum_supporting_without_scope_review: 1
+    supporting_requires_distinct_necessary_testable_function: true
+
 pollutant_scoring:
   applies_only_after_all_admission_gates_pass: true
   environmental_significance_is_weighted: false
@@ -101,6 +111,18 @@ owner_hard_gates:
     class_level_selectivity_allowed: true
     within_class_selectivity_required: false
     class_selectivity_requirement: preferential_removal_over_DOM_salts_and_unrelated_micropollutants
+    selectivity_scope_must_be_frozen_per_design: true
+    selectivity_scopes:
+      single_compound:
+        use_when: treatment_or_paper_claim_requires_within_class_discrimination
+        within_class_competitor_discrimination_required: true
+      pollutant_class:
+        use_when: class_members_are_environmentally_relevant_and_should_be_jointly_removed
+        within_class_competitor_discrimination_required: false
+        required_external_preference: target_class_over_DOM_salts_and_unrelated_micropollutants
+      broad_micropollutant_enrichment:
+        use_when: multiple_unrelated_organic_micropollutant_classes_are_joint_targets
+        prohibited_claim: class_specific_recognition
   engineering_validation:
     required: true
     minimum_release_level: E1
@@ -152,6 +174,29 @@ material_translation:
       - simple_hydrolysis
       - furnace_pyrolysis_or_activation
     added_step_requires_measurable_gain: true
+    comparison_basis:
+      - finished_material_cost_per_kg
+      - material_regeneration_and_waste_cost_per_m3_treated_water
+    arbitrary_material_price_threshold_is_sufficient: false
+  platform_screening:
+    porous_carbon_role: high_priority_low_cost_platform_or_mandatory_engineering_benchmark
+    porous_polymer_role: eligible_when_covalent_placement_bead_form_or_functional_colocalization_is_necessary
+    advanced_framework_rule: MIP_COF_PAF_MOF_require_case_specific_cost_water_stability_leaching_shaping_and_regeneration_gate
+    carrier_class_remains_not_preselected: true
+  local_geometric_constraint_gate:
+    allowed_sources:
+      - rigid_covalent_topology
+      - cyclization_or_preorganized_scaffold
+      - defined_coordination_geometry
+      - verified_multisite_non_covalent_array
+    required_checks:
+      - aqueous_speciation_at_target_pH
+      - salt_DOM_and_competing_ligand_stability
+      - wet_state_accessibility
+      - deletion_position_mismatch_and_random_controls
+      - component_leaching_and_cycle_stability
+      - direct_structural_measurement
+    generic_bond_geometry_alone_is_sufficient: false
   terminology_policy:
     biological_evidence_source: biological_prototype_or_exact_biological_category
     synthetic_recognition_term_zh: 人工识别单元

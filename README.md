@@ -4,7 +4,7 @@
 
 术语遵循 [`docs/TERMINOLOGY.md`](docs/TERMINOLOGY.md)：蛋白、酶、核糖体等称为“生物原型”或其准确类别；人工小分子、主体腔、官能团组合和孔口结构统一称为“人工识别单元”。通过水相因果验证前必须标为候选或设想，不用无修饰的“受体”指代人工结构。
 
-两个远端设计分支已完成选择性整合。`GLM` 的100套方案保存在 [`rounds/portfolio_100/`](rounds/portfolio_100/README.md) 作为探索档案；其分数和晋级身份不进入当前排序。`worktree-framework-correction` 的有效方法论已重写为 [`BIOMIMETIC_DESIGN_FRAMEWORK.md`](docs/BIOMIMETIC_DESIGN_FRAMEWORK.md)，与当前“一项硬对应、动态可选、非蛋白人工材料”合同一致。
+两个远端设计分支已完成选择性整合。`GLM` 的100套方案保存在 [`rounds/portfolio_100/`](rounds/portfolio_100/README.md) 作为探索档案；其分数和晋级身份不进入当前排序。`worktree-framework-correction` 的有效方法论已重写为 [`BIOMIMETIC_DESIGN_FRAMEWORK.md`](docs/BIOMIMETIC_DESIGN_FRAMEWORK.md)，与当前“一项硬对应、动态可选、非蛋白人工材料”合同一致。`origin/GLM@9d4ad9a`新增的下午讨论经验已逐条复核，采纳与拒绝理由见 [`GLM分支设计经验选择性整合`](docs/GLM_BRANCH_LESSONS_INTEGRATION_2026-07-18.md)；分支的PFOA状态和旧硬门没有覆盖`main`。
 
 ## 当前自适应执行计划
 

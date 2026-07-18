@@ -1,0 +1,36 @@
+gate_id: G23_GLM_LESSONS_INTEGRATION
+date: 2026-07-18
+trigger: owner_requested_full_review_and_selective_integration_of_afternoon_GLM_branch_design_lessons
+source:
+  branch: origin/GLM
+  merge_base: df8a7ef9d2a13f672c9cdd3e543698313d55d168
+  reviewed_head: 9d4ad9a30bfc2aabddd643a74daaaa2fb5669cc5
+  review_scope: all_four_divergent_commits_full_file_diff_and_commit_messages
+status: completed_selective_integration_no_merge
+accepted:
+  - engineering_problem_first_discovery
+  - one_primary_plus_at_most_one_distinct_supporting_biological_prototype
+  - affordability_water_stability_scalability_and_simple_processing_as_early_material_constraints
+  - porous_carbon_as_high_priority_platform_or_mandatory_engineering_benchmark
+  - local_geometric_constraints_only_after_aqueous_speciation_competition_accessibility_controls_leaching_and_direct_measurement
+  - prior_art_attack_across_same_function_material_families
+  - pollutant_class_level_removal_when_all_class_members_are_environmentally_relevant_targets
+rejected_or_rewritten:
+  - stale_PFOA_phase_score_and_next_action
+  - universal_activated_carbon_primary_carrier_rule
+  - categorical_COF_MIP_MOF_cost_selectivity_and_stability_labels
+  - unqualified_boronate_metal_coordination_or_hydrogen_bond_reliability_in_water
+  - arbitrary_less_than_5_CNY_per_g_hard_threshold_without_cost_basis
+  - mandatory_two_hard_correspondences_or_dynamic_biomimicry
+  - prototype_first_reverse_engineering_of_the_problem_statement
+  - within_class_selectivity_as_a_universal_requirement
+current_design_effect:
+  active_design: MAC-BI1
+  selectivity_scope: pollutant_class
+  within_macrolide_selectivity: bonus_not_gate
+  required_preference: macrolide_class_over_DOM_salts_and_unrelated_micropollutants
+  release_status_unchanged: concept_valid_commercial_prescreen_protocol_not_frozen_E1_not_ready
+next_action_unchanged: >-
+  Freeze one executable commercial-material equal-molar competition prescreen with specified product
+  grades, two trace-concentration levels, material dose, secondary-effluent conditions, LC-MS/MS mass
+  recovery, replication and class-preference stop rules; do not synthesize MAC-BI1 before prescreen results.

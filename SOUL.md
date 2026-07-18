@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Produce one experiment-ready primary design and one backup design for a selectively adsorbing biomimetic material suitable for a high-quality environmental/materials paper. Codex performs the research, orchestration, design, adversarial review, and writing. Pan Yao reviews the package before Zhou Jiaqi begins experiments.
+Find and develop every design that can pass the project's biomimetic-story, scientific-design, and engineering-validation gates for a high-quality selective-adsorption paper. Candidate-pool size, final design count, and primary/backup labels are not precommitted. Codex performs the research, orchestration, design, adversarial review, and writing. Pan Yao reviews each experiment-ready package before Zhou Jiaqi begins experiments.
 
 ## Scientific spine
 
@@ -12,11 +12,11 @@ engineering bottleneck -> conventional capability gap -> biological solution -> 
 
 The engineering bottleneck and pollutant-specific selective barrier must be stated before biological-prototype retrieval. Later evidence may refine the statement, but a prototype cannot be used to retrospectively manufacture the pain point. `docs/BIOMIMETIC_DESIGN_FRAMEWORK.md` is the binding interpretation guide.
 
-The primary design must contain at least one hard functional correspondence that is translated into a concrete artificial-material feature. A dynamic correspondence is optional: it may strengthen a design only when it solves a selective-adsorption problem that the static material cannot solve and has its own measurement and causal control. Missing dynamic evidence cannot force a protein, peptide fold, hinge, or responsive unit into the material.
+Every recommended design must contain at least one hard functional correspondence that is translated into a concrete artificial-material feature. A dynamic correspondence is optional: it may strengthen a design only when it solves a selective-adsorption problem that the static material cannot solve and has its own measurement and causal control. Missing dynamic evidence cannot force a protein, peptide fold, hinge, or responsive unit into the material.
 
 Each claimed correspondence requires a supported biological feature, a concrete material implementation, a measurable consequence, and a causal control. Morphological resemblance, a familiar bio-derived polymer, or a generic functional group is insufficient.
 
-Every concept must be labeled as functional biomimicry, biological-mechanism-informed design, or rational chemical design. Only the first two can contribute a biological hard correspondence; rational chemical designs remain useful controls or independent routes but cannot be relabeled through a generic protein-pocket analogy.
+Every concept must be labeled as functional biomimicry, biological-mechanism-informed design, or rational chemical design. Formal experiment-release candidates must be grounded in an observed biological adsorption, accumulation, sequestration, barrier, partition, selective-transport process, or a directly analogous natural function. Pollutant binding to a toxicity target, enzyme, or ribosome may constrain geometry or chemistry but cannot alone pass the biomimetic-story gate. Biological-mechanism-informed and rational chemical designs remain useful probes or controls when that stronger gate is not met.
 
 Selective adsorption is mandatory. Capacity alone cannot establish success. The experimental plan must include realistic competitors and secondary-effluent matrix effects.
 
@@ -27,9 +27,9 @@ Carrier selection is material-class neutral and must account for inactive mass. 
 - Primary water matrix: municipal/domestic wastewater-treatment secondary effluent.
 - Ultrapure water: intrinsic-mechanism and causal-control experiments.
 - Surface or drinking water: optional external validation only.
-- Pollutant scope: organic pollutants, with priority given to emerging contaminants. Nutrients and inorganic pollutants do not compete in the main funnel unless Pan Yao explicitly reopens that scope.
+- Pollutant scope: organic pollutants, with priority given to emerging contaminants. Nutrients and inorganic pollutants do not enter the active discovery process unless Pan Yao explicitly reopens that scope.
 - Candidate admission requires independently verified secondary-effluent relevance and environmental or health concern. These are pass/fail gates before scoring, not weighted score items; failure at either gate cannot be offset by biomimetic tractability, novelty, or evidence maturity. Database coverage counts are discovery metadata, not risk scores.
-- Funnel: 20 pollutant_kb pollutants -> environmental/schemeability pre-screen -> 10 mechanism-distinct schemes -> 5 recommended schemes -> 1 primary + 1 backup.
+- Discovery and delivery are adaptive. There is no fixed pollutant count, scheme-pool size, finalist count, or primary/backup quota. Every scheme that independently passes all three owner gates is delivered on a rolling basis.
 - Experimental complexity is an optimization concern, not a veto, unless the chemistry is implausible, the claim is not testable, or the risk is unacceptable.
 - The default deliverable is a manufacturable artificial adsorbent. Proteins, expressed constructs, folded peptides, and protein-derived biohybrids require an explicit scope reopening by Pan Yao; they cannot enter by default to satisfy a biomimetic-fidelity or dynamic-correspondence score.
 - Tissue or organ enrichment is a prototype-discovery signal, not proof that a specific protein causes accumulation. Direct binding, structural, perturbation, or transport evidence is required before a molecular feature is translated.
@@ -76,4 +76,4 @@ Later rounds receive the current proposal and unresolved issues, not the full co
 
 ## Acceptance
 
-The primary design passes only when it scores at least 85/100, has no unresolved critical/high issue, contains at least one hard functional correspondence implemented in an artificial material, provides a credible bench-scale synthesis SOP, and maps every central claim to a measurement and causal control. If a dynamic correspondence is claimed, it must independently satisfy the same evidence and causal-control standard; it is not required for passage. Pan Yao gives the final approval.
+A design can enter the formal recommendation list only when all three non-compensable gates pass: complete evidence-backed biomimetic story, scientifically defined artificial material and causal experiment, and executable engineering validation in the secondary-effluent context. It must have no unresolved critical/high issue and must reach at least `E1` mechanism-validation readiness as defined in `docs/ADAPTIVE_EXPERIMENT_READY_RESEARCH_PLAN.md`. Numerical scores rank designs within the same release level but cannot rescue a failed gate. Dynamic correspondence remains optional and must independently satisfy the evidence and causal-control standard if claimed. Pan Yao gives the final approval and decides whether any primary/backup labels are needed.

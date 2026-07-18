@@ -9,7 +9,8 @@ Before any action, read in this exact order:
 3. `HANDOFF.md`
 4. `research_contract.yaml`
 5. `docs/BIOMIMETIC_DESIGN_FRAMEWORK.md`
-6. `rounds/portfolio_100/SUPERVISOR_AUDIT.md` when using the 100-scheme branch archive
+6. `docs/ADAPTIVE_EXPERIMENT_READY_RESEARCH_PLAN.md`
+7. `rounds/portfolio_100/SUPERVISOR_AUDIT.md` when using the 100-scheme branch archive
 
 Then inspect only the artifacts listed in `PROJECT_STATE.yaml`. Do not recover decisions from chat history when the repository contains a recorded decision.
 

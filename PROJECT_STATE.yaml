@@ -1,19 +1,25 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: original_portfolio_revalidation_under_strict_biological_adsorption_lens
+phase: adaptive_experiment_ready_design_discovery
 status: in_progress
-last_completed_step: Revalidated the original nonprotein portfolio without inheriting GLM scores and separated actual biological adsorption or accumulation references from pollutant binding to protein targets; no scheme passes all three owner gates
-next_action: Pan Yao reviews the ranked S1-SYN PFAS-M1 and ROX-BF1 discussion shortlist; after direction is confirmed freeze exact nonprotein recognition chemistry or amphiphilic nanodomain and matched causal controls for no more than two routes before another paper attack
+last_completed_step: Replaced the fixed-count funnel with an adaptive rolling-delivery plan requiring every recommended scheme to pass biomimetic-story material-science and engineering-validation gates and reach at least E1 mechanism-validation readiness
+next_action: Execute Phase 0 and Phase 1 of docs/ADAPTIVE_EXPERIMENT_READY_RESEARCH_PLAN.md by freezing engineering problem statements for environmentally admitted pollutant_kb entries and searching actual biological adsorption accumulation sequestration barrier partition or selective-transport processes without a candidate-count quota
 active_branch: main
-last_verified_commit: a0222b8f5cc9fc6f61f85e1fab26c141bbe60630
+last_verified_commit: 71205c5f51541be9b2e2cee7b86504f2d219dfce
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
-candidate_pool_status: original_portfolio_revalidated_glm_archive_deprioritized_three_route_discussion_shortlist_open
-candidate_pollutants:
+candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
+candidate_count_policy:
+  pollutant_pool: open_adaptive_from_pollutant_kb_with_independent_environmental_admission
+  scheme_pool: open_no_quota
+  formal_recommendations: all_E1_or_E2_three_gate_passers
+  delivery: rolling
+  primary_backup_labels: inactive_unless_owner_later_requests
+historical_candidate_pollutants:
   - bisphenol A
   - PFBS
   - roxithromycin
   - 2,6-dichlorophenol
-priority_verification_group:
+initial_research_seeds_not_quota:
   - PFOA
   - PFBS
   - roxithromycin
@@ -62,10 +68,10 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
-active_deep_concept: no material concept active pending owner discussion of S1-SYN PFAS-M1 and ROX-BF1; none is experiment-ready and ROX oxime chemistry remains a rational-design discriminator only
+active_deep_concept: none; adaptive Phase 0 environmental problem freeze and Phase 1 actual biological process discovery are next
 paused_candidates:
-  - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused pending owner discussion of the strict three-route shortlist; not terminated)
-discussion_shortlist:
+  - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (B-class pressure-test lead; not formally recommended)
+pressure_test_leads_not_fixed_shortlist:
   - S1-SYN hL-FABP-informed nonprotein PFOA/long-chain-PFCA two-region recognition
   - PFAS-M1 phospholipid-interface accumulation-informed stable amphiphilic nanodomain
   - ROX-BF1 biofilm/EPS sorption-informed hydrated charged-aromatic gradient
@@ -87,6 +93,11 @@ portfolio_20_top5:
   - ROX-1 water-compatible COF thin-layer surface imprint
 primary_design: null
 backup_design: null
+fixed_primary_backup_labels_active: false
+formal_recommended_designs: []
+experiment_release_register:
+  E1_ready: []
+  E2_ready: []
 superseded_finalists:
   - D1-A synthetic double-arm phosphate peptide clamp (93/100 historical design pass)
   - D1-B C-terminally immobilized PBP trace-polishing bed (89/100 historical design pass)
@@ -252,8 +263,12 @@ open_issues:
     text: Full per-scheme reclassification of the branch-imported archive is deferred because Pan Yao prioritized revalidation of the original designs; branch scores remain nonauthoritative and cannot displace main decisions.
   - id: ORIGINAL-REVALIDATION-001
     severity: high
-    status: awaiting_owner_review
-    text: Strict review found no original scheme passing biomimetic-story material-science and engineering-validation gates together; discuss S1-SYN plus the PFAS-M1 membrane-interface and ROX-BF1 biofilm redirections before deep-designing at most two routes.
+    status: resolved_by_adaptive_replan
+    text: Strict review found no original scheme passing all three gates; the fixed shortlist was replaced by adaptive discovery and the three prior leads remain pressure tests only.
+  - id: ADAPTIVE-DISCOVERY-001
+    severity: high
+    status: ready_to_execute
+    text: Run open pollutant_kb environmental admission and actual biological process discovery; deliver each scheme only after all three owner gates pass and an independently reviewed E1 or E2 package exists.
   - id: APPROVAL-001
     severity: high
     status: deferred
@@ -263,11 +278,13 @@ artifacts:
   rules: SOUL.md
   terminology: docs/TERMINOLOGY.md
   biomimetic_design_framework: docs/BIOMIMETIC_DESIGN_FRAMEWORK.md
+  adaptive_experiment_ready_research_plan: docs/ADAPTIVE_EXPERIMENT_READY_RESEARCH_PLAN.md
   portfolio_100_status: rounds/portfolio_100/README.md
   portfolio_100_supervisor_audit: rounds/portfolio_100/SUPERVISOR_AUDIT.md
   portfolio_100_branch_ranking: rounds/portfolio_100/RANKING.md
   original_portfolio_strict_review: rounds/original_portfolio_revalidation_1/SUPERVISOR_REVIEW.md
   gate_g19_original_portfolio_revalidation: orchestration/gates/G19_ORIGINAL_PORTFOLIO_REVALIDATION.yaml
+  gate_g20_adaptive_replan: orchestration/gates/G20_ADAPTIVE_REPLAN.yaml
   gate_g18_portfolio100_branch_integration: orchestration/gates/G18_PORTFOLIO100_BRANCH_INTEGRATION.yaml
   handoff: HANDOFF.md
   source_brief: docs/source/仿生吸附材料设计任务总纲.md

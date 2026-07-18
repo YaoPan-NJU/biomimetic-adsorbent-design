@@ -1,0 +1,25 @@
+gate: G20_ADAPTIVE_REPLAN
+status: plan_frozen_ready_to_execute
+supersedes:
+  - fixed_pollutant_count
+  - fixed_scheme_portfolio_count
+  - fixed_primary_and_backup_count
+active_policy:
+  discovery_mode: adaptive_no_fixed_quota
+  recommendation_mode: rolling_delivery_of_all_three_gate_passers
+  minimum_release_level: E1_mechanism_validation_ready
+  scoring_role: ranking_only_after_hard_gates
+three_owner_gates:
+  - complete_evidence_backed_biomimetic_story
+  - scientifically_defined_material_and_causal_experiments
+  - executable_secondary_effluent_engineering_validation
+biological_prototype_boundary:
+  preferred: observed_biological_adsorption_accumulation_sequestration_barrier_partition_or_selective_transport
+  protein_target_binding_alone_can_pass_story_gate: false
+material_boundary:
+  default: manufacturable_nonprotein_artificial_adsorbent
+  exact_entity_and_matched_controls_required_before_release: true
+experiment_release:
+  E1: exact_minimal_entity_controls_synthesis_analysis_and_stop_rules
+  E2: full_material_SOP_QC_secondary_effluent_column_regeneration_leaching_stability
+next_action: execute_phase_0_environmental_problem_freeze_and_phase_1_actual_biological_process_search_across_environmentally_admitted_pollutant_kb_entries

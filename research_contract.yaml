@@ -7,8 +7,9 @@ project:
 
 deliverable:
   language: zh-CN
-  primary_designs: 1
-  backup_designs: 1
+  design_count_policy: all_designs_that_pass_three_owner_gates
+  primary_backup_labels_required: false
+  minimum_formal_release_level: E1_mechanism_validation_ready
   includes:
     - scientific causal chain
     - biomimetic correspondence matrix
@@ -53,13 +54,16 @@ pollutant_admission:
     - admit_nutrients_or_inorganic_pollutants_without_explicit_scope_reopening
 
 funnel:
-  source_pollutants: 20
-  scheme_portfolio: 10
-  recommended_schemes: 5
-  deep_concepts: 5
-  finalists: 2
-  primary: 1
-  backup: 1
+  mode: adaptive_no_fixed_quota
+  source_pollutant_count: open
+  scheme_portfolio_count: open
+  recommended_design_count: all_three_gate_passers
+  delivery: rolling_do_not_wait_for_batch_completion
+  primary_backup_assignment: owner_optional_after_review
+  prohibited_behavior:
+    - retain_weak_schemes_to_fill_a_quota
+    - lower_a_gate_because_no_scheme_has_passed
+    - delay_a_ready_design_until_a_fixed_batch_is_full
 
 pollutant_scoring:
   applies_only_after_all_admission_gates_pass: true
@@ -71,15 +75,33 @@ pollutant_scoring:
   novelty_and_evidence_opportunity: 15
 
 final_scoring:
+  applies_only_after_three_owner_gates_pass: true
+  ranking_only: true
+  cannot_compensate_for_failed_gate: true
   causal_closure: 20
   selective_adsorption_mechanism: 25
   artificial_material_translatability: 20
   originality: 15
   experimental_falsifiability_and_controls: 10
   evidence_integrity: 10
-  pass_score: 85
   unresolved_critical_allowed: 0
   unresolved_high_allowed: 0
+
+owner_hard_gates:
+  biomimetic_story:
+    required: true
+    preferred_evidence: observed_biological_adsorption_accumulation_sequestration_barrier_partition_or_selective_transport
+    analogous_natural_function_allowed: true
+    pollutant_target_protein_binding_alone_is_sufficient: false
+  material_and_experimental_science:
+    required: true
+    exact_nonprotein_material_entity: true
+    matched_deletion_mismatch_and_conventional_controls: true
+    aqueous_selectivity_and_prior_art_attack: true
+  engineering_validation:
+    required: true
+    minimum_release_level: E1
+    E2_requires_full_secondary_effluent_column_regeneration_leaching_stability_package: true
 
 hard_correspondence:
   required_static: 1
@@ -104,6 +126,7 @@ biomimetic_classification:
   minimum_hard_correspondences: 1
   second_hard_correspondence_is_bonus_not_gate: true
   dynamic_correspondence_remains_optional: true
+  B_class_alone_cannot_enter_formal_recommendation: true
 
 material_translation:
   default_material_class: synthetic_nonbiological_adsorbent
@@ -163,6 +186,8 @@ bmdl_gate:
 
 adversarial_process:
   isolated_roles: true
-  required_rounds_all_concepts: 2
-  final_review_rounds_top_two: 1
+  round_policy: adaptive_until_pass_or_terminate
+  minimum_attack_and_review_cycles_before_release: 1
+  additional_cycle_trigger: any_resolvable_critical_or_high_issue
+  no_fixed_top_two_or_finalist_count: true
   persist_hidden_reasoning: false

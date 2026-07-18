@@ -2,14 +2,16 @@
 
 ## Objective
 
-Develop one primary and one backup biomimetic material for selective adsorption in municipal secondary effluent. Deliver a Chinese experimental handoff package, not a software product.
+Find and develop every biomimetic selective-adsorption material that can independently pass the project's three owner gates in municipal secondary effluent. Candidate count and primary/backup labels are not precommitted. Deliver Chinese E1/E2 experimental handoff packages, not a software product.
 
 ## Locked decisions
 
 - ADRMATS is unrelated to this implementation.
 - Primary matrix is municipal/domestic secondary effluent; ultrapure water is the mechanism control.
-- Funnel is 10 pollutants, 5 deep concepts, 1 primary and 1 backup.
-- Main design requires at least one hard functional correspondence translated into an artificial material. Dynamic correspondence is optional and cannot force protein, folded peptide or a generic responsive unit into the design.
+- Discovery is adaptive: no fixed pollutant, scheme, finalist, primary or backup count. Every E1/E2 design that passes all three non-compensable gates is delivered to Pan Yao on a rolling basis.
+- The three gates are complete biomimetic story, scientifically defined nonprotein material plus causal experiments, and executable engineering validation. Numerical scores only rank designs that have already passed all three.
+- Formal recommendations prioritize observed biological adsorption, accumulation, sequestration, barrier, partition or selective-transport processes. Pollutant binding to a toxicity target, enzyme or ribosome can constrain chemistry but cannot alone pass the biomimetic-story gate.
+- Every recommended design requires at least one hard functional correspondence translated into an artificial material. Dynamic correspondence is optional and cannot force protein, folded peptide or a generic responsive unit into the design.
 - Tissue or organ enrichment is an optional, non-scoring prototype-discovery signal, not proof that a specific protein causes accumulation. The evidence ladder and pre-exposure interception idea are recorded in `research/evidence/ORGAN_ENRICHMENT_BIOMIMETIC_HEURISTIC.md`; they do not alter the active route or next action.
 - The default deliverable is a manufacturable nonprotein artificial adsorbent; protein, folded-peptide or biohybrid routes require an explicit scope reopening by Pan Yao.
 - Terminology is locked by `docs/TERMINOLOGY.md`: biological evidence sources are called biological prototypes or by their exact category; synthetic molecules, macrocycles, functional-group arrangements and pore features are called artificial recognition units. User-facing Chinese must not use the unqualified word `受体` for an artificial element. Proteins and peptide chains remain mechanism evidence, not default material components.
@@ -21,9 +23,11 @@ Develop one primary and one backup biomimetic material for selective adsorption 
 
 ## Current state
 
-Pan Yao subsequently asked that the GLM 100-scheme archive be deprioritized because many entries returned to protein target-binding sites rather than observable biological adsorption prototypes. The binding revalidation is `rounds/original_portfolio_revalidation_1/SUPERVISOR_REVIEW.md`. Under the stricter lens, no current scheme passes biomimetic story, material/experimental science, and engineering validation together. `S1-SYN` remains the strongest original causal design but is only a B-class FABP-informed route with no frozen artificial recognition unit; `BPA-1/P1-MAPy` is a mechanism probe only; `BPA-2E`, `PFBS-1`, and `ROX-1` are engineering controls; `ROX-2` and `BPA-5` remain terminated; `DCP-1` remains paused and tends toward termination.
+The governing plan is now `docs/ADAPTIVE_EXPERIMENT_READY_RESEARCH_PLAN.md`. It supersedes every fixed numerical funnel while preserving all historical portfolios. `E1` means the exact minimal material entity, deletion/mismatch/conventional controls, synthesis, analysis and stop rules are frozen for immediate mechanism testing. `E2` adds the complete material SOP, batch QC, secondary-effluent competition, column, regeneration, leaching and stability package. No current design is E1 or E2; `formal_recommended_designs` is empty.
 
-Two evidence-backed redirections were added for discussion without being promoted to active designs. `PFAS-M1` uses observed PFAS incorporation into phospholipid bilayers and bacteria as a real biological accumulation reference for a covalently stabilized amphiphilic nanodomain, but current evidence is largely chain-length monotonic and does not prove PFOA/PFNA selectivity. `ROX-BF1` uses actual ROX/macrolide sorption in controlled biofilms and aerobic granular sludge as the biological-material reference for a hydrated charged/aromatic gradient, but current evidence supports cationic-drug class adsorption rather than ROX specificity. The discussion priority is `S1-SYN`, `PFAS-M1`, then `ROX-BF1`; no procurement, synthesis, or experiment is authorized.
+Pan Yao subsequently asked that the GLM 100-scheme archive be deprioritized because many entries returned to protein target-binding sites rather than observable biological adsorption prototypes. The binding revalidation is `rounds/original_portfolio_revalidation_1/SUPERVISOR_REVIEW.md`. Under the stricter lens, no current scheme passes biomimetic story, material/experimental science, and engineering validation together. `S1-SYN` remains a B-class pressure-test lead with no frozen artificial recognition unit; `BPA-1/P1-MAPy` is a mechanism probe only; `BPA-2E`, `PFBS-1`, and `ROX-1` are engineering controls; `ROX-2` and `BPA-5` remain terminated; `DCP-1` remains paused and tends toward termination.
+
+Two evidence-backed redirections remain pressure tests rather than a fixed shortlist. `PFAS-M1` uses observed PFAS incorporation into phospholipid bilayers and bacteria as a real biological accumulation reference for a covalently stabilized amphiphilic nanodomain, but current evidence is largely chain-length monotonic and does not prove PFOA/PFNA selectivity. `ROX-BF1` uses actual ROX/macrolide sorption in controlled biofilms and aerobic granular sludge as the biological-material reference for a hydrated charged/aromatic gradient, but current evidence supports cationic-drug class adsorption rather than ROX specificity. The adaptive search may replace both with stronger pollutant/prototype pairs; no procurement, synthesis, or experiment is authorized.
 
 Pan Yao reopened portfolio design because S1-SYN alone did not provide enough success insurance. The material-class-neutral portfolio contains 20 nonprotein artificial adsorbent schemes for BPA (6), PFBS (5), roxithromycin (5), and 2,6-dichlorophenol (4). The full schemes, pre-attack ranking, evidence audit, and top-five attack are under `rounds/portfolio_20_reopen/`; all earlier files and scores remain intact.
 
@@ -114,6 +118,7 @@ Translation-evidence dossiers were prepared in parallel but are deliberately exc
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
 2. Verify `main`, then read `rounds/bpa1_deep_design_1/GEOMETRY_AND_RECEPTOR_TRIAGE.md`; treat all former finalists and S11 as historical only, and S1-SYN as paused.
 3. Read `docs/BIOMIMETIC_DESIGN_FRAMEWORK.md`, `rounds/portfolio_100/README.md`, and `rounds/portfolio_100/SUPERVISOR_AUDIT.md` before using any imported scheme; do not inherit the branch ranking.
-4. Read `rounds/original_portfolio_revalidation_1/SUPERVISOR_REVIEW.md`, then the complete BPA-1, BPA-2, PFBS-1, PFBS-2, ROX-2 and BPA-5 deep-design folders; retain BPA-2E, PFBS-1, CalP4 and the downgraded ROX-2 pore only as controls, with DCP-1 paused at its prior hard gate.
-5. Keep BMDL excluded, preserve every phosphate, top-five, S1, S11 and portfolio artifact, and do not order materials or start experiments.
-6. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.
+4. Read `docs/ADAPTIVE_EXPERIMENT_READY_RESEARCH_PLAN.md` and `rounds/original_portfolio_revalidation_1/SUPERVISOR_REVIEW.md`; treat S1-SYN, PFAS-M1 and ROX-BF1 as pressure tests, not a fixed shortlist.
+5. Execute Phase 0 environmental/problem admission and Phase 1 actual biological-process discovery across `pollutant_kb` without a count quota. Do not generate a material dossier from a protein target-binding result alone.
+6. Keep BMDL excluded, preserve every phosphate, top-five, S1, S11 and portfolio artifact, and do not order materials or start experiments until Pan Yao approves an E1/E2 package.
+7. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

@@ -1,7 +1,10 @@
 project:
   name: biomimetic-adsorbent-design
   owner: Pan Yao
-  executor: Codex
+  executor: Claude Code
+  executor_branch: GLM
+  codex_branch: main
+  branch_split: Claude Code works on GLM and syncs origin/GLM; Codex works on main and syncs origin/main; the two evolve independently and are reconciled manually only if a merge is explicitly requested.
   experimental_handoff: Zhou Jiaqi
   independence: ADRMATS is out of scope and is not a dependency
 

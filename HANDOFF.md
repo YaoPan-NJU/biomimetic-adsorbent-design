@@ -102,3 +102,11 @@ Translation-evidence dossiers were prepared in parallel but are deliberately exc
 3. Read the complete BPA-1, BPA-2, PFBS-1 and PFBS-2 deep-design folders; retain BPA-2E and PFBS-1 as positive controls, keep BPA-2R and PFBS-2 unfrozen, and begin ROX-2 only at the paper attack gate.
 4. Keep BMDL excluded, preserve every phosphate, top-five, S1, S11 and portfolio artifact, and do not order materials or start experiments.
 5. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.
+
+## GLM branch takeover (2026-07-17)
+
+Pan Yao split the repository into two executor workstreams so concurrent Codex and Claude Code sessions do not clash. Codex continues on `main` and syncs `origin/main`; Claude Code took over the executor role on a new `GLM` branch at `df8a7ef` and syncs `origin/GLM` only. The two branches evolve independently, neither cross-pushes, and any future merge is reconciled manually only if explicitly requested.
+
+On `GLM`, `CLAUDE.md` is the Claude Code entrypoint and supersedes `AGENTS.md` for executor identity and branch sync only; `AGENTS.md` is retained as the Codex entrypoint and shared-rules reference. `research_contract.yaml` records `executor: Claude Code` and `executor_branch: GLM` here; `main` keeps `executor: Codex`. `PROJECT_STATE.yaml` records `active_branch: GLM` here; `main` keeps `active_branch: main`. Resume-instruction step 1 still reads `AGENTS.md` as a shared-rules reference, with `CLAUDE.md` as the branch-specific entrypoint.
+
+The research state is unchanged by the takeover. The live phase remains `rox2_nonimprinted_slit_paper_attack`; `primary_design` and `backup_design` remain `null`; the next action remains the ROX-2 paper attack. All historical rounds, scores, and decisions are preserved. BMDL remains excluded from design. No material order, synthesis, or experiment is authorized.

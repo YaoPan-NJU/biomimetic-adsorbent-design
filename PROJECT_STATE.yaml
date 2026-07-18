@@ -4,8 +4,12 @@ phase: rox2_nonimprinted_slit_paper_attack
 status: in_progress
 last_completed_step: PFBS-2 soluble-receptor attack found no exact low-mass nonfluorinated C4-selective receptor and showed guanidinium urea motifs risk preferential sulfate and phosphate capture; PFBS-2 is 52/revise/exact-receptor-not-found
 next_action: Attack ROX-2 nonimprinted rigid slit for exact geometry practical synthesis water compatibility macrolide selectivity and prior art before any material freeze
-active_branch: main
-last_verified_commit: 70539b8
+active_branch: GLM
+executor: Claude Code
+working_branch: GLM
+codex_branch: main
+branch_convention: Claude Code syncs origin/GLM only; Codex syncs origin/main only; do not cross-push; reconcile manually only if a merge is explicitly requested.
+last_verified_commit: df8a7ef
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: four_pollutant_twenty_scheme_portfolio_frozen_and_ranked
 candidate_pollutants:
@@ -336,3 +340,4 @@ checks:
   fresh_clone: passed_at_280855c078eaa4fe975499a52c69a17798328c1b
   context_free_codex_readback: last_passed_at_739c39d; not_repeated_for_portfolio_20_checkpoint
   bpa1_exact_probe: P1_MAPy_retained_as_experiment_gated_probe_no_materialization
+  glm_branch_takeover: mechanical_validators_passed_at_df8a7ef_base_on_GLM_branch_2026-07-17

@@ -77,3 +77,17 @@ Mechanical results:
 - No local Windows, prior Mac user, or temporary-clone absolute path was found in tracked project content.
 
 The fresh clone identifies `synthetic_material_direction_recovery` as the active phase, `S1-SYN` as the only active deep concept, no primary or backup, and one next action: submit an exact nonpeptidic receptor plus OEG-passivated mesoporous-silica immobilization SOP. No context-free model readback was repeated for this checkpoint; the recorded validation is mechanical and document-consistency based.
+
+## GLM branch takeover checkpoint
+
+Validation date: 2026-07-17
+
+Branch `GLM` was created from `main` at `df8a7ef` as the Claude Code workstream; `main` remains the Codex workstream. `CLAUDE.md` was added as the Claude Code entrypoint, `research_contract.yaml` records `executor: Claude Code` and `executor_branch: GLM`, and `PROJECT_STATE.yaml` records `active_branch: GLM`. `AGENTS.md` is retained as the Codex entrypoint and shared-rules reference.
+
+Mechanical results (pre-push, on the GLM working tree):
+
+- `scripts/validate_repository.py`: 95 state artifacts resolved, six BMDL snapshot checksums passed, `branch=GLM` matches `active_branch`, and `next_action` is the ROX-2 paper attack.
+- `scripts/scan_credentials.py`: 168 tracked files passed; no credential pattern was found.
+- `scripts/validate_s11_constructs.py`: all eight historical constructs and the whole-file SHA-256 passed; the S11 record remains intact although its route is scope-superseded.
+
+The research phase and next action are unchanged by the takeover. No material order, synthesis, or experiment is authorized.

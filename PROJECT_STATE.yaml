@@ -2,7 +2,7 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: adaptive_experiment_ready_design_discovery
 status: in_progress
-last_completed_step: Fully reviewed all four commits diverging on origin/GLM through 9d4ad9a and selectively integrated the valid afternoon design lessons, including pollutant-class-level selectivity, without merging stale PFOA state or changing MAC-BI1 release status
+last_completed_step: Prepared a complete owner-review report for MAC-BI1 covering the biomimetic story, correspondence map, material structure, two-step synthesis route, causal controls, engineering validation, paper logic and explicit failure conditions without overstating E1 readiness
 next_action: Freeze one executable commercial-material equal-molar competition prescreen with specified product grades, two trace-concentration levels, material dose, secondary-effluent conditions, LC-MS/MS mass recovery, replication and class-preference stop rules; do not synthesize MAC-BI1 before prescreen results
 active_branch: main
 last_verified_commit: 5625e6e5b16907d540ed69c122c0d30da738a50c
@@ -335,6 +335,7 @@ artifacts:
   gate_g22_rox_macrolide_class_adsorption: orchestration/gates/G22_ROX_MACROLIDE_CLASS_ADSORPTION.yaml
   gate_g23_glm_lessons_integration: orchestration/gates/G23_GLM_LESSONS_INTEGRATION.yaml
   glm_branch_lessons_integration_20260718: docs/GLM_BRANCH_LESSONS_INTEGRATION_2026-07-18.md
+  mac_bi1_owner_review_report_20260718: docs/ROX_MAC_BI1_OWNER_REVIEW_REPORT_2026-07-18.md
   rox_deep_research_report: docs/DEEP_RESEARCH_ROX_BIOMIMETIC_ADSORBENT.md
   rox_alternative_design_tournament: docs/ROX_ALTERNATIVE_PROTOTYPE_AND_DESIGN_TOURNAMENT.md
   rox_macrolide_class_low_cost_adsorbent_replan: docs/ROX_MACROLIDE_CLASS_LOW_COST_ADSORBENT_REPLAN.md

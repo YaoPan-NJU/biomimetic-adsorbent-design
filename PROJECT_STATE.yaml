@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: rox2_nonimprinted_slit_paper_attack
+phase: framework_correction_and_portfolio_reassessment
 status: in_progress
-last_completed_step: PFBS-2 soluble-receptor attack found no exact low-mass nonfluorinated C4-selective receptor and showed guanidinium urea motifs risk preferential sulfate and phosphate capture; PFBS-2 is 52/revise/exact-receptor-not-found
-next_action: Attack ROX-2 nonimprinted rigid slit for exact geometry practical synthesis water compatibility macrolide selectivity and prior art before any material freeze
+last_completed_step: 100-scheme portfolio (5 pollutants x 20 schemes) completed with cull and ranking at f7f797c; framework correction identified need to shift from approach-3 (find proteins that bind pollutants) back to approach-2 (solve engineering problems) + approach-1 (mechanism matching) as documented in source brief
+next_action: Reassess portfolio_100 schemes against corrected biomimetic framework requiring multi-dimensional correspondence (at least 2 hard dimensions), clear pain-point-to-capability causal chain, and honest labeling of biomimetic strength; update PROJECT_STATE and HANDOFF with framework correction before sub-agents continue deep design
 active_branch: GLM
 executor: Claude Code
 working_branch: GLM
@@ -291,6 +291,18 @@ artifacts:
   inorganic_translation_evidence: research/evidence/INORGANIC_TRANSLATION_EVIDENCE.md
   organic_translation_evidence: research/evidence/ORGANIC_TRANSLATION_EVIDENCE.md
   organ_enrichment_biomimetic_heuristic: research/evidence/ORGAN_ENRICHMENT_BIOMIMETIC_HEURISTIC.md
+  biomimetic_design_framework: docs/BIOMIMETIC_DESIGN_FRAMEWORK.md
+  portfolio_100_bpa: rounds/portfolio_100/BPA.md
+  portfolio_100_bpa_cull: rounds/portfolio_100/BPA_CULL.md
+  portfolio_100_rox: rounds/portfolio_100/ROX.md
+  portfolio_100_rox_cull: rounds/portfolio_100/ROX_CULL.md
+  portfolio_100_pfoa: rounds/portfolio_100/PFOA.md
+  portfolio_100_pfoa_cull: rounds/portfolio_100/PFOA_CULL.md
+  portfolio_100_pfbs: rounds/portfolio_100/PFBS.md
+  portfolio_100_pfbs_cull: rounds/portfolio_100/PFBS_CULL.md
+  portfolio_100_dcp: rounds/portfolio_100/DCP.md
+  portfolio_100_dcp_cull: rounds/portfolio_100/DCP_CULL.md
+  portfolio_100_ranking: rounds/portfolio_100/RANKING.md
   orchestration_protocol: orchestration/PROTOCOL.md
   gate_g1: orchestration/gates/G1_SHORTLIST.yaml
   bmdl_attempt1_incident: research/bmdl/PAIRED_EVALUATION_INCIDENT.md
@@ -331,13 +343,15 @@ checks:
   organ_enrichment_heuristic: optional_non_scoring_reference_validated_on_fresh_clone_280855c
   carrier_mass_efficiency: material_class_neutral_contract_validated_on_fresh_clone_280855c
   portfolio_20: twenty_schemes_allocation_score_sums_and_top5_attack_validated_on_fresh_clone_280855c
+  portfolio_100: five_pollutants_twenty_schemes_each_culled_and_ranked_at_f7f797c_no_scheme_reaches_85
+  framework_correction: biomimetic_design_framework_documented_at_2026-07-18_shift_from_approach3_to_approach2_plus_approach1
   secrets_scan: passed_on_fresh_clone_280855c_155_tracked_files
   state_paths: passed_on_fresh_clone_280855c_89_artifacts
   snapshot_checksums: passed_on_fresh_clone_280855c_6_files
   s11_constructs: passed_on_fresh_clone_280855c_8_records_and_file_hash
   machine_specific_paths: none_found_on_fresh_clone_280855c
-  remote_push: portfolio_20_review_280855c_pushed
+  remote_push: portfolio_100_ranking_f7f797c_pushed
   fresh_clone: passed_at_280855c078eaa4fe975499a52c69a17798328c1b
-  context_free_codex_readback: last_passed_at_739c39d; not_repeated_for_portfolio_20_checkpoint
+  context_free_codex_readback: last_passed_at_739c39d; not_repeated_for_portfolio_100_checkpoint
   bpa1_exact_probe: P1_MAPy_retained_as_experiment_gated_probe_no_materialization
   glm_branch_takeover: mechanical_validators_passed_at_df8a7ef_base_on_GLM_branch_2026-07-17

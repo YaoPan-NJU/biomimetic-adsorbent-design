@@ -97,11 +97,12 @@ Translation-evidence dossiers were prepared in parallel but are deliberately exc
 
 ## Resume instructions
 
-1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
-2. Verify `main`, then read `rounds/bpa1_deep_design_1/GEOMETRY_AND_RECEPTOR_TRIAGE.md`; treat all former finalists and S11 as historical only, and S1-SYN as paused.
-3. Read the complete BPA-1, BPA-2, PFBS-1 and PFBS-2 deep-design folders; retain BPA-2E and PFBS-1 as positive controls, keep BPA-2R and PFBS-2 unfrozen, and begin ROX-2 only at the paper attack gate.
-4. Keep BMDL excluded, preserve every phosphate, top-five, S1, S11 and portfolio artifact, and do not order materials or start experiments.
-5. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.
+1. Read `CLAUDE.md`, `SOUL.md`, `PROJECT_STATE.yaml`, `research_contract.yaml`, and `docs/BIOMIMETIC_DESIGN_FRAMEWORK.md`.
+2. Review the framework correction section below (2026-07-18) to understand the shift from approach-3 to approach-2+approach-1.
+3. Read `rounds/portfolio_100/RANKING.md` to see the current 100-scheme portfolio status (no scheme reaches 85).
+4. Reassess portfolio_100 schemes against the corrected biomimetic framework before proceeding with deep design.
+5. Keep BMDL excluded, preserve every phosphate, top-five, S1, S11, portfolio_20 and portfolio_100 artifact, and do not order materials or start experiments.
+6. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.
 
 ## GLM branch takeover (2026-07-17)
 
@@ -110,3 +111,90 @@ Pan Yao split the repository into two executor workstreams so concurrent Codex a
 On `GLM`, `CLAUDE.md` is the Claude Code entrypoint and supersedes `AGENTS.md` for executor identity and branch sync only; `AGENTS.md` is retained as the Codex entrypoint and shared-rules reference. `research_contract.yaml` records `executor: Claude Code` and `executor_branch: GLM` here; `main` keeps `executor: Codex`. `PROJECT_STATE.yaml` records `active_branch: GLM` here; `main` keeps `active_branch: main`. Resume-instruction step 1 still reads `AGENTS.md` as a shared-rules reference, with `CLAUDE.md` as the branch-specific entrypoint.
 
 The research state is unchanged by the takeover. The live phase remains `rox2_nonimprinted_slit_paper_attack`; `primary_design` and `backup_design` remain `null`; the next action remains the ROX-2 paper attack. All historical rounds, scores, and decisions are preserved. BMDL remains excluded from design. No material order, synthesis, or experiment is authorized.
+
+## Biomimetic design framework correction (2026-07-18)
+
+After completing the 100-scheme portfolio (5 pollutants × 20 schemes each, with cull and ranking at commit `f7f797c`), Pan Yao identified a fundamental deviation in the project's biomimetic design approach. This section documents the correction.
+
+### The problem identified
+
+Many schemes in the portfolio followed **approach 3** from the source brief (`docs/source/仿生吸附材料设计任务总纲.md`): "find proteins that can bind the target pollutant, then mimic them." The source brief explicitly deprioritizes this approach:
+
+> "针对某种特定污染物，寻找能特定吸附它的生物原型进行仿生设计。逻辑牵强，'因为难去除，所以自然界有现成方案'这一步不成立。倾向放弃，或仅作个案补充。"
+
+This approach-3 thinking led to schemes like:
+- "FABP4 binds PFOA, so we mimic FABP4" (but FABP4 evolved for fatty acids, not PFOA)
+- "ERRγ binds BPA, so we mimic ERRγ" (but ERRγ binding BPA is endocrine disruption, not a solution)
+- Various schemes with no real biological prototype (pure supramolecular chemistry)
+
+### The corrected framework
+
+The project's main route must be **approach 2 (top-down, solve engineering problems) + approach 1 (bottom-up, mechanism matching)**:
+
+**Approach 2 (Why - rationale layer)**: Identify common engineering challenges in adsorption that traditional synthesis cannot solve. Examples:
+- Structural hierarchy (multi-scale ordered pores)
+- Dynamic response (stimulus-responsive conformational changes)
+- Multi-component cooperative self-assembly
+
+**Approach 1 (How - method layer)**: 
+1. Analyze pollutant properties
+2. Identify adsorption mechanisms (e.g., amino-carboxyl matching, electrostatic attraction)
+3. Find biological prototypes that use the **same mechanisms**
+4. Study how biology implements these mechanisms
+5. Translate the **design principles** (not the protein itself) into materials
+
+**Approach 3 (Case - validation layer)**: Optional, only as case validation, not as the main route.
+
+### Multi-dimensional correspondence requirement
+
+True biomimetic design requires **at least 2 hard correspondences** across these dimensions:
+
+| Dimension | Examples | Addresses pain point |
+|-----------|----------|---------------------|
+| **Static structure** | Hierarchical pores, hydrophilic/hydrophobic patterns | "Why is the pollutant hard to remove?" (intrinsic adsorption capacity) |
+| **Dynamic behavior** | Stimulus response, regeneration | "Why is it hard to design adsorbents?" (engineering bottleneck) |
+
+Single-dimension mimicry (e.g., only copying a binding site) is insufficient and reads as "packaging, not biomimicry."
+
+### Pain point-biomimicry causal chain
+
+The correct sequence is:
+1. **First** determine what biological prototypes can offer (which dimensions can truly be mimicked)
+2. **Then** derive the pain points from those capabilities
+3. **Finally** write the introduction with a closed causal chain
+
+NOT: start with a pain point, then force-fit a biological prototype.
+
+The causal chain must be:
+> Root cause why pollutant is hard to remove → This root cause is exactly what traditional synthesis cannot solve → A biological prototype evolved to solve this root cause → Therefore we mimic its corresponding dimensions
+
+### Material complexity constraint
+
+Do **not** require Ångström-level precise spatial control (e.g., replicating exact protein 3D structures). Instead:
+- Extract **design principles** (e.g., "hydrophobic cavity + polar headgroup anchor + spatial preorganization")
+- Implement these principles with **synthesizable materials** (COFs, hypercrosslinked polymers, etc.)
+- Allow structural flexibility within the design principle
+
+### Terminology standard
+
+Use **"人工识别单元" (artificial recognition unit)** to refer to synthetic molecular recognition structures. Do **not** use "受体" (receptor), which confuses with biological protein receptors.
+
+### Optional bioaccumulation reference
+
+The document `research/evidence/ORGAN_ENRICHMENT_BIOMIMETIC_HEURISTIC.md` provides an **optional, non-scoring** prototype discovery heuristic: study how pollutants bioaccumulate in organisms (e.g., PFOA in liver via FABP binding), understand the mechanism, then intercept pollutants before they enter organisms.
+
+This is **one valid reference line, not mandatory**. It does not change scoring, gates, or the main route.
+
+### Next steps
+
+1. Reassess portfolio_100 schemes against this corrected framework
+2. For each scheme, ask:
+   - What engineering problem does this solve that traditional synthesis cannot?
+   - How many hard correspondence dimensions does it have?
+   - Is the biological prototype real and relevant (not contrived)?
+   - Is the material synthesizable without Ångström-level precision?
+   - Is the pain point derived from the biomimetic capability (not forced)?
+3. Prioritize schemes with strong multi-dimensional correspondence and clear engineering problem solving
+4. Be honest about schemes that are rational design (not truly biomimetic)
+
+See `docs/BIOMIMETIC_DESIGN_FRAMEWORK.md` for the complete framework reference.

@@ -2,8 +2,8 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: adaptive_experiment_ready_design_discovery
 status: in_progress
-last_completed_step: Replaced the fixed-count funnel with an adaptive rolling-delivery plan requiring every recommended scheme to pass biomimetic-story material-science and engineering-validation gates and reach at least E1 mechanism-validation readiness
-next_action: Execute Phase 0 and Phase 1 of docs/ADAPTIVE_EXPERIMENT_READY_RESEARCH_PLAN.md by freezing engineering problem statements for environmentally admitted pollutant_kb entries and searching actual biological adsorption accumulation sequestration barrier partition or selective-transport processes without a candidate-count quota
+last_completed_step: Completed an open ROX design tournament after rejecting path dependence; ROX-BF1 failed E1 attack, ROX-LYS1 was terminated as a selective adsorbent, and ROX-LYS-MIM was retained only as a high-upside membrane-separation lead pending its water gate and owner scope decision
+next_action: Rebuild the strict-adsorbent ROX-BF1 route without unsupported pSBMA anchoring or natural-gradient claims and close its mass balance, aqueous recognition, matched-control, trace-analysis, and stop-rule defects; hold ROX-LYS-MIM at lead_only until Pan Yao decides whether selective membrane separation is in scope
 active_branch: main
 last_verified_commit: b7c419dd7ae3c729c2ca2ac01f121054f69e63d6
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -68,13 +68,29 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
-active_deep_concept: none; adaptive Phase 0 environmental problem freeze and Phase 1 actual biological process discovery are next
+active_deep_concept: ROX open tournament; strict-adsorbent ROX-BF1 is concept_valid and requires redesign, while ROX-LYS-MIM is a separate lead_only membrane branch pending owner scope authorization
 paused_candidates:
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (B-class pressure-test lead; not formally recommended)
 pressure_test_leads_not_fixed_shortlist:
   - S1-SYN hL-FABP-informed nonprotein PFOA/long-chain-PFCA two-region recognition
   - PFAS-M1 phospholipid-interface accumulation-informed stable amphiphilic nanodomain
-  - ROX-BF1 biofilm/EPS sorption-informed hydrated charged-aromatic gradient
+  - ROX-BF1 biofilm/EPS sorption-informed surface-imprinted strict adsorbent; current gradient and pSBMA implementation rejected
+  - ROX-LYS-MIM phagolysosome-inspired selective-permeation and acidic-locking membrane; scope-and-water-gated
+rox_open_tournament:
+  gate: G21_ROX_OPEN_TOURNAMENT
+  status: completed_with_no_E1_release
+  strict_adsorbent_lead:
+    id: ROX-BF1
+    status: concept_valid_redesign_required
+  high_upside_scope_expansion_lead:
+    id: ROX-LYS-MIM
+    status: lead_only_scope_and_water_gate_required
+  terminated_main_route:
+    id: ROX-LYS1
+    status: E0_mechanism_probe_only
+  control_routes:
+    - ROX-PI1 anionic-phospholipid-interface class-partition control
+    - soluble macrocycle panel with no current aqueous ROX-over-analog evidence
 portfolio_20_status: historical_revalidated_bpa2e_pfbs1_rox1_controls_rox2_bpa5_terminated_dcp1_paused
 portfolio_100_status: imported_as_hypothesis_archive_branch_scores_and_advancement_not_inherited_deprioritized_by_owner
 portfolio_100_sources:
@@ -267,8 +283,20 @@ open_issues:
     text: Strict review found no original scheme passing all three gates; the fixed shortlist was replaced by adaptive discovery and the three prior leads remain pressure tests only.
   - id: ADAPTIVE-DISCOVERY-001
     severity: high
-    status: ready_to_execute
-    text: Run open pollutant_kb environmental admission and actual biological process discovery; deliver each scheme only after all three owner gates pass and an independently reviewed E1 or E2 package exists.
+    status: in_progress_ROX_first_tournament_complete
+    text: The first target-specific open discovery tournament is complete for ROX; no design was released at E1 and adaptive discovery continues under the same three non-compensable gates.
+  - id: ROX-OPEN-001
+    severity: high
+    status: resolved
+    text: Broaden ROX discovery beyond the biofilm-plus-imprint mapping and compare real biological accumulation partition transport and sequestration prototypes with nonprotein artificial routes.
+  - id: ROX-BF1-E1-001
+    severity: critical
+    status: redesign_in_progress
+    text: ROX-BF1 cannot enter E1 until the polymer mass balance, surface anchoring, water-state recognition, exact matched controls, isotope-template accounting, trace LC-MS/MS method and quantitative stop rules are closed.
+  - id: ROX-LYS-MIM-SCOPE-001
+    severity: high
+    status: owner_review_required_before_full_SOP
+    text: Decide whether a selective-permeation membrane contactor with acidic receiver is allowed as a biomimetic separation-material branch; until then it remains lead_only and no full material SOP is frozen.
   - id: APPROVAL-001
     severity: high
     status: deferred
@@ -285,6 +313,14 @@ artifacts:
   original_portfolio_strict_review: rounds/original_portfolio_revalidation_1/SUPERVISOR_REVIEW.md
   gate_g19_original_portfolio_revalidation: orchestration/gates/G19_ORIGINAL_PORTFOLIO_REVALIDATION.yaml
   gate_g20_adaptive_replan: orchestration/gates/G20_ADAPTIVE_REPLAN.yaml
+  gate_g21_rox_open_tournament: orchestration/gates/G21_ROX_OPEN_TOURNAMENT.yaml
+  rox_deep_research_report: docs/DEEP_RESEARCH_ROX_BIOMIMETIC_ADSORBENT.md
+  rox_alternative_design_tournament: docs/ROX_ALTERNATIVE_PROTOTYPE_AND_DESIGN_TOURNAMENT.md
+  rox_bf1_frozen_input: rounds/rox_bf1_deep_design_1/FROZEN_INPUT.yaml
+  rox_bf1_attacked_design_draft: rounds/rox_bf1_deep_design_1/DESIGN.md
+  rox_bf1_attack: rounds/rox_bf1_deep_design_1/ATTACK.md
+  rox_bf1_citation_verification: rounds/rox_bf1_deep_design_1/CITATION_VERIFICATION.md
+  rox_lys1_decision: rounds/rox_lys1_probe/ROX_LYS1_DECISION.md
   gate_g18_portfolio100_branch_integration: orchestration/gates/G18_PORTFOLIO100_BRANCH_INTEGRATION.yaml
   handoff: HANDOFF.md
   source_brief: docs/source/仿生吸附材料设计任务总纲.md

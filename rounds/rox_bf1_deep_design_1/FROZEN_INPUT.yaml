@@ -1,0 +1,50 @@
+schema_version: 1
+candidate_id: ROX-BF1
+frozen_at: 2026-07-18
+target:
+  name_zh: 罗红霉素
+  abbreviation: ROX
+  primary_matrix: municipal_wastewater_secondary_effluent
+  mechanism_matrix: ultrapure_or_defined_buffered_water
+  environmentally_relevant_range_ng_L: [100, 1000]
+engineering_problem:
+  statement: >-
+    市政二级出水中的ROX处于ng/L至低ug/L水平，与DOM、盐和结构相近的大环内酯共存；
+    普通负电或疏水材料可以富集阳离子大环内酯，却不能区分ROX，且DOM污染和慢扩散会掩盖真实选择性。
+  closest_competitors:
+    - erythromycin
+    - clarithromycin
+    - azithromycin
+  extended_competitors:
+    - spiramycin
+    - tylosin
+    - cationic_secondary_effluent_micropollutants
+chemical_identity:
+  correct_distinguishing_feature: C9_etheroxime_side_chain_9_O_2_methoxyethoxy_methyl_oxime
+  shorthand_zh: C9醚肟侧链
+  prohibited_shorthand:
+    - 9-O-甲肟醚
+    - 9-O-methoxyimino
+    - 简单甲氧基肟
+biological_prototype:
+  system: wastewater_biofilm_and_EPS
+  directly_supported_function: >-
+    负电水化生物固相对质子化大环内酯进行类别富集，膜厚、孔隙率、密度与扩散共同控制可达分配。
+  unsupported_claims:
+    - native_biofilm_is_ROX_specific
+    - a_specific_EPS_group_is_a_ROX_binding_site
+    - EPS_response_at_mg_L_occurs_at_secondary_effluent_concentrations
+design_decision:
+  material_name: ROX-BioMIP-G
+  architecture: porous_poly_GMA_co_EGDMA_bead_with_thin_ROX_imprinted_anionic_domain_and_ultrathin_pSBMA_hydration_skin
+  biomimetic_module: hydrated_negative_hierarchical_enrichment_and_diffusion_control
+  artificial_recognition_module: whole_ROX_surface_imprinted_cavity_with_C9_etheroxime_side_subcavity
+  preferred_template: roxithromycin_d7
+  rejected_primary_routes:
+    - Cu_or_Zn_coordination
+    - single_urea_thiourea_or_amide_H_bond_pocket
+    - unmodified_beta_cyclodextrin_as_ROX_specific_unit
+    - ribosome_or_protein_binding_site_replication
+release_target: concept_valid_synthesis_and_causal_control_gated
+E1_status: blocked_by_independent_attack
+E2_status: not_open

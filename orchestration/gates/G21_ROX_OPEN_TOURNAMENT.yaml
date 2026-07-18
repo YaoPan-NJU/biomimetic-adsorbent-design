@@ -1,0 +1,45 @@
+gate_id: G21_ROX_OPEN_TOURNAMENT
+date: 2026-07-18
+trigger: owner_rejected_path_dependence_on_biofilm_imprint_mapping
+status: completed_with_no_E1_release
+scope:
+  target: roxithromycin
+  primary_matrix: municipal_secondary_effluent
+  design_count: open
+retrieved_biological_processes:
+  - wastewater_biofilm_sorption_and_diffusion_partition
+  - phagocyte_lysosomal_and_azurophil_granule_accumulation
+  - anionic_phospholipid_membrane_partition
+  - plant_root_uptake
+  - microalgae_adsorption_accumulation_and_degradation
+  - MacAB_TolC_active_transport
+retrieved_artificial_routes:
+  - surface_molecular_imprinting
+  - imprinted_facilitated_transport_membrane
+  - transmembrane_pH_or_ammonium_sulfate_trapping
+  - cyclodextrin_panel
+  - cucurbituril_calixarene_pillararene
+  - metal_coordination
+decisions:
+  ROX_BF1:
+    status: concept_valid
+    reason: strict_adsorbent_scope_best_near_term_but_current_synthesis_and_controls_failed_E1_attack
+  ROX_LYS1:
+    status: terminated_as_ROX_selective_adsorbent
+    retained_as: E0_mechanism_probe
+    reason: strong_direct_biological_story_but_class_capture_AZI_counterexample_and_gradient_transport_conflict
+  ROX_LYS_MIM:
+    status: lead_only
+    reason: high_scientific_upside_and_direct_ROX_imprinted_transport_precedent_but_water_gate_and_scope_expansion_to_membrane_separation_required
+  ROX_PI1:
+    status: control_only
+    reason: direct_ROX_membrane_partition_but_AZI_is_expected_stronger
+  soluble_macrocyclic_hosts:
+    status: lead_only
+    reason: no_direct_ROX_over_ERY_CLA_AZI_aqueous_selectivity_evidence
+formal_release:
+  E1_ready: []
+  E2_ready: []
+next_decision: >-
+  Continue strict-adsorbent redesign of ROX-BF1 without unsupported pSBMA or natural-gradient claims;
+  keep ROX-LYS-MIM as a separate high-upside branch that requires owner authorization before full membrane-material SOP.

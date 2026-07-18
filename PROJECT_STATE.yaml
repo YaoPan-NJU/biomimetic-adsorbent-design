@@ -2,8 +2,8 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: adaptive_experiment_ready_design_discovery
 status: in_progress
-last_completed_step: Completed an open ROX design tournament after rejecting path dependence; ROX-BF1 failed E1 attack, ROX-LYS1 was terminated as a selective adsorbent, and ROX-LYS-MIM was retained only as a high-upside membrane-separation lead pending its water gate and owner scope decision
-next_action: Rebuild the strict-adsorbent ROX-BF1 route without unsupported pSBMA anchoring or natural-gradient claims and close its mass balance, aqueous recognition, matched-control, trace-analysis, and stop-rule defects; hold ROX-LYS-MIM at lead_only until Pan Yao decides whether selective membrane separation is in scope
+last_completed_step: Reframed ROX as low-cost macrolide-class solid adsorption, completed retrieval citation verification isolated attack and independent review, and retained MAC-BI1 only as concept_valid pending a fully frozen commercial-material class-preference prescreen
+next_action: Freeze one executable commercial-material equal-molar competition prescreen with specified product grades, two trace-concentration levels, material dose, secondary-effluent conditions, LC-MS/MS mass recovery, replication and class-preference stop rules; do not synthesize MAC-BI1 before prescreen results
 active_branch: main
 last_verified_commit: e60a1e082aecdc155d26dbdd2a3290dd681d115e
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -68,26 +68,31 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
-active_deep_concept: ROX open tournament; strict-adsorbent ROX-BF1 is concept_valid and requires redesign, while ROX-LYS-MIM is a separate lead_only membrane branch pending owner scope authorization
+active_deep_concept: MAC-BI1 hydrolyzed porous maleic-anhydride-styrene-DVB beads for macrolide-class adsorption; concept_valid and formulation_screen_required
 paused_candidates:
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (B-class pressure-test lead; not formally recommended)
 pressure_test_leads_not_fixed_shortlist:
   - S1-SYN hL-FABP-informed nonprotein PFOA/long-chain-PFCA two-region recognition
   - PFAS-M1 phospholipid-interface accumulation-informed stable amphiphilic nanodomain
-  - ROX-BF1 biofilm/EPS sorption-informed surface-imprinted strict adsorbent; current gradient and pSBMA implementation rejected
-  - ROX-LYS-MIM phagolysosome-inspired selective-permeation and acidic-locking membrane; scope-and-water-gated
+  - MAC-BI1 biofilm-and-anionic-lipid-interface-inspired hydrolyzed porous MAn-St-DVB adsorbent bead
 rox_open_tournament:
-  gate: G21_ROX_OPEN_TOURNAMENT
-  status: completed_with_no_E1_release
+  gate: G22_ROX_MACROLIDE_CLASS_ADSORPTION
+  status: completed_with_concept_reopen_no_E1_release
   strict_adsorbent_lead:
-    id: ROX-BF1
-    status: concept_valid_redesign_required
-  high_upside_scope_expansion_lead:
-    id: ROX-LYS-MIM
-    status: lead_only_scope_and_water_gate_required
+    id: MAC-BI1
+    status: concept_valid_commercial_prescreen_protocol_not_frozen_E1_not_ready
+  engineering_benchmark:
+    id: MAC-C1
+    status: mesoporous_GAC_mandatory_benchmark
+  optional_enhancement:
+    id: MAC-MIP2
+    status: deferred_until_base_bead_class_preference_is_measured
   terminated_main_route:
     id: ROX-LYS1
     status: E0_mechanism_probe_only
+  excluded_scope_route:
+    id: ROX-LYS-MIM
+    status: out_of_scope_membrane_separation
   control_routes:
     - ROX-PI1 anionic-phospholipid-interface class-partition control
     - soluble macrocycle panel with no current aqueous ROX-over-analog evidence
@@ -291,12 +296,20 @@ open_issues:
     text: Broaden ROX discovery beyond the biofilm-plus-imprint mapping and compare real biological accumulation partition transport and sequestration prototypes with nonprotein artificial routes.
   - id: ROX-BF1-E1-001
     severity: critical
-    status: redesign_in_progress
-    text: ROX-BF1 cannot enter E1 until the polymer mass balance, surface anchoring, water-state recognition, exact matched controls, isotope-template accounting, trace LC-MS/MS method and quantitative stop rules are closed.
+    status: superseded_by_MAC_BI1_class_adsorption_replan
+    text: The attacked ROX-specific biofilm-plus-imprint draft remains historical; its pSBMA gradient and isotope-template implementation are not inherited by MAC-BI1.
   - id: ROX-LYS-MIM-SCOPE-001
     severity: high
-    status: owner_review_required_before_full_SOP
-    text: Decide whether a selective-permeation membrane contactor with acidic receiver is allowed as a biomimetic separation-material branch; until then it remains lead_only and no full material SOP is frozen.
+    status: resolved_out_of_scope
+    text: Pan Yao requires a solid adsorbent; selective-permeation membrane and liquid receiver processes are excluded from the current route.
+  - id: ROX-CLASS-SCOPE-001
+    severity: high
+    status: resolved
+    text: Macrolide-class removal is acceptable; ROX-versus-ERY-CLA-AZI discrimination is a bonus, while preference over DOM salts and unrelated micropollutants remains mandatory.
+  - id: MAC-BI1-FORMULATION-001
+    severity: critical
+    status: in_progress_commercial_prescreen_protocol_required
+    text: First freeze and run the commercial-material class-preference prescreen; only then screen MAn-St-DVB bead yield particle size wet strength accessible carboxyl sites pore structure solvent recovery and matched causal controls.
   - id: APPROVAL-001
     severity: high
     status: deferred
@@ -314,8 +327,12 @@ artifacts:
   gate_g19_original_portfolio_revalidation: orchestration/gates/G19_ORIGINAL_PORTFOLIO_REVALIDATION.yaml
   gate_g20_adaptive_replan: orchestration/gates/G20_ADAPTIVE_REPLAN.yaml
   gate_g21_rox_open_tournament: orchestration/gates/G21_ROX_OPEN_TOURNAMENT.yaml
+  gate_g22_rox_macrolide_class_adsorption: orchestration/gates/G22_ROX_MACROLIDE_CLASS_ADSORPTION.yaml
   rox_deep_research_report: docs/DEEP_RESEARCH_ROX_BIOMIMETIC_ADSORBENT.md
   rox_alternative_design_tournament: docs/ROX_ALTERNATIVE_PROTOTYPE_AND_DESIGN_TOURNAMENT.md
+  rox_macrolide_class_low_cost_adsorbent_replan: docs/ROX_MACROLIDE_CLASS_LOW_COST_ADSORBENT_REPLAN.md
+  mac_bi1_attack: rounds/mac_bi1_screen_1/ATTACK.md
+  mac_bi1_review: rounds/mac_bi1_screen_1/REVIEW.md
   rox_bf1_frozen_input: rounds/rox_bf1_deep_design_1/FROZEN_INPUT.yaml
   rox_bf1_attacked_design_draft: rounds/rox_bf1_deep_design_1/DESIGN.md
   rox_bf1_attack: rounds/rox_bf1_deep_design_1/ATTACK.md

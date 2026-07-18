@@ -2,6 +2,7 @@ gate_id: G21_ROX_OPEN_TOURNAMENT
 date: 2026-07-18
 trigger: owner_rejected_path_dependence_on_biofilm_imprint_mapping
 status: completed_with_no_E1_release
+superseded_for_current_scope_by: G22_ROX_MACROLIDE_CLASS_ADSORPTION
 scope:
   target: roxithromycin
   primary_matrix: municipal_secondary_effluent

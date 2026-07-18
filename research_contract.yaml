@@ -98,6 +98,9 @@ owner_hard_gates:
     exact_nonprotein_material_entity: true
     matched_deletion_mismatch_and_conventional_controls: true
     aqueous_selectivity_and_prior_art_attack: true
+    class_level_selectivity_allowed: true
+    within_class_selectivity_required: false
+    class_selectivity_requirement: preferential_removal_over_DOM_salts_and_unrelated_micropollutants
   engineering_validation:
     required: true
     minimum_release_level: E1
@@ -130,6 +133,25 @@ biomimetic_classification:
 
 material_translation:
   default_material_class: synthetic_nonbiological_adsorbent
+  current_product_form: recoverable_solid_particle_or_packed_bed_adsorbent
+  excluded_current_product_forms:
+    - membrane_separation
+    - liquid_receiver_process
+  affordability_and_scale:
+    prohibit_default_components:
+      - antibody
+      - protein
+      - peptide
+      - expensive_two_dimensional_material
+      - precious_metal
+      - custom_multistep_host
+    preferred_operations:
+      - simple_suspension_polymerization
+      - bead_formation
+      - one_step_surface_reaction
+      - simple_hydrolysis
+      - furnace_pyrolysis_or_activation
+    added_step_requires_measurable_gain: true
   terminology_policy:
     biological_evidence_source: biological_prototype_or_exact_biological_category
     synthetic_recognition_term_zh: 人工识别单元

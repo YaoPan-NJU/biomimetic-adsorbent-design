@@ -1,0 +1,45 @@
+gate_id: G22_ROX_MACROLIDE_CLASS_ADSORPTION
+date: 2026-07-18
+trigger: owner_admitted_macrolide_class_removal_and_locked_low_cost_adsorbent_scope
+status: completed_with_concept_reopen_no_E1_release
+owner_decisions:
+  target_function: remove_environmentally_relevant_macrolide_class
+  representative_analytes:
+    - roxithromycin
+    - erythromycin
+    - clarithromycin
+    - azithromycin
+  within_class_selectivity: bonus_not_gate
+  required_selectivity: macrolide_class_over_DOM_salts_and_unrelated_micropollutants
+  product_form: recoverable_solid_or_packed_bed_adsorbent
+  excluded:
+    - membrane_separation
+    - antibody_protein_or_peptide
+    - expensive_two_dimensional_material
+    - precious_metal
+    - unnecessarily_complex_multistep_synthesis
+reopened_biological_prototypes:
+  - wastewater_biofilm_and_EPS_class_sorption
+  - anionic_phospholipid_low_polarity_interface_partition
+  - phagocyte_accumulation_as_supporting_class_evidence_only
+candidate_routes:
+  MAC_BI1:
+    material: hydrolyzed_porous_maleic_anhydride_styrene_DVB_beads
+    status: concept_valid_commercial_prescreen_protocol_not_frozen_E1_not_ready
+    role: primary_story_and_simple_material_candidate
+  MAC_C1:
+    material: mesoporous_granular_activated_carbon
+    status: engineering_benchmark_and_backup_platform
+  MAC_MIP2:
+    material: low_density_macrolide_class_imprint
+    status: deferred_optional_enhancement
+    trigger: base_bead_removes_macrolides_but_lacks_preference_over_unrelated_cationic_drugs
+  ROX_LYS_MIM:
+    status: out_of_scope_membrane_route
+formal_release:
+  E1_ready: []
+  E2_ready: []
+next_action: >-
+  Freeze one executable commercial-material equal-molar competition prescreen with specified product
+  grades, two trace-concentration levels, material dose, secondary-effluent conditions, LC-MS/MS mass
+  recovery, replication and class-preference stop rules; do not synthesize MAC-BI1 before prescreen results.

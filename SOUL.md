@@ -18,7 +18,7 @@ Each claimed correspondence requires a supported biological feature, a concrete 
 
 Every concept must be labeled as functional biomimicry, biological-mechanism-informed design, or rational chemical design. Formal experiment-release candidates must be grounded in an observed biological adsorption, accumulation, sequestration, barrier, partition, selective-transport process, or a directly analogous natural function. Pollutant binding to a toxicity target, enzyme, or ribosome may constrain geometry or chemistry but cannot alone pass the biomimetic-story gate. Biological-mechanism-informed and rational chemical designs remain useful probes or controls when that stronger gate is not met.
 
-Selective adsorption is mandatory. Capacity alone cannot establish success. The experimental plan must include realistic competitors and secondary-effluent matrix effects.
+Selective adsorption is mandatory, but selection may operate at a justified pollutant-class level. When several environmentally important congeners should all be removed, preferential capture of the class over secondary-effluent DOM, salts and unrelated micropollutants is sufficient; within-class discrimination is a bonus rather than a hard gate. Capacity alone cannot establish success. The experimental plan must include realistic competitors and secondary-effluent matrix effects.
 
 Carrier selection is material-class neutral and must account for inactive mass. Report adsorption per total dry composite mass and per packed-bed volume, together with accessible site density and the blank carrier contribution. A carrier cannot be locked merely because its coupling chemistry is convenient. An inert or heavy support is rejected when its mass penalty is not compensated by measured selectivity, matrix tolerance, regeneration, stability, or bed performance; supports that contribute useful porosity or adsorption and self-supporting porous architectures remain eligible.
 
@@ -32,6 +32,8 @@ Carrier selection is material-class neutral and must account for inactive mass. 
 - Discovery and delivery are adaptive. There is no fixed pollutant count, scheme-pool size, finalist count, or primary/backup quota. Every scheme that independently passes all three owner gates is delivered on a rolling basis.
 - Experimental complexity is an optimization concern, not a veto, unless the chemistry is implausible, the claim is not testable, or the risk is unacceptable.
 - The default deliverable is a manufacturable artificial adsorbent. Proteins, expressed constructs, folded peptides, and protein-derived biohybrids require an explicit scope reopening by Pan Yao; they cannot enter by default to satisfy a biomimetic-fidelity or dynamic-correspondence score.
+- The current ROX-centered route must remain a solid adsorbent that can be recovered as particles or operated in a packed bed. Membrane separation and liquid-receiver processes are out of scope.
+- Cost and scale are design constraints. Default candidates must avoid antibodies, proteins, peptides, expensive two-dimensional materials, precious metals and custom multistep hosts. Prefer common monomers, simple suspension polymerization, one-step surface chemistry, bead formation or furnace treatment; every added synthesis step must earn a measurable performance or mechanistic gain.
 - Tissue or organ enrichment is a prototype-discovery signal, not proof that a specific protein causes accumulation. Direct binding, structural, perturbation, or transport evidence is required before a molecular feature is translated.
 - ADRMATS is outside project scope.
 
@@ -70,6 +72,7 @@ Later rounds receive the current proposal and unresolved issues, not the full co
 - Avoid em dashes and the repeated template `不是……而是……` in formal deliverables.
 - Do not begin sentences with bare ambiguous pronouns.
 - Keep terminology consistent across problem statement, design, experiments, and paper narrative.
+- Prefer plain process descriptions over internal shorthand in user-facing Chinese. For example, write "每一部分实际占材料多少、配方能否做出所声称的结构" instead of an unexplained phrase such as "各层质量账本".
 - Explain causal claims through evidence and controls, not adjectives.
 - Do not hide uncertainty. State what is known, inferred, predicted, and still unverified.
 - The final report must read as an experimental handoff, not as an AI conversation.

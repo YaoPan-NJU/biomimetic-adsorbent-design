@@ -21,6 +21,10 @@ Develop one primary and one backup biomimetic material for selective adsorption 
 
 ## Current state
 
+Pan Yao subsequently asked that the GLM 100-scheme archive be deprioritized because many entries returned to protein target-binding sites rather than observable biological adsorption prototypes. The binding revalidation is `rounds/original_portfolio_revalidation_1/SUPERVISOR_REVIEW.md`. Under the stricter lens, no current scheme passes biomimetic story, material/experimental science, and engineering validation together. `S1-SYN` remains the strongest original causal design but is only a B-class FABP-informed route with no frozen artificial recognition unit; `BPA-1/P1-MAPy` is a mechanism probe only; `BPA-2E`, `PFBS-1`, and `ROX-1` are engineering controls; `ROX-2` and `BPA-5` remain terminated; `DCP-1` remains paused and tends toward termination.
+
+Two evidence-backed redirections were added for discussion without being promoted to active designs. `PFAS-M1` uses observed PFAS incorporation into phospholipid bilayers and bacteria as a real biological accumulation reference for a covalently stabilized amphiphilic nanodomain, but current evidence is largely chain-length monotonic and does not prove PFOA/PFNA selectivity. `ROX-BF1` uses actual ROX/macrolide sorption in controlled biofilms and aerobic granular sludge as the biological-material reference for a hydrated charged/aromatic gradient, but current evidence supports cationic-drug class adsorption rather than ROX specificity. The discussion priority is `S1-SYN`, `PFAS-M1`, then `ROX-BF1`; no procurement, synthesis, or experiment is authorized.
+
 Pan Yao reopened portfolio design because S1-SYN alone did not provide enough success insurance. The material-class-neutral portfolio contains 20 nonprotein artificial adsorbent schemes for BPA (6), PFBS (5), roxithromycin (5), and 2,6-dichlorophenol (4). The full schemes, pre-attack ranking, evidence audit, and top-five attack are under `rounds/portfolio_20_reopen/`; all earlier files and scores remain intact.
 
 The pre-attack top five were BPA-1, PFBS-1, PFBS-2, BPA-2, and ROX-1. Attack reduced them to BPA-1 84/revise, BPA-2 74/revise, PFBS-1 74/revise, PFBS-2 73/revise, and ROX-1 67/control-only. No scheme passes the 85/no-open-high final gate. S1-SYN remains paused, not terminated.
@@ -110,6 +114,6 @@ Translation-evidence dossiers were prepared in parallel but are deliberately exc
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
 2. Verify `main`, then read `rounds/bpa1_deep_design_1/GEOMETRY_AND_RECEPTOR_TRIAGE.md`; treat all former finalists and S11 as historical only, and S1-SYN as paused.
 3. Read `docs/BIOMIMETIC_DESIGN_FRAMEWORK.md`, `rounds/portfolio_100/README.md`, and `rounds/portfolio_100/SUPERVISOR_AUDIT.md` before using any imported scheme; do not inherit the branch ranking.
-4. Then read the complete BPA-1, BPA-2, PFBS-1, PFBS-2, ROX-2 and BPA-5 deep-design folders; retain BPA-2E, PFBS-1, CalP4 and the downgraded ROX-2 pore only as controls, with DCP-1 paused at its prior hard gate.
+4. Read `rounds/original_portfolio_revalidation_1/SUPERVISOR_REVIEW.md`, then the complete BPA-1, BPA-2, PFBS-1, PFBS-2, ROX-2 and BPA-5 deep-design folders; retain BPA-2E, PFBS-1, CalP4 and the downgraded ROX-2 pore only as controls, with DCP-1 paused at its prior hard gate.
 5. Keep BMDL excluded, preserve every phosphate, top-five, S1, S11 and portfolio artifact, and do not order materials or start experiments.
 6. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

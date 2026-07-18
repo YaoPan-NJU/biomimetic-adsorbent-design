@@ -1,13 +1,13 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: portfolio_100_supervisor_reassessment
+phase: original_portfolio_revalidation_under_strict_biological_adsorption_lens
 status: in_progress
-last_completed_step: Imported the GLM 100-scheme hypothesis archive and selectively integrated a corrected biomimetic framework; branch scores remain nonauthoritative because several rely on unfrozen artificial recognition units weak biological analogies or superseded claims
-next_action: Reclassify portfolio_100 concepts as functional biomimicry biological-mechanism-informed or rational chemical design then rescore only environmentally admitted concepts with one supported material hard correspondence; do not inherit branch scores or freeze materials
+last_completed_step: Revalidated the original nonprotein portfolio without inheriting GLM scores and separated actual biological adsorption or accumulation references from pollutant binding to protein targets; no scheme passes all three owner gates
+next_action: Pan Yao reviews the ranked S1-SYN PFAS-M1 and ROX-BF1 discussion shortlist; after direction is confirmed freeze exact nonprotein recognition chemistry or amphiphilic nanodomain and matched causal controls for no more than two routes before another paper attack
 active_branch: main
 last_verified_commit: a0222b8f5cc9fc6f61f85e1fab26c141bbe60630
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
-candidate_pool_status: portfolio_100_branch_archive_imported_pending_main_supervisor_reclassification
+candidate_pool_status: original_portfolio_revalidated_glm_archive_deprioritized_three_route_discussion_shortlist_open
 candidate_pollutants:
   - bisphenol A
   - PFBS
@@ -62,11 +62,15 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
-active_deep_concept: no material concept active during portfolio_100 supervisor reclassification; DCP-1 is paused at its environmental and aqueous-mechanism gate and new ROX oxime chemistry remains rational-design evidence only
+active_deep_concept: no material concept active pending owner discussion of S1-SYN PFAS-M1 and ROX-BF1; none is experiment-ready and ROX oxime chemistry remains a rational-design discriminator only
 paused_candidates:
-  - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused pending owner review of the four-pollutant portfolio; not terminated)
-portfolio_20_status: dynamic_reallocation_rox2_and_bpa5_terminated_dcp1_paused_for_portfolio100_reassessment
-portfolio_100_status: imported_as_hypothesis_archive_branch_scores_and_advancement_not_inherited
+  - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused pending owner discussion of the strict three-route shortlist; not terminated)
+discussion_shortlist:
+  - S1-SYN hL-FABP-informed nonprotein PFOA/long-chain-PFCA two-region recognition
+  - PFAS-M1 phospholipid-interface accumulation-informed stable amphiphilic nanodomain
+  - ROX-BF1 biofilm/EPS sorption-informed hydrated charged-aromatic gradient
+portfolio_20_status: historical_revalidated_bpa2e_pfbs1_rox1_controls_rox2_bpa5_terminated_dcp1_paused
+portfolio_100_status: imported_as_hypothesis_archive_branch_scores_and_advancement_not_inherited_deprioritized_by_owner
 portfolio_100_sources:
   - origin/GLM at f7f797c
   - origin/worktree-framework-correction at 207c1a7 selectively_integrated_not_merged
@@ -244,8 +248,12 @@ open_issues:
     text: Reviewed origin/GLM and origin/worktree-framework-correction; imported the 100-scheme records as a hypothesis archive and integrated only framework elements consistent with the current one-hard-correspondence dynamic-optional nonprotein contract.
   - id: PORTFOLIO100-REASSESS-001
     severity: high
-    status: in_progress
-    text: Reclassify all branch-imported schemes by biomimetic strength and current evidence; branch scores cannot displace main decisions and rational chemistry routes cannot be retrofitted with generic biological analogies.
+    status: deferred_by_owner_priority
+    text: Full per-scheme reclassification of the branch-imported archive is deferred because Pan Yao prioritized revalidation of the original designs; branch scores remain nonauthoritative and cannot displace main decisions.
+  - id: ORIGINAL-REVALIDATION-001
+    severity: high
+    status: awaiting_owner_review
+    text: Strict review found no original scheme passing biomimetic-story material-science and engineering-validation gates together; discuss S1-SYN plus the PFAS-M1 membrane-interface and ROX-BF1 biofilm redirections before deep-designing at most two routes.
   - id: APPROVAL-001
     severity: high
     status: deferred
@@ -258,6 +266,8 @@ artifacts:
   portfolio_100_status: rounds/portfolio_100/README.md
   portfolio_100_supervisor_audit: rounds/portfolio_100/SUPERVISOR_AUDIT.md
   portfolio_100_branch_ranking: rounds/portfolio_100/RANKING.md
+  original_portfolio_strict_review: rounds/original_portfolio_revalidation_1/SUPERVISOR_REVIEW.md
+  gate_g19_original_portfolio_revalidation: orchestration/gates/G19_ORIGINAL_PORTFOLIO_REVALIDATION.yaml
   gate_g18_portfolio100_branch_integration: orchestration/gates/G18_PORTFOLIO100_BRANCH_INTEGRATION.yaml
   handoff: HANDOFF.md
   source_brief: docs/source/仿生吸附材料设计任务总纲.md

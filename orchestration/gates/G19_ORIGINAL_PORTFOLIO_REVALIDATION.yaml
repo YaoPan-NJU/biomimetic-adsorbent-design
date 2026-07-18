@@ -1,0 +1,33 @@
+gate: G19_ORIGINAL_PORTFOLIO_REVALIDATION
+status: supervisor_review_complete_awaiting_owner_discussion
+scope:
+  - original_nonprotein_portfolio
+  - completed_deep_design_attacks
+  - strict_actual_biological_adsorption_or_accumulation_preference
+excluded:
+  - portfolio_100_branch_scores
+  - proteins_peptides_and_biohybrids_as_materials
+  - procurement_synthesis_and_experiment
+three_gate_result:
+  biomimetic_story_material_science_engineering_validation_all_passed: false
+retained_original_routes:
+  - id: S1-SYN
+    status: highest_priority_original_route_B_class_no_exact_artificial_recognition_unit
+  - id: BPA-1_P1-MAPy
+    status: soluble_mechanism_probe_only_no_materialization
+engineering_controls:
+  - BPA-2E
+  - PFBS-1
+  - ROX-1
+terminated_or_paused:
+  - ROX-2_terminated
+  - BPA-5_terminated
+  - DCP-1_paused_tending_terminate
+new_discussion_leads:
+  - id: PFAS-M1
+    biological_reference: observed_PFAS_incorporation_into_phospholipid_bilayers_and_bacteria
+    blocking_issue: current_evidence_is_mainly_chain_length_and_headgroup_dependent_not_target_selective
+  - id: ROX-BF1
+    biological_reference: observed_ROX_and_macrolide_sorption_in_biofilms_and_aerobic_granular_sludge
+    blocking_issue: current_evidence_supports_cationic_drug_class_sorption_not_ROX_specificity
+next_action: owner_discussion_then_freeze_no_more_than_two_nonprotein_routes_for_exact_structure_and_causal_control_attack

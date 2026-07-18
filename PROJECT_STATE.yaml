@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: Completed an open ROX design tournament after rejecting path dependence; ROX-BF1 failed E1 attack, ROX-LYS1 was terminated as a selective adsorbent, and ROX-LYS-MIM was retained only as a high-upside membrane-separation lead pending its water gate and owner scope decision
 next_action: Rebuild the strict-adsorbent ROX-BF1 route without unsupported pSBMA anchoring or natural-gradient claims and close its mass balance, aqueous recognition, matched-control, trace-analysis, and stop-rule defects; hold ROX-LYS-MIM at lead_only until Pan Yao decides whether selective membrane separation is in scope
 active_branch: main
-last_verified_commit: b7c419dd7ae3c729c2ca2ac01f121054f69e63d6
+last_verified_commit: e60a1e082aecdc155d26dbdd2a3290dd681d115e
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:
@@ -448,3 +448,9 @@ checks:
   state_paths_latest: passed_on_fresh_clone_b7c419d_114_artifacts
   remote_push_latest: adaptive_replan_b7c419d_pushed
   fresh_clone_latest: passed_at_b7c419dd7ae3c729c2ca2ac01f121054f69e63d6
+  rox_open_tournament: passed_no_path_dependent_default_no_E1_release_at_e60a1e0
+  rox_evidence_and_citation_audit: passed_E083_to_E089_and_attacked_draft_boundaries_at_e60a1e0
+  secrets_scan_rox_latest: passed_on_fresh_clone_e60a1e0_206_tracked_files
+  state_paths_rox_latest: passed_on_fresh_clone_e60a1e0_122_artifacts
+  fresh_clone_rox_latest: passed_at_e60a1e082aecdc155d26dbdd2a3290dd681d115e
+  context_recovery_rox_latest: recovered_no_E1_BF1_redesign_LYS_MIM_scope_gate_at_e60a1e0

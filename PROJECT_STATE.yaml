@@ -2,7 +2,7 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: adaptive_experiment_ready_design_discovery
 status: in_progress
-last_completed_step: Extended the binding design handbook to use activated sludge, biofilms and granular sludge as wastewater-bioprocess prototype-discovery environments, with a WW-0 to WW-3 evidence ladder and mandatory separation of sorption from degradation, uptake, precipitation and analytical loss
+last_completed_step: Completed a 30-source strong-biomimetic innovation audit finding that uniform MAC-BI1 cannot carry biomimicry as the main innovation; retained it as a baseline while defining a narrow owner-review-pending directional-interface redesign window
 next_action: Freeze one executable commercial-material equal-molar competition prescreen with specified product grades, two trace-concentration levels, material dose, secondary-effluent conditions, LC-MS/MS mass recovery, replication and class-preference stop rules; do not synthesize MAC-BI1 before prescreen results
 active_branch: main
 last_verified_commit: 4b4c9045da4c8b683b9513185fc78d0dce10ea56
@@ -319,6 +319,10 @@ open_issues:
     severity: high
     status: resolved_framework_extension
     text: Activated sludge, biofilm and granular-sludge partitioning observations are now eligible prototype-discovery leads, but overall removal cannot support biomimicry until mass balance, sorption-versus-transformation separation, component localization, causal perturbation and EPS-extraction artifact checks are completed.
+  - id: ROX-STRONG-BIOMIMETIC-001
+    severity: critical
+    status: owner_review_required_current_MAC_BI1_fails_strong_biomimetic_innovation_gate
+    text: Thirty-source audit found no causal EPS mechanism for macrolide-class capture and direct prior art for hydrolyzed porous MAn-St-DVB plus mature hydrophobic weak-cation-exchange materials; uniform MAC-BI1 may remain a baseline, while any main biomimetic route requires a separately reviewed directional shallow anionic-low-polarity interface with matched spatial controls.
   - id: APPROVAL-001
     severity: high
     status: deferred
@@ -341,6 +345,7 @@ artifacts:
   gate_g24_wastewater_bioprocess_prototype_discovery: orchestration/gates/G24_WASTEWATER_BIOPROCESS_PROTOTYPE_DISCOVERY.yaml
   glm_branch_lessons_integration_20260718: docs/GLM_BRANCH_LESSONS_INTEGRATION_2026-07-18.md
   mac_bi1_owner_review_report_20260718: docs/ROX_MAC_BI1_OWNER_REVIEW_REPORT_2026-07-18.md
+  rox_strong_biomimetic_innovation_audit_20260718: DEEP_RESEARCH_ROX_STRONG_BIOMIMETIC_INNOVATION_AUDIT.md
   rox_deep_research_report: docs/DEEP_RESEARCH_ROX_BIOMIMETIC_ADSORBENT.md
   rox_alternative_design_tournament: docs/ROX_ALTERNATIVE_PROTOTYPE_AND_DESIGN_TOURNAMENT.md
   rox_macrolide_class_low_cost_adsorbent_replan: docs/ROX_MACROLIDE_CLASS_LOW_COST_ADSORBENT_REPLAN.md

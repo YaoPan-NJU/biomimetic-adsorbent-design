@@ -1,0 +1,43 @@
+gate_id: G25_ROX_STRONG_BIOMIMETIC_INNOVATION_AUDIT
+date: 2026-07-18
+trigger: owner_requires_biomimicry_to_be_the_primary_and_strongly_evidenced_innovation
+status: audit_complete_owner_decision_pending
+sources_reviewed: 30
+citation_spot_check:
+  claims_checked: 8
+  supported: 5
+  partial_and_rewritten: 3
+  unsupported_retained: 0
+current_MAC_BI1:
+  strong_biomimetic_main_design_gate: failed
+  reasons:
+    - biofilm_evidence_supports_broad_cationic_micropollutant_partition_not_macrolide_class_EPS_causality
+    - no_target_macrolide_EPS_removal_readdition_or_equivalent_causal_localization_found
+    - porous_MAn_St_DVB_beads_and_hydrolyzed_carboxylic_cation_exchange_have_direct_prior_art
+    - hydrophobic_plus_weak_cation_exchange_is_a_mature_mixed_mode_material_family
+  retained_roles:
+    - uniform_mixed_mode_baseline
+    - low_cost_commercial_prescreen_mechanism_probe
+  prohibited_role_without_redesign: biomimicry_as_primary_innovation
+conditional_redesign_window:
+  status: hypothesis_only_not_active_design
+  primary_prototype: anionic_phospholipid_shallow_interfacial_orientation_of_macrolides
+  support_role: wastewater_biofilm_environmental_partition_context_only
+  artificial_rule: water_facing_anionic_shallow_layer_adjacent_to_low_polarity_macrolide_accessible_pore_region
+  mandatory_controls:
+    - same_composition_random_distribution
+    - uniform_anionic_distribution
+    - reversed_spatial_order
+    - physical_mixture
+    - commercial_mixed_mode_resin
+    - GAC
+  open_critical_evidence:
+    - direct_ROX_interfacial_orientation
+    - distinction_from_unrelated_hydrophobic_cations
+    - causal_EPS_or_biological_interface_component_localization
+    - low_cost_millimeter_particle_manufacturing
+    - direct_wet_state_spatial_characterization
+owner_decision_required:
+  - retain_MAC_BI1_as_baseline_and_open_directional_interface_redesign
+  - terminate_ROX_biomimetic_route_and_search_new_prototype
+current_experiment_release_unchanged: true

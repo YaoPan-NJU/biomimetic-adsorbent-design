@@ -8,6 +8,8 @@ Before any action, read in this exact order:
 2. `PROJECT_STATE.yaml`
 3. `HANDOFF.md`
 4. `research_contract.yaml`
+5. `docs/BIOMIMETIC_DESIGN_FRAMEWORK.md`
+6. `rounds/portfolio_100/SUPERVISOR_AUDIT.md` when using the 100-scheme branch archive
 
 Then inspect only the artifacts listed in `PROJECT_STATE.yaml`. Do not recover decisions from chat history when the repository contains a recorded decision.
 
@@ -22,6 +24,7 @@ Then inspect only the artifacts listed in `PROJECT_STATE.yaml`. Do not recover d
 - Never leave the only copy of a decision or next action in an uncommitted local file.
 - Read and obey `docs/TERMINOLOGY.md`. In user-facing Chinese, call synthetic recognition chemistry `人工识别单元`, never the unqualified `受体`; reserve `生物原型` or an exact biological category for proteins, enzymes, ribosomes, and other biological evidence sources.
 - Do not reintroduce proteins, peptide chains, folded peptides, expression constructs, or labile biological components into the default material design. They are mechanism evidence only unless Pan Yao explicitly reopens scope.
+- Treat `rounds/portfolio_100/` as a branch-imported hypothesis archive. Do not inherit its scores, candidate status, evidence tier, or next action without the main-branch supervisor audit and current evidence verification.
 
 ## Completion protocol
 

@@ -10,9 +10,13 @@ The project must preserve this chain:
 
 engineering bottleneck -> conventional capability gap -> biological solution -> translatable material feature -> selective adsorption mechanism -> falsifiable experiment -> paper claim.
 
+The engineering bottleneck and pollutant-specific selective barrier must be stated before biological-prototype retrieval. Later evidence may refine the statement, but a prototype cannot be used to retrospectively manufacture the pain point. `docs/BIOMIMETIC_DESIGN_FRAMEWORK.md` is the binding interpretation guide.
+
 The primary design must contain at least one hard functional correspondence that is translated into a concrete artificial-material feature. A dynamic correspondence is optional: it may strengthen a design only when it solves a selective-adsorption problem that the static material cannot solve and has its own measurement and causal control. Missing dynamic evidence cannot force a protein, peptide fold, hinge, or responsive unit into the material.
 
 Each claimed correspondence requires a supported biological feature, a concrete material implementation, a measurable consequence, and a causal control. Morphological resemblance, a familiar bio-derived polymer, or a generic functional group is insufficient.
+
+Every concept must be labeled as functional biomimicry, biological-mechanism-informed design, or rational chemical design. Only the first two can contribute a biological hard correspondence; rational chemical designs remain useful controls or independent routes but cannot be relabeled through a generic protein-pocket analogy.
 
 Selective adsorption is mandatory. Capacity alone cannot establish success. The experimental plan must include realistic competitors and secondary-effluent matrix effects.
 

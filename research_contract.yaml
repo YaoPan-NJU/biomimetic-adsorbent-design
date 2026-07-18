@@ -93,6 +93,18 @@ hard_correspondence:
     - measurement
     - causal_control
 
+biomimetic_classification:
+  required_for_every_concept: true
+  classes:
+    functional_biomimicry: biological_system_solves_an_analogous_natural_function_with_direct_evidence
+    biological_mechanism_informed: direct_biological_binding_or_structure_constrains_design_but_is_not_a_natural_pollution_solution
+    rational_chemical_design: no_supported_biological_hard_correspondence
+  rational_design_cannot_be_retrofitted_with_generic_protein_analogy: true
+  engineering_problem_statement_precedes_prototype_retrieval: true
+  minimum_hard_correspondences: 1
+  second_hard_correspondence_is_bonus_not_gate: true
+  dynamic_correspondence_remains_optional: true
+
 material_translation:
   default_material_class: synthetic_nonbiological_adsorbent
   terminology_policy:

@@ -1,13 +1,13 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: dcp1_soluble_recognition_paper_attack
+phase: portfolio_100_supervisor_reassessment
 status: in_progress
-last_completed_step: ROX-2 was terminated at independent-review 40 because no ROX-specific ribosomal geometry exists; BPA-5 was then terminated at independent-review 40 because the two-ended ERRgamma claim is not necessary biology no exact aqueous calix4 receptor passed and direct polycalix4 BPA prior art exists
-next_action: Attack DCP-1 at the soluble-recognition and environmental gates for aqueous halogen-bond plausibility 2,6-DCP significance exact receptor chemistry analog selectivity and prior art before any POP design
+last_completed_step: Imported the GLM 100-scheme hypothesis archive and selectively integrated a corrected biomimetic framework; branch scores remain nonauthoritative because several rely on unfrozen artificial recognition units weak biological analogies or superseded claims
+next_action: Reclassify portfolio_100 concepts as functional biomimicry biological-mechanism-informed or rational chemical design then rescore only environmentally admitted concepts with one supported material hard correspondence; do not inherit branch scores or freeze materials
 active_branch: main
 last_verified_commit: 7c573bb857281994a5bb1201edde84db621fb3ee
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
-candidate_pool_status: four_pollutant_twenty_scheme_portfolio_frozen_and_ranked
+candidate_pool_status: portfolio_100_branch_archive_imported_pending_main_supervisor_reclassification
 candidate_pollutants:
   - bisphenol A
   - PFBS
@@ -62,10 +62,14 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
-active_deep_concept: DCP-1 ortho-chlorine geometry and urea recognition entering paper attack; ROX-2 and BPA-5 are terminated while PFBS-2 and BPA-2R remain unfrozen and PFBS-1 BPA-2E and downgraded ROX-2 are controls only
+active_deep_concept: no material concept active during portfolio_100 supervisor reclassification; DCP-1 is paused at its environmental and aqueous-mechanism gate and new ROX oxime chemistry remains rational-design evidence only
 paused_candidates:
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused pending owner review of the four-pollutant portfolio; not terminated)
-portfolio_20_status: dynamic_reallocation_rox2_and_bpa5_terminated_dcp1_active
+portfolio_20_status: dynamic_reallocation_rox2_and_bpa5_terminated_dcp1_paused_for_portfolio100_reassessment
+portfolio_100_status: imported_as_hypothesis_archive_branch_scores_and_advancement_not_inherited
+portfolio_100_sources:
+  - origin/GLM at f7f797c
+  - origin/worktree-framework-correction at 207c1a7 selectively_integrated_not_merged
 portfolio_20_allocation:
   BPA: 6
   PFBS: 5
@@ -228,12 +232,20 @@ open_issues:
     text: BPA-5 has no retrieved exact bifunctional calix4 receptor that passes the aqueous analog gate; the two-ended ERRgamma necessity claim is unsupported and direct polycalix4 BPA water prior art exists; independent review scored 40.
   - id: DCP1-S0-001
     severity: high
-    status: in_progress
+    status: paused_by_portfolio_100_reassessment
     text: Before any POP design determine whether aqueous halogen bonding or halogen-affinity geometry can distinguish 2,6-DCP from positional isomers and hydrophobicity pKa controls and independently confirm the secondary-effluent environmental gate.
   - id: TERM-001
     severity: high
     status: resolved
     text: User-facing terminology now separates biological prototypes from artificial recognition units; unqualified receptor wording for synthetic elements is prohibited and protein or peptide components remain outside default material scope.
+  - id: BRANCH-INTEGRATION-001
+    severity: high
+    status: resolved
+    text: Reviewed origin/GLM and origin/worktree-framework-correction; imported the 100-scheme records as a hypothesis archive and integrated only framework elements consistent with the current one-hard-correspondence dynamic-optional nonprotein contract.
+  - id: PORTFOLIO100-REASSESS-001
+    severity: high
+    status: in_progress
+    text: Reclassify all branch-imported schemes by biomimetic strength and current evidence; branch scores cannot displace main decisions and rational chemistry routes cannot be retrofitted with generic biological analogies.
   - id: APPROVAL-001
     severity: high
     status: deferred
@@ -242,6 +254,11 @@ artifacts:
   contract: research_contract.yaml
   rules: SOUL.md
   terminology: docs/TERMINOLOGY.md
+  biomimetic_design_framework: docs/BIOMIMETIC_DESIGN_FRAMEWORK.md
+  portfolio_100_status: rounds/portfolio_100/README.md
+  portfolio_100_supervisor_audit: rounds/portfolio_100/SUPERVISOR_AUDIT.md
+  portfolio_100_branch_ranking: rounds/portfolio_100/RANKING.md
+  gate_g18_portfolio100_branch_integration: orchestration/gates/G18_PORTFOLIO100_BRANCH_INTEGRATION.yaml
   handoff: HANDOFF.md
   source_brief: docs/source/仿生吸附材料设计任务总纲.md
   bmdl_manifest: data/bmdl_snapshot/manifest.json
@@ -361,3 +378,5 @@ checks:
   rox2_disposition: terminated_at_independent_review_40_macrolide_class_pore_control_only
   bpa5_disposition: terminated_at_independent_review_40_no_exact_aqueous_calix4_receptor_and_direct_prior_art
   citation_verification: bpa5_titles_cycle_metric_fulltext_table_locators_and_nonexistence_language_corrected
+  branch_review: GLM_and_worktree_framework_correction_selectively_integrated_no_wholesale_merge
+  portfolio_100_import: hypothesis_archive_only_scores_and_candidate_status_not_inherited

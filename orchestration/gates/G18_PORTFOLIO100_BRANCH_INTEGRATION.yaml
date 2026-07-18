@@ -1,0 +1,27 @@
+gate: G18_PORTFOLIO100_BRANCH_INTEGRATION
+status: branch_review_complete_selective_integration
+reviewed_remote_branches:
+  - origin/GLM
+  - origin/worktree-framework-correction
+accepted:
+  - five_pollutant_100_scheme_archive_and_cull_records
+  - ROX_9O_methoxyimino_as_rational_selectivity_lead
+  - PFOA_headgroup_plus_limited_chain_region_design_constraints
+  - matched_COF_POP_site_deletion_mismatch_and_equal_pore_controls
+  - engineering_problem_and_biomimetic_strength_classification
+  - nonprotein_translation_and_artificial_recognition_unit_terminology
+rejected:
+  - branch_scores_as_main_scores
+  - branch_advancement_or_finalist_status
+  - mandatory_two_hard_correspondences
+  - mandatory_dynamic_or_multidimensional_biomimicry
+  - biological_evolution_for_same_pollutant_requirement
+  - prototype_first_reverse_engineering_of_project_pain_point
+  - unsupported_BPA_degradation_enzyme_and_ROX_ribosome_examples
+  - CLAUDE_branch_executor_state_on_main
+scientific_boundaries:
+  - PFOA_FABP4_score_83_not_inherited_no_exact_artificial_recognition_unit
+  - BPA3_score_78_not_inherited_symmetric_ERRgamma_mapping_superseded
+  - DCP101_score_79_not_inherited_neutral_chlorine_halogen_bond_role_unproven
+  - ROX_oxime_routes_are_rational_design_until_a_supported_biological_hard_correspondence_exists
+next_action: classify_and_rescore_environmentally_admitted_portfolio_100_concepts_under_main_framework

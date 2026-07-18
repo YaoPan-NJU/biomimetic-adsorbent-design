@@ -1,5 +1,7 @@
 # 全局排序与讨论集（portfolio_100 综合轮）
 
+> **状态警告：** 本文件是 `GLM` 分支的原始探索排序，已由 `main` 的 `SUPERVISOR_AUDIT.md` 审计。分数、晋级身份和下一动作均不得直接继承；新的用户交付须使用“人工识别单元”等当前术语。
+
 监督综合角色输出。跨五污染物（BPA、ROX、PFOA、PFBS、DCP）各 20 方案共 100 条，经各污染物轮淘汰至各 5 条保留方案后，在此做全局排序与讨论集切片。通过线 85，未决 critical 允许 0，硬对应规则要求 biological_feature 加 source_support 等六字段。本轮独立复核三处承重来源：PDB 2E2R（ERRγ 配体结合域与双酚 A，1.60 Å，Matsushima 等 2007 J Biochem，经 RCSB 核验为真）、PDB 1SBP（硫酸结合蛋白，1.70 Å，Sack 与 Quiocho 存库，经 RCSB 核验为真）、Zeppuhar 等 ACS AMI 2023（10.1021/acsami.3c12826，标题经 Crossref 核验为"Linkage Transformations in a Three-Dimensional Covalent Organic Framework for High-Capacity Adsorption of Perfluoroalkyl Substances"，为真）。Zeppuhar 先例所引容量值（PFOA 约 250 mg/g）与二甲铵阳离子静电机制归属来自上一轮全文查验，本轮出版商页返回 403，无法独立再确认，下文如实标注。
 
 ## 一、全局排名（跨污染物前 12）

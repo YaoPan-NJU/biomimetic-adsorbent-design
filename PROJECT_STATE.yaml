@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: Added the complete MAC-BI1 scientific narrative and paper logic while preserving its E1-not-ready status, and audited which recent main pushes can be directly attributed to the current Codex task
 next_action: Freeze one executable commercial-material equal-molar competition prescreen with specified product grades, two trace-concentration levels, material dose, secondary-effluent conditions, LC-MS/MS mass recovery, replication and class-preference stop rules; do not synthesize MAC-BI1 before prescreen results
 active_branch: main
-last_verified_commit: f86910d8ccdf80d56e1e9428a1bd469b724a3b55
+last_verified_commit: 5ea8e4e7a3d39a332814d64c9142197819e4dcc4
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:
@@ -478,3 +478,8 @@ checks:
   state_paths_mac_latest: passed_on_fresh_clone_f86910d_126_artifacts
   fresh_clone_mac_latest: passed_at_f86910d8ccdf80d56e1e9428a1bd469b724a3b55
   context_recovery_mac_latest: recovered_MAC_BI1_prescreen_no_synthesis_next_action_at_f86910d
+  mac_bi1_complete_narrative: passed_full_story_material_synthesis_controls_scale_and_paper_logic_at_5ea8e4e
+  main_push_audit: confirmed_current_task_pushes_e60a1e0_7d7350d_f86910d_77e143c_5ea8e4e
+  secrets_scan_narrative_latest: passed_on_fresh_clone_5ea8e4e_211_tracked_files
+  state_paths_narrative_latest: passed_on_fresh_clone_5ea8e4e_127_artifacts
+  fresh_clone_narrative_latest: passed_at_5ea8e4e7a3d39a332814d64c9142197819e4dcc4

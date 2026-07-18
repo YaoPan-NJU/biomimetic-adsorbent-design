@@ -1,8 +1,8 @@
 # main近期提交与推送归属审计
 
-审计时间：2026-07-18 17:04（Asia/Shanghai）
+审计时间：2026-07-18 17:23（Asia/Shanghai）
 
-审计范围：`main`截至`77e143cbe3d2802a965220bef71b7dd17042a0d5`。
+审计范围：`main`截至`5ea8e4e7a3d39a332814d64c9142197819e4dcc4`。
 
 ## 1. 能够从Git数据确认什么
 
@@ -20,8 +20,9 @@
 | 2026-07-18 14:36 | `7d7350d` | record ROX checkpoint continuity | 当前任务成功执行`git push origin main` |
 | 2026-07-18 17:02 | `f86910d` | reframe ROX as low-cost macrolide adsorption | 当前任务成功执行`git push origin main` |
 | 2026-07-18 17:04 | `77e143c` | record macrolide replan continuity | 当前任务成功执行`git push origin main` |
+| 2026-07-18 17:22 | `5ea8e4e` | complete MAC-BI1 narrative and audit pushes | 当前任务成功执行`git push origin main`；GitHub PushEvent actor为`YaoPan-NJU` |
 
-GitHub PushEvent的UTC时间分别为06:35、06:36、09:03和09:04，actor均为`YaoPan-NJU`，与上述本地时间和提交链一致。
+上述五次GitHub PushEvent的actor均为`YaoPan-NJU`，时间与本地提交链一致。
 
 ## 3. 不能仅凭当前证据归到本任务的提交
 

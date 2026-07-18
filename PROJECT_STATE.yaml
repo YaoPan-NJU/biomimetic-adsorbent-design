@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: Replaced the fixed-count funnel with an adaptive rolling-delivery plan requiring every recommended scheme to pass biomimetic-story material-science and engineering-validation gates and reach at least E1 mechanism-validation readiness
 next_action: Execute Phase 0 and Phase 1 of docs/ADAPTIVE_EXPERIMENT_READY_RESEARCH_PLAN.md by freezing engineering problem statements for environmentally admitted pollutant_kb entries and searching actual biological adsorption accumulation sequestration barrier partition or selective-transport processes without a candidate-count quota
 active_branch: main
-last_verified_commit: 71205c5f51541be9b2e2cee7b86504f2d219dfce
+last_verified_commit: b7c419dd7ae3c729c2ca2ac01f121054f69e63d6
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:
@@ -407,3 +407,8 @@ checks:
   citation_verification: bpa5_titles_cycle_metric_fulltext_table_locators_and_nonexistence_language_corrected
   branch_review: GLM_and_worktree_framework_correction_selectively_integrated_no_wholesale_merge
   portfolio_100_import: hypothesis_archive_only_scores_and_candidate_status_not_inherited
+  adaptive_replan: passed_on_fresh_clone_b7c419d_no_fixed_counts_three_hard_gates_E1_E2_release
+  secrets_scan_latest: passed_on_fresh_clone_b7c419d_197_tracked_files
+  state_paths_latest: passed_on_fresh_clone_b7c419d_114_artifacts
+  remote_push_latest: adaptive_replan_b7c419d_pushed
+  fresh_clone_latest: passed_at_b7c419dd7ae3c729c2ca2ac01f121054f69e63d6

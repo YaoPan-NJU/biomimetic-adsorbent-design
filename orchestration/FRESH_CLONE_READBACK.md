@@ -119,3 +119,20 @@ Mechanical results:
 - The corrected framework and portfolio supervisor audit both resolved from the clone.
 
 The clone does not treat the imported branch ranking as current state. It identifies the 100-scheme files as a hypothesis archive, keeps DCP-1 paused, and requires biomimetic-strength reclassification before any rescore or material freeze.
+
+## Adaptive experiment-ready discovery checkpoint
+
+Validation date: 2026-07-18
+
+Validated commit: `b7c419dd7ae3c729c2ca2ac01f121054f69e63d6`
+
+The private remote was cloned after the fixed numerical funnel was replaced by the adaptive experiment-ready research plan. The clone was clean and matched `origin/main`.
+
+Mechanical results:
+
+- `scripts/validate_repository.py`: 114 state-indexed artifacts resolved and six BMDL snapshot checksums passed.
+- `scripts/scan_credentials.py`: 197 tracked files passed; no credential pattern was found.
+- YAML assertions confirmed an open pollutant and scheme pool, rolling delivery, inactive primary/backup labels and empty E1/E2 release registers.
+- The contract records that pollutant target-protein binding alone cannot pass the biomimetic-story gate.
+
+The clone identifies `adaptive_experiment_ready_design_discovery` as the active phase. Its unique next action is Phase 0 environmental/problem freezing plus Phase 1 search for actual biological adsorption, accumulation, sequestration, barrier, partition or selective-transport processes across environmentally admitted `pollutant_kb` entries without a candidate-count quota. `S1-SYN`, `PFAS-M1` and `ROX-BF1` are pressure tests rather than a fixed shortlist, and no experiment is authorized before Pan Yao approves an independently reviewed E1/E2 package.

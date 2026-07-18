@@ -95,6 +95,13 @@ hard_correspondence:
 
 material_translation:
   default_material_class: synthetic_nonbiological_adsorbent
+  terminology_policy:
+    biological_evidence_source: biological_prototype_or_exact_biological_category
+    synthetic_recognition_term_zh: 人工识别单元
+    unvalidated_synthetic_term_zh: 候选人工识别单元
+    validated_synthetic_term_zh: 已验证人工识别单元
+    prohibit_unqualified_receptor_for_synthetic_elements: true
+    historical_artifacts_are_not_bulk_rewritten: true
   carrier_class: not_preselected
   carrier_mass_efficiency:
     principle: minimize_inactive_mass_without_sacrificing_selectivity_or_operability

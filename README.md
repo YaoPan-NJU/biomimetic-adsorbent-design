@@ -2,6 +2,8 @@
 
 面向市政二级出水选择性吸附的独立研究仓库。Codex 负责证据整理、材料设计和对抗审查，Pan Yao负责科学决策，实验交接对象为 Zhou Jiaqi。本项目与 ADRMATS 无关。
 
+术语遵循 [`docs/TERMINOLOGY.md`](docs/TERMINOLOGY.md)：蛋白、酶、核糖体等称为“生物原型”或其准确类别；人工小分子、主体腔、官能团组合和孔口结构统一称为“人工识别单元”。通过水相因果验证前必须标为候选或设想，不用无修饰的“受体”指代人工结构。
+
 ## 当前结论
 
 当前没有通过的主方案或备选方案，`primary_design` 与 `backup_design` 均为 `null`。BPA、PFBS、罗红霉素和 2,6-二氯苯酚的 20 方案扩展与统一排名已经完成；原始前五经攻击后均未达到终审门槛，见 [`rounds/portfolio_20_reopen/REVIEW.md`](rounds/portfolio_20_reopen/REVIEW.md)。

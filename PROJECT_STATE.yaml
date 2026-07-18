@@ -230,6 +230,10 @@ open_issues:
     severity: high
     status: in_progress
     text: Before any POP design determine whether aqueous halogen bonding or halogen-affinity geometry can distinguish 2,6-DCP from positional isomers and hydrophobicity pKa controls and independently confirm the secondary-effluent environmental gate.
+  - id: TERM-001
+    severity: high
+    status: resolved
+    text: User-facing terminology now separates biological prototypes from artificial recognition units; unqualified receptor wording for synthetic elements is prohibited and protein or peptide components remain outside default material scope.
   - id: APPROVAL-001
     severity: high
     status: deferred
@@ -237,6 +241,7 @@ open_issues:
 artifacts:
   contract: research_contract.yaml
   rules: SOUL.md
+  terminology: docs/TERMINOLOGY.md
   handoff: HANDOFF.md
   source_brief: docs/source/仿生吸附材料设计任务总纲.md
   bmdl_manifest: data/bmdl_snapshot/manifest.json

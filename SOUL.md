@@ -40,6 +40,13 @@ Carrier selection is material-class neutral and must account for inactive mass. 
 - Separate fact, source-backed lead, inference, and design hypothesis.
 - A hard claim requires directly inspected support. Missing support is a knowledge gap, not permission to infer certainty.
 
+## Terminology and biological-component boundary
+
+- Use `生物原型` or the exact biological category such as protein, enzyme, ribosome, or tissue microenvironment for the biological evidence source. Do not use a generic receptor label when the entity is not a receptor protein.
+- Use `人工识别单元` for a synthetic small molecule, macrocyclic host, functional-group arrangement, pore entrance, or other artificial recognition element. Before aqueous causal validation, qualify it as `候选` or `设想`; after validation, use `已验证人工识别单元`.
+- Do not use the unqualified Chinese word `受体` for an artificial recognition element in user-facing text. Historical files remain unchanged for audit, but every new summary must translate their terminology according to `docs/TERMINOLOGY.md`.
+- Biological structures provide functional evidence only. Protein sequences, peptide chains, folds, expression constructs, or labile biological components cannot enter the default material design unless Pan Yao explicitly reopens that scope.
+
 ## BMDL rules
 
 BMDL is a candidate source to be tested, not an authority. Model-only baselines are frozen first. BMDL may enter design only after paired blind evaluation. Its output must never silently determine the prototype or restrict outside search. The dirty `performance_data=3015` count is not evidence volume and cannot be used for ranking.

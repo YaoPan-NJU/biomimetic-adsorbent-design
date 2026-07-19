@@ -2,7 +2,7 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: fresh_1000_scheme_marathon
 status: in_progress
-last_completed_step: "Fresh-1000 program launched per Pan Yao's 2026-07-19 directive: 20 pollutants x target 50 closed-loop biomimetic schemes (1000 slots); SPEC.md and STATUS.yaml committed; PFOA Phase A brief and angle map running"
+last_completed_step: "PFOA Phase A complete: BRIEF.md and DESIGN_SPACE.md committed (26 honest mechanism-distinct angles, ceiling 26 not padded; biological-treatment-unit heuristic ruled not-qualified, organ-enrichment heuristic qualified with three hard constraints); Phase B batch 1 (slots A01-A05) running"
 next_action: "Complete PFOA Phase A brief and angle map; then run scheme slots in batches of five (design-attack-review, rebuild policy per SPEC.md); commit and push each completed scheme to origin/Qwen"
 active_branch: Qwen
 last_verified_commit: 75c8144

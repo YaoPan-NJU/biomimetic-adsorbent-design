@@ -13,12 +13,12 @@ execution_order: [pfoa, dcp26, bpa, pfbs, rox, genx, pfhxs, pcp, octocrylene, be
 pollutants:
   pfoa:
     name: "全氟辛酸 PFOA"
-    brief: in_progress
-    angles_planned: null
+    brief: complete
+    angles_planned: 26
     attempted: 0
     passed: 0
     terminated: 0
-    status: phase_a_running
+    status: phase_b_batch_1
   dcp26:
     name: "2,6-二氯苯酚"
     brief: pending
@@ -175,4 +175,4 @@ totals:
   attempted: 0
   passed: 0
   terminated: 0
-last_updated: "2026-07-19"
+last_updated: "2026-07-20"

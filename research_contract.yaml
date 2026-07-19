@@ -1,10 +1,7 @@
 project:
   name: biomimetic-adsorbent-design
   owner: Pan Yao
-  executor: Claude Code
-  executor_branch: kimi-k3
-  codex_branch: main
-  branch_split: Claude Code works on kimi-k3 and syncs origin/kimi-k3; Codex works on main and syncs origin/main; the two evolve independently and are reconciled manually only if a merge is explicitly requested.
+  executor: Qwen
   experimental_handoff: Zhou Jiaqi
   independence: ADRMATS is out of scope and is not a dependency
 
@@ -28,20 +25,26 @@ deliverable:
     - user-facing CLI or agent product
 
 water_context:
-  primary: municipal wastewater treatment secondary effluent
-  mechanism_control: ultrapure water
-  optional_external_validation:
-    - surface water
-    - drinking water
+  principle: any_environmental_water_treatment_scenario_with_demonstrated_significance
+  eligible_examples:
+    - municipal_wwtp_secondary_effluent
+    - industrial_wastewater
+    - surface_water
+    - drinking_water_source
+    - groundwater
+  mechanism_control: ultrapure_or_deionized_water
+  admission_requirement: independently_verified_environmental_relevance_and_practical_value
 
 pollutant_admission:
   scope: organic_pollutants_with_priority_for_emerging_contaminants
-  seed_source: pollutant_kb.pollutant_index
+  seed_source: web_literature_search_and_regulatory_lists
   seed_source_role: candidate_discovery_not_risk_authority
   hard_gates:
     - organic_pollutant
-    - independently_verified_secondary_effluent_relevance
-    - independently_verified_environmental_or_health_concern
+    - independently_verified_environmental_relevance
+    - independently_verified_practical_treatment_value
+    - identified_specific_scientific_problem
+    - identified_engineering_challenge
     - meaningful_selective_adsorption_problem
     - falsifiable_biomimetic_design_opportunity
   priority_verification_group:
@@ -56,13 +59,21 @@ pollutant_admission:
     - admit_nutrients_or_inorganic_pollutants_without_explicit_scope_reopening
 
 funnel:
-  source_pollutants: 20
-  scheme_portfolio: 10
+  source_pollutants: open_candidate_pool
+  scientific_problem_gate: required_before_scheme_design
+  scheme_portfolio: mechanism_distinct
   recommended_schemes: 5
   deep_concepts: 5
   finalists: 2
   primary: 1
   backup: 1
+
+scientific_problem_gate:
+  required_before_prototype_search: true
+  must_identify:
+    - specific_scientific_problem: "ensures academic depth and mechanistic novelty"
+    - engineering_challenge: "ensures practical application scenario and paper closure"
+  closure_requirement: "the paper introduction must show: pollutant difficulty -> scientific problem -> engineering challenge -> why conventional methods fail -> biological solution -> material translation"
 
 pollutant_scoring:
   applies_only_after_all_admission_gates_pass: true
@@ -134,19 +145,28 @@ material_translation:
     - report_capacity_only_per_receptor_or_active_fraction
     - ignore_inert_carrier_mass_in_gravimetric_comparisons
 
-bmdl_gate:
-  baseline_must_be_frozen_first: true
-  design_assist:
-    minimum_pairwise_wins: 6
-    minimum_mean_gain: 5
-    maximum_originality_drop: 2
-    maximum_severe_misleading_links: 1
-  exclude_from_design:
-    diversity_ratio_below: 0.80
-    severe_misleading_links_at_least: 2
+bmdl_gate: removed_from_branch
+
+innovation_check:
+  checklist_file: INNOVATION_CHECKLIST.md
+  required_before_scoring: true
+  dimensions:
+    - mechanism_innovation
+    - material_architecture_innovation
+    - selectivity_strategy_innovation
+    - biomimetic_translation_innovation
+  pass_rule: "at least one dimension must demonstrate clear novelty beyond prior art; pure carrier swap or parameter tuning does not count"
+
+execution_intensity:
+  rule: maximum_thinking_depth_for_all_tasks
+  prohibition: no_shortcuts_no_omission_no_reduced_depth
 
 adversarial_process:
   isolated_roles: true
+  roles:
+    - designer
+    - attacker
+    - reviewer
   required_rounds_all_concepts: 2
   final_review_rounds_top_two: 1
   persist_hidden_reasoning: false

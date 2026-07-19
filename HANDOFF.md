@@ -2,54 +2,30 @@
 
 ## Objective
 
-Develop one primary and one backup biomimetic material for selective adsorption in municipal secondary effluent. Deliver a Chinese experimental handoff package, not a software product.
+Develop one primary and one backup biomimetic material for selective adsorption in environmentally meaningful water treatment scenarios. Deliver a Chinese experimental handoff package, not a software product.
 
 ## Locked decisions
 
 - ADRMATS is unrelated to this implementation.
-- Primary matrix is municipal/domestic secondary effluent; ultrapure water is the mechanism control.
-- Funnel is 10 pollutants, 5 deep concepts, 1 primary and 1 backup.
+- Water matrix is any environmental water treatment scenario with independently verified environmental significance and practical value (municipal secondary effluent, industrial wastewater, surface water, drinking water sources, groundwater); ultrapure or deionized water is the mechanism control.
+- Before searching for biological prototypes, the specific scientific problem and engineering challenge must be identified from the pollutant. The scientific problem ensures academic depth; the engineering challenge ensures practical application and paper closure.
 - Main design requires at least one hard functional correspondence translated into an artificial material. Dynamic correspondence is optional and cannot force protein, folded peptide or a generic responsive unit into the design.
-- Tissue or organ enrichment is an optional, non-scoring prototype-discovery signal, not proof that a specific protein causes accumulation. The evidence ladder and pre-exposure interception idea are recorded in `research/evidence/ORGAN_ENRICHMENT_BIOMIMETIC_HEURISTIC.md`; they do not alter the active route or next action.
+- Tissue or organ enrichment is an optional, non-scoring prototype-discovery signal, not proof that a specific protein causes accumulation.
 - The default deliverable is a manufacturable nonprotein artificial adsorbent; protein, folded-peptide or biohybrid routes require an explicit scope reopening by Pan Yao.
-- Carrier class is not preselected. Silica, resin, carbon and self-supporting architectures are candidates only; capacity must be reported per total dry composite mass and packed-bed volume, and inactive carrier mass must earn its place through selectivity, matrix tolerance, regeneration, stability or bed performance.
-- Codex supervises isolated designer, attacker, and reviewer roles.
-- BMDL is evaluated against a frozen model-only baseline before any design use.
+- Carrier class is not preselected. Capacity must be reported per total dry composite mass and packed-bed volume, and inactive carrier mass must earn its place through selectivity, matrix tolerance, regeneration, stability or bed performance.
+- Qwen supervises isolated designer, attacker, and reviewer roles.
+- BMDL is removed from this branch; biomimetic research uses web-based deep search.
+- Every scheme must pass the innovation checklist (`INNOVATION_CHECKLIST.md`) before formal scoring.
+- All tasks must be executed at maximum thinking depth; no shortcuts or reduced-depth approximations are permitted.
 - Final approval belongs to Pan Yao; no laboratory work is performed in this repository.
 
 ## Current state
 
-Pan Yao reopened portfolio design because S1-SYN alone did not provide enough success insurance. The material-class-neutral portfolio contains 20 nonprotein artificial adsorbent schemes for BPA (6), PFBS (5), roxithromycin (5), and 2,6-dichlorophenol (4). The full schemes, pre-attack ranking, evidence audit, and top-five attack are under `rounds/portfolio_20_reopen/`; all earlier files and scores remain intact.
+This branch has undergone a methodology correction (2026-07-19). The supervisor is now Qwen. BMDL has been removed from the project design. The water scenario has been expanded from municipal secondary effluent to any environmentally meaningful water treatment context. A new "scientific problem + engineering challenge" gate has been added before biological prototype search. An independent innovation checklist has been created. Maximum thinking intensity is now a project rule.
 
-The pre-attack top five were BPA-1, PFBS-1, PFBS-2, BPA-2, and ROX-1. Attack reduced them to BPA-1 84/revise, BPA-2 74/revise, PFBS-1 74/revise, PFBS-2 73/revise, and ROX-1 67/control-only. No scheme passes the 85/no-open-high final gate. S1-SYN remains paused, not terminated.
+All historical artifacts (20-scheme portfolio, BPA/PFBS/ROX deep-design rounds, evidence ledger, former finalists D1-A/D1-B, S11, portfolio_100, and all scores) are preserved in the repository as audit evidence and counter-examples, but are no longer active selections. The new design flow starts fresh from pollutant selection under the corrected methodology.
 
-At that checkpoint Pan Yao authorized continued work and BPA-1 alone advanced first. The first deep-design checkpoint is `rounds/bpa1_deep_design_1/GEOMETRY_AND_RECEPTOR_TRIAGE.md`. Official `2E2R` coordinates give a derived BPA phenolic O-O distance of 9.274 Å and an approximately 87.4-degree acute inter-ring angle. The translated feature was initially recorded as a preorganized static two-ended polar geometry with a hydrophobic environment; no ERRgamma sequence, fold, Helix 12, protein or dynamic gate entered the material. Later additive files below supersede the symmetric requirement without deleting this history.
-
-The first exact low-mass probe was `R1-BPE`, 1,2-di(pyridin-4-yl)ethyne (`C12H8N2`, 180.20 g/mol). Its PubChem 3D terminal N-N distance is 9.651 Å, within 0.377 Å of the bound BPA O-O distance, and a literature synthesis reported 75% isolated yield. This first-pass freeze is preserved in `GEOMETRY_AND_RECEPTOR_TRIAGE.md`.
-
-The subsequent chemistry attack rejected R1 as the complete receptor. Its two terminal 4-pyridine acceptors point outward as a divergent linker; equality of O-O and N-N distances omitted lone-pair direction, hydrogen-bond length/angle and aromatic-framework collision. The proposed short/long/hydrophobic controls also changed solubility, mass, aromatic area and basicity simultaneously. `R1_CHEMISTRY_ATTACK.md` therefore returns BPA-1 to `exact receptor not frozen`, scores the refined proposal 68/100 with two critical and four high issues, and retains R1 only as a possible negative control.
-
-The next review corrected a deeper translation error. ERRgamma mutagenesis places the chief and corroborative interactions on the same BPA phenol hydroxyl, and single-hydroxyl 4-alpha-cumylphenol still binds strongly. A symmetric 9.27-angstrom two-ended clamp is therefore no longer mandatory. The active translation is one complementary polar primary anchor plus hydrophobic aromatic enclosure, with the second hydroxyl retained only as an optional discriminator. The prior symmetric geometry files remain preserved as history.
-
-`rounds/bpa1_deep_design_1/ASYMMETRIC_ANCHOR_REDIRECTION.md` defines exact candidate probe `P1-MAPy`, 2-methacrylamidopyridine (`C9H10N2O`, 162.19 g/mol). Its adjacent pyridine/amide donor-acceptor environment and methacryloyl polymer handle are synthesis- and polymerization-backed. It is not a proven BPA receptor: aqueous BPA binding, water competition, self-association and analog selectivity remain open. Its pure-site 1:1 ceiling is 1407.6 mg BPA/g MAPy, so any final dry material has the upper bound `1407.6 × w_MAPy mg/g`; this explicitly charges all pore-wall, crosslinker and carrier mass to the denominator.
-
-`P1_MAPY_CONTROL_AND_GATE.md` freezes `C1-NHoff` (N-methyl-N-(2-pyridyl)acrylamide), `C2-Noff` (N-phenylmethacrylamide), `C3-meta` (N-(pyridin-3-yl)methacrylamide), and styrene `C4-H`. The pre-registered aqueous gate requires P1-BPA `Ka >= 100 M-1`, at least a threefold advantage over the strongest C1/C2/C3 control, and no more than threefold disagreement between two orthogonal methods after self-association is modeled. These are design thresholds, not experimental results.
-
-`P1_MAPY_ATTACK.md` found that the established two-point acylaminopyridine synthon recognizes two-oxygen carboxylic acids and does not prove an ERRgamma-like two-contact geometry to one phenol oxygen. A direct aqueous 2-acrylamidopyridine/HEMA hydrogel precedent adsorbed phenol, 2,6-dimethylphenol and bulkier 2,6-di-tert-butylphenol at about 35.1, 30.1 and 17.2 mg/g for the reported 50% AP composition, a size trend unfavorable to a BPA-selectivity claim. P1 therefore remains only a high-information experimental probe; BPA-1 is 70/revise/experiment-gated and cannot be materialized on paper. Under Pan Yao's dynamic-allocation authorization, the next paper-design effort moves to BPA-2 as the higher-success insurance route. No material order, synthesis, experiment, S11 Gate 1b or Gate 2 work is authorized.
-
-The BPA-2 attack is now recorded in `rounds/bpa2_deep_design_1/BPA2_BASELINE_AND_COLOCALIZATION_ATTACK.md`. Direct aqueous NMR supports a 1:1 beta-CD:BPA complex with Ka about 3.62-4.10e3 M-1, but random copolymerization of beta-CD and a polar monomer cannot establish that one guest contacts both sites. The pure-beta-CD 1:1 ceiling is only 201.14 mg BPA/g beta-CD, and every final material is bounded by `201.14 × w_betaCD mg/g dry material`. BPA-2 is therefore split additively: BPA-2E is a 72/revise engineering baseline with no added dual-site biomimetic claim; BPA-2R is a 63/revise research variant that requires an exact covalent secondary-rim polar receptor before materialization. No earlier 79 or 74 score was deleted. The active paper task is a lightweight high-accessible-beta-CD architecture comparison for BPA-2E; there is still no primary or backup.
-
-That architecture comparison is complete in `BPA2E_ARCHITECTURE_COMPARISON.md`. Low-crosslink high-beta-CD networks maximize mass efficiency; a diarylsulfone-crosslinked beta-CD polymer already reports 113 mg BPA/g rapid column removal and regeneration; aqueous flexible-rigid T-E-CDP already covers rapid broad-spectrum removal and humic-acid/ionic-strength tolerance; and a 2023 double-crosslinked variant already reports real industrial wastewater. A low-density pendant-beta-CD particle is column-ready but demonstrates the user's mass-penalty concern because its 0.239 mmol/g site loading caps capacity near 54.5 mg/g. BPA-2E is therefore control-only, not a novel candidate, while BPA-2R remains unfrozen. Dynamic paper allocation now moves to PFBS-1.
-
-PFBS-1 has now been attacked in `rounds/pfbs1_deep_design_1/PFBS1_PRIOR_ART_AND_SALT_ATTACK.md`. The proposed sevenfold styrenyl-beta-CD plus cationic methacrylate permanently porous copolymer was already implemented in ACS Central Science in 2022. More importantly, its PFBS removal at 1 mg/L adsorbent and 1 ug/L PFAS fell from about 94% in nanopure water to about 38% in 1 mM sodium sulfate, while PFOS retained about 79%. This directly contradicts a salt-resistant PFBS-over-long-chain preference. PFBS-1 is therefore 58/control-only; historical 82 and 74 scores remain. The next paper attack moves to PFBS-2 at the exact soluble-receptor level, with no materialization before water and salt evidence.
-
-PFBS-2 has now been attacked in `rounds/pfbs2_deep_design_1/PFBS2_SOLUBLE_RECEPTOR_ATTACK.md`. No exact low-mass nonfluorinated receptor was found that combines a guanidinium-bis-urea sulfonate cage with a demonstrated C4 PFBS peak over C6/C8 PFSAs in water. Direct evidence instead shows guanidinium and cationic oligo-urea motifs can prefer sulfate and phosphate. Long-chain PFOA/PFOS recognition by guanidinocalixarene and short-chain PFCA extraction into organic solvent do not close the PFBS aqueous-adsorption gap. PFBS-2 is 52/revise/exact-receptor-not-found and cannot be materialized. PFBS-3/4/5 are not allocated full deep-design rounds because their dominant limitations are respectively fluorinated-material lifecycle burden, PFBS-template leakage, and ordinary ion-exchange originality. Dynamic allocation moves to ROX-2.
-
-Pan Yao reviewed the complete post-Round-2 trajectory and identified a direction error. The original S1 translated hL-FABP evidence into an artificial headgroup site, finite low-polar chain region and hydrophilic porous carrier. The mandatory static-plus-dynamic gate then rewarded increasingly literal portal, folded-peptide and protein implementations. That gate optimized biomimetic fidelity instead of the intended material translation and caused the Round-3 S1 and later S11 routes to leave the intended synthetic-adsorbent scope.
-
-The governing rules are now corrected. One hard functional correspondence in a manufacturable artificial material is required; dynamics are optional and must add selective function if claimed. Proteins, expressed constructs and folded peptides are excluded by default. All earlier rounds remain committed as historical audit evidence and no score or decision has been erased.
-
-`S1-SYN` was the first corrected artificial-material candidate and remains a preserved paused route. Pan Yao's carrier-efficiency correction removed the prior assumption that OEG-passivated mesoporous silica would be the final carrier: silica, porous carbon, activated carbon, porous polymers, other supports and self-supporting architectures are only candidates. Any later BPA-1 material must expose total-composite gravimetric capacity, packed-bed capacity, accessible sites and blank-architecture uptake; inactive support mass cannot be hidden.
+No primary design or backup design exists. No material order, synthesis, or experiment is authorized.
 
 ## Preserved trajectory
 
@@ -97,11 +73,11 @@ Translation-evidence dossiers were prepared in parallel but are deliberately exc
 
 ## Resume instructions
 
-1. Read `CLAUDE.md`, `SOUL.md`, `PROJECT_STATE.yaml`, `research_contract.yaml`, and `docs/BIOMIMETIC_DESIGN_FRAMEWORK.md`.
-2. Review the framework correction section below (2026-07-18) to understand the shift from approach-3 to approach-2+approach-1.
-3. Read `rounds/portfolio_100/RANKING.md` to see the current 100-scheme portfolio status (no scheme reaches 85).
-4. Reassess portfolio_100 schemes against the corrected biomimetic framework before proceeding with deep design.
-5. Keep BMDL excluded, preserve every phosphate, top-five, S1, S11, portfolio_20 and portfolio_100 artifact, and do not order materials or start experiments.
+1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
+2. Read `INNOVATION_CHECKLIST.md` to understand the innovation gate.
+3. Begin fresh pollutant selection: identify candidate organic pollutants with environmental significance, then for each candidate define the specific scientific problem and engineering challenge before searching for biological prototypes.
+4. Use web-based deep search for all biomimetic design research; no local database dependency exists.
+5. All historical artifacts are preserved but not active; do not inherit scores or selections from former rounds.
 6. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.
 
 ## GLM branch takeover (2026-07-17)

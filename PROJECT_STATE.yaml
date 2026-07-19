@@ -1,39 +1,55 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: rox_ph_responsive_design_completed
-status: ready_for_experimental_validation
-last_completed_step: "ROX pH-responsive design completed (v2.0) with FcRn biological prototype and Igawa 2010 engineering reversal precedent; PFBS-CD-GAC design evaluated and terminated (structural Kd ceiling, low innovation, weak biomimetic framework); concentration scenario analysis added (municipal secondary effluent 20-1000 ng/L as primary target); ROX design revised with larger mesopores (15-30 nm), shorter PVI brushes (DP 10-15), weaker carboxyl groups (wetting/grafting only), and switch-verification-priority validation plan"
-next_action: "Execute ROX Phase 0 experimental validation (step 0a kill criterion - blank carbon pH 5.5 desorption retention ≤40-50%; step 0b speciation measurement - ROX N-oxide pKaH and N-desmethyl pKa); if Phase 0 passes, proceed to Phase 1 pH-switch verification (compare AC-g-PVI vs pristine AC, AC-g-PVP, AC-g-QPVI release rates; require AC-g-PVI release rate ≥70% and significantly higher than controls)"
-active_branch: kimi-k3
-executor: Claude Code
-working_branch: kimi-k3
-codex_branch: main
-branch_convention: Claude Code syncs origin/kimi-k3 only; Codex syncs origin/main only; do not cross-push; reconcile manually only if a merge is explicitly requested.
-last_verified_commit: df8a7ef
-bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
-candidate_pool_status: four_pollutant_twenty_scheme_portfolio_frozen_and_ranked
-candidate_pollutants:
-  - bisphenol A
-  - PFBS
-  - roxithromycin
-  - 2,6-dichlorophenol
-priority_verification_group:
-  - PFOA
-  - PFBS
-  - roxithromycin
-  - bisphenol A
-  - 2,6-dichlorophenol
-superseded_candidate_pollutants:
-  - PFOA
-  - PFOS
-  - HFPO-DA (GenX)
-  - clarithromycin
-  - O-desmethylvenlafaxine
-  - sulfamethoxazole
-  - bisphenol A
-  - phosphate
-  - nitrate
-  - As(III)
+phase: methodology_correction_fresh_start
+status: in_progress
+last_completed_step: "Branch methodology corrected - supervisor changed to Qwen, BMDL removed, water scenario expanded to any environmentally meaningful water treatment context, scientific-problem/engineering-challenge gate added, innovation checklist created, maximum thinking intensity rule added"
+next_action: "Begin fresh pollutant selection under new methodology - identify specific scientific problems and engineering challenges before biological prototype search"
+active_branch: main
+last_verified_commit: pending
+bmdl_policy: removed_from_branch
+historical_artifacts_status: preserved_not_active
+candidate_pool_status: historical_preserved_not_active
+historical_preserved:
+  note: All candidates, schemes, and scores below are preserved as audit evidence and counter-examples but are no longer active selections under the corrected methodology.
+  former_candidate_pollutants:
+    - bisphenol A
+    - PFBS
+    - roxithromycin
+    - 2,6-dichlorophenol
+  former_priority_verification_group:
+    - PFOA
+    - PFBS
+    - roxithromycin
+    - bisphenol A
+    - 2,6-dichlorophenol
+  former_scheme_portfolio:
+    - S1 PFOA/hL-FABP two-stage portal
+    - S2 PFOA-PFOS-PFHxS-PFBS/beta-cyclodextrin host-guest network
+    - S3 HFPO-DA (GenX)/HSA branched ether-acid pocket
+    - S4 PFBS-PFHxS-PFOS/HSA chain-length gate
+    - S5 BPA/ERRgamma bidentate aromatic clamp
+    - S6 roxithromycin/23S rRNA exit-tunnel local gate
+    - S7 nonylphenol/ER-GPER phenol-tail pocket
+    - S8 octocrylene/protein hydrophobic-polar pocket
+    - S9 pentachlorophenol/TTR halogenated-phenol channel
+    - S10 2,6-dichlorophenol/chlorophenol-hydroxylase pocket
+  former_recommended_top5:
+    - S1 PFOA/hL-FABP two-stage portal
+    - S5 BPA/ERRgamma bidentate aromatic clamp
+    - S3 HFPO-DA (GenX)/HSA branched ether-acid pocket
+    - S4 PFBS-PFHxS-PFOS/HSA chain-length gate
+    - S6 roxithromycin/23S rRNA exit-tunnel local gate
+  superseded_candidate_pollutants:
+    - PFOA
+    - PFOS
+    - HFPO-DA (GenX)
+    - clarithromycin
+    - O-desmethylvenlafaxine
+    - sulfamethoxazole
+    - bisphenol A
+    - phosphate
+    - nitrate
+    - As(III)
 scheme_portfolio:
   - S1 PFOA/hL-FABP two-stage portal
   - S2 PFOA-PFOS-PFHxS-PFBS/beta-cyclodextrin host-guest network
@@ -66,10 +82,9 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
-active_deep_concept: ROX-2 nonimprinted rigid macrolide slit entering paper attack; PFBS-2 is experiment-gated without an exact receptor and PFBS-1 and BPA-2E are control-only
-paused_candidates:
-  - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused pending owner review of the four-pollutant portfolio; not terminated)
-portfolio_20_status: dynamic_reallocation_bpa_and_pfbs_leads_gated_or_control_only_rox2_active
+active_deep_concept: null
+paused_candidates: []
+portfolio_20_status: historical_preserved_not_active
 portfolio_20_allocation:
   BPA: 6
   PFBS: 5

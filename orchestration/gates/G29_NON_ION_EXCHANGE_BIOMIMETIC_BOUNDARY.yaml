@@ -1,0 +1,32 @@
+gate_id: G29_NON_ION_EXCHANGE_BIOMIMETIC_BOUNDARY
+date: 2026-07-19
+trigger: owner_distinguishes_biomimetic_adsorbent_from_neighboring_groups_ion_exchange_resin_direction
+status: binding_scope_correction_PFH1_terminated_no_E1_release
+owner_boundary:
+  main_material_must_be: biomimetic_adsorbent_with_a_non_ion_exchange_primary_capture_mechanism
+  excluded_as_main_material:
+    - anion_exchange_resin
+    - cation_exchange_resin
+    - mixed_mode_ion_exchange_resin
+    - fixed_charge_material_whose_capacity_is_principally_counterion_exchange
+    - core_shell_or_gradient_resin_that_only_rearranges_ion_exchange_sites
+  allowed_roles_for_ion_exchange_materials:
+    - engineering_benchmark
+    - mechanism_control
+  charged_features_allowed_only_when:
+    - auxiliary_to_a_separately_supported_biomimetic_function
+    - total_IEC_does_not_explain_primary_capture
+    - matched_charge_deletion_or_mismatch_controls_show_spatial_or_cooperative_causality
+    - counterion_mass_balance_and_salt_dependence_exclude_principal_ion_exchange
+PFHxS_disposition:
+  PFH_1: terminated_owner_scope_conflict_ion_exchange_resin
+  PFH_2: remains_terminated
+  PFH_3: remains_terminated
+  long_alkyl_quaternary_PS_DVB: ion_exchange_mixed_mode_control_only
+  formal_recommendation: false
+  E1_ready: false
+cross_project_disposition:
+  MAC_BI1: terminated_as_main_mixed_mode_weak_cation_exchange_control_only
+  MAC_IF1: terminated_as_main_directional_weak_cation_exchange_control_only
+  MAC_IF1_B0_M0: do_not_execute
+next_action: reopen_PFHxS_biological_prototype_and_non_ion_exchange_material_discovery_without_reusing_PFH1_as_a_lead

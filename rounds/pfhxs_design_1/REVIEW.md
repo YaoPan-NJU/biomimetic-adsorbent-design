@@ -2,11 +2,13 @@
 
 日期：2026-07-19。
 
-## 结论先行
+> 后续Owner裁决：PFH-1的主要容量仍由强/弱碱离子交换位点提供，属于与隔壁课题组重合的离子交换树脂方向。PFH-1已由`E0 manufacturing hypothesis`改为`terminated_owner_scope_conflict`；M0文件仅保留为历史审计，不再执行。
+
+## 原Reviewer结论（已被后续Owner材料边界覆盖）
 
 本轮没有产生可以直接作为论文主方案、也没有产生可直接进入PFHxS吸附性能验证的E1方案。
 
-- `PFH-1`保留为E0工程机制候选，只允许先做制造与空间结构验证；未通过该门槛前，不采购PFAS标准品、不做容量优化、不写“主动转运”“门控”或“PFHxS特异性”。
+- 原裁决曾将`PFH-1`保留为E0工程机制候选；Gate G29现已终止该候选，禁止执行下述制造与空间结构验证。
 - `PFH-2`终止。有序C18侧链网络无法建立稳定、同温、同组成的湿态有序/无序对照，且全氟链进入致密烃链晶区没有直接依据。
 - `PFH-3`终止。负电外层优先排斥PFSA，生物原型和表面接枝SOP均不成立。
 - 长烷基季铵PS-DVB同系列仅保留为普通树脂机制对照，不登记为仿生候选。限定查新没有发现完全相同的C1/C4/C8/C12/C16同系列，但“更疏水的交换基团提高PFAS亲和、同时降低传质和再生性”已有直接先例。
@@ -67,4 +69,4 @@ M0通过后，完整体必须在pH 7、硫酸盐/磷酸盐和10 mg C/L DOM背景
 
 ## 最终Reviewer决定
 
-`PFH-1 = revise / E0 manufacturing hypothesis`；`PFH-2 = terminate`；`PFH-3 = terminate`；长烷基季铵系列=`conventional mechanism control`。本轮唯一允许的下一动作是由潘尧决定是否授权PFH-1的M0制造验证，或直接返回新的生物原型检索。
+本轮Reviewer原裁决为`PFH-1 = revise / E0 manufacturing hypothesis`。Owner追加材料边界后，最终状态改为`PFH-1 = terminated_owner_scope_conflict`；`PFH-2 = terminate`；`PFH-3 = terminate`；长烷基季铵系列=`ion-exchange/mixed-mode control only`。下一动作固定为重新检索PFHxS的真实生物原型与非离子交换材料机制。

@@ -29,11 +29,15 @@ Pan Yao selected PFHxS from the design-neutral pollutant shortlist. The active e
 
 The strict result is no E1 or paper-main release. `PFH-2` and `PFH-3` are terminated. A benzyl-dimethyl-alkyl-ammonium PS-DVB chain-length series is ordinary rational resin chemistry, not a biomimetic main candidate: the exact C1/C4/C8/C12/C16 PFHxS series was not found in the bounded search, but the core hydrophobic-exchange-group tradeoff is prior art and the phospholipid evidence does not validate a fixed positive-head/alkyl-tail functional mapping.
 
-`PFH-1`, a weak-base outer zone plus strong-base core PS-DVB bead, remains only an E0 manufacturing hypothesis. Its allowed language is “biological-transport-inspired sequential-partition engineering hypothesis”, not active transport or gating. `rounds/pfhxs_design_1/PFH1_M0_PROTOCOL.md` freezes the only permissible next laboratory gate: first prove that complete, uniform, random and reverse spatial controls can be made in three batches with directly measured radial chemistry and matched wet-state properties. M0 does not use PFAS and does not imply E1. Pan Yao must now decide whether to authorize this M0 gate or return to new biological-prototype discovery; no PFAS adsorption experiment is authorized.
+Pan Yao then clarified a decisive scope distinction: the project requires a biomimetic adsorbent, not an ion-exchange resin, because ion-exchange resin research overlaps with a neighboring group. `PFH-1` is therefore terminated rather than retained for M0. Its weak-base outer zone and permanent-quaternary core still make ion exchange the principal capture mechanism; radial zoning does not change the material category. `rounds/pfhxs_design_1/PFH1_M0_PROTOCOL.md` is historical audit only and must not be executed.
 
-PFHxS design commit `fd8823c` passed 145 state-artifact checks, six BMDL snapshot checksums, YAML parsing, staged diff checks and a 231-file credential scan. The verification-only follow-up commit records that checkpoint on `main`.
+The binding rule is `docs/MATERIAL_SCOPE_BOUNDARY_ION_EXCHANGE.md` and Gate G29. Anion-, cation-, and mixed-mode ion-exchange media may be used only as engineering benchmarks or mechanism controls. Charged features are allowed in a future biomimetic adsorbent only when they assist an independently supported biological function and matched-charge controls, counterion mass balance, salt dependence and regeneration behavior show that accessible IEC, Donnan partition and counterion exchange do not explain the primary capture. The PFHxS portfolio now has no active lead and no E1/E2 release.
 
-Remote checkpoint `17cb4ec` was restored into a fresh HTTPS clone. Without chat history, the clone recovered the PFSA class scope, PFH-2/PFH-3 terminations, PFH-1 E0-only status, empty E1 register and the unique M0-or-reopen owner decision. Local `main` and `origin/main` were equal at that checkpoint.
+G29 also terminates `MAC-BI1` and `MAC-IF1` as ROX main candidates because their carboxylate-plus-hydrophobic mechanism is a weak-cation-exchange/mixed-mode direction. They remain historical controls only; their B0/M0 actions are cancelled. This global correction supersedes later historical paragraphs that describe MAC-IF1 as conditional or active.
+
+The pre-G29 historical PFHxS design commit `fd8823c` passed 145 state-artifact checks, six BMDL snapshot checksums, YAML parsing, staged diff checks and a 231-file credential scan. Its PFH-1 E0 status and M0 next action are superseded by G29.
+
+Pre-G29 remote checkpoint `17cb4ec` was restored into a fresh HTTPS clone and recovered the then-current PFH-1 E0 status. That status is historical; G29 terminates PFH-1 and cancels M0.
 
 Pan Yao then made ROX the first target-specific deep-design case and explicitly rejected path dependence on the first biofilm-plus-imprint mapping. That checkpoint is recorded in `docs/ROX_ALTERNATIVE_PROTOTYPE_AND_DESIGN_TOURNAMENT.md` and `orchestration/gates/G21_ROX_OPEN_TOURNAMENT.yaml`. At G21, `ROX-BF1` was only `concept_valid`: its first design draft failed E1 because the claimed composition, surface anchoring, layer measurement, matched controls, isotope-template accounting and trace analysis were not closed. A phagocyte acidic-compartment prototype produced a stronger biological story, but the pure ion-trapping material `ROX-LYS1` was terminated as a ROX-selective adsorbent. `ROX-LYS-MIM` was then retained as a membrane lead; the later G22 owner decision below supersedes that scope.
 
@@ -67,7 +71,7 @@ A subsequent 30-source strong-biomimetic innovation audit is recorded in `DEEP_R
 
 Audit commit `f9d25f3ad4438e1abb5e1e0108120555d89be5af` was pushed and restored from a fresh clone. The clone passed 132 state-path checks and a 217-file credential scan and recovered both the uniform-MAC-BI1 strong-biomimetic rejection and the rule that the directional-interface redesign remains an inactive hypothesis until Pan Yao decides.
 
-Rescue-design commit `1e8121b2c7235874654ff6fe21ec23f9cbd6c406` was pushed and restored from a fresh HTTPS clone. The clone passed 136 state-artifact checks and a 221-file credential scan, recovered `MAC-IF1` as a conditional lead, preserved uniform `MAC-BI1` as a control, kept the E1/E2 registers empty and identified the combined B0-plus-M0 package as the unique next action without chat history.
+Historical rescue-design commit `1e8121b2c7235874654ff6fe21ec23f9cbd6c406` was pushed and restored from a fresh HTTPS clone. Its `MAC-IF1` conditional-lead status and B0/M0 next action are superseded by G29; both MAC routes are now mixed-mode controls only.
 
 The ROX checkpoint commit `e60a1e082aecdc155d26dbdd2a3290dd681d115e` was pushed and restored from a fresh private-repository clone. The clone passed state-path, snapshot-checksum and credential scans and recovered the empty E1 register, BF1 redesign status, LYS-MIM scope gate and unique next action without chat context.
 
@@ -170,9 +174,9 @@ This checkpoint does not terminate or delete MAC-IF1, MAC-BI1 or any earlier ROX
 ## Resume instructions
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
-2. Verify `main`, then read `DEEP_RESEARCH_PFHXS_COMPLETE_DESIGN.md`, `rounds/pfhxs_design_1/REVIEW.md`, `rounds/pfhxs_design_1/PFH1_M0_PROTOCOL.md` and `orchestration/gates/G28_PFHXS_COMPLETE_DESIGN_REVIEW.yaml`.
-3. Wait for Pan Yao's binary direction: authorize the PFH-1 M0 manufacturing-only gate, or abandon PFH-1 and reopen biological-prototype discovery. M0 approval would not authorize PFAS adsorption; an E1 protocol must be separately frozen after M0 passes.
-4. If returning to discovery, preserve PFH-1 as a rejected or paused audit artifact and do not resurrect PFH-2, PFH-3, HSA chain-length gating or fixed-positive-head/alkyl-tail membrane analogies without new direct evidence.
-5. Read `docs/BIOMIMETIC_DESIGN_FRAMEWORK.md`, including the WW-0 to WW-3 wastewater-bioprocess evidence ladder, before admitting a new prototype. Keep BMDL excluded from design.
+2. Verify `main`, then read the supersession notice in `DEEP_RESEARCH_PFHXS_COMPLETE_DESIGN.md`, the owner override in `rounds/pfhxs_design_1/REVIEW.md`, and Gate G29. Treat `rounds/pfhxs_design_1/PFH1_M0_PROTOCOL.md` as historical audit only.
+3. Read `docs/MATERIAL_SCOPE_BOUNDARY_ION_EXCHANGE.md` and `orchestration/gates/G29_NON_ION_EXCHANGE_BIOMIMETIC_BOUNDARY.yaml`. Do not execute PFH-1 M0 or generate another strong/weak-base, quaternary-ammonium, core-shell, gradient or long-alkyl exchange resin as the main material.
+4. Reopen biological-prototype discovery for PFHxS/PFSA and require a primary artificial capture mechanism that is not explained by IEC, Donnan partition, counterion release or salt displacement. Preserve PFH-1/2/3 as terminated audit artifacts.
+5. Read `docs/BIOMIMETIC_DESIGN_FRAMEWORK.md`, including the WW-0 to WW-3 wastewater-bioprocess evidence ladder, before admitting a new prototype. Keep BMDL excluded from design and use commercial ion-exchange resin only as a mandatory benchmark/control.
 6. Preserve every ROX, phosphate, top-five, S1, S11 and portfolio artifact; do not order materials or start experiments until Pan Yao approves the exact release level.
 7. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

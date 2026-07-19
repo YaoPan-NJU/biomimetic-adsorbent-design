@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: pfhxs_complete_design_review
+phase: pfhxs_non_ion_exchange_biomimetic_redesign
 status: in_progress
-last_completed_step: PFHxS was selected and completed a design-neutral evidence review, three-candidate design tournament, prior-art attack, independent review and citation verification; PFH-2 and PFH-3 terminated, PFH-1 remains E0 M0-only, and no E1/E2 or formal paper recommendation was released
-next_action: "Pan Yao reviews the PFHxS report and decides whether to authorize the PFH-1 M0 manufacturing-and-spatial-characterization gate or return immediately to a new biological-prototype search; do not begin PFAS adsorption experiments before M0 passes and an E1 protocol is frozen"
+last_completed_step: Pan Yao imposed a binding non-ion-exchange material boundary; PFH-1 was terminated because its weak-base and strong-base regions remain an ion-exchange resin, PFH-2 and PFH-3 remain terminated, and the PFHxS portfolio has no active lead or E1/E2 release
+next_action: "Reopen PFHxS biological-prototype and non-ion-exchange biomimetic-adsorbent discovery; ion-exchange and mixed-mode resins may be used only as benchmarks or controls, and PFH-1 M0 must not be executed"
 active_branch: main
 last_verified_commit: fd8823c
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -68,8 +68,8 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
-active_deep_concept: PFH-1 weak-base outer zone and strong-base core radial bead; E0 manufacturing hypothesis only
-preserved_conditional_concept: MAC-IF1 low-coverage shallow weak-anionic zone on porous St-DVB for macrolide-class adsorption; conditional_lead with B0_not_passed M0_not_passed and E1_not_ready; suspended at owner pollutant-selection gate rather than terminated
+active_deep_concept: null
+preserved_conditional_concept: null
 pollutant_topic_shortlist_2026:
   scope: environmental_significance_public_attention_publication_tractability_only
   design_criteria_used: false
@@ -93,27 +93,28 @@ pfhxs_complete_design_20260719:
   report: DEEP_RESEARCH_PFHXS_COMPLETE_DESIGN.md
   lead:
     id: PFH-1
-    status: E0_M0_only_not_E1_not_formally_recommended
+    status: terminated_owner_scope_conflict_ion_exchange_resin
     claim_boundary: biological_transport_inspired_sequential_partition_engineering_hypothesis
   terminated:
+    - PFH-1 weak-base outer zone and strong-base core ion-exchange bead
     - PFH-2 nonfluorinated ordered amphiphilic interface bead
     - PFH-3 negative screening shell and quaternary core bead
   conventional_control_only:
     - benzyl_dimethyl_alkyl_ammonium_PS_DVB_chain_length_series
-  gate: G28_PFHXS_COMPLETE_DESIGN_REVIEW
+  gate: G29_NON_ION_EXCHANGE_BIOMIMETIC_BOUNDARY
 paused_candidates:
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (B-class pressure-test lead; not formally recommended)
 pressure_test_leads_not_fixed_shortlist:
   - S1-SYN hL-FABP-informed nonprotein PFOA/long-chain-PFCA two-region recognition
   - PFAS-M1 phospholipid-interface accumulation-informed stable amphiphilic nanodomain
-  - MAC-BI1 biofilm-and-anionic-lipid-interface-inspired hydrolyzed porous MAn-St-DVB adsorbent bead
-  - MAC-IF1 mature-biofilm-and-anionic-lipid-interface-informed directional shallow-carboxylate porous St-DVB adsorbent bead
+  - MAC-BI1 historical mixed-mode weak-cation-exchange control; terminated as main material by G29
+  - MAC-IF1 historical directional weak-cation-exchange hypothesis; terminated as main material by G29
 rox_open_tournament:
-  gate: G27_ROX_SOLID_LOW_COMPLEXITY_BOUNDARY
-  status: solid_low_cost_directional_interface_redesign_open_no_E1_release
+  gate: G29_NON_ION_EXCHANGE_BIOMIMETIC_BOUNDARY
+  status: no_active_lead_after_ion_exchange_scope_correction
   strict_adsorbent_lead:
     id: MAC-IF1
-    status: conditional_lead_B0_not_passed_M0_not_passed_E1_not_ready
+    status: terminated_owner_scope_conflict_weak_cation_exchange_mixed_mode
   engineering_benchmark:
     id: MAC-C1
     status: mesoporous_GAC_mandatory_benchmark
@@ -129,6 +130,7 @@ rox_open_tournament:
   control_routes:
     - ROX-PI1 anionic-phospholipid-interface class-partition control
     - MAC-BI1 uniform hydrolyzed MAn-St-DVB mixed-mode control
+    - MAC-IF1 directional shallow-carboxylate mixed-mode control only
     - soluble macrocycle panel with no current aqueous ROX-over-analog evidence
 portfolio_20_status: historical_revalidated_bpa2e_pfbs1_rox1_controls_rox2_bpa5_terminated_dcp1_paused
 portfolio_100_status: imported_as_hypothesis_archive_branch_scores_and_advancement_not_inherited_deprioritized_by_owner
@@ -343,7 +345,7 @@ open_issues:
     text: Macrolide-class removal is acceptable; ROX-versus-ERY-CLA-AZI discrimination is a bonus, while preference over DOM salts and unrelated micropollutants remains mandatory.
   - id: MAC-BI1-FORMULATION-001
     severity: critical
-    status: superseded_by_MAC_IF1_rescue_uniform_control_only
+    status: terminated_as_main_by_G29_control_only
     text: First freeze and run the commercial-material class-preference prescreen; only then screen MAn-St-DVB bead yield particle size wet strength accessible carboxyl sites pore structure solvent recovery and matched causal controls.
   - id: GLM-LESSONS-002
     severity: high
@@ -355,23 +357,23 @@ open_issues:
     text: Activated sludge, biofilm and granular-sludge partitioning observations are now eligible prototype-discovery leads, but overall removal cannot support biomimicry until mass balance, sorption-versus-transformation separation, component localization, causal perturbation and EPS-extraction artifact checks are completed.
   - id: ROX-STRONG-BIOMIMETIC-001
     severity: critical
-    status: resolved_by_owner_opening_MAC_IF1_conditional_redesign
+    status: superseded_by_G29_non_ion_exchange_boundary
     text: Thirty-source audit found no causal EPS mechanism for macrolide-class capture and direct prior art for hydrolyzed porous MAn-St-DVB plus mature hydrophobic weak-cation-exchange materials; uniform MAC-BI1 may remain a baseline, while any main biomimetic route requires a separately reviewed directional shallow anionic-low-polarity interface with matched spatial controls.
   - id: MAC-IF1-B0-001
     severity: critical
-    status: in_progress_protocol_not_frozen
+    status: terminated_by_G29_no_longer_active
     text: Demonstrate that ROX-ERY-CLA-AZI share a reproducible anionic-lipid-interface response distinguishable from matched cationic amphiphiles; if behavior is explained only by charge and logD, terminate strong class-level biomimicry.
   - id: MAC-IF1-M0-001
     severity: critical
-    status: in_progress_protocol_not_frozen
+    status: terminated_by_G29_do_not_execute
     text: Manufacture and directly distinguish low-coverage shallow, deeper or uniform, and no-carboxyl distributions on the same porous St-DVB batch while matching accessible acid and wet pore structure; elemental composition without spatial evidence is insufficient.
   - id: MAC-IF1-MANUFACTURING-001
     severity: critical
-    status: in_progress_route_not_locked
+    status: terminated_by_G29_no_longer_active
     text: Final material must be a recoverable particle or packed-bed adsorbent made from commodity feedstocks without biological reagents, expensive two-dimensional materials or a complex multistep sequence. Prefer a commercial or simply suspension-polymerized porous bead plus one low-cost post-treatment, or direct bead formation plus hydrolysis. UV photografting is a comparison route rather than the default; furnace treatment is eligible only if it preserves the required artificial spatial rule and does not collapse the design into generic activated carbon.
   - id: MAC-IF1-C0-001
     severity: critical
-    status: blocked_by_B0_and_M0_not_experiment_release
+    status: terminated_by_G29_no_longer_active
     text: After B0 and M0 pass, show that shallow spatial organization adds macrolide-class performance beyond accessible acid quantity, pore structure, single-function contributions, physical mixture, commercial mixed-mode resin and GAC in secondary effluent.
   - id: APPROVAL-001
     severity: high
@@ -379,13 +381,18 @@ open_issues:
     text: Final approval is deferred until the reopened pollutant screening and all downstream design stages are completed again.
   - id: PFH1-M0-001
     severity: critical
-    status: owner_decision_pending_no_experiment_release
-    text: PFH-1 may proceed only to the frozen manufacturing and spatial-characterization denial gate; three batches, complete/random/reverse spatial controls, wet-state matching, residual benzyl-chloride closure and two independent radial measurements must pass before any PFAS adsorption protocol is frozen.
+    status: terminated_owner_scope_conflict
+    text: PFH-1 M0 is prohibited because the weak-base outer zone and permanent-quaternary core remain an ion-exchange resin; the full protocol is retained only as a historical audit artifact.
+  - id: MATERIAL-SCOPE-IX-001
+    severity: critical
+    status: resolved_binding_rule
+    text: Formal candidates must be biomimetic adsorbents with a primary capture mechanism not explained by accessible IEC, Donnan partition, counterion release or salt displacement; ion-exchange and mixed-mode resins are benchmarks or controls only.
 artifacts:
   contract: research_contract.yaml
   rules: SOUL.md
   terminology: docs/TERMINOLOGY.md
   biomimetic_design_framework: docs/BIOMIMETIC_DESIGN_FRAMEWORK.md
+  non_ion_exchange_material_boundary: docs/MATERIAL_SCOPE_BOUNDARY_ION_EXCHANGE.md
   adaptive_experiment_ready_research_plan: docs/ADAPTIVE_EXPERIMENT_READY_RESEARCH_PLAN.md
   portfolio_100_status: rounds/portfolio_100/README.md
   portfolio_100_supervisor_audit: rounds/portfolio_100/SUPERVISOR_AUDIT.md
@@ -400,6 +407,7 @@ artifacts:
   gate_g26_rox_mac_if1_rescue_redesign: orchestration/gates/G26_ROX_MAC_IF1_RESCUE_REDESIGN.yaml
   gate_g27_rox_solid_low_complexity_boundary: orchestration/gates/G27_ROX_SOLID_LOW_COMPLEXITY_BOUNDARY.yaml
   gate_g28_pfhxs_complete_design_review: orchestration/gates/G28_PFHXS_COMPLETE_DESIGN_REVIEW.yaml
+  gate_g29_non_ion_exchange_biomimetic_boundary: orchestration/gates/G29_NON_ION_EXCHANGE_BIOMIMETIC_BOUNDARY.yaml
   pfhxs_complete_design_report_20260719: DEEP_RESEARCH_PFHXS_COMPLETE_DESIGN.md
   pfhxs_research_brief: rounds/pfhxs_design_1/RESEARCH_BRIEF.md
   pfhxs_designer: rounds/pfhxs_design_1/DESIGNER.md

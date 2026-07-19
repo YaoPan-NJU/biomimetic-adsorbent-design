@@ -1,6 +1,6 @@
 # PFH-1 M0制造与空间结构否决方案
 
-状态：`pre-lab protocol / not experiment-authorized / not E1`。
+状态：`terminated / historical audit only / do not execute`。PFH-1已因离子交换树脂课题范围冲突终止。
 
 本方案只回答一个问题：能否用低复杂度树脂化学稳定制造“弱碱外层—强碱内核”，并做出可比较的均一、随机和反向空间对照？在M0通过前不使用PFAS、不优化吸附容量。
 

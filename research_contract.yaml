@@ -187,6 +187,24 @@ biomimetic_classification:
 material_translation:
   default_material_class: synthetic_nonbiological_adsorbent
   current_product_form: recoverable_solid_particle_or_packed_bed_adsorbent
+  non_ion_exchange_scope:
+    main_material_requirement: biomimetic_adsorbent_with_non_ion_exchange_primary_capture_mechanism
+    excluded_as_main_material:
+      - anion_exchange_resin
+      - cation_exchange_resin
+      - mixed_mode_ion_exchange_resin
+      - fixed_charge_material_principally_operating_by_counterion_exchange
+      - spatially_patterned_or_core_shell_material_that_only_rearranges_exchange_sites
+    ion_exchange_allowed_roles:
+      - mandatory_engineering_benchmark
+      - mechanism_control
+    charged_feature_admission:
+      - auxiliary_to_independently_supported_biomimetic_function
+      - primary_capture_not_explained_by_accessible_IEC_Donnan_partition_or_counterion_release
+      - matched_total_charge_deletion_or_mismatch_control_proves_non_exchange_function
+      - salt_dependence_and_counterion_mass_balance_are_measured
+      - regeneration_not_principally_high_salt_displacement
+    binding_guidance: docs/MATERIAL_SCOPE_BOUNDARY_ION_EXCHANGE.md
   excluded_current_product_forms:
     - membrane_separation
     - liquid_receiver_process

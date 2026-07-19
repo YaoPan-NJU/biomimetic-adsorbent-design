@@ -528,6 +528,9 @@ artifacts:
   gate_g6_delivery: orchestration/gates/G6_DELIVERY.yaml
   fresh_clone_readback: orchestration/FRESH_CLONE_READBACK.md
 checks:
+  pfhxs_complete_design_fresh_clone: passed_at_17cb4ec
+  pfhxs_complete_design_context_recovery: recovered_PFHxS_class_scope_PFH2_PFH3_termination_PFH1_E0_empty_E1_and_unique_M0_or_reopen_decision_at_17cb4ec
+  pfhxs_complete_design_remote_sync: origin_main_equal_at_17cb4ec
   pfhxs_complete_design_state_paths: passed_145_artifacts_at_fd8823c
   pfhxs_complete_design_secrets_scan: passed_231_tracked_files_at_fd8823c
   pfhxs_complete_design_yaml: PROJECT_STATE_research_contract_and_G28_parsed

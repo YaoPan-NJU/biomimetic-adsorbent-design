@@ -536,6 +536,9 @@ artifacts:
   gate_g6_delivery: orchestration/gates/G6_DELIVERY.yaml
   fresh_clone_readback: orchestration/FRESH_CLONE_READBACK.md
 checks:
+  non_ion_exchange_boundary_fresh_clone: passed_at_c7f21ee
+  non_ion_exchange_boundary_context_recovery: recovered_global_rule_PFH1_MAC_terminations_empty_E1_and_non_ion_exchange_redesign_next_action_at_c7f21ee
+  non_ion_exchange_boundary_remote_sync: origin_main_equal_at_c7f21ee
   non_ion_exchange_boundary_state_paths: passed_147_artifacts_at_953b18a
   non_ion_exchange_boundary_secrets_scan: passed_233_tracked_files_at_953b18a
   non_ion_exchange_boundary_yaml: PROJECT_STATE_research_contract_and_G29_parsed

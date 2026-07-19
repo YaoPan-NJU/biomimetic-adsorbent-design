@@ -37,6 +37,8 @@ G29 also terminates `MAC-BI1` and `MAC-IF1` as ROX main candidates because their
 
 Boundary commit `953b18a` passed 147 state-artifact checks, six snapshot checksums, YAML parsing, staged diff validation and a 233-file credential scan. It is the first checkpoint that records the non-ion-exchange rule and the PFH-1/MAC route terminations together.
 
+Remote checkpoint `c7f21ee` was restored into a fresh clone. Without chat history, it recovered the global non-ion-exchange boundary, PFH-1/MAC terminations, empty E1 register and the non-ion-exchange PFHxS redesign next action; local and remote `main` were equal.
+
 The pre-G29 historical PFHxS design commit `fd8823c` passed 145 state-artifact checks, six BMDL snapshot checksums, YAML parsing, staged diff checks and a 231-file credential scan. Its PFH-1 E0 status and M0 next action are superseded by G29.
 
 Pre-G29 remote checkpoint `17cb4ec` was restored into a fresh HTTPS clone and recovered the then-current PFH-1 E0 status. That status is historical; G29 terminates PFH-1 and cancels M0.

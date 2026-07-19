@@ -37,6 +37,8 @@ The binding read order is now `docs/SCIENTIFIC_CONSENSUS_BIOMIMETIC_AND_ION_EXCH
 
 Scientific-consensus commit `1b0f95e` passed 149 state-artifact checks, six snapshot checksums, G29/G30 and contract YAML parsing, staged diff validation and a 235-file credential scan. It is the first checkpoint another AI should use for the agreed scientific definition and PFH-1 classification.
 
+Remote checkpoint `86ec39e` was restored into a fresh clone. Without chat history, it recovered the nonexclusive scientific axes, electrostatic/ion-exchange distinction, mandatory PFH-1 resin label, PFH-1 termination, empty E1 register and successor-AI next action; local and remote `main` were equal.
+
 G29 also terminates `MAC-BI1` and `MAC-IF1` as ROX main candidates because their carboxylate-plus-hydrophobic mechanism is a weak-cation-exchange/mixed-mode direction. They remain historical controls only; their B0/M0 actions are cancelled. This global correction supersedes later historical paragraphs that describe MAC-IF1 as conditional or active.
 
 Boundary commit `953b18a` passed 147 state-artifact checks, six snapshot checksums, YAML parsing, staged diff validation and a 233-file credential scan. It is the first checkpoint that records the non-ion-exchange rule and the PFH-1/MAC route terminations together.

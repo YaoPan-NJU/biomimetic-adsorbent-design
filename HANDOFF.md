@@ -41,6 +41,8 @@ The unique successor action has changed order: first freeze the PFHxS secondary-
 
 Environmental-scenario integration commit `a6fdb41` passed 151 state-artifact checks, six snapshot checksums, G31 and contract YAML parsing, staged diff validation and a 237-file credential scan. The unrelated untracked overview script and Word document present in the local checkout were not staged or modified.
 
+Remote checkpoint `829fccf` was restored into a fresh clone. Without chat history, it recovered the PFHxS-scenario-first next action, three concentration tiers, rejection of the fixed scenario quota and universal `Kd`, empty E1 register and PFH-1 termination; local and remote `main` were equal.
+
 Scientific-consensus commit `1b0f95e` passed 149 state-artifact checks, six snapshot checksums, G29/G30 and contract YAML parsing, staged diff validation and a 235-file credential scan. It is the first checkpoint another AI should use for the agreed scientific definition and PFH-1 classification.
 
 Remote checkpoint `86ec39e` was restored into a fresh clone. Without chat history, it recovered the nonexclusive scientific axes, electrostatic/ion-exchange distinction, mandatory PFH-1 resin label, PFH-1 termination, empty E1 register and successor-AI next action; local and remote `main` were equal.

@@ -27,7 +27,7 @@ pollutants:
       A05: { r1: "54-59（三批次）", r2: "74 revise（重构路径，journal 核验）；48 terminate（批次旧路径）", r3: "73 revise×2 / 70 terminate×1（三投递矛盾，均未过线）", status: terminated, file: SCHEMES/S04_A05_LanM-coordination_terminated.md, reason: "证据最充分投递含先例全文核验（Fe-MOF-808 无分解无 ng/L；Zr-PTA 开放位靶向 C4 非 C8 直接危及中心假设）且设计者自请终止；四轮以上执行上限 74 从未近线；Zr-MOF 先例饱和（Fe-MOF-808/PCN-999/Zr-PTA/ACS Omega 2025）" }
       A06: { r1: "62 revise（60/terminate 首投递为误投递已撤销）", r2: "69 revise 0c/2h（journal 核验）", status: "r3 已渲染待并行位（重建 2/3）：2 high 为 L1 补偿符号与新预印本相反（可重构为纯经验轴）、F5a 判据归一化缺陷（不需换机制）" }
       A07: { r1: "72 revise（56/terminate 首投递为误投递已撤销）", status: "r2 运行中（重建 1/3）：3 high 为胍基抗硫酸盐归因颠倒/加和性判决近重言式/缺铵基-CD 电荷对照" }
-      A08: { r1: "73 revise 0c/5h（journal 完整核验）", status: "r2 运行中（重建 1/3）：5 high 为包裹热力学偏乐观/塑性签名非特异/R1 对照交联混杂/竞争物谱漏表面活性剂/漏检 Macromolecules 2022 先例" }
+      A08: { r1: "73 revise 0c/5h", r2: "71 revise 0c/2h（journal 核验；3 high 真闭合，2 high 击中原创新锚点可验证性）", status: "r3 运行中（重建 2/3，含监督者指令：创新锚点诚实重定位为软相运动性解耦方法学，做不到则报告终止不降标）" }
     misdelivery_incident: "2026-07-21：多个工作流通知载荷为误投递或陈旧（首份通知分数普遍偏高，如 A02 86/实为 76、A03 75/实为 71、A01 r2 79/实为 64、A05 首裁 84/实为 54）；另发现早先误判为秒崩的批次工作流 whikn2ogz 实际完整运行 2 小时（30 代理）并产生规范结果。规则：一切以 journal result 条目为权威，通知仅用于唤醒。"
     recovery_note: "2026-07-21 从 wf_96b23550-47a journal 恢复 13 份第一轮产物（A01/A03/A04 完整三轮，A02/A05 设计与攻击），全文存于 SCHEMES/_wip/"
   dcp26:

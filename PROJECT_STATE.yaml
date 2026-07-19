@@ -370,4 +370,4 @@ checks:
   context_free_codex_readback: last_passed_at_739c39d; not_repeated_for_portfolio_100_checkpoint
   bpa1_exact_probe: P1_MAPy_retained_as_experiment_gated_probe_no_materialization
   glm_branch_takeover: mechanical_validators_passed_at_df8a7ef_base_on_kimi-k3_branch_2026-07-17
-  qwen_branch_activation: validators_passed_on_dual_executor_aligned_tree_2026-07-19; fresh_clone_pending
+  qwen_branch_activation: validators_passed_and_fresh_clone_readback_at_a86547f342c170760d3d7ebe751ba2b29945335c_2026-07-19

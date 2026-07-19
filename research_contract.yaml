@@ -32,6 +32,36 @@ water_context:
     - surface water
     - drinking water
 
+environmental_scenario_matching:
+  required_before:
+    - biological_prototype_deep_search
+    - material_deep_design
+    - E0_release
+  primary_scenario: municipal_or_domestic_wastewater_treatment_secondary_effluent
+  required_fields:
+    - exact_treatment_and_sampling_location
+    - pollutant_target_scope
+    - detection_frequency_and_concentration_distribution_not_maximum_only
+    - dissolved_colloidal_total_fraction_filtration_and_LOQ
+    - pH_DOC_UV254_ionic_strength_major_ions_Ca_Mg_solids_and_surfactants
+    - target_class_and_out_of_class_competitors
+    - temporal_spatial_process_and_sampling_year_variability
+    - treatment_endpoint_dose_EBCT_regeneration_and_waste_boundary
+  evidence_rule:
+    preferred: at_least_two_independent_primary_or_authoritative_sources_for_the_primary_scenario
+    sparse_data: record_as_admission_risk_do_not_fill_with_other_scenarios
+    prohibit:
+      - maximum_only_as_typical_concentration
+      - point_source_or_influent_data_as_secondary_effluent_substitute
+      - review_range_as_only_evidence
+      - fixed_irrelevant_scenario_quota
+  experiment_concentration_tiers:
+    environmental_relevance: supports_secondary_effluent_performance_claims
+    mechanism_measurement: elevated_when_analytically_needed_and_cannot_replace_field_relevance
+    capacity_boundary: isotherm_or_saturation_only_and_cannot_predict_trace_performance
+  performance_target_rule: derive_from_case_specific_mass_balance_or_column_design_not_a_universal_Kd
+  binding_guidance: docs/POLLUTANT_ENVIRONMENTAL_SCENARIO_MATCHING.md
+
 pollutant_admission:
   scope: organic_pollutants_with_priority_for_emerging_contaminants
   seed_source: pollutant_kb.pollutant_index

@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: pfhxs_non_ion_exchange_biomimetic_redesign
+phase: pfhxs_secondary_effluent_scenario_contract_before_redesign
 status: in_progress
-last_completed_step: Pan Yao and Codex recorded the scientific consensus that biomimicry and ion exchange are independent nonexclusive axes and electrostatic attraction is not synonymous with ion exchange; PFH-1 remains terminated because it must be primarily classified as a bio-transport-inspired partitioned anion-exchange resin and strict biomimetic causality is unproven
-next_action: "A successor AI reads the scientific consensus and project boundary, then reopens PFHxS biological-prototype and non-resin biomimetic-adsorbent discovery; PFH-1 M0 remains prohibited and commercial ion-exchange resin remains a benchmark/control"
+last_completed_step: Selectively integrated origin/GLM@b60d8d8 environmental-scenario matching into main as a treatment-stage concentration speciation matrix competitor variability and engineering-endpoint contract; fixed five-scenario quotas unverified branch numbers and a universal Kd threshold were rejected, and no candidate was promoted
+next_action: "A successor AI first freezes the PFHxS municipal-secondary-effluent scenario contract and three experimental concentration tiers, then reopens biological-prototype and non-resin biomimetic-adsorbent discovery; PFH-1 remains terminated"
 active_branch: main
 last_verified_commit: 1b0f95e
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -73,8 +73,8 @@ preserved_conditional_concept: null
 pollutant_topic_shortlist_2026:
   scope: environmental_significance_public_attention_publication_tractability_only
   design_criteria_used: false
-  owner_selection_pending:
-    - PFHxS
+  owner_selection_completed: PFHxS
+  preserved_alternatives:
     - roxithromycin framed within macrolide-class concern
     - PFOA
     - nonylphenol
@@ -114,6 +114,28 @@ scientific_consensus_biomimetic_ion_exchange_20260719:
   PFH_1_project_status: terminated_scope_overlap
   report: docs/SCIENTIFIC_CONSENSUS_BIOMIMETIC_AND_ION_EXCHANGE.md
   gate: G30_BIOMIMETIC_ION_EXCHANGE_SCIENTIFIC_CONSENSUS
+environmental_scenario_matching_20260719:
+  source_branch: origin/GLM
+  source_commit: b60d8d81b2bcc7b49d9a35f5fba892b9b4c05301
+  primary_scenario: municipal_or_domestic_wastewater_treatment_secondary_effluent
+  status: binding_framework_integrated_PFHxS_contract_not_yet_frozen
+  required_dimensions:
+    - treatment_and_sampling_location
+    - target_scope
+    - concentration_distribution_and_detection_frequency
+    - dissolved_colloidal_total_fraction_and_analytical_LOQ
+    - DOM_ions_solids_surfactants_and_other_matrix
+    - target_class_and_out_of_class_competitors
+    - temporal_spatial_and_process_variability
+    - engineering_treatment_endpoint
+  experiment_concentration_tiers:
+    - environmental_relevance
+    - mechanism_measurement
+    - capacity_boundary
+  fixed_five_scenario_quota: rejected
+  universal_Kd_threshold: rejected
+  report: docs/POLLUTANT_ENVIRONMENTAL_SCENARIO_MATCHING.md
+  gate: G31_POLLUTANT_ENVIRONMENTAL_SCENARIO_MATCHING
 paused_candidates:
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (B-class pressure-test lead; not formally recommended)
 pressure_test_leads_not_fixed_shortlist:
@@ -399,6 +421,10 @@ open_issues:
     severity: critical
     status: resolved_binding_rule
     text: Biomimicry and ion exchange are nonexclusive scientific axes, but this project excludes materials primarily classified and published as conventional or mixed-mode ion-exchange resins; charged features or minor exchange contributions require counter-ion balance and matched-charge controls proving independent biomimetic causality.
+  - id: PFHXS-SCENARIO-001
+    severity: critical
+    status: in_progress_successor_action
+    text: Freeze PFHxS occurrence distribution analytical fraction secondary-effluent matrix PFSA-class competitors temporal variability engineering endpoint and environmental/mechanism/capacity concentration tiers before reopening prototype or material design.
 artifacts:
   contract: research_contract.yaml
   rules: SOUL.md
@@ -406,6 +432,7 @@ artifacts:
   biomimetic_design_framework: docs/BIOMIMETIC_DESIGN_FRAMEWORK.md
   biomimetic_ion_exchange_scientific_consensus: docs/SCIENTIFIC_CONSENSUS_BIOMIMETIC_AND_ION_EXCHANGE.md
   non_ion_exchange_material_boundary: docs/MATERIAL_SCOPE_BOUNDARY_ION_EXCHANGE.md
+  pollutant_environmental_scenario_matching: docs/POLLUTANT_ENVIRONMENTAL_SCENARIO_MATCHING.md
   adaptive_experiment_ready_research_plan: docs/ADAPTIVE_EXPERIMENT_READY_RESEARCH_PLAN.md
   portfolio_100_status: rounds/portfolio_100/README.md
   portfolio_100_supervisor_audit: rounds/portfolio_100/SUPERVISOR_AUDIT.md
@@ -422,6 +449,7 @@ artifacts:
   gate_g28_pfhxs_complete_design_review: orchestration/gates/G28_PFHXS_COMPLETE_DESIGN_REVIEW.yaml
   gate_g29_non_ion_exchange_biomimetic_boundary: orchestration/gates/G29_NON_ION_EXCHANGE_BIOMIMETIC_BOUNDARY.yaml
   gate_g30_biomimetic_ion_exchange_scientific_consensus: orchestration/gates/G30_BIOMIMETIC_ION_EXCHANGE_SCIENTIFIC_CONSENSUS.yaml
+  gate_g31_pollutant_environmental_scenario_matching: orchestration/gates/G31_POLLUTANT_ENVIRONMENTAL_SCENARIO_MATCHING.yaml
   pfhxs_complete_design_report_20260719: DEEP_RESEARCH_PFHXS_COMPLETE_DESIGN.md
   pfhxs_research_brief: rounds/pfhxs_design_1/RESEARCH_BRIEF.md
   pfhxs_designer: rounds/pfhxs_design_1/DESIGNER.md

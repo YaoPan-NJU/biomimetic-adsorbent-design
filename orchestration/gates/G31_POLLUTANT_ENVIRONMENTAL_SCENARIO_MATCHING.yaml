@@ -1,0 +1,41 @@
+gate_id: G31_POLLUTANT_ENVIRONMENTAL_SCENARIO_MATCHING
+date: 2026-07-19
+trigger: owner_requests_selective_integration_of_origin_GLM_b60d8d8_environmental_scenario_rule
+status: binding_framework_update_no_candidate_release
+source_review:
+  branch: origin/GLM
+  commit: b60d8d81b2bcc7b49d9a35f5fba892b9b4c05301
+  adopted:
+    - pollutant_design_must_match_real_environmental_scenario
+    - field_concentration_must_control_primary_experimental_concentration
+    - elevated_mechanism_and_capacity_concentrations_need_separate_labels
+    - concentration_sources_and_rationale_are_mandatory
+  revised:
+    - concentration_only_expanded_to_treatment_stage_speciation_matrix_competitors_variability_and_engineering_target
+    - fixed_five_scenarios_replaced_by_one_frozen_primary_scenario_plus_relevant_contrasts_only
+    - fixed_three_paper_rule_replaced_by_independent_primary_or_authoritative_evidence_with_explicit_gap_handling
+    - universal_Kd_threshold_replaced_by_case_specific_mass_balance_and_column_target
+  not_inherited:
+    - branch_candidate_status
+    - branch_PROJECT_STATE
+    - unverified_ROX_example_numbers
+    - obsolete_two_hard_correspondence_and_prototype_first_rules
+primary_project_scenario: municipal_or_domestic_wastewater_treatment_secondary_effluent
+required_scenario_contract_fields:
+  - treatment_location
+  - target_scope
+  - concentration_distribution
+  - occurrence_and_analytical_fraction
+  - water_matrix
+  - competitors
+  - temporal_and_spatial_variability
+  - engineering_treatment_target
+experiment_concentration_tiers:
+  - environmental_relevance
+  - mechanism_measurement
+  - capacity_boundary
+release_effect:
+  E1_ready: false
+  no_existing_candidate_promoted: true
+  PFH_1_status: remains_terminated
+next_action: successor_AI_freezes_PFHxS_secondary_effluent_scenario_contract_before_new_biological_prototype_or_material_design

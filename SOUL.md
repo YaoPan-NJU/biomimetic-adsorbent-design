@@ -27,6 +27,7 @@ Carrier selection is material-class neutral and must account for inactive mass. 
 ## Research boundaries
 
 - Primary water matrix: municipal/domestic wastewater-treatment secondary effluent.
+- Every pollutant requires a frozen environmental-scenario contract before biological-prototype or material deep design. The contract must match the exact treatment location, field concentration distribution, dissolved/colloidal/total analytical fraction, DOM and inorganic matrix, competitors, temporal/spatial variability and engineering endpoint. Environmental-performance experiments must operate in the field-relevant tier; higher mechanism and saturation tiers are reported separately and cannot substitute for secondary-effluent evidence. Read `docs/POLLUTANT_ENVIRONMENTAL_SCENARIO_MATCHING.md`.
 - Ultrapure water: intrinsic-mechanism and causal-control experiments.
 - Surface or drinking water: optional external validation only.
 - Pollutant scope: organic pollutants, with priority given to emerging contaminants. Nutrients and inorganic pollutants do not enter the active discovery process unless Pan Yao explicitly reopens that scope.

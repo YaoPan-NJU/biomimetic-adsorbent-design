@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: Pan Yao and Codex recorded the scientific consensus that biomimicry and ion exchange are independent nonexclusive axes and electrostatic attraction is not synonymous with ion exchange; PFH-1 remains terminated because it must be primarily classified as a bio-transport-inspired partitioned anion-exchange resin and strict biomimetic causality is unproven
 next_action: "A successor AI reads the scientific consensus and project boundary, then reopens PFHxS biological-prototype and non-resin biomimetic-adsorbent discovery; PFH-1 M0 remains prohibited and commercial ion-exchange resin remains a benchmark/control"
 active_branch: main
-last_verified_commit: 953b18a
+last_verified_commit: 1b0f95e
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:
@@ -550,6 +550,10 @@ artifacts:
   gate_g6_delivery: orchestration/gates/G6_DELIVERY.yaml
   fresh_clone_readback: orchestration/FRESH_CLONE_READBACK.md
 checks:
+  biomimetic_ion_exchange_consensus_state_paths: passed_149_artifacts_at_1b0f95e
+  biomimetic_ion_exchange_consensus_secrets_scan: passed_235_tracked_files_at_1b0f95e
+  biomimetic_ion_exchange_consensus_yaml: PROJECT_STATE_research_contract_G29_and_G30_parsed
+  biomimetic_ion_exchange_consensus_disposition: PFH1_required_label_partitioned_anion_exchange_resin_strict_biomimicry_unproven_project_terminated
   non_ion_exchange_boundary_fresh_clone: passed_at_c7f21ee
   non_ion_exchange_boundary_context_recovery: recovered_global_rule_PFH1_MAC_terminations_empty_E1_and_non_ion_exchange_redesign_next_action_at_c7f21ee
   non_ion_exchange_boundary_remote_sync: origin_main_equal_at_c7f21ee

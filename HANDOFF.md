@@ -35,6 +35,8 @@ Under that scientific definition, `PFH-1` must primarily be called a biological-
 
 The binding read order is now `docs/SCIENTIFIC_CONSENSUS_BIOMIMETIC_AND_ION_EXCHANGE.md`, then `docs/MATERIAL_SCOPE_BOUNDARY_ION_EXCHANGE.md`, then Gate G30. The project excludes materials primarily classified and published as conventional or mixed-mode ion-exchange resins. Charged features and minor exchange contributions are not automatically prohibited, but all exchange contributions must be quantified and the biomimetic structure must provide independent causal performance beyond IEC, Donnan behavior and counter-ion release. The PFHxS portfolio has no active lead and no E1/E2 release.
 
+Scientific-consensus commit `1b0f95e` passed 149 state-artifact checks, six snapshot checksums, G29/G30 and contract YAML parsing, staged diff validation and a 235-file credential scan. It is the first checkpoint another AI should use for the agreed scientific definition and PFH-1 classification.
+
 G29 also terminates `MAC-BI1` and `MAC-IF1` as ROX main candidates because their carboxylate-plus-hydrophobic mechanism is a weak-cation-exchange/mixed-mode direction. They remain historical controls only; their B0/M0 actions are cancelled. This global correction supersedes later historical paragraphs that describe MAC-IF1 as conditional or active.
 
 Boundary commit `953b18a` passed 147 state-artifact checks, six snapshot checksums, YAML parsing, staged diff validation and a 233-file credential scan. It is the first checkpoint that records the non-ion-exchange rule and the PFH-1/MAC route terminations together.

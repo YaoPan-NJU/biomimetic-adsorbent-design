@@ -15,9 +15,9 @@ pollutants:
     name: "全氟辛酸 PFOA"
     brief: complete
     angles_planned: 26
-    attempted: 5
+    attempted: 8
     passed: 1
-    terminated: 4
+    terminated: 5
     status: phase_b_round2
     slots:
       A01: { r1_score: 67, r2_score: 64, r2_verdict: terminate, status: terminated, file: SCHEMES/S01_A01_guanidino-CD_terminated.md, reason: "两个核心命题耗尽+先例饱和（胍基杯[5]芳烃 2019、季铵 PAF-1 2022），监督者接受 terminate" }
@@ -25,9 +25,9 @@ pollutants:
       A03: { r1: "45（批次）", r2: "71 revise 0c/4h（重构路径，journal 核验）；46 terminate（批次旧路径）", r3_verified: "74 revise 0c/2h（输出文件核验为权威；曾遭 77 分损坏投递，已废弃）", status: terminated, file: SCHEMES/S03_A03_guanidinium-COF_terminated.md, reason: "裁决者判定原创上限为设计实现级（门控物理经 E17/E18 成熟化、表面实现经 E10/E11 完成、识别单元与 VZ-COF 高度同构），即便两个 high 全闭合上限约 78-80<85，结构性不可修；先例 2019-2025 六篇以上覆盖" }
       A04: { r1_score: 69, r2_verified: "55 revise 0c/3h（批次）；66 terminate 0c/2h（并行，journal 核验）", status: terminated, file: SCHEMES/S02_A04_OAT4-window_terminated.md, reason: "窗口命题结构性平凡（正结果为有限腔固有预期、锐截止热力学不可达）+先例占据工程目标（Zr-PTA1 ng/L 柱+分解闭环；Ricard 2025/Li 2026 覆盖方法学空间）+亲和力预算无裕度" }
       A05: { r1: "54-59（三批次）", r2: "74 revise（重构路径，journal 核验）；48 terminate（批次旧路径）", r3: "73 revise×2 / 70 terminate×1（三投递矛盾，均未过线）", status: terminated, file: SCHEMES/S04_A05_LanM-coordination_terminated.md, reason: "证据最充分投递含先例全文核验（Fe-MOF-808 无分解无 ng/L；Zr-PTA 开放位靶向 C4 非 C8 直接危及中心假设）且设计者自请终止；四轮以上执行上限 74 从未近线；Zr-MOF 先例饱和（Fe-MOF-808/PCN-999/Zr-PTA/ACS Omega 2025）" }
-      A06: { r1: "62 revise（60/terminate 首投递为误投递已撤销）", r2: "69 revise 0c/2h（journal 核验）", status: "r3 已渲染待并行位（重建 2/3）：2 high 为 L1 补偿符号与新预印本相反（可重构为纯经验轴）、F5a 判据归一化缺陷（不需换机制）" }
+      A06: { r1: "62 revise（60/terminate 首投递为误投递已撤销）", r2: "69 revise 0c/2h（journal 核验）", status: "r3 运行中（重建 2/3）" }
       A07: { r1: "72 revise（56/terminate 首投递为误投递已撤销）", r2: "82 revise 0c/0h（journal 核验；r1 三高八中经攻击者核验全部真闭合）", status: "r3 运行中（重建 2/3 迷你轮：4 medium+3 low 闭合冲 85）" }
-      A08: { r1: "73 revise 0c/5h", r2: "71 revise 0c/2h（journal 核验；3 high 真闭合，2 high 击中原创新锚点可验证性）", status: "r3 运行中（重建 2/3，含监督者指令：创新锚点诚实重定位为软相运动性解耦方法学，做不到则报告终止不降标）" }
+      A08: { r1: "73 revise 0c/5h", r2: "71 revise 0c/2h", r3: "68 terminate 0c/2h（journal 核验）", status: terminated, file: SCHEMES/S07_A08_FABP4-plasticity_terminated.md, reason: "设计者执行监督者指令后自请终止：FABP4 特异签名判别逻辑不可得，创新锚点重定位为运动性解耦方法学后原创性维预计 7-8/15，与 85 线差距结构性；裁决者 terminate；残余价值为 S_deconvolution 三竞争图景+包络测绘负结果骨架" }
     misdelivery_incident: "2026-07-21：多个工作流通知载荷为误投递或陈旧（首份通知分数普遍偏高，如 A02 86/实为 76、A03 75/实为 71、A01 r2 79/实为 64、A05 首裁 84/实为 54）；另发现早先误判为秒崩的批次工作流 whikn2ogz 实际完整运行 2 小时（30 代理）并产生规范结果。规则：一切以 journal result 条目为权威，通知仅用于唤醒。"
     recovery_note: "2026-07-21 从 wf_96b23550-47a journal 恢复 13 份第一轮产物（A01/A03/A04 完整三轮，A02/A05 设计与攻击），全文存于 SCHEMES/_wip/"
   dcp26:

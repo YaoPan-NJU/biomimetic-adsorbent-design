@@ -25,6 +25,9 @@ pollutants:
       A03: { r1: "45（批次）", r2: "71 revise 0c/4h（重构路径，journal 核验）；46 terminate（批次旧路径）", r3_verified: "74 revise 0c/2h（输出文件核验为权威；曾遭 77 分损坏投递，已废弃）", status: terminated, file: SCHEMES/S03_A03_guanidinium-COF_terminated.md, reason: "裁决者判定原创上限为设计实现级（门控物理经 E17/E18 成熟化、表面实现经 E10/E11 完成、识别单元与 VZ-COF 高度同构），即便两个 high 全闭合上限约 78-80<85，结构性不可修；先例 2019-2025 六篇以上覆盖" }
       A04: { r1_score: 69, r2_verified: "55 revise 0c/3h（批次）；66 terminate 0c/2h（并行，journal 核验）", status: terminated, file: SCHEMES/S02_A04_OAT4-window_terminated.md, reason: "窗口命题结构性平凡（正结果为有限腔固有预期、锐截止热力学不可达）+先例占据工程目标（Zr-PTA1 ng/L 柱+分解闭环；Ricard 2025/Li 2026 覆盖方法学空间）+亲和力预算无裕度" }
       A05: { r1: "54-59（三批次）", r2: "74 revise（重构路径，journal 核验）；48 terminate（批次旧路径）", r3: "73 revise×2 / 70 terminate×1（三投递矛盾，均未过线）", status: terminated, file: SCHEMES/S04_A05_LanM-coordination_terminated.md, reason: "证据最充分投递含先例全文核验（Fe-MOF-808 无分解无 ng/L；Zr-PTA 开放位靶向 C4 非 C8 直接危及中心假设）且设计者自请终止；四轮以上执行上限 74 从未近线；Zr-MOF 先例饱和（Fe-MOF-808/PCN-999/Zr-PTA/ACS Omega 2025）" }
+      A06: { r1: "62 revise 0c/4h（journal 核验为权威；60/terminate 首投递为孤儿误投递，基于其的终止裁决已撤销）", status: "r2 运行中（重建 1/3）：4 high 为机制方向与 CW-AC 先例相反、润湿矛盾、签名不可制备、同系置换无约束" }
+      A07: { r1: "56 terminate 1c/2h（通知；journal design+attack 已落盘，裁决待落盘核验）", status: "待核验后组装终止审计（critical 为先例饱和型）" }
+      A08: { r1: "运行中", status: "首轮运行中" }
     misdelivery_incident: "2026-07-21：多个工作流通知载荷为误投递或陈旧（首份通知分数普遍偏高，如 A02 86/实为 76、A03 75/实为 71、A01 r2 79/实为 64、A05 首裁 84/实为 54）；另发现早先误判为秒崩的批次工作流 whikn2ogz 实际完整运行 2 小时（30 代理）并产生规范结果。规则：一切以 journal result 条目为权威，通知仅用于唤醒。"
     recovery_note: "2026-07-21 从 wf_96b23550-47a journal 恢复 13 份第一轮产物（A01/A03/A04 完整三轮，A02/A05 设计与攻击），全文存于 SCHEMES/_wip/"
   dcp26:

@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: A design-neutral re-screen of the 20 pollutant_kb organic candidates shortlisted PFHxS, roxithromycin, PFOA and nonylphenol for owner selection; octocrylene remains monitoring-gated and no biomimetic or material criterion entered the ranking
 next_action: "Pan Yao selects one pollutant from PFHxS, roxithromycin, PFOA and nonylphenol, or requests a focused comparison; do not resume biomimetic-prototype or material design before that selection"
 active_branch: main
-last_verified_commit: 385353bc8d8de2d3837d3a6fb1b72e531be8db28
+last_verified_commit: 385353bc881f6e9234461f5c9084e4f4454c8f78
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:

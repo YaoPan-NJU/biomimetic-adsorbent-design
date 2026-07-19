@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: Selectively integrated origin/GLM@b60d8d8 environmental-scenario matching into main as a treatment-stage concentration speciation matrix competitor variability and engineering-endpoint contract; fixed five-scenario quotas unverified branch numbers and a universal Kd threshold were rejected, and no candidate was promoted
 next_action: "A successor AI first freezes the PFHxS municipal-secondary-effluent scenario contract and three experimental concentration tiers, then reopens biological-prototype and non-resin biomimetic-adsorbent discovery; PFH-1 remains terminated"
 active_branch: main
-last_verified_commit: 1b0f95e
+last_verified_commit: a6fdb41
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:
@@ -578,6 +578,10 @@ artifacts:
   gate_g6_delivery: orchestration/gates/G6_DELIVERY.yaml
   fresh_clone_readback: orchestration/FRESH_CLONE_READBACK.md
 checks:
+  pollutant_environment_scenario_state_paths: passed_151_artifacts_at_a6fdb41
+  pollutant_environment_scenario_secrets_scan: passed_237_tracked_files_at_a6fdb41
+  pollutant_environment_scenario_yaml: PROJECT_STATE_research_contract_and_G31_parsed
+  pollutant_environment_scenario_branch_review: origin_GLM_b60d8d8_selectively_integrated_without_candidate_state_unverified_ROX_values_fixed_scenario_quota_or_universal_Kd
   biomimetic_ion_exchange_consensus_fresh_clone: passed_at_86ec39e
   biomimetic_ion_exchange_consensus_context_recovery: recovered_nonexclusive_axes_electrostatic_distinction_PFH1_required_resin_label_termination_empty_E1_and_successor_next_action_at_86ec39e
   biomimetic_ion_exchange_consensus_remote_sync: origin_main_equal_at_86ec39e

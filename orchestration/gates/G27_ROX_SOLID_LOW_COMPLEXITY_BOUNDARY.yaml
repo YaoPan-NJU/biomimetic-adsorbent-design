@@ -1,0 +1,46 @@
+gate_id: G27_ROX_SOLID_LOW_COMPLEXITY_BOUNDARY
+date: 2026-07-19
+trigger: owner_requires_adsorbent_only_low_cost_and_simple_scalable_synthesis
+status: binding_scope_update_no_E1_release
+owner_decision:
+  final_material_form:
+    - recoverable_particle_adsorbent
+    - packed_bed_adsorbent
+  excluded_forms:
+    - membrane_separation_material
+    - liquid_receiver_process
+  biological_interface_role: prototype_evidence_only_not_a_material_component
+  prohibited_cost_or_stability_burdens:
+    - antibody
+    - protein
+    - peptide
+    - labile_biological_reagent
+    - expensive_two_dimensional_material
+    - precious_metal
+    - custom_multistep_host
+  acceptable_process_families:
+    - simple_suspension_bead_formation_plus_hydrolysis
+    - commodity_porous_bead_plus_one_low_cost_chemical_post_treatment
+    - furnace_treatment_when_the_biomimetic_function_survives_and_is_causally_testable
+  synthesis_principle: every_added_step_must_earn_a_unique_measured_gain_in_selectivity_matrix_tolerance_regeneration_or_spatial_causality
+effect_on_MAC_IF1:
+  scientific_spatial_rule_retained: low_coverage_water_accessible_weak_anionic_shallow_zone_adjacent_to_exposed_low_polarity_pore_wall
+  exact_manufacturing_route_locked: false
+  benzophenone_UV_acrylic_acid_photograft: comparison_route_not_default
+  preferred_screening_order:
+    - simplest_commodity_or_simple_bead_route_capable_of_meeting_the_spatial_rule
+    - one_step_low_cost_post_treatment
+    - UV_photograft_only_if_simpler_routes_cannot_create_and_verify_the_required_structure
+  uniform_MAC_BI1_role: simple_two_reaction_engineering_and_causal_baseline
+  membrane_ROX_LYS_MIM_status: out_of_scope
+release_conditions:
+  E1_ready: false
+  must_pass:
+    - B0_biological_interface_class_boundary
+    - M0_direct_spatial_manufacture_and_characterization
+    - simple_manufacturing_screen
+  stop_or_downgrade:
+    - route_requires_complex_multistep_precision_synthesis_without_unique_gain
+    - route_cannot_be_formed_as_recoverable_particles_or_packed_bed_media
+    - furnace_or_carbon_route_is_explained_by_generic_surface_area_and_hydrophobic_adsorption
+next_action: freeze_B0_plus_M0_package_and_compare_the_minimum_number_of_simple_bead_processes_before_any_full_adsorption_optimization

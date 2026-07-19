@@ -2,8 +2,8 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: adaptive_experiment_ready_design_discovery
 status: in_progress
-last_completed_step: Owner opened the rescue route; completed a deep evidence update and rebuilt MAC-IF1 as a conditional directional shallow-interface lead while retaining uniform MAC-BI1 as a causal baseline
-next_action: "Freeze one combined B0-plus-M0 minimum discrimination package: anionic-lipid interface class-boundary tests against matched cationic amphiphiles, and same-batch PS-DVB shallow-versus-deep-versus-uniform carboxyl-distribution fabrication and spatial characterization; do not release full adsorption optimization before both gates pass"
+last_completed_step: Owner locked the ROX route to a low-cost packed-bed adsorbent and made synthesis simplicity a release gate; MAC-IF1 remains a conditional spatial-interface concept but UV photografting is no longer the default locked process
+next_action: "Freeze one combined B0-plus-M0 minimum discrimination package: first select the simplest credible bead process under G27, then test anionic-lipid interface class boundaries and directly distinguish shallow-versus-deep-versus-uniform weak-anionic distributions; do not release full adsorption optimization before B0, M0 and the manufacturing screen pass"
 active_branch: main
 last_verified_commit: 1e8121b2c7235874654ff6fe21ec23f9cbd6c406
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -68,7 +68,7 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
-active_deep_concept: MAC-IF1 low-coverage shallow-PAA-on-porous-St-DVB directional pore-wall interface for macrolide-class adsorption; conditional_lead with B0_not_passed M0_not_passed and E1_not_ready; uniform MAC-BI1 retained as control
+active_deep_concept: MAC-IF1 low-coverage shallow weak-anionic zone on porous St-DVB for macrolide-class adsorption; exact manufacturing route not locked, with simple commodity-bead chemistry preferred and UV photografting retained only as a comparison route; conditional_lead with B0_not_passed M0_not_passed and E1_not_ready; uniform MAC-BI1 retained as control
 paused_candidates:
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (B-class pressure-test lead; not formally recommended)
 pressure_test_leads_not_fixed_shortlist:
@@ -77,8 +77,8 @@ pressure_test_leads_not_fixed_shortlist:
   - MAC-BI1 biofilm-and-anionic-lipid-interface-inspired hydrolyzed porous MAn-St-DVB adsorbent bead
   - MAC-IF1 mature-biofilm-and-anionic-lipid-interface-informed directional shallow-carboxylate porous St-DVB adsorbent bead
 rox_open_tournament:
-  gate: G26_ROX_MAC_IF1_RESCUE_REDESIGN
-  status: conditional_directional_interface_redesign_open_no_E1_release
+  gate: G27_ROX_SOLID_LOW_COMPLEXITY_BOUNDARY
+  status: solid_low_cost_directional_interface_redesign_open_no_E1_release
   strict_adsorbent_lead:
     id: MAC-IF1
     status: conditional_lead_B0_not_passed_M0_not_passed_E1_not_ready
@@ -333,6 +333,10 @@ open_issues:
     severity: critical
     status: in_progress_protocol_not_frozen
     text: Manufacture and directly distinguish low-coverage shallow, deeper or uniform, and no-carboxyl distributions on the same porous St-DVB batch while matching accessible acid and wet pore structure; elemental composition without spatial evidence is insufficient.
+  - id: MAC-IF1-MANUFACTURING-001
+    severity: critical
+    status: in_progress_route_not_locked
+    text: Final material must be a recoverable particle or packed-bed adsorbent made from commodity feedstocks without biological reagents, expensive two-dimensional materials or a complex multistep sequence. Prefer a commercial or simply suspension-polymerized porous bead plus one low-cost post-treatment, or direct bead formation plus hydrolysis. UV photografting is a comparison route rather than the default; furnace treatment is eligible only if it preserves the required artificial spatial rule and does not collapse the design into generic activated carbon.
   - id: MAC-IF1-C0-001
     severity: critical
     status: blocked_by_B0_and_M0_not_experiment_release
@@ -358,6 +362,7 @@ artifacts:
   gate_g23_glm_lessons_integration: orchestration/gates/G23_GLM_LESSONS_INTEGRATION.yaml
   gate_g24_wastewater_bioprocess_prototype_discovery: orchestration/gates/G24_WASTEWATER_BIOPROCESS_PROTOTYPE_DISCOVERY.yaml
   gate_g26_rox_mac_if1_rescue_redesign: orchestration/gates/G26_ROX_MAC_IF1_RESCUE_REDESIGN.yaml
+  gate_g27_rox_solid_low_complexity_boundary: orchestration/gates/G27_ROX_SOLID_LOW_COMPLEXITY_BOUNDARY.yaml
   glm_branch_lessons_integration_20260718: docs/GLM_BRANCH_LESSONS_INTEGRATION_2026-07-18.md
   mac_bi1_owner_review_report_20260718: docs/ROX_MAC_BI1_OWNER_REVIEW_REPORT_2026-07-18.md
   rox_strong_biomimetic_innovation_audit_20260718: DEEP_RESEARCH_ROX_STRONG_BIOMIMETIC_INNOVATION_AUDIT.md

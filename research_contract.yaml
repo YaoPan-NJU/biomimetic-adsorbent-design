@@ -298,7 +298,19 @@ rox_mac_if1_rescue:
   supporting_biophysical_mechanism: shallow_macrolide_partition_at_anionic_lipid_interfaces
   causal_link_between_observation_and_mechanism_is_already_proven: false
   artificial_spatial_rule: low_coverage_weak_anionic_shallow_zone_adjacent_to_exposed_low_polarity_pore_wall
-  primary_manufacturing_hypothesis: short_time_benzophenone_UV_AA_photograft_on_mm_porous_St_DVB
+  manufacturing_route_status: not_locked_simplicity_screen_required
+  preferred_manufacturing_envelope:
+    final_form: recoverable_particle_or_packed_bed_adsorbent
+    route_A: commodity_or_simple_suspension_polymerized_porous_bead_plus_one_low_cost_post_treatment
+    route_B: direct_bead_formation_plus_simple_hydrolysis
+    UV_photografting: comparison_route_not_default
+    furnace_treatment: eligible_when_it_preserves_the_required_spatial_rule_and_adds_more_than_generic_carbon_adsorption
+    excluded:
+      - membrane_separation_or_liquid_receiver
+      - antibody_protein_peptide_or_other_labile_biological_reagent
+      - expensive_two_dimensional_material
+      - precious_metal
+      - custom_multistep_host_or_precision_synthesis_without_unique_measured_gain
   baseline_retention:
     uniform_MAC_BI1_deleted: false
     role: uniform_mixed_mode_causal_control

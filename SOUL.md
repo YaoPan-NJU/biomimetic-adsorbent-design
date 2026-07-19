@@ -30,6 +30,7 @@ Carrier selection is material-class neutral and must account for inactive mass. 
 - Experimental complexity is an optimization concern, not a veto, unless the chemistry is implausible, the claim is not testable, or the risk is unacceptable.
 - The default deliverable is a manufacturable artificial adsorbent. Proteins, expressed constructs, folded peptides, and protein-derived biohybrids require an explicit scope reopening by Pan Yao; they cannot enter by default to satisfy a biomimetic-fidelity or dynamic-correspondence score.
 - Tissue or organ enrichment is a prototype-discovery signal, not proof that a specific protein causes accumulation. Direct binding, structural, perturbation, or transport evidence is required before a molecular feature is translated.
+- Biological treatment unit behavior (sludge floc, EPS, biofilm) is an optional, non-scoring prototype-discovery heuristic. Bulk unit removal is not a translatable mechanism; a documented specific sorption, structural, or metabolic principle is required before a unit-level feature is translated.
 - ADRMATS is outside project scope.
 
 ## Evidence rules

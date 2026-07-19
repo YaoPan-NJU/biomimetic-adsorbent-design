@@ -2,7 +2,7 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: methodology_correction_fresh_start
 status: in_progress
-last_completed_step: "Branch methodology corrected and committed as 75c8144; Qwen branch activated from kimi-k3 HEAD 100b7df (kimi-k3 frozen); Claude Code set as primary executor with Qwen as cross-device secondary; entrypoint docs, contract, SOUL and PROTOCOL aligned for dual-executor sequential handoff"
+last_completed_step: "Branch methodology corrected and committed as 75c8144; Qwen branch activated from kimi-k3 HEAD 100b7df (kimi-k3 frozen); Claude Code set as primary executor with Qwen as cross-device secondary; entrypoint docs, contract, SOUL and PROTOCOL aligned for dual-executor sequential handoff; Pan Yao's two optional biomimetic inspiration lines recorded (biological treatment unit heuristic doc added, organ enrichment heuristic reconfirmed); fresh pollutant selection deep research initiated"
 next_action: "Begin fresh pollutant selection under new methodology - identify specific scientific problems and engineering challenges before biological prototype search"
 active_branch: Qwen
 last_verified_commit: 75c8144
@@ -306,6 +306,7 @@ artifacts:
   inorganic_translation_evidence: research/evidence/INORGANIC_TRANSLATION_EVIDENCE.md
   organic_translation_evidence: research/evidence/ORGANIC_TRANSLATION_EVIDENCE.md
   organ_enrichment_biomimetic_heuristic: research/evidence/ORGAN_ENRICHMENT_BIOMIMETIC_HEURISTIC.md
+  biological_treatment_unit_heuristic: research/evidence/BIOLOGICAL_TREATMENT_UNIT_BIOMIMETIC_HEURISTIC.md
   biomimetic_design_framework: docs/BIOMIMETIC_DESIGN_FRAMEWORK.md
   portfolio_100_bpa: rounds/portfolio_100/BPA.md
   portfolio_100_bpa_cull: rounds/portfolio_100/BPA_CULL.md

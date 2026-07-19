@@ -139,6 +139,14 @@ material_translation:
       - toxicokinetic_and_nonspecific_partitioning_alternatives_considered
       - direct_molecular_or_microenvironment_mechanism_evidence
     active_route_or_next_action_unchanged: true
+  biological_treatment_unit_heuristic:
+    status: optional_non_scoring_reference
+    purpose: discover_candidate_sorption_structural_or_metabolic_mechanisms_in_wwtp_biological_units
+    required_before_material_translation:
+      - documented_unit_level_specific_mechanism_not_bulk_removal
+      - sorption_degradation_and_extracellular_intracellular_attribution_separated
+      - translatable_design_principle_extracted
+    active_route_or_next_action_unchanged: true
   protein_peptide_or_biohybrid_requires_explicit_owner_scope_reopening: true
   prohibited_shortcuts:
     - introduce_protein_or_folded_peptide_only_to_satisfy_dynamic_correspondence

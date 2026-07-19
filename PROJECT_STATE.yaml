@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: A design-neutral re-screen of the 20 pollutant_kb organic candidates shortlisted PFHxS, roxithromycin, PFOA and nonylphenol for owner selection; octocrylene remains monitoring-gated and no biomimetic or material criterion entered the ranking
 next_action: "Pan Yao selects one pollutant from PFHxS, roxithromycin, PFOA and nonylphenol, or requests a focused comparison; do not resume biomimetic-prototype or material design before that selection"
 active_branch: main
-last_verified_commit: fab8a515317f7d12aef11f4e7ef4f341f531445d
+last_verified_commit: 385353bc8d8de2d3837d3a6fb1b72e531be8db28
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:
@@ -497,6 +497,9 @@ artifacts:
   gate_g6_delivery: orchestration/gates/G6_DELIVERY.yaml
   fresh_clone_readback: orchestration/FRESH_CLONE_READBACK.md
 checks:
+  pollutant_topic_shortlist_state_paths: passed_137_artifacts_at_385353b
+  pollutant_topic_shortlist_secrets_scan: passed_223_tracked_files_at_385353b
+  pollutant_topic_shortlist_citation_spotcheck: eight_high_impact_claims_checked_three_partial_claims_narrowed
   direction_recovery: passed_on_fresh_clone_280855c
   organ_enrichment_heuristic: optional_non_scoring_reference_validated_on_fresh_clone_280855c
   carrier_mass_efficiency: material_class_neutral_contract_validated_on_fresh_clone_280855c

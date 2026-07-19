@@ -33,6 +33,10 @@
 
 执行顺序：pfoa（试点标定）、dcp26、bpa、pfbs、rox（优先验证组，有历史教训可用），随后 genx、pfhxs、pcp、octocrylene、betahch、chloroform、hcbd、bde209、np、pcb209、dde、ddt、dieldrin、endosulfan、tcdd。
 
+## 推进策略（2026-07-21 潘尧修订）
+
+每个污染物的最低目标为至少一个通过方案（≥85 分、零未决 critical/high、创新性清单通过）。某污染物取得首个通过方案后，即推进到执行顺序中的下一个污染物（广度优先）；20 个污染物全部访问一轮后，再回溯为各污染物补充额外角度与槽位（每污染物上限 50 槽）。当前设计跑完后再切换，不打断运行中的槽。
+
 ## 单方案闭环标准
 
 每个方案文件（`<slug>/SCHEMES/S<nn>_<简称>.md`）必须包含：

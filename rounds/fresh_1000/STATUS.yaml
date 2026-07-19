@@ -1,4 +1,5 @@
 program: fresh_1000
+advance_policy: "每污染物至少一个通过方案（≥85）后即推进下一污染物（广度优先）；20 污染物访问一轮后再回溯补角（每污染物上限 50 槽）；不打断运行中槽（2026-07-21 潘尧修订）"
 created: 2026-07-19
 spec: rounds/fresh_1000/SPEC.md
 pollutant_count: 20

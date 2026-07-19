@@ -188,7 +188,8 @@ material_translation:
   default_material_class: synthetic_nonbiological_adsorbent
   current_product_form: recoverable_solid_particle_or_packed_bed_adsorbent
   non_ion_exchange_scope:
-    main_material_requirement: biomimetic_adsorbent_with_non_ion_exchange_primary_capture_mechanism
+    scientific_classification_rule: biomimetic_and_ion_exchange_are_independent_nonexclusive_axes_and_electrostatics_is_not_synonymous_with_ion_exchange
+    main_material_requirement: biomimetic_adsorbent_not_primarily_classified_or_published_as_a_conventional_or_mixed_mode_ion_exchange_resin
     excluded_as_main_material:
       - anion_exchange_resin
       - cation_exchange_resin
@@ -200,10 +201,13 @@ material_translation:
       - mechanism_control
     charged_feature_admission:
       - auxiliary_to_independently_supported_biomimetic_function
-      - primary_capture_not_explained_by_accessible_IEC_Donnan_partition_or_counterion_release
+      - principal_innovation_and_performance_not_fully_explained_by_accessible_IEC_Donnan_partition_or_counterion_release
       - matched_total_charge_deletion_or_mismatch_control_proves_non_exchange_function
-      - salt_dependence_and_counterion_mass_balance_are_measured
-      - regeneration_not_principally_high_salt_displacement
+      - salt_dependence_and_counterion_mass_balance_quantify_any_exchange_contribution
+      - all_applicable_biomimetic_and_ion_exchange_labels_are_disclosed
+    minor_or_auxiliary_ion_exchange_automatically_prohibited: false
+    project_boundary_does_not_redefine_scientific_categories: true
+    scientific_consensus: docs/SCIENTIFIC_CONSENSUS_BIOMIMETIC_AND_ION_EXCHANGE.md
     binding_guidance: docs/MATERIAL_SCOPE_BOUNDARY_ION_EXCHANGE.md
   excluded_current_product_forms:
     - membrane_separation
@@ -309,8 +313,8 @@ adversarial_process:
   persist_hidden_reasoning: false
 
 rox_mac_if1_rescue:
-  status: conditional_lead_B0_M0_not_passed_E1_not_ready
-  owner_authorized_directional_redesign: true
+  status: terminated_as_main_by_G29_G30_mixed_mode_control_only
+  owner_authorized_directional_redesign: false_superseded_by_current_material_scope
   target_scope: macrolide_class_joint_removal
   primary_biological_observation: mature_inactivated_wastewater_biofilm_joint_CLA_ERY_ROX_partition
   supporting_biophysical_mechanism: shallow_macrolide_partition_at_anionic_lipid_interfaces
@@ -333,9 +337,10 @@ rox_mac_if1_rescue:
     uniform_MAC_BI1_deleted: false
     role: uniform_mixed_mode_causal_control
   required_pre_E1_gates:
-    B0: biological_interface_class_boundary_against_matched_cationic_amphiphiles
-    M0: same_batch_shallow_deep_uniform_spatial_manufacture_and_characterization
-    C0: spatial_causal_gain_over_composition_pore_and_commercial_controls
+    status: cancelled_do_not_execute
+    historical_B0: biological_interface_class_boundary_against_matched_cationic_amphiphiles
+    historical_M0: same_batch_shallow_deep_uniform_spatial_manufacture_and_characterization
+    historical_C0: spatial_causal_gain_over_composition_pore_and_commercial_controls
   prohibited_claims_before_gate_pass:
     - biofilm_EPS_or_lipid_component_is_already_causally_localized
     - ROX_atomic_interfacial_orientation_is_known

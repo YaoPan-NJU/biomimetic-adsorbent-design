@@ -2,8 +2,8 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: pfhxs_non_ion_exchange_biomimetic_redesign
 status: in_progress
-last_completed_step: Pan Yao imposed a binding non-ion-exchange material boundary; PFH-1 was terminated because its weak-base and strong-base regions remain an ion-exchange resin, PFH-2 and PFH-3 remain terminated, and the PFHxS portfolio has no active lead or E1/E2 release
-next_action: "Reopen PFHxS biological-prototype and non-ion-exchange biomimetic-adsorbent discovery; ion-exchange and mixed-mode resins may be used only as benchmarks or controls, and PFH-1 M0 must not be executed"
+last_completed_step: Pan Yao and Codex recorded the scientific consensus that biomimicry and ion exchange are independent nonexclusive axes and electrostatic attraction is not synonymous with ion exchange; PFH-1 remains terminated because it must be primarily classified as a bio-transport-inspired partitioned anion-exchange resin and strict biomimetic causality is unproven
+next_action: "A successor AI reads the scientific consensus and project boundary, then reopens PFHxS biological-prototype and non-resin biomimetic-adsorbent discovery; PFH-1 M0 remains prohibited and commercial ion-exchange resin remains a benchmark/control"
 active_branch: main
 last_verified_commit: 953b18a
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -101,7 +101,19 @@ pfhxs_complete_design_20260719:
     - PFH-3 negative screening shell and quaternary core bead
   conventional_control_only:
     - benzyl_dimethyl_alkyl_ammonium_PS_DVB_chain_length_series
-  gate: G29_NON_ION_EXCHANGE_BIOMIMETIC_BOUNDARY
+  gate: G30_BIOMIMETIC_ION_EXCHANGE_SCIENTIFIC_CONSENSUS
+scientific_consensus_biomimetic_ion_exchange_20260719:
+  biomimetic_definition: traceable_biological_model_abstraction_transfer_and_testable_structure_behavior_function_mapping
+  ion_exchange_definition: target_ion_sorption_with_equivalent_displacement_of_other_ions
+  electrostatic_attraction_equals_ion_exchange: false
+  biomimetic_and_ion_exchange_mutually_exclusive: false
+  dual_label_required_when_both_apply: true
+  project_scope_note: exclusion_of_ion_exchange_resin_main_direction_is_a_project_choice_not_a_universal_scientific_definition
+  PFH_1_required_label: biological_transport_inspired_partitioned_anion_exchange_resin
+  PFH_1_strict_biomimetic_status: unproven
+  PFH_1_project_status: terminated_scope_overlap
+  report: docs/SCIENTIFIC_CONSENSUS_BIOMIMETIC_AND_ION_EXCHANGE.md
+  gate: G30_BIOMIMETIC_ION_EXCHANGE_SCIENTIFIC_CONSENSUS
 paused_candidates:
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (B-class pressure-test lead; not formally recommended)
 pressure_test_leads_not_fixed_shortlist:
@@ -386,12 +398,13 @@ open_issues:
   - id: MATERIAL-SCOPE-IX-001
     severity: critical
     status: resolved_binding_rule
-    text: Formal candidates must be biomimetic adsorbents with a primary capture mechanism not explained by accessible IEC, Donnan partition, counterion release or salt displacement; ion-exchange and mixed-mode resins are benchmarks or controls only.
+    text: Biomimicry and ion exchange are nonexclusive scientific axes, but this project excludes materials primarily classified and published as conventional or mixed-mode ion-exchange resins; charged features or minor exchange contributions require counter-ion balance and matched-charge controls proving independent biomimetic causality.
 artifacts:
   contract: research_contract.yaml
   rules: SOUL.md
   terminology: docs/TERMINOLOGY.md
   biomimetic_design_framework: docs/BIOMIMETIC_DESIGN_FRAMEWORK.md
+  biomimetic_ion_exchange_scientific_consensus: docs/SCIENTIFIC_CONSENSUS_BIOMIMETIC_AND_ION_EXCHANGE.md
   non_ion_exchange_material_boundary: docs/MATERIAL_SCOPE_BOUNDARY_ION_EXCHANGE.md
   adaptive_experiment_ready_research_plan: docs/ADAPTIVE_EXPERIMENT_READY_RESEARCH_PLAN.md
   portfolio_100_status: rounds/portfolio_100/README.md
@@ -408,6 +421,7 @@ artifacts:
   gate_g27_rox_solid_low_complexity_boundary: orchestration/gates/G27_ROX_SOLID_LOW_COMPLEXITY_BOUNDARY.yaml
   gate_g28_pfhxs_complete_design_review: orchestration/gates/G28_PFHXS_COMPLETE_DESIGN_REVIEW.yaml
   gate_g29_non_ion_exchange_biomimetic_boundary: orchestration/gates/G29_NON_ION_EXCHANGE_BIOMIMETIC_BOUNDARY.yaml
+  gate_g30_biomimetic_ion_exchange_scientific_consensus: orchestration/gates/G30_BIOMIMETIC_ION_EXCHANGE_SCIENTIFIC_CONSENSUS.yaml
   pfhxs_complete_design_report_20260719: DEEP_RESEARCH_PFHXS_COMPLETE_DESIGN.md
   pfhxs_research_brief: rounds/pfhxs_design_1/RESEARCH_BRIEF.md
   pfhxs_designer: rounds/pfhxs_design_1/DESIGNER.md

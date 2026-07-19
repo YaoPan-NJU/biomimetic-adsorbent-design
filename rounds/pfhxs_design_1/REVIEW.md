@@ -2,7 +2,7 @@
 
 日期：2026-07-19。
 
-> 后续Owner裁决：PFH-1的主要容量仍由强/弱碱离子交换位点提供，属于与隔壁课题组重合的离子交换树脂方向。PFH-1已由`E0 manufacturing hypothesis`改为`terminated_owner_scope_conflict`；M0文件仅保留为历史审计，不再执行。
+> 后续科学分类与Owner裁决：仿生和离子交换可以科学共存，但PFH-1必须优先称为“生物转运启发的分区型阴离子交换树脂”；其严格仿生因果尚未成立，且材料主身份与隔壁课题组方向重合。PFH-1已由`E0 manufacturing hypothesis`改为`terminated_owner_scope_conflict`；M0仅保留为历史审计，不再执行。
 
 ## 原Reviewer结论（已被后续Owner材料边界覆盖）
 

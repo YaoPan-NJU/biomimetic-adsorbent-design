@@ -1,0 +1,36 @@
+gate_id: G30_BIOMIMETIC_ION_EXCHANGE_SCIENTIFIC_CONSENSUS
+date: 2026-07-19
+trigger: owner_and_codex_first_align_scientific_definition_then_apply_project_scope
+status: binding_scientific_classification_and_handoff
+scientific_consensus:
+  biomimetic_axis: design_provenance_abstraction_transfer_and_testable_structure_behavior_function_mapping
+  ion_exchange_axis: target_ion_sorption_with_equivalent_displacement_of_other_ions
+  axes_are_mutually_exclusive: false
+  electrostatic_attraction_equals_ion_exchange: false
+  biomimetic_ion_exchange_material_is_scientifically_possible: true
+  ion_exchange_label_cannot_be_hidden_by_biomimetic_label: true
+  authoritative_basis:
+    - ISO_18458_biomimetics_methodology
+    - IUPAC_Gold_Book_I03167_ion_exchange
+PFH_1_classification:
+  primary_material_label: radially_partitioned_weak_base_outer_strong_base_core_anion_exchange_resin
+  secondary_design_provenance: biological_transport_inspired_unvalidated
+  strict_biomimetic_status: not_established
+  project_status: terminated_scope_overlap
+  M0_status: do_not_execute_historical_audit_only
+project_interpretation:
+  excluded_main_direction: materials_primarily_classified_and_published_as_conventional_or_mixed_mode_ion_exchange_resins
+  electrostatic_interactions_prohibited: false
+  minor_or_auxiliary_ion_exchange_contribution_automatically_prohibited: false
+  requirement: disclose_and_quantify_exchange_contribution_and_prove_independent_biomimetic_causality
+  ion_exchange_resin_role:
+    - mandatory_engineering_benchmark
+    - mechanism_control
+supersedes_interpretation_of: G29_NON_ION_EXCHANGE_BIOMIMETIC_BOUNDARY
+does_not_change_disposition_of:
+  - PFH_1_terminated
+  - PFH_2_terminated
+  - PFH_3_terminated
+  - MAC_BI1_control_only
+  - MAC_IF1_control_only
+next_action: another_AI_reads_scientific_consensus_and_project_boundary_then_reopens_PFHxS_non_resin_biomimetic_design

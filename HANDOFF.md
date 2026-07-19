@@ -151,12 +151,18 @@ The Chinese main report and all final attachments are committed under `deliverab
 
 Translation-evidence dossiers were prepared in parallel but are deliberately excluded from the rerun manifest. They strengthen the later deep-design gate: PBP has an experimental apo/bound pair and direct fluorescence/FRET precedents; NrtA still lacks an experimental apo structure; clarithromycin has a direct 3.3 Å ribosome structure with local A2062 heterogeneity; hL-FABP supports PFOA binding and local portal mobility but not a large global closure; ODV binds hSERT functionally but lacks a target-bound structure.
 
+## Pollutant topic re-screen checkpoint (2026-07-19)
+
+Pan Yao paused further biomimetic and material design and requested a narrow selection from the 20 `pollutant_kb` organic candidates using only environmental significance, public/policy attention and paper tractability. The design-neutral result is `DEEP_RESEARCH_POLLUTANT_TOPIC_SHORTLIST_2026.md`. Four pollutants are now awaiting owner selection: PFHxS, roxithromycin framed within macrolide-class concern, PFOA and nonylphenol. Octocrylene is a monitoring-gated observer rather than an equal recommendation. BPA, PFBS, GenX, 2,6-dichlorophenol, traditional POPs and chloroform remain preserved with explicit nonselection reasons.
+
+This checkpoint does not terminate or delete MAC-IF1, MAC-BI1 or any earlier ROX artifacts. It only supersedes the former instruction to continue B0/M0 immediately. Do not search biological prototypes, design materials or resume the G27 manufacturing screen until Pan Yao selects a pollutant or requests a focused comparison.
+
 ## Resume instructions
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
-2. Verify `main`, then read `docs/ROX_MACROLIDE_CLASS_LOW_COST_ADSORBENT_REPLAN.md`, `orchestration/gates/G22_ROX_MACROLIDE_CLASS_ADSORPTION.yaml`, and the E090-E097 evidence entries; do not execute the attacked BF1 draft.
+2. Verify `main`, then read `DEEP_RESEARCH_POLLUTANT_TOPIC_SHORTLIST_2026.md`; wait for Pan Yao to select or narrow the pollutant before any prototype or material work.
 3. Read `docs/BIOMIMETIC_DESIGN_FRAMEWORK.md`, including the WW-0 to WW-3 wastewater-bioprocess evidence ladder, then `rounds/portfolio_100/README.md` and `rounds/portfolio_100/SUPERVISOR_AUDIT.md` before using any imported scheme; do not inherit the branch ranking.
 4. Read `docs/ADAPTIVE_EXPERIMENT_READY_RESEARCH_PLAN.md`, `docs/GLM_BRANCH_LESSONS_INTEGRATION_2026-07-18.md` and `rounds/original_portfolio_revalidation_1/SUPERVISOR_REVIEW.md`; treat S1-SYN, PFAS-M1 and MAC-BI1 as pressure tests, not a fixed shortlist. ROX-LYS-MIM is out of scope.
-5. Read `DEEP_RESEARCH_ROX_STRONG_BIOMIMETIC_INNOVATION_AUDIT.md`, then `DEEP_RESEARCH_ROX_MAC_IF1_RESCUE_DESIGN.md`, `orchestration/gates/G26_ROX_MAC_IF1_RESCUE_REDESIGN.yaml` and `orchestration/gates/G27_ROX_SOLID_LOW_COMPLEXITY_BOUNDARY.yaml`. The unique next action is to freeze the combined B0-plus-M0 minimum discrimination package under the G27 manufacturing screen. Do not release C0, full adsorption optimization, secondary-effluent columns or E1 procurement until B0, M0 and the simple-manufacturing screen pass.
+5. Read `DEEP_RESEARCH_POLLUTANT_TOPIC_SHORTLIST_2026.md`. The unique next action is owner selection among PFHxS, roxithromycin, PFOA and nonylphenol, with octocrylene held behind a local-monitoring gate. Do not search prototypes or design materials before that selection. If ROX is selected, then read `DEEP_RESEARCH_ROX_STRONG_BIOMIMETIC_INNOVATION_AUDIT.md`, `DEEP_RESEARCH_ROX_MAC_IF1_RESCUE_DESIGN.md`, `orchestration/gates/G26_ROX_MAC_IF1_RESCUE_REDESIGN.yaml` and `orchestration/gates/G27_ROX_SOLID_LOW_COMPLEXITY_BOUNDARY.yaml`; prior B0/M0 work remains preserved but is no longer the active next action.
 6. Keep BMDL excluded, preserve every phosphate, top-five, S1, S11 and portfolio artifact, and do not order materials or start experiments until Pan Yao approves an E1/E2 package.
 7. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

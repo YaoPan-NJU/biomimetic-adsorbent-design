@@ -1,0 +1,73 @@
+gate_id: G16_PFBS_AFI_GAC_ADMISSION
+scheme: PFBS-AFI-GAC (R1a 抗污染水合界面 GAC,短链 PFAS)
+concept_brief: rounds/pfbs_afi_admission/R1A_SCHEME_CONCEPT.md
+spec: orchestration/ADMISSION_GATE_SPEC_DRAFT.md (草案 v0.1)
+date: 2026-07-19
+executor: Claude Code (GLM 工作流) 隔离门禁检查员角色
+decision: 杀死
+killed_at: gate_2_innovation_floor
+
+gate_results:
+  gate_1_evidence_anchor_audit:
+    verdict: 通过
+    output: rounds/pfbs_afi_admission/G1_EVIDENCE_ANCHOR_AUDIT.md
+    notes: >-
+      突破体积锚点由 E028 错配改引 Appleman 2014 与 McCleaf 2017(题录核实,数值待全文);
+      DOM 归因损失方向多源成立但 ≥2× 阈值摘要级不可判定;MPC 抗污谱系(Ishihara 1990、Xu 2009、
+      Ladd 2008、Zhang 2013)与渗透性类比(Ding 2026、Ishihara 1995)题录核实;MPC 化学身份
+      PubChem 核实;MPC 可核验价格无法定位(成本不可判定,留门 3);台账新增建议自 E062 起无冲突。
+  gate_2_innovation_floor:
+    verdict: 杀死
+    output: rounds/pfbs_afi_admission/G2_NOVELTY_FLOOR_MEMO.md
+    adversary_confirmation: rounds/pfbs_afi_admission/G2_ADVERSARY_CONFIRMATION.md (维持原判)
+    decisive_prior_art:
+      - Cai et al. 2017, J. Colloid Interface Sci. 503:168-177, DOI 10.1016/j.jcis.2017.04.024, PMID 28521219
+        (聚羧基甜菜碱水凝胶包覆活性炭,100% 胎牛血清中亚甲基蓝吸附容量保持、裸 PAC 损失约 50%;
+         直接占据"抗污涂层保护活性炭对小溶质吸附免受大分子污堵"机制空间)
+      - Zhang 2018 (10.1007/s10856-018-6127-4) 与 Li 2019 (10.1016/j.jcis.2019.07.045) 同组延续
+      - Karanfil 2006 ES&T (10.1021/es051285o) ACF 孔口筛分降低 NOM 预载对 TCE 吸附影响(问题类占据)
+      - Wang 2020 IECR (10.1021/acs.iecr.9b06171) 水处理两性离子接枝吸附剂
+    increment_rulings:
+      - "(i) 抗污界面维持床寿命:组合式应用级(机制先验 JCIS 2017 触发预注册降级规则)"
+      - "(ii) 层归一化测量构型:无承重增量"
+      - "(iii) 无氟无净电荷形态:组合式(方案自认)"
+    rating: 低
+    notes: >-
+      对抗核验(放行方镜头)确认:现象级完整合取无单篇先验占据,但机制级主张已被 JCIS 2017
+      占据;唯一可争空间(边缘尺寸选择性,DOM 低分子馏分与 PFBS 尺寸差仅 3-7×)属条件性
+      窄口径,按 v2 回溯先例不能挽救主增量为组合式的方案。增量不依附低概率性能事件,
+      杀死依据仅为无可辩护的非组合式增量。
+  gate_3_quant_ceiling:
+    verdict: 退回修复(一次为限;因门 2 已杀,修复通道关闭,记录留存)
+    output: rounds/pfbs_afi_admission/G3_QUANT_CEILING_CHECK.md
+    notes: >-
+      存亡变量 L=BV_clean/BV_fouled 摘要级不可判定,全文提取为硬前置;一阶记账模型
+      m≈1+ηρ(L−1),m=2 在 ρ=0.85、η=1 时需 L≥2.18;机制性上限:尺寸选择性界面无法区分
+      约 300 Da PFBS 与 100-1000 Da DOM 小级分,位点竞争类损害结构性不可恢复,η 上限为
+      孔堵塞份额;盈亏平衡 R=0 基线下 m=2 要求成本比 C≤2;MPC 价格无法定位,C 不可判定。
+      无增强机制声称,算术诚实性优于 v2。
+  gate_4_framework_classification:
+    verdict: 通过(仿生启发)
+    output: rounds/pfbs_afi_admission/G4_FRAMEWORK_CLASSIFICATION.md
+    notes: >-
+      分类:仿生启发(实质分类,非修辞)。判据 1 不满足(难点为工程上未做而非原理上做不到,
+      表述边界禁止改写);硬对应 1 条(抗污染水合界面,静态),满足合同 required_static: 1,
+      不满足框架 ≥2 条建议,差距计入分类降级;判据 2、3、5、6、7 满足(判据 2 带边界,
+      证据链落 MPC 抗污记录而非细胞膜输运功能)。
+
+process_validation: >-
+  本次为准入门禁规范首次执行。R1a 概念在深设计资源投入前以 5 个隔离 agent、约 1 小时、
+  纯文书成本被杀于门 2,对照 PFBS-CD-GAC-v2 消耗完整六维评估(64 agent)与同方向深设计
+  资源后方获同等结论,规范达成设计目的。
+resubmission_rule: >-
+  按规范第七节,被杀方案可以新版本号重提一次,须从门 1 重走全部四门,且须展示新的
+  非组合式增量;对增量 (i) 的重新措辞不构成重提理由。沿用"两性离子抗污界面保护活性炭
+  容量"机制的任何重提版本,其承重新颖性必须落在该机制之外的维度,否则门 2 结论不变。
+state_sync: 待 framework-correction worktree 所属会话在 PROJECT_STATE.yaml 与 HANDOFF.md 记录
+artifacts_preserved:
+  - rounds/pfbs_afi_admission/R1A_SCHEME_CONCEPT.md
+  - rounds/pfbs_afi_admission/G1_EVIDENCE_ANCHOR_AUDIT.md
+  - rounds/pfbs_afi_admission/G2_NOVELTY_FLOOR_MEMO.md
+  - rounds/pfbs_afi_admission/G2_ADVERSARY_CONFIRMATION.md
+  - rounds/pfbs_afi_admission/G3_QUANT_CEILING_CHECK.md
+  - rounds/pfbs_afi_admission/G4_FRAMEWORK_CLASSIFICATION.md

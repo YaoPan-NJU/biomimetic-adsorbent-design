@@ -15,14 +15,14 @@ pollutants:
     name: "全氟辛酸 PFOA"
     brief: complete
     angles_planned: 26
-    attempted: 2
+    attempted: 3
     passed: 0
-    terminated: 2
+    terminated: 3
     status: phase_b_round2
     slots:
       A01: { r1_score: 67, r2_score: 64, r2_verdict: terminate, status: terminated, file: SCHEMES/S01_A01_guanidino-CD_terminated.md, reason: "两个核心命题耗尽+先例饱和（胍基杯[5]芳烃 2019、季铵 PAF-1 2022），监督者接受 terminate" }
       A02: { r1_score: "61（批次）/65（并行）", r2_verified: "76 revise 0c/2h（并行，journal 核验）；72 revise 0c/3h（批次）", status: "r3 运行中：基于 76 分路径+合并台账（含批次 3 条交叉 high）" }
-      A03: { r1_score: 45, r2_verified: "71 revise 0c/4h（并行重构路径，journal 核验）；46 terminate 1c/4h（批次旧路径）", status: "r3 运行中：基于 71 分水化门控重构路径" }
+      A03: { r1: "45（批次）", r2: "71 revise 0c/4h（重构路径，journal 核验）；46 terminate（批次旧路径）", r3_verified: "74 revise 0c/2h（输出文件核验为权威；曾遭 77 分损坏投递，已废弃）", status: terminated, file: SCHEMES/S03_A03_guanidinium-COF_terminated.md, reason: "裁决者判定原创上限为设计实现级（门控物理经 E17/E18 成熟化、表面实现经 E10/E11 完成、识别单元与 VZ-COF 高度同构），即便两个 high 全闭合上限约 78-80<85，结构性不可修；先例 2019-2025 六篇以上覆盖" }
       A04: { r1_score: 69, r2_verified: "55 revise 0c/3h（批次）；66 terminate 0c/2h（并行，journal 核验）", status: terminated, file: SCHEMES/S02_A04_OAT4-window_terminated.md, reason: "窗口命题结构性平凡（正结果为有限腔固有预期、锐截止热力学不可达）+先例占据工程目标（Zr-PTA1 ng/L 柱+分解闭环；Ricard 2025/Li 2026 覆盖方法学空间）+亲和力预算无裕度" }
       A05: { r1_score: "59（批次）/54（并行）", r2_verified: "74 revise 0c/0h（并行重构路径，journal 核验）；48 terminate 1c/6h（批次旧路径）", status: "r3 运行中：基于 74 分齿数受限单调锆位路径" }
     misdelivery_incident: "2026-07-21：多个工作流通知载荷为误投递或陈旧（首份通知分数普遍偏高，如 A02 86/实为 76、A03 75/实为 71、A01 r2 79/实为 64、A05 首裁 84/实为 54）；另发现早先误判为秒崩的批次工作流 whikn2ogz 实际完整运行 2 小时（30 代理）并产生规范结果。规则：一切以 journal result 条目为权威，通知仅用于唤醒。"

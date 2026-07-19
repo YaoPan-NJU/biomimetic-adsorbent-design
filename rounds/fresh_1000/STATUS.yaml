@@ -18,7 +18,14 @@ pollutants:
     attempted: 0
     passed: 0
     terminated: 0
-    status: phase_b_batch_1
+    status: phase_b_round2
+    slots:
+      A01: { r1_score: 67, r1_verdict: revise, open: "0 critical / 4 high", round2: running }
+      A02: { r1: "design+attack 已从损坏工作流恢复，裁决补齐运行中", review: running }
+      A03: { r1_score: 45, r1_verdict: revise, open: "2 critical / 6 high", round2: queued }
+      A04: { r1_score: 69, r1_verdict: revise, open: "1 critical / 3 high", round2: queued }
+      A05: { r1: "design+attack 已从损坏工作流恢复，裁决补齐运行中", review: running }
+    recovery_note: "2026-07-21 从 wf_96b23550-47a journal 恢复 13 份第一轮产物（A01/A03/A04 完整三轮，A02/A05 设计与攻击），全文存于 SCHEMES/_wip/"
   dcp26:
     name: "2,6-二氯苯酚"
     brief: pending
@@ -175,4 +182,4 @@ totals:
   attempted: 0
   passed: 0
   terminated: 0
-last_updated: "2026-07-20"
+last_updated: "2026-07-21"

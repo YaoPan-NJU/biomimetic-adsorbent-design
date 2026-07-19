@@ -2,10 +2,10 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: methodology_correction_fresh_start
 status: in_progress
-last_completed_step: "Branch methodology corrected - supervisor changed to Qwen, BMDL removed, water scenario expanded to any environmentally meaningful water treatment context, scientific-problem/engineering-challenge gate added, innovation checklist created, maximum thinking intensity rule added"
+last_completed_step: "Branch methodology corrected and committed as 75c8144; Qwen branch activated from kimi-k3 HEAD 100b7df (kimi-k3 frozen); Claude Code set as primary executor with Qwen as cross-device secondary; entrypoint docs, contract, SOUL and PROTOCOL aligned for dual-executor sequential handoff"
 next_action: "Begin fresh pollutant selection under new methodology - identify specific scientific problems and engineering challenges before biological prototype search"
-active_branch: main
-last_verified_commit: pending
+active_branch: Qwen
+last_verified_commit: 75c8144
 bmdl_policy: removed_from_branch
 historical_artifacts_status: preserved_not_active
 candidate_pool_status: historical_preserved_not_active
@@ -370,3 +370,4 @@ checks:
   context_free_codex_readback: last_passed_at_739c39d; not_repeated_for_portfolio_100_checkpoint
   bpa1_exact_probe: P1_MAPy_retained_as_experiment_gated_probe_no_materialization
   glm_branch_takeover: mechanical_validators_passed_at_df8a7ef_base_on_kimi-k3_branch_2026-07-17
+  qwen_branch_activation: validators_passed_on_dual_executor_aligned_tree_2026-07-19; fresh_clone_pending

@@ -1,7 +1,11 @@
 project:
   name: biomimetic-adsorbent-design
   owner: Pan Yao
-  executor: Qwen
+  executor: Claude Code
+  secondary_executor: Qwen
+  executor_branch: Qwen
+  codex_branch: main
+  cross_executor_rule: Claude Code and Qwen share the Qwen branch and work sequentially; commit and push before switching executor or device; at most one executor is active at a time. Codex works on main independently.
   experimental_handoff: Zhou Jiaqi
   independence: ADRMATS is out of scope and is not a dependency
 

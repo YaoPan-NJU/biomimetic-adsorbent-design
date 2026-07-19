@@ -13,7 +13,7 @@ Develop one primary and one backup biomimetic material for selective adsorption 
 - Tissue or organ enrichment is an optional, non-scoring prototype-discovery signal, not proof that a specific protein causes accumulation.
 - The default deliverable is a manufacturable nonprotein artificial adsorbent; protein, folded-peptide or biohybrid routes require an explicit scope reopening by Pan Yao.
 - Carrier class is not preselected. Capacity must be reported per total dry composite mass and packed-bed volume, and inactive carrier mass must earn its place through selectivity, matrix tolerance, regeneration, stability or bed performance.
-- Qwen supervises isolated designer, attacker, and reviewer roles.
+- The active executor (Claude Code primary, Qwen cross-device secondary) supervises isolated designer, attacker, and reviewer roles; at most one executor is active at a time.
 - BMDL is removed from this branch; biomimetic research uses web-based deep search.
 - Every scheme must pass the innovation checklist (`INNOVATION_CHECKLIST.md`) before formal scoring.
 - All tasks must be executed at maximum thinking depth; no shortcuts or reduced-depth approximations are permitted.
@@ -79,6 +79,7 @@ Translation-evidence dossiers were prepared in parallel but are deliberately exc
 4. Use web-based deep search for all biomimetic design research; no local database dependency exists.
 5. All historical artifacts are preserved but not active; do not inherit scores or selections from former rounds.
 6. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.
+7. Work on the `Qwen` branch and push only to `origin/Qwen`; do not touch `kimi-k3` or `main`. Claude Code and Qwen share this branch sequentially: pull and re-read the state files before starting work.
 
 ## GLM branch takeover (2026-07-17)
 
@@ -174,3 +175,9 @@ This is **one valid reference line, not mandatory**. It does not change scoring,
 4. Be honest about schemes that are rational design (not truly biomimetic)
 
 See `docs/BIOMIMETIC_DESIGN_FRAMEWORK.md` for the complete framework reference.
+
+## Qwen branch activation (2026-07-19)
+
+The methodology correction is committed as `75c8144`, the first Qwen-only commit. The `Qwen` branch starts from `kimi-k3` HEAD `100b7df`, so all historical artifacts (portfolio_20, portfolio_100, framework correction, top-five rounds, S11, D1-A/D1-B, ROX-2) remain present on this branch as preserved audit evidence; `kimi-k3` is frozen at `100b7df` and receives no new commits.
+
+Claude Code is the primary executor on this branch and reads `CLAUDE.md`; Qwen (千问) is the cross-device secondary executor and reads `AGENTS.md`. The two share the `Qwen` branch sequentially: commit and push before switching executor or device, and pull and re-read the state files on arrival. `main` remains the independent Codex workstream. `research_contract.yaml`, `SOUL.md` and `orchestration/PROTOCOL.md` now name both executors with the one-active-at-a-time rule; `PROJECT_STATE.yaml` records `active_branch: Qwen`. BMDL remains excluded; biomimetic research uses web-based deep search. No material order, synthesis, or experiment is authorized.

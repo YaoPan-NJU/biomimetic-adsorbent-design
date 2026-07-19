@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Produce one experiment-ready primary design and one backup design for a selectively adsorbing biomimetic material suitable for a high-quality environmental/materials paper. Qwen performs the research, orchestration, design, adversarial review, and writing. Pan Yao reviews the package before Zhou Jiaqi begins experiments.
+Produce one experiment-ready primary design and one backup design for a selectively adsorbing biomimetic material suitable for a high-quality environmental/materials paper. Claude Code (primary) and Qwen (cross-device secondary) perform the research, orchestration, design, adversarial review, and writing; at most one executor is active at a time. Pan Yao reviews the package before Zhou Jiaqi begins experiments.
 
 ## Scientific spine
 
@@ -58,7 +58,7 @@ Every scheme must pass the independent innovation checklist (`INNOVATION_CHECKLI
 - Designer: proposes a complete, falsifiable design from the locked research brief.
 - Attacker: searches for fatal scientific, chemical, biomimetic, selectivity, evidence, and experimental flaws.
 - Reviewer: adjudicates current artifacts against the rubric and issue ledger.
-- Supervisor Qwen: controls evidence, state, convergence, and final synthesis; it does not erase dissent.
+- Supervisor (the active executor, Claude Code or Qwen): controls evidence, state, convergence, and final synthesis; it does not erase dissent.
 
 Later rounds receive the current proposal and unresolved issues, not the full conversational history.
 

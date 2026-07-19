@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: adaptive_experiment_ready_design_discovery
+phase: pfhxs_complete_design_review
 status: in_progress
-last_completed_step: A design-neutral re-screen of the 20 pollutant_kb organic candidates shortlisted PFHxS, roxithromycin, PFOA and nonylphenol for owner selection; octocrylene remains monitoring-gated and no biomimetic or material criterion entered the ranking
-next_action: "Pan Yao selects one pollutant from PFHxS, roxithromycin, PFOA and nonylphenol, or requests a focused comparison; do not resume biomimetic-prototype or material design before that selection"
+last_completed_step: PFHxS was selected and completed a design-neutral evidence review, three-candidate design tournament, prior-art attack, independent review and citation verification; PFH-2 and PFH-3 terminated, PFH-1 remains E0 M0-only, and no E1/E2 or formal paper recommendation was released
+next_action: "Pan Yao reviews the PFHxS report and decides whether to authorize the PFH-1 M0 manufacturing-and-spatial-characterization gate or return immediately to a new biological-prototype search; do not begin PFAS adsorption experiments before M0 passes and an E1 protocol is frozen"
 active_branch: main
 last_verified_commit: 385353bc881f6e9234461f5c9084e4f4454c8f78
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -68,7 +68,7 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
-active_deep_concept: null
+active_deep_concept: PFH-1 weak-base outer zone and strong-base core radial bead; E0 manufacturing hypothesis only
 preserved_conditional_concept: MAC-IF1 low-coverage shallow weak-anionic zone on porous St-DVB for macrolide-class adsorption; conditional_lead with B0_not_passed M0_not_passed and E1_not_ready; suspended at owner pollutant-selection gate rather than terminated
 pollutant_topic_shortlist_2026:
   scope: environmental_significance_public_attention_publication_tractability_only
@@ -82,6 +82,25 @@ pollutant_topic_shortlist_2026:
     - octocrylene
   report: DEEP_RESEARCH_POLLUTANT_TOPIC_SHORTLIST_2026.md
   prior_ROX_material_route_status: preserved_conditional_not_active_until_pollutant_selection
+pfhxs_complete_design_20260719:
+  target_selected: PFHxS
+  engineering_scope:
+    - PFBS
+    - PFHxS
+    - PFOS
+  selection_scope: pollutant_class
+  hard_external_preference: PFSA_over_DOM_salts_anionic_surfaces_and_unrelated_micropollutants
+  report: DEEP_RESEARCH_PFHXS_COMPLETE_DESIGN.md
+  lead:
+    id: PFH-1
+    status: E0_M0_only_not_E1_not_formally_recommended
+    claim_boundary: biological_transport_inspired_sequential_partition_engineering_hypothesis
+  terminated:
+    - PFH-2 nonfluorinated ordered amphiphilic interface bead
+    - PFH-3 negative screening shell and quaternary core bead
+  conventional_control_only:
+    - benzyl_dimethyl_alkyl_ammonium_PS_DVB_chain_length_series
+  gate: G28_PFHXS_COMPLETE_DESIGN_REVIEW
 paused_candidates:
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (B-class pressure-test lead; not formally recommended)
 pressure_test_leads_not_fixed_shortlist:
@@ -358,6 +377,10 @@ open_issues:
     severity: high
     status: deferred
     text: Final approval is deferred until the reopened pollutant screening and all downstream design stages are completed again.
+  - id: PFH1-M0-001
+    severity: critical
+    status: owner_decision_pending_no_experiment_release
+    text: PFH-1 may proceed only to the frozen manufacturing and spatial-characterization denial gate; three batches, complete/random/reverse spatial controls, wet-state matching, residual benzyl-chloride closure and two independent radial measurements must pass before any PFAS adsorption protocol is frozen.
 artifacts:
   contract: research_contract.yaml
   rules: SOUL.md
@@ -376,6 +399,14 @@ artifacts:
   gate_g24_wastewater_bioprocess_prototype_discovery: orchestration/gates/G24_WASTEWATER_BIOPROCESS_PROTOTYPE_DISCOVERY.yaml
   gate_g26_rox_mac_if1_rescue_redesign: orchestration/gates/G26_ROX_MAC_IF1_RESCUE_REDESIGN.yaml
   gate_g27_rox_solid_low_complexity_boundary: orchestration/gates/G27_ROX_SOLID_LOW_COMPLEXITY_BOUNDARY.yaml
+  gate_g28_pfhxs_complete_design_review: orchestration/gates/G28_PFHXS_COMPLETE_DESIGN_REVIEW.yaml
+  pfhxs_complete_design_report_20260719: DEEP_RESEARCH_PFHXS_COMPLETE_DESIGN.md
+  pfhxs_research_brief: rounds/pfhxs_design_1/RESEARCH_BRIEF.md
+  pfhxs_designer: rounds/pfhxs_design_1/DESIGNER.md
+  pfhxs_attack: rounds/pfhxs_design_1/ATTACK.md
+  pfhxs_review: rounds/pfhxs_design_1/REVIEW.md
+  pfhxs_citation_verification: rounds/pfhxs_design_1/CITATION_VERIFICATION.md
+  pfh1_M0_protocol: rounds/pfhxs_design_1/PFH1_M0_PROTOCOL.md
   glm_branch_lessons_integration_20260718: docs/GLM_BRANCH_LESSONS_INTEGRATION_2026-07-18.md
   mac_bi1_owner_review_report_20260718: docs/ROX_MAC_BI1_OWNER_REVIEW_REPORT_2026-07-18.md
   rox_strong_biomimetic_innovation_audit_20260718: DEEP_RESEARCH_ROX_STRONG_BIOMIMETIC_INNOVATION_AUDIT.md

@@ -1,0 +1,40 @@
+gate_id: G28_PFHXS_COMPLETE_DESIGN_REVIEW
+date: 2026-07-19
+trigger: owner_selected_PFHxS_and_authorized_complete_design
+status: E0_manufacturing_hypothesis_only_no_E1_or_E2_release
+target_scope:
+  analytical_lead: PFHxS
+  engineering_class:
+    - PFBS
+    - PFHxS
+    - PFOS
+  within_class_selectivity_required: false
+  hard_external_selectivity: PFSA_over_DOM_salts_anionic_surfaces_and_unrelated_micropollutants
+  primary_matrix: municipal_secondary_effluent
+portfolio_decision:
+  PFH_1:
+    concept: weak_base_outer_zone_strong_base_core_radial_bead
+    classification: biological_transport_inspired_sequential_partition_engineering_hypothesis
+    status: revise_E0_M0_only
+  PFH_2:
+    concept: nonfluorinated_ordered_amphiphilic_interface_bead
+    status: terminated
+  PFH_3:
+    concept: negative_screening_shell_quaternary_core_bead
+    status: terminated
+  long_alkyl_quaternary_series:
+    status: conventional_rational_chemistry_control_not_biomimetic_candidate
+release_register:
+  E1_ready: false
+  E2_ready: false
+  formal_recommendation: false
+M0_requirements:
+  - three_independent_batches
+  - 30_to_80_um_outer_zone_with_thickness_CV_le_20_percent
+  - complete_reverse_and_random_radial_chemistry_directly_measured
+  - total_wet_IEC_weak_strong_ratio_wet_pore_volume_and_particle_size_matched
+  - residual_benzyl_chloride_and_wash_endpoints_closed
+  - two_independent_spatial_chemistry_measurements
+  - effective_diffusion_measured
+stop_rule: if_M0_fails_after_one_bounded_process_revision_terminate_PFH_1_and_reopen_prototype_search
+next_action: owner_decides_whether_to_authorize_PFH_1_M0_manufacturing_validation_or_return_to_new_biological_prototype_search

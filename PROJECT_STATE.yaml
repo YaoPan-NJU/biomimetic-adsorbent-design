@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: PFHxS was selected and completed a design-neutral evidence review, three-candidate design tournament, prior-art attack, independent review and citation verification; PFH-2 and PFH-3 terminated, PFH-1 remains E0 M0-only, and no E1/E2 or formal paper recommendation was released
 next_action: "Pan Yao reviews the PFHxS report and decides whether to authorize the PFH-1 M0 manufacturing-and-spatial-characterization gate or return immediately to a new biological-prototype search; do not begin PFAS adsorption experiments before M0 passes and an E1 protocol is frozen"
 active_branch: main
-last_verified_commit: 385353bc881f6e9234461f5c9084e4f4454c8f78
+last_verified_commit: fd8823c
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:
@@ -528,6 +528,10 @@ artifacts:
   gate_g6_delivery: orchestration/gates/G6_DELIVERY.yaml
   fresh_clone_readback: orchestration/FRESH_CLONE_READBACK.md
 checks:
+  pfhxs_complete_design_state_paths: passed_145_artifacts_at_fd8823c
+  pfhxs_complete_design_secrets_scan: passed_231_tracked_files_at_fd8823c
+  pfhxs_complete_design_yaml: PROJECT_STATE_research_contract_and_G28_parsed
+  pfhxs_complete_design_review: PFH2_and_PFH3_terminated_PFH1_E0_M0_only_no_E1_or_formal_recommendation
   pollutant_topic_shortlist_state_paths: passed_137_artifacts_at_385353b
   pollutant_topic_shortlist_secrets_scan: passed_223_tracked_files_at_385353b
   pollutant_topic_shortlist_citation_spotcheck: eight_high_impact_claims_checked_three_partial_claims_narrowed

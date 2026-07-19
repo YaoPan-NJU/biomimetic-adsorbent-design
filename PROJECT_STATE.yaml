@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: Pan Yao imposed a binding non-ion-exchange material boundary; PFH-1 was terminated because its weak-base and strong-base regions remain an ion-exchange resin, PFH-2 and PFH-3 remain terminated, and the PFHxS portfolio has no active lead or E1/E2 release
 next_action: "Reopen PFHxS biological-prototype and non-ion-exchange biomimetic-adsorbent discovery; ion-exchange and mixed-mode resins may be used only as benchmarks or controls, and PFH-1 M0 must not be executed"
 active_branch: main
-last_verified_commit: fd8823c
+last_verified_commit: 953b18a
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:
@@ -536,6 +536,10 @@ artifacts:
   gate_g6_delivery: orchestration/gates/G6_DELIVERY.yaml
   fresh_clone_readback: orchestration/FRESH_CLONE_READBACK.md
 checks:
+  non_ion_exchange_boundary_state_paths: passed_147_artifacts_at_953b18a
+  non_ion_exchange_boundary_secrets_scan: passed_233_tracked_files_at_953b18a
+  non_ion_exchange_boundary_yaml: PROJECT_STATE_research_contract_and_G29_parsed
+  non_ion_exchange_scope_disposition: PFH1_MAC_BI1_MAC_IF1_terminated_as_main_materials_no_E1_release
   pfhxs_complete_design_fresh_clone: passed_at_17cb4ec
   pfhxs_complete_design_context_recovery: recovered_PFHxS_class_scope_PFH2_PFH3_termination_PFH1_E0_empty_E1_and_unique_M0_or_reopen_decision_at_17cb4ec
   pfhxs_complete_design_remote_sync: origin_main_equal_at_17cb4ec

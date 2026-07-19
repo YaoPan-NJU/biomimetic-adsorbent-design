@@ -35,6 +35,8 @@ The binding rule is `docs/MATERIAL_SCOPE_BOUNDARY_ION_EXCHANGE.md` and Gate G29.
 
 G29 also terminates `MAC-BI1` and `MAC-IF1` as ROX main candidates because their carboxylate-plus-hydrophobic mechanism is a weak-cation-exchange/mixed-mode direction. They remain historical controls only; their B0/M0 actions are cancelled. This global correction supersedes later historical paragraphs that describe MAC-IF1 as conditional or active.
 
+Boundary commit `953b18a` passed 147 state-artifact checks, six snapshot checksums, YAML parsing, staged diff validation and a 233-file credential scan. It is the first checkpoint that records the non-ion-exchange rule and the PFH-1/MAC route terminations together.
+
 The pre-G29 historical PFHxS design commit `fd8823c` passed 145 state-artifact checks, six BMDL snapshot checksums, YAML parsing, staged diff checks and a 231-file credential scan. Its PFH-1 E0 status and M0 next action are superseded by G29.
 
 Pre-G29 remote checkpoint `17cb4ec` was restored into a fresh HTTPS clone and recovered the then-current PFH-1 E0 status. That status is historical; G29 terminates PFH-1 and cancels M0.

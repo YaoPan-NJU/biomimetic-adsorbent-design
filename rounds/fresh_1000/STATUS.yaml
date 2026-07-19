@@ -15,16 +15,16 @@ pollutants:
     name: "全氟辛酸 PFOA"
     brief: complete
     angles_planned: 26
-    attempted: 3
+    attempted: 4
     passed: 0
-    terminated: 3
+    terminated: 4
     status: phase_b_round2
     slots:
       A01: { r1_score: 67, r2_score: 64, r2_verdict: terminate, status: terminated, file: SCHEMES/S01_A01_guanidino-CD_terminated.md, reason: "两个核心命题耗尽+先例饱和（胍基杯[5]芳烃 2019、季铵 PAF-1 2022），监督者接受 terminate" }
-      A02: { r1_score: "61（批次）/65（并行）", r2_verified: "76 revise 0c/2h（并行，journal 核验）；72 revise 0c/3h（批次）", status: "r3 运行中：基于 76 分路径+合并台账（含批次 3 条交叉 high）" }
+      A02: { r1: "61-71（四批次）", r2: "72-76（多执行，journal 核验 76/72）", r3_verified: "77 revise 0c/1h（输出文件核验为权威；79 通知为误投递）", status: "r4 运行中（重建 2/3）：闭合 1 high（预组织裂隙因果链）+12 medium/low" }
       A03: { r1: "45（批次）", r2: "71 revise 0c/4h（重构路径，journal 核验）；46 terminate（批次旧路径）", r3_verified: "74 revise 0c/2h（输出文件核验为权威；曾遭 77 分损坏投递，已废弃）", status: terminated, file: SCHEMES/S03_A03_guanidinium-COF_terminated.md, reason: "裁决者判定原创上限为设计实现级（门控物理经 E17/E18 成熟化、表面实现经 E10/E11 完成、识别单元与 VZ-COF 高度同构），即便两个 high 全闭合上限约 78-80<85，结构性不可修；先例 2019-2025 六篇以上覆盖" }
       A04: { r1_score: 69, r2_verified: "55 revise 0c/3h（批次）；66 terminate 0c/2h（并行，journal 核验）", status: terminated, file: SCHEMES/S02_A04_OAT4-window_terminated.md, reason: "窗口命题结构性平凡（正结果为有限腔固有预期、锐截止热力学不可达）+先例占据工程目标（Zr-PTA1 ng/L 柱+分解闭环；Ricard 2025/Li 2026 覆盖方法学空间）+亲和力预算无裕度" }
-      A05: { r1_score: "59（批次）/54（并行）", r2_verified: "74 revise 0c/0h（并行重构路径，journal 核验）；48 terminate 1c/6h（批次旧路径）", status: "r3 运行中：基于 74 分齿数受限单调锆位路径" }
+      A05: { r1: "54-59（三批次）", r2: "74 revise（重构路径，journal 核验）；48 terminate（批次旧路径）", r3: "73 revise×2 / 70 terminate×1（三投递矛盾，均未过线）", status: terminated, file: SCHEMES/S04_A05_LanM-coordination_terminated.md, reason: "证据最充分投递含先例全文核验（Fe-MOF-808 无分解无 ng/L；Zr-PTA 开放位靶向 C4 非 C8 直接危及中心假设）且设计者自请终止；四轮以上执行上限 74 从未近线；Zr-MOF 先例饱和（Fe-MOF-808/PCN-999/Zr-PTA/ACS Omega 2025）" }
     misdelivery_incident: "2026-07-21：多个工作流通知载荷为误投递或陈旧（首份通知分数普遍偏高，如 A02 86/实为 76、A03 75/实为 71、A01 r2 79/实为 64、A05 首裁 84/实为 54）；另发现早先误判为秒崩的批次工作流 whikn2ogz 实际完整运行 2 小时（30 代理）并产生规范结果。规则：一切以 journal result 条目为权威，通知仅用于唤醒。"
     recovery_note: "2026-07-21 从 wf_96b23550-47a journal 恢复 13 份第一轮产物（A01/A03/A04 完整三轮，A02/A05 设计与攻击），全文存于 SCHEMES/_wip/"
   dcp26:

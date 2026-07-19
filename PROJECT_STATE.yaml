@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: methodology_correction_fresh_start
+phase: fresh_1000_scheme_marathon
 status: in_progress
-last_completed_step: "Branch methodology corrected and committed as 75c8144; Qwen branch activated from kimi-k3 HEAD 100b7df (kimi-k3 frozen); Claude Code set as primary executor with Qwen as cross-device secondary; entrypoint docs, contract, SOUL and PROTOCOL aligned for dual-executor sequential handoff; Pan Yao's two optional biomimetic inspiration lines recorded (biological treatment unit heuristic doc added, organ enrichment heuristic reconfirmed); fresh pollutant selection deep research initiated"
-next_action: "Begin fresh pollutant selection under new methodology - identify specific scientific problems and engineering challenges before biological prototype search"
+last_completed_step: "Fresh-1000 program launched per Pan Yao's 2026-07-19 directive: 20 pollutants x target 50 closed-loop biomimetic schemes (1000 slots); SPEC.md and STATUS.yaml committed; PFOA Phase A brief and angle map running"
+next_action: "Complete PFOA Phase A brief and angle map; then run scheme slots in batches of five (design-attack-review, rebuild policy per SPEC.md); commit and push each completed scheme to origin/Qwen"
 active_branch: Qwen
 last_verified_commit: 75c8144
 bmdl_policy: removed_from_branch
@@ -82,7 +82,7 @@ deep_concepts:
   - S6 roxithromycin/23S rRNA exit-tunnel local gate
   - S11 FABP4 dual-site/Phe58 local-gate biohybrid (historical Gate 1a design-only pass; scope-superseded)
   - S1-SYN hL-FABP-informed nonprotein artificial PFOA/long-chain-PFCA adsorbent (paused; exact receptor not frozen)
-active_deep_concept: null
+active_deep_concept: "fresh_1000 program - PFOA Phase A brief and angle map"
 paused_candidates: []
 portfolio_20_status: historical_preserved_not_active
 portfolio_20_allocation:
@@ -307,6 +307,8 @@ artifacts:
   organic_translation_evidence: research/evidence/ORGANIC_TRANSLATION_EVIDENCE.md
   organ_enrichment_biomimetic_heuristic: research/evidence/ORGAN_ENRICHMENT_BIOMIMETIC_HEURISTIC.md
   biological_treatment_unit_heuristic: research/evidence/BIOLOGICAL_TREATMENT_UNIT_BIOMIMETIC_HEURISTIC.md
+  fresh_1000_spec: rounds/fresh_1000/SPEC.md
+  fresh_1000_status: rounds/fresh_1000/STATUS.yaml
   biomimetic_design_framework: docs/BIOMIMETIC_DESIGN_FRAMEWORK.md
   portfolio_100_bpa: rounds/portfolio_100/BPA.md
   portfolio_100_bpa_cull: rounds/portfolio_100/BPA_CULL.md

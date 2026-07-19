@@ -1,0 +1,178 @@
+program: fresh_1000
+created: 2026-07-19
+spec: rounds/fresh_1000/SPEC.md
+pollutant_count: 20
+target_per_pollutant: 50
+total_target: 1000
+quality_gate: "score>=85, 0 unresolved critical/high, innovation checklist pass, full closed loop per SPEC.md"
+iteration_policy:
+  rounds_per_concept: 2
+  max_rebuilds_per_slot: 3
+  exhaustion_recorded_honestly: true
+execution_order: [pfoa, dcp26, bpa, pfbs, rox, genx, pfhxs, pcp, octocrylene, betahch, chloroform, hcbd, bde209, np, pcb209, dde, ddt, dieldrin, endosulfan, tcdd]
+pollutants:
+  pfoa:
+    name: "全氟辛酸 PFOA"
+    brief: in_progress
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: phase_a_running
+  dcp26:
+    name: "2,6-二氯苯酚"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+  bpa:
+    name: "双酚 A"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+  pfbs:
+    name: "全氟丁烷磺酸 PFBS"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+  rox:
+    name: "罗红霉素 ROX"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+  genx:
+    name: "六氟环氧丙烷二聚酸 GenX (HFPO-DA)"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+  pfhxs:
+    name: "全氟己烷磺酸 PFHxS"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+  pcp:
+    name: "五氯苯酚 PCP"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+  octocrylene:
+    name: "奥克立林"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+  betahch:
+    name: "β-六氯环己烷 β-HCH"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+  chloroform:
+    name: "三氯甲烷"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+  hcbd:
+    name: "六氯丁二烯 HCBD"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+  bde209:
+    name: "十溴二苯醚 BDE-209"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+  np:
+    name: "壬基酚 NP"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+  pcb209:
+    name: "多氯联苯-209 PCB-209"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+  dde:
+    name: "滴滴伊 p,p'-DDE"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+  ddt:
+    name: "滴滴涕 p,p'-DDT"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+  dieldrin:
+    name: "狄氏剂"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+  endosulfan:
+    name: "硫丹"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+  tcdd:
+    name: "2,3,7,8-四氯二苯并-p-二噁英 TCDD"
+    brief: pending
+    angles_planned: null
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: queued
+totals:
+  attempted: 0
+  passed: 0
+  terminated: 0
+last_updated: "2026-07-19"

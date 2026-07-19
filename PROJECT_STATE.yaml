@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: Owner locked the ROX route to a low-cost packed-bed adsorbent and made synthesis simplicity a release gate; MAC-IF1 remains a conditional spatial-interface concept but UV photografting is no longer the default locked process
 next_action: "Freeze one combined B0-plus-M0 minimum discrimination package: first select the simplest credible bead process under G27, then test anionic-lipid interface class boundaries and directly distinguish shallow-versus-deep-versus-uniform weak-anionic distributions; do not release full adsorption optimization before B0, M0 and the manufacturing screen pass"
 active_branch: main
-last_verified_commit: 1e8121b2c7235874654ff6fe21ec23f9cbd6c406
+last_verified_commit: fab8a515317f7d12aef11f4e7ef4f341f531445d
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:

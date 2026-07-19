@@ -21,10 +21,11 @@ pollutants:
     status: phase_b_round2
     slots:
       A01: { r1_score: 67, r1_verdict: revise, open: "0 critical / 4 high", round2: running }
-      A02: { r1: "design+attack 已从损坏工作流恢复，裁决补齐运行中", review: running }
+      A02: { r1_score: 65, r1_verdict: revise, open: "1 critical / 4 high", round2: rerendered_with_true_ledger }
       A03: { r1_score: 45, r1_verdict: revise, open: "2 critical / 6 high", round2: queued }
       A04: { r1_score: 69, r1_verdict: revise, open: "1 critical / 3 high", round2: queued }
-      A05: { r1: "design+attack 已从损坏工作流恢复，裁决补齐运行中", review: running }
+      A05: { r1_score: 54, r1_verdict: revise, open: "2 critical / 3 high", round2: rerendered_with_true_ledger }
+    misdelivery_incident: "2026-07-21：A02/A05 裁决补齐任务首次通知载荷为误投递（79/84 分，与 journal 权威值 65/54 不符）；已按 journal 纠正并以真实台账重渲第二轮。规则：通知须与 journal 交叉核验后才可采信。"
     recovery_note: "2026-07-21 从 wf_96b23550-47a journal 恢复 13 份第一轮产物（A01/A03/A04 完整三轮，A02/A05 设计与攻击），全文存于 SCHEMES/_wip/"
   dcp26:
     name: "2,6-二氯苯酚"

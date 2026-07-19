@@ -15,16 +15,16 @@ pollutants:
     name: "全氟辛酸 PFOA"
     brief: complete
     angles_planned: 26
-    attempted: 0
+    attempted: 1
     passed: 0
-    terminated: 0
+    terminated: 1
     status: phase_b_round2
     slots:
-      A01: { r1_score: 67, r1_verdict: revise, open: "0 critical / 4 high", round2: running }
-      A02: { r1_score: 65, r1_verdict: revise, open: "1 critical / 4 high", round2: rerendered_with_true_ledger }
-      A03: { r1_score: 45, r1_verdict: revise, open: "2 critical / 6 high", round2: queued }
-      A04: { r1_score: 69, r1_verdict: revise, open: "1 critical / 3 high", round2: queued }
-      A05: { r1_score: 54, r1_verdict: revise, open: "2 critical / 3 high", round2: rerendered_with_true_ledger }
+      A01: { r1_score: 67, r2_score: 64, r2_verdict: terminate, status: terminated, file: SCHEMES/S01_A01_guanidino-CD_terminated.md, reason: "两个核心命题耗尽+先例饱和（胍基杯[5]芳烃 2019、季铵 PAF-1 2022），监督者接受 terminate" }
+      A02: { r1_score: 65, r2_score_notification: 86, r2_verdict_notification: pass, status: "第二轮通知 86/pass/0c/0h（算术自洽、再核验痕迹充分），journal 落盘核验中" }
+      A03: { r1_score: 45, r1_verdict: revise, open: "2 critical / 6 high", round2: running }
+      A04: { r1_score: 69, r1_verdict: revise, open: "1 critical / 3 high", round2: running }
+      A05: { r1_score: 54, r2_score_notification: 59, r2_verdict_notification: revise, status: "第二轮通知 59/revise/0c/0h（主轴已换为水化水释放熵），待 journal 核验" }
     misdelivery_incident: "2026-07-21：A02/A05 裁决补齐任务首次通知载荷为误投递（79/84 分，与 journal 权威值 65/54 不符）；已按 journal 纠正并以真实台账重渲第二轮。规则：通知须与 journal 交叉核验后才可采信。"
     recovery_note: "2026-07-21 从 wf_96b23550-47a journal 恢复 13 份第一轮产物（A01/A03/A04 完整三轮，A02/A05 设计与攻击），全文存于 SCHEMES/_wip/"
   dcp26:

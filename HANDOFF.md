@@ -189,6 +189,24 @@ Pan Yao paused further biomimetic and material design and requested a narrow sel
 
 At the historical G28 checkpoint, MAC-IF1 and MAC-BI1 had not yet been terminated. G29/G30 now supersede that status: both remain preserved artifacts and controls, not active leads. PFHxS selection does not erase any alternative or prior audit file.
 
+## Portfolio recovery and multi-scheme optimization drafts (2026-07-20)
+
+Pan Yao consolidated the scheme portfolio after reviewing an external five-scheme summary (Qoder, stored outside the repo). This checkpoint records the recovery, four optimization drafts, one scope relaxation, and one new idea kept as a note only. All items are concept-level; `primary_design` and `backup_design` remain null and the E1 register stays empty.
+
+Scope relaxation (owner decision, recorded here only; not yet written into `SOUL.md`, `docs/MATERIAL_SCOPE_BOUNDARY_ION_EXCHANGE.md` or G29): electrostatic attraction is accepted as one of several forces in multi-force biomimetic adsorption and may be the main force, provided the material also uses hydrophobic, pi-pi or hydrogen-bond interactions. High-quality-paper admission still requires the novelty and causal proof to come from multi-force spatial organization or a dynamic switch, demonstrated by matched-charge / matched-IEC controls that isolate the biomimetic gain from ordinary ion exchange.
+
+Recovered scheme: a pH-responsive capture-release ROX adsorbent was found on branches `origin/Qwen` and `origin/kimi-k3` (byte-identical on both) and checked out to the main working tree under `rounds/rox_deep_design_1/` (`ROX_PH_RESPONSIVE_V2_REVISED_DESIGN.md`, v2.0 experiment-ready-prep; `ROX_PH_RESPONSIVE_COMPLETE_DESIGN.md`, v1). It uses the neonatal Fc receptor (FcRn) histidine pH-switch as a dynamic prototype, engineering-reversed per Igawa 2010 with FcRn as mechanism source only: a poly(vinylimidazole) brush on macro/mesoporous activated carbon captures cationic macrolides near neutral pH and releases them at pH 5.0-5.5 by imidazole protonation. This scheme had never been merged to main; the source branches have since moved to other work. Two points await Pan Yao: (1) whether a dynamic pH-switch may serve as the single primary hard correspondence under the main contract; (2) full alignment with current main rules (terminology, scenario contract, concentration tiers).
+
+Optimization drafts (all `concept_valid` except DCP which is `lead_only`; none at E1):
+- `rounds/pfhxs_mi1_design_1/DESIGN.md` — PFHxS: discontinuous net-neutral zwitterionic (phosphorylcholine) patches next to bare hydrophobic pore wall; novelty is the discontinuous amphiphilic nanodomain with a non-monotonic coverage optimum; an equal-charge quaternary control isolates it from ion exchange; the PFHxS scenario contract is a prerequisite gate.
+- `rounds/pfoa_opbu1_design_1/DESIGN.md` — long-chain PFCA: downgraded to a biological-mechanism-informed (B-class) positional-isomer structure-activity study of ortho/meta/para bis-urea nodes; heavy 2026 prior art; a sulfate-background thin-film go/no-go gate comes first.
+- `rounds/dcp_ohp1_design_1/DESIGN.md` — 2,6-DCP path A: drops the sensory-organ/calixpyrrole framing, uses a real chlorophenol partition prototype and an anion-competition-resistant shape-complementary hydrophobic pocket; lowest confidence, with three prerequisite gates (environmental admission, prototype existence, aqueous positional selectivity).
+- `rounds/mac_if1_r2_design_1/DESIGN.md` — macrolide class: static multi-force shallow-interface bead, revived under the electrostatic relaxation as a static counterpart to the dynamic pH-responsive scheme; novelty must come from spatial organization proven by matched-IEC shallow-vs-uniform controls. This does not un-terminate the historical G29 disposition; it is a new static scheme under the relaxed scope.
+
+The consolidated review index is `docs/PORTFOLIO_REVIEW_AND_PH_RESPONSIVE_RECOVERY_2026-07-20.md`. `AS-EPS-BP2` (bisphenols) is shelved by Pan Yao for later.
+
+New idea kept as a note only (not developed into a design): a lysosomal acid-trapping ROX route. Phagocyte/lysosome accumulation of weak-base macrolides (ROX intracellular/extracellular ratio 14-190, uptake reversible and acidification-inhibited; see `docs/ROX_ALTERNATIVE_PROTOTYPE_AND_DESIGN_TOURNAMENT.md`) is a genuine sequestration process, so its Gate A story is arguably stronger than the FcRn route. However, a passive adsorbent cannot easily maintain the acidic microdomain a pH gradient requires, and a fixed weak-acid group in neutral bulk tends to collapse into ordinary weak-cation exchange. It differs from the recovered FcRn/PVI scheme in prototype and in pH direction (acidic-side capture versus neutral-side capture). Recorded for Pan Yao to refine later; no design work is done now.
+
 ## Resume instructions
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.

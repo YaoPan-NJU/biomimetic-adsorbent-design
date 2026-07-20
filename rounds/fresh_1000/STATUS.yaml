@@ -64,10 +64,13 @@ pollutants:
     name: "全氟丁烷磺酸 PFBS"
     brief: complete
     angles_planned: 19
-    attempted: 0
+    attempted: 2
     passed: 0
-    terminated: 0
-    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，19 诚实可区分角度；待进 Phase B 批量方案槽）"
+    terminated: 1
+    status: "phase_b（A05 终止 58/S16；A17 77→82 零 high，r3 设计阶段精修轮运行中冲击 85）"
+    slots:
+      A05: { r1: "66 revise 0c/2h（铁载体架构可溶笼捕获+固相受体回收两相体系；2 high A05-01 硫酸根排斥误归四面体几何/A05-02 TonB 归属错误）", r2: "58 terminate 0c/1h（诚实更正机制归属后暴露承重轴不可达：硫酸根排斥归 C4 链腔坍缩为单参数链腔疏水沿链长单调陷阱5、α≥10⁶ 需 ΔΔG≥34 kJ/mol 而 C4 氟碳链仅数至十余 kJ/mol；新 high A05-R2-01 E5 实为固定化流通笼吸附剂即可溶均相捕获无存在性先例）", status: terminated, file: SCHEMES/S16_A05_siderophore-two-phase-cage_terminated.md, reason: "角度内禀结构天花板（承重选择性轴单参数单调+可溶均相捕获无先例）；残余价值：铁载体两相架构传质/回收解耦+TonB 方向性能量逻辑+E5 固定化基准+nM 亲和与 α≥10⁶ 共同前置+硫酸根排斥归属教训" }
+      A17: { r1: "77 revise 0c/1h（孔口几何双位点头基类型反差捕获，T 三足硫脲匹配四面体磺酸根/P squaramide 匹配平面羧酸根，R=α_T/α_P 反差签名；1 high H1 squaramide 质子化态未设防）", r2: "82 revise 0c/0h（零 high；H1 设计层真正闭合 P 位点重设为不可去质子中性平面双给体+pH 滴定 kill 门+四唑根/squaramate 光谱防假阳性；M1-M5/L1-L3 全闭合；裁决者明示 82→85 差距为可文本精修议题A-F预计83-84 + 不可文本消除科学不确定性须实验）", status: "r3 设计阶段精修轮运行中（监督者指令：闭合议题 A-F 冲击 85，诚实承当实验性不确定性，85 线不降）" }
     phase_a_note: "五路调研（run wf_bfd571d4-951）+ 综合（注入修复后渲染器，五路结果真正注入）；161 条经核验证据（联邦公报 NPDWR/UCMR5 全文、EPA 2022 PFBS HA 全文、EFSA 2020 全文 178 处 PFBS 抽查、Hu 2016 全文）。关键监管：EPA PFBS 终身 HA 2000 ng/L、2024 NPDWR 纳入 HI 混合物 MCL 2000 ng/L（无单项 MCL）、UCMR3 检出极低（8/4920 PWS）、EFSA 未将 PFBS 纳入 PFOA/PFOS/PFNA/PFHxS 组 TDI。两条启发式均判不够格：生物处理单元（出水 100% 检出、进出水负荷相当、前体转化反升短链 PFCA、碳吸附/离子交换对短链差）；组织富集（BCF/BAF 显著低于长链 PFSA、大鼠毒代消除最快尿排泄最高）。承重仿生源为 approach-1 机制匹配（NTCP/OAT4/GPR43-109A/NIS/ASBT/ModA 转运识别、铁载体架构、氟化物核糖开关）+ approach-2 工程难题驱动。低先例高价值角度：A05（铁载体两相捕获-回收）、A17（磺酸根 vs 羧酸根头基类型选择）、A18（氟化物核糖开关 F⁻ 传感）。PFOA 陷阱库可参照（阳离子位点对硫酸根/磷酸根非选择性、链长单调、ng/L 传质、含氟吸附剂风险、DOM 分组分、摩尔比 10⁻⁶-10⁻⁹）。"
   rox:
     name: "罗红霉素 ROX"
@@ -198,8 +201,8 @@ pollutants:
     terminated: 0
     status: queued
 totals:
-  attempted: 14
+  attempted: 16
   passed: 2
-  terminated: 12
-  note: "PFOA 10 槽（1 通过 A02/9 终止）+ dcp26 1 槽（A01 终止）+ bpa 3 槽（A01 通过 86/A02 终止 62/A03 终止 64）；dcp26 A02/A03 首轮零产出不计 attempted"
+  terminated: 13
+  note: "PFOA 10 槽（1 通过 A02/9 终止）+ dcp26 1 槽（A01 终止）+ bpa 3 槽（A01 通过 86/A02 终止 62/A03 终止 64）+ pfbs 2 槽（A05 终止 58/A17 r3 在途 82）；dcp26 A02/A03 重跑首轮在途未计"
 last_updated: "2026-07-20"

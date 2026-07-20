@@ -30,10 +30,10 @@
 
 | 方案 | 文档 | 状态 |
 |---|---|---|
-| PFHxS-MI1 | `rounds/pfhxs_mi1_design_1/DESIGN.md` | `concept_valid` |
-| PFOA-oPBU1 | `rounds/pfoa_opbu1_design_1/DESIGN.md` | `concept_valid`（B 类位置异构研究） |
-| DCP-OHP1 岔路A | `rounds/dcp_ohp1_design_1/DESIGN.md` | `lead_only` |
-| MAC-IF1-R2 | `rounds/mac_if1_r2_design_1/DESIGN.md` | `concept_valid`（静态多力） |
+| PFHxS-MI1 | `rounds/pfhxs_mi1_design_1/PFHXS_MI1_DESIGN.md` | `concept_valid` |
+| PFOA-oPBU1 | `rounds/pfoa_opbu1_design_1/PFOA_OPBU1_DESIGN.md` | `concept_valid`（B 类位置异构研究） |
+| DCP-OHP1 岔路A | `rounds/dcp_ohp1_design_1/DCP_OHP1_DESIGN.md` | `lead_only` |
+| MAC-IF1-R2 | `rounds/mac_if1_r2_design_1/MAC_IF1_R2_DESIGN.md` | `concept_valid`（静态多力） |
 | ROX pH 响应（捞回） | `rounds/rox_deep_design_1/ROX_PH_RESPONSIVE_V2_REVISED_DESIGN.md` | v2.0 实验准备版，待对齐 main |
 
 ## 2. 捞回的 pH 响应 ROX 方案

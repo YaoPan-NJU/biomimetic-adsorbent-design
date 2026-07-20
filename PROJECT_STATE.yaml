@@ -158,19 +158,19 @@ portfolio_recovery_and_optimization_20260720:
   optimization_drafts:
     - id: PFHxS-MI1
       status: concept_valid
-      file: rounds/pfhxs_mi1_design_1/DESIGN.md
+      file: rounds/pfhxs_mi1_design_1/PFHXS_MI1_DESIGN.md
       prerequisite: PFHxS_scenario_contract_then_coverage_gradient_go_no_go
     - id: PFOA-oPBU1
       status: concept_valid_B_class_positional_isomer_SAR
-      file: rounds/pfoa_opbu1_design_1/DESIGN.md
+      file: rounds/pfoa_opbu1_design_1/PFOA_OPBU1_DESIGN.md
       prerequisite: read_2026_prior_art_then_sulfate_thin_film_go_no_go
     - id: DCP-OHP1-pathA
       status: lead_only
-      file: rounds/dcp_ohp1_design_1/DESIGN.md
+      file: rounds/dcp_ohp1_design_1/DCP_OHP1_DESIGN.md
       prerequisite: environmental_admission_and_prototype_and_aqueous_positional_selectivity_gates
     - id: MAC-IF1-R2
       status: concept_valid_static_multi_force_under_relaxed_scope
-      file: rounds/mac_if1_r2_design_1/DESIGN.md
+      file: rounds/mac_if1_r2_design_1/MAC_IF1_R2_DESIGN.md
       note: does_not_untermine_G29_new_static_scheme_novelty_from_spatial_organization_matched_IEC
   shelved: AS-EPS-BP2_bisphenols_owner_deferred
   new_idea_note_only: lysosomal_acid_trapping_ROX_recorded_in_HANDOFF_not_developed
@@ -467,10 +467,10 @@ open_issues:
     text: Freeze PFHxS occurrence distribution analytical fraction secondary-effluent matrix PFSA-class competitors temporal variability engineering endpoint and environmental/mechanism/capacity concentration tiers before reopening prototype or material design.
 artifacts:
   portfolio_review_recovery_20260720: docs/PORTFOLIO_REVIEW_AND_PH_RESPONSIVE_RECOVERY_2026-07-20.md
-  pfhxs_mi1_design: rounds/pfhxs_mi1_design_1/DESIGN.md
-  pfoa_opbu1_design: rounds/pfoa_opbu1_design_1/DESIGN.md
-  dcp_ohp1_patha_design: rounds/dcp_ohp1_design_1/DESIGN.md
-  mac_if1_r2_design: rounds/mac_if1_r2_design_1/DESIGN.md
+  pfhxs_mi1_design: rounds/pfhxs_mi1_design_1/PFHXS_MI1_DESIGN.md
+  pfoa_opbu1_design: rounds/pfoa_opbu1_design_1/PFOA_OPBU1_DESIGN.md
+  dcp_ohp1_patha_design: rounds/dcp_ohp1_design_1/DCP_OHP1_DESIGN.md
+  mac_if1_r2_design: rounds/mac_if1_r2_design_1/MAC_IF1_R2_DESIGN.md
   rox_ph_responsive_v2_design: rounds/rox_deep_design_1/ROX_PH_RESPONSIVE_V2_REVISED_DESIGN.md
   rox_ph_responsive_complete_design: rounds/rox_deep_design_1/ROX_PH_RESPONSIVE_COMPLETE_DESIGN.md
   rox_ph_responsive_clean_design: rounds/rox_deep_design_1/ROX_PH_RESPONSIVE_DESIGN.md

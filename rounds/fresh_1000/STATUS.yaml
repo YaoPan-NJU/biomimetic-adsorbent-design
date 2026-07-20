@@ -50,10 +50,13 @@ pollutants:
     name: "双酚 A"
     brief: complete
     angles_planned: 23
-    attempted: 0
+    attempted: 2
     passed: 0
-    terminated: 0
-    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，23 诚实可区分角度；待进 Phase B 批量方案槽）"
+    terminated: 1
+    status: "phase_b_round3（A02 终止 62；A01 r3 最终轮运行中 82→?）"
+    slots:
+      A01: { r1: "71 revise 0c/2h（DmpR 固定酚锚加桥连区空间门；2 high：I1 成功判据与机制脱钩未合取、I2 非晶 HCP 无固定口袋几何使锚门解耦前提失效）", r2: "82 revise 0c/2h（+11，BPA 历轮最强；选晶态 β-酮烯胺 COF 闭合 I2、合取门禁闭合 I1、读毕 Park 2020 PDB 6IY8 全文并坐标复算、自我纠错 E135K 误译；新增 2 high：H1 S2 逆 logKow 签名热力学水下需罚项≥6.85 供给 2-6 kJ/mol、H2 最近邻 E17 Zhao2022 题名逐字重叠全文未取得）", status: "r3 最终轮渲染中（监督者指令：H2 联网取 E17 全文定增量边界、H1 给 ΔΔG 上界加 M0/M2 go-no-go 或诚实收窄，85 线不降）" }
+      A02: { r1: "72 revise 0c/3h（脲桥几何自互补聚脲 POP 定向多点氢键酚氧识别；3 high：H1 对称双端夹持落入陷阱 T4、H2 联苯二异氰酸酯水解产生联苯胺 IARC1 类、H3 仅编码间距一维预组织被熵抵消）", r2: "72 revise 0c/1h（平台期；H1 重构非对称单酚主锚、H2 换脂肪族 HDI/IPDI 连接体、H3 下调为间距偏置加统计多点，三条 high 实质闭合；新增 N1 high：旗舰 α≥3 对 BPA 全疏水逆风，f=5-20% 下需 α_c≈11-41 不现实）", r3: "62 terminate 0c/1h（N1 四层定量了断确认旗舰不可达，主动收窄为单酚位多点锚定加类级判别；裁决者独立复算确认，收窄后原创性封顶难过 85，N7 印证类级判据仍被疏水单调解释）", status: terminated, file: SCHEMES/S13_A02_urea-Hamilton-polyurea-POP_terminated.md, reason: "柔性 POP 上脲/Hamilton 定向供体水相酚氧识别的化学天花板由水相弱氢键（E9 近热中性）与小螯合可行分数共同决定；残余价值为 N1 存亡核算范式+亲和力-选择性解耦协议+阴离子位点毒化定量+TTC 泄漏阈值锚定" }
     phase_a_note: "五路调研（run wf_4ec9d6a6-a16）+ 综合；综合步经渲染器注入修复后续跑（原模板变量未插值缺陷已永久修复），169 条经 Crossref/Europe PMC/OpenAlex/Semantic Scholar 核验证据真正注入。两条启发式均判不够格：生物处理单元（Koc 621-736 L/kg 与 logKow 预测一致=非特异疏水分配，降解酶系属催化转化非识别）；组织富集（消除半衰期 38.6-62.2 min、清除率 90-124 mL/(kg·min)、BCF 5-68=不显著蓄积）。承重仿生源为 approach-1 机制匹配（DmpR 酚感应、ERβ 口袋体积、ERRγ 非对称单酚锚、PXR 定向混杂、TTR 卤酚通道）+ approach-2 工程难题驱动；ERRγ 为毒性受体仅作 approach-3 个案补充。高价值低先例角度：A01（DmpR 锚+门解耦）、A02（Hamilton 氢键供体酚氧）、A03（异丙叉定距几何标尺）。"
   pfbs:
     name: "全氟丁烷磺酸 PFBS"
@@ -192,8 +195,8 @@ pollutants:
     terminated: 0
     status: queued
 totals:
-  attempted: 11
+  attempted: 13
   passed: 1
-  terminated: 10
-  note: "PFOA 10 槽（1 通过 A02/9 终止）+ dcp26 1 槽（A01 终止）；dcp26 A02/A03 首轮零产出不计 attempted"
+  terminated: 11
+  note: "PFOA 10 槽（1 通过 A02/9 终止）+ dcp26 1 槽（A01 终止）+ bpa 2 槽（A02 终止/A01 r3 在途）；dcp26 A02/A03 首轮零产出不计 attempted"
 last_updated: "2026-07-20"

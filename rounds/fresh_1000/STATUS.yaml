@@ -48,12 +48,13 @@ pollutants:
       A03: { r1: "未产出", status: "首轮工作流 checkpoint-resume 被拒（wremfdcaq），零产出，待重启（pH 形态切换吸附-再生一体化角度）" }
   bpa:
     name: "双酚 A"
-    brief: in_progress
-    angles_planned: null
+    brief: complete
+    angles_planned: 23
     attempted: 0
     passed: 0
     terminated: 0
-    status: "phase_a_running（用户指令 2026-07-20 转入；五路调研 + 综合简报与角度地图渲染中）"
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，23 诚实可区分角度；待进 Phase B 批量方案槽）"
+    phase_a_note: "五路调研（run wf_4ec9d6a6-a16）+ 综合；综合步经渲染器注入修复后续跑（原模板变量未插值缺陷已永久修复），169 条经 Crossref/Europe PMC/OpenAlex/Semantic Scholar 核验证据真正注入。两条启发式均判不够格：生物处理单元（Koc 621-736 L/kg 与 logKow 预测一致=非特异疏水分配，降解酶系属催化转化非识别）；组织富集（消除半衰期 38.6-62.2 min、清除率 90-124 mL/(kg·min)、BCF 5-68=不显著蓄积）。承重仿生源为 approach-1 机制匹配（DmpR 酚感应、ERβ 口袋体积、ERRγ 非对称单酚锚、PXR 定向混杂、TTR 卤酚通道）+ approach-2 工程难题驱动；ERRγ 为毒性受体仅作 approach-3 个案补充。高价值低先例角度：A01（DmpR 锚+门解耦）、A02（Hamilton 氢键供体酚氧）、A03（异丙叉定距几何标尺）。"
   pfbs:
     name: "全氟丁烷磺酸 PFBS"
     brief: pending

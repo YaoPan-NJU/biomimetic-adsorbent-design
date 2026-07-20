@@ -2,8 +2,8 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: fresh_1000_scheme_marathon
 status: in_progress
-last_completed_step: "fresh_1000 收尾（2026-07-20 用户指令）：PFOA 以 1 通过（A02=85 脲氧阴离子洞 POP）/9 终止关闭，满足广度优先，不再新开 PFOA 槽；dcp26 A01 终止（75/4 轮），A02/A03 首轮工作流因 checkpoint-resume 被拒零产出、标记待重启回溯；A10 r4 权威 78/terminate（与 82 同向重复）确认终止。转入 BPA：渲染并启动 Phase A 五路调研。"
-next_action: "BPA Phase A：运行五路调研工作流（存在/难题/先例/常规原型/启发式）→ 综合简报与机制可区分角度地图 → 组装 rounds/fresh_1000/bpa/BRIEF.md 与 DESIGN_SPACE.md 入库；随后按 SPEC 批量跑方案槽（设计-攻击-裁决，重建策略），每个完成方案单独提交推 origin/Qwen；dcp26 A02/A03 待 20 污染物回溯时重启。"
+last_completed_step: "BPA Phase A 完成（2026-07-20）：五路调研 + 综合简报与角度地图入库（rounds/fresh_1000/bpa/BRIEF.md 8 节 + DESIGN_SPACE.md 23 诚实可区分角度）。修复 render_phaseA.py 综合者注入缺陷（${JSON.stringify(surveys)} 模板变量未插值 → 运行期拼接）并续跑，169 条经核验证据真正注入综合者；修复对后续 18 污染物永久生效。两条启发式均判不够格。PFOA 已关闭（1 通过/9 终止），dcp26 A02/A03 待回溯。"
+next_action: "BPA Phase B：按 SPEC 批量跑方案槽（设计-攻击-裁决隔离工作流，每槽 2 轮 + 至多 3 次重建），优先低先例高价值角度 A01/A02/A03；每个完成方案单独提交推 origin/Qwen；≥85 且零未决 critical/high 记通过，角度耗尽诚实记录 N<50。dcp26 A02/A03 待 20 污染物回溯时重启。"
 active_branch: Qwen
 last_verified_commit: 75c8144
 bmdl_policy: removed_from_branch

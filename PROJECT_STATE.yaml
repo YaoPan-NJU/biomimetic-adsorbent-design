@@ -2,8 +2,8 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: fresh_1000_scheme_marathon
 status: in_progress
-last_completed_step: "BPA Phase A 完成（2026-07-20）：五路调研 + 综合简报与角度地图入库（rounds/fresh_1000/bpa/BRIEF.md 8 节 + DESIGN_SPACE.md 23 诚实可区分角度）。修复 render_phaseA.py 综合者注入缺陷（${JSON.stringify(surveys)} 模板变量未插值 → 运行期拼接）并续跑，169 条经核验证据真正注入综合者；修复对后续 18 污染物永久生效。两条启发式均判不够格。PFOA 已关闭（1 通过/9 终止），dcp26 A02/A03 待回溯。"
-next_action: "BPA Phase B：按 SPEC 批量跑方案槽（设计-攻击-裁决隔离工作流，每槽 2 轮 + 至多 3 次重建），优先低先例高价值角度 A01/A02/A03；每个完成方案单独提交推 origin/Qwen；≥85 且零未决 critical/high 记通过，角度耗尽诚实记录 N<50。dcp26 A02/A03 待 20 污染物回溯时重启。"
+last_completed_step: "BPA A01 通过（2026-07-20，86/100 零 critical/high，S14 入库）——BPA 首个通过方案、千方案计划第二个通过（继 PFOA A02=85）。轨迹 71→82→83→84→86：DmpR 型固定酚锚加桥连区空间门晶态 β-酮烯胺 COF，等网状原位门交换+去锚因果解耦+逆 logKow 梯度签名。监督者授 r5 最终文件级补件轮（区别于 PFOA A07 结构性终止）兑现裁决者 85-86 预测。BPA 广度优先满足。A02 终止 62/S13；A03 r3 定点修复+天花板评估轮运行中。"
+next_action: "BPA 广度优先已满足（A01 通过）：A03 r3 返回后据结果记录（终止或续），随后按广度优先可推进下一污染物（PFBS，execution_order 第 4 位）Phase A，或继续探索 BPA 剩余高价值角度（A04 ERβ 体积阈值/A07 ER 药效团/A10 PXR 定向混杂等）；G-E17 待机构访问取得 E17 全文终判 E 维区间；dcp26 A02/A03 待 20 污染物回溯时重启。每个完成方案单独提交推 origin/Qwen。"
 active_branch: Qwen
 last_verified_commit: 75c8144
 bmdl_policy: removed_from_branch

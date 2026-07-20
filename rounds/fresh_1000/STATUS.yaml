@@ -51,13 +51,13 @@ pollutants:
     brief: complete
     angles_planned: 23
     attempted: 3
-    passed: 0
+    passed: 1
     terminated: 1
-    status: "phase_b（A02 终止 62/S13；A01 71→82→83 零 high，r4 收窄订正轮运行中预期 85-86 通过；A03 r1 77→r2 运行中，BPA 最有希望平台）"
+    status: "phase_b（A01 通过 86/S14，BPA 广度优先满足；A02 终止 62/S13；A03 r2 71→r3 定点修复+天花板评估轮运行中）"
     slots:
-      A01: { r1: "71 revise 0c/2h（DmpR 固定酚锚加桥连区空间门；2 high：I1 成功判据与机制脱钩未合取、I2 非晶 HCP 无固定口袋几何使锚门解耦前提失效）", r2: "82 revise 0c/2h（+11，BPA 历轮最强；选晶态 β-酮烯胺 COF 闭合 I2、合取门禁闭合 I1、读毕 Park 2020 PDB 6IY8 全文并坐标复算、自我纠错 E135K 误译；新增 2 high：H1 S2 逆 logKow 签名热力学水下、H2 最近邻 E17 Zhao2022 题名逐字重叠全文未取得）", r3: "83 revise 0c/0h（两条 high 实质闭合：H1 选项甲 ΔΔG_wall 分项预算+S2 硬 go/no-go+Regime B 预定义、H2 穷尽 11 路线全文不可得登记监督者门 G-E17+E 维双区间决策树；零 high；唯一阻断为 M-A ΔΔG 定义式反号、M-B α-ΔΔG 换算 2.303 倍错误两处文件级订正）", status: "r4 收窄订正轮渲染中（裁决者指令：仅订正 M-A/M-B/L-1/L-2 不重设计，预期重评 85-86 通过；G-E17 监督者另行处理不阻断程序性通过）" }
+      A01: { r1: "71 revise 0c/2h（DmpR 固定酚锚加桥连区空间门；2 high：I1 成功判据与机制脱钩未合取、I2 非晶 HCP 无固定口袋几何使锚门解耦前提失效）", r2: "82 revise 0c/2h（+11，BPA 历轮最强；选晶态 β-酮烯胺 COF 闭合 I2、合取门禁闭合 I1、读毕 Park 2020 PDB 6IY8 全文并坐标复算、自我纠错 E135K 误译；新增 2 high：H1 S2 逆 logKow 签名热力学水下、H2 最近邻 E17 Zhao2022 题名逐字重叠全文未取得）", r3: "83 revise 0c/0h（两条 high 实质闭合：H1 选项甲 ΔΔG_wall 分项预算+S2 硬 go/no-go+Regime B 预定义、H2 穷尽 11 路线全文不可得登记监督者门 G-E17+E 维双区间决策树；零 high；唯一阻断为 M-A ΔΔG 定义式反号、M-B α-ΔΔG 换算 2.303 倍错误两处文件级订正）", r4: "84 revise 0c/0h（M-A/M-B/L-1-L-5/P-1 全部 resolved：定义式反号订正、α-ΔΔG 0.45 kJ/mol、BPA pKa 经 PMC 全文直读改标 Bautista-Toledo 2005 新增 E34、端点 0.40-5.94%、Pd 溶出、角度备案；零 high；新发现 3 medium A4-1 DFT 判行阈值与方法误差同量级/A4-2 S2 终局无功效预算 t≈1.5<2.92/A4-3 去锚支柱扭转投影缩短无 F 退路 + 5 low；裁决者明示文件级补件后预期 85-86 通过）", r5: "86 pass 0c/0h（文件级补件 A4-1 DFT 阈值≥4 双泛函 DLPNO 复核+A4-2 CV/同位素稀释/n 升级精度预算+A4-3 季铵化锚封闭后备体 C1-B 加 F11+A4-4 6IY8 分辨率精度 PDBe 复核+A4-5-A4-7+L-R1 全闭合；维度 18/22/17/12/9/8；裁决者确认 85 线未降零 high 判通过；残余 N1 medium C1-B 位点归属不阻断+N2-N5 low 保守偏差）", status: passed, file: SCHEMES/S14_A01_DmpR-anchor-gate-COF_passed.md, note: "BPA 首个通过方案，千方案计划第二个通过（继 PFOA A02=85）；监督者授 r5 最终补件轮（区别于 PFOA A07 结构性终止：A01 零 high 架构完整、缺口文件级可闭合）兑现裁决者 85-86 预测；G-E17 监督者门挂起待机构访问，E 维双区间择一；P(S2)≈20-30% 低先验诚实声明" }
       A02: { r1: "72 revise 0c/3h（脲桥几何自互补聚脲 POP 定向多点氢键酚氧识别；3 high：H1 对称双端夹持落入陷阱 T4、H2 联苯二异氰酸酯水解产生联苯胺 IARC1 类、H3 仅编码间距一维预组织被熵抵消）", r2: "72 revise 0c/1h（平台期；H1 重构非对称单酚主锚、H2 换脂肪族 HDI/IPDI 连接体、H3 下调为间距偏置加统计多点，三条 high 实质闭合；新增 N1 high：旗舰 α≥3 对 BPA 全疏水逆风，f=5-20% 下需 α_c≈11-41 不现实）", r3: "62 terminate 0c/1h（N1 四层定量了断确认旗舰不可达，主动收窄为单酚位多点锚定加类级判别；裁决者独立复算确认，收窄后原创性封顶难过 85，N7 印证类级判据仍被疏水单调解释）", status: terminated, file: SCHEMES/S13_A02_urea-Hamilton-polyurea-POP_terminated.md, reason: "柔性 POP 上脲/Hamilton 定向供体水相酚氧识别的化学天花板由水相弱氢键（E9 近热中性）与小螯合可行分数共同决定；残余价值为 N1 存亡核算范式+亲和力-选择性解耦协议+阴离子位点毒化定量+TTC 泄漏阈值锚定" }
-      A03: { r1: "77 revise 0c/1h（异丙叉定距酚-酚间距加 C2 几何标尺刚性 COF；BPA 首轮最高；核心假设未证伪平台稳妥；1 high D-1 F2 触发与 S2 自相矛盾疏水单调下 D 维假性通过；medium 含 G-1 两辅连接体踩 CMR 红线、A-2 变温判据符号、A-3 S5 单位、A-4 构象熵估算偏乐观、C-1 ERRγ 过度解读）", status: "r2 渲染中（监督者指令：G-1 换非 CMR 刚性二胺阈值收紧 ng/L、D-1 触发改 |ln α|>ln1.5、逐条修判据，全力冲击 85 不夸大）" }
+      A03: { r1: "77 revise 0c/1h（异丙叉定距酚-酚间距加 C2 几何标尺刚性 COF；BPA 首轮最高；核心假设未证伪平台稳妥；1 high D-1；medium 含 G-1 CMR 连接体、A-2/A-3/A-4、C-1 ERRγ 过度解读）", r2: "71 revise 0c/2h（-6，诚实让步暴露角度硬度：确认 BPA/BPF O-O 距离重叠、二面角标尺降为构象熵间接通道、α 下调 1.4-3.3；G-1 换非 CMR Me2Pa/TmPa 阈值 75 ng/L 锚 ICH M7 TTC、D-1 修复、C-1 ERRγ 降结构存在性佐证；新增 2 high：H-1 结合姿态几何不自洽蝶式 60-120° 与双壁面 π-π 两点 0-30° 冲突、H-2 Me2Pa CID 7252 物质同一性错误应为 160824；C 维不通过仿生硬对应缺如、主签名与 A04 共享）", status: "r3 定点修复+天花板评估轮运行中（监督者指令：修 H-2 CID/H-1 姿态前置门/C 维如实标不通过；鉴于 C 维不通过+A04 机制共享+W2 内禀不确定性，若修复后无 85 路径则据 SPEC 诚实终止）" }
     g_e17_supervisor_note: "2026-07-20 监督者解析 G-E17（A01 r3 移交的监督者级门，E17=Zhao 2022 Sep Purif Technol 297:121489 全文）：监督者 WebSearch 后端同样返回 403（Access to model denied），与设计者 r3 穷尽的 11 条路线（OpenAlex/Semantic Scholar/Europe PMC/Unpaywall/PMC/Crossref/ScienceDirect 403/Open Access Button/BASE/WebSearch-WebFetch 403/68 条施引摘要）一致——E17 为 Elsevier 付费封闭获取、无仓库副本，解析需机构订阅或通讯作者请求，属本仓库范围外人工动作。结论：G-E17 维持外部依赖门，不阻断 A01 程序性通过（裁决者 r3 明示）；E 维双区间条款届时择一生效（区间一：E17 不含四元混合物 α+官能团谱切换则增量成立；区间二：含则收窄）。待潘尧或后续具备机构访问时取得全文以终判区间。"
     phase_a_note: "五路调研（run wf_4ec9d6a6-a16）+ 综合；综合步经渲染器注入修复后续跑（原模板变量未插值缺陷已永久修复），169 条经 Crossref/Europe PMC/OpenAlex/Semantic Scholar 核验证据真正注入。两条启发式均判不够格：生物处理单元（Koc 621-736 L/kg 与 logKow 预测一致=非特异疏水分配，降解酶系属催化转化非识别）；组织富集（消除半衰期 38.6-62.2 min、清除率 90-124 mL/(kg·min)、BCF 5-68=不显著蓄积）。承重仿生源为 approach-1 机制匹配（DmpR 酚感应、ERβ 口袋体积、ERRγ 非对称单酚锚、PXR 定向混杂、TTR 卤酚通道）+ approach-2 工程难题驱动；ERRγ 为毒性受体仅作 approach-3 个案补充。高价值低先例角度：A01（DmpR 锚+门解耦）、A02（Hamilton 氢键供体酚氧）、A03（异丙叉定距几何标尺）。"
   pfbs:
@@ -197,8 +197,8 @@ pollutants:
     terminated: 0
     status: queued
 totals:
-  attempted: 13
-  passed: 1
+  attempted: 14
+  passed: 2
   terminated: 11
-  note: "PFOA 10 槽（1 通过 A02/9 终止）+ dcp26 1 槽（A01 终止）+ bpa 2 槽（A02 终止/A01 r3 在途）；dcp26 A02/A03 首轮零产出不计 attempted"
+  note: "PFOA 10 槽（1 通过 A02/9 终止）+ dcp26 1 槽（A01 终止）+ bpa 3 槽（A01 通过 86/A02 终止 62/A03 r3 在途）；dcp26 A02/A03 首轮零产出不计 attempted"
 last_updated: "2026-07-20"

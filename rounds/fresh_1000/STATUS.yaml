@@ -62,12 +62,13 @@ pollutants:
     phase_a_note: "五路调研（run wf_4ec9d6a6-a16）+ 综合；综合步经渲染器注入修复后续跑（原模板变量未插值缺陷已永久修复），169 条经 Crossref/Europe PMC/OpenAlex/Semantic Scholar 核验证据真正注入。两条启发式均判不够格：生物处理单元（Koc 621-736 L/kg 与 logKow 预测一致=非特异疏水分配，降解酶系属催化转化非识别）；组织富集（消除半衰期 38.6-62.2 min、清除率 90-124 mL/(kg·min)、BCF 5-68=不显著蓄积）。承重仿生源为 approach-1 机制匹配（DmpR 酚感应、ERβ 口袋体积、ERRγ 非对称单酚锚、PXR 定向混杂、TTR 卤酚通道）+ approach-2 工程难题驱动；ERRγ 为毒性受体仅作 approach-3 个案补充。高价值低先例角度：A01（DmpR 锚+门解耦）、A02（Hamilton 氢键供体酚氧）、A03（异丙叉定距几何标尺）。"
   pfbs:
     name: "全氟丁烷磺酸 PFBS"
-    brief: pending
-    angles_planned: null
+    brief: complete
+    angles_planned: 19
     attempted: 0
     passed: 0
     terminated: 0
-    status: queued
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，19 诚实可区分角度；待进 Phase B 批量方案槽）"
+    phase_a_note: "五路调研（run wf_bfd571d4-951）+ 综合（注入修复后渲染器，五路结果真正注入）；161 条经核验证据（联邦公报 NPDWR/UCMR5 全文、EPA 2022 PFBS HA 全文、EFSA 2020 全文 178 处 PFBS 抽查、Hu 2016 全文）。关键监管：EPA PFBS 终身 HA 2000 ng/L、2024 NPDWR 纳入 HI 混合物 MCL 2000 ng/L（无单项 MCL）、UCMR3 检出极低（8/4920 PWS）、EFSA 未将 PFBS 纳入 PFOA/PFOS/PFNA/PFHxS 组 TDI。两条启发式均判不够格：生物处理单元（出水 100% 检出、进出水负荷相当、前体转化反升短链 PFCA、碳吸附/离子交换对短链差）；组织富集（BCF/BAF 显著低于长链 PFSA、大鼠毒代消除最快尿排泄最高）。承重仿生源为 approach-1 机制匹配（NTCP/OAT4/GPR43-109A/NIS/ASBT/ModA 转运识别、铁载体架构、氟化物核糖开关）+ approach-2 工程难题驱动。低先例高价值角度：A05（铁载体两相捕获-回收）、A17（磺酸根 vs 羧酸根头基类型选择）、A18（氟化物核糖开关 F⁻ 传感）。PFOA 陷阱库可参照（阳离子位点对硫酸根/磷酸根非选择性、链长单调、ng/L 传质、含氟吸附剂风险、DOM 分组分、摩尔比 10⁻⁶-10⁻⁹）。"
   rox:
     name: "罗红霉素 ROX"
     brief: pending

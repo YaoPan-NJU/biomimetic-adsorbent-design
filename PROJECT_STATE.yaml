@@ -2,8 +2,8 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: multi_scheme_portfolio_recovery_and_optimization_drafts_2026_07_20
 status: in_progress
-last_completed_step: Consolidated scheme portfolio on 2026-07-20 - recovered the branch-only pH-responsive ROX capture-release scheme to the main worktree, produced four optimization design drafts (PFHxS-MI1, PFOA-oPBU1, DCP-OHP1 path A, MAC-IF1-R2) each with material design and adversarially-reviewed synthesis method, and recorded the owner electrostatic-scope relaxation plus the lysosomal acid-trapping idea in HANDOFF; all remain concept-level and no candidate reached E1
-next_action: "Pan Yao reviews the four optimization drafts and the recovered pH-responsive ROX scheme, then decides (1) whether to formalize the electrostatic-scope relaxation into SOUL, MATERIAL_SCOPE_BOUNDARY_ION_EXCHANGE and a new gate, and (2) whether a dynamic pH-switch may serve as the single primary hard correspondence; after that, per-scheme prerequisite gates proceed - PFHxS scenario contract, PFOA sulfate thin-film go/no-go, DCP environmental+prototype gates, MAC B0/M0, pH-responsive alignment to main. No procurement or experiment authorized; primary_design and backup_design remain null and PFH-1 remains terminated"
+last_completed_step: Formalized two owner decisions on 2026-07-20 into SOUL.md and new gate G32 - electrostatic attraction may be the dominant force in multi-force biomimetic adsorption, and a dynamic pH-switch may serve as the single primary hard correspondence; relaxed docs/MATERIAL_SCOPE_BOUNDARY_ION_EXCHANGE accordingly; renamed the jargon 'scenario contract' to plain 'target application scenario setting' in the user-facing design docs; and added a clean template-format ROX pH-responsive design so all five potential schemes share one format for the Zhou Jiaqi discussion
+next_action: "Both owner decisions are formalized in SOUL.md and gate G32 (electrostatic relaxation; dynamic pH-switch may be the single primary hard correspondence). Five clean per-scheme design drafts (PFHxS-MI1, ROX pH-responsive, PFOA-oPBU1, MAC-IF1-R2, DCP-OHP1 path A) are handed to Pan Yao and Zhou Jiaqi for discussion. Next per-scheme prerequisite gates before any E1 freeze: lock each target application scenario setting; PFOA sulfate thin-film go/no-go; DCP environmental and prototype gates; MAC B0/M0; ROX 0a/0b. No procurement or experiment authorized; primary_design and backup_design remain null and PFH-1 remains terminated"
 active_branch: main
 last_verified_commit: a6fdb41
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -140,16 +140,21 @@ portfolio_recovery_and_optimization_20260720:
   trigger: owner_consolidation_after_external_five_scheme_summary
   electrostatic_scope_relaxation:
     decision: electrostatic_attraction_allowed_as_one_of_several_forces_and_may_be_main_force_if_multi_force
-    formalized_in_soul_boundary_gate: false
+    formalized_in_soul_boundary_gate: true
+    formalized_gate: G32_ELECTROSTATIC_MULTIFORCE_AND_DYNAMIC_CORRESPONDENCE
     high_quality_paper_still_requires: novelty_and_causality_from_multi_force_spatial_organization_or_dynamic_switch_with_matched_charge_or_matched_IEC_controls
+  dynamic_correspondence_decision:
+    dynamic_pH_switch_accepted_as_single_primary_hard_correspondence: true
+    formalized_gate: G32_ELECTROSTATIC_MULTIFORCE_AND_DYNAMIC_CORRESPONDENCE
   recovered_scheme:
     id: ROX-PH-RESPONSIVE
     source_branches: [origin/Qwen, origin/kimi-k3]
     status: recovered_to_main_worktree_concept_level_not_E1
     prototype: FcRn_histidine_pH_switch_engineering_reversed_Igawa2010_mechanism_source_only
-    open_owner_decisions:
-      - whether_dynamic_pH_switch_can_be_single_primary_hard_correspondence
-      - full_alignment_with_main_rules_terminology_scenario_contract_tiers
+    owner_decisions_resolved:
+      - dynamic_pH_switch_accepted_as_single_primary_hard_correspondence_G32
+      - clean_template_design_added_ROX_PH_RESPONSIVE_DESIGN_md_for_discussion
+    remaining: lock_target_application_scenario_setting_and_align_main_terminology
   optimization_drafts:
     - id: PFHxS-MI1
       status: concept_valid
@@ -468,6 +473,8 @@ artifacts:
   mac_if1_r2_design: rounds/mac_if1_r2_design_1/DESIGN.md
   rox_ph_responsive_v2_design: rounds/rox_deep_design_1/ROX_PH_RESPONSIVE_V2_REVISED_DESIGN.md
   rox_ph_responsive_complete_design: rounds/rox_deep_design_1/ROX_PH_RESPONSIVE_COMPLETE_DESIGN.md
+  rox_ph_responsive_clean_design: rounds/rox_deep_design_1/ROX_PH_RESPONSIVE_DESIGN.md
+  gate_g32_electrostatic_multiforce_and_dynamic_correspondence: orchestration/gates/G32_ELECTROSTATIC_MULTIFORCE_AND_DYNAMIC_CORRESPONDENCE.yaml
   contract: research_contract.yaml
   rules: SOUL.md
   terminology: docs/TERMINOLOGY.md

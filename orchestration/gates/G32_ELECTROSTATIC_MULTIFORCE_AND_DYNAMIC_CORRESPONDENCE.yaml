@@ -1,0 +1,38 @@
+gate_id: G32_ELECTROSTATIC_MULTIFORCE_AND_DYNAMIC_CORRESPONDENCE
+date: 2026-07-20
+trigger: owner_relaxation_after_multi_scheme_portfolio_review
+status: binding_owner_decision
+supersedes_interpretation_of: G29_NON_ION_EXCHANGE_BIOMIMETIC_BOUNDARY
+electrostatic_scope_relaxation:
+  electrostatic_attraction_is_a_valid_biomimetic_force: true
+  electrostatic_may_be_the_dominant_force: true
+  condition_other_forces_present:
+    - hydrophobic
+    - pi_pi
+    - hydrogen_bond
+  novelty_and_causality_must_come_from: multi_force_spatial_organization_or_dynamic_switch
+  proof_required: matched_charge_and_matched_IEC_controls_showing_gain_beyond_ion_exchange
+  still_excluded: material_whose_entire_identity_capacity_and_paper_contribution_reduce_to_conventional_or_mixed_mode_ion_exchange_with_no_biomimetic_gain_beyond_IEC
+  quantify_with:
+    - IEC
+    - Donnan_behavior
+    - counter_ion_balance
+    - matched_charge_controls
+dynamic_correspondence_as_primary:
+  dynamic_can_be_single_primary_hard_correspondence: true
+  conditions:
+    - solves_a_selective_adsorption_problem_static_material_cannot_solve
+    - realized_in_a_non_protein_synthetic_material
+    - independently_satisfies_evidence_measurement_and_causal_control
+  example: pH_driven_capture_release_switch_ROX_PH_RESPONSIVE
+  unchanged: missing_dynamic_evidence_cannot_force_protein_or_peptide_into_material
+written_into:
+  - SOUL.md
+  - docs/MATERIAL_SCOPE_BOUNDARY_ION_EXCHANGE.md
+affects_schemes:
+  - MAC_IF1_R2_static_multi_force_now_admissible_as_scheme_not_only_control
+  - ROX_PH_RESPONSIVE_dynamic_primary_hard_correspondence_accepted
+does_not_change_disposition_of:
+  - PFH_1_terminated_still_pure_ion_exchange_resin_no_biomimetic_gain_shown
+terminology_note: environmental_scenario_contract_is_stated_in_user_facing_chinese_as_target_application_scenario_setting_locked_before_design
+next_action: align_recovered_and_optimized_schemes_and_proceed_per_scheme_prerequisite_gates

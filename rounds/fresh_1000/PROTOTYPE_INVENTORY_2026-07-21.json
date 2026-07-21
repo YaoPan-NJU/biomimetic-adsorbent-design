@@ -1,0 +1,2972 @@
+[
+ {
+  "key": "酶氧负离子穴双氢键几何",
+  "name": "酶氧负离子穴双氢键几何",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100_DCP"
+  ],
+  "note": "碰巧结合。氧负离子穴进化用于稳定酶催化过渡态（如丝氨酸蛋白酶），与氯代酚无天然底物关系，几何相似为人工类比",
+  "evidence": "无（2,6-DCP 专属性 tier none；杯芳烃主客体化学已知但无直接检验来源）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "蛋白内部空腔静态受限占位",
+  "name": "蛋白内部空腔静态受限占位",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100_DCP"
+  ],
+  "note": "碰巧结合。蛋白内腔进化用于结合天然底物或维持折叠，与氯酚无进化关系，受限占位几何为人工转译",
+  "evidence": "无（多孔有机笼尺寸筛分机制已知，氯酚异构体分离 tier none）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "肽β折叠氢键网络",
+  "name": "肽β折叠氢键网络",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100_DCP"
+  ],
+  "note": "碰巧结合。β折叠氢键进化用于蛋白结构稳定，与氯酚识别无天然关联，氢键几何为人工借用",
+  "evidence": "无（HOF 自组装已知，氯酚识别 tier none）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "短链脱氢酶活性口袋",
+  "name": "短链脱氢酶活性口袋",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100_DCP"
+  ],
+  "note": "碰巧结合。脱氢酶口袋进化用于醇/酮类天然底物催化，与氯酚无底物关系，仅借用静态受限几何",
+  "evidence": "无（脱氢酶口袋几何已知，2,6-DCP 静态转译 tier none）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "β环糊精主客体包结",
+  "name": "β-环糊精主客体包结",
+  "type": "host_guest",
+  "category": "incidental",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100_DCP"
+  ],
+  "note": "碰巧结合。环糊精为淀粉酶解天然产物，其疏水腔广谱包结芳环，非进化针对氯酚；二聚协同为人工设计扩展",
+  "evidence": "10.1023/A:1008150908997（CD-氯酚包结 NMR lead，标题与 DOI 经检索片段确认，正文未审）；10.1039/d0cc04784h（CD 聚合物选择性吸附，Crossref 验证，非 2,6-DCP 异构体区分）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "含氟药物结合微环境疏氟分配",
+  "name": "含氟药物结合微环境疏氟分配",
+  "type": "interface",
+  "category": "artificial",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100_DCP"
+  ],
+  "note": "人工筛选。天然蛋白几乎不含氟代氨基酸，含氟药物结合微环境为人工工程概念，非自然进化解决方案",
+  "evidence": "无（含氟分配已知，Cl-F 2,6 专属性 tier none）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "芳香残基π叠加",
+  "name": "芳香残基π叠加",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100_DCP"
+  ],
+  "note": "碰巧结合。芳香残基π叠加进化用于蛋白结构稳定与天然配体识别，与氯酚无进化关系",
+  "evidence": "无（给体-受体π已知，2,6-DCP 专属性 tier none）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "乙酰胆碱酯酶峡谷阳离子π",
+  "name": "乙酰胆碱酯酶峡谷阳离子-π",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100_DCP"
+  ],
+  "note": "碰巧结合。AChE 峡谷进化用于识别乙酰胆碱季铵阳离子，与中性氯酚无天然底物关系，阳离子-π机制为远距离类比",
+  "evidence": "无（阳离子-π已知，2,6-DCP 专属性与残氮机制 tier none）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "植物细胞壁木质素酚类分配",
+  "name": "植物细胞壁木质素-酚类分配",
+  "type": "nonprotein_structural",
+  "category": "incidental",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100_DCP"
+  ],
+  "note": "碰巧结合。木质素进化用于植物细胞壁结构支撑与防御，被动吸附酚类为理化巧合，非进化针对污染物去除",
+  "evidence": "无（木质素-氯酚分配为推断，2,6-DCP 专属性 tier none）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "抗体抗原形状互补",
+  "name": "抗体-抗原形状互补（分子印迹）",
+  "type": "mip_imprint",
+  "category": "artificial",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100_DCP"
+  ],
+  "note": "人工筛选。抗体-抗原识别为自然进化免疫机制，但分子印迹为人工模拟筛选，且本方案以假模板扩展，非天然进化解决氯酚问题",
+  "evidence": "10.1016/j.cej.2011.06.072（聚苯胺/硅胶 2,6-DCP 表面印迹直接先验，Crossref 验证，标题与客体吻合）；10.3390/ijms15046111（MAA-β-CD 印迹 2,4-DCP，PMC 全文验证，客体为 2,4-DCP 非 2,6-DCP）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "errγ核受体配体结合域",
+  "name": "ERRγ 核受体配体结合域（非对称单酚锚定）",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "碰巧结合——ERRγ 是孤儿核受体，BPA 为人工合成内分泌干扰物，因几何与极性模拟天然配体而碰巧结合，ERRγ 并非进化来去除 BPA",
+  "evidence": "PDB 2E2R（ERRγ LBD-BPA 复合物，KD 5.5 nM，IC50 4.9-13.1 nM，RCSB 直接核验 verified）；突变证据支持非对称单酚锚",
+  "cat2": "incidental"
+ },
+ {
+  "key": "β环糊精主客体",
+  "name": "β-环糊精主客体",
+  "type": "host_guest",
+  "category": "incidental",
+  "pollutants": [
+   "BPA",
+   "BPA；PFBS/短链 PFAS（GenX 同腔）"
+  ],
+  "n_schemes": 6,
+  "groups": [
+   "portfolio_100",
+   "历史深设计第一批：bpa1 / bpa2 / pfbs1 / pfbs2 / pfoa_deep_design_1（实为 PFBS-CD-OG1 与 PFBS-CD-GAC-v2）/ rox 深设计 + pfbs_afi_admission 准入门（2026-07-17 至 19，共 7 目录 21 个 md 文件 + 1 份同事反馈 PDF）"
+  ],
+  "note": "碰巧结合——β-CD 为淀粉酶解产物，其空腔包合芳香客体是天然主客体化学，但 BPA 为人工污染物，包合属碰巧而非进化适应",
+  "evidence": "DOI 10.1016/j.carres.2008.06.018（β-CD/BPA 水相与固态包合）；DOI 10.17576/mjas-2019-2302-01（D2O 1:1 化学计量与 Ka）；DOI 10.1016/j.reactfunctpolym.2013.04.006（β-CD-BTCA 网络容量）；DOI 10.1016/j.carbpol.2017.08.059（二芳基砜交联 113 mg/g）；DOI 10.1039/C9GC02422K（T-E-CDP）；DOI 10.1016/j.jece.2023.111570（实际废水先例）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "水相表面分子印迹",
+  "name": "水相表面分子印迹（活性炭承载）",
+  "type": "mip_imprint",
+  "category": "artificial",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——分子印迹模仿抗体-抗原形状互补但无天然进化原型，本方案 CULL 明确判定为材料技术非生物学源",
+  "evidence": "DOI 10.1021/acsami.5c03038（BPA/BPF 杂化印迹性能，类级先例）；CULL 判定 biological_prototype 实为材料技术非生物学源",
+  "cat2": "artificial"
+ },
+ {
+  "key": "杯4芳烃主客体",
+  "name": "杯[4]芳烃主客体",
+  "type": "host_guest",
+  "category": "artificial",
+  "pollutants": [
+   "BPA",
+   "PFOA"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "portfolio_100",
+   "portfolio_100/PFOA"
+  ],
+  "note": "人工筛选——杯[4]芳烃为合成大环，无天然生物对应；CULL 判定非生物源",
+  "evidence": "DOI 10.1039/d0ra05707j（杯芳烃共价聚合物综述，类级非 BPA）；BPA 专属水相包合 tier none",
+  "cat2": "artificial"
+ },
+ {
+  "key": "半共价硼酸酯印迹",
+  "name": "半共价硼酸酯印迹",
+  "type": "mip_imprint",
+  "category": "artificial",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——硼酸酯可逆共价化学为人工设计，无天然进化原型",
+  "evidence": "无（中心水相机制 tier none，化学窗口窄，control-only）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "假模板双酚类别印迹",
+  "name": "假模板双酚类别印迹",
+  "type": "mip_imprint",
+  "category": "artificial",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——假模板印迹为材料技术，无天然生物对应；CULL 判定 biological_feature 不齐",
+  "evidence": "无（BPA 专属选择性不高于类别均值，硬对应 biological_feature 不齐）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "缺电子芳环电荷转移",
+  "name": "缺电子芳环（NDI/三嗪）电荷转移",
+  "type": "other",
+  "category": "incidental",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "碰巧结合（弱）——NDI 缺电子芳环在蛋白结合口袋有类级旁证，但无直接进化原型解决 BPA 去除；水中 CT 保留性未证实",
+  "evidence": "NDI 缺电子性为 class 级（蛋白结合旁证）；酚环 CT 在水中 tier none",
+  "cat2": "incidental"
+ },
+ {
+  "key": "共价三嗪框架三嗪n氢键受体",
+  "name": "共价三嗪框架三嗪 N 氢键受体",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——三嗪 N 氢键为材料化学推断，无天然生物原型；仅有不同污染物的 DFT 类级旁证",
+  "evidence": "DOI 10.1021/acsomega.5c12928（g-C3N4 与氯代苯醌 DFT，不同污染物类级旁证）；三嗪 N 对 BPA 酚氢键 tier none",
+  "cat2": "artificial"
+ },
+ {
+  "key": "本征微孔聚合物尺寸形状门",
+  "name": "本征微孔聚合物尺寸形状门",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——扭曲骨架亚纳米微孔为材料尺寸门概念，无生物源；CULL 判定 biological_feature + source_support 不齐",
+  "evidence": "Zr-MOF 孔径门对 BPA 已检验（不同材料）；DOI 10.1039/c8ra04792h（扭曲分子超交联多孔聚合物去除微污染物）；PIM 本身 BPA 尺寸选择性为类级推断",
+  "cat2": "artificial"
+ },
+ {
+  "key": "柱6芳烃主客体",
+  "name": "柱[6]芳烃主客体",
+  "type": "host_guest",
+  "category": "artificial",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——柱[6]芳烃为合成大环，无天然生物对应；CULL 判定非生物源",
+  "evidence": "DOI 10.1021/jacs.4c03905（磺化柱[6]芳烃水相主客体，类级先例）；BPA 专属包合 tier none",
+  "cat2": "artificial"
+ },
+ {
+  "key": "hamilton型脲硫脲酚氧氢键受体",
+  "name": "Hamilton 型脲/硫脲酚氧氢键受体",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——Hamilton 脲受体为合成超分子受体，无天然进化原型；水中选择性未证实",
+  "evidence": "DOI 10.1002/open.202500120（Hamilton 型脲受体综述，类级）；水中对酚选择性 tier none",
+  "cat2": "artificial"
+ },
+ {
+  "key": "多孔有机笼定尺寸腔",
+  "name": "多孔有机笼定尺寸腔",
+  "type": "host_guest",
+  "category": "artificial",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——多孔有机笼为合成主体，无天然生物对应",
+  "evidence": "有机笼主客体为类级先例（非污染物吸附）；POC 对 BPA 尺寸包合 tier none",
+  "cat2": "artificial"
+ },
+ {
+  "key": "弱碱阴离子交换疏水混合模式",
+  "name": "弱碱阴离子交换/疏水混合模式",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——阴离子交换加疏水为纯工程机制，无任何仿生对应；CULL 明确判定无强仿生对应",
+  "evidence": "无（成熟工程机制，无仿生对应主张，原创 6 最低）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "n掺杂层级多孔碳吡啶n氢键",
+  "name": "N 掺杂层级多孔碳吡啶 N 氢键",
+  "type": "porous_carbon",
+  "category": "artificial",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——N 掺杂碳为材料工程，无天然生物原型；CULL 判定为材料机制非生物源",
+  "evidence": "DOI 10.1016/j.envres.2025.123644（N 掺杂生物炭 BPA 传感与吸附，类级先例）；吡啶 N 氢键选择性 tier none",
+  "cat2": "artificial"
+ },
+ {
+  "key": "石墨相氮化碳七嗪腔酚氢键",
+  "name": "石墨相氮化碳七嗪腔酚氢键",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——g-C3N4 为人工热缩聚材料，无天然生物原型；仅有不同污染物 DFT 旁证",
+  "evidence": "DOI 10.1021/acsomega.5c12928（g-C3N4 与氯代苯醌 DFT，不同污染物类级旁证）；七嗪 N 对 BPA 酚氢键 tier none",
+  "cat2": "artificial"
+ },
+ {
+  "key": "zrmof孔径门与悬挂酚结合链接剂",
+  "name": "Zr-MOF 孔径门与悬挂酚结合链接剂",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——Zr-MOF 孔道/链接剂/锆簇均为材料机制，无生物学受体或酶源；CULL 判定为 portfolio 内最大仿生对应缺口，须找可审计生物学类比或改写为非仿生经验路线",
+  "evidence": "DOI 10.1016/j.chemosphere.2024.143816（Zr-MOF 孔径调控增强 BPA 去除，verified）；DOI 10.1016/j.jhazmat.2026.142916（Zr-MOF 选择性吸附雌激素类）；DOI 10.1016/j.jenvman.2026.128865（UiO-66-NH2 功能化 BPA 吸附）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "碘代全氟芳烃卤键受体",
+  "name": "碘代全氟芳烃卤键受体",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——卤键受体为人工设计弱键化学，无天然进化原型；水中保留性证据不足",
+  "evidence": "无（卤键给体在低极性介质已知，水中对酚选择性无已检验先例，tier none，总分最低 59）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "β环糊精疏水浅腔主客体",
+  "name": "β-环糊精 (β-CD) 疏水浅腔主客体",
+  "type": "host_guest",
+  "category": "incidental",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "碰巧结合。β-CD 是细菌淀粉酶降解淀粉的天然环状寡糖，其疏水腔进化用于包结天然疏水客体，对 PFAS 氟碳链属碰巧包结；PFBS 结合主要依赖腔口静电，1 mM Na2SO4 下选择性失效（本组合中心反例载体）。",
+  "evidence": "DOI 10.1021/acscentsci.2c00478（direct，阳离子 β-CD 多孔聚合物 PFAS 去除与盐竞争先例）；DOI 10.1007/s10847-019-00930-w（direct，阳离子 β-CD 短链 PFAS 络合 19F NMR）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "胍基精氨酸样多点阴离子识别",
+  "name": "胍基/精氨酸样多点阴离子识别",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "是但方向冲突。胍基（精氨酸）确为自然进化出的含氧阴离子识别基元，但原生偏好四面体硫酸根（恰为待排除竞争者），对平面 PFBS 磺酸根属碰巧类比；受体被优化成硫酸根受体的反例风险已核验，PFBS 特异性未实现。",
+  "evidence": "DOI 10.1038/s41467-019-13775-1（lead，guanidinocalix[5]arene 识别 PFOS/PFOA 长链）；DOI 10.1021/acs.jpca.0c09568（direct 反证，水界面胍基结合顺序 SO4>H2PO4>NO3>NO2）；DOI 10.1080/01496395.2017.1318922（direct 反证）",
+  "cat2": "natural"
+ },
+ {
+  "key": "杯芳烃大环主客体",
+  "name": "杯芳烃大环主客体（杯[5]/杯[4]芳烃腔）",
+  "type": "host_guest",
+  "category": "artificial",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "人工筛选。杯芳烃为人工合成大环，非自然进化产物；PFBS 特异性结合 tier none，双季铵杯[4]方案仍属阳离子电静电捕获、盐敏感（重演 PFBS-1 反例）。",
+  "evidence": "DOI 10.1038/s41467-019-13775-1（lead，guanidinocalix[5]arene 对 PFOA/PFOS 识别与磁去除，仅长链非 PFBS）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "离子氟凝胶氟离子分配",
+  "name": "离子氟凝胶氟-离子分配",
+  "type": "other",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "无。无可独立归属的生物或超分子原型，属经验氟-离子分配机制；含氟单体引入自相矛盾的生命周期负担，倾向广谱 PFAS 分配而非 PFBS 优先，对照基线。",
+  "evidence": "DOI 10.1021/acsestwater.5c00681（direct，氟修饰商业树脂去除超短链/短链 PFAS，材料类近邻先例）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "表面分子印迹",
+  "name": "表面分子印迹 (MIP，仿抗体锁钥形状识别)",
+  "type": "mip_imprint",
+  "category": "artificial",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "人工筛选。MIP 为人工仿抗体形状识别，无自然进化原型；仅 PFOS-MIP 先例、无 PFBS-MIP 直接先例，且 PFBS 模板自身引入含氟泄漏负担与炭孔堵塞风险。",
+  "evidence": "DOI 10.1016/j.watres.2008.02.024（lead，壳聚糖基 MIP 选择性去除 PFOS，非 PFBS）；DOI 10.1007/s11783-009-0017-4（lead，PFOS 在 MIP 上选择性吸附，非 PFBS）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "胺化多孔碳弱碱阴离子交换超微孔协同",
+  "name": "胺化多孔碳/弱碱阴离子交换-超微孔协同",
+  "type": "porous_carbon",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "无。弱碱 IX 加超微孔为经验工程组合，无生物或超分子原型，仿生与原创性最弱，等同普通阴离子交换，普通 PFAS 吸附基线。",
+  "evidence": "DOI 10.1021/scimeetings.3c10133（lead，会议摘要）；DOI 10.1016/j.envpol.2024.124847（lead，阴离子交换树脂长/短链 PFAS 吸附解吸）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "阴离子π缺电子三嗪π壁",
+  "name": "阴离子-π 缺电子三嗪 π 壁",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "人工筛选。阴离子-π 为物理有机相互作用，直接原型是三嗪-铜络合物而非生物体系；转译为水相纯有机三嗪 POP 对 PFBS 的作用为推断，PFBS 特异性未验证。",
+  "evidence": "DOI 10.1021/ja049458h（direct，三嗪-铜轮状络合物中阴离子-π 接触约 3.15 Å，机制原型）；DOI 10.2139/ssrn.5347242（lead 预印本，氨基/三嗪超交联聚合物去除 PFCA，非 PFBS）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "方酰胺双氢键阴离子受体",
+  "name": "方酰胺双氢键阴离子受体",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "人工筛选。方酰胺为人工合成氢键受体（仿生蛋白骨架 NH 氢键基元），原型只测卤素离子、未测硫酸根/磺酸根，偏好平面 PFBS 优于硫酸根的几何判别未由原型支持；PFBS-19 失败时的族内回升候补。",
+  "evidence": "DOI 10.1021/acsomega.3c09094（direct，脂肪族对称方酰胺受体阴离子结合，机制原型；仅测 Cl/Br/I，未测硫酸根/磺酸根）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "柱5芳烃柱状腔主客体",
+  "name": "柱[5]芳烃柱状腔主客体",
+  "type": "host_guest",
+  "category": "artificial",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "人工筛选。柱芳烃为人工合成大环，非自然进化产物；PFBS 特异性结合未验证，含氟缘引入生命周期负担，因含氟负担淘汰。",
+  "evidence": "DOI 10.34133/2019/5406365（lead，非多孔自适应柱芳烃晶体固液界面去除水中环醚污染物，主客体原型）；柱[5]芳烃对 PFBS 特异性结合 tier none",
+  "cat2": "artificial"
+ },
+ {
+  "key": "葫芦7脲羰基门户主客体",
+  "name": "葫芦[7]脲 (CB[7]) 羰基门户主客体",
+  "type": "host_guest",
+  "category": "artificial",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "人工筛选。葫芦脲为人工合成甘脲大环，非自然进化产物；PFBS 特异性未验证，CB 成本与水溶性限制材料化、负载致总容量天花板，淘汰。",
+  "evidence": "DOI 10.1039/9781788015950-00040（lead，葫芦脲主客体结合中腔口门户的关键作用，原型）；葫芦脲对 PFBS 特异性结合 tier none",
+  "cat2": "artificial"
+ },
+ {
+  "key": "zrmof锆簇节点",
+  "name": "Zr-MOF 锆簇节点（开放金属位点配位/缺陷阴离子交换）",
+  "type": "other",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "无。开放金属位点配位与缺陷驱动阴离子交换均为经验机制，无独立生物原型；本质等同阴离子交换，硫酸根竞争下位点饱和、重演 PFBS-1 盐反例，PFBS 特异性 tier none。",
+  "evidence": "DOI 10.1039/d5mr00043b（lead，氟化机械化学 MOF 从水中吸附 PFAS，一般）；DOI 10.1021/acsestwater.5c00400（lead，Zr-MOF 修饰颗粒活性炭增强砷酸根吸附，攻击者经 Europe PMC 0 命中/出版商 403 未能独立核验）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "尺寸门β酮烯胺cof一维通道",
+  "name": "尺寸门 β-酮烯胺 COF 一维通道（仿生物/沸石通道）",
+  "type": "mass_transfer",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "碰巧/类比。生物通道确为自然进化出的尺寸选择传质结构，COF 窗口为结构类比而非同源；先例验证的高容量源于静电而非尺寸门，C4 专属窗口在硫酸根竞争下能否保留几何增量为待闭概念风险。",
+  "evidence": "DOI 10.1021/acsami.3c12826（direct，三维 COF 经连接键转化高容量吸附 PFAS，COF-PFAS 材料先例；攻击者核验其高容量来自二甲铵静电而非尺寸门）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "氟化聚内禀微孔聚合物本征超微孔尺寸门",
+  "name": "氟化聚内禀微孔聚合物 (PIM) 本征超微孔尺寸门",
+  "type": "other",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "无。PIM 本征微孔为经验尺寸门，无独立生物原型；PFAS 特异性未验证，含氟侧基引入生命周期负担，因含氟负担淘汰。",
+  "evidence": "DOI 10.21597/jist.725624（lead，高度氟化 PIM-2 从水相吸附苯胺，氟化 PIM-吸附原型，非 PFAS）；氟化 PIM 对 PFBS 尺寸/分配选择性 tier none",
+  "cat2": "artificial"
+ },
+ {
+  "key": "四芳基鏻阳离子磺酸根离子对多孔碳",
+  "name": "四芳基鏻阳离子-磺酸根离子对/多孔碳",
+  "type": "porous_carbon",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "无。鏻-阴离子离子对为超分子化学概念，无独立生物原型；本质为离子对 IX 变体，硫酸根竞争未排除，PFBS 特异性 tier none，鏻与季铵若无差别即坍缩为普通 IX。",
+  "evidence": "四芳基鏻阳离子-阴离子受体的水相 PFBS 选择性 tier none；DOI 10.1016/j.envpol.2024.124847（lead，仅阴离子交换树脂短链 PFAS 鏻类似物基线）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "强碱混合模式阴离子交换中孔聚合物",
+  "name": "强碱混合模式阴离子交换中孔聚合物",
+  "type": "other",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "无。混合模式 IX 为经验工程组合，无生物或超分子原型，仿生与原创性最弱，接近商业树脂，工程基线对照。",
+  "evidence": "DOI 10.1016/j.envpol.2024.124847（lead，阴离子交换树脂长/短链 PFAS 基线）；DOI 10.1021/acsestwater.5c00681（lead，氟修饰商业树脂短链 PFAS，混合模式近邻）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "碘代三唑卤键受体",
+  "name": "碘代三唑卤键受体",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "人工筛选。碘代三唑卤键给体为人工合成受体，直接原型是溶液相裂缝受体而非生物体系；水相卤键强度在二级出水中能否保留未验证，PFBS 特异性 tier none。",
+  "evidence": "DOI 10.1021/acs.orglett.5b02760（direct，碘代-1,2,3-三唑预组织裂缝型卤键阴离子受体，机制原型，Org Lett 2015）；卤键在水相对 PFBS 磺酸根特异性 tier none",
+  "cat2": "artificial"
+ },
+ {
+  "key": "芳烃全氟芳烃四极堆积",
+  "name": "芳烃-全氟芳烃四极堆积",
+  "type": "other",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "无。芳烃-全氟芳烃四极堆积为超分子物理有机机制，无生物原型；全氟芳烃壁为持久含氟单元，机制与含氟负担不可分离，对 PFAS 去除材料自相矛盾，高分但因含氟负担致命淘汰。",
+  "evidence": "DOI 10.1021/acs.cgd.5b01077（direct，咪唑盐中芳烃-全氟芳烃-阴离子堆积与氢键，机制原型）；芳烃-全氟芳烃 COF 对 PFBS C4 尾偏好 tier none",
+  "cat2": "artificial"
+ },
+ {
+  "key": "双脲刚性骨架两点氢键阴离子受体",
+  "name": "双脲刚性骨架两点氢键阴离子受体",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "人工筛选。双脲为人工合成氢键受体（仿生蛋白骨架 NH 氢键基元），原型只测 F/Ac/H2PO4、未测硫酸根/磺酸根，偏好平面 PFBS 优于四面体硫酸根的判别任何原型均未支持，存在被优化成硫酸根受体的胍基式陷阱风险。",
+  "evidence": "DOI 10.1039/d5ra04446d（direct，双脲阴离子受体结构与阴离子性质对结合亲和力/稳定性影响，机制原型；仅测 F/Ac/H2PO4，未测硫酸根/磺酸根）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "硫酸结合蛋白口袋几何仿生刚性芳烃盒",
+  "name": "硫酸结合蛋白 (SBP) 口袋几何仿生刚性芳烃盒",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100 / PFBS"
+  ],
+  "note": "是但需翻转方向。SBP 为自然进化、参与硫酸根主动转运的真实蛋白（PDB 1SBP 已核验），是全组合唯一具备经核验真实生物原型的方案，满足硬对应 1 静态；但原生高选择四面体硫酸根，方案需将同一几何重排为偏好平面 PFBS 磺酸根（即翻转原生选择方向，而硫酸根恰为待排除竞争者），此翻转为人工转译且未经验证。",
+  "evidence": "DOI 10.2210/pdb1sbp/pdb（direct，SBP 1.7 Å 精修结构与新型硫酸根结合模式，Sack 与 Quiocho，生物原型，已经攻击者经 wwPDB 核验）；人工刚性芳烃盒对 PFBS 选择性 tier none",
+  "cat2": "natural"
+ },
+ {
+  "key": "pstspbp磷酸盐结合蛋白",
+  "name": "PstS/PBP 磷酸盐结合蛋白（E. coli PstS/PBP T141D；旁证 C. perfringens PBP-1、PiBP）",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "磷酸盐（Pi）"
+  ],
+  "n_schemes": 4,
+  "groups": [
+   "round_1–round_3（早期市政二级出水轨道：磷酸盐 D1 / 克拉霉素 D2 / PFOA D3 / 硝酸盐 D4 / ODV D5；Round 2 修订与终止审计；Round 3 仅 D1-A 与 D1-B 终审）"
+  ],
+  "note": "是。PstS/PBP 是细菌磷酸盐 ABC 转运系统的底物结合蛋白，天然配体即正磷酸盐，进化目的就是在高背景阴离子中选择性捕获磷酸盐，与工程问题同构，属自然界进化出的真解决方案。",
+  "evidence": "PDB 1OIB（apo）/1IXG（磷酸根结合态，同一 E. coli PBP T141D 变体）；证据台账 P1–P4（C. perfringens PBP-1 结构、PiBP-FRET 动力学、固定化 PBP 传感先例）、E015/E016；D1B 另冻结 pelB|PBP-321(T141D/A197C)|LPETG|His6 构建体及序列 SHA-256",
+  "cat2": "natural"
+ },
+ {
+  "key": "细菌核糖体肽链出口隧道",
+  "name": "细菌核糖体肽链出口隧道（50S 出口隧道，rRNA 腺嘌呤 A2062 局部门）",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "克拉霉素"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "round_1–round_3（早期市政二级出水轨道：磷酸盐 D1 / 克拉霉素 D2 / PFOA D3 / 硝酸盐 D4 / ODV D5；Round 2 修订与终止审计；Round 3 仅 D1-A 与 D1-B 终审）"
+  ],
+  "note": "碰巧结合。核糖体出口隧道天然进化供新生肽链通过，并非为捕获克拉霉素而存在；克拉霉素作为放线菌次生代谢产物进化为靶向该隧道的抗生素（药物-靶点关系），隧道侧无捕获功能的选择压力，Round 2 已将 A2062 动态统一降级为 bound-state 局部异质性。",
+  "evidence": "OT05（克拉霉素-核糖体复合物 3.3 Å，PDB 7F0D，支持隧道占位、desosamine 锚定、A2062 双局部构象与界面水）；OT06 历史结构旁证；OT07 罗红霉素 COF 表面印迹邻近先例；OT09/OT10 响应壳层与 QCM-D 读出",
+  "cat2": "incidental"
+ },
+ {
+  "key": "hlfabp人肝脂肪酸结合蛋白",
+  "name": "hL-FABP 人肝脂肪酸结合蛋白",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "PFOA",
+   "PFOA / 长链 PFCA"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1",
+   "round_1–round_3（早期市政二级出水轨道：磷酸盐 D1 / 克拉霉素 D2 / PFOA D3 / 硝酸盐 D4 / ODV D5；Round 2 修订与终止审计；Round 3 仅 D1-A 与 D1-B 终审）"
+  ],
+  "note": "碰巧结合。FABP 进化用于结合与转运天然脂肪酸（油酸等），PFOA 作为全氟脂肪酸类似物碰巧进入同一疏水口袋，且天然链长偏好偏向 PFNA/PFDA，不利于 PFOA 专属识别；方案自身亦将门户动态证据限定为油酸邻近体系。",
+  "evidence": "OT11（PFOA/PFNA-hL-FABP 结合，Asn111 替换损失亲和、Arg122 替换改变化学计量）；OT12（油酸体系 portal/gap 局部迁移率，明确否定整体构象变化）；OT13（C4–C11 PFCA 链长亲和趋势）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "nrta硝酸盐转运受体蛋白",
+  "name": "NrtA 硝酸盐转运受体蛋白（蓝细菌硝酸盐 ABC 转运底物结合蛋白）",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "硝酸盐（NO3⁻）"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "round_1–round_3（早期市政二级出水轨道：磷酸盐 D1 / 克拉霉素 D2 / PFOA D3 / 硝酸盐 D4 / ODV D5；Round 2 修订与终止审计；Round 3 仅 D1-A 与 D1-B 终审）"
+  ],
+  "note": "是（静态识别层面）。NrtA 是蓝细菌硝酸盐吸收系统的底物结合蛋白，天然配体即硝酸根，进化目的就是从高背景阴离子中捕获硝酸盐，属真进化解决方案；但项目可用的仅有结合态结构，动态闭合无实验 apo/bound 构象证据，该缺口正是方案终止原因。",
+  "evidence": "PDB 2G29（1.5 Å 硝酸根结合态 NrtA，支持 C-clamp 与被包围口袋、K269 锚定）；K269A 浓度依赖 DSF 与水相 ITC（证据 N1/N2，无实验 apo 结构，apo 重排仅来自去配体 MD）；N3 三脲受体与 N4 季铵盐电极为人工基准非生物原型",
+  "cat2": "natural"
+ },
+ {
+  "key": "hsert人血清素转运体",
+  "name": "hSERT 人血清素转运体（中央结合位点与 Na⁺/Cl⁻ 依赖外向开放态）",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "ODV（O-去甲基文拉法辛）"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "round_1–round_3（早期市政二级出水轨道：磷酸盐 D1 / 克拉霉素 D2 / PFOA D3 / 硝酸盐 D4 / ODV D5；Round 2 修订与终止审计；Round 3 仅 D1-A 与 D1-B 终审）"
+  ],
+  "note": "碰巧结合。SERT 进化用于血清素再摄取，ODV 作为 SNRI 活性代谢物在药物-靶点意义上占据中央位点，非自然捕获机制；且证据仅有功能性结合，无 ODV 位姿、残基接触或目标诱导构象，离子门控为纯工程类比。",
+  "evidence": "OT01（ODV-hSERT 竞争结合与摄取实验，无 ODV 位姿/残基图）；OT02/OT03（其他抗抑郁药占据中央位点并稳定 outward-open 的结构）；E008（SERT 的 Na⁺/Cl⁻ 依赖与外向开放态边界）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "sortasealpxtg转肽定向固定",
+  "name": "Sortase A LPXTG 转肽定向固定（金黄色葡萄球菌 sortase A 介导的细胞壁锚定机制）",
+  "type": "immobilization",
+  "category": "natural",
+  "pollutants": [
+   "磷酸盐（Pi，作为 D1-B 蛋白吸附床的固定化机制）"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "round_1–round_3（早期市政二级出水轨道：磷酸盐 D1 / 克拉霉素 D2 / PFOA D3 / 硝酸盐 D4 / ODV D5；Round 2 修订与终止审计；Round 3 仅 D1-A 与 D1-B 终审）"
+  ],
+  "note": "是。Sortase 天然进化功能即把表面蛋白共价锚定到细胞壁，与「将识别蛋白稳定固定于载体表面」的工程问题同构，属真进化解决方案；方案本身亦声明固定方式不自动带来取向增量，须由 B-BLANK/B-INACT 等对照验证。",
+  "evidence": "D1B_FINAL 第 4.4 节（S. aureus sortase A Δ59-His6 身份门 SORTASE-ID-01、转肽/水解摩尔比≥10、跨结点肽 LC-MS/MS 检出、8 M 尿素共价保留≥90%）；无独立文献证据编号",
+  "cat2": "natural"
+ },
+ {
+  "key": "hlfabp肝脂肪酸结合蛋白",
+  "name": "hL-FABP 肝脂肪酸结合蛋白",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "top5_round_1-3"
+  ],
+  "note": "碰巧结合。hL-FABP 进化用于结合天然长链脂肪酸（油酸等），PFOA 作为全氟羧酸类似物碰巧进入同一疏水口袋并被头基残基定位；属脂肪酸类似物的偶然识别，非 FABP 进化靶向的污染物",
+  "evidence": "hL-FABP 与 PFOA/PFNA 结合及 PFAA 链长依赖（冻结证据核验）；Asn111/Arg122 残基贡献（突变/结构数据）；无 PDB ID 明确给出，但引用 hL-FABP 晶体结构与配体结合文献",
+  "cat2": "incidental"
+ },
+ {
+  "key": "ilbp家族portal局部动态",
+  "name": "iLBP 家族 portal 局部动态",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "top5_round_1-3"
+  ],
+  "note": "碰巧结合。iLBP portal 动态是天然脂质结合/释放机制的组成部分，但将其转译为 PFAS 选择性门控属人工设计映射；无 PFOA 特异诱导该 portal 运动的直接证据，Round 3 终审因动态特征未具体化（未指定特定 iLBP、残基区段和构象坐标）而终止",
+  "evidence": "iLBP 家族 portal 区域 apo/holo 动力学差异（冻结动态审计，邻近家族证据）；无单一 PDB ID，属家族级比较证据",
+  "cat2": "incidental"
+ },
+ {
+  "key": "hsa人血清白蛋白",
+  "name": "HSA 人血清白蛋白",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "HFPO-DA (GenX) / PFBS / PFHxS / PFOS",
+   "PFOA"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "portfolio_100/PFOA",
+   "top5_round_1-3"
+  ],
+  "note": "碰巧结合。HSA 进化为血浆多配体转运蛋白（脂肪酸、胆红素、药物等），PFAS 和 GenX 作为脂肪酸/表面活性剂结构类似物碰巧占据其结合位点；非 HSA 进化靶向的环境污染物。S3 因 7Z57 三元复合物依赖 myristate 共占位、静态原型未闭合而终止；S4 因 Arg410 仅为对接解释、无目标诱导动态而降级为工程对照",
+  "evidence": "PDB 7Z57（hSA-HFPO-DA-myristate 三元复合物，S3）；HSA-PFBS/PFHxS/PFOS 链长依赖结合及 Arg410/Asn391/Tyr411 对接模型（S4，对接解释而非晶体学直接接触）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "errγ雌激素相关受体γ",
+  "name": "ERRγ 雌激素相关受体 γ",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1",
+   "top5_round_1-3",
+   "历史深设计第一批：bpa1 / bpa2 / pfbs1 / pfbs2 / pfoa_deep_design_1（实为 PFBS-CD-OG1 与 PFBS-CD-GAC-v2）/ rox 深设计 + pfbs_afi_admission 准入门（2026-07-17 至 19，共 7 目录 21 个 md 文件 + 1 份同事反馈 PDF）"
+  ],
+  "note": "碰巧结合。ERRγ 进化结合内源性配体（胆固醇代谢物、磷脂酸等），BPA 作为内分泌干扰物碰巧适配其结合口袋的几何与极性要求；属环境污染物与核受体的偶然相互作用，非共进化靶向。静态映射为五案中最清楚者，但无 BPA 诱导开-闭构象转换的成对结构，动态硬对应不成立",
+  "evidence": "PDB 2E2R（ERRγ LBD-BPA 复合物，1.60 Å 分辨率，~5.5 nM 结合强度）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "23srrna肽出口隧道",
+  "name": "23S rRNA 肽出口隧道（NPET）",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "罗红霉素"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "top5_round_1-3"
+  ],
+  "note": "碰巧结合（天然共进化但水处理应用为人工映射）。大环内酯抗生素为微生物天然产物，进化靶向细菌核糖体 NPET 以抑制蛋白合成，NPET-大环内酯结合是自然共进化结果；但将 rRNA 受限通道转译为水相选择性吸附材料属人工设计映射，且 1JZZ 分辨率有限、罗红霉素专属接触图不完整，Round 2 终止仿生候选身份",
+  "evidence": "PDB 1JZZ（罗红霉素-50S 核糖体亚基复合物）；A2058/A2059 经典邻近位点；A2062/A2503 重排属相关大环内酯/物种依赖证据，不能归因于罗红霉素单独结合",
+  "cat2": "incidental"
+ },
+ {
+  "key": "抗原抗体锁钥形状识别",
+  "name": "抗原抗体锁钥形状识别（分子印迹/人工抗体）",
+  "type": "mip_imprint",
+  "category": "artificial",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "自然原型存在（抗体锁钥为免疫系统进化出的外源分子特异结合方案）；但分子印迹为人工转译，ROX 伪模板/大环内酯类别印迹属人工筛选，且印迹轮廓为红霉素/克拉霉素共享、不具 ROX 专一性",
+  "evidence": "Ding 2016 J Chromatogr B DOI 10.1016/j.jchromb.2015.08.001；Song 2019 Polymers DOI 10.3390/polym11071109；Ji 2018 Mikrochim Acta DOI 10.1007/s00604-018-2728-3；2026 DES-COF-MIP 先例经 PubMed 未确认（tier none）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "细菌50s核糖体新生肽出口隧道",
+  "name": "细菌 50S 核糖体新生肽出口隧道（NPET）",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "碰巧结合——核糖体出口隧道进化用于新生肽穿隧道，大环内酯结合是抗生素利用保守细菌结构的抑制性结合，非进化来解决大环内酯去除；且 14 元环为红霉素/克拉霉素共享，狭缝对同类无区分",
+  "evidence": "Wikipedia Macrolide antibiotic（tier secondary）；狭缝几何在水中对 ROX 的选择性未验证（tier none）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "γ环糊精双腔二聚夹持",
+  "name": "γ-环糊精双腔二聚夹持（主客体）",
+  "type": "host_guest",
+  "category": "natural",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "自然原型存在（γ-CD 为酶解淀粉天然环寡糖，主客体包结为天然大环主体能力）；但针对 ROX 的定距二聚夹持为人工设计，大环疏水面与酸站为红霉素共享",
+  "evidence": "Kawano 2014 Environ Sci Technol DOI 10.1021/es501243v（γ-CD 聚合物容纳大体积客体）；γ-CD 二聚对 ROX 的协同增量未验证（tier none）",
+  "cat2": "natural_hostguest"
+ },
+ {
+  "key": "羧基化微孔碳混合模式",
+  "name": "羧基化微孔碳混合模式",
+  "type": "porous_carbon",
+  "category": "natural",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "非仿生——无自然进化原型，工程碳吸附基准",
+  "evidence": "ROX 在城市污水厂出水检出 DOI 10.1007/s11356-023-25202-6；碳材料广谱吸附大环内酯综述未独立验证（tier none）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "酶活性位点定向氢键识别",
+  "name": "酶活性位点定向氢键识别（定距极性站）",
+  "type": "protein",
+  "category": "artificial",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "自然原型存在（酶活性位点定向氢键为进化出的底物特异结合方案）；但自然界无酶进化来结合 ROX 肟醚，肟醚为药物官能团，受体为人工筛选/借喻；ROX-6 与 ROX-13 属同机制双支架，深设计须二选一",
+  "evidence": "Wikipedia Roxithromycin；DOI 10.1007/s11356-023-25202-6；Chen 2022 ChemSusChem DOI 10.1002/cssc.202201824（酮烯胺 COF 水稳，本轮未独立再确认）；脲/酰胺在中性水中对肟氮氢键强度未量化（tier none）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "金属酶开放金属位配位识别",
+  "name": "金属酶开放金属位配位识别",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "自然原型存在（金属酶开放金属位配位为进化方案）；但肟氮铜配位借喻小分子肟-铜配合物先例，自然界无金属酶进化来结合 ROX，属人工借喻/碰巧配位；HKUST-1 型铜 MOF 水稳差、铜溶出风险",
+  "evidence": "Ozdemir 2006 Acta Crystallogr C DOI 10.1107/S010827010601969X；Buvailo 2010 Dalton Trans DOI 10.1039/c0dt00008f（均经 PubMed 独立确认 O-甲肟氮配位铜）；Kanderal 2005 Dalton Trans DOI 10.1039/b418598f（未再确认）；Cheng 2021 J Colloid Interface Sci DOI 10.1016/j.jcis.2020.10.090（泰乐菌素 MOF 类比）",
+  "cat2": "natural"
+ },
+ {
+  "key": "柱芳烃穿链主客体",
+  "name": "柱芳烃穿链主客体（轮烷/索烃类大环穿链）",
+  "type": "host_guest",
+  "category": "artificial",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——柱芳烃为合成大环（2008 年人工合成），非自然进化原型；穿链包结图式虽存在于轮烷/索烃类，柱芳烃本身及 ROX 侧链穿链为人工设计",
+  "evidence": "Zhang 2018 Chem Soc Rev DOI 10.1039/c8cs00037a；Yu 2019 Theranostics DOI 10.7150/thno.31653；柱芳烃穿入 ROX 肟醚侧链未验证（tier none）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "氮杂冠醚铵主客体",
+  "name": "氮杂冠醚铵主客体",
+  "type": "host_guest",
+  "category": "artificial",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——冠醚为合成大环（Pedersen 人工合成），非自然原型；通用铵阳离子主客体非 ROX 特异",
+  "evidence": "冠醚-质子化胺主客体为教科书知识（tier none）；Wikipedia Roxithromycin",
+  "cat2": "artificial"
+ },
+ {
+  "key": "葫芦脲阳离子主客体",
+  "name": "葫芦脲阳离子主客体",
+  "type": "host_guest",
+  "category": "artificial",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——葫芦脲为合成大环，非自然原型；通用阳离子主客体非 ROX 特异",
+  "evidence": "Rodell 2015 Bioconjugate Chem DOI 10.1021/acs.bioconjchem.5b00483；葫芦 7 脲对阳离子客体高亲和及 ROX 质子化胺作客体均未量化验证（tier none）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "杯芳烃腔缘氢键双识别",
+  "name": "杯芳烃腔-缘氢键双识别",
+  "type": "host_guest",
+  "category": "artificial",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——杯芳烃为合成大环，非自然原型；肟氢键部分与 ROX-6/13 同机制、更贵支架，属冗余变体",
+  "evidence": "Srinivasan 2025 Crit Rev Anal Chem（PubMed 检索可见，tier secondary）；杯芳烃腔尺寸与 ROX 匹配、肟醚氢键识别均未验证（tier none）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "苯硼酸顺式二醇可逆共价",
+  "name": "苯硼酸-顺式二醇可逆共价（硼酸酯，借喻糖识别）",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——硼酸-顺式二醇可逆共价为人工化学机制（可类比凝集素糖识别但苯硼酸本身为合成），非自然原型，类别非专一",
+  "evidence": "Zhao 2024 Langmuir 40(3):1884 PMID 38190755；Díaz de Greñu 2021 ChemSusChem 14(1):208 PMID 32871058；ROX 苷元顺式二醇为结构推断（tier inferred）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "富电子芳环阴离子πchπ弱作用",
+  "name": "富电子芳环阴离子-π/CH-π 弱作用",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "非仿生——无自然原型，ROX 无芳香环，水中弱 π 极可能被疏水分配掩盖，人工机制",
+  "evidence": "Yang 2024 Chem Sci DOI 10.1039/d4sc05329j（类比但非 π 选择性主张）；阴离子-π/CH-π 在水中对肟基作用未验证（tier none）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "14元环尺寸筛",
+  "name": "14 元环尺寸筛（几何门）",
+  "type": "other",
+  "category": "natural",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "非仿生/人工设计——尺寸筛为工程对应（可类比生物膜通道尺寸选择但方案不主张），14 元为同类共享，对同类 14 元无区分",
+  "evidence": "Zhang 2026 J Chromatogr A DOI 10.1016/j.chroma.2026.467014；超微孔匹配大环 footprint 为推断（tier inferred）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "弱阳离子交换加反相混合模式",
+  "name": "弱阳离子交换加反相混合模式",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "非仿生——纯工程离子交换，无自然原型，自设停止门承认退化为普通阳离子交换",
+  "evidence": "阳离子大环内酯酸性树脂交换为推断（tier none）；DOI 10.1007/s11356-023-25202-6",
+  "cat2": "artificial"
+ },
+ {
+  "key": "多孔有机笼腔包结",
+  "name": "多孔有机笼腔包结（POC）",
+  "type": "host_guest",
+  "category": "artificial",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——合成多孔有机笼，非自然原型；笼腔小、ROX 大分子整体包结几何未冻结",
+  "evidence": "多孔有机笼可溶液加工成多孔固体为教科书知识（tier inferred）；亚胺笼腔包结 ROX 肟醚侧链未验证（tier none）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "共价三嗪框架微孔加磷酸根离子交换",
+  "name": "共价三嗪框架微孔加磷酸根离子交换",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "非仿生——CTF 微孔加离子交换为非仿生混合模式，无自然原型",
+  "evidence": "Yang 2024 Chem Sci DOI 10.1039/d4sc05329j（类比）；CTF 微孔阳离子交换大环内酯未验证（tier none）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "有机黏土阴离子表面活性剂层间插层",
+  "name": "有机黏土阴离子表面活性剂层间插层",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "非仿生——插层为工程，无自然原型；无机黏土重质载体须按总干质量报告",
+  "evidence": "Saitoh 2016 J Hazard Mater DOI 10.1016/j.jhazmat.2016.06.003（DDAB 改性蒙脱石去除 β-内酰胺）；有机黏土吸附阳离子大环内酯为推断（tier inferred）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "木质素衍生氮掺杂多孔碳",
+  "name": "木质素衍生氮掺杂多孔碳",
+  "type": "porous_carbon",
+  "category": "natural",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "非仿生——木质素为生物衍生聚合物但碳化活化为工程非仿生，无自然进化原型，按人工碳类处理",
+  "evidence": "Li 2025 Langmuir DOI 10.1021/acs.langmuir.5c04318；Chen 2022 Environ Sci Pollut Res DOI 10.1007/s11356-022-20045-z；Tian 2023 Environ Sci Pollut Res DOI 10.1007/s11356-022-23077-7；木质素碳吸附大环内酯未验证（tier none）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "fabp4脂肪酸结合蛋白双位点口袋",
+  "name": "FABP4 脂肪酸结合蛋白双位点口袋",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "碰巧结合——FABP4 进化来结合脂肪酸，PFOA 作为脂肪酸结构类似物被碰巧结合（框架明示 FABP/HSA 对 PFAS 属脂肪酸类似物碰巧结合），支持的是 PFAS 识别窗口而非 PFOA 单分子专属；非肽受体几何未冻结而暂停",
+  "evidence": "PDB 9MIW（FABP4-PFOA 共晶双位点占位，tier-1）；apo 9OB7 对照",
+  "cat2": "incidental"
+ },
+ {
+  "key": "β环糊精阳离子缘主客体",
+  "name": "β-环糊精阳离子缘主客体",
+  "type": "host_guest",
+  "category": "natural",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "自然原型存在（β-CD 为天然环寡糖、主客体包结天然）；但 PFOA 氟碳链包结为疏水腔碰巧契合，阳离子缘为人工设计，真正机制可能是阳离子/交联剂而非腔体主客体",
+  "evidence": "β-CD/PFOA 主客体及 DFB-β-CD 聚合物 tier-1 先例（RANKING 概要级，未列具体 DOI）",
+  "cat2": "natural_hostguest"
+ },
+ {
+  "key": "定向氢键通道",
+  "name": "定向氢键通道（脲/酰胺读取羧酸头基）",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工设计——非生物合成骨架，定向氢键识别概念借喻蛋白头基锚定，无具体自然原型；水中氢键被屏蔽或 DOM 堵孔为停止门",
+  "evidence": "COF 用于 PFAS 与脲/酰胺氢键识别羧酸两条线索均 tier none",
+  "cat2": "artificial"
+ },
+ {
+  "key": "pfoa伪模板分子印迹",
+  "name": "PFOA 伪模板分子印迹（人工抗体）",
+  "type": "mip_imprint",
+  "category": "artificial",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——分子印迹为人工抗体概念转译，伪模板人工筛选，无自然原型",
+  "evidence": "PFOS 表面印迹 tier-1 先例；PFOA 伪模板专属研究 tier none（只能声称类别捕获）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "全氟碘代卤键脲氢键正交双识别",
+  "name": "全氟碘代卤键-脲氢键正交双识别",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选——卤键在自然进化中罕见（仅部分卤代天然产物-酶作用），全氟碘代-脲正交识别为人工机制设计",
+  "evidence": "水中阴离子卤键已证；中性 2,6-DCP 邻位 Cl 卤键未证且不可等价（tier none，高概率触停门）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "硼酸酯可逆共价预组织",
+  "name": "硼酸酯可逆共价预组织（模板锁定几何）",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工筛选（非生物原型）——化学预组织，残留几何腔在中性水中是否保留 2,6 选择性存疑",
+  "evidence": "化学依据为硼酸酯可逆共价而非生物原型；2,6-DCP 预组织专属性 tier none",
+  "cat2": "artificial"
+ },
+ {
+  "key": "β环糊精二聚协同夹持",
+  "name": "β-环糊精二聚协同夹持（氯酚包结）",
+  "type": "host_guest",
+  "category": "natural",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "自然原型存在（β-CD 天然环寡糖、包结天然）；但针对 2,6-DCP 的定距二聚协同为人工设计，二聚协同是否真区分异构体未证",
+  "evidence": "CD-氯酚包结 NMR lead DOI 10.1023/A:1008150908997；CD 聚合物选择性吸附 DOI 10.1039/d0cc04784h（verified）；2,6-DCP 二聚协同 tier none",
+  "cat2": "natural_hostguest"
+ },
+ {
+  "key": "errγ核受体双酚a识别",
+  "name": "ERRγ 核受体双酚 A 识别（静态夹持/单酚锚定）",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "碰巧结合——ERRγ 进化来结合内源配体，BPA 作为环境雌激素模拟内源配体碰巧结合（内分泌干扰物分子模拟）；BPA-1 受体未冻结、experiment-gated",
+  "evidence": "PDB 2E2R（ERRγ 配体结合域与双酚 A，1.60 Å，Matsushima 等 2007 J Biochem，经 RCSB 复核为真，hard 级）；BPA-1 单酚锚水相增量 tier none（P1 门未过）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "尺寸门β酮烯胺cof通道",
+  "name": "尺寸门 β-酮烯胺 COF 通道（几何筛）",
+  "type": "other",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "人工设计——几何尺寸门为人工设计，无直接自然原型（可类比生物膜通道尺寸选择但方案不主张）；几何增量是否独立于壁面电荷待证",
+  "evidence": "Zeppuhar 等 ACS AMI 2023 DOI 10.1021/acsami.3c12826（3D COF-PFAS 先例，Crossref 标题核验为真；其 PFOA 约 250 mg/g 容量属二甲铵阳离子静电的归属本轮 403 未再确认）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "zrmof孔道锆簇",
+  "name": "Zr-MOF 孔道/锆簇（误标仿生）",
+  "type": "other",
+  "category": "natural",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100"
+  ],
+  "note": "非仿生——原型字段实为材料机制，无生物受体/酶源，按硬对应规则须诚实改写为非仿生经验路线",
+  "evidence": "无（RANKING 概要级，须按硬对应规则改写为非仿生经验路线并登记合约偏离）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "fabp4脂肪酸结合蛋白",
+  "name": "FABP4 脂肪酸结合蛋白",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "portfolio_100/PFOA"
+  ],
+  "note": "碰巧结合。FABP4 进化用于结合/转运脂肪酸，PFOA 等 PFAS 以羧酸头基加疏水链的脂肪酸类似物身份碰巧结合，非自然界针对 PFAS 污染进化出的解决方案。",
+  "evidence": "PDB 9MIW/9OB7/9MIZ/9MP2（tier 1）；Birchfield 等 FABP4-PFAS JACS Au 2025，10.1021/jacsau.5c00504（tier 1，仓库 REOPENED_PROTOTYPE_SEARCH 已核查）；S11 Gate 1a PASS、Gate 1b PENDING（rounds/prototype_reopen_1/GATE1_REVIEW_2.md）。",
+  "cat2": "incidental"
+ },
+ {
+  "key": "βγ环糊精主客体",
+  "name": "β/γ-环糊精主客体",
+  "type": "host_guest",
+  "category": "incidental",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "portfolio_100/PFOA"
+  ],
+  "note": "碰巧结合。环糊精为淀粉酶解产物，其疏水腔天然包合疏水分子，PFOA 进入为碰巧主客体；环糊精非为结合 PFAS 进化出的天然受体，阳离子缘与腔深调谐均为人工设计。",
+  "evidence": "DFB-β-CD 聚合物 JACS 2017，10.1021/jacs.7b02381（tier 1）；β-CD/PFOA 主客体 Chem Res Toxicol 2018，10.1021/acs.chemrestox.8b00002（tier 1）；CD2 腔深链长匹配机制无目标专属核查来源（tier none）。",
+  "cat2": "incidental"
+ },
+ {
+  "key": "pparγ过氧化物酶体增殖物激活受体γ",
+  "name": "PPARγ 过氧化物酶体增殖物激活受体 γ（LBD 多位点）",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100/PFOA"
+  ],
+  "note": "碰巧结合。PPARγ 进化为脂肪酸/脂质核受体，PFOA 以脂肪酸类似物身份碰巧作部分激动剂结合，非自然界针对 PFAS 进化出的解决方案。",
+  "evidence": "Pederick 等 PFOA-PPARγ Chemosphere 2024，10.1016/j.chemosphere.2024.141723（tier 1，仓库 REOPENED_PROTOTYPE_SEARCH 已核查）；Helix 12 动态主张明确禁用。",
+  "cat2": "incidental"
+ },
+ {
+  "key": "分子印迹",
+  "name": "分子印迹（抗体/酶锁钥识别仿效）",
+  "type": "mip_imprint",
+  "category": "artificial",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "portfolio_100/PFOA"
+  ],
+  "note": "人工筛选。仿效天然锁钥识别但经人工聚合与筛选获得，天然原型（抗体/酶）非为 PFOA 进化；FMIP 的氟-氟亲和为人为引入，无自然对应。",
+  "evidence": "Guo PFOS 表面印迹 J Hazard Mater 2018，10.1016/j.jhazmat.2018.01.018（tier 1）；PFOA 伪模板与含氟单体专属组合、活性炭承载 PFOA 薄层均无本会话核查来源（tier none）。",
+  "cat2": "artificial"
+ },
+ {
+  "key": "多孔碳活性炭",
+  "name": "多孔碳/活性炭",
+  "type": "porous_carbon",
+  "category": "artificial",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "portfolio_100/PFOA"
+  ],
+  "note": "人工筛选/工程基准。多孔碳为人工材料，无自然进化原型，仿生主张弱；攻击裁决将 PC1/PC2 明确列入「仿生主张弱、退化为工程基准」剔除组。",
+  "evidence": "多孔碳 PFAS 吸附与胺化多孔碳混合模式均为已知工程类别（tier none）；超微孔 C8 尺寸门与 PFOA 专属胺化调谐均无目标专属核查来源（tier none）。",
+  "cat2": "artificial"
+ },
+ {
+  "key": "定向脲酰胺氢键受体",
+  "name": "定向脲/酰胺氢键受体（蛋白氢键供体仿效）",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "portfolio_100/PFOA"
+  ],
+  "note": "人工筛选。仿效蛋白氢键识别但为人工合成受体，无自然原型为 PFOA 进化；攻击裁决指出低极性通道设计由 COF 更完整覆盖，水中氢键被水分子竞争削弱为停止门。",
+  "evidence": "脲-羧酸氢键为已知有机化学原理（tier none）；COF 用于 PFAS 去除与 PFOA 专属双脲网络均无仓库核查来源（tier none）。",
+  "cat2": "artificial"
+ },
+ {
+  "key": "氟氟亲和受体",
+  "name": "氟-氟（全氟）亲和受体",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 5,
+  "groups": [
+   "portfolio_100/PFOA"
+  ],
+  "note": "人工筛选（无自然原型）。氟-氟亲和为人造含氟化学相互作用，PFAS 为人为污染物，自然界未进化出氟结合原型；含氟单体浸出还会造成材料自身 PFAS 负担。",
+  "evidence": "含氟 PAF、CTF-PFAS、离子氟凝胶、全氟芳烃-全氟烷基相互作用均无仓库核查来源（全部 tier none）。",
+  "cat2": "artificial"
+ },
+ {
+  "key": "离子交换阴离子捕获位",
+  "name": "离子交换阴离子捕获位",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "portfolio_100/PFOA"
+  ],
+  "note": "人工筛选/工程基准。离子交换为成熟工程机制，无自然进化原型；攻击裁决明确其停止门即「等同普通阴离子交换即失败/降为工程基准」。",
+  "evidence": "咪唑鎓/胺离子交换聚合物为已知类别（tier none）；PFOA 专属调谐无核查来源（tier none）。",
+  "cat2": "artificial"
+ },
+ {
+  "key": "尺寸形状长度门",
+  "name": "尺寸/形状长度门",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_100/PFOA"
+  ],
+  "note": "人工筛选。物理筛分无特定自然进化原型（生物尺寸选择通道如离子通道虽存在，但本方案未引用），水相中易被 DOM 与表面分配掩蔽。",
+  "evidence": "长度选择性分离为已知原理（tier none）；PFOA 专属长度门无核查来源（tier none）。",
+  "cat2": "artificial"
+ },
+ {
+  "key": "β环糊精βcd主客体腔",
+  "name": "β-环糊精 β-CD 主客体腔（含阳离子浅腔/孔口极性站/氨基碳接枝变体）",
+  "type": "host_guest",
+  "category": "incidental",
+  "pollutants": [
+   "BPA / PFBS / 2,6-DCP"
+  ],
+  "n_schemes": 4,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "碰巧结合/人工筛选：环糊精是 CGT 酶作用于淀粉的酶法环状低聚糖，生物来源为淀粉代谢，BPA/PFBS/氯酚包结属碰巧主客体，亲和力天花板（100% CD 约 2.2×10³ L/kg）已判 PFBS-CD-GAC-v2 终止。",
+  "evidence": "DOI 10.1098/rsos.201604（β-CD/MAA BPA 印迹水相先例）、10.1021/acscentsci.2c00478（阳离子 β-CD 多孔聚合物 PFAS 去除，短链盐敏感）；β-CD 对甲苯磺酸根 Ka 10²–10³ 对硫酸根近零（Rekharsky-Inoue 汇编）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "杯4芳烃主客体腔",
+  "name": "杯[4]芳烃主客体腔（中上缘双功能化）",
+  "type": "host_guest",
+  "category": "artificial",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "人工筛选：杯芳烃为人工合成大环，自然界不存在，BPA 识别为人工受体设计。",
+  "evidence": "无（方案未给直接先例，设可溶受体门）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "γ环糊精二聚夹持网络",
+  "name": "γ-环糊精二聚夹持网络",
+  "type": "host_guest",
+  "category": "incidental",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "碰巧结合/人工筛选：γ-CD 同为酶法环状低聚糖，二聚定距夹持为人工超分子设计，ROX 包结属碰巧主客体。",
+  "evidence": "无（协同增量待可溶模型证明）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "血清白蛋白pfsa结合口袋",
+  "name": "血清白蛋白 PFSA 结合口袋（磺酸头基+有限低极性链槽）",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "碰巧结合：白蛋白天然功能为脂肪酸转运与渗透维持，PFSA 作为脂肪酸类似物碰巧结合，无 PFBS 专属进化口袋；不能指定残基。",
+  "evidence": "DOI 10.1093/toxsci/kfae028（白蛋白 PFSA 链长效应）；台账 E056/E058/E059（阳离子/胍基路线 1 mM 硫酸盐中 94%→38% 判死）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "分子印迹mip",
+  "name": "分子印迹 MIP（水相表面印迹/假模板类别印迹/半共价硼酸酯/聚苯胺印迹）",
+  "type": "mip_imprint",
+  "category": "artificial",
+  "pollutants": [
+   "BPA / PFBS / ROX / 2,6-DCP"
+  ],
+  "n_schemes": 6,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "人工筛选：分子印迹为人工聚合技术，无自然进化对应；PFBS-4 因模板泄漏在短链轮剔除。",
+  "evidence": "DOI 10.1098/rsos.201604、10.1002/jssc.201900957（BPA MIP）；10.1016/j.scp.2026.102500（2026 DES–COF 表面印迹 ROX，64.58 mg/g、IF 2.40）；10.3390/polym11071109（假模板大环内酯类印迹整体柱）；10.16085/j.issn.1000-6613.2016.04.031（ROX 硅胶 MIP，ROX/红霉素分离因子仅 1.21）；10.1016/j.cej.2011.06.072（聚苯胺/硅胶 2,6-DCP MIP）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "核糖体新生肽出口隧道npet",
+  "name": "核糖体新生肽出口隧道 NPET（静态受限狭缝）",
+  "type": "mass_transfer",
+  "category": "natural",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "是（共进化结合）：大环内酯是与细菌共进化的次级代谢产物，天然占据 NPET 抑制翻译；吸附方案是对该天然进化受限几何的二次利用，而非核糖体进化来去除水中 ROX。",
+  "evidence": "PDB 1JZZ（仅支持受限出口隧道占位，不支持 ROX 专属摆门）；DOI 10.1124/mol.63.3.617（14 元大环内酯竞争核糖体位点及结合动力学）",
+  "cat2": "natural"
+ },
+ {
+  "key": "fabp4脂肪酸结合蛋白4",
+  "name": "FABP4 脂肪酸结合蛋白4（主/次双位点 + Phe57 局部门；H4 门区静态门闩锚）",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "PFOA / PFBS"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "碰巧结合：FABP4 天然功能为细胞内脂肪酸转运与脂质信号，PFAS 作为脂肪酸类似物碰巧结合主/次位点且广谱，非进化针对 PFAS（框架注明 FABP/HSA 对 PFAS 属脂肪酸类似物碰巧结合）。",
+  "evidence": "DOI 10.1021/jacsau.5c00504（Birchfield 2025 JACS Au）；PDB 9OB7（apo）/9MIW（PFOA-bound）/9MIZ/9MP2；UniProt P15090；H4 侧：Cram 1991 半囚禁络合物、Hanayama 2021 JACS（CD 端口 <1 Å 尺寸识别）、沸石孔口催化 2001、Cage-on-MOF 2023",
+  "cat2": "incidental"
+ },
+ {
+  "key": "sortasea定向固定化",
+  "name": "Sortase A 定向固定化（LPXTG 转肽锚定）",
+  "type": "immobilization",
+  "category": "natural",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "是：Sortase A 天然进化功能即表面蛋白的位点特异共价固定化，方案直接转用该天然锚定机制。",
+  "evidence": "无文件内 DOI（Sortase A LPXTG 为成熟公知机制；正交表面化学 NHS-PEG24-maleimide + H2N-GGGGC-CONH2 见 S11_GATE1_REVISION §3）",
+  "cat2": "natural"
+ },
+ {
+  "key": "离子通道选择性过滤器",
+  "name": "离子通道选择性过滤器（KcsA/Fluc 脱水选择性，Hofmeister 原理）",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "是（机制转译）：离子通道进化出按脱水能补偿选择离子的机制（KcsA 选 K⁺ 弃 Na⁺）；方案把“按脱水成本区分”转译到弱水合磺酸根/强水合硫酸根，属天然机制转译而非天然原型直接去 PFBS。",
+  "evidence": "Gale/Davis/Matile 合成阴离子通道系列（选择性方向 Hofmeister↔反 Hofmeister 可调）；Sommer-Kubik 2014/2017（高水含量回归 Hofmeister）；Berryman 2007 JACS（anion-π）；Lee 2013 Nat. Chem.（cyanostar C-H 给体大环）；Gu 2005 ES&T、Xiong 2007 IECR（疏液树脂对硫酸根选择性 10¹–10³）",
+  "cat2": "natural"
+ },
+ {
+  "key": "psts磷酸盐结合蛋白",
+  "name": "PstS 磷酸盐结合蛋白（几何阵列区分含氧阴离子，降级弱存在性证明）",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "是（降级）：PstS 进化出高选择性磷酸盐结合，但其区分依赖 HPO₄²⁻ 质子供体化学，磺酸根/硫酸根同为纯氢键受体不可转译，故仅作弱存在性证明。",
+  "evidence": "Nature 1990（PstS 10⁴ 区分，摘要级）；Kubik 环肽笼 log Ka 6.7（乙腈/水 2:1，反向先例——恰恰优选硫酸根）；葫芦脲 10⁶ 先例依赖长疏水尾",
+  "cat2": "natural"
+ },
+ {
+  "key": "蜕皮式可更新界面",
+  "name": "蜕皮式可更新界面（ecdysis 结构更新）",
+  "type": "dynamic_response",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "是：蜕皮是自然界进化出的更新老化/污损外表的解决方案，转译为可剥离更新涂层（框架“动态行为”维度）。",
+  "evidence": "Menne 2016（陶瓷膜 LbL 剥离-重组装性能完全恢复）；Sukhishvili 2002（pH 触发整层溶解可擦除氢键 LbL）；“GAC 上可蜕换涂层”检索无直接先例",
+  "cat2": "natural"
+ },
+ {
+  "key": "肾单位“先捕后分”系统架构",
+  "name": "肾单位“先捕后分”系统架构（滤过+选择性重吸收）",
+  "type": "mass_transfer",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "是：肾单位进化出滤过浓缩与选择性重吸收溶质的功能，转译为“先捕后分”两级系统架构（系统级仿生对应）。",
+  "evidence": "Lee 2024 Chemosphere（0.5 µg/L PFBS 经 CTAC 离子对 15 min 去除 >99%，1:1 摩尔比）；Zeidabadi 2024 Water Research（再生液处理）；“kidney-inspired separation”命名空间无可核实先验",
+  "cat2": "natural"
+ },
+ {
+  "key": "两性离子抗污界面",
+  "name": "两性离子抗污界面（R1a，磷脂两性离子头基仿生）",
+  "type": "interface",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "是：磷脂两性离子膜界面天然具抗污性质，方案仿其界面化学；但“抗污”机制空间已被先例占据，R1a 终止。",
+  "evidence": "Cai 2017 JCIS 503:168（PMID 28521219）+ Zhang 2018 + Li 2019（机制先验占据）",
+  "cat2": "natural"
+ },
+ {
+  "key": "氟亲和含氟域分配",
+  "name": "氟亲和/含氟域分配（氟化骨架+离子氟凝胶）",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "人工筛选：氟-氟亲和为物理化学效应，无自然进化对应，文件明示 H3 为无生物锚路线；且氟化吸附剂延续永久化学品循环有同行评审监管攻击。",
+  "evidence": "DOI 10.1021/acscentsci.9b01224（离子氟凝胶真实河水多类 PFAS）；Kasula 2026 CEJ 539:176796（氟化活性炭，载体概念被占）；Yang 2024 Nat. Commun.（PFPE GenX 518.9 mg/g）；He 2025（部分氟化超短链 275–759 mg/g）；Román Santiago 2025 AFM（氟密度-效应非单调，最优 0.3–0.4 mol F/mol）；Liu 2026 Nat. Commun. 17:108（监管攻击）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "双螺旋肽portal",
+  "name": "双螺旋肽 portal（S1 第三轮历史路线，本轮明确排除）",
+  "type": "protein",
+  "category": "artificial",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "人工筛选：人工设计肽门户，非天然进化原型；本轮作为折叠肽路线被明确排除。",
+  "evidence": "无（S1 历史方案，S1 失败教训“人工门不是确定化学态”已被 H4 静态门闩消化）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "fcrn新生fc受体",
+  "name": "FcRn 新生 Fc 受体（pH 依赖结合/释放回收）",
+  "type": "dynamic_response",
+  "category": "natural",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "是：FcRn 进化出 pH 依赖 IgG/白蛋白回收循环机制，转译为 pH 响应吸附-再生；本轮仅跨分支提及。",
+  "evidence": "无文件内 DOI（仅 RESUME_2026-07-19.md 跨分支提及；GLM 分支 ROX pH 响应设计 v2.0）",
+  "cat2": "natural"
+ },
+ {
+  "key": "卤键–脲双识别人工受体",
+  "name": "卤键–脲双识别人工受体（邻位氯几何，无生物原型）",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "人工筛选：明确人工假说，无自然进化对应，无可防御的天然受体/酶原型。",
+  "evidence": "无（EVIDENCE_AUDIT：氯酚酶原型证据不足；卤键/主客体本轮均按待验证人工假说计证据分）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "弱碱阴离子交换超微孔协同碳",
+  "name": "弱碱阴离子交换/超微孔协同碳",
+  "type": "porous_carbon",
+  "category": "artificial",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "人工筛选：人工碳材料，无自然进化对应。",
+  "evidence": "DOI 10.1080/01496391003608421（GAC/IX 对比确认疏水与离子交换均参与 PFBS/PFOS）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "咪唑鎓超微孔碳离子尺寸门",
+  "name": "咪唑鎓超微孔碳离子/尺寸门",
+  "type": "porous_carbon",
+  "category": "artificial",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "人工筛选：人工碳材料，无自然进化对应。",
+  "evidence": "无（方案明示无直接原型证据）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "羧基化微介孔碳混合模式床",
+  "name": "羧基化微/介孔碳混合模式床",
+  "type": "porous_carbon",
+  "category": "artificial",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "portfolio_20_reopen + prototype_reopen_1 + shortchain_redirection_1 + synthetic_recovery_1"
+  ],
+  "note": "人工筛选：人工碳材料，无自然进化对应。",
+  "evidence": "无",
+  "cat2": "artificial"
+ },
+ {
+  "key": "gpr43ffar2短链脂肪酸受体链长门",
+  "name": "GPR43/FFAR2 短链脂肪酸受体链长门",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "PFBS/短链 PFAS"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "历史深设计第一批：bpa1 / bpa2 / pfbs1 / pfbs2 / pfoa_deep_design_1（实为 PFBS-CD-OG1 与 PFBS-CD-GAC-v2）/ rox 深设计 + pfbs_afi_admission 准入门（2026-07-17 至 19，共 7 目录 21 个 md 文件 + 1 份同事反馈 PDF）"
+  ],
+  "note": "碰巧类比——天然配体为 C2-C5 短链脂肪酸（肠道发酵产物），PFBS 为异生物质，仅类比深度受限原理而非结合 PFAS；v2 评估裁定类比不成立（门效应最早出现在 C7-C8 而非 C4/C6，与方案自有基准相左）。",
+  "evidence": "Stoddart et al. J. Biol. Chem. 2008, 283(47):32913-32924（极性核突变，v1 引文勘误后）；Le Poul et al. JBC 2003；Brown et al. JBC 2003；无实验三维结构（药理学水平 FACT、几何水平 INFERENCE）",
+  "cat2": "natural"
+ },
+ {
+  "key": "fcrn新生儿fc受体–igg组氨酸ph开关",
+  "name": "FcRn 新生儿 Fc 受体–IgG 组氨酸 pH 开关（含 Igawa 2010 回收抗体方向反转先例）",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "ROX（及 N-去甲基 ROX、ROX N-氧化物）；PFBS（PFBS-AFI-GAC 的 R1b 暂缓模块）"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "历史深设计第一批：bpa1 / bpa2 / pfbs1 / pfbs2 / pfoa_deep_design_1（实为 PFBS-CD-OG1 与 PFBS-CD-GAC-v2）/ rox 深设计 + pfbs_afi_admission 准入门（2026-07-17 至 19，共 7 目录 21 个 md 文件 + 1 份同事反馈 PDF）"
+  ],
+  "note": "是、带边界——FcRn 酸性内体结合/中性血液释放以回收 IgG 是真实进化功能，但从未为污水基质进化，释放方向为工程反转（首引 Igawa 2010），结合对象由 IgG 重接线为 ROX；方案自陈「FcRn 从未为污水基质进化」。",
+  "evidence": "PDB 1I1A、1FRU、1EXU、4NOU；Vaughn & Bjorkman 1998；Raghavan 1995；Roopenian & Akilesh 2007；Igawa 2010 DOI 10.1038/nbt.1691（回收抗体 CDR 扫描引入组氨酸实现 pH 7.4 强/pH 5.5-6.0 弱，已核实）；非蛋白类似物先例 His-Sepharose（Vijayalakshmi 1989）、FcRn 模拟肽配基（Menegatti & Carbonell）；PVI-碳接枝先例 Wang 2012 CEJ、Luo 2024 磁性生物炭-g-PVI；另以 ROX 模板残留形式出",
+  "cat2": "natural"
+ },
+ {
+  "key": "细胞膜磷脂酰胆碱两性离子头基强水合界面",
+  "name": "细胞膜磷脂酰胆碱两性离子头基强水合界面（聚 MPC 仿生）",
+  "type": "interface",
+  "category": "natural",
+  "pollutants": [
+   "PFBS/短链 PFSA 族（PFPeS/PFHxS）"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "历史深设计第一批：bpa1 / bpa2 / pfbs1 / pfbs2 / pfoa_deep_design_1（实为 PFBS-CD-OG1 与 PFBS-CD-GAC-v2）/ rox 深设计 + pfbs_afi_admission 准入门（2026-07-17 至 19，共 7 目录 21 个 md 文件 + 1 份同事反馈 PDF）"
+  ],
+  "note": "是、带边界（仿生启发层级）——细胞膜为真实进化结构、界面抑制非特异粘附是体内背景功能，但生物中小分子跨膜依赖转运体，类比仅限「水合界面排斥大分子粘附」一项界面性质，进化功能性弱于专功能蛋白；G4 裁定判据 2 满足（仿生启发层级）；门 2 因增量全为组合式应用级裁定杀死。",
+  "evidence": "Ishihara 1990 Polymer Journal 22:355-360 DOI 10.1295/polymj.22.355（MPC 磷脂聚合物奠基，Crossref 核实）；Ishihara 1995 Artif Organs 19:1215-1221 DOI 10.1111/j.1525-1594.1995.tb02288.x PMID 8967877；Xu 2009 Biomaterials 30:4930 DOI 10.1016/j.biomaterials.2009.06.005 PMID 19560198；Ladd 2008 Biomacromolecules 9:1357",
+  "cat2": "natural"
+ },
+ {
+  "key": "rox模板分子印迹",
+  "name": "ROX 模板分子印迹（MIP）",
+  "type": "mip_imprint",
+  "category": "artificial",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "历史深设计第一批：bpa1 / bpa2 / pfbs1 / pfbs2 / pfoa_deep_design_1（实为 PFBS-CD-OG1 与 PFBS-CD-GAC-v2）/ rox 深设计 + pfbs_afi_admission 准入门（2026-07-17 至 19，共 7 目录 21 个 md 文件 + 1 份同事反馈 PDF）"
+  ],
+  "note": "人工筛选——分子印迹为人工合成技术（抗体模拟），非自然界进化原型；本方案否决为主路线。",
+  "evidence": "先例 J Chromatogr B 2016；化工进展 2016 二氧化硅表面印迹层（ROX 对红霉素分离因子仅 1.21）；否决依据见 ROX_PH_RESPONSIVE_V2_REVISED_DESIGN.md 备选路线表（模板依赖/经济不可行）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "电压门控离子通道",
+  "name": "电压门控离子通道（电化学电位摆类比，负面清单）",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "历史深设计第一批：bpa1 / bpa2 / pfbs1 / pfbs2 / pfoa_deep_design_1（实为 PFBS-CD-OG1 与 PFBS-CD-GAC-v2）/ rox 深设计 + pfbs_afi_admission 准入门（2026-07-17 至 19，共 7 目录 21 个 md 文件 + 1 份同事反馈 PDF）"
+  ],
+  "note": "是（天然离子通道），但类比被方案否定、仅以负面清单形式出现，不构成可转译仿生主张。",
+  "evidence": "无（负面清单条目；ROX_PH_RESPONSIVE_COMPLETE_DESIGN.md 第 123 行 / V2 第 279、600 行，引 Design 3 否定结论）",
+  "cat2": "natural"
+ },
+ {
+  "key": "kcsa钾通道选择性过滤器",
+  "name": "KcsA 钾通道选择性过滤器（精确配位腔）",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "PFBS/短链 PFAS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "历史深设计第一批：bpa1 / bpa2 / pfbs1 / pfbs2 / pfoa_deep_design_1（实为 PFBS-CD-OG1 与 PFBS-CD-GAC-v2）/ rox 深设计 + pfbs_afi_admission 准入门（2026-07-17 至 19，共 7 目录 21 个 md 文件 + 1 份同事反馈 PDF）"
+  ],
+  "note": "是——天然进化离子选择性通道，但 PFAS 全氟链无天然对应物，侦察仅给方向、未有任何方案实现。",
+  "evidence": "无（PFBS_CD_GAC_V2_TERMINATION_RECOMMENDATION.md §3.2(a) 侦察提及，未给具体结构证据）",
+  "cat2": "natural"
+ },
+ {
+  "key": "fluc氟离子通道",
+  "name": "Fluc 氟离子通道",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "PFAS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "历史深设计第一批：bpa1 / bpa2 / pfbs1 / pfbs2 / pfoa_deep_design_1（实为 PFBS-CD-OG1 与 PFBS-CD-GAC-v2）/ rox 深设计 + pfbs_afi_admission 准入门（2026-07-17 至 19，共 7 目录 21 个 md 文件 + 1 份同事反馈 PDF）"
+  ],
+  "note": "是（天然进化氟离子输出通道），但仅作 PFAS「无进化原型」的边界证据，非可转译设计原型。",
+  "evidence": "无（PFBS_CD_GAC_V2_TERMINATION_RECOMMENDATION.md §3.2 侦察提及，生物氟化学边界论证）",
+  "cat2": "natural"
+ },
+ {
+  "key": "bohr效应",
+  "name": "Bohr 效应（血红蛋白 pH 依赖释氧）",
+  "type": "dynamic_response",
+  "category": "natural",
+  "pollutants": [
+   "PFBS/短链 PFAS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "历史深设计第一批：bpa1 / bpa2 / pfbs1 / pfbs2 / pfoa_deep_design_1（实为 PFBS-CD-OG1 与 PFBS-CD-GAC-v2）/ rox 深设计 + pfbs_afi_admission 准入门（2026-07-17 至 19，共 7 目录 21 个 md 文件 + 1 份同事反馈 PDF）"
+  ],
+  "note": "是——天然进化生理机制，但仅为侦察候选方向，未有任何方案实现。",
+  "evidence": "无（PFBS_CD_GAC_V2_TERMINATION_RECOMMENDATION.md §3.2(c) 侦察提及，与 FcRn pH 依赖释放并列）",
+  "cat2": "natural"
+ },
+ {
+  "key": "s层病毒衣壳多价协同自组装阵列",
+  "name": "S 层/病毒衣壳多价协同自组装阵列",
+  "type": "self_assembly",
+  "category": "natural",
+  "pollutants": [
+   "PFBS/短链 PFAS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "历史深设计第一批：bpa1 / bpa2 / pfbs1 / pfbs2 / pfoa_deep_design_1（实为 PFBS-CD-OG1 与 PFBS-CD-GAC-v2）/ rox 深设计 + pfbs_afi_admission 准入门（2026-07-17 至 19，共 7 目录 21 个 md 文件 + 1 份同事反馈 PDF）"
+  ],
+  "note": "是——天然进化自组装结构，但仅为侦察候选方向，未有任何方案实现。",
+  "evidence": "无（PFBS_CD_GAC_V2_TERMINATION_RECOMMENDATION.md §3.2(d) 侦察提及）",
+  "cat2": "natural"
+ },
+ {
+  "key": "氟乙酸脱卤酶",
+  "name": "氟乙酸脱卤酶（fluoroacetate dehalogenase）",
+  "type": "degradation_transformation",
+  "category": "natural",
+  "pollutants": [
+   "PFAS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "历史深设计第一批：bpa1 / bpa2 / pfbs1 / pfbs2 / pfoa_deep_design_1（实为 PFBS-CD-OG1 与 PFBS-CD-GAC-v2）/ rox 深设计 + pfbs_afi_admission 准入门（2026-07-17 至 19，共 7 目录 21 个 md 文件 + 1 份同事反馈 PDF）"
+  ],
+  "note": "是——进化来降解植物源氟乙酸的天然酶，但底物为单氟小分子而非全氟烷基链，仅作边界证据、非可转译设计原型。",
+  "evidence": "无（PFBS_CD_GAC_V2_TERMINATION_RECOMMENDATION.md §3.2 侦察提及，通识级）",
+  "cat2": "natural"
+ },
+ {
+  "key": "acidimicrobiumsp.a6还原脱氟",
+  "name": "Acidimicrobium sp. A6 还原脱氟",
+  "type": "degradation_transformation",
+  "category": "natural",
+  "pollutants": [
+   "PFAS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "历史深设计第一批：bpa1 / bpa2 / pfbs1 / pfbs2 / pfoa_deep_design_1（实为 PFBS-CD-OG1 与 PFBS-CD-GAC-v2）/ rox 深设计 + pfbs_afi_admission 准入门（2026-07-17 至 19，共 7 目录 21 个 md 文件 + 1 份同事反馈 PDF）"
+  ],
+  "note": "存疑——菌株层面的宣称现象且遭正式质疑，不构成可靠的进化解决方案。",
+  "evidence": "无（PFBS_CD_GAC_V2_TERMINATION_RECOMMENDATION.md §3.2 侦察提及，「停留在菌株层面且遭正式质疑」）",
+  "cat2": "natural"
+ },
+ {
+  "key": "血清白蛋白与肾转运体对pfas的泛配性结合",
+  "name": "血清白蛋白与肾转运体对 PFAS 的泛配性结合",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "PFAS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "历史深设计第一批：bpa1 / bpa2 / pfbs1 / pfbs2 / pfoa_deep_design_1（实为 PFBS-CD-OG1 与 PFBS-CD-GAC-v2）/ rox 深设计 + pfbs_afi_admission 准入门（2026-07-17 至 19，共 7 目录 21 个 md 文件 + 1 份同事反馈 PDF）"
+  ],
+  "note": "碰巧结合——PFAS 作为脂肪酸类似物碰巧结合白蛋白与转运体，属泛配性药代行为，非进化出的 PFAS 处理方案。",
+  "evidence": "无（PFBS_CD_GAC_V2_TERMINATION_RECOMMENDATION.md §3.2 侦察提及，「属泛配性药代行为」）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "hlfabphsa精氨酸胍基头基锚定",
+  "name": "hL-FABP/hSA 精氨酸胍基头基锚定",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 4,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "碰巧结合：FABP/hSA 进化结合脂肪酸与药物，PFOA 作为脂肪酸类似物被碰巧识别，氟代物亲和差异归因疏水与体积而非定向 C-F；FABP 敲除不改变 PFOS 分布（doi:10.1021/acs.chemrestox.5c00199）削弱归因。",
+  "evidence": "doi:10.1007/s00204-014-1391-7（hL-FABP Arg122/Asn111）；doi:10.1002/pro.4036（hSA-PFOA 晶体）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "β环糊精主客体疏水腔",
+  "name": "β-环糊精主客体疏水腔",
+  "type": "host_guest",
+  "category": "natural",
+  "pollutants": [
+   "PFOA/BPA/DDT"
+  ],
+  "n_schemes": 4,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（环糊精为淀粉酶解天然环状低聚糖，腔体疏水包结为天然主客体性质）；但对目标污染物为碰巧包结，非进化来去除 PFAS/BPA/DDT。",
+  "evidence": "doi:10.1021/jacs.7b02381（β-CD 网络降 PFOA 至 ng/L）；doi:10.1021/jacs.5c09865（CD 整体柱）",
+  "cat2": "natural_hostguest"
+ },
+ {
+  "key": "杯芳烃分子笼芳腔主客体",
+  "name": "杯芳烃/分子笼芳腔主客体",
+  "type": "host_guest",
+  "category": "natural",
+  "pollutants": [
+   "PFOA/DDT"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "人工合成大环（杯芳烃/笼为人工主体），非自然进化产物；其主客体化学仿酶腔预组织原理。",
+  "evidence": "Acc Chem Res 2020（杯芳烃/笼方向）；Ren 2016 PCCP（α/β/γ-CD-DDT 取向原子级机制）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "oat4肾有机阴离子转运体链长窗口",
+  "name": "OAT4 肾有机阴离子转运体链长窗口",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "PFOA/PFBS"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化重吸收内源有机阴离子/尿酸盐），PFAS 为底物类似物碰巧被转运或排除；非单调窗口与长链软截断在生物界零证据，属逆向设计。",
+  "evidence": "doi:10.1007/s00204-022-03428-6（OAT4 转运 PFOA 排除 PFBS，E1 verified MD 轨迹）",
+  "cat2": "natural"
+ },
+ {
+  "key": "lanmodulin预组织配位几何",
+  "name": "Lanmodulin 预组织配位几何",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化在甲基营养菌中选择性结合稀土镧系离子）；但判别对象为金属阳离子，转译至有机阴离子头基为原则级类比而非结构同源，非进化来识别 PFOA。",
+  "evidence": "doi:10.1021/jacs.8b09842；doi:10.1039/d2qi00933a（支架移除亲和力降约 10⁶）；PDB 未直接引用",
+  "cat2": "natural"
+ },
+ {
+  "key": "丝氨酸蛋白酶木瓜蛋白酶氧阴离子洞",
+  "name": "丝氨酸蛋白酶/木瓜蛋白酶氧阴离子洞",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "PFOA/BPA"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化水解肽键，氧阴离子洞稳定四面体过渡态）；转译为通用预组织定向氢键原则，对 PFCA 羧酸根/酚氧为原理级借用而非酶天然底物。",
+  "evidence": "双脲 POP 先例 doi:10.1038/s41467-022-29816-1；Hamilton 受体 scaffold doi:10.1002/open.202500120",
+  "cat2": "natural"
+ },
+ {
+  "key": "fabp4构象塑性单腔多模式",
+  "name": "FABP4 构象塑性单腔多模式",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "碰巧结合：FABP4 进化胞内脂肪酸转运，PFAS 碰巧以多模式结合；柔性腔塌缩为通用软物质物理，FABP4 仅提供量级动机。",
+  "evidence": "doi:10.1021/jacsau.5c00504（FABP4 可变结合模式广谱结合 PFAS）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "kcsa钾通道选择性过滤器脱水",
+  "name": "KcsA 钾通道选择性过滤器脱水",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化实现 K⁺ 对 Na⁺ 高选择渗透）；但 KcsA 为渗透机器非吸附剂，Å 级位置预组织在材料中不实现，归属为隐喻级原则迁移。",
+  "evidence": "Noskov 与 Roux（预组织要素，E4）；CW-AC 先例 PNAS 2023（21000 BV）",
+  "cat2": "natural"
+ },
+ {
+  "key": "人血清白蛋白hsa多位点亲和力层级",
+  "name": "人血清白蛋白 hSA 多位点亲和力层级",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "碰巧结合：白蛋白进化转运脂肪酸/药物，PFOA 碰巧多位点结合；层级为结合化学长期事实，材料侧刻意偏离别构协同。",
+  "evidence": "doi:10.1002/pro.4036（Maso 2021 晶体+4:1）；doi:10.1016/j.chemosphere.2021.131979（Alesio 2022 协同性）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "磷脂膜肺表面活性物质界面分配",
+  "name": "磷脂膜/肺表面活性物质界面分配",
+  "type": "interface",
+  "category": "natural",
+  "pollutants": [
+   "PFOA/ROX"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（磷脂双层/肺表面活性剂进化为气液与细胞界面屏障及两亲分配）；PFAS/ROX 分配入烃基疏水域为碰巧利用疏水而非氟亲和。",
+  "evidence": "FABP 敲除反证 doi:10.1021/acs.chemrestox.5c00199 推断磷脂结合；PFAS-磷脂模型膜相互作用证据（题录级）",
+  "cat2": "natural"
+ },
+ {
+  "key": "酶法脱羧碳负离子活化",
+  "name": "酶法脱羧碳负离子活化（ADC/OMPDC）",
+  "type": "degradation_transformation",
+  "category": "natural",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化催化 β-酮酸/OMP 脱羧）；原型家族本质为化学，PFCA 脱羧由脱氟级联热力学驱动而非酶式过渡态稳定，酶原则级类比。",
+  "evidence": "Trang/Dichtel Science 2022 doi:10.1126/science.abm8868（PFCA 碱性脱羧）；OMPDC kcat/kuncat 约 10¹⁷（常用引值）",
+  "cat2": "natural"
+ },
+ {
+  "key": "mscl机械敏感通道刺激门控再生",
+  "name": "MscL 机械敏感通道刺激门控再生",
+  "type": "dynamic_response",
+  "category": "natural",
+  "pollutants": [
+   "PFOA/BPA"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化为低渗冲击应急释放胞内溶质防裂解）；转译为再生门控为工程借用。",
+  "evidence": "无（角度地图记载，MscL 为通行机械敏感通道原型，本仓库未列具体 DOI）",
+  "cat2": "natural"
+ },
+ {
+  "key": "肺木质部murray律分级传质结构",
+  "name": "肺/木质部 Murray 律分级传质结构",
+  "type": "mass_transfer",
+  "category": "natural",
+  "pollutants": [
+   "PFOA/BPA/ROX"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（维管植物/哺乳动物肺进化为低驱动力高通量长程流体输运）。",
+  "evidence": "框架示例 4（PFOA）；木质部/肺 Murray 律为通行生物学事实（本仓库未列具体 DOI）",
+  "cat2": "natural"
+ },
+ {
+  "key": "猪笼草slips液体灌注抗污外壳",
+  "name": "猪笼草 SLIPS 液体灌注抗污外壳",
+  "type": "interface",
+  "category": "natural",
+  "pollutants": [
+   "PFOA/BPA"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（猪笼草进化光滑捕虫口缘液膜防猎物附着）；抗污机制为进化功能。",
+  "evidence": "猪笼草启发 SLIPS（Wong 2011 Nature 系，角度地图记载未列具体 DOI）",
+  "cat2": "natural"
+ },
+ {
+  "key": "oatp肠肝循环向量富集",
+  "name": "OATP 肠肝循环向量富集",
+  "type": "mass_transfer",
+  "category": "natural",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化介导胆汁酸/有机阴离子肠肝再循环）；PFAS 为底物类似物碰巧被向量转运。",
+  "evidence": "OATP/OAT4 直接转运 PFOA（简报第 8 节路线二，doi 见 DESIGN_SPACE 组织富集启发式）",
+  "cat2": "natural"
+ },
+ {
+  "key": "pfoa形状分子印迹腔",
+  "name": "PFOA 形状分子印迹腔",
+  "type": "mip_imprint",
+  "category": "natural",
+  "pollutants": [
+   "PFOA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "人工模板：项目明确标注「无生物原型（形状记忆工程）」，非自然进化；属仿抗体锁钥的人工印迹。",
+  "evidence": "iScience 2025（LOD 8.6 ng/L、印迹因子 5.57）；ACS AMI 2026 doi:10.1021/acsami.6c01610（分子笼无内禀氟选择性负面证据）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "modamola硫酸根结合蛋白氧阴离子几何识别",
+  "name": "ModA/MolA/硫酸根结合蛋白氧阴离子几何识别",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 4,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化以几何氢键阵列识别四面体氧阴离子营养盐）；PFBS 磺酸根为几何类似物碰巧匹配，非进化来识别 PFAS。",
+  "evidence": "Hu 1997；Lawson 1997/1998；Pflugrath 与 Quiocho 1985（硫酸根结合蛋白）；Tirado-Lee 2011",
+  "cat2": "natural"
+ },
+ {
+  "key": "ntcp胆汁酸转运体短链偏好",
+  "name": "NTCP 胆汁酸转运体短链偏好",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化重吸收胆汁酸），PFAS 磺酸为底物类似物碰巧呈链长偏好转运。",
+  "evidence": "Zhao 2015 Tox Sci（NTCP Km 序列）",
+  "cat2": "natural"
+ },
+ {
+  "key": "asbt胆汁酸转运体电梯型磺酸腔",
+  "name": "ASBT 胆汁酸转运体电梯型磺酸腔",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化转运两亲胆汁酸），仅转运 PFOS 显示头基/链长特异，PFAS 为碰巧底物。",
+  "evidence": "Hu 2011 Nature（ASBT 电梯型结构）",
+  "cat2": "natural"
+ },
+ {
+  "key": "gpr43gpr109a短链脂肪酸受体离子锁",
+  "name": "GPR43/GPR109A 短链脂肪酸受体离子锁",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化感知肠道/代谢短链脂肪酸信号）；PFBS 磺酸为几何/电荷类似物碰巧匹配。",
+  "evidence": "Le Poul 2003 JBC（GPR43）；Singh 2014 Immunity（GPR109A）",
+  "cat2": "natural"
+ },
+ {
+  "key": "铁载体siderophore两相捕获回收架构",
+  "name": "铁载体 siderophore 两相捕获-回收架构",
+  "type": "mass_transfer",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（微生物进化在 pM 铁限制下高亲和捕铁加受体回收），架构可转译但阳离子螯合化学不可平移至 PFBS。",
+  "evidence": "Miethke 2007 MMBR；Loomis 1991 Inorg Chem（铁载体-受体架构）",
+  "cat2": "natural"
+ },
+ {
+  "key": "nis钠碘同向转运体向量富集",
+  "name": "NIS 钠/碘同向转运体向量富集",
+  "type": "protein",
+  "category": "artificial",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化浓缩碘供甲状腺激素合成），高氯酸/全氟磺酸为碰巧的大体积弱水化单价阴离子底物类似物。",
+  "evidence": "Dohán 2003 Endocr Rev；Tonacchera 2004 Thyroid（ClO₄⁻ 效价序列）",
+  "cat2": "natural"
+ },
+ {
+  "key": "pfbs硫脲几何分子印迹",
+  "name": "PFBS 硫脲几何分子印迹",
+  "type": "mip_imprint",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "人工模板（非自然进化）；在 ModA 几何识别原理上加人工印迹腔。",
+  "evidence": "Guo 2018 JHM（碳微球表面印迹 PFOS）；Lin 2021 JSSC（聚多巴胺 MIP 磁球 PFOS）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "氟化物核糖开关fluc通道f⁻识别",
+  "name": "氟化物核糖开关/Fluc 通道 F⁻ 识别",
+  "type": "dynamic_response",
+  "category": "natural",
+  "pollutants": [
+   "PFBS"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（细菌进化氟化物感应核糖开关与 Fluc 通道抗氟毒性）；属自然进化的 F⁻ 特异识别。",
+  "evidence": "氟化物核糖开关/Fluc 为通行天然元件（角度地图记载，本仓库未列具体 DOI）",
+  "cat2": "natural"
+ },
+ {
+  "key": "dmpr酚效应物传感器锚定门控",
+  "name": "DmpR 酚效应物传感器锚定-门控",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化感知酚/甲酚降解效应物调控 dmp 操纵子）；原型为转录传感器非去除蛋白，仅迁移单位点识别加取代基门控原理。",
+  "evidence": "E9（DmpR 域构成，题录级）；E4/E5/E6（单替换切换效应物谱）",
+  "cat2": "natural"
+ },
+ {
+  "key": "凝集素糖识别",
+  "name": "凝集素糖识别（中性羟基多点氢键）",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化识别糖链羟基模式）；酚氧与糖羟基供受体身份类比，非进化来识别双酚。",
+  "evidence": "凝集素糖识别为通行生物学实证（S13 证据台账题录级，未列具体 DOI）",
+  "cat2": "natural"
+ },
+ {
+  "key": "errγ刚性预组织非对称单酚锚口袋",
+  "name": "ERRγ 刚性预组织非对称单酚锚口袋",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "碰巧结合（毒性受体）：ERRγ 为孤儿核受体，BPA 碰巧高亲和结合；框架示例 2 禁作仿生主干，仅作 approach-3 个案佐证，且对桥连区宽容、无已证实刚性几何选择性。",
+  "evidence": "PDB 2e2r（ERRγ-BPA 复合物）；E1/E2；4-α-枯基酚单酚锚证据",
+  "cat2": "incidental"
+ },
+ {
+  "key": "erβerα口袋体积阈值窗口",
+  "name": "ERβ/ERα 口袋体积阈值窗口",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化为雌激素受体），BPA 碰巧作为内分泌干扰物结合；窗口选择性属逆向设计（生物体系仅见单调趋势）。",
+  "evidence": "Meyers 2001（ERβ/ERα 亚型选择性）；COF 官能团调节双酚选择性 doi:10.1016/j.seppur.2022.121489",
+  "cat2": "natural"
+ },
+ {
+  "key": "过氧化物酶漆酶酚自由基偶联固定",
+  "name": "过氧化物酶/漆酶酚自由基偶联固定",
+  "type": "degradation_transformation",
+  "category": "natural",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化氧化酚类/木质素单体）；偶联固定为酶天然反应性的工程利用，须验证加合物雌激素活性不升高。",
+  "evidence": "Klibanov 1983 Science（HRP 酚偶联原型）；Cabana 2007/2008 漆酶 CLEA 连续反应器",
+  "cat2": "natural"
+ },
+ {
+  "key": "ugt葡萄糖醛酸化植物糖苷化",
+  "name": "UGT 葡萄糖醛酸化/植物糖苷化（区域选择性结合与两段封存）",
+  "type": "degradation_transformation",
+  "category": "natural",
+  "pollutants": [
+   "BPA/2,6-DCP"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化二相结合解毒酚类）；2,6 位双氯阻碍结合为区域选择性天然事实，转译为头基可及性识别（非代谢）。",
+  "evidence": "Nakajima 2002、Hanioka 2008（BPA 葡萄糖醛酸化）；UGT 区域选择性代谢证据 E012 级（dcp26）",
+  "cat2": "natural"
+ },
+ {
+  "key": "pbplipocalin花萼腔刚性预组织",
+  "name": "PBP/lipocalin 花萼腔刚性预组织",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "BPA/DDT"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化结合/转运小分子营养物与疏水配体）；但对中性酚类/中性 DDT 为 approach-2 类比（无中性酚 PBP 实证），原型-底物错配。",
+  "evidence": "Godovac-Zimmermann 1988（lipocalin calyx）；PBP 底物谱（磷酸根/氨基酸/糖类，题录级）",
+  "cat2": "natural"
+ },
+ {
+  "key": "pxr异生物质核受体定向混杂",
+  "name": "PXR 异生物质核受体定向混杂",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化为广谱异生物质/甾体传感器），定向混杂为进化功能；双酚类为碰巧配体。",
+  "evidence": "Watkins 2001 Science（PXR 大腔定向混杂）",
+  "cat2": "natural"
+ },
+ {
+  "key": "ttr转甲状腺素蛋白卤酚通道反向卤素排除",
+  "name": "TTR 转甲状腺素蛋白卤酚通道反向卤素排除",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "碰巧结合：TTR 进化转运甲状腺素/视黄醇，卤酚为碰巧结合；反向卤素排除为逆向设计借用。",
+  "evidence": "Meerts 2000；PDB 5HJG（TTR-TBBPA）",
+  "cat2": "incidental"
+ },
+ {
+  "key": "mv1菌株ipso羟基化桥cc裂解",
+  "name": "MV1 菌株 ipso 羟基化桥 C-C 裂解",
+  "type": "degradation_transformation",
+  "category": "natural",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（Sphingomonas 进化 BPA 降解途径）；属酶催化代谢，非酶可转译性低至中。",
+  "evidence": "Spivack 1994（MV1 BPA 代谢）",
+  "cat2": "natural"
+ },
+ {
+  "key": "trametes漆酶p450bisd单加氧酶bpa降解",
+  "name": "Trametes 漆酶/P450bisd 单加氧酶 BPA 降解",
+  "type": "degradation_transformation",
+  "category": "natural",
+  "pollutants": [
+   "BPA"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（真菌/细菌进化降解酚类/双酚）；属催化转化而非选择性吸附，仅底物口袋几何可转译。",
+  "evidence": "漆酶降解 T. villosa doi:10.1006/bbrc.2001.5021；P450bisd doi:10.1128/aem.71.12.8024-8030.2005",
+  "cat2": "natural"
+ },
+ {
+  "key": "cyp单加氧酶氯酚羟化酶区域选择性羟基化",
+  "name": "CYP 单加氧酶/氯酚羟化酶区域选择性羟基化",
+  "type": "degradation_transformation",
+  "category": "natural",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化区域选择性芳香羟基化降解氯酚）；approach-3 机制拆解，仅转译活性位空间轮廓读取原理，非催化复制。",
+  "evidence": "氯酚羟化酶对 2,4-DCP 区域选择性羟基化先例密集（E010 级）；2,6-DCP 双邻位氯阻碍证据",
+  "cat2": "natural"
+ },
+ {
+  "key": "fcrn新生儿fc受体ph依赖回收",
+  "name": "FcRn 新生儿 Fc 受体 pH 依赖回收",
+  "type": "dynamic_response",
+  "category": "natural",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化 pH 依赖回收 IgG 延长半衰期）；位点侧方向性质子联锁转译合法。",
+  "evidence": "FcRn pH 依赖结合/回收（S19 E3/E4，题录级）",
+  "cat2": "natural"
+ },
+ {
+  "key": "血红蛋白bohr效应ph质子联锁",
+  "name": "血红蛋白 Bohr 效应 pH 质子联锁",
+  "type": "dynamic_response",
+  "category": "natural",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化 pH/CO₂ 调节氧亲和）；聚合物位点 Hill 约 1 无多组氨酸协同锐度，为原理借用。",
+  "evidence": "Bohr 效应（S19 E6，教科书酸碱-别构事实）",
+  "cat2": "natural"
+ },
+ {
+  "key": "溶酶体离子捕获",
+  "name": "溶酶体离子捕获（酸性区质子化陷获）",
+  "type": "dynamic_response",
+  "category": "natural",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化酸性细胞器降解与陷获）；底物侧方向性转译合法，原型家族本质为物理化学现象。",
+  "evidence": "溶酶体离子捕获（S19 E5，底物侧原型）",
+  "cat2": "natural"
+ },
+ {
+  "key": "oatoct有机阴离子阳离子转运体酚盐头基识别",
+  "name": "OAT/OCT 有机阴离子/阳离子转运体酚盐头基识别",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化转运有机阴离子/阳离子代谢物），氯酚为碰巧底物；头基识别存非特异风险。",
+  "evidence": "OAT1/3 转运氯酚证据 E011 级；OAT/OCT 底物选择性机制",
+  "cat2": "natural"
+ },
+ {
+  "key": "酚类氧化酶氧化还原响应捕获",
+  "name": "酚类氧化酶（漆酶/酪氨酸酶）氧化还原响应捕获",
+  "type": "degradation_transformation",
+  "category": "artificial",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化氧化酚类/木质素/黑色素合成）；须验证醌加合物毒性。",
+  "evidence": "酚类氧化酶漆酶/酪氨酸酶（dcp26-A19 角度地图，未列具体 DOI）",
+  "cat2": "natural"
+ },
+ {
+  "key": "氯酚结合蛋白转运蛋白多位点协同",
+  "name": "氯酚结合蛋白/转运蛋白多位点协同",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "2,6-DCP"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "碰巧/待验：无确立的氯酚特异结合蛋白达证据阶梯高层，多为碰巧底物结合线索。",
+  "evidence": "氯酚结合蛋白/转运蛋白（dcp26-A22 角度地图，证据待验）",
+  "cat2": "natural"
+ },
+ {
+  "key": "ddt脱氯化氢酶桥双基序反应性读出",
+  "name": "DDT-脱氯化氢酶（GST）桥双基序反应性读出",
+  "type": "degradation_transformation",
+  "category": "natural",
+  "pollutants": [
+   "DDT"
+  ],
+  "n_schemes": 3,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（典型自然进化解决方案：昆虫进化 GSTe2 脱氯化氢酶赋予 DDT 抗性）；框架 2026-07-21 判据合规的蛋白原型动机级示例。",
+  "evidence": "Clark & Shamaan 1984；Sternburg 1954；伊蚊 GSTe2 2005；Kallman 1963（DDE 不反应）",
+  "cat2": "natural"
+ },
+ {
+  "key": "抗体多表位非加和协同",
+  "name": "抗体多表位非加和协同（Jencks）",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "DDT"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（适应性免疫进化多表位高特异识别）；DDT 为人工半抗原，原理级借用而非天然靶标。",
+  "evidence": "Jencks 连接能/多表位非加和性（原理级方法学）",
+  "cat2": "natural"
+ },
+ {
+  "key": "酶活性位点四面体过渡态形状读出",
+  "name": "酶活性位点四面体过渡态形状读出",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "DDT"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化稳定四面体过渡态加速水解）；自然界读取 DDx 桥差异已知机制均为反应性而非形状读出，本原型为原理级加结构近似例证。",
+  "evidence": "酶四面体过渡态类似物形状读出（原理级，S20 证据台账题录级）",
+  "cat2": "natural"
+ },
+ {
+  "key": "抗体氯化芳烃同系物几何平面性读出",
+  "name": "抗体氯化芳烃同系物几何/平面性读出",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "DDT"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "人工免疫产生（进化免疫系统对人工抗原的几何读出）；非天然 DDT 特异体系。",
+  "evidence": "抗体 PCB 选择性结合（S20 E1，摘要未取得，平面性归属为推断待全文核验）",
+  "cat2": "natural"
+ },
+ {
+  "key": "b12corrinoid还原型黄素血红素还原脱氯",
+  "name": "B12/corrinoid/还原型黄素-血红素还原脱氯",
+  "type": "degradation_transformation",
+  "category": "natural",
+  "pollutants": [
+   "DDT"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化/地球化学有机氯还原脱氯辅酶化学）；过渡金属辅酶介导的普遍共代谢，对桥差异有部分反应性分辨。",
+  "evidence": "Kallman 1963（酵母 DDT→DDD、DDE 不反应）；Sugihara 1998（还原型黄素+血红素非酶脱氯）；Berry 1977（B12 还原脱氯 DDT）",
+  "cat2": "natural"
+ },
+ {
+  "key": "厌氧序列脱氯菌群级联反应序列",
+  "name": "厌氧序列脱氯菌群级联反应序列",
+  "type": "degradation_transformation",
+  "category": "natural",
+  "pollutants": [
+   "DDT"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（厌氧菌进化有机氯呼吸/共代谢序列脱氯）；属降解路线，单位点共转化先例无串联次序。",
+  "evidence": "Quensen 1998（DDE→DDMU）；Lesage 1991（B12/F430/血红素介导有机氯共代谢）",
+  "cat2": "natural"
+ },
+ {
+  "key": "白腐褐腐真菌胞外自由基介体氧化",
+  "name": "白腐/褐腐真菌胞外自由基介体氧化",
+  "type": "degradation_transformation",
+  "category": "natural",
+  "pollutants": [
+   "DDT"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（真菌进化木质素降解自由基化学）；approach-3 破坏路线不产生选择性。",
+  "evidence": "Bending 2002；Purnomo 2010（褐腐菌 Fenton 降解 DDT 63%/47%）；Fan 2013（白腐菌-漆酶协同）",
+  "cat2": "natural"
+ },
+ {
+  "key": "硫化物黑碳非生物脱氯界面",
+  "name": "硫化物-黑碳非生物脱氯界面",
+  "type": "degradation_transformation",
+  "category": "artificial",
+  "pollutants": [
+   "DDT"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "碰巧/非生物地球化学（硫化物-黑碳界面还原为地球化学过程，非进化酶体系）。",
+  "evidence": "Ding & Xu 2016 ES&T doi:10.1021/acs.est.6b03154（5 mM 硫化物+石墨粉脱氯）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "胆盐混合胶束肠道脂质吸收增溶传质",
+  "name": "胆盐混合胶束/肠道脂质吸收增溶传质",
+  "type": "interface",
+  "category": "natural",
+  "pollutants": [
+   "DDT"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化肠道脂质消化吸收胶束增溶）；超疏水 OCP 增溶为碰巧利用胶束分配。",
+  "evidence": "Pharmaceutical Research 1985（胆盐胶束增溶-摄取）",
+  "cat2": "natural"
+ },
+ {
+  "key": "酶诱导契合锁钥构象熵区分",
+  "name": "酶诱导契合/锁钥构象熵区分",
+  "type": "protein",
+  "category": "natural",
+  "pollutants": [
+   "DDT"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（进化底物结合诱导契合降低重组熵罚）；原理级转译。",
+  "evidence": "诱导契合/锁钥原理（DDT-A22 角度地图，教科书原理）",
+  "cat2": "natural"
+ },
+ {
+  "key": "醌类电子梭介体还原",
+  "name": "醌类电子梭（AQDS）介体还原",
+  "type": "degradation_transformation",
+  "category": "artificial",
+  "pollutants": [
+   "DDT"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "碰巧/非生物（醌电子梭为地球化学/人工介体电子传递，非进化酶体系）。",
+  "evidence": "J Environ Sci 2015（AQDS 电子梭加速 DDT 还原，摘要级）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "细菌50s核糖体多肽出口隧道npet",
+  "name": "细菌 50S 核糖体多肽出口隧道 NPET",
+  "type": "protein",
+  "category": "incidental",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "碰巧结合：NPET 进化为肽链转运通道，大环内酯碰巧结合阻塞肽链延伸；非进化来识别 ROX（框架示例 3 蛋白原型对照，非主干）。",
+  "evidence": "框架示例 3（NPET 为 ROX 天然靶标）；核糖体大环内酯结合为通行结构事实",
+  "cat2": "incidental"
+ },
+ {
+  "key": "大环内酯核酸适配体",
+  "name": "大环内酯核酸适配体（SELEX 体外筛选）",
+  "type": "other",
+  "category": "artificial",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "人工筛选：经 SELEX 体外筛选获得，框架 2026-07-21 表格性质声明明确排除（人工筛选/设计/合成生物学改造分子不构成仿生原型），本原型作废。",
+  "evidence": "无（PROTOTYPE_TEST_2026-07-21 首测提出，随即被表格性质声明作废）",
+  "cat2": "artificial"
+ },
+ {
+  "key": "天然核糖开关riboswitch",
+  "name": "天然核糖开关 riboswitch（TPP/FMN/SAM）",
+  "type": "other",
+  "category": "natural",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 1,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（细菌进化感知代谢物浓度，高选择性识别结构相近小分子）；非 SELEX 产物，满足自然界进化解决方案判据；天然配体为代谢物非大环内酯，属机制匹配非直接靶标。",
+  "evidence": "天然 TPP/FMN/SAM riboswitch（基因组自然序列，非 SELEX；PROTOTYPE_TEST_NONPROTEIN 补正版）",
+  "cat2": "natural"
+ },
+ {
+  "key": "纤维素纳米晶cnc手性胆甾相组装",
+  "name": "纤维素纳米晶 CNC 手性胆甾相组装",
+  "type": "self_assembly",
+  "category": "natural",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "弱/碰巧：纤维素进化为结构支撑，胆甾相为棒状自组装物理现象，进化功能属性弱，宜作软对应。",
+  "evidence": "CNC 胆甾相自组装（植物细胞壁纤维素，PROTOTYPE_TEST 角度 5）",
+  "cat2": "natural"
+ },
+ {
+  "key": "硅藻壳硅网络贝壳珍珠层砖泥生物矿化",
+  "name": "硅藻壳硅网络/贝壳珍珠层砖泥生物矿化",
+  "type": "biomineralization",
+  "category": "natural",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（硅藻/软体动物进化刚性有序防护矿化骨架，孔径/砖泥层级可调）；但纯尺寸筛分对尺寸相近大环内酯选择性不足。",
+  "evidence": "硅藻壳硅网络/珍珠层砖泥（PROTOTYPE_TEST 角度 6，形态学/仿生复制对比证据）",
+  "cat2": "natural"
+ },
+ {
+  "key": "天然dna二级结构分子开关",
+  "name": "天然 DNA 二级结构分子开关（i-motif/G-quadruplex）",
+  "type": "dynamic_response",
+  "category": "natural",
+  "pollutants": [
+   "ROX"
+  ],
+  "n_schemes": 2,
+  "groups": [
+   "fresh_1000（PFOA/BPA/PFBS/2,6-DCP/DDT/ROX 六轮次）"
+  ],
+  "note": "是（端粒/启动子区天然核酸二级结构，进化参与端粒保护与基因调控构象切换）；i-motif 酸性触发与 ROX 偏碱 pKa 的窗口匹配性需验证。",
+  "evidence": "端粒/启动子区天然 i-motif/G-quadruplex（PROTOTYPE_TEST 角度 7，非 SELEX）",
+  "cat2": "natural"
+ }
+]

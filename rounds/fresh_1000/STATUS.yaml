@@ -40,12 +40,12 @@ pollutants:
     angles_planned: 35
     attempted: 3
     passed: 0
-    terminated: 2
-    status: "phase_b（A01 终止 75/S12；A02 终止 76/S18；A03 r1 64→r2 运行中）"
+    terminated: 3
+    status: "phase_b（A01 终止 75/S12；A02 终止 76/S18；A03 终止 68/S19；前三槽全终止，氯酚区域选择性确为硬骨头，A04-A35 待回溯）"
     slots:
       A01: { r1: "74 revise 0c/4h（journal 权威；66 误投递）", r2: "73 revise 0c/2h", r3: "72 revise 0c/2h", r4: "75 revise 0c/2h（最终轮未过线）", status: terminated, file: SCHEMES/S12_A01_regio-steric_terminated.md, reason: "额度 3/3 用尽 75<85；区域位阻识别水相定量选择性先验低（选择性因子先验 <2），空腔-水化壳矛盾为架构内禀张力；残余价值为删除变体因果包方法学+非单调异构体序列签名" }
       A02: { r1: "66 revise 0c/4h（UGT 区域选择性结合启发的头基可及性识别，β-CD 窄口伯胺缘面吡啶酰胺双齿头基受体，方向取反转译偏好低水化遮蔽头基 2,6-DCP；4 high：H1 决定性判据 S1 设 pH 9.0 而双齿基元需中性酚互斥+其余）", r2: "76 terminate 0c/1h（闭合四 high：路线二选一 pH 5.0 中性酚+2×2 卤素析因归因+机制叙事同源耦合+E17 先例增量预注册；裁决者明示全修后上限约 80-81 仍不达 85，剩余差距归角度固有结构约束）", status: terminated, file: SCHEMES/S18_A02_UGT-headgroup-accessibility_terminated.md, reason: "氯酚区域异构体水相定量选择性先验低（与 A01 同源）；残余价值：2×2 卤素析因归因方法（复用须 ln α 形式+预注册精度与置信区间跨界默认落点）+阴性结果方法学+头基可及性描述符论证+CAS 更正 87-65-0" }
-      A03: { r1: "64 revise 0c/1h（咪唑鎓质子联锁 pH 门控双点位吸附-再生一体化，原型 FcRn pH 依赖结合-释放循环+Bohr 效应+溶酶体嗜性离子捕获；1 high+多 medium：ATK-01 开关比自洽性 Kd(6.5)/Kd(9.5)≈2.25-3.8 低于 G1≥5，r=0.2 触 F6）", status: "r2 待渲染（建中性-骨架/酚盐-质子化双点位/酚盐-去质子化弱点位三群体模型重校准 G1/F6）" }
+      A03: { r1: "64 revise 0c/1h（咪唑鎓质子联锁 pH 门控双点位吸附-再生一体化，原型 FcRn/Bohr/溶酶体嗜性离子捕获；1 high+多 medium：ATK-01 开关比自洽性）", r2: "68 terminate 0c/0h（建三群体模型重校准开关比+收窄为 pH 门控低 pKa 酚类富集器+eCFR/PubChem 在线核验；三条独立终止依据：选择性轴单参数 pKa 单调 D 维判负七候选第二正交维度穷举排除、核心概念被咪唑鎓-酚盐离子对酚吸附先例家族覆盖 E 维高风险、无溶剂再生与 µg/L 低浓工况内禀不相容开关比需 3.6×10³ vs 先验 1.7-17；裁决者独立估分诚实上限 ≤78）", status: terminated, file: SCHEMES/S19_A03_imidazole-pH-gated-adsorption-regeneration_terminated.md, reason: "pH 门控酚类富集为单参数 pKa 单调利用（非区域识别）；残余价值：三群体模型 θ×f 耦合门控定量归属+低 pKa 酚类富集序可预测性+四组因果对照+生物质子联锁原型参数化设计语言" }
   bpa:
     name: "双酚 A"
     brief: complete
@@ -204,6 +204,6 @@ pollutants:
 totals:
   attempted: 18
   passed: 3
-  terminated: 14
-  note: "PFOA 10 槽（1 通过 A02/9 终止）+ dcp26 3 槽（A01 终止 75/A02 终止 76/A03 r2 在途）+ bpa 3 槽（A01 通过 86/A02 终止 62/A03 终止 64）+ pfbs 2 槽（A05 终止 58/A17 通过 85）；3 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)；DDT Phase A 完成待 Phase B；原型库扩充进行中（ModA 已入库 expand/FABP4 在途）"
+  terminated: 15
+  note: "PFOA 10 槽（1 通过 A02/9 终止）+ dcp26 3 槽（A01 终止 75/A02 终止 76/A03 终止 68，前三槽全终止）+ bpa 3 槽（A01 通过 86/A02 终止 62/A03 终止 64）+ pfbs 2 槽（A05 终止 58/A17 通过 85）；3 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)；DDT Phase A 完成待 Phase B；原型库扩充进行中（ModA 已入库 expand/FABP4 在途）"
 last_updated: "2026-07-21"

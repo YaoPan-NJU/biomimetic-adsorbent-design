@@ -29,3 +29,17 @@
 ## 五、DDT 马拉松裁决
 - **S20 · DDT A04**（桥几何形状读出腔）：终止（66→60/5 high；形状读出不可与 DDE 共轭极化率隔离 + 部分包埋亲和力缺口 + 再生-轮廓互斥 + 预组织引文归属错误；与 A21 同族收敛触发诚实终止）。已提交 6105176。
 - **S21 · DDT A21**（双表位卤键阵列×芳基 π 口袋×轮廓正交预组织受体）：终止（82→78→79，0 critical/0 high；承重维卤键阵列水相去溶剂命门先验不利、二维回退=已终止 A04+A06 重组丧失三维非加和同一性、重建额度用满）。残余价值：三维非加和消融因子化方法学、DDD/DDE 样本外反转检验、水相卤键去溶剂命门定量刻画、C3v 三脚几何订正、框架合规蛋白原型使用范例。
+
+## 六、入库批次进度与 wave-3 待办（2026-07-22 凌晨）
+
+- 已提交入库：56 条（基础 42 + 新增 14）。新增 14 = 首批 6（ERRγ/DmpR/HSA/NTCP/lipocalin/TTR）+ 二批 8（SBP/KcsA/Lanmodulin/FcRn/PstS/氟乙酸脱卤酶/DDT-脱氯化氢酶/木质素过氧化物酶）。
+- 第三批 8 原型（GPR43/MscL/OATP/Acidimicrobium 还原脱氟/脱羧酶/蜕皮界面/肾单位/OAT4）已构建并返回，但结果未持久化（任务输出文件 0 字节、journal 无 result、转录结构化输出无法干净提取），需在全新上下文重挖。简报存 /Users/panyao/.claude/jobs/aff5e63b/tmp/BMDL_WAVE3_BRIEFS.md（job tmp 易失，重挖前若丢失需据 PROTOTYPE_INVENTORY 重建）。
+- 可靠入库管线（已验证）：返回-JSON Workflow → 优先从任务输出文件 result.entries 恢复（journal 常不全）→ 监督者亲自磁盘实证落盘（不信智能体自报告）→ 结构+诚实性复核 → merge_regs.py 中心化合并 feature-mapping → generate_prototype_md.py --prototype <id> 渲染 → 6 校验 grep id 0 ❌ → 提交 expand。
+- 已知坑：①子智能体写盘幻觉（须磁盘实证）；②journal/任务输出有时不落结果（须多路恢复）；③内容过滤（NTCP/降解酶，用临床中性表述规避）；④PstS 候选 1PST 实为光合反应中心，正确为 1PBP。
+- 后续：重挖 wave-3 → 继续按 PROTOTYPE_INVENTORY（真正仿生约 74，已入 14，余约 60）分批推向 100-120 → 三个通过方案全面重审 → 入库后统一质量审查。
+
+## 七、wave-3 部分恢复更新（2026-07-22）
+- journal 延迟落盘后恢复 wave-3 前 4 条并已提交：MscL 机械敏感通道(2OAR)、脱羧酶 ADC/OMPDC(1DV7)、Acidimicrobium 还原脱氟(4RAS)、OATP 肠肝摄取(8PG0)。**库达 60 条**（基础 42 + 新增 18）。
+- wave-3 仍缺 4 条待重挖：GPR43/FFAR2、OAT4（工作流失败项）、ecdysis 蜕皮界面、nephron 肾单位（journal/转录均不可恢复）。
+- 新增 18 = 首批 6（ERRγ/DmpR/HSA/NTCP/lipocalin/TTR）+ 二批 8（SBP/KcsA/Lanmodulin/FcRn/PstS/氟乙酸脱卤酶/DDT-脱氯化氢酶[深度版含 DDD 订正]/木质素过氧化物酶）+ 三批前 4（MscL/脱羧酶/Acidimicrobium/OATP）。
+- 真正仿生原型已入 18/~74，余 ~56 待挖（含 wave-3 缺 4 + 清单其余）。

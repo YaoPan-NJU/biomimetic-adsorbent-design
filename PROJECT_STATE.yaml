@@ -2,8 +2,8 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: fresh_1000_scheme_marathon
 status: in_progress
-last_completed_step: "PFBS Phase A 完成（2026-07-20）：五路调研 + 综合简报与角度地图入库（rounds/fresh_1000/pfbs/BRIEF.md 8 节 + DESIGN_SPACE.md 19 诚实可区分角度，161 条经核验证据含联邦公报/EPA HA/EFSA 全文核验）。注入修复后渲染器五路结果真正注入。两条启发式均判不够格。此前 BPA 完结：A01 通过 86/S14（BPA 首个通过/计划第二通过）、A02 终止 62/S13、A03 终止 64/S15，BPA 广度优先满足。"
-next_action: "PFBS Phase B：按 SPEC 批量跑方案槽（设计-攻击-裁决隔离工作流），优先低先例高价值角度 A05（铁载体两相捕获-回收）/A17（磺酸根 vs 羧酸根头基类型选择）/A18（氟化物核糖开关 F⁻ 传感），参照 PFOA 陷阱库（阳离子位点对硫酸根/磷酸根非选择性、链长单调、ng/L 传质、含氟吸附剂风险、摩尔比 10⁻⁶-10⁻⁹）；每个完成方案单独提交推 origin/Qwen；≥85 且零未决 critical/high 记通过。G-E17 待机构访问；dcp26 A02/A03 待回溯。"
+last_completed_step: "PFBS A17 通过（2026-07-21，85/100 零 critical/high，S17 入库）——PFBS 首个通过、计划第三通过（继 PFOA A02=85、BPA A01=86），轨迹 77→82→84→85：孔口几何双位点头基类型反差捕获（ModA/MolA 原型，T 三足硫脲匹配四面体磺酸根/P 中性平面双给体匹配平面羧酸根，R=α_T/α_P 反差签名）。85 认证严谨诚实双分支可发表闭环（非特异性正面主张大概率成立，S_deconvolution 阴性交付为真贡献承载）。DDT Phase A 完成（BRIEF+24 角度入库）。dcp26 A02 r1=66/A03 r1=64 待 r2。3 通过/18 attempted/13 终止。"
+next_action: "用户已决策原型库扩充策略：混合·结构数据优先接地（对有结构数据库可直接精确定位的原型如 DmpR PDB 6IY8、ERRγ PDB 2e2r、ModA PDB 1amf 做 from_source 接地，其余先 exploratory）+ 按污染物组织（先 PFOA/PFBS 全氟类，再 BPA/酚类，再 DDT/有机氯类）。下一步：在 Biomimetic-design-library 仓库 expand 分支按 V1-B schema 从历轮方案提取仿生原型入库（canon=prototypes_db/*.json，from_source 须 quote≤200+页码+scope_match，宁少而真）。并行推进 marathon：dcp26 A02/A03 r2、DDT Phase B 方案槽。"
 active_branch: Qwen
 last_verified_commit: 75c8144
 bmdl_policy: removed_from_branch

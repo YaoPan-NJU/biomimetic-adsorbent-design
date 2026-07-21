@@ -38,8 +38,8 @@
 - 已知坑：①子智能体写盘幻觉（须磁盘实证）；②journal/任务输出有时不落结果（须多路恢复）；③内容过滤（NTCP/降解酶，用临床中性表述规避）；④PstS 候选 1PST 实为光合反应中心，正确为 1PBP。
 - 后续：重挖 wave-3 → 继续按 PROTOTYPE_INVENTORY（真正仿生约 74，已入 14，余约 60）分批推向 100-120 → 三个通过方案全面重审 → 入库后统一质量审查。
 
-## 七、wave-3 部分恢复更新（2026-07-22）
-- journal 延迟落盘后恢复 wave-3 前 4 条并已提交：MscL 机械敏感通道(2OAR)、脱羧酶 ADC/OMPDC(1DV7)、Acidimicrobium 还原脱氟(4RAS)、OATP 肠肝摄取(8PG0)。**库达 60 条**（基础 42 + 新增 18）。
-- wave-3 仍缺 4 条待重挖：GPR43/FFAR2、OAT4（工作流失败项）、ecdysis 蜕皮界面、nephron 肾单位（journal/转录均不可恢复）。
-- 新增 18 = 首批 6（ERRγ/DmpR/HSA/NTCP/lipocalin/TTR）+ 二批 8（SBP/KcsA/Lanmodulin/FcRn/PstS/氟乙酸脱卤酶/DDT-脱氯化氢酶[深度版含 DDD 订正]/木质素过氧化物酶）+ 三批前 4（MscL/脱羧酶/Acidimicrobium/OATP）。
-- 真正仿生原型已入 18/~74，余 ~56 待挖（含 wave-3 缺 4 + 清单其余）。
+## 七、wave-3 全部完成更新（2026-07-22）
+- **wave-3 全 8 条完成**：MscL(2OAR)/脱羧酶(1DV7)/Acidimicrobium 还原脱氟(4RAS)/OATP(8PG0)/GPR43-FFAR2(8T3S)/OAT4(9U5A)/ecdysis 蜕皮界面(9L0P)/nephron 肾单位(5ZYS)。**库达 64 条**（基础 42 + 新增 22）。
+- 关键经验：任务输出文件/journal 结果**延迟填充**——工作流通知「完成」时输出 0 字节不代表失败，等候复查（数分钟至十余分钟）结果常自行落盘，wave-3 全 8 条均据此从任务输出/journal 恢复。早前的「OAT4 失败」「3 条不可恢复」均为延迟假象。
+- 新增 22 = 首批 6（ERRγ/DmpR/HSA/NTCP/lipocalin/TTR）+ 二批 8（SBP/KcsA/Lanmodulin/FcRn/PstS/氟乙酸脱卤酶/DDT-脱氯化氢酶[深度版含 DDD 订正]/木质素过氧化物酶）+ 三批 8（MscL/脱羧酶/Acidimicrobium/OATP/GPR43/OAT4/ecdysis/nephron）。
+- 真正仿生原型已入 22/~74，余 ~52 待挖（按清单继续第四批起）。

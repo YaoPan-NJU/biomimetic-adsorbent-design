@@ -94,10 +94,13 @@ pollutants:
     name: "全氟己烷磺酸 PFHxS"
     brief: complete
     angles_planned: 13
-    attempted: 0
+    attempted: 2
     passed: 0
-    terminated: 0
-    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，13 诚实可区分角度，上限 13<50；待进 Phase B 批量方案槽）"
+    terminated: 2
+    status: "phase_b（A01 终止 70/S31 头基维中性氢键笼；A07 终止 78/S28 盲腔深度窗口；前两槽均终止，PFAS 头基/链长识别内禀硬度，A03/A06/A09 等待回溯）"
+    slots:
+      A01: { r1: "69 revise 0c/4h（四面体磺酸头中性氢键笼几何识别）", r2: "70 revise 1c/0h（squaramide 去质子架空中性前提 critical）", r3: "81 revise 0c/0h（供体换硫脲全 pH 中性+订正 ng/L pM 缺口范畴错误，+11）", r4: "70 revise 0c/1h（终轮反降：主张收窄致机制削弱）", status: terminated, file: SCHEMES/S31_A01_tetrahedral-sulfonate-neutral-Hbond-cage_terminated.md, reason: "额度 3/3 用尽 69→70→81→70；头基维中性氢键对强水合磺酸头水相本质弱、绝对亲和主自疏水基线、头基差分含三反向成分净符号实验问题、四面体对平面几何识别为设计假设非生物先例直证；PFAS 头基识别内禀硬度同 PFOA；残余价值 BV50≈Kd·ρ_bed 口径更正+koff=kon·KD 慢解离非补偿澄清+硫脲中性供体选型" }
+      A07: { r1: "65 revise 0c/3h（C6 链长窗口刚性盲腔深度匹配）", r2: "75 revise 0c/1h（主平台改深腔 cavitand 同构系列+窗口重述长链伸出罚分反转+量热共轭极值升主判据，+10）", r3: "78 terminate 0c/0h（承重反转臂 M1 对一切长链不全埋体系近于必然成立无机制区分力、M2∩M3 确立难、溶液相游离 cavitand 多聚胶囊封顶消解伸出罚分、Å 级定深 cavitand 合成可达性差）", status: terminated, file: SCHEMES/S28_A07_blind-cavity-depth-window_terminated.md, reason: "额度内裁决判结构性天花板 65→75→78；残余价值两档价值主张分层方法学+M1 降必要条件 M2∩M3 裁决结构+溶液相对接枝相反差对照+硫酸盐占据模型压缩核算" }
     phase_a_note: "五路调研（run wf_e0dc3461-e0d，6 智能体/0 错误/293k tokens）+ 综合。经核验证据含美国 2024 PFAS NPDWR 正文核验（PFHxS 单项 MCLG/MCL 均 10 ng/L、危害指数成员、合规期 2029-04-26、2026-05-20 拟议规则 91 FR 29413 拟撤销监管的变动期）、Kim 2024 ACS ES&T Water PMC 正文核验（美国 9 座市政污水厂进出水 100% 检出、出水中位 1.8 ng/L、HI 0.2-6.1、活性污泥几乎无净去除且前体转化升短链 PFCA）、斯德哥尔摩公约 COP-10 决定 SC-10/13 附件 A 网页核验、EFSA 2020 四物质之和 TWI 4.4 ng/kg/周摘要核验、UCMR3 检出 207 样/55 系统正文核验、Oakey AFFF 羽地下水 <0.07-6 µg/L（Bräunig 2017）。画像：C6F13SO3H MW 400.12 长链全氟烷基磺酸，环境 pH 阴离子、持久可蓄积、2022 列入公约附件 A 消除类；水环境双峰（无点源 ng/L 级中位 1-12、AFFF 场地地下水 µg/L 级）。主目标场景市政二级出水及受纳水体/饮用水源（ng/L 级），实验点 10/100/1000 ng/L；10 ng/L≈25 pM 对 0.5 mM 硫酸根摩尔比~5×10⁻⁸（竞争物过量 10⁷-10⁸）。生物处理单元启发式不够格（穿透+净生成通道）；组织富集启发式够格附三硬归因约束（OAT4 转运 PFHxS 而排除 PFBS，Louisse 2023 摘要逐字核，链长选择性证据阶梯第 4 级——真实选择性锚）。角度地图：A01 四面体磺酸头中性氢键笼几何识别、A03/A06/A07 C6 链长窗口双轴/逆向印迹/刚性孔深度匹配、A09 捕获态还原电子注入活化、A10 C-S 切断+氟离去基捕获双半反应、A11 两性离子抗污界面分配等。"
   pcp:
     name: "五氯苯酚 PCP"

@@ -119,10 +119,12 @@ pollutants:
     name: "奥克立林"
     brief: complete
     angles_planned: 19
-    attempted: 0
+    attempted: 1
     passed: 0
     terminated: 0
-    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，19 诚实可区分角度，上限 19<50；待进 Phase B）"
+    status: "phase_b（A01 r1=75→r2=83，crit=0/high=0，revise→r3 在途；两 HIGH 已闭合，差 85 线为证据债+原创收窄限高）"
+    slots:
+      A01: { r1: "75 revise 0c/2h（电子亏缺氰基丙烯酸酯核供体-受体 CT 识别腔，光合反应中心供体-受体电子预组织原型）", r2: "83 revise 0c/0h（两 HIGH 闭合：合成前 DFT-SAPT 预筛门 + 实测电子学描述符替代跨语境 σp/反转降加分；d1 SAPT 升并列归属支柱、b1 非联苯胺受体二胺+CMR、b2 第三离散笼格式+逐成员 PXRD、g1 ng/L 依赖 A19+二次废液、c1 H2 降使能论证、a4 ng/L 柱 α、a5 DOM 芳组分位点竞争臂；kO3 经 PubMed 28535480 升 verified）", status: revise_r3_pending, file: SCHEMES/_wip/A01_r2.md, note: "83<85 差距为证据债（TTF 起始氧化电位/Moser 距离常数/Zhu2004 EDA 参数待全文核定）+ 原创增量收窄（一般 CT 捕获主题已被碘/硝基芳烃占用，增量收窄为首例中性高疏水污染物/首例紫外过滤剂+电子梯度因果系列）；r3 清偿证据债+稳固离散笼第三格式即达线" }
     phase_a_note: "五路调研（run wf_9edc1d13-569）+ 综合。经核验证据含欧盟委员会执行决定 2022/1307 与 2025/439 两份地表水监测清单题录经 EUR-Lex/EFTA/DIN/UNEP LEAP 多接口交叉确认（附件物质名待核验）、UV-328 2023 列入斯德哥尔摩公约（首个受管制紫外过滤剂）、OC/EHMC/avobenzone PBT 评估在途（REACH）、帕劳 RPPL 10-30 与美属维尔京群岛有毒三个 O 禁令（二次来源交叉确认法规正文待核验）；Kroll 2025 汇编 28 种欧盟授权有机紫外过滤剂水相浓度 OC 为最高者（全数据<0.3-4660 ng/L，全文）、吕讷堡 WWTP 进水 OC 均值 3.49 µg/L、加那利旅游岛进水最高 208 µg/L、青岛自然水体最高 356.24 ng/L 夏季升高、赫雷斯终出水溶解相紫外过滤剂最高 4-7 µg/L。画像：OC（CAS 6197-30-4，C24H27NO2，logKow~6.1）二苯甲酰基丙烯酸酯类紫外吸收剂，强季节性，强颗粒/污泥分配（青岛污泥 3842 ng/g），地下水监测空白；降解产物二苯甲酮（逆羟醛缩合）+ 氯化 11 种 DBP。主目标 S2-S3 市政二级出水/受纳地表水/娱乐水体（ng/L-低 µg/L）。最危险竞争物同类紫外过滤剂 EHMC/BP-3/4-MBC/homosalate/avobenzone + 自身降解产物二苯甲酮。22 条 DOI Crossref 题录自核（摘要级）。两条启发式均不够格（满 scale 污水厂 UV 过滤剂去除 92-99% 以上；OC 以脂肪酸共轭物/糖苷在珊瑚组织累积但无特异识别机制）。"
   betahch:
     name: "β-六氯环己烷 β-HCH"
@@ -231,5 +233,9 @@ totals:
   attempted: 22
   passed: 6
   terminated: 16
-  note: "PFOA 10 槽（1 通过 A02/9 终止）+ dcp26 3 槽（A01 终止 75/A02 终止 76/A03 终止 68，前三槽全终止）+ bpa 3 槽（A01 通过 86/A02 终止 62/A03 终止 64）+ pfbs 2 槽（A05 终止 58/A17 通过 85）；3 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)；DDT Phase A 完成待 Phase B；原型库扩充进行中（ModA 已入库 expand/FABP4 在途）"
+  passed_list: "6 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)/NP A01(92)/Dieldrin A01(89)/ROX A01(85)"
+  in_flight: "octocrylene A01 r2=83 revise→r3 在途（两 HIGH 已闭合）；dde A01 r1=69 revise→r2 在途；endosulfan A01 r1=62（1c/3h）revise→r2 在途；genx A01 终止(S33)"
+  phase_a_awaiting_b: "pcp/betahch/chloroform/hcbd/bde209/pcb209/ddt/tcdd 已完成 Phase A 待 Phase B"
+  hard_no_pass: "dcp26（3 槽全终止）/pfhxs（2 槽终止）为已试硬骨头，待回溯补角"
+  note: "广度优先：6/20 污染物已有通过方案；octocrylene 为第 7 个在途（r2 清空 critical/high，差 85 线为证据债+原创收窄）。原型库扩充在 Biomimetic-design-library@expand 分支进行中"
 last_updated: "2026-07-22"

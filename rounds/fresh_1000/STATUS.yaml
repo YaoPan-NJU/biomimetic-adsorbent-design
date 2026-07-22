@@ -87,10 +87,12 @@ pollutants:
     name: "六氟环氧丙烷二聚酸 GenX (HFPO-DA)"
     brief: complete
     angles_planned: 22
-    attempted: 0
+    attempted: 1
     passed: 0
-    terminated: 0
-    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，22 诚实可区分角度，上限 22<50；待进 Phase B 批量方案槽）"
+    terminated: 1
+    status: "phase_b（A01 终止 36/S33 氧阴离子洞中性氢键，首轮 2c/7h 裁决建议终止；中性氢键对 GenX 离域羧酸根+强水合永久阴离子本质不可行，应转 A03 多酚醚离子载体醚氧双锚角度）"
+    slots:
+      A01: { r1: "36 terminate 2c/7h（氧阴离子洞中性氢键供体阵列接枝活性炭；裁决者首轮即建议终止）", status: terminated, file: SCHEMES/S33_A01_oxyanion-hole-neutral-Hbond-AC_terminated.md, reason: "中性氢键氧阴离子洞对 GenX 羧酸头本质不可行四重缺陷：GenX 疏水机制近乎失效 logKow~0.5-1.5 活性炭容量仅弱碱树脂 1/4+中性脲供体已知强结合硫酸根=选择性负债+氧阴离子洞定域过渡态氧负离子 vs GenX 离域基态羧酸根保真度缺口+结合能上限不足 ng/L；残余价值 应转 A03/A04 醚氧双锚点（GenX 支链/醚氧区分正确路线）+QA-AC 阳离子对照机制差异" }
     phase_a_note: "五路调研（run wf_ff52c393-782，6 智能体/0 错误/346k tokens）+ 综合。经核验证据含美国 2024 PFAS NPDWR 正文核验（HFPO-DA 强制 MCL 10 ng/L、危害指数成员、合规期 2029-04-26）与 2022 GenX 终身健康咨询值 10 ppt（87 FR 36848）、Heydebreck 2015 ES&T 地表水首检（Scheur 河 73.1 ng/L）、Strynar 2015 新型全氟醚酸鉴定、Pan 2018 全球 160 样点 7 国频繁检出中位 0.95 ng/L、Gebbink 2017 荷兰厂区下游最高 812 ng/L、Kim 2024 市政污水厂 HFPO-DA 67% 检出、McCord 2019 Cape Fear 37 分子式/58 异构体全氟醚酸。画像：HFPO-DA 全氟-2-丙氧基丙酸，PFOA 替代品，主排放源氟化工设施；水环境双峰（远离点源亚 ng/L-个位 ng/L 全球中位 0.95、点源邻近数百-1100 ng/L）；强亲水短链醚酸，真实基质吸附竞争以亲水位点抢占+NOM 污堵为主（Park 2020 GAC 穿透）。主目标市政二级出水及受纳水体（ng/L 级，10 ng/L=MCL 阈值线），实验点 10/100/1000 ng/L；竞争谱含短链 PFCA/PFOA/F-53B/6:2 Cl-PFESA/Nafion 副产物。两条启发式均不够格（全氟醚骨架无 O-脱烷基把手=生物单元不适用；ADME 不代谢/尿快速排泄/大鼠半衰期~5h=无组织富集第一级）。角度地图：A01 氧阴离子洞中性氢键供体阵列、A02 SBP 纯氢键裂隙脲孔壁 COF、A03 多酚醚离子载体反极性醚氧双锚、A06/A07 草酸降解菌 OxlT 电荷不对称反向转运/电摆动门控、A09 HSA subdomain IIIA 支链亚腔两点笼、A12 还原脱卤酶取向吸附-还原复合体、A14 木质部 Murray 定律分级孔、A16 i-motif/G-四链体 pH 构象开关等，另 5 个对照集（A18-A22）。"
   pfhxs:
     name: "全氟己烷磺酸 PFHxS"
@@ -226,8 +228,8 @@ pollutants:
     status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，14 诚实可区分角度，上限 14<50；组织富集够格 AhR 高亲和锚；待进 Phase B）"
     phase_a_note: "五路调研（run wf_251b70df-f61）+ 综合。经核验证据含美国 EPA 饮用水 TCDD MCLG 零/MCL 30 pg/L 官方页面核验、WHO 二噁英实况页核验（TCDD 剧毒单体、419 种相关化合物约 30 种显著毒性、90%+ 暴露来自食物）、EFSA 2018 TWI 2 pg TEQ/kg/周（摘要核验）；休斯敦航道出水溶解相总 PCDD/F 0.16-13.23 pg/L TCDD 为溶解相 TEQ 最大贡献单体（Chemosphere 2015 摘要）、波兰 4 厂出水 PCDD 4.30-90.7 pg/L（Sci Rep 2019 全文 PMC6917701）、珀斯再生水二级出水中值 TEQ 4.5 pg/L TCDD 0.35-2 pg/L（IJERPH 2008 全文）、日本绫濑川 TEQ 0.26-7.0 pg-TEQ/L 8 样超基准 1.0（Chemosphere 2011 摘要）、越南 Agent Orange 遗留土壤/沉积物储库经食物链转移（Chemosphere 2002 摘要）、三氯生活性氯氯化水相原位生成二噁英（JHM 2019 摘要）。画像：C12H4Cl4O2 平面刚性二噁英、极疏水 logKow~6.8、水相极低溶 pg/L 级、主赋存土壤/沉积物/食品、AhR 芳烃受体高亲和配体。主目标溶解相 pg/L 级（须超痕量分析、Kd 要求极高）。最危险竞争物其他 PCDD/F 同系物（OCDD 优势/PeCDD）+dl-PCB。生物处理单元不够格（有机碳归一化疏水平衡分配向污泥）；组织富集够格附三条硬约束（第 4 级直接证据：AhR 直接结合 Gasiewicz&Rucci 1984 氚标 TCDD 跨物种——真实自然进化高亲和识别锚）。"
 totals:
-  attempted: 21
+  attempted: 22
   passed: 6
-  terminated: 15
+  terminated: 16
   note: "PFOA 10 槽（1 通过 A02/9 终止）+ dcp26 3 槽（A01 终止 75/A02 终止 76/A03 终止 68，前三槽全终止）+ bpa 3 槽（A01 通过 86/A02 终止 62/A03 终止 64）+ pfbs 2 槽（A05 终止 58/A17 通过 85）；3 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)；DDT Phase A 完成待 Phase B；原型库扩充进行中（ModA 已入库 expand/FABP4 在途）"
 last_updated: "2026-07-22"

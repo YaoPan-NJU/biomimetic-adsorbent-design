@@ -166,12 +166,13 @@ pollutants:
     status: queued
   dde:
     name: "滴滴伊 p,p'-DDE"
-    brief: pending
-    angles_planned: null
+    brief: complete
+    angles_planned: 15
     attempted: 0
     passed: 0
     terminated: 0
-    status: queued
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，15 诚实可区分角度，上限 15<50；待进 Phase B 批量方案槽）"
+    phase_a_note: "五路调研（run wf_0c29a692-e0f，6 智能体/0 错误/309k tokens）+ 综合。经核验证据含 WHO 饮用水准则 Table A3.3 原文核验（DDT and metabolites 导则 0.001 mg/L=1 µg/L，DDE 纳入总量无独立限值）、美国 40 CFR 141.61 定位（DDT MCLG=0/MCL=7 µg/L，DDE 纳入 DDT 类）、Narragansett Bay 被动采样溶解相 ΣDDT~0.23 ng/L（EnvPoll 2022=清洁-轻度影响亚 ng/L 背景）、孟加拉 Meghna 河 4,4'-DDE BDL-4.217 µg/L 致癌风险 10⁻⁵-10⁻⁴（2025=污染河流高 µg/L 端）、摩洛哥 Marchica 潟湖 Σ3DDTs max 11.99 ng/L、伊朗 Karkheh 饮用水源 DDT 10 ng/L 合规、非洲多水体总 DDT ND-81.2 µg/L（Heliyon 2024）、全球 56 国 POPs 系统综述（STOTEN 2021）。画像：p,p'-DDE（C14H8Cl4）DDT 好氧脱 HCl 产物、共轭二氯二苯乙烯、高疏水 logKow~6.5、水相极低溶、主蓄积库沉积物/生物相而非溶解相、与 DDT/DDD 共享双(4-氯苯基)骨架仅乙烷桥 C1 取代不同（DDT -CCl3/DDE =CCl2/DDD -CHCl2）；溶解相 ng/L 级。最危险竞争物为 DDT/DDD 结构近似物+其他 OCPs（HCH/狄氏剂/氯丹/七氯环氧化物）+PCBs。两条启发式均不够格（生物处理非特异疏水分配 logKow 线性；脂肪/血液~280:1 可被中性脂质分配解释无特异机制）。角度地图：A01 平面轮廓形状读出 COF 堆叠狭缝腔、A02 =CCl2 乙烯基二氯卤素相互作用图案读出（DDE 特异桥特征）、A03/A13/A14 类咕啉 Co-N4/血红素-黄素低电位还原中心捕获-还原耦合、A04 lipocalin 型尺寸窗口、A06 双(4-氯苯基)π 酸 EDA 电子富集芳壁、A10 桥取代基身份排斥守卫串联床（反向读出 DDT/DDD）、A11 形状-还原双正交核壳、A15 平面轮廓离散深腔 cavitand 等。"
   ddt:
     name: "滴滴涕 p,p'-DDT"
     brief: complete

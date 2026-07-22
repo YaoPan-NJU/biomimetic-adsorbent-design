@@ -191,28 +191,31 @@ pollutants:
     phase_a_note: "五路调研（run wf_47972af0-8ec）+ 综合（注入修复后渲染器，五路结果真正注入）；全文级证据含 Makgoba 2024 非洲 DDT 综述 PMC10979284 全文、Montuori 2020 Volturno 河全文（溶解相 ΣDDT ND-1.34 ng/L 均值 0.38、(DDD+DDE)/DDT=13.8-16.8 历史残留）、WHO 1 µg/L 准则值经综述全文引文核实、美国 EPA 40 CFR Part 141 经 eCFR 双版本核验无 DDT 饮用水 MCL。关键画像：logKow 6.5-6.9 高疏水、水溶度极低、强烈颗粒/沉积物分配、溶解相 ng/L 级；斯德哥尔摩公约附件 B 限制用途；最关键结构近似物为 p,p'-DDE（好氧脱 HCl）/p,p'-DDD（厌氧还原脱氯），共享双(4-氯苯基)骨架仅乙烷桥 C1 取代不同（DDT -CCl3/DDE =CCl2/DDD -CHCl2），环境浓度常远超母体。两条启发式均判不够格：生物处理单元（foc/Kow 控制非特异疏水分配、去除率-logKow 线性、DDE 98% 随污泥流）；组织富集（脂肪组织富集现象稳健但可被中性脂质分配充分解释，阶梯第 1 级充分但更高阶梯无特异机制）。承重仿生源为 approach-1（脱氯化氢酶 β-消除、类咕啉/黄素-血红素还原、lipocalin/SCP-2 架构、卤键阵列、胆盐胶束、白腐真菌自由基介体、醌类电子梭）+ approach-2 工程难题驱动。"
   dieldrin:
     name: "狄氏剂"
-    brief: pending
-    angles_planned: null
+    brief: complete
+    angles_planned: 17
     attempted: 0
     passed: 0
     terminated: 0
-    status: queued
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，17 诚实可区分角度，上限 17<50；组织富集有条件够格；待进 Phase B）"
+    phase_a_note: "五路调研（run wf_790f61f0-9da）+ 综合。经核验证据含 ATSDR 2022 艾氏剂/狄氏剂毒理学概况第 5 章全文核验（美国地表水 2016-2021 约 5500 点位检出率 0.4%/0.0746-41 ng/L、五大湖开阔水 0.07-0.4 ng/L、地下水检出率 2%/加州 1304 井全 ND、纽约 14 厂进水全 ND 仅 2 份出水 12-28 ng/L、logKow 4.32-6.2、水溶 0.110 mg/L、水相挥发半衰期 17 d、艾氏剂环氧化制得、1974 停产）、Toxics 2025 中国 WQC 全文核验（GB3838-2002 未收录狄氏剂、组织残留途径 WQC 3.86/1.4 ng/L、BAF 58884、既往急性基准 470 ng/L）、丹江口水库水相全 ND 沉积物最大 0.98 ng/g 检出率 4.4%、额尔齐斯河 ND-4.86 ng/L 均值 0.270、印度 Thamirabarani 河超 WHO/BIS 0.03 µg/L、加纳 Builpela 坝 3.29 µg/L、科索沃 Badovci 湖 ΣOCP 0.873-33.418 µg/L HI 571.3、全球淡水超标 4.6%/非洲亚洲 50%+。监管锚点 WHO/BIS 0.03 µg/L（aldrin+dieldrin 合计）、EU WFD EQS 10 ng/L、美国五大湖野生动物值 0.071 ng/L、加拿大 RBCA 1 ng/L。画像：C12H8Cl6O CAS 60-57-1 笼状含氧有机氯含环氧桥、艾氏剂环氧化代谢产物、高疏水 logKow 5.40、强吸附沉积物/脂相。主目标一般地表水/饮用水源溶解相（发达地区 0.1-40 ng/L 双峰、热点 µg/L 级）。最危险竞争物立体异构体异狄氏剂 endrin（同分子式仅 exo/endo 环氧构型相反）+前体艾氏剂+七氯环氧化物+异狄氏剂醛/酮。生物处理单元不够格（foc/Kow 非特异疏水分配）；组织富集有条件够格部分够格（分布稳健阶梯第 1 级充分，人脑 Fleming 1994 帕金森脑 6/20，须附归因约束）。"
   endosulfan:
     name: "硫丹"
-    brief: pending
-    angles_planned: null
+    brief: complete
+    angles_planned: 16
     attempted: 0
     passed: 0
     terminated: 0
-    status: queued
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，16 诚实可区分角度，上限 16<50；主目标农业区受纳地表水/饮用水源；待进 Phase B）"
+    phase_a_note: "五路调研（run wf_634a4a2a-7e8）+ 综合。经核验证据含斯德哥尔摩公约附件 A 消除类决定 SC-5/3（COP-5 2011 含特定豁免，official 页面核验）、IntechOpen 章节全文核验（α/β 水溶 0.32-0.33 mg/L、logKow 3.6-3.8、logKoc 3.5-4.1、碱性水水解半衰期 α 3.6 d/β 1.7 d、EPA 水生基准急性 0.22/慢性 0.05 µg/L、无 WHO 饮用水准则值）、Mackay 1993 水生归趋（沉积物结合 logKoc α 3.6/β 4.3、沉积物解吸限速）、Weber 2010 全球归趋综述（硫酸酯难降解、水相低浓度、北极长距离传输）；中国洱海饮用水水源多相监测硫丹硫酸酯显著生态风险（JHM 2025 摘要）、中国西北棉区禁用后土壤残留硫酸酯为主（FESE 2023 摘要）、中国全国河流风险建模硫丹仅占投入 0.4% 却为水生风险主贡献（EnvInt 2025 摘要）、印度夏季风跨境传输（Chemosphere 2022 摘要）。画像：C9H6Cl6O3S 环二烯有机氯含亚硫酸酯桥、α/β 异构体、低溶强沉积物分配、碱性水水解较快、硫酸酯难降解生态毒性显著、禁用后遗留性格局。主目标判为农业区受纳地表水/径流与饮用水水源湖库（溶解相 ng/L 级），市政二级出水保留对照。最危险竞争物硫丹硫酸酯/硫丹二醇代谢物 + 同类环二烯 aldrin/dieldrin/heptachlor/endrin。两条启发式均不够格（吸附/富集侧活性污泥絮体/EPS/生物膜/颗粒污泥专用去除研究零命中；组织分布稳健但脂质分配解释）。"
   tcdd:
     name: "2,3,7,8-四氯二苯并-p-二噁英 TCDD"
-    brief: pending
-    angles_planned: null
+    brief: complete
+    angles_planned: 14
     attempted: 0
     passed: 0
     terminated: 0
-    status: queued
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，14 诚实可区分角度，上限 14<50；组织富集够格 AhR 高亲和锚；待进 Phase B）"
+    phase_a_note: "五路调研（run wf_251b70df-f61）+ 综合。经核验证据含美国 EPA 饮用水 TCDD MCLG 零/MCL 30 pg/L 官方页面核验、WHO 二噁英实况页核验（TCDD 剧毒单体、419 种相关化合物约 30 种显著毒性、90%+ 暴露来自食物）、EFSA 2018 TWI 2 pg TEQ/kg/周（摘要核验）；休斯敦航道出水溶解相总 PCDD/F 0.16-13.23 pg/L TCDD 为溶解相 TEQ 最大贡献单体（Chemosphere 2015 摘要）、波兰 4 厂出水 PCDD 4.30-90.7 pg/L（Sci Rep 2019 全文 PMC6917701）、珀斯再生水二级出水中值 TEQ 4.5 pg/L TCDD 0.35-2 pg/L（IJERPH 2008 全文）、日本绫濑川 TEQ 0.26-7.0 pg-TEQ/L 8 样超基准 1.0（Chemosphere 2011 摘要）、越南 Agent Orange 遗留土壤/沉积物储库经食物链转移（Chemosphere 2002 摘要）、三氯生活性氯氯化水相原位生成二噁英（JHM 2019 摘要）。画像：C12H4Cl4O2 平面刚性二噁英、极疏水 logKow~6.8、水相极低溶 pg/L 级、主赋存土壤/沉积物/食品、AhR 芳烃受体高亲和配体。主目标溶解相 pg/L 级（须超痕量分析、Kd 要求极高）。最危险竞争物其他 PCDD/F 同系物（OCDD 优势/PeCDD）+dl-PCB。生物处理单元不够格（有机碳归一化疏水平衡分配向污泥）；组织富集够格附三条硬约束（第 4 级直接证据：AhR 直接结合 Gasiewicz&Rucci 1984 氚标 TCDD 跨物种——真实自然进化高亲和识别锚）。"
 totals:
   attempted: 18
   passed: 3

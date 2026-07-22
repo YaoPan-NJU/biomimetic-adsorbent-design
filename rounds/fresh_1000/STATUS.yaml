@@ -74,12 +74,13 @@ pollutants:
     phase_a_note: "五路调研（run wf_bfd571d4-951）+ 综合（注入修复后渲染器，五路结果真正注入）；161 条经核验证据（联邦公报 NPDWR/UCMR5 全文、EPA 2022 PFBS HA 全文、EFSA 2020 全文 178 处 PFBS 抽查、Hu 2016 全文）。关键监管：EPA PFBS 终身 HA 2000 ng/L、2024 NPDWR 纳入 HI 混合物 MCL 2000 ng/L（无单项 MCL）、UCMR3 检出极低（8/4920 PWS）、EFSA 未将 PFBS 纳入 PFOA/PFOS/PFNA/PFHxS 组 TDI。两条启发式均判不够格：生物处理单元（出水 100% 检出、进出水负荷相当、前体转化反升短链 PFCA、碳吸附/离子交换对短链差）；组织富集（BCF/BAF 显著低于长链 PFSA、大鼠毒代消除最快尿排泄最高）。承重仿生源为 approach-1 机制匹配（NTCP/OAT4/GPR43-109A/NIS/ASBT/ModA 转运识别、铁载体架构、氟化物核糖开关）+ approach-2 工程难题驱动。低先例高价值角度：A05（铁载体两相捕获-回收）、A17（磺酸根 vs 羧酸根头基类型选择）、A18（氟化物核糖开关 F⁻ 传感）。PFOA 陷阱库可参照（阳离子位点对硫酸根/磷酸根非选择性、链长单调、ng/L 传质、含氟吸附剂风险、DOM 分组分、摩尔比 10⁻⁶-10⁻⁹）。"
   rox:
     name: "罗红霉素 ROX"
-    brief: pending
-    angles_planned: null
+    brief: complete
+    angles_planned: 22
     attempted: 0
     passed: 0
     terminated: 0
-    status: queued
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，22 诚实可区分角度，上限 22<50；待进 Phase B 批量方案槽）"
+    phase_a_note: "五路调研（run wf_1dee5b26-56f，6 智能体/0 错误/293k tokens）+ 综合。经核验证据含大环内酯全球水体综述（JHM 2022 439:129628 最高 3847 ng/L）、珠江流域 STP（JHM 2024 476:135046）、长江下游（Environ Pollut 2025 384:126984）、武汉饮用水源（Environ Res 2023 239:117295）等多源一手监测，均经 PubMed efetch 摘要核验 + Crossref 题录自核。画像：14 元大环内酯（C41H76N2O15，MW 837，logP 1.7/XLogP 3.1，TPSA 217），去氧糖胺叔胺 pKa~8.8-9.0 环境 pH 下质子化阳离子（类内共有，无类内选择性），相对红霉素/克拉霉素仅差 C9 肟醚一臂、相对 15/16 元环仅差环尺寸。中国为主要生产使用国、欧洲出水未检出（区域分异）。无合规数值限值（中国类别管控不点名、欧盟限值仅针对红霉素），价值窗口在生态风险界面。两条启发式均判不够格：生物处理单元（非特异静电+大环疏水分配，logKd 0.8-1.9，且罗红霉素抑制污泥厌氧消化=负面效应）；组织富集（14C 胞内/外比 14-190 约半数溶酶体结合，但为通用弱碱溶酶体捕获类属机制，无罗红霉素特异结合/转运证据）。承重识别基础窄：肟醚读取（A02 氢键/A03 配位/A04 穿链）+14 元环几何（A05）；portfolio_100 已探 20 角最高 78 无一达 85。主线潜力最高 A01 核糖体 50S 出口隧道 NPET（23S rRNA 非蛋白氢键阵列+尺寸狭缝，Schlünzen 2001 罗红霉素共晶）。"
   genx:
     name: "六氟环氧丙烷二聚酸 GenX (HFPO-DA)"
     brief: pending

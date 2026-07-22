@@ -110,60 +110,67 @@ pollutants:
     phase_a_note: "五路调研（run wf_210a8b3c-43d，6 智能体/0 错误/297k tokens）+ 综合。经核验证据含 ATSDR 2024 毒理学概况全文（EPA 第三轮六年审查 40322 座公共供水系统 0.56% 检出/0.027% 超 MCL、NPL 场地水相中位 410 µg/L）、美国 NPDWR MCLG 零/MCL 1 µg/L 与 2015 人体健康基准 0.03/0.04 µg/L 官方核验、斯德哥尔摩公约附件 A 决定 SC-7/13 官方核验、IARC 2019 1 类致癌物；长江干流 144 样检出率 88.9% <MDL-9.97 ng/L（Yang 2024 ESPR）、鄱阳湖灭螺区 0.01-0.43 µg/L 本地 AWQC 0.02 µg/L（Xu 2023）、氯酚同族物竞争谱 0.9-172 ng/L（Front Toxicol 2023 全文）。14 条 DOI 全经 Crossref 题录自核、4 份官方文件直读。画像：CAS 87-86-5、pKa 4.75，pH 6-9 天然水体以五氯酚氧阴离子为主，识别对象=弱酸阴离子+五氯代芳环组合特征；最危险竞争物为同族氯酚（2,4-DCP/2,4,6-TCP/2,3,4,6-TeCP）加三氯生/硝基酚/腐殖酸，单靠疏水或静电不足以区分。主目标场景中国一般流域地表水/饮用水源溶解相（亚 ng/L-10 ng/L，灭螺区湖盆 10-430 ng/L 高端）；ng/L 工况需 Kd~10⁴ L/kg。两条启发式均判条件够格附三项转译约束（吸附机制层不够格、富集现象本身不够格，仅可提取非蛋白/pH 动态线索）。角度地图蛋白/非蛋白混合：A01 TTR 反向模式卤代酚通道、A02 SBP 预组织中性氢键酚氧、A03 卤键 σ 空穴五点几何、A04 全氯环 snug-fit 环糊精、A07 还原脱卤酶区域选择性氯位构型识别等。"
   octocrylene:
     name: "奥克立林"
-    brief: pending
-    angles_planned: null
+    brief: complete
+    angles_planned: 19
     attempted: 0
     passed: 0
     terminated: 0
-    status: queued
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，19 诚实可区分角度，上限 19<50；待进 Phase B）"
+    phase_a_note: "五路调研（run wf_9edc1d13-569）+ 综合。经核验证据含欧盟委员会执行决定 2022/1307 与 2025/439 两份地表水监测清单题录经 EUR-Lex/EFTA/DIN/UNEP LEAP 多接口交叉确认（附件物质名待核验）、UV-328 2023 列入斯德哥尔摩公约（首个受管制紫外过滤剂）、OC/EHMC/avobenzone PBT 评估在途（REACH）、帕劳 RPPL 10-30 与美属维尔京群岛有毒三个 O 禁令（二次来源交叉确认法规正文待核验）；Kroll 2025 汇编 28 种欧盟授权有机紫外过滤剂水相浓度 OC 为最高者（全数据<0.3-4660 ng/L，全文）、吕讷堡 WWTP 进水 OC 均值 3.49 µg/L、加那利旅游岛进水最高 208 µg/L、青岛自然水体最高 356.24 ng/L 夏季升高、赫雷斯终出水溶解相紫外过滤剂最高 4-7 µg/L。画像：OC（CAS 6197-30-4，C24H27NO2，logKow~6.1）二苯甲酰基丙烯酸酯类紫外吸收剂，强季节性，强颗粒/污泥分配（青岛污泥 3842 ng/g），地下水监测空白；降解产物二苯甲酮（逆羟醛缩合）+ 氯化 11 种 DBP。主目标 S2-S3 市政二级出水/受纳地表水/娱乐水体（ng/L-低 µg/L）。最危险竞争物同类紫外过滤剂 EHMC/BP-3/4-MBC/homosalate/avobenzone + 自身降解产物二苯甲酮。22 条 DOI Crossref 题录自核（摘要级）。两条启发式均不够格（满 scale 污水厂 UV 过滤剂去除 92-99% 以上；OC 以脂肪酸共轭物/糖苷在珊瑚组织累积但无特异识别机制）。"
   betahch:
     name: "β-六氯环己烷 β-HCH"
-    brief: pending
-    angles_planned: null
+    brief: complete
+    angles_planned: 21
     attempted: 0
     passed: 0
     terminated: 0
-    status: queued
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，21 诚实可区分角度，上限 21<50；待进 Phase B）"
+    phase_a_note: "五路调研（run wf_55d274a7-324）+ 综合。经核验证据含斯德哥尔摩公约 α/β-HCH 化学概况页面全文核验（β-HCH CAS 319-85-7 经 COP-4 决定 SC-4/11 列入附件 A 无豁免、林丹生产非故意副产物每吨林丹约产生 6-10 吨其他异构体、较冷地区水中高度持久、北极食物网生物积累、对人类可能致癌）、美国 NPDWR 页面核验（林丹 γ-HCH MCL/MCLG 均 0.2 µg/L，α/β-HCH 与总六六六不在限值表内）、Wilk/Willett 1998 ES&T HCH 异构体差异毒性与全球归趋权威综述（β-HCH 全平伏氯构型最稳定抗降解难挥发、老化后占比升高、最终成主导异构体）；中国 20010 地下水监测点全国调查（J Con Hyd 2026）、太湖浅层地下水 β-HCH 多为优势 HCH 异构体（STOTEN 2014）、捷克 Hajek 人工湿地 HCH 去除异构体序 α=γ=δ>β=ε β-HCH 最难去除（STOTEN 2024）、西班牙 Sardas 林丹工厂场地厌氧 HCH 转化（JHM 2025）、巴西饮用水林丹-HCH 均值 2.17 µg/L 超美国 MCL 一个数量级（EnvInt 2022）。画像：β-HCH（C6H6Cl6）六氯环己烷热力学最稳定异构体（全平伏氯），高疏水 logKow~5、水相低溶、持久、林丹生产副产物遗留、环境老化后占比升高最难去除。最危险竞争物 α/γ/δ-HCH 异构体（仅氯取向不同）+六氯苯杂质。生物处理单元边界够格（降解分支林丹脱氯化氢酶 LinA/脱卤酶机制清晰；吸附分支有机质平衡分配不够格）；组织富集不够格（人体消除半衰期中位 7.2 年与体脂正相关，脂质分配+代谢持久性两通道解释）。"
   chloroform:
     name: "三氯甲烷"
-    brief: pending
-    angles_planned: null
+    brief: complete
+    angles_planned: 20
     attempted: 0
     passed: 0
     terminated: 0
-    status: queued
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，20 诚实可区分角度，上限 20<50；主目标出厂水/管网末梢饮用水；待进 Phase B）"
+    phase_a_note: "五路调研（run wf_5fb76761-139）+ 综合。经核验证据含美国 EPA TTHM MCL 0.080 mg/L 与单物种 MCLG 三氯甲烷 0.07 mg/L 页面直读核验（Stage 1/2 DBPR）、USGS Moran 2006 全国约 3500 井地下水事实简报页面直读核验、WHO 指导值 300 µg/L（Hernández 2025 佐证）、欧盟总 THM 100 µg/L、中国 GB 5749-2022 单物种 60 µg/L；厄瓜多尔昆卡出厂/管网水 CHCl3 实测 11.75-21.88 µg/L、清迈 TTHM 峰值 189.52 µg/L（Sriboonnak 2021）。画像：CHCl3 饮用水氯化消毒生成量最大的三卤甲烷 DBP，易挥发、弱极性 logKow~2、缺强结合位点。主目标场景判为出厂水/管网末梢饮用水（消毒时生成、管网末梢累积峰值，区别于默认市政二级出水——后者受挥发约束退居条件性次目标）；实验浓度 10/30-60/80-190 µg/L。共存谱为同族 BDCM/DBCM/溴仿 + HAA/HAN/HAM 卤代 DBP 家族 + 腐殖酸前体。生物处理单元弱够格附四项约束（去除以挥发为主、好氧降解近可忽略，可提曝气传质/气液界面非蛋白线索）；组织富集不够格（BCF 个位数量级可由溶解度预测）。"
   hcbd:
     name: "六氯丁二烯 HCBD"
-    brief: pending
-    angles_planned: null
+    brief: complete
+    angles_planned: 13
     attempted: 0
     passed: 0
     terminated: 0
-    status: queued
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，13 诚实可区分角度，上限 13<50；主目标工业点源废水；待进 Phase B）"
+    phase_a_note: "五路调研（run wf_c95a9c02-b08）+ 综合。经核验证据含 WHO 饮用水准则第 4 版化学概况全文读取（HCBD 准则值 0.6 µg/L、TDI 0.2 µg/kg/d、地表水数个 µg/L、饮用水<0.5 µg/L、化工厂废水最高 6 µg/L、GAC 可实现 0.001 mg/L）、中国《重点管控新污染物清单（2023 年版）》第 5 项 HCBD 禁生产/加工使用/进出口 gov.cn 原文页面读取、《有毒有害水污染物名录（第一批）》2019 不含 HCBD 负证据、GB 3838-2002 表 3 特定项目限值 0.6 µg/L、斯德哥尔摩公约附件 A（SC-7/12）+附件 C 非有意生产（SC-8/12）、欧盟 WFD MAC-EQS 0.6 µg/L/生物相 EQS 55 µg/kg 湿重（2022 CIS 档案转述，指令原文本轮不可达）；中国两家四氯乙烯厂反应区污泥 72700 µg/kg（IJERPH 2023 全文）、日内瓦湖 2016 年 100% 检出、加拿大 St. Clair 河与美国 Bayou d'Inde 点源邻近最高约 300-350 µg/kg。画像：C4Cl6 MW 260.8 全氯代 C4 烯烃，无氢键位点、化学惰性、logKow 4.78-4.9、水溶 3.2 mg/L、蒸气压 20-36 Pa 高挥发性、沉积物 Kd~11292 L/kg；环境存在模式为点源工业残液/废水+沉积物库+生物相而非市政出水型（中试厂 72% 吸附污泥）。主目标判为工业点源废水及点源影响区地表水（µg/L 级），验证场景饮用水源（亚 µg/L，锚 0.6 µg/L），市政二级出水列不适用附论证。实验浓度 0.1/1/10 µg/L 须密闭体系做挥发/器壁吸附质量平衡。最近似竞争物六氯乙烷 HCE+五氯丁二烯。11 个 DOI Crossref 题录自核。生物处理单元弱够格附严格约束（降解侧厌氧序贯还原脱氯主产物四氯丁二烯>90%；吸附侧整体疏水分配不够格）；组织富集不够格（脂肪富集由脂质疏水分配充分解释）。"
   bde209:
     name: "十溴二苯醚 BDE-209"
-    brief: pending
-    angles_planned: null
+    brief: complete
+    angles_planned: 26
     attempted: 0
     passed: 0
     terminated: 0
-    status: queued
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，26 诚实可区分角度，上限 26<50；待进 Phase B）"
+    phase_a_note: "五路调研（run wf_962c0b4b-b91）+ 综合。经核验证据含美国 TSCA 6(h) deca-BDE 2021 分阶段禁令（86 FR 880）与 2024 修订规则（89 FR 91486，2025-01-21 起禁止向水体释放）Federal Register 官方接口全文核验、斯德哥尔摩公约附件 A 消除类、欧盟 REACH 附件 XVII 0.1% 门槛、EFSA 2024 为 BDE-209 导出 BMDL；日本 deca-BDE 设施出水 PBDE 中位 610 ng/L（Suzuki 2021）、印度工业走廊溶解相 ΣPBDE 103-196 ng/L（Chakraborty 2026）、沱江沉积物 DBDPE/BDE-209 比 1.38-2.76 示替代趋势。画像：C12Br10O 超大疏水分子，水溶度<100 ng/L（PubChem OECD 105 实测核验）、logKow~10，实际水体主赋存悬浮颗粒/胶体/微塑料/污泥，溶解相受溶度上限约束。主目标 S1/S2 工业点源出水与工业走廊受纳水体（唯一提供 ng/L 级以上 BDE-209 水相负荷界面）。结构最近似竞争者 DBDPE（仅差乙烷桥）+ 重溴 PBDE 同系物。18 条 DOI Crossref 题录自核（摘要级）。两条启发式均不够格（市政处理几乎完全分配悬浮固体/污泥由 Koc 控制；大鼠 14C-BDE-209 分布可由脂分配解释）。"
   np:
     name: "壬基酚 NP"
-    brief: pending
-    angles_planned: null
+    brief: complete
+    angles_planned: 19
     attempted: 0
     passed: 0
     terminated: 0
-    status: queued
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，19 诚实可区分角度，上限 19<50；待进 Phase B）"
+    phase_a_note: "五路调研（run wf_432cd329-e10）+ 综合。经核验证据含中国《重点管控新污染物清单（2023 年版）》部令第 28 号第十二项 NP 三项源头禁用官方 PDF 核验、《有毒有害水污染物名录（第一批）》2019 不含 NP 官方 PDF 核验、欧盟 WFD 优先物质第 17 号 AA-EQS 0.3/2.0 µg/L（待原文核验）、加拿大 WQG 1000 ng/L、美国 EPA 2005 水生基准 CMC~190/CCC~6.6 µg/L（待核验）；混合纺织-市政厂出水 0.53-1.4 µg/L、加拿大 241 样 1.29-477 ng/L、东江最高 14540 ng/L、武汉水源城区 92.3 ng/L。画像：酚头基+C9 壬基疏水尾两亲烷基酚（C15H24O，CAS 25154-52-3），NPEO 降解终端产物，pKa~10 环境 pH 6-8 中性分子（静电无效）、logKow~4.5-5.2 强亲固相。主目标市政二级出水（ng/L-低 µg/L，要求 Kd~10⁴ L/kg）。最危险竞争物辛基酚 OP（仅 C9 vs C8）+ NP1EO/NP2EO 前体 + BPA 异类酚。20 篇一手文献 Crossref 题录自核（摘要级）。生物处理单元部分够格（降解侧 ipso 羟基化途径机制清晰沿证据阶梯收敛；吸附/富集侧不够格）；组织富集不够格（人体配对脂肪/肝/脑 4n-NP 多低于定量限）。注：本轮 proto_classical 路内容安全分类器临时不可用，综合者输出已就证据自洽性核验。"
   pcb209:
     name: "多氯联苯-209 PCB-209"
-    brief: pending
-    angles_planned: null
+    brief: complete
+    angles_planned: 23
     attempted: 0
     passed: 0
     terminated: 0
-    status: queued
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，23 诚实可区分角度，上限 23<50；PCB-209 单体无实测水浓度负面发现；待进 Phase B）"
+    phase_a_note: "五路调研（run wf_920b2be4-157）+ 综合。关键负面发现（search_executed）：2019 年后无文献报道 PCB-209 单体在任一真实水体的实测浓度；水相 PCB 检出由低氯至中氯同系物主导，矿区排水检出最高氯数亦仅七氯（Wolkersdorfer 2025 综述全文 verified）。经核验证据含美国 EPA 总 PCB 饮用水 MCL 0.0005 mg/L（官方表 verified）、PCB 不在欧盟 WFD 优先物质清单（2013/39/EU 页面 verified）、斯德哥尔摩公约 2025/2028 消除时间表（公约官网 verified）；溶解相 ΣPCB 一般流域 0.065-1.92 ng/L（北洛河 2023 均值 0.37）、饮用水源 0.04-11 ng/L（加纳 Pra 河 2025）、单同系物水相最高 PCB-167 达 1860 ng/L（Udu 河 2022）。画像：C12Cl10 MW 498.6 XLogP3 8.3（PubChem API verified）、全氯代无氢键位点/无解离/平面刚性、水溶度推断 ng/L 级。PCB-209 单体水相浓度只能以 ΣPCB 量级+单体份额推断（pg/L-亚 ng/L），不得声称实测。主目标市政二级出水及受纳地表水溶解相。竞争谱须含低氯同系物（水相主体）+ 高氯同类 PCB-170/180/194 + 跨类全卤代姊妹物 BDE-209。两条启发式均不够格（污水厂归宿污泥相整体疏水分配；人血 PCB 以六/七氯持久同系物主导，类级分布无 PCB-209 特异机制）。"
   dde:
     name: "滴滴伊 p,p'-DDE"
     brief: complete
@@ -211,4 +218,4 @@ totals:
   passed: 3
   terminated: 15
   note: "PFOA 10 槽（1 通过 A02/9 终止）+ dcp26 3 槽（A01 终止 75/A02 终止 76/A03 终止 68，前三槽全终止）+ bpa 3 槽（A01 通过 86/A02 终止 62/A03 终止 64）+ pfbs 2 槽（A05 终止 58/A17 通过 85）；3 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)；DDT Phase A 完成待 Phase B；原型库扩充进行中（ModA 已入库 expand/FABP4 在途）"
-last_updated: "2026-07-21"
+last_updated: "2026-07-22"

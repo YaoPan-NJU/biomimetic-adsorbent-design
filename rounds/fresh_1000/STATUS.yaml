@@ -157,10 +157,12 @@ pollutants:
     name: "壬基酚 NP"
     brief: complete
     angles_planned: 19
-    attempted: 0
-    passed: 0
+    attempted: 1
+    passed: 1
     terminated: 0
-    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，19 诚实可区分角度，上限 19<50；待进 Phase B）"
+    status: "phase_b_breadth_first（A01 通过 92/S26，NP 广度优先满足；r1=82 revise 1h→r2=92 pass 0c/0h；后续可回溯 A02-A19）"
+    slots:
+      A01: { r1: "82 revise 0c/1h（ipso 途径逆向标尺，α-四级碳拓扑形状选择腔；1 high 交联剂氯甲基芳烃 CMR+泄漏锚定）", r2: "92 pass 0c/0h（闭合全部 10 条台账：成网改非 CMR 点击/自由基路线、泄漏重锚健康基准 TTC 0.75 µg/L、E7 Lu2015 相关方向经 PubMed 摘要内容核验确认 R²=0.76 立体效应指数正相关、深腔笼两级 go/no-go 门+胶囊抑制论证、HC1 电子性→几何性重释；维度齐备）", status: passed, file: SCHEMES/S26_A01_ipso-alpha-quaternary-topology-cavity_passed.md, note: "NP 首个通过方案，千方案计划第四通过（继 PFOA A02/BPA A01/PFBS A17）；Sphingobium Bayram/TTNP3 ipso 羟基化途径 α-四级碳底物判据的几何转译，非蛋白间苯二酚芳烃深腔笼，生物留下/材料捕获的应用端逆读标尺" }
     phase_a_note: "五路调研（run wf_432cd329-e10）+ 综合。经核验证据含中国《重点管控新污染物清单（2023 年版）》部令第 28 号第十二项 NP 三项源头禁用官方 PDF 核验、《有毒有害水污染物名录（第一批）》2019 不含 NP 官方 PDF 核验、欧盟 WFD 优先物质第 17 号 AA-EQS 0.3/2.0 µg/L（待原文核验）、加拿大 WQG 1000 ng/L、美国 EPA 2005 水生基准 CMC~190/CCC~6.6 µg/L（待核验）；混合纺织-市政厂出水 0.53-1.4 µg/L、加拿大 241 样 1.29-477 ng/L、东江最高 14540 ng/L、武汉水源城区 92.3 ng/L。画像：酚头基+C9 壬基疏水尾两亲烷基酚（C15H24O，CAS 25154-52-3），NPEO 降解终端产物，pKa~10 环境 pH 6-8 中性分子（静电无效）、logKow~4.5-5.2 强亲固相。主目标市政二级出水（ng/L-低 µg/L，要求 Kd~10⁴ L/kg）。最危险竞争物辛基酚 OP（仅 C9 vs C8）+ NP1EO/NP2EO 前体 + BPA 异类酚。20 篇一手文献 Crossref 题录自核（摘要级）。生物处理单元部分够格（降解侧 ipso 羟基化途径机制清晰沿证据阶梯收敛；吸附/富集侧不够格）；组织富集不够格（人体配对脂肪/肝/脑 4n-NP 多低于定量限）。注：本轮 proto_classical 路内容安全分类器临时不可用，综合者输出已就证据自洽性核验。"
   pcb209:
     name: "多氯联苯-209 PCB-209"
@@ -193,10 +195,12 @@ pollutants:
     name: "狄氏剂"
     brief: complete
     angles_planned: 17
-    attempted: 0
-    passed: 0
+    attempted: 1
+    passed: 1
     terminated: 0
-    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，17 诚实可区分角度，上限 17<50；组织富集有条件够格；待进 Phase B）"
+    status: "phase_b_breadth_first（A01 通过 89/S27，狄氏剂广度优先满足；r1=70 revise 2h→r2=89 pass 0c/0h；后续可回溯 A02-A17）"
+    slots:
+      A01: { r1: "70 revise 0c/2h（环氧桥双氢键供体 exo-环氧识别腔；H1 疏水层近简并前提与实测 logKow 冲突、H2 解耦阈值标定错误）", r2: "89 pass 0c/0h（全部接受勘误：采用实测 logKow 艾氏剂 6.50/狄氏剂 5.40/异狄氏剂 5.20 重算疏水本底、 claims 收窄为异狄氏剂对 EF≥2.5+艾氏剂对方向性验证、撤销低介电微环境声称改保守基准+阶段 0 模型化合物水相滴定 go/no-go、A302S 降为调制性证据、供体改预合成双 NH 双齿方酰胺；先例风险 low 经独立检索确证无设计型水相环氧锚定腔空白）", status: passed, file: SCHEMES/S27_A01_exo-epoxide-dual-Hbond-cavity_passed.md, note: "狄氏剂首个通过方案，千方案计划第五通过；GABA/Rdl 刚性疏水腔+单一极性接触调制原理（毒效靶标仅作机制原型）转译 SBA-15 孔壁方酰胺双 NH 阵列，exo-狄氏剂 vs endo-异狄氏剂几何读出，非 logKow 单调" }
     phase_a_note: "五路调研（run wf_790f61f0-9da）+ 综合。经核验证据含 ATSDR 2022 艾氏剂/狄氏剂毒理学概况第 5 章全文核验（美国地表水 2016-2021 约 5500 点位检出率 0.4%/0.0746-41 ng/L、五大湖开阔水 0.07-0.4 ng/L、地下水检出率 2%/加州 1304 井全 ND、纽约 14 厂进水全 ND 仅 2 份出水 12-28 ng/L、logKow 4.32-6.2、水溶 0.110 mg/L、水相挥发半衰期 17 d、艾氏剂环氧化制得、1974 停产）、Toxics 2025 中国 WQC 全文核验（GB3838-2002 未收录狄氏剂、组织残留途径 WQC 3.86/1.4 ng/L、BAF 58884、既往急性基准 470 ng/L）、丹江口水库水相全 ND 沉积物最大 0.98 ng/g 检出率 4.4%、额尔齐斯河 ND-4.86 ng/L 均值 0.270、印度 Thamirabarani 河超 WHO/BIS 0.03 µg/L、加纳 Builpela 坝 3.29 µg/L、科索沃 Badovci 湖 ΣOCP 0.873-33.418 µg/L HI 571.3、全球淡水超标 4.6%/非洲亚洲 50%+。监管锚点 WHO/BIS 0.03 µg/L（aldrin+dieldrin 合计）、EU WFD EQS 10 ng/L、美国五大湖野生动物值 0.071 ng/L、加拿大 RBCA 1 ng/L。画像：C12H8Cl6O CAS 60-57-1 笼状含氧有机氯含环氧桥、艾氏剂环氧化代谢产物、高疏水 logKow 5.40、强吸附沉积物/脂相。主目标一般地表水/饮用水源溶解相（发达地区 0.1-40 ng/L 双峰、热点 µg/L 级）。最危险竞争物立体异构体异狄氏剂 endrin（同分子式仅 exo/endo 环氧构型相反）+前体艾氏剂+七氯环氧化物+异狄氏剂醛/酮。生物处理单元不够格（foc/Kow 非特异疏水分配）；组织富集有条件够格部分够格（分布稳健阶梯第 1 级充分，人脑 Fleming 1994 帕金森脑 6/20，须附归因约束）。"
   endosulfan:
     name: "硫丹"
@@ -217,8 +221,8 @@ pollutants:
     status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，14 诚实可区分角度，上限 14<50；组织富集够格 AhR 高亲和锚；待进 Phase B）"
     phase_a_note: "五路调研（run wf_251b70df-f61）+ 综合。经核验证据含美国 EPA 饮用水 TCDD MCLG 零/MCL 30 pg/L 官方页面核验、WHO 二噁英实况页核验（TCDD 剧毒单体、419 种相关化合物约 30 种显著毒性、90%+ 暴露来自食物）、EFSA 2018 TWI 2 pg TEQ/kg/周（摘要核验）；休斯敦航道出水溶解相总 PCDD/F 0.16-13.23 pg/L TCDD 为溶解相 TEQ 最大贡献单体（Chemosphere 2015 摘要）、波兰 4 厂出水 PCDD 4.30-90.7 pg/L（Sci Rep 2019 全文 PMC6917701）、珀斯再生水二级出水中值 TEQ 4.5 pg/L TCDD 0.35-2 pg/L（IJERPH 2008 全文）、日本绫濑川 TEQ 0.26-7.0 pg-TEQ/L 8 样超基准 1.0（Chemosphere 2011 摘要）、越南 Agent Orange 遗留土壤/沉积物储库经食物链转移（Chemosphere 2002 摘要）、三氯生活性氯氯化水相原位生成二噁英（JHM 2019 摘要）。画像：C12H4Cl4O2 平面刚性二噁英、极疏水 logKow~6.8、水相极低溶 pg/L 级、主赋存土壤/沉积物/食品、AhR 芳烃受体高亲和配体。主目标溶解相 pg/L 级（须超痕量分析、Kd 要求极高）。最危险竞争物其他 PCDD/F 同系物（OCDD 优势/PeCDD）+dl-PCB。生物处理单元不够格（有机碳归一化疏水平衡分配向污泥）；组织富集够格附三条硬约束（第 4 级直接证据：AhR 直接结合 Gasiewicz&Rucci 1984 氚标 TCDD 跨物种——真实自然进化高亲和识别锚）。"
 totals:
-  attempted: 18
-  passed: 3
+  attempted: 20
+  passed: 5
   terminated: 15
   note: "PFOA 10 槽（1 通过 A02/9 终止）+ dcp26 3 槽（A01 终止 75/A02 终止 76/A03 终止 68，前三槽全终止）+ bpa 3 槽（A01 通过 86/A02 终止 62/A03 终止 64）+ pfbs 2 槽（A05 终止 58/A17 通过 85）；3 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)；DDT Phase A 完成待 Phase B；原型库扩充进行中（ModA 已入库 expand/FABP4 在途）"
 last_updated: "2026-07-22"

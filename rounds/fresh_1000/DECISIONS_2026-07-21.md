@@ -43,3 +43,9 @@
 - 关键经验：任务输出文件/journal 结果**延迟填充**——工作流通知「完成」时输出 0 字节不代表失败，等候复查（数分钟至十余分钟）结果常自行落盘，wave-3 全 8 条均据此从任务输出/journal 恢复。早前的「OAT4 失败」「3 条不可恢复」均为延迟假象。
 - 新增 22 = 首批 6（ERRγ/DmpR/HSA/NTCP/lipocalin/TTR）+ 二批 8（SBP/KcsA/Lanmodulin/FcRn/PstS/氟乙酸脱卤酶/DDT-脱氯化氢酶[深度版含 DDD 订正]/木质素过氧化物酶）+ 三批 8（MscL/脱羧酶/Acidimicrobium/OATP/GPR43/OAT4/ecdysis/nephron）。
 - 真正仿生原型已入 22/~74，余 ~52 待挖（按清单继续第四批起）。
+
+## 八、进度推进（2026-07-22 Ultracode 同步推进）
+- **仿生库达 74 条**（42 基础 + 32 新增），全部已验证已提交 expand，工作区干净。新增 32 = 首批 6 + 二批 8 + 三批 8 + 四批 10（P450 双酚单加氧酶/核糖体 NPET/氯酚羟化酶/PXR/ASBT/还原脱卤酶 B12/血红蛋白 Bohr/肺表面活性剂/天然核糖开关/铁载体架构）。
+- **通过方案重审完成**（Qwen ef9121a）：PFOA S05_A02 判 decorative→非蛋白重设计版 S05_A02b（磷脂界面，对抗复核 75/revise）；BPA S14_A01（DmpR）/PFBS S17_A17（ModA）判 natural_evolution→角度地图非蛋白增订（对抗复核 BPA 68/PFBS 61）。
+- 第五批挖掘启动（wqz46dvqh），继续推向 100-120。
+- 入库管线成熟：智能选择 Workflow（读清单+库态选下一批）→ 并行构建返回 JSON → 监督者亲落盘+6 校验+合并+渲染+提交。已攻克写盘幻觉/延迟填充/内容过滤/PDB 候选纠错。

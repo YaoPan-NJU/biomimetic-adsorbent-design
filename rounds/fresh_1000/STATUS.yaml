@@ -186,10 +186,12 @@ pollutants:
     name: "滴滴伊 p,p'-DDE"
     brief: complete
     angles_planned: 15
-    attempted: 0
+    attempted: 1
     passed: 0
     terminated: 0
-    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，15 诚实可区分角度，上限 15<50；待进 Phase B 批量方案槽）"
+    status: "phase_b（A01 r1=69→r2=75，crit=0/high=0，revise→r3 或角度边界；两 HIGH 已闭合，但窗口约 0-1 埃+反转余量小+C 维仿生不通过为结构性脆弱）"
+    slots:
+      A01: { r1: "69 revise 0c/2h（平面轮廓形状读出 COF/环芳烃堆叠狭缝腔；BphA 平面氯代二芳基识别原型）", r2: "75 revise 0c/0h（逐条闭合裁决 10 项：H-1 三分支计算门+受限平面化自由能、H-2 S3 重写 α(DDE/DDT) 唯一反转判据+DDD 降二级、M-1 补 2XRX/2XSH+H2 降弱架构类比、M-2 P10 更正、M-3 补四先例点名、M-4 删路线乙、M-5 动力学判据、L-1/L-2/L-3）", status: revise_r3_or_boundary, file: SCHEMES/_wip/A01_r2.md, note: "75<85 且结构性脆弱：厚度窗口约 0-1 埃达线依赖未证的狭缝诱导平面化、干净反转仅 DDE/DDT 单对且余量小、C 维仿生转译不通过（本质理性化学设计）；r3 靠 Phase 0 计算门定生死，否则转 DDE A02 =CCl2 卤键读出" }
     phase_a_note: "五路调研（run wf_0c29a692-e0f，6 智能体/0 错误/309k tokens）+ 综合。经核验证据含 WHO 饮用水准则 Table A3.3 原文核验（DDT and metabolites 导则 0.001 mg/L=1 µg/L，DDE 纳入总量无独立限值）、美国 40 CFR 141.61 定位（DDT MCLG=0/MCL=7 µg/L，DDE 纳入 DDT 类）、Narragansett Bay 被动采样溶解相 ΣDDT~0.23 ng/L（EnvPoll 2022=清洁-轻度影响亚 ng/L 背景）、孟加拉 Meghna 河 4,4'-DDE BDL-4.217 µg/L 致癌风险 10⁻⁵-10⁻⁴（2025=污染河流高 µg/L 端）、摩洛哥 Marchica 潟湖 Σ3DDTs max 11.99 ng/L、伊朗 Karkheh 饮用水源 DDT 10 ng/L 合规、非洲多水体总 DDT ND-81.2 µg/L（Heliyon 2024）、全球 56 国 POPs 系统综述（STOTEN 2021）。画像：p,p'-DDE（C14H8Cl4）DDT 好氧脱 HCl 产物、共轭二氯二苯乙烯、高疏水 logKow~6.5、水相极低溶、主蓄积库沉积物/生物相而非溶解相、与 DDT/DDD 共享双(4-氯苯基)骨架仅乙烷桥 C1 取代不同（DDT -CCl3/DDE =CCl2/DDD -CHCl2）；溶解相 ng/L 级。最危险竞争物为 DDT/DDD 结构近似物+其他 OCPs（HCH/狄氏剂/氯丹/七氯环氧化物）+PCBs。两条启发式均不够格（生物处理非特异疏水分配 logKow 线性；脂肪/血液~280:1 可被中性脂质分配解释无特异机制）。角度地图：A01 平面轮廓形状读出 COF 堆叠狭缝腔、A02 =CCl2 乙烯基二氯卤素相互作用图案读出（DDE 特异桥特征）、A03/A13/A14 类咕啉 Co-N4/血红素-黄素低电位还原中心捕获-还原耦合、A04 lipocalin 型尺寸窗口、A06 双(4-氯苯基)π 酸 EDA 电子富集芳壁、A10 桥取代基身份排斥守卫串联床（反向读出 DDT/DDD）、A11 形状-还原双正交核壳、A15 平面轮廓离散深腔 cavitand 等。"
   ddt:
     name: "滴滴涕 p,p'-DDT"
@@ -234,7 +236,7 @@ totals:
   passed: 7
   terminated: 16
   passed_list: "7 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)/NP A01(92)/Dieldrin A01(89)/ROX A01(85)/octocrylene A01(85,S34)"
-  in_flight: "dde A01 r1=69 revise→r2 在途；endosulfan A01 r1=62（1c/3h）revise→r2 在途；genx A01 终止(S33)→待转 A03 醚氧双锚"
+  in_flight: "dde A01 r2=75 revise→r3/角度边界（两 HIGH 闭合，C 维不通过+窗口 0-1 埃脆弱）；endosulfan A01 r1=62（1c/3h）revise→r2 在途；genx A01 终止(S33)→待转 A03 醚氧双锚"
   phase_a_awaiting_b: "pcp/betahch/chloroform/hcbd/bde209/pcb209/ddt/tcdd 已完成 Phase A 待 Phase B"
   hard_no_pass: "dcp26（3 槽全终止）/pfhxs（2 槽终止）为已试硬骨头，待回溯补角"
   note: "广度优先：7/20 污染物已有通过方案（octocrylene A01=85 r3 达线，两 HIGH+证据债+离散笼第三格式闭合）。下一在途收尾：dde r2→endosulfan r2→genx A03。原型库扩充在 Biomimetic-design-library@expand 分支进行中"

@@ -76,10 +76,12 @@ pollutants:
     name: "罗红霉素 ROX"
     brief: complete
     angles_planned: 22
-    attempted: 0
-    passed: 0
+    attempted: 1
+    passed: 1
     terminated: 0
-    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，22 诚实可区分角度，上限 22<50；待进 Phase B 批量方案槽）"
+    status: "phase_b_breadth_first（A01 通过 85/S32，ROX 广度优先满足；r1=66→r2=78→r3=82→r4=85 压线；后续可回溯 A02-A22）"
+    slots:
+      A01: { r1: "66 revise 0c/4h（核糖体 NPET 核苷酸碱基阵列类级捕获+肟醚读取+环尺寸狭缝）", r2: "78 revise 0c/0h（主平台改刚性凹形裂缝半笼消除笼窗准入+红霉素归因改 C9 肟醚对酮置换探针+灰区条款 M-gray）", r3: "82 revise 0c/0h（裂缝半笼表面预组织+类级捕获预期降中等+价值重心置软对应一肟醚类内增量）", r4: "85 pass 0c/0h（机制确证型研究重定位：更正熵压缩论证热力学方向倒置+ΔΔG 收支诚实重推基线 α≤1 中点~0.40+Henry 极限报告口径精度预算 σ ΔΔG~0.18 kJ/mol+亲和力层/选择性层双层原理 ng/L 占位需 K_a≥10⁸-10⁹+M-gray 判别重构错排体为核心）", status: passed, file: SCHEMES/S32_A01_ribosome-NPET-nucleobase-cleft-cage_passed.md, note: "ROX 首个通过方案，千方案计划第六通过；23S rRNA 核苷酸碱基阵列受限读取逻辑（非蛋白 RNA 原型）转译全有机刚性凹形裂缝半笼，C9 肟醚对酮置换类内增量为价值重心；诚实重定位为机制确证型研究——五组因果对照（置换探针/错排体/空白体/扩窄口体/阳离子边界）在任何结果下给干净归因，定量 α≥2 为争取目标非通过前置；F1a α≤1 为基线模态预测其实现是假设如期证伪而非方案缺陷" }
     phase_a_note: "五路调研（run wf_1dee5b26-56f，6 智能体/0 错误/293k tokens）+ 综合。经核验证据含大环内酯全球水体综述（JHM 2022 439:129628 最高 3847 ng/L）、珠江流域 STP（JHM 2024 476:135046）、长江下游（Environ Pollut 2025 384:126984）、武汉饮用水源（Environ Res 2023 239:117295）等多源一手监测，均经 PubMed efetch 摘要核验 + Crossref 题录自核。画像：14 元大环内酯（C41H76N2O15，MW 837，logP 1.7/XLogP 3.1，TPSA 217），去氧糖胺叔胺 pKa~8.8-9.0 环境 pH 下质子化阳离子（类内共有，无类内选择性），相对红霉素/克拉霉素仅差 C9 肟醚一臂、相对 15/16 元环仅差环尺寸。中国为主要生产使用国、欧洲出水未检出（区域分异）。无合规数值限值（中国类别管控不点名、欧盟限值仅针对红霉素），价值窗口在生态风险界面。两条启发式均判不够格：生物处理单元（非特异静电+大环疏水分配，logKd 0.8-1.9，且罗红霉素抑制污泥厌氧消化=负面效应）；组织富集（14C 胞内/外比 14-190 约半数溶酶体结合，但为通用弱碱溶酶体捕获类属机制，无罗红霉素特异结合/转运证据）。承重识别基础窄：肟醚读取（A02 氢键/A03 配位/A04 穿链）+14 元环几何（A05）；portfolio_100 已探 20 角最高 78 无一达 85。主线潜力最高 A01 核糖体 50S 出口隧道 NPET（23S rRNA 非蛋白氢键阵列+尺寸狭缝，Schlünzen 2001 罗红霉素共晶）。"
   genx:
     name: "六氟环氧丙烷二聚酸 GenX (HFPO-DA)"
@@ -224,8 +226,8 @@ pollutants:
     status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，14 诚实可区分角度，上限 14<50；组织富集够格 AhR 高亲和锚；待进 Phase B）"
     phase_a_note: "五路调研（run wf_251b70df-f61）+ 综合。经核验证据含美国 EPA 饮用水 TCDD MCLG 零/MCL 30 pg/L 官方页面核验、WHO 二噁英实况页核验（TCDD 剧毒单体、419 种相关化合物约 30 种显著毒性、90%+ 暴露来自食物）、EFSA 2018 TWI 2 pg TEQ/kg/周（摘要核验）；休斯敦航道出水溶解相总 PCDD/F 0.16-13.23 pg/L TCDD 为溶解相 TEQ 最大贡献单体（Chemosphere 2015 摘要）、波兰 4 厂出水 PCDD 4.30-90.7 pg/L（Sci Rep 2019 全文 PMC6917701）、珀斯再生水二级出水中值 TEQ 4.5 pg/L TCDD 0.35-2 pg/L（IJERPH 2008 全文）、日本绫濑川 TEQ 0.26-7.0 pg-TEQ/L 8 样超基准 1.0（Chemosphere 2011 摘要）、越南 Agent Orange 遗留土壤/沉积物储库经食物链转移（Chemosphere 2002 摘要）、三氯生活性氯氯化水相原位生成二噁英（JHM 2019 摘要）。画像：C12H4Cl4O2 平面刚性二噁英、极疏水 logKow~6.8、水相极低溶 pg/L 级、主赋存土壤/沉积物/食品、AhR 芳烃受体高亲和配体。主目标溶解相 pg/L 级（须超痕量分析、Kd 要求极高）。最危险竞争物其他 PCDD/F 同系物（OCDD 优势/PeCDD）+dl-PCB。生物处理单元不够格（有机碳归一化疏水平衡分配向污泥）；组织富集够格附三条硬约束（第 4 级直接证据：AhR 直接结合 Gasiewicz&Rucci 1984 氚标 TCDD 跨物种——真实自然进化高亲和识别锚）。"
 totals:
-  attempted: 20
-  passed: 5
+  attempted: 21
+  passed: 6
   terminated: 15
   note: "PFOA 10 槽（1 通过 A02/9 终止）+ dcp26 3 槽（A01 终止 75/A02 终止 76/A03 终止 68，前三槽全终止）+ bpa 3 槽（A01 通过 86/A02 终止 62/A03 终止 64）+ pfbs 2 槽（A05 终止 58/A17 通过 85）；3 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)；DDT Phase A 完成待 Phase B；原型库扩充进行中（ModA 已入库 expand/FABP4 在途）"
 last_updated: "2026-07-22"

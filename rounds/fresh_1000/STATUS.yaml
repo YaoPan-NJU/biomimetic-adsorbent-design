@@ -99,12 +99,13 @@ pollutants:
     status: queued
   pcp:
     name: "五氯苯酚 PCP"
-    brief: pending
-    angles_planned: null
+    brief: complete
+    angles_planned: 16
     attempted: 0
     passed: 0
     terminated: 0
-    status: queued
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，16 诚实可区分角度，上限 16<50；待进 Phase B 批量方案槽）"
+    phase_a_note: "五路调研（run wf_210a8b3c-43d，6 智能体/0 错误/297k tokens）+ 综合。经核验证据含 ATSDR 2024 毒理学概况全文（EPA 第三轮六年审查 40322 座公共供水系统 0.56% 检出/0.027% 超 MCL、NPL 场地水相中位 410 µg/L）、美国 NPDWR MCLG 零/MCL 1 µg/L 与 2015 人体健康基准 0.03/0.04 µg/L 官方核验、斯德哥尔摩公约附件 A 决定 SC-7/13 官方核验、IARC 2019 1 类致癌物；长江干流 144 样检出率 88.9% <MDL-9.97 ng/L（Yang 2024 ESPR）、鄱阳湖灭螺区 0.01-0.43 µg/L 本地 AWQC 0.02 µg/L（Xu 2023）、氯酚同族物竞争谱 0.9-172 ng/L（Front Toxicol 2023 全文）。14 条 DOI 全经 Crossref 题录自核、4 份官方文件直读。画像：CAS 87-86-5、pKa 4.75，pH 6-9 天然水体以五氯酚氧阴离子为主，识别对象=弱酸阴离子+五氯代芳环组合特征；最危险竞争物为同族氯酚（2,4-DCP/2,4,6-TCP/2,3,4,6-TeCP）加三氯生/硝基酚/腐殖酸，单靠疏水或静电不足以区分。主目标场景中国一般流域地表水/饮用水源溶解相（亚 ng/L-10 ng/L，灭螺区湖盆 10-430 ng/L 高端）；ng/L 工况需 Kd~10⁴ L/kg。两条启发式均判条件够格附三项转译约束（吸附机制层不够格、富集现象本身不够格，仅可提取非蛋白/pH 动态线索）。角度地图蛋白/非蛋白混合：A01 TTR 反向模式卤代酚通道、A02 SBP 预组织中性氢键酚氧、A03 卤键 σ 空穴五点几何、A04 全氯环 snug-fit 环糊精、A07 还原脱卤酶区域选择性氯位构型识别等。"
   octocrylene:
     name: "奥克立林"
     brief: pending

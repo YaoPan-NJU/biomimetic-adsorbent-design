@@ -217,10 +217,12 @@ pollutants:
     name: "硫丹"
     brief: complete
     angles_planned: 16
-    attempted: 0
+    attempted: 1
     passed: 0
     terminated: 0
-    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，16 诚实可区分角度，上限 16<50；主目标农业区受纳地表水/饮用水源；待进 Phase B）"
+    status: "phase_b（A01 r1=62→r2=78，crit=0/high=0，revise→r3；1 critical+3 high 已闭合，差 85 线根因 SQ1 中性 ng/L 单程水解绝对速率待 Phase 0）"
+    slots:
+      A01: { r1: "62 revise 1c/3h（介孔 Lewis 酸氧化物反应性水解捕获，E1 矿物表面催化硫丹水解原型）", r2: "78 revise 0c/0h（闭合 ISS-01 critical BV 算错→产物核算 S6/硫质量平衡、ISS-02 主对照换艾氏剂+选择性收窄、ISS-03 绝对 k_v 判据 3.8e-3 s⁻¹、ISS-04 去碱化再生+膀酸酯锚定+寿命曲线；补 MOF-808/POM 先例族区分）", status: revise_r3_pending, file: SCHEMES/_wip/A01_r2.md, note: "78<85 根因 SQ1：中性 pH ng/L 单程水解绝对速率无文献数据、所需增强因子跨 4-400，Phase 0 计算+批次 make-or-break；C 维仿生弱（E1 pH8.15 悬浮近同化学）；r3 靠 Phase 0 或转 S_deconvolution/其他角度" }
     phase_a_note: "五路调研（run wf_634a4a2a-7e8）+ 综合。经核验证据含斯德哥尔摩公约附件 A 消除类决定 SC-5/3（COP-5 2011 含特定豁免，official 页面核验）、IntechOpen 章节全文核验（α/β 水溶 0.32-0.33 mg/L、logKow 3.6-3.8、logKoc 3.5-4.1、碱性水水解半衰期 α 3.6 d/β 1.7 d、EPA 水生基准急性 0.22/慢性 0.05 µg/L、无 WHO 饮用水准则值）、Mackay 1993 水生归趋（沉积物结合 logKoc α 3.6/β 4.3、沉积物解吸限速）、Weber 2010 全球归趋综述（硫酸酯难降解、水相低浓度、北极长距离传输）；中国洱海饮用水水源多相监测硫丹硫酸酯显著生态风险（JHM 2025 摘要）、中国西北棉区禁用后土壤残留硫酸酯为主（FESE 2023 摘要）、中国全国河流风险建模硫丹仅占投入 0.4% 却为水生风险主贡献（EnvInt 2025 摘要）、印度夏季风跨境传输（Chemosphere 2022 摘要）。画像：C9H6Cl6O3S 环二烯有机氯含亚硫酸酯桥、α/β 异构体、低溶强沉积物分配、碱性水水解较快、硫酸酯难降解生态毒性显著、禁用后遗留性格局。主目标判为农业区受纳地表水/径流与饮用水水源湖库（溶解相 ng/L 级），市政二级出水保留对照。最危险竞争物硫丹硫酸酯/硫丹二醇代谢物 + 同类环二烯 aldrin/dieldrin/heptachlor/endrin。两条启发式均不够格（吸附/富集侧活性污泥絮体/EPS/生物膜/颗粒污泥专用去除研究零命中；组织分布稳健但脂质分配解释）。"
   tcdd:
     name: "2,3,7,8-四氯二苯并-p-二噁英 TCDD"
@@ -236,7 +238,7 @@ totals:
   passed: 7
   terminated: 16
   passed_list: "7 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)/NP A01(92)/Dieldrin A01(89)/ROX A01(85)/octocrylene A01(85,S34)"
-  in_flight: "dde A01 r2=75 revise→r3/角度边界（两 HIGH 闭合，C 维不通过+窗口 0-1 埃脆弱）；endosulfan A01 r1=62（1c/3h）revise→r2 在途；genx A01 终止(S33)→待转 A03 醚氧双锚"
+  in_flight: "dde A01 r2=75 revise→r3/角度边界（两 HIGH 闭合，C 维不通过+窗口 0-1 埃脆弱）；endosulfan A01 r2=78 revise→r3（1c+3h 闭合，SQ1 绝对速率待 Phase 0）；genx A01 终止(S33)→待转 A03 醚氧双锚"
   phase_a_awaiting_b: "pcp/betahch/chloroform/hcbd/bde209/pcb209/ddt/tcdd 已完成 Phase A 待 Phase B"
   hard_no_pass: "dcp26（3 槽全终止）/pfhxs（2 槽终止）为已试硬骨头，待回溯补角"
   note: "广度优先：7/20 污染物已有通过方案（octocrylene A01=85 r3 达线，两 HIGH+证据债+离散笼第三格式闭合）。下一在途收尾：dde r2→endosulfan r2→genx A03。原型库扩充在 Biomimetic-design-library@expand 分支进行中"

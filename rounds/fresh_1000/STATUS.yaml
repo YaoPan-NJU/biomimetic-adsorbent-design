@@ -83,12 +83,13 @@ pollutants:
     phase_a_note: "五路调研（run wf_1dee5b26-56f，6 智能体/0 错误/293k tokens）+ 综合。经核验证据含大环内酯全球水体综述（JHM 2022 439:129628 最高 3847 ng/L）、珠江流域 STP（JHM 2024 476:135046）、长江下游（Environ Pollut 2025 384:126984）、武汉饮用水源（Environ Res 2023 239:117295）等多源一手监测，均经 PubMed efetch 摘要核验 + Crossref 题录自核。画像：14 元大环内酯（C41H76N2O15，MW 837，logP 1.7/XLogP 3.1，TPSA 217），去氧糖胺叔胺 pKa~8.8-9.0 环境 pH 下质子化阳离子（类内共有，无类内选择性），相对红霉素/克拉霉素仅差 C9 肟醚一臂、相对 15/16 元环仅差环尺寸。中国为主要生产使用国、欧洲出水未检出（区域分异）。无合规数值限值（中国类别管控不点名、欧盟限值仅针对红霉素），价值窗口在生态风险界面。两条启发式均判不够格：生物处理单元（非特异静电+大环疏水分配，logKd 0.8-1.9，且罗红霉素抑制污泥厌氧消化=负面效应）；组织富集（14C 胞内/外比 14-190 约半数溶酶体结合，但为通用弱碱溶酶体捕获类属机制，无罗红霉素特异结合/转运证据）。承重识别基础窄：肟醚读取（A02 氢键/A03 配位/A04 穿链）+14 元环几何（A05）；portfolio_100 已探 20 角最高 78 无一达 85。主线潜力最高 A01 核糖体 50S 出口隧道 NPET（23S rRNA 非蛋白氢键阵列+尺寸狭缝，Schlünzen 2001 罗红霉素共晶）。"
   genx:
     name: "六氟环氧丙烷二聚酸 GenX (HFPO-DA)"
-    brief: pending
-    angles_planned: null
+    brief: complete
+    angles_planned: 22
     attempted: 0
     passed: 0
     terminated: 0
-    status: queued
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，22 诚实可区分角度，上限 22<50；待进 Phase B 批量方案槽）"
+    phase_a_note: "五路调研（run wf_ff52c393-782，6 智能体/0 错误/346k tokens）+ 综合。经核验证据含美国 2024 PFAS NPDWR 正文核验（HFPO-DA 强制 MCL 10 ng/L、危害指数成员、合规期 2029-04-26）与 2022 GenX 终身健康咨询值 10 ppt（87 FR 36848）、Heydebreck 2015 ES&T 地表水首检（Scheur 河 73.1 ng/L）、Strynar 2015 新型全氟醚酸鉴定、Pan 2018 全球 160 样点 7 国频繁检出中位 0.95 ng/L、Gebbink 2017 荷兰厂区下游最高 812 ng/L、Kim 2024 市政污水厂 HFPO-DA 67% 检出、McCord 2019 Cape Fear 37 分子式/58 异构体全氟醚酸。画像：HFPO-DA 全氟-2-丙氧基丙酸，PFOA 替代品，主排放源氟化工设施；水环境双峰（远离点源亚 ng/L-个位 ng/L 全球中位 0.95、点源邻近数百-1100 ng/L）；强亲水短链醚酸，真实基质吸附竞争以亲水位点抢占+NOM 污堵为主（Park 2020 GAC 穿透）。主目标市政二级出水及受纳水体（ng/L 级，10 ng/L=MCL 阈值线），实验点 10/100/1000 ng/L；竞争谱含短链 PFCA/PFOA/F-53B/6:2 Cl-PFESA/Nafion 副产物。两条启发式均不够格（全氟醚骨架无 O-脱烷基把手=生物单元不适用；ADME 不代谢/尿快速排泄/大鼠半衰期~5h=无组织富集第一级）。角度地图：A01 氧阴离子洞中性氢键供体阵列、A02 SBP 纯氢键裂隙脲孔壁 COF、A03 多酚醚离子载体反极性醚氧双锚、A06/A07 草酸降解菌 OxlT 电荷不对称反向转运/电摆动门控、A09 HSA subdomain IIIA 支链亚腔两点笼、A12 还原脱卤酶取向吸附-还原复合体、A14 木质部 Murray 定律分级孔、A16 i-motif/G-四链体 pH 构象开关等，另 5 个对照集（A18-A22）。"
   pfhxs:
     name: "全氟己烷磺酸 PFHxS"
     brief: complete

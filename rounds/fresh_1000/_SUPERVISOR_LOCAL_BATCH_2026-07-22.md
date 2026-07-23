@@ -27,6 +27,10 @@
 | SL05 | HCBD | A01 | 环糊精空腔长度匹配+腔口卤键 | 62 | revise（倾向 terminate） | 0 / 3 | `hcbd/SCHEMES/SL05_A01_CD-cavity-length-rim-halogen-bond_r1-revise.md` |
 | SL06 | PCB-209 | A16 | PXR 大软疏水腔定向混杂容纳 | 61 | revise（standalone 倾向 terminate/宜耦合） | 0 / 3 | `pcb209/SCHEMES/SL06_A16_PXR-large-soft-cavity_r1-revise.md` |
 | SL07 | BDE-209 | A12 | 白腐菌胞外捕获-催化两亲可及性微域 | 68 | revise | 0 / 3 | `bde209/SCHEMES/SL07_A12_white-rot-capture-catalysis-amphiphilic_r1-revise.md` |
+| SL08 | PCB-209 | A23 | 多表位正交受体（扭转×卤键×全氯轮廓） | **73** | revise | 0 / 2 | `pcb209/SCHEMES/SL08_A23_multi-epitope-orthogonal-receptor_r1-revise.md` |
+| SL09 | BDE-209 | A19 | 多表位正交受体（溴卤键×π 酸×十溴轮廓，平衡吸附） | **72** | revise | 0 / 2 | `bde209/SCHEMES/SL09_A19_multi-epitope-orthogonal-receptor_r1-revise.md` |
+
+**三轮汇总（A→B 循环·多表位综合）：**按单角度攻击台账"单维不过 D、须耦合"结论，合成多表位正交受体：PCB-209 A23=73（扭转×卤键×全氯，本会话 pcb209 最高）、BDE-209 A19=72（平衡吸附多表位，正面回应 SL01 “选择性吸附名实不符”攻击）。两者 D（选择性）+E（先例）双维通过，为各污染物最强角度、r2 优先。**累计本会话 9 个闭环方案（SL01–SL09），涵盖 5 污染物；BDE-209/PCB-209 各 3 个互补角度。** 分数 61–74，均 revise、零 critical。已批量推送 origin/Ultimate。
 
 **二轮汇总（A→B 循环）：**LOOP-A 完成 TCDD A10 r2=74（+7，闭合脂质归一化对照；pg/L 亲和力+Å 锚定为 Stage-0 物理可行性门，结构性天花板）。LOOP-B 新增 PCB-209 A16（61，单维单调宜作耦合层）与 BDE-209 A12（68，白腐菌两亲可及性，正对颗粒相真实靶界面，与 SL01 互补）。**累计本会话 7 个闭环方案（SL01–SL07），涵盖 5 污染物，均本地提交、未推送。** 分数分布 61–74，均 revise、零 critical——这 5 个为执行顺序最末、内禀最硬的污染物，首轮不达 85 为诚实结果。
 

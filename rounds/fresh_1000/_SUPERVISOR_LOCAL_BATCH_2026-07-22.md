@@ -23,10 +23,12 @@
 | SL01 | BDE-209 | A02 | PceA 双域解耦反应性捕获 | 66 | revise | 0 / 4 | `bde209/SCHEMES/SL01_A02_pceA-dual-domain-reactive-capture_r1-revise.md` |
 | SL02 | PCB-209 | A01 | 扭转正交构象形状读出腔（AhR 负面原型反转） | 64 | revise | 0 / 3 | `pcb209/SCHEMES/SL02_A01_torsional-complementary-cavity_r1-revise.md` |
 | SL03 | chloroform | A04 | 单位点多弱作用协同预组织识别腔 | 65 | revise | 0 / 3 | `chloroform/SCHEMES/SL03_A04_multi-weak-interaction-cavity_r1-revise.md` |
-| SL04 | TCDD | A10 | 平面受限腔+侧位氯锚定双维度 | 67 | revise | 0 / 3 | `tcdd/SCHEMES/SL04_A10_planar-confined-lateral-Cl-anchor_r1-revise.md` |
+| SL04 | TCDD | A10 | 平面受限腔+侧位氯锚定双维度 | 67→**r2=74** | revise | 0 / 2 | `tcdd/SCHEMES/SL04_A10_planar-confined-lateral-Cl-anchor_r2-revise.md` |
 | SL05 | HCBD | A01 | 环糊精空腔长度匹配+腔口卤键 | 62 | revise（倾向 terminate） | 0 / 3 | `hcbd/SCHEMES/SL05_A01_CD-cavity-length-rim-halogen-bond_r1-revise.md` |
+| SL06 | PCB-209 | A16 | PXR 大软疏水腔定向混杂容纳 | 61 | revise（standalone 倾向 terminate/宜耦合） | 0 / 3 | `pcb209/SCHEMES/SL06_A16_PXR-large-soft-cavity_r1-revise.md` |
+| SL07 | BDE-209 | A12 | 白腐菌胞外捕获-催化两亲可及性微域 | 68 | revise | 0 / 3 | `bde209/SCHEMES/SL07_A12_white-rot-capture-catalysis-amphiphilic_r1-revise.md` |
 
-**本批次汇总：5 槽全 r1 完成，均 revise、零 critical。分数 62–67（HCBD 62 倾向 terminate、TCDD 67 最高）。全部作为中间设计入库。** 5 个污染物各的 Phase B 已开局（此前均为 phase_a_complete、attempted=0）。下一步：择强者（TCDD A10 / BDE-209 A02）做 r2 带台账重建冲击 85；或按用户指令继续横向铺开其余污染物/角度。
+**二轮汇总（A→B 循环）：**LOOP-A 完成 TCDD A10 r2=74（+7，闭合脂质归一化对照；pg/L 亲和力+Å 锚定为 Stage-0 物理可行性门，结构性天花板）。LOOP-B 新增 PCB-209 A16（61，单维单调宜作耦合层）与 BDE-209 A12（68，白腐菌两亲可及性，正对颗粒相真实靶界面，与 SL01 互补）。**累计本会话 7 个闭环方案（SL01–SL07），涵盖 5 污染物，均本地提交、未推送。** 分数分布 61–74，均 revise、零 critical——这 5 个为执行顺序最末、内禀最硬的污染物，首轮不达 85 为诚实结果。
 
 ## 承重证据核验状态（本会话 WebSearch 直核）
 

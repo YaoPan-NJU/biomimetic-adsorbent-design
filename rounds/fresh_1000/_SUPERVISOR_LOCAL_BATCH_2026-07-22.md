@@ -22,9 +22,11 @@
 |---|---|---|---|---:|---|---|---|
 | SL01 | BDE-209 | A02 | PceA 双域解耦反应性捕获 | 66 | revise | 0 / 4 | `bde209/SCHEMES/SL01_A02_pceA-dual-domain-reactive-capture_r1-revise.md` |
 | SL02 | PCB-209 | A01 | 扭转正交构象形状读出腔（AhR 负面原型反转） | 64 | revise | 0 / 3 | `pcb209/SCHEMES/SL02_A01_torsional-complementary-cavity_r1-revise.md` |
-| SL03 | chloroform | A04 | 单位点多弱作用协同预组织识别腔 | — | 在途 | — | 待写 |
-| SL04 | HCBD | A01 | 环糊精空腔长度匹配+腔口卤键 | — | 在途 | — | 待写 |
-| SL05 | TCDD | A05/A10（待定，避 A01 冲突） | 还原反应性捕获 或 平面受限腔+侧位氯锚定 | — | 在途 | — | 待写 |
+| SL03 | chloroform | A04 | 单位点多弱作用协同预组织识别腔 | 65 | revise | 0 / 3 | `chloroform/SCHEMES/SL03_A04_multi-weak-interaction-cavity_r1-revise.md` |
+| SL04 | TCDD | A10 | 平面受限腔+侧位氯锚定双维度 | 67 | revise | 0 / 3 | `tcdd/SCHEMES/SL04_A10_planar-confined-lateral-Cl-anchor_r1-revise.md` |
+| SL05 | HCBD | A01 | 环糊精空腔长度匹配+腔口卤键 | 62 | revise（倾向 terminate） | 0 / 3 | `hcbd/SCHEMES/SL05_A01_CD-cavity-length-rim-halogen-bond_r1-revise.md` |
+
+**本批次汇总：5 槽全 r1 完成，均 revise、零 critical。分数 62–67（HCBD 62 倾向 terminate、TCDD 67 最高）。全部作为中间设计入库。** 5 个污染物各的 Phase B 已开局（此前均为 phase_a_complete、attempted=0）。下一步：择强者（TCDD A10 / BDE-209 A02）做 r2 带台账重建冲击 85；或按用户指令继续横向铺开其余污染物/角度。
 
 ## 承重证据核验状态（本会话 WebSearch 直核）
 

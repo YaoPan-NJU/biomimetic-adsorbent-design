@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: "After Pan Yao confirmed the written spec, froze the BPA and class-wide short-chain-PFAS secondary-effluent scenarios, recorded the unresolved 2,6-DCP admission gap, expanded the evidence ledger from E142 to E161, and completed designer/attacker/reviewer dispositions plus diagnostic scores for all 30 candidates in PORTFOLIO_REPORT.md. There are zero formal recommendations: all surviving leads remain E0, and all 2,6-DCP candidates fail the environmental-admission gate."
 next_action: "Pan Yao selects whether to release one minimal follow-on package: PFAS-01 class-wide thin-film mechanism screen, BPA-01 soluble-model geometry screen, or 2,6-DCP environmental-occurrence and method-gap closure. Until that choice, do not procure, synthesize, experiment, label any candidate E1, or treat diagnostic scores as predicted performance."
 active_branch: main
-last_verified_commit: da09ee5
+last_verified_commit: e3ff340
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:
@@ -685,6 +685,12 @@ artifacts:
   gate_g6_delivery: orchestration/gates/G6_DELIVERY.yaml
   fresh_clone_readback: orchestration/FRESH_CLONE_READBACK.md
 checks:
+  portfolio_30_classwide_report_commit: passed_at_e3ff34083c9abc724a9366ec4b07fc746c2c9af1
+  portfolio_30_classwide_fresh_clone: passed_origin_main_equal_e3ff34083c9a
+  portfolio_30_classwide_state_paths: passed_175_artifacts_zero_missing
+  portfolio_30_classwide_evidence_ledger: passed_161_rows_zero_duplicate_ids
+  portfolio_30_classwide_structure: passed_10_BPA_10_PFAS_10_DCP_30_score_rows_30_formal_no
+  portfolio_30_classwide_secrets_scan: passed_fresh_clone_text_files
   branch_consolidation_20260724_merge_commit: 8f3912f
   branch_consolidation_20260724_state_paths: passed_173_artifacts
   branch_consolidation_20260724_snapshot_checksums: passed_6_files_with_gitattributes_byte_fidelity

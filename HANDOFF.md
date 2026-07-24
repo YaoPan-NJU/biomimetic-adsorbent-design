@@ -237,6 +237,8 @@ All 30 candidates have isolated designer, attacker and reviewer conclusions, inn
 
 The unique next action is Pan Yao's choice among three minimal paper-stage releases: (1) PFAS-01 class-wide thin-film mechanism screen; (2) BPA-01 soluble-model geometry screen; or (3) 2,6-DCP environmental occurrence/method gap closure. No procurement, synthesis or experiment is authorized by the report itself.
 
+Commit `e3ff34083c9abc724a9366ec4b07fc746c2c9af1` was pushed to `origin/main` and restored into a fresh shallow clone. The clone matched the remote head, recovered 175 declared artifacts with no missing path, parsed 161 unique evidence rows, found exactly 10 BPA + 10 PFAS + 10 DCP candidate headings and 30 diagnostic-score rows, and found no credential-pattern hit in text files.
+
 ## Resume instructions
 
 1. Read `AGENTS.md`, then `SOUL.md`, `PROJECT_STATE.yaml`, `HANDOFF.md` and `research_contract.yaml` in the required exact order.

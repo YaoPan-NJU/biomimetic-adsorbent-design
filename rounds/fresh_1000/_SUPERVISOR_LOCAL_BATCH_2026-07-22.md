@@ -29,6 +29,11 @@
 | SL07 | BDE-209 | A12 | 白腐菌胞外捕获-催化两亲可及性微域 | 68 | revise | 0 / 3 | `bde209/SCHEMES/SL07_A12_white-rot-capture-catalysis-amphiphilic_r1-revise.md` |
 | SL08 | PCB-209 | A23 | 多表位正交受体（扭转×卤键×全氯轮廓） | **73** | revise | 0 / 2 | `pcb209/SCHEMES/SL08_A23_multi-epitope-orthogonal-receptor_r1-revise.md` |
 | SL09 | BDE-209 | A19 | 多表位正交受体（溴卤键×π 酸×十溴轮廓，平衡吸附） | **72** | revise | 0 / 2 | `bde209/SCHEMES/SL09_A19_multi-epitope-orthogonal-receptor_r1-revise.md` |
+| SL10 | chloroform | A19 | 三卤甲基（卤素计数）识别签名 | 68 | revise | 0 / 2 | `chloroform/SCHEMES/SL10_A19_trihalomethyl-halogen-count-signature_r1-revise.md` |
+| SL11 | TCDD | A04 | 二芳醚氧锚定+角位轮廓虚拟模板印迹 | 69 | revise | 0 / 2 | `tcdd/SCHEMES/SL11_A04_aryl-ether-angular-profile-virtual-template-MIP_r1-revise.md` |
+| SL12 | HCBD | A04 | 类咕啉辅因子反应性捕获（有机卤化物呼吸） | 69 | revise | 0 / 2 | `hcbd/SCHEMES/SL12_A04_corrinoid-reductive-reactive-capture_r1-revise.md` |
+
+**四轮汇总（A→B 循环·真生物原型广度）：**为三个污染物各补一个承重原型经核验的角度：chloroform A19=68（CfrA 氯仿专一酶判别几何，Picott 2024/2025）、TCDD A04=69（Sphingomonas RW1 角位双加氧酶醚骨架识别，Wittich 1992，approach-1 硬对应、优于 A10 的 AhR 几何）、HCBD A04=69（Dehalococcoides HCBD 直接脱氯异构体序列，Shen 核验，强于 SL05）。**累计本会话 12 个闭环方案（SL01–SL12），涵盖 5 污染物：BDE-209×3、PCB-209×3、TCDD×3(含r2)、chloroform×2、HCBD×2。** 分数 61–74，均 revise、零 critical。已批量推送。TCDD/HCBD 各新增的 approach-1 真原型角度（A04）C 维仿生真实性优于首轮。
 
 **三轮汇总（A→B 循环·多表位综合）：**按单角度攻击台账"单维不过 D、须耦合"结论，合成多表位正交受体：PCB-209 A23=73（扭转×卤键×全氯，本会话 pcb209 最高）、BDE-209 A19=72（平衡吸附多表位，正面回应 SL01 “选择性吸附名实不符”攻击）。两者 D（选择性）+E（先例）双维通过，为各污染物最强角度、r2 优先。**累计本会话 9 个闭环方案（SL01–SL09），涵盖 5 污染物；BDE-209/PCB-209 各 3 个互补角度。** 分数 61–74，均 revise、零 critical。已批量推送 origin/Ultimate。
 

@@ -211,7 +211,7 @@ Update 2026-07-20 (formalized): Pan Yao approved both reconciliation points. The
 
 ## Main branch consolidation checkpoint (2026-07-24)
 
-Pan Yao requested a complete branch audit and an update of `main`. The audit found that `origin/Ultimate@534817d` already contains `origin/Qwen@25c3c7e`, and `origin/Qwen` already contains `origin/kimi-k3@100b7df`. Therefore `origin/Ultimate` was the only branch that needed to be merged into `main`; the merge preserves `main`'s 45 independent commits and imports the newer research history without resetting either line.
+Pan Yao requested a complete branch audit and an update of `main`. The audit found that `origin/Ultimate@534817d` already contains `origin/Qwen@25c3c7e`, and `origin/Qwen` already contains `origin/kimi-k3@100b7df`. Therefore `origin/Ultimate` was the only branch that needed to be merged into `main`; merge commit `8f3912f` preserves `main`'s 45 independent commits and imports the newer research history without resetting either line.
 
 Conflict resolution keeps the current `main` contract authoritative: municipal secondary effluent remains the primary matrix; the adaptive E1/E2 release model, nonprotein material boundary, ion-exchange disclosure rule, and owner Gate G32 remain binding. `fresh_1000` and `ultimate_200` are imported as additive research, hypothesis, and negative-audit artifacts. Their historical scores do not automatically create an E1 release on `main`. Thirty-eight Ultimate-only evidence-ledger rows were retained as `E105` through `E142` because their original `E062` through `E099` identifiers collided with existing `main` records.
 

@@ -136,3 +136,20 @@ Mechanical results:
 - The contract records that pollutant target-protein binding alone cannot pass the biomimetic-story gate.
 
 The clone identifies `adaptive_experiment_ready_design_discovery` as the active phase. Its unique next action is Phase 0 environmental/problem freezing plus Phase 1 search for actual biological adsorption, accumulation, sequestration, barrier, partition or selective-transport processes across environmentally admitted `pollutant_kb` entries without a candidate-count quota. `S1-SYN`, `PFAS-M1` and `ROX-BF1` are pressure tests rather than a fixed shortlist, and no experiment is authorized before Pan Yao approves an independently reviewed E1/E2 package.
+
+## Main branch consolidation checkpoint
+
+Validation date: 2026-07-24
+
+Validated commit: `f61632fd0c7e5c7094b4c9ed0821bbd125d80a2b`
+
+The private remote was cloned after `origin/Ultimate@534817d` was merged into `main`. The source branch already contained `origin/Qwen@25c3c7e` and `origin/kimi-k3@100b7df`; the clone was clean and matched `origin/main`.
+
+Mechanical results:
+
+- `scripts/validate_repository.py`: 173 state-indexed artifacts and six signed BMDL snapshot hashes passed.
+- `scripts/scan_credentials.py`: 429 tracked files passed; no credential pattern was found.
+- The evidence ledger contained 142 unique identifiers; Ultimate-only rows were preserved as `E105` through `E142`.
+- Main governance remained authoritative; imported `fresh_1000` and `ultimate_200` outputs are additive research and audit inputs, not automatic E1/E2 releases.
+
+The clone recovered the unique next action: confirm whether “short-chain PFAS” means PFBS only or a PFBS/PFHxS/GenX class portfolio before freezing the requested BPA, short-chain-PFAS, and 2,6-DCP ten-scheme portfolios. No procurement, synthesis, or experiment is authorized.

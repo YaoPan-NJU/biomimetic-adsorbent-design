@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: "Integrated origin/Ultimate@534817d into main while preserving main's governing contract and all main-only history. origin/Ultimate already contains origin/Qwen@25c3c7e and origin/kimi-k3@100b7df. Imported fresh_1000 and ultimate_200 research artifacts additively; retained main governance on conflicts; merged 38 Ultimate-only evidence rows as E105-E142 to avoid ID collisions."
 next_action: "Confirm whether 'short-chain PFAS' means PFBS only or a PFBS/PFHxS/GenX class portfolio. Then freeze one 30-scheme design brief for BPA, short-chain PFAS, and 2,6-DCP (10 each) under main's secondary-effluent scenario, three owner gates, innovation checklist, and evidence-ledger rules. No procurement or experiment is authorized."
 active_branch: main
-last_verified_commit: 8f3912f
+last_verified_commit: f61632f
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:
@@ -15,7 +15,7 @@ candidate_count_policy:
   delivery: rolling
   primary_backup_labels: inactive_unless_owner_later_requests
 branch_consolidation_20260724:
-  status: merged_validated_locally
+  status: merged_pushed_and_fresh_clone_validated
   source_head: origin/Ultimate@534817d7bbcb57a7df332d46670ec96ac9173a5b
   included_ancestry:
     - origin/Qwen@25c3c7ed4096140493895668a5466a6d72d0e0cc
@@ -659,8 +659,8 @@ checks:
   branch_consolidation_20260724_snapshot_checksums: passed_6_files_with_gitattributes_byte_fidelity
   branch_consolidation_20260724_secrets_scan: passed_429_tracked_files
   branch_consolidation_20260724_evidence_ledger: passed_142_unique_ids
-  branch_consolidation_20260724_remote_push: pending
-  branch_consolidation_20260724_fresh_clone: pending
+  branch_consolidation_20260724_remote_push: origin_main_equal_at_f61632f
+  branch_consolidation_20260724_fresh_clone: passed_at_f61632fd0c7e5c7094b4c9ed0821bbd125d80a2b
   pollutant_environment_scenario_fresh_clone: passed_at_829fccf
   pollutant_environment_scenario_context_recovery: recovered_PFHxS_scenario_first_next_action_three_concentration_tiers_rejected_fixed_quota_and_universal_Kd_empty_E1_and_PFH1_termination_at_829fccf
   pollutant_environment_scenario_remote_sync: origin_main_equal_at_829fccf

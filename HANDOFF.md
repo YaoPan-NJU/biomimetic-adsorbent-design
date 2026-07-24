@@ -217,6 +217,8 @@ Conflict resolution keeps the current `main` contract authoritative: municipal s
 
 The next requested portfolio covers BPA, short-chain PFAS, and 2,6-DCP with ten schemes per target. Before design starts, Pan Yao must confirm whether “short-chain PFAS” means PFBS alone or a class portfolio such as PFBS/PFHxS/GenX. Every formal score remains downstream of the secondary-effluent scenario gate, innovation checklist, evidence ledger, and owner gates. No procurement, synthesis, or experiment is authorized.
 
+The consolidation was pushed through `f61632f`. A clean clone of `origin/main` at that commit passed 173 state-artifact checks, all six signed snapshot hashes, and a 429-file credential scan, and recovered the same target-scope clarification as the unique next action.
+
 ## Resume instructions
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.

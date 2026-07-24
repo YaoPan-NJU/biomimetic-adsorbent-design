@@ -21,7 +21,7 @@
 2. 启动工作流，等待完成通知；
 3. 从 `_wip/<slot>_design_r<N>.md`、`_attack_r<N>.md`、`_review_r<N>.md` 组装正式方案文件 `SCHEMES/S<序号>_<slot>_<题名简称>.md`（含状态、得分、轮次、重建建议）；
 4. 去重后把证据条目追加进 `research/evidence/evidence_ledger.csv`；
-5. 单独提交该方案并推送 `origin/Qwen`；
+5. 单独提交该方案并推送 `origin/Ultimate`；
 6. 更新 `STATUS.yaml` 逐槽状态（passed / needs_rebuild / terminated 与尝试次数）；
 7. passed → 下一槽；needs_rebuild 且尝试次数 <3 → 换新角度或带问题台账重渲染重跑；尝试 3 次仍不过 → terminated，记入耗尽条款。
 

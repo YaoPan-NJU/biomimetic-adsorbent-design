@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: "NP A08 单槽隔离三角色工作流完成并终止（2026-07-24）：设计 64→攻击 4c/5h→裁决 52/terminate。四 critical 结构性不可修复（T8 机制坍塌/对手对不成立/T4 风险反转/原创性阴影）。NP 第二次通过诚实穷尽条件成立（平衡结合型识别空间穷尽 + 反应性轴 T8 封锁），轮转至另一已通过污染物加深。fresh_1000 现况见 rounds/fresh_1000/STATUS.yaml（截至 2026-07-24：26 槽 attempted / 7 passed / 20 terminated；7/20 污染物已有通过方案，均 1/10）。"
 next_action: "先易后难推进 200 方案目标：NP 已诚实穷尽（1/10，5 槽终止），轮转至另一已通过污染物加深（BPA/PFBS/PFOA/Dieldrin/ROX/octocrylene，均 1/10）。按 SPEC.md Phase B 单槽工作流开新角度槽。每槽隔离设计-攻击-裁决、_wip 组装、逐槽提交推送 origin/Ultimate，STATUS.yaml 逐槽更新。7 个加深完成后转未通过污染物（含 dcp26/pfhxs 硬骨头，按执行顺序）。原型库扩充在 Biomimetic-design-library@expand 分支并行。"
 active_branch: Ultimate
-last_verified_commit: 5d68121
+last_verified_commit: c4e29a9
 scheme_target: "10 passing schemes per pollutant (200 total); easy-first deepening; honest N<10 clause retained"
 bmdl_policy: removed_from_branch
 historical_artifacts_status: preserved_not_active

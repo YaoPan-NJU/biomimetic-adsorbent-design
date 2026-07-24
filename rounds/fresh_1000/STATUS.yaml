@@ -1,0 +1,245 @@
+program: fresh_1000
+advance_policy: "每污染物至少一个通过方案（≥85）后即推进下一污染物（广度优先）；20 污染物访问一轮后再回溯补角（每污染物上限 50 槽）；不打断运行中槽（2026-07-21 潘尧修订）"
+created: 2026-07-19
+spec: rounds/fresh_1000/SPEC.md
+pollutant_count: 20
+target_per_pollutant: 50
+total_target: 1000
+quality_gate: "score>=85, 0 unresolved critical/high, innovation checklist pass, full closed loop per SPEC.md"
+iteration_policy:
+  rounds_per_concept: 2
+  max_rebuilds_per_slot: 3
+  exhaustion_recorded_honestly: true
+execution_order: [pfoa, dcp26, bpa, pfbs, rox, genx, pfhxs, pcp, octocrylene, betahch, chloroform, hcbd, bde209, np, pcb209, dde, ddt, dieldrin, endosulfan, tcdd]
+pollutants:
+  pfoa:
+    name: "全氟辛酸 PFOA"
+    brief: complete
+    angles_planned: 26
+    attempted: 10
+    passed: 1
+    terminated: 9
+    status: "closed_breadth_first_satisfied（用户指令 2026-07-20：A02 通过即满足广度优先，不再新开 PFOA 槽；A11-A26 不开启，留待 20 污染物回溯补角）"
+    slots:
+      A01: { r1_score: 67, r2_score: 64, r2_verdict: terminate, status: terminated, file: SCHEMES/S01_A01_guanidino-CD_terminated.md, reason: "两个核心命题耗尽+先例饱和（胍基杯[5]芳烃 2019、季铵 PAF-1 2022），监督者接受 terminate" }
+      A02: { r1: "61-71（四批次）", r2: "72-76", r3: "77 revise 0c/1h", r4: "85 pass 0c/0h（journal 与输出文件双重核验；80 分通知为孤儿异版已废弃；基于其渲染的 r5 已停止）", status: passed, file: SCHEMES/S05_A02_urea-oxyanion-hole-POP_passed.md, note: "千方案计划首个通过方案：PAF-1 孔口预组织双脲氧阴离子洞，机制三分层+同碳全氟配对双向判决+负结果解耦交付" }
+      A03: { r1: "45（批次）", r2: "71 revise 0c/4h（重构路径，journal 核验）；46 terminate（批次旧路径）", r3_verified: "74 revise 0c/2h（输出文件核验为权威；曾遭 77 分损坏投递，已废弃）", status: terminated, file: SCHEMES/S03_A03_guanidinium-COF_terminated.md, reason: "裁决者判定原创上限为设计实现级（门控物理经 E17/E18 成熟化、表面实现经 E10/E11 完成、识别单元与 VZ-COF 高度同构），即便两个 high 全闭合上限约 78-80<85，结构性不可修；先例 2019-2025 六篇以上覆盖" }
+      A04: { r1_score: 69, r2_verified: "55 revise 0c/3h（批次）；66 terminate 0c/2h（并行，journal 核验）", status: terminated, file: SCHEMES/S02_A04_OAT4-window_terminated.md, reason: "窗口命题结构性平凡（正结果为有限腔固有预期、锐截止热力学不可达）+先例占据工程目标（Zr-PTA1 ng/L 柱+分解闭环；Ricard 2025/Li 2026 覆盖方法学空间）+亲和力预算无裕度" }
+      A05: { r1: "54-59（三批次）", r2: "74 revise（重构路径，journal 核验）；48 terminate（批次旧路径）", r3: "73 revise×2 / 70 terminate×1（三投递矛盾，均未过线）", status: terminated, file: SCHEMES/S04_A05_LanM-coordination_terminated.md, reason: "证据最充分投递含先例全文核验（Fe-MOF-808 无分解无 ng/L；Zr-PTA 开放位靶向 C4 非 C8 直接危及中心假设）且设计者自请终止；四轮以上执行上限 74 从未近线；Zr-MOF 先例饱和（Fe-MOF-808/PCN-999/Zr-PTA/ACS Omega 2025）" }
+      A06: { r1: "62 revise（60/terminate 首投递为误投递已撤销）", r2: "69 revise 0c/2h", r3: "69 terminate 0c/3h（journal 核验，平台期）", status: terminated, file: SCHEMES/S08_A06_KcsA-dehydration-carbon_terminated.md, reason: "两轮重建平台期 69→69；独立增量收窄为三项负先验经验赌注（L2 零容差笼/L3 双先例仅余 C8 反转/L1 符号负先验 -20 至 -22 kJ/mol）；C 维改判不通过；裁决者 terminate" }
+      A09: { r1: "72 revise", r2: "77 revise 0c/1h（journal 核验；73 误投递）", r3: "75-77（矛盾投递取并集）", r4: "77 revise 0c/1h（最终轮未过线）", status: terminated, file: SCHEMES/S10_A09_zwitterionic-brush_terminated.md, reason: "捕获-抗污拮抗四轮持续未机械化解（两性离子刷致密水化层同时为抗污机制与捕获屏障），裁决者判框架内穷尽；创新锚点被 ACS ES&T Water 2026 先例覆盖；轨迹 72→77→77 天花板 77，额度尽" }
+      A10: { r1: "60 revise 0c/3h（journal 权威；51/54 误投递）", r2: "67 revise（两次矛盾投递 0c4h/1c3h）", r3: "83 revise 0c/2h", r4: "82 revise 0c/1h 与 78 terminate 0c/1h（同向重复投递，wi882lrmw journal 权威；均 <85 均 terminate）", status: terminated, file: SCHEMES/S11_A10_reactive-LDH_terminated.md, reason: "额度 3/3 用尽，82/78 均 <85；A10-03 结合-活化耦合同位点机制内禀张力（锚定稳定基态抬升脱羧能垒）四轮持续，非文本可解；残余价值为活化/捕获分区新角度起点+矿化判决方法学+碳酸根管理三选一" }
+      A07: { r1: "72 revise", r2: "82 revise 0c/0h", r3: "84 revise 0c/0h", r4: "83 revise 0c/1h（journal 核验；最终轮未过线）", status: terminated, file: SCHEMES/S09_A07_hSA-hierarchy-resin_terminated.md, reason: "四轮轨迹 72→82→84→83 天花板 83-84；r4 裁决者复算揭示底线-容量解耦在 ng/L 工况按构造不可满足（L 位占 ng/L 摄取 3.6-23%、S4 反向单调数学不可达）——结构性；额度 3/3 用尽不授第五轮（授予即降标）；残余价值为双位点系统层方法学四项独立交付" }
+      A08: { r1: "73 revise 0c/5h", r2: "71 revise 0c/2h", r3: "68 terminate 0c/2h（journal 核验）", status: terminated, file: SCHEMES/S07_A08_FABP4-plasticity_terminated.md, reason: "设计者执行监督者指令后自请终止：FABP4 特异签名判别逻辑不可得，创新锚点重定位为运动性解耦方法学后原创性维预计 7-8/15，与 85 线差距结构性；裁决者 terminate；残余价值为 S_deconvolution 三竞争图景+包络测绘负结果骨架" }
+    misdelivery_incident: "2026-07-21：多个工作流通知载荷为误投递或陈旧（首份通知分数普遍偏高，如 A02 86/实为 76、A03 75/实为 71、A01 r2 79/实为 64、A05 首裁 84/实为 54）；另发现早先误判为秒崩的批次工作流 whikn2ogz 实际完整运行 2 小时（30 代理）并产生规范结果。规则：一切以 journal result 条目为权威，通知仅用于唤醒。"
+    recovery_note: "2026-07-21 从 wf_96b23550-47a journal 恢复 13 份第一轮产物（A01/A03/A04 完整三轮，A02/A05 设计与攻击），全文存于 SCHEMES/_wip/"
+    closure_note: "2026-07-20 用户指令收尾：PFOA 以 1 通过（A02=85）/9 终止（A01/A03/A04/A05/A06/A07/A08/A09/A10）关闭，满足广度优先；A11 首轮工作流（wg8rng9sv）因 checkpoint-resume 被拒零产出，不再重启。PFOA 高终止率反映 PFAS 吸附先例真实饱和（Zr-MOF/PAF/COF/胍基阳离子等 2019-2026 多平台占据），非降标。"
+  dcp26:
+    name: "2,6-二氯苯酚"
+    brief: complete
+    angles_planned: 35
+    attempted: 3
+    passed: 0
+    terminated: 3
+    status: "phase_b（A01 终止 75/S12；A02 终止 76/S18；A03 终止 68/S19；前三槽全终止，氯酚区域选择性确为硬骨头，A04-A35 待回溯）"
+    slots:
+      A01: { r1: "74 revise 0c/4h（journal 权威；66 误投递）", r2: "73 revise 0c/2h", r3: "72 revise 0c/2h", r4: "75 revise 0c/2h（最终轮未过线）", status: terminated, file: SCHEMES/S12_A01_regio-steric_terminated.md, reason: "额度 3/3 用尽 75<85；区域位阻识别水相定量选择性先验低（选择性因子先验 <2），空腔-水化壳矛盾为架构内禀张力；残余价值为删除变体因果包方法学+非单调异构体序列签名" }
+      A02: { r1: "66 revise 0c/4h（UGT 区域选择性结合启发的头基可及性识别，β-CD 窄口伯胺缘面吡啶酰胺双齿头基受体，方向取反转译偏好低水化遮蔽头基 2,6-DCP；4 high：H1 决定性判据 S1 设 pH 9.0 而双齿基元需中性酚互斥+其余）", r2: "76 terminate 0c/1h（闭合四 high：路线二选一 pH 5.0 中性酚+2×2 卤素析因归因+机制叙事同源耦合+E17 先例增量预注册；裁决者明示全修后上限约 80-81 仍不达 85，剩余差距归角度固有结构约束）", status: terminated, file: SCHEMES/S18_A02_UGT-headgroup-accessibility_terminated.md, reason: "氯酚区域异构体水相定量选择性先验低（与 A01 同源）；残余价值：2×2 卤素析因归因方法（复用须 ln α 形式+预注册精度与置信区间跨界默认落点）+阴性结果方法学+头基可及性描述符论证+CAS 更正 87-65-0" }
+      A03: { r1: "64 revise 0c/1h（咪唑鎓质子联锁 pH 门控双点位吸附-再生一体化，原型 FcRn/Bohr/溶酶体嗜性离子捕获；1 high+多 medium：ATK-01 开关比自洽性）", r2: "68 terminate 0c/0h（建三群体模型重校准开关比+收窄为 pH 门控低 pKa 酚类富集器+eCFR/PubChem 在线核验；三条独立终止依据：选择性轴单参数 pKa 单调 D 维判负七候选第二正交维度穷举排除、核心概念被咪唑鎓-酚盐离子对酚吸附先例家族覆盖 E 维高风险、无溶剂再生与 µg/L 低浓工况内禀不相容开关比需 3.6×10³ vs 先验 1.7-17；裁决者独立估分诚实上限 ≤78）", status: terminated, file: SCHEMES/S19_A03_imidazole-pH-gated-adsorption-regeneration_terminated.md, reason: "pH 门控酚类富集为单参数 pKa 单调利用（非区域识别）；残余价值：三群体模型 θ×f 耦合门控定量归属+低 pKa 酚类富集序可预测性+四组因果对照+生物质子联锁原型参数化设计语言" }
+  bpa:
+    name: "双酚 A"
+    brief: complete
+    angles_planned: 23
+    attempted: 3
+    passed: 1
+    terminated: 2
+    status: "phase_b_complete_breadth_first（A01 通过 86/S14，BPA 广度优先满足；A02 终止 62/S13；A03 终止 64/S15；后续可回溯 A04-A23 或推进下一污染物）"
+    slots:
+      A01: { r1: "71 revise 0c/2h（DmpR 固定酚锚加桥连区空间门；2 high：I1 成功判据与机制脱钩未合取、I2 非晶 HCP 无固定口袋几何使锚门解耦前提失效）", r2: "82 revise 0c/2h（+11，BPA 历轮最强；选晶态 β-酮烯胺 COF 闭合 I2、合取门禁闭合 I1、读毕 Park 2020 PDB 6IY8 全文并坐标复算、自我纠错 E135K 误译；新增 2 high：H1 S2 逆 logKow 签名热力学水下、H2 最近邻 E17 Zhao2022 题名逐字重叠全文未取得）", r3: "83 revise 0c/0h（两条 high 实质闭合：H1 选项甲 ΔΔG_wall 分项预算+S2 硬 go/no-go+Regime B 预定义、H2 穷尽 11 路线全文不可得登记监督者门 G-E17+E 维双区间决策树；零 high；唯一阻断为 M-A ΔΔG 定义式反号、M-B α-ΔΔG 换算 2.303 倍错误两处文件级订正）", r4: "84 revise 0c/0h（M-A/M-B/L-1-L-5/P-1 全部 resolved：定义式反号订正、α-ΔΔG 0.45 kJ/mol、BPA pKa 经 PMC 全文直读改标 Bautista-Toledo 2005 新增 E34、端点 0.40-5.94%、Pd 溶出、角度备案；零 high；新发现 3 medium A4-1 DFT 判行阈值与方法误差同量级/A4-2 S2 终局无功效预算 t≈1.5<2.92/A4-3 去锚支柱扭转投影缩短无 F 退路 + 5 low；裁决者明示文件级补件后预期 85-86 通过）", r5: "86 pass 0c/0h（文件级补件 A4-1 DFT 阈值≥4 双泛函 DLPNO 复核+A4-2 CV/同位素稀释/n 升级精度预算+A4-3 季铵化锚封闭后备体 C1-B 加 F11+A4-4 6IY8 分辨率精度 PDBe 复核+A4-5-A4-7+L-R1 全闭合；维度 18/22/17/12/9/8；裁决者确认 85 线未降零 high 判通过；残余 N1 medium C1-B 位点归属不阻断+N2-N5 low 保守偏差）", status: passed, file: SCHEMES/S14_A01_DmpR-anchor-gate-COF_passed.md, note: "BPA 首个通过方案，千方案计划第二个通过（继 PFOA A02=85）；监督者授 r5 最终补件轮（区别于 PFOA A07 结构性终止：A01 零 high 架构完整、缺口文件级可闭合）兑现裁决者 85-86 预测；G-E17 监督者门挂起待机构访问，E 维双区间择一；P(S2)≈20-30% 低先验诚实声明" }
+      A02: { r1: "72 revise 0c/3h（脲桥几何自互补聚脲 POP 定向多点氢键酚氧识别；3 high：H1 对称双端夹持落入陷阱 T4、H2 联苯二异氰酸酯水解产生联苯胺 IARC1 类、H3 仅编码间距一维预组织被熵抵消）", r2: "72 revise 0c/1h（平台期；H1 重构非对称单酚主锚、H2 换脂肪族 HDI/IPDI 连接体、H3 下调为间距偏置加统计多点，三条 high 实质闭合；新增 N1 high：旗舰 α≥3 对 BPA 全疏水逆风，f=5-20% 下需 α_c≈11-41 不现实）", r3: "62 terminate 0c/1h（N1 四层定量了断确认旗舰不可达，主动收窄为单酚位多点锚定加类级判别；裁决者独立复算确认，收窄后原创性封顶难过 85，N7 印证类级判据仍被疏水单调解释）", status: terminated, file: SCHEMES/S13_A02_urea-Hamilton-polyurea-POP_terminated.md, reason: "柔性 POP 上脲/Hamilton 定向供体水相酚氧识别的化学天花板由水相弱氢键（E9 近热中性）与小螯合可行分数共同决定；残余价值为 N1 存亡核算范式+亲和力-选择性解耦协议+阴离子位点毒化定量+TTC 泄漏阈值锚定" }
+      A03: { r1: "77 revise 0c/1h（异丙叉定距酚-酚间距加 C2 几何标尺刚性 COF；BPA 首轮最高；核心假设未证伪平台稳妥；1 high D-1；medium 含 G-1 CMR 连接体、A-2/A-3/A-4、C-1 ERRγ 过度解读）", r2: "71 revise 0c/2h（-6，诚实让步暴露角度硬度：确认 BPA/BPF O-O 距离重叠、二面角标尺降为构象熵间接通道、α 下调 1.4-3.3；G-1 换非 CMR Me2Pa/TmPa 阈值 75 ng/L 锚 ICH M7 TTC、D-1 修复、C-1 ERRγ 降结构存在性佐证；新增 2 high：H-1 结合姿态几何不自洽蝶式 60-120° 与双壁面 π-π 两点 0-30° 冲突、H-2 Me2Pa CID 7252 物质同一性错误应为 160824；C 维不通过仿生硬对应缺如、主签名与 A04 共享）", r3: "64 terminate 0c/2h（定点修复 H-2 CID 7252→160824 PubChem 核验+H-1 DFT/MD 姿态前置门+槽位重标 A03 收窄实现+C 维改判不通过；天花板诚实评估五点确认无 85 路径；裁决者独立复算全部确证、攻击者加强；2 high 角度内禀结构性不可修：A03R3-04 α(BPA/BPF)≥1.5 被 ΔlogKow0.3 纯疏水 α2.0-2.5 完全覆盖命中 T1+主签名与 A04 共享、C 维缺如+W2 构象熵内禀不确定性）", status: terminated, file: SCHEMES/S15_A03_isopropylidene-geometric-ruler-COF_terminated.md, reason: "水相识别 BPA 微妙桥差异内禀硬度（与 A02 同源）；残余价值：桥体积梯度非单调签名转交 A04+snug-fit 孔径精度方法学+非 CMR Me2Pa 安全设计+DFT/MD 姿态前置门方法学" }
+    g_e17_supervisor_note: "2026-07-20 监督者解析 G-E17（A01 r3 移交的监督者级门，E17=Zhao 2022 Sep Purif Technol 297:121489 全文）：监督者 WebSearch 后端同样返回 403（Access to model denied），与设计者 r3 穷尽的 11 条路线（OpenAlex/Semantic Scholar/Europe PMC/Unpaywall/PMC/Crossref/ScienceDirect 403/Open Access Button/BASE/WebSearch-WebFetch 403/68 条施引摘要）一致——E17 为 Elsevier 付费封闭获取、无仓库副本，解析需机构订阅或通讯作者请求，属本仓库范围外人工动作。结论：G-E17 维持外部依赖门，不阻断 A01 程序性通过（裁决者 r3 明示）；E 维双区间条款届时择一生效（区间一：E17 不含四元混合物 α+官能团谱切换则增量成立；区间二：含则收窄）。待潘尧或后续具备机构访问时取得全文以终判区间。"
+    phase_a_note: "五路调研（run wf_4ec9d6a6-a16）+ 综合；综合步经渲染器注入修复后续跑（原模板变量未插值缺陷已永久修复），169 条经 Crossref/Europe PMC/OpenAlex/Semantic Scholar 核验证据真正注入。两条启发式均判不够格：生物处理单元（Koc 621-736 L/kg 与 logKow 预测一致=非特异疏水分配，降解酶系属催化转化非识别）；组织富集（消除半衰期 38.6-62.2 min、清除率 90-124 mL/(kg·min)、BCF 5-68=不显著蓄积）。承重仿生源为 approach-1 机制匹配（DmpR 酚感应、ERβ 口袋体积、ERRγ 非对称单酚锚、PXR 定向混杂、TTR 卤酚通道）+ approach-2 工程难题驱动；ERRγ 为毒性受体仅作 approach-3 个案补充。高价值低先例角度：A01（DmpR 锚+门解耦）、A02（Hamilton 氢键供体酚氧）、A03（异丙叉定距几何标尺）。"
+  pfbs:
+    name: "全氟丁烷磺酸 PFBS"
+    brief: complete
+    angles_planned: 19
+    attempted: 2
+    passed: 1
+    terminated: 1
+    status: "phase_b_breadth_first（A17 通过 85/S17，PFBS 广度优先满足；A05 终止 58/S16；后续可回溯 A01-A04/A06-A16/A18-A19）"
+    slots:
+      A05: { r1: "66 revise 0c/2h（铁载体架构可溶笼捕获+固相受体回收两相体系；2 high A05-01 硫酸根排斥误归四面体几何/A05-02 TonB 归属错误）", r2: "58 terminate 0c/1h（诚实更正机制归属后暴露承重轴不可达：硫酸根排斥归 C4 链腔坍缩为单参数链腔疏水沿链长单调陷阱5、α≥10⁶ 需 ΔΔG≥34 kJ/mol 而 C4 氟碳链仅数至十余 kJ/mol；新 high A05-R2-01 E5 实为固定化流通笼吸附剂即可溶均相捕获无存在性先例）", status: terminated, file: SCHEMES/S16_A05_siderophore-two-phase-cage_terminated.md, reason: "角度内禀结构天花板（承重选择性轴单参数单调+可溶均相捕获无先例）；残余价值：铁载体两相架构传质/回收解耦+TonB 方向性能量逻辑+E5 固定化基准+nM 亲和与 α≥10⁶ 共同前置+硫酸根排斥归属教训" }
+      A17: { r1: "77 revise 0c/1h（孔口几何双位点头基类型反差捕获，T 三足硫脲匹配四面体磺酸根/P squaramide 匹配平面羧酸根，R=α_T/α_P 反差签名；1 high H1 squaramide 质子化态未设防）", r2: "82 revise 0c/0h（零 high；H1 设计层真正闭合 P 位点重设为不可去质子中性平面双给体+pH 滴定 kill 门+四唑根/squaramate 光谱防假阳性；M1-M5/L1-L3 全闭合）", r3: "84 revise 0c/0h（议题 A-F 全闭合：2×2 因子对照分离给体计数/酸性交互、−283 论据降辅助、接枝定位门 G1 前置阶段-1、squaramate 光谱升初级判据、创新承载点精确化为几何残差+R 反差、新颖性收窄应用/增量级；裁决者明示 r4 闭合 R3-1/R3-2 为触及 85 文本可达路径）", r4: "85 pass 0c/0h（R3-1 F0 由方向先验降为一致性诊断零链长截距/ΔCp/Δn_w、R3-2 角度+间距复合几何签名+2×2 因子 bootstrap 置信区间+检测力 n≥15.7(σ_R/δ)²、R3-3-R3-6 引证精度修辞闭合+E21-E23 新增；维度 18/22/17/12/9/8 达 85；裁决者确认 85 线未降零 high 判通过）", status: passed, file: SCHEMES/S17_A17_pore-mouth-dual-site-headgroup_passed.md, note: "PFBS 首个通过方案，千方案计划第三通过（继 PFOA A02=85、BPA A01=86）；85 认证严谨诚实双分支可发表闭环而非特异性正面主张大概率成立（T/P 反差须抗约 100 倍通用趋势+几何残差 <1 kcal/mol 处 POP 噪声边缘，先验低为不可约科学事实，S_deconvolution 阴性交付为真贡献承载）；四项实验门控待阶段-1/0" }
+    phase_a_note: "五路调研（run wf_bfd571d4-951）+ 综合（注入修复后渲染器，五路结果真正注入）；161 条经核验证据（联邦公报 NPDWR/UCMR5 全文、EPA 2022 PFBS HA 全文、EFSA 2020 全文 178 处 PFBS 抽查、Hu 2016 全文）。关键监管：EPA PFBS 终身 HA 2000 ng/L、2024 NPDWR 纳入 HI 混合物 MCL 2000 ng/L（无单项 MCL）、UCMR3 检出极低（8/4920 PWS）、EFSA 未将 PFBS 纳入 PFOA/PFOS/PFNA/PFHxS 组 TDI。两条启发式均判不够格：生物处理单元（出水 100% 检出、进出水负荷相当、前体转化反升短链 PFCA、碳吸附/离子交换对短链差）；组织富集（BCF/BAF 显著低于长链 PFSA、大鼠毒代消除最快尿排泄最高）。承重仿生源为 approach-1 机制匹配（NTCP/OAT4/GPR43-109A/NIS/ASBT/ModA 转运识别、铁载体架构、氟化物核糖开关）+ approach-2 工程难题驱动。低先例高价值角度：A05（铁载体两相捕获-回收）、A17（磺酸根 vs 羧酸根头基类型选择）、A18（氟化物核糖开关 F⁻ 传感）。PFOA 陷阱库可参照（阳离子位点对硫酸根/磷酸根非选择性、链长单调、ng/L 传质、含氟吸附剂风险、DOM 分组分、摩尔比 10⁻⁶-10⁻⁹）。"
+  rox:
+    name: "罗红霉素 ROX"
+    brief: complete
+    angles_planned: 22
+    attempted: 1
+    passed: 1
+    terminated: 0
+    status: "phase_b_breadth_first（A01 通过 85/S32，ROX 广度优先满足；r1=66→r2=78→r3=82→r4=85 压线；后续可回溯 A02-A22）"
+    slots:
+      A01: { r1: "66 revise 0c/4h（核糖体 NPET 核苷酸碱基阵列类级捕获+肟醚读取+环尺寸狭缝）", r2: "78 revise 0c/0h（主平台改刚性凹形裂缝半笼消除笼窗准入+红霉素归因改 C9 肟醚对酮置换探针+灰区条款 M-gray）", r3: "82 revise 0c/0h（裂缝半笼表面预组织+类级捕获预期降中等+价值重心置软对应一肟醚类内增量）", r4: "85 pass 0c/0h（机制确证型研究重定位：更正熵压缩论证热力学方向倒置+ΔΔG 收支诚实重推基线 α≤1 中点~0.40+Henry 极限报告口径精度预算 σ ΔΔG~0.18 kJ/mol+亲和力层/选择性层双层原理 ng/L 占位需 K_a≥10⁸-10⁹+M-gray 判别重构错排体为核心）", status: passed, file: SCHEMES/S32_A01_ribosome-NPET-nucleobase-cleft-cage_passed.md, note: "ROX 首个通过方案，千方案计划第六通过；23S rRNA 核苷酸碱基阵列受限读取逻辑（非蛋白 RNA 原型）转译全有机刚性凹形裂缝半笼，C9 肟醚对酮置换类内增量为价值重心；诚实重定位为机制确证型研究——五组因果对照（置换探针/错排体/空白体/扩窄口体/阳离子边界）在任何结果下给干净归因，定量 α≥2 为争取目标非通过前置；F1a α≤1 为基线模态预测其实现是假设如期证伪而非方案缺陷" }
+    phase_a_note: "五路调研（run wf_1dee5b26-56f，6 智能体/0 错误/293k tokens）+ 综合。经核验证据含大环内酯全球水体综述（JHM 2022 439:129628 最高 3847 ng/L）、珠江流域 STP（JHM 2024 476:135046）、长江下游（Environ Pollut 2025 384:126984）、武汉饮用水源（Environ Res 2023 239:117295）等多源一手监测，均经 PubMed efetch 摘要核验 + Crossref 题录自核。画像：14 元大环内酯（C41H76N2O15，MW 837，logP 1.7/XLogP 3.1，TPSA 217），去氧糖胺叔胺 pKa~8.8-9.0 环境 pH 下质子化阳离子（类内共有，无类内选择性），相对红霉素/克拉霉素仅差 C9 肟醚一臂、相对 15/16 元环仅差环尺寸。中国为主要生产使用国、欧洲出水未检出（区域分异）。无合规数值限值（中国类别管控不点名、欧盟限值仅针对红霉素），价值窗口在生态风险界面。两条启发式均判不够格：生物处理单元（非特异静电+大环疏水分配，logKd 0.8-1.9，且罗红霉素抑制污泥厌氧消化=负面效应）；组织富集（14C 胞内/外比 14-190 约半数溶酶体结合，但为通用弱碱溶酶体捕获类属机制，无罗红霉素特异结合/转运证据）。承重识别基础窄：肟醚读取（A02 氢键/A03 配位/A04 穿链）+14 元环几何（A05）；portfolio_100 已探 20 角最高 78 无一达 85。主线潜力最高 A01 核糖体 50S 出口隧道 NPET（23S rRNA 非蛋白氢键阵列+尺寸狭缝，Schlünzen 2001 罗红霉素共晶）。"
+  genx:
+    name: "六氟环氧丙烷二聚酸 GenX (HFPO-DA)"
+    brief: complete
+    angles_planned: 22
+    attempted: 1
+    passed: 0
+    terminated: 1
+    status: "phase_b（A01 终止 36/S33 氧阴离子洞中性氢键，首轮 2c/7h 裁决建议终止；中性氢键对 GenX 离域羧酸根+强水合永久阴离子本质不可行，应转 A03 多酚醚离子载体醚氧双锚角度）"
+    slots:
+      A01: { r1: "36 terminate 2c/7h（氧阴离子洞中性氢键供体阵列接枝活性炭；裁决者首轮即建议终止）", status: terminated, file: SCHEMES/S33_A01_oxyanion-hole-neutral-Hbond-AC_terminated.md, reason: "中性氢键氧阴离子洞对 GenX 羧酸头本质不可行四重缺陷：GenX 疏水机制近乎失效 logKow~0.5-1.5 活性炭容量仅弱碱树脂 1/4+中性脲供体已知强结合硫酸根=选择性负债+氧阴离子洞定域过渡态氧负离子 vs GenX 离域基态羧酸根保真度缺口+结合能上限不足 ng/L；残余价值 应转 A03/A04 醚氧双锚点（GenX 支链/醚氧区分正确路线）+QA-AC 阳离子对照机制差异" }
+    phase_a_note: "五路调研（run wf_ff52c393-782，6 智能体/0 错误/346k tokens）+ 综合。经核验证据含美国 2024 PFAS NPDWR 正文核验（HFPO-DA 强制 MCL 10 ng/L、危害指数成员、合规期 2029-04-26）与 2022 GenX 终身健康咨询值 10 ppt（87 FR 36848）、Heydebreck 2015 ES&T 地表水首检（Scheur 河 73.1 ng/L）、Strynar 2015 新型全氟醚酸鉴定、Pan 2018 全球 160 样点 7 国频繁检出中位 0.95 ng/L、Gebbink 2017 荷兰厂区下游最高 812 ng/L、Kim 2024 市政污水厂 HFPO-DA 67% 检出、McCord 2019 Cape Fear 37 分子式/58 异构体全氟醚酸。画像：HFPO-DA 全氟-2-丙氧基丙酸，PFOA 替代品，主排放源氟化工设施；水环境双峰（远离点源亚 ng/L-个位 ng/L 全球中位 0.95、点源邻近数百-1100 ng/L）；强亲水短链醚酸，真实基质吸附竞争以亲水位点抢占+NOM 污堵为主（Park 2020 GAC 穿透）。主目标市政二级出水及受纳水体（ng/L 级，10 ng/L=MCL 阈值线），实验点 10/100/1000 ng/L；竞争谱含短链 PFCA/PFOA/F-53B/6:2 Cl-PFESA/Nafion 副产物。两条启发式均不够格（全氟醚骨架无 O-脱烷基把手=生物单元不适用；ADME 不代谢/尿快速排泄/大鼠半衰期~5h=无组织富集第一级）。角度地图：A01 氧阴离子洞中性氢键供体阵列、A02 SBP 纯氢键裂隙脲孔壁 COF、A03 多酚醚离子载体反极性醚氧双锚、A06/A07 草酸降解菌 OxlT 电荷不对称反向转运/电摆动门控、A09 HSA subdomain IIIA 支链亚腔两点笼、A12 还原脱卤酶取向吸附-还原复合体、A14 木质部 Murray 定律分级孔、A16 i-motif/G-四链体 pH 构象开关等，另 5 个对照集（A18-A22）。"
+  pfhxs:
+    name: "全氟己烷磺酸 PFHxS"
+    brief: complete
+    angles_planned: 13
+    attempted: 2
+    passed: 0
+    terminated: 2
+    status: "phase_b（A01 终止 70/S31 头基维中性氢键笼；A07 终止 78/S28 盲腔深度窗口；前两槽均终止，PFAS 头基/链长识别内禀硬度，A03/A06/A09 等待回溯）"
+    slots:
+      A01: { r1: "69 revise 0c/4h（四面体磺酸头中性氢键笼几何识别）", r2: "70 revise 1c/0h（squaramide 去质子架空中性前提 critical）", r3: "81 revise 0c/0h（供体换硫脲全 pH 中性+订正 ng/L pM 缺口范畴错误，+11）", r4: "70 revise 0c/1h（终轮反降：主张收窄致机制削弱）", status: terminated, file: SCHEMES/S31_A01_tetrahedral-sulfonate-neutral-Hbond-cage_terminated.md, reason: "额度 3/3 用尽 69→70→81→70；头基维中性氢键对强水合磺酸头水相本质弱、绝对亲和主自疏水基线、头基差分含三反向成分净符号实验问题、四面体对平面几何识别为设计假设非生物先例直证；PFAS 头基识别内禀硬度同 PFOA；残余价值 BV50≈Kd·ρ_bed 口径更正+koff=kon·KD 慢解离非补偿澄清+硫脲中性供体选型" }
+      A07: { r1: "65 revise 0c/3h（C6 链长窗口刚性盲腔深度匹配）", r2: "75 revise 0c/1h（主平台改深腔 cavitand 同构系列+窗口重述长链伸出罚分反转+量热共轭极值升主判据，+10）", r3: "78 terminate 0c/0h（承重反转臂 M1 对一切长链不全埋体系近于必然成立无机制区分力、M2∩M3 确立难、溶液相游离 cavitand 多聚胶囊封顶消解伸出罚分、Å 级定深 cavitand 合成可达性差）", status: terminated, file: SCHEMES/S28_A07_blind-cavity-depth-window_terminated.md, reason: "额度内裁决判结构性天花板 65→75→78；残余价值两档价值主张分层方法学+M1 降必要条件 M2∩M3 裁决结构+溶液相对接枝相反差对照+硫酸盐占据模型压缩核算" }
+    phase_a_note: "五路调研（run wf_e0dc3461-e0d，6 智能体/0 错误/293k tokens）+ 综合。经核验证据含美国 2024 PFAS NPDWR 正文核验（PFHxS 单项 MCLG/MCL 均 10 ng/L、危害指数成员、合规期 2029-04-26、2026-05-20 拟议规则 91 FR 29413 拟撤销监管的变动期）、Kim 2024 ACS ES&T Water PMC 正文核验（美国 9 座市政污水厂进出水 100% 检出、出水中位 1.8 ng/L、HI 0.2-6.1、活性污泥几乎无净去除且前体转化升短链 PFCA）、斯德哥尔摩公约 COP-10 决定 SC-10/13 附件 A 网页核验、EFSA 2020 四物质之和 TWI 4.4 ng/kg/周摘要核验、UCMR3 检出 207 样/55 系统正文核验、Oakey AFFF 羽地下水 <0.07-6 µg/L（Bräunig 2017）。画像：C6F13SO3H MW 400.12 长链全氟烷基磺酸，环境 pH 阴离子、持久可蓄积、2022 列入公约附件 A 消除类；水环境双峰（无点源 ng/L 级中位 1-12、AFFF 场地地下水 µg/L 级）。主目标场景市政二级出水及受纳水体/饮用水源（ng/L 级），实验点 10/100/1000 ng/L；10 ng/L≈25 pM 对 0.5 mM 硫酸根摩尔比~5×10⁻⁸（竞争物过量 10⁷-10⁸）。生物处理单元启发式不够格（穿透+净生成通道）；组织富集启发式够格附三硬归因约束（OAT4 转运 PFHxS 而排除 PFBS，Louisse 2023 摘要逐字核，链长选择性证据阶梯第 4 级——真实选择性锚）。角度地图：A01 四面体磺酸头中性氢键笼几何识别、A03/A06/A07 C6 链长窗口双轴/逆向印迹/刚性孔深度匹配、A09 捕获态还原电子注入活化、A10 C-S 切断+氟离去基捕获双半反应、A11 两性离子抗污界面分配等。"
+  pcp:
+    name: "五氯苯酚 PCP"
+    brief: complete
+    angles_planned: 16
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，16 诚实可区分角度，上限 16<50；待进 Phase B 批量方案槽）"
+    phase_a_note: "五路调研（run wf_210a8b3c-43d，6 智能体/0 错误/297k tokens）+ 综合。经核验证据含 ATSDR 2024 毒理学概况全文（EPA 第三轮六年审查 40322 座公共供水系统 0.56% 检出/0.027% 超 MCL、NPL 场地水相中位 410 µg/L）、美国 NPDWR MCLG 零/MCL 1 µg/L 与 2015 人体健康基准 0.03/0.04 µg/L 官方核验、斯德哥尔摩公约附件 A 决定 SC-7/13 官方核验、IARC 2019 1 类致癌物；长江干流 144 样检出率 88.9% <MDL-9.97 ng/L（Yang 2024 ESPR）、鄱阳湖灭螺区 0.01-0.43 µg/L 本地 AWQC 0.02 µg/L（Xu 2023）、氯酚同族物竞争谱 0.9-172 ng/L（Front Toxicol 2023 全文）。14 条 DOI 全经 Crossref 题录自核、4 份官方文件直读。画像：CAS 87-86-5、pKa 4.75，pH 6-9 天然水体以五氯酚氧阴离子为主，识别对象=弱酸阴离子+五氯代芳环组合特征；最危险竞争物为同族氯酚（2,4-DCP/2,4,6-TCP/2,3,4,6-TeCP）加三氯生/硝基酚/腐殖酸，单靠疏水或静电不足以区分。主目标场景中国一般流域地表水/饮用水源溶解相（亚 ng/L-10 ng/L，灭螺区湖盆 10-430 ng/L 高端）；ng/L 工况需 Kd~10⁴ L/kg。两条启发式均判条件够格附三项转译约束（吸附机制层不够格、富集现象本身不够格，仅可提取非蛋白/pH 动态线索）。角度地图蛋白/非蛋白混合：A01 TTR 反向模式卤代酚通道、A02 SBP 预组织中性氢键酚氧、A03 卤键 σ 空穴五点几何、A04 全氯环 snug-fit 环糊精、A07 还原脱卤酶区域选择性氯位构型识别等。"
+  octocrylene:
+    name: "奥克立林"
+    brief: complete
+    angles_planned: 19
+    attempted: 1
+    passed: 1
+    terminated: 0
+    status: "phase_b_breadth_first（A01 通过 85/S34，octocrylene 广度优先满足；r1=75→r2=83→r3=85 pass 0c/0h；后续可回溯 A02-A19）"
+    slots:
+      A01: { r1: "75 revise 0c/2h（电子亏缺氰基丙烯酸酯核供体-受体 CT 识别腔，光合反应中心供体-受体电子预组织原型）", r2: "83 revise 0c/0h（两 HIGH 闭合：合成前 DFT-SAPT 预筛门 + 实测电子学描述符替代跨语境 σp/反转降加分；d1 SAPT 升并列归属支柱、b1 非联苯胺受体二胺+CMR、b2 第三离散笼格式+逐成员 PXRD、g1 ng/L 依赖 A19+二次废液、c1 H2 降使能论证、a4 ng/L 柱 α、a5 DOM 芳组分位点竞争臂；kO3 经 PubMed 28535480 升 verified）", r3: "85 pass 0c/0h（清偿证据债：kO3/TTF +0.34V/Moser PMID1311417 三承重数值外部核验 + 稳固离散分子笼第三格式 + 原创口径收敛）", status: passed, file: SCHEMES/S34_A01_donor-acceptor-CT-cavity_passed.md, note: "83<85 差距为证据债（TTF 起始氧化电位/Moser 距离常数/Zhu2004 EDA 参数待全文核定）+ 原创增量收窄（一般 CT 捕获主题已被碘/硝基芳烃占用，增量收窄为首例中性高疏水污染物/首例紫外过滤剂+电子梯度因果系列）；r3 清偿证据债+稳固离散笼第三格式即达线" }
+    phase_a_note: "五路调研（run wf_9edc1d13-569）+ 综合。经核验证据含欧盟委员会执行决定 2022/1307 与 2025/439 两份地表水监测清单题录经 EUR-Lex/EFTA/DIN/UNEP LEAP 多接口交叉确认（附件物质名待核验）、UV-328 2023 列入斯德哥尔摩公约（首个受管制紫外过滤剂）、OC/EHMC/avobenzone PBT 评估在途（REACH）、帕劳 RPPL 10-30 与美属维尔京群岛有毒三个 O 禁令（二次来源交叉确认法规正文待核验）；Kroll 2025 汇编 28 种欧盟授权有机紫外过滤剂水相浓度 OC 为最高者（全数据<0.3-4660 ng/L，全文）、吕讷堡 WWTP 进水 OC 均值 3.49 µg/L、加那利旅游岛进水最高 208 µg/L、青岛自然水体最高 356.24 ng/L 夏季升高、赫雷斯终出水溶解相紫外过滤剂最高 4-7 µg/L。画像：OC（CAS 6197-30-4，C24H27NO2，logKow~6.1）二苯甲酰基丙烯酸酯类紫外吸收剂，强季节性，强颗粒/污泥分配（青岛污泥 3842 ng/g），地下水监测空白；降解产物二苯甲酮（逆羟醛缩合）+ 氯化 11 种 DBP。主目标 S2-S3 市政二级出水/受纳地表水/娱乐水体（ng/L-低 µg/L）。最危险竞争物同类紫外过滤剂 EHMC/BP-3/4-MBC/homosalate/avobenzone + 自身降解产物二苯甲酮。22 条 DOI Crossref 题录自核（摘要级）。两条启发式均不够格（满 scale 污水厂 UV 过滤剂去除 92-99% 以上；OC 以脂肪酸共轭物/糖苷在珊瑚组织累积但无特异识别机制）。"
+  betahch:
+    name: "β-六氯环己烷 β-HCH"
+    brief: complete
+    angles_planned: 21
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，21 诚实可区分角度，上限 21<50；待进 Phase B）"
+    phase_a_note: "五路调研（run wf_55d274a7-324）+ 综合。经核验证据含斯德哥尔摩公约 α/β-HCH 化学概况页面全文核验（β-HCH CAS 319-85-7 经 COP-4 决定 SC-4/11 列入附件 A 无豁免、林丹生产非故意副产物每吨林丹约产生 6-10 吨其他异构体、较冷地区水中高度持久、北极食物网生物积累、对人类可能致癌）、美国 NPDWR 页面核验（林丹 γ-HCH MCL/MCLG 均 0.2 µg/L，α/β-HCH 与总六六六不在限值表内）、Wilk/Willett 1998 ES&T HCH 异构体差异毒性与全球归趋权威综述（β-HCH 全平伏氯构型最稳定抗降解难挥发、老化后占比升高、最终成主导异构体）；中国 20010 地下水监测点全国调查（J Con Hyd 2026）、太湖浅层地下水 β-HCH 多为优势 HCH 异构体（STOTEN 2014）、捷克 Hajek 人工湿地 HCH 去除异构体序 α=γ=δ>β=ε β-HCH 最难去除（STOTEN 2024）、西班牙 Sardas 林丹工厂场地厌氧 HCH 转化（JHM 2025）、巴西饮用水林丹-HCH 均值 2.17 µg/L 超美国 MCL 一个数量级（EnvInt 2022）。画像：β-HCH（C6H6Cl6）六氯环己烷热力学最稳定异构体（全平伏氯），高疏水 logKow~5、水相低溶、持久、林丹生产副产物遗留、环境老化后占比升高最难去除。最危险竞争物 α/γ/δ-HCH 异构体（仅氯取向不同）+六氯苯杂质。生物处理单元边界够格（降解分支林丹脱氯化氢酶 LinA/脱卤酶机制清晰；吸附分支有机质平衡分配不够格）；组织富集不够格（人体消除半衰期中位 7.2 年与体脂正相关，脂质分配+代谢持久性两通道解释）。"
+  chloroform:
+    name: "三氯甲烷"
+    brief: complete
+    angles_planned: 20
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，20 诚实可区分角度，上限 20<50；主目标出厂水/管网末梢饮用水；待进 Phase B）"
+    phase_a_note: "五路调研（run wf_5fb76761-139）+ 综合。经核验证据含美国 EPA TTHM MCL 0.080 mg/L 与单物种 MCLG 三氯甲烷 0.07 mg/L 页面直读核验（Stage 1/2 DBPR）、USGS Moran 2006 全国约 3500 井地下水事实简报页面直读核验、WHO 指导值 300 µg/L（Hernández 2025 佐证）、欧盟总 THM 100 µg/L、中国 GB 5749-2022 单物种 60 µg/L；厄瓜多尔昆卡出厂/管网水 CHCl3 实测 11.75-21.88 µg/L、清迈 TTHM 峰值 189.52 µg/L（Sriboonnak 2021）。画像：CHCl3 饮用水氯化消毒生成量最大的三卤甲烷 DBP，易挥发、弱极性 logKow~2、缺强结合位点。主目标场景判为出厂水/管网末梢饮用水（消毒时生成、管网末梢累积峰值，区别于默认市政二级出水——后者受挥发约束退居条件性次目标）；实验浓度 10/30-60/80-190 µg/L。共存谱为同族 BDCM/DBCM/溴仿 + HAA/HAN/HAM 卤代 DBP 家族 + 腐殖酸前体。生物处理单元弱够格附四项约束（去除以挥发为主、好氧降解近可忽略，可提曝气传质/气液界面非蛋白线索）；组织富集不够格（BCF 个位数量级可由溶解度预测）。"
+  hcbd:
+    name: "六氯丁二烯 HCBD"
+    brief: complete
+    angles_planned: 13
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，13 诚实可区分角度，上限 13<50；主目标工业点源废水；待进 Phase B）"
+    phase_a_note: "五路调研（run wf_c95a9c02-b08）+ 综合。经核验证据含 WHO 饮用水准则第 4 版化学概况全文读取（HCBD 准则值 0.6 µg/L、TDI 0.2 µg/kg/d、地表水数个 µg/L、饮用水<0.5 µg/L、化工厂废水最高 6 µg/L、GAC 可实现 0.001 mg/L）、中国《重点管控新污染物清单（2023 年版）》第 5 项 HCBD 禁生产/加工使用/进出口 gov.cn 原文页面读取、《有毒有害水污染物名录（第一批）》2019 不含 HCBD 负证据、GB 3838-2002 表 3 特定项目限值 0.6 µg/L、斯德哥尔摩公约附件 A（SC-7/12）+附件 C 非有意生产（SC-8/12）、欧盟 WFD MAC-EQS 0.6 µg/L/生物相 EQS 55 µg/kg 湿重（2022 CIS 档案转述，指令原文本轮不可达）；中国两家四氯乙烯厂反应区污泥 72700 µg/kg（IJERPH 2023 全文）、日内瓦湖 2016 年 100% 检出、加拿大 St. Clair 河与美国 Bayou d'Inde 点源邻近最高约 300-350 µg/kg。画像：C4Cl6 MW 260.8 全氯代 C4 烯烃，无氢键位点、化学惰性、logKow 4.78-4.9、水溶 3.2 mg/L、蒸气压 20-36 Pa 高挥发性、沉积物 Kd~11292 L/kg；环境存在模式为点源工业残液/废水+沉积物库+生物相而非市政出水型（中试厂 72% 吸附污泥）。主目标判为工业点源废水及点源影响区地表水（µg/L 级），验证场景饮用水源（亚 µg/L，锚 0.6 µg/L），市政二级出水列不适用附论证。实验浓度 0.1/1/10 µg/L 须密闭体系做挥发/器壁吸附质量平衡。最近似竞争物六氯乙烷 HCE+五氯丁二烯。11 个 DOI Crossref 题录自核。生物处理单元弱够格附严格约束（降解侧厌氧序贯还原脱氯主产物四氯丁二烯>90%；吸附侧整体疏水分配不够格）；组织富集不够格（脂肪富集由脂质疏水分配充分解释）。"
+  bde209:
+    name: "十溴二苯醚 BDE-209"
+    brief: complete
+    angles_planned: 26
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，26 诚实可区分角度，上限 26<50；待进 Phase B）"
+    phase_a_note: "五路调研（run wf_962c0b4b-b91）+ 综合。经核验证据含美国 TSCA 6(h) deca-BDE 2021 分阶段禁令（86 FR 880）与 2024 修订规则（89 FR 91486，2025-01-21 起禁止向水体释放）Federal Register 官方接口全文核验、斯德哥尔摩公约附件 A 消除类、欧盟 REACH 附件 XVII 0.1% 门槛、EFSA 2024 为 BDE-209 导出 BMDL；日本 deca-BDE 设施出水 PBDE 中位 610 ng/L（Suzuki 2021）、印度工业走廊溶解相 ΣPBDE 103-196 ng/L（Chakraborty 2026）、沱江沉积物 DBDPE/BDE-209 比 1.38-2.76 示替代趋势。画像：C12Br10O 超大疏水分子，水溶度<100 ng/L（PubChem OECD 105 实测核验）、logKow~10，实际水体主赋存悬浮颗粒/胶体/微塑料/污泥，溶解相受溶度上限约束。主目标 S1/S2 工业点源出水与工业走廊受纳水体（唯一提供 ng/L 级以上 BDE-209 水相负荷界面）。结构最近似竞争者 DBDPE（仅差乙烷桥）+ 重溴 PBDE 同系物。18 条 DOI Crossref 题录自核（摘要级）。两条启发式均不够格（市政处理几乎完全分配悬浮固体/污泥由 Koc 控制；大鼠 14C-BDE-209 分布可由脂分配解释）。"
+  np:
+    name: "壬基酚 NP"
+    brief: complete
+    angles_planned: 19
+    attempted: 1
+    passed: 1
+    terminated: 0
+    status: "phase_b_breadth_first（A01 通过 92/S26，NP 广度优先满足；r1=82 revise 1h→r2=92 pass 0c/0h；后续可回溯 A02-A19）"
+    slots:
+      A01: { r1: "82 revise 0c/1h（ipso 途径逆向标尺，α-四级碳拓扑形状选择腔；1 high 交联剂氯甲基芳烃 CMR+泄漏锚定）", r2: "92 pass 0c/0h（闭合全部 10 条台账：成网改非 CMR 点击/自由基路线、泄漏重锚健康基准 TTC 0.75 µg/L、E7 Lu2015 相关方向经 PubMed 摘要内容核验确认 R²=0.76 立体效应指数正相关、深腔笼两级 go/no-go 门+胶囊抑制论证、HC1 电子性→几何性重释；维度齐备）", status: passed, file: SCHEMES/S26_A01_ipso-alpha-quaternary-topology-cavity_passed.md, note: "NP 首个通过方案，千方案计划第四通过（继 PFOA A02/BPA A01/PFBS A17）；Sphingobium Bayram/TTNP3 ipso 羟基化途径 α-四级碳底物判据的几何转译，非蛋白间苯二酚芳烃深腔笼，生物留下/材料捕获的应用端逆读标尺" }
+    phase_a_note: "五路调研（run wf_432cd329-e10）+ 综合。经核验证据含中国《重点管控新污染物清单（2023 年版）》部令第 28 号第十二项 NP 三项源头禁用官方 PDF 核验、《有毒有害水污染物名录（第一批）》2019 不含 NP 官方 PDF 核验、欧盟 WFD 优先物质第 17 号 AA-EQS 0.3/2.0 µg/L（待原文核验）、加拿大 WQG 1000 ng/L、美国 EPA 2005 水生基准 CMC~190/CCC~6.6 µg/L（待核验）；混合纺织-市政厂出水 0.53-1.4 µg/L、加拿大 241 样 1.29-477 ng/L、东江最高 14540 ng/L、武汉水源城区 92.3 ng/L。画像：酚头基+C9 壬基疏水尾两亲烷基酚（C15H24O，CAS 25154-52-3），NPEO 降解终端产物，pKa~10 环境 pH 6-8 中性分子（静电无效）、logKow~4.5-5.2 强亲固相。主目标市政二级出水（ng/L-低 µg/L，要求 Kd~10⁴ L/kg）。最危险竞争物辛基酚 OP（仅 C9 vs C8）+ NP1EO/NP2EO 前体 + BPA 异类酚。20 篇一手文献 Crossref 题录自核（摘要级）。生物处理单元部分够格（降解侧 ipso 羟基化途径机制清晰沿证据阶梯收敛；吸附/富集侧不够格）；组织富集不够格（人体配对脂肪/肝/脑 4n-NP 多低于定量限）。注：本轮 proto_classical 路内容安全分类器临时不可用，综合者输出已就证据自洽性核验。"
+  pcb209:
+    name: "多氯联苯-209 PCB-209"
+    brief: complete
+    angles_planned: 23
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，23 诚实可区分角度，上限 23<50；PCB-209 单体无实测水浓度负面发现；待进 Phase B）"
+    phase_a_note: "五路调研（run wf_920b2be4-157）+ 综合。关键负面发现（search_executed）：2019 年后无文献报道 PCB-209 单体在任一真实水体的实测浓度；水相 PCB 检出由低氯至中氯同系物主导，矿区排水检出最高氯数亦仅七氯（Wolkersdorfer 2025 综述全文 verified）。经核验证据含美国 EPA 总 PCB 饮用水 MCL 0.0005 mg/L（官方表 verified）、PCB 不在欧盟 WFD 优先物质清单（2013/39/EU 页面 verified）、斯德哥尔摩公约 2025/2028 消除时间表（公约官网 verified）；溶解相 ΣPCB 一般流域 0.065-1.92 ng/L（北洛河 2023 均值 0.37）、饮用水源 0.04-11 ng/L（加纳 Pra 河 2025）、单同系物水相最高 PCB-167 达 1860 ng/L（Udu 河 2022）。画像：C12Cl10 MW 498.6 XLogP3 8.3（PubChem API verified）、全氯代无氢键位点/无解离/平面刚性、水溶度推断 ng/L 级。PCB-209 单体水相浓度只能以 ΣPCB 量级+单体份额推断（pg/L-亚 ng/L），不得声称实测。主目标市政二级出水及受纳地表水溶解相。竞争谱须含低氯同系物（水相主体）+ 高氯同类 PCB-170/180/194 + 跨类全卤代姊妹物 BDE-209。两条启发式均不够格（污水厂归宿污泥相整体疏水分配；人血 PCB 以六/七氯持久同系物主导，类级分布无 PCB-209 特异机制）。"
+  dde:
+    name: "滴滴伊 p,p'-DDE"
+    brief: complete
+    angles_planned: 15
+    attempted: 1
+    passed: 0
+    terminated: 0
+    status: "phase_b（A01 r1=69→r2=75，crit=0/high=0，revise→r3 或角度边界；两 HIGH 已闭合，但窗口约 0-1 埃+反转余量小+C 维仿生不通过为结构性脆弱）"
+    slots:
+      A01: { r1: "69 revise 0c/2h（平面轮廓形状读出 COF/环芳烃堆叠狭缝腔；BphA 平面氯代二芳基识别原型）", r2: "75 revise 0c/0h（逐条闭合裁决 10 项：H-1 三分支计算门+受限平面化自由能、H-2 S3 重写 α(DDE/DDT) 唯一反转判据+DDD 降二级、M-1 补 2XRX/2XSH+H2 降弱架构类比、M-2 P10 更正、M-3 补四先例点名、M-4 删路线乙、M-5 动力学判据、L-1/L-2/L-3）", status: revise_r3_or_boundary, file: SCHEMES/_wip/A01_r2.md, note: "75<85 且结构性脆弱：厚度窗口约 0-1 埃达线依赖未证的狭缝诱导平面化、干净反转仅 DDE/DDT 单对且余量小、C 维仿生转译不通过（本质理性化学设计）；r3 靠 Phase 0 计算门定生死，否则转 DDE A02 =CCl2 卤键读出" }
+    phase_a_note: "五路调研（run wf_0c29a692-e0f，6 智能体/0 错误/309k tokens）+ 综合。经核验证据含 WHO 饮用水准则 Table A3.3 原文核验（DDT and metabolites 导则 0.001 mg/L=1 µg/L，DDE 纳入总量无独立限值）、美国 40 CFR 141.61 定位（DDT MCLG=0/MCL=7 µg/L，DDE 纳入 DDT 类）、Narragansett Bay 被动采样溶解相 ΣDDT~0.23 ng/L（EnvPoll 2022=清洁-轻度影响亚 ng/L 背景）、孟加拉 Meghna 河 4,4'-DDE BDL-4.217 µg/L 致癌风险 10⁻⁵-10⁻⁴（2025=污染河流高 µg/L 端）、摩洛哥 Marchica 潟湖 Σ3DDTs max 11.99 ng/L、伊朗 Karkheh 饮用水源 DDT 10 ng/L 合规、非洲多水体总 DDT ND-81.2 µg/L（Heliyon 2024）、全球 56 国 POPs 系统综述（STOTEN 2021）。画像：p,p'-DDE（C14H8Cl4）DDT 好氧脱 HCl 产物、共轭二氯二苯乙烯、高疏水 logKow~6.5、水相极低溶、主蓄积库沉积物/生物相而非溶解相、与 DDT/DDD 共享双(4-氯苯基)骨架仅乙烷桥 C1 取代不同（DDT -CCl3/DDE =CCl2/DDD -CHCl2）；溶解相 ng/L 级。最危险竞争物为 DDT/DDD 结构近似物+其他 OCPs（HCH/狄氏剂/氯丹/七氯环氧化物）+PCBs。两条启发式均不够格（生物处理非特异疏水分配 logKow 线性；脂肪/血液~280:1 可被中性脂质分配解释无特异机制）。角度地图：A01 平面轮廓形状读出 COF 堆叠狭缝腔、A02 =CCl2 乙烯基二氯卤素相互作用图案读出（DDE 特异桥特征）、A03/A13/A14 类咕啉 Co-N4/血红素-黄素低电位还原中心捕获-还原耦合、A04 lipocalin 型尺寸窗口、A06 双(4-氯苯基)π 酸 EDA 电子富集芳壁、A10 桥取代基身份排斥守卫串联床（反向读出 DDT/DDD）、A11 形状-还原双正交核壳、A15 平面轮廓离散深腔 cavitand 等。"
+  ddt:
+    name: "滴滴涕 p,p'-DDT"
+    brief: complete
+    angles_planned: 24
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，24 诚实可区分角度；待进 Phase B 批量方案槽）"
+    phase_a_note: "五路调研（run wf_47972af0-8ec）+ 综合（注入修复后渲染器，五路结果真正注入）；全文级证据含 Makgoba 2024 非洲 DDT 综述 PMC10979284 全文、Montuori 2020 Volturno 河全文（溶解相 ΣDDT ND-1.34 ng/L 均值 0.38、(DDD+DDE)/DDT=13.8-16.8 历史残留）、WHO 1 µg/L 准则值经综述全文引文核实、美国 EPA 40 CFR Part 141 经 eCFR 双版本核验无 DDT 饮用水 MCL。关键画像：logKow 6.5-6.9 高疏水、水溶度极低、强烈颗粒/沉积物分配、溶解相 ng/L 级；斯德哥尔摩公约附件 B 限制用途；最关键结构近似物为 p,p'-DDE（好氧脱 HCl）/p,p'-DDD（厌氧还原脱氯），共享双(4-氯苯基)骨架仅乙烷桥 C1 取代不同（DDT -CCl3/DDE =CCl2/DDD -CHCl2），环境浓度常远超母体。两条启发式均判不够格：生物处理单元（foc/Kow 控制非特异疏水分配、去除率-logKow 线性、DDE 98% 随污泥流）；组织富集（脂肪组织富集现象稳健但可被中性脂质分配充分解释，阶梯第 1 级充分但更高阶梯无特异机制）。承重仿生源为 approach-1（脱氯化氢酶 β-消除、类咕啉/黄素-血红素还原、lipocalin/SCP-2 架构、卤键阵列、胆盐胶束、白腐真菌自由基介体、醌类电子梭）+ approach-2 工程难题驱动。"
+  dieldrin:
+    name: "狄氏剂"
+    brief: complete
+    angles_planned: 17
+    attempted: 1
+    passed: 1
+    terminated: 0
+    status: "phase_b_breadth_first（A01 通过 89/S27，狄氏剂广度优先满足；r1=70 revise 2h→r2=89 pass 0c/0h；后续可回溯 A02-A17）"
+    slots:
+      A01: { r1: "70 revise 0c/2h（环氧桥双氢键供体 exo-环氧识别腔；H1 疏水层近简并前提与实测 logKow 冲突、H2 解耦阈值标定错误）", r2: "89 pass 0c/0h（全部接受勘误：采用实测 logKow 艾氏剂 6.50/狄氏剂 5.40/异狄氏剂 5.20 重算疏水本底、 claims 收窄为异狄氏剂对 EF≥2.5+艾氏剂对方向性验证、撤销低介电微环境声称改保守基准+阶段 0 模型化合物水相滴定 go/no-go、A302S 降为调制性证据、供体改预合成双 NH 双齿方酰胺；先例风险 low 经独立检索确证无设计型水相环氧锚定腔空白）", status: passed, file: SCHEMES/S27_A01_exo-epoxide-dual-Hbond-cavity_passed.md, note: "狄氏剂首个通过方案，千方案计划第五通过；GABA/Rdl 刚性疏水腔+单一极性接触调制原理（毒效靶标仅作机制原型）转译 SBA-15 孔壁方酰胺双 NH 阵列，exo-狄氏剂 vs endo-异狄氏剂几何读出，非 logKow 单调" }
+    phase_a_note: "五路调研（run wf_790f61f0-9da）+ 综合。经核验证据含 ATSDR 2022 艾氏剂/狄氏剂毒理学概况第 5 章全文核验（美国地表水 2016-2021 约 5500 点位检出率 0.4%/0.0746-41 ng/L、五大湖开阔水 0.07-0.4 ng/L、地下水检出率 2%/加州 1304 井全 ND、纽约 14 厂进水全 ND 仅 2 份出水 12-28 ng/L、logKow 4.32-6.2、水溶 0.110 mg/L、水相挥发半衰期 17 d、艾氏剂环氧化制得、1974 停产）、Toxics 2025 中国 WQC 全文核验（GB3838-2002 未收录狄氏剂、组织残留途径 WQC 3.86/1.4 ng/L、BAF 58884、既往急性基准 470 ng/L）、丹江口水库水相全 ND 沉积物最大 0.98 ng/g 检出率 4.4%、额尔齐斯河 ND-4.86 ng/L 均值 0.270、印度 Thamirabarani 河超 WHO/BIS 0.03 µg/L、加纳 Builpela 坝 3.29 µg/L、科索沃 Badovci 湖 ΣOCP 0.873-33.418 µg/L HI 571.3、全球淡水超标 4.6%/非洲亚洲 50%+。监管锚点 WHO/BIS 0.03 µg/L（aldrin+dieldrin 合计）、EU WFD EQS 10 ng/L、美国五大湖野生动物值 0.071 ng/L、加拿大 RBCA 1 ng/L。画像：C12H8Cl6O CAS 60-57-1 笼状含氧有机氯含环氧桥、艾氏剂环氧化代谢产物、高疏水 logKow 5.40、强吸附沉积物/脂相。主目标一般地表水/饮用水源溶解相（发达地区 0.1-40 ng/L 双峰、热点 µg/L 级）。最危险竞争物立体异构体异狄氏剂 endrin（同分子式仅 exo/endo 环氧构型相反）+前体艾氏剂+七氯环氧化物+异狄氏剂醛/酮。生物处理单元不够格（foc/Kow 非特异疏水分配）；组织富集有条件够格部分够格（分布稳健阶梯第 1 级充分，人脑 Fleming 1994 帕金森脑 6/20，须附归因约束）。"
+  endosulfan:
+    name: "硫丹"
+    brief: complete
+    angles_planned: 16
+    attempted: 1
+    passed: 0
+    terminated: 0
+    status: "phase_b（A01 r1=62→r2=78，crit=0/high=0，revise→r3；1 critical+3 high 已闭合，差 85 线根因 SQ1 中性 ng/L 单程水解绝对速率待 Phase 0）"
+    slots:
+      A01: { r1: "62 revise 1c/3h（介孔 Lewis 酸氧化物反应性水解捕获，E1 矿物表面催化硫丹水解原型）", r2: "78 revise 0c/0h（闭合 ISS-01 critical BV 算错→产物核算 S6/硫质量平衡、ISS-02 主对照换艾氏剂+选择性收窄、ISS-03 绝对 k_v 判据 3.8e-3 s⁻¹、ISS-04 去碱化再生+膀酸酯锚定+寿命曲线；补 MOF-808/POM 先例族区分）", status: revise_r3_pending, file: SCHEMES/_wip/A01_r2.md, note: "78<85 根因 SQ1：中性 pH ng/L 单程水解绝对速率无文献数据、所需增强因子跨 4-400，Phase 0 计算+批次 make-or-break；C 维仿生弱（E1 pH8.15 悬浮近同化学）；r3 靠 Phase 0 或转 S_deconvolution/其他角度" }
+    phase_a_note: "五路调研（run wf_634a4a2a-7e8）+ 综合。经核验证据含斯德哥尔摩公约附件 A 消除类决定 SC-5/3（COP-5 2011 含特定豁免，official 页面核验）、IntechOpen 章节全文核验（α/β 水溶 0.32-0.33 mg/L、logKow 3.6-3.8、logKoc 3.5-4.1、碱性水水解半衰期 α 3.6 d/β 1.7 d、EPA 水生基准急性 0.22/慢性 0.05 µg/L、无 WHO 饮用水准则值）、Mackay 1993 水生归趋（沉积物结合 logKoc α 3.6/β 4.3、沉积物解吸限速）、Weber 2010 全球归趋综述（硫酸酯难降解、水相低浓度、北极长距离传输）；中国洱海饮用水水源多相监测硫丹硫酸酯显著生态风险（JHM 2025 摘要）、中国西北棉区禁用后土壤残留硫酸酯为主（FESE 2023 摘要）、中国全国河流风险建模硫丹仅占投入 0.4% 却为水生风险主贡献（EnvInt 2025 摘要）、印度夏季风跨境传输（Chemosphere 2022 摘要）。画像：C9H6Cl6O3S 环二烯有机氯含亚硫酸酯桥、α/β 异构体、低溶强沉积物分配、碱性水水解较快、硫酸酯难降解生态毒性显著、禁用后遗留性格局。主目标判为农业区受纳地表水/径流与饮用水水源湖库（溶解相 ng/L 级），市政二级出水保留对照。最危险竞争物硫丹硫酸酯/硫丹二醇代谢物 + 同类环二烯 aldrin/dieldrin/heptachlor/endrin。两条启发式均不够格（吸附/富集侧活性污泥絮体/EPS/生物膜/颗粒污泥专用去除研究零命中；组织分布稳健但脂质分配解释）。"
+  tcdd:
+    name: "2,3,7,8-四氯二苯并-p-二噁英 TCDD"
+    brief: complete
+    angles_planned: 14
+    attempted: 0
+    passed: 0
+    terminated: 0
+    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，14 诚实可区分角度，上限 14<50；组织富集够格 AhR 高亲和锚；待进 Phase B）"
+    phase_a_note: "五路调研（run wf_251b70df-f61）+ 综合。经核验证据含美国 EPA 饮用水 TCDD MCLG 零/MCL 30 pg/L 官方页面核验、WHO 二噁英实况页核验（TCDD 剧毒单体、419 种相关化合物约 30 种显著毒性、90%+ 暴露来自食物）、EFSA 2018 TWI 2 pg TEQ/kg/周（摘要核验）；休斯敦航道出水溶解相总 PCDD/F 0.16-13.23 pg/L TCDD 为溶解相 TEQ 最大贡献单体（Chemosphere 2015 摘要）、波兰 4 厂出水 PCDD 4.30-90.7 pg/L（Sci Rep 2019 全文 PMC6917701）、珀斯再生水二级出水中值 TEQ 4.5 pg/L TCDD 0.35-2 pg/L（IJERPH 2008 全文）、日本绫濑川 TEQ 0.26-7.0 pg-TEQ/L 8 样超基准 1.0（Chemosphere 2011 摘要）、越南 Agent Orange 遗留土壤/沉积物储库经食物链转移（Chemosphere 2002 摘要）、三氯生活性氯氯化水相原位生成二噁英（JHM 2019 摘要）。画像：C12H4Cl4O2 平面刚性二噁英、极疏水 logKow~6.8、水相极低溶 pg/L 级、主赋存土壤/沉积物/食品、AhR 芳烃受体高亲和配体。主目标溶解相 pg/L 级（须超痕量分析、Kd 要求极高）。最危险竞争物其他 PCDD/F 同系物（OCDD 优势/PeCDD）+dl-PCB。生物处理单元不够格（有机碳归一化疏水平衡分配向污泥）；组织富集够格附三条硬约束（第 4 级直接证据：AhR 直接结合 Gasiewicz&Rucci 1984 氚标 TCDD 跨物种——真实自然进化高亲和识别锚）。"
+totals:
+  attempted: 22
+  passed: 7
+  terminated: 16
+  passed_list: "7 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)/NP A01(92)/Dieldrin A01(89)/ROX A01(85)/octocrylene A01(85,S34)"
+  in_flight: "dde A01 r2=75 revise→r3/角度边界（两 HIGH 闭合，C 维不通过+窗口 0-1 埃脆弱）；endosulfan A01 r2=78 revise→r3（1c+3h 闭合，SQ1 绝对速率待 Phase 0）；genx A01 终止(S33)→待转 A03 醚氧双锚"
+  phase_a_awaiting_b: "pcp/betahch/chloroform/hcbd/bde209/pcb209/ddt/tcdd 已完成 Phase A 待 Phase B"
+  hard_no_pass: "dcp26（3 槽全终止）/pfhxs（2 槽终止）为已试硬骨头，待回溯补角"
+  note: "广度优先：7/20 污染物已有通过方案（octocrylene A01=85 r3 达线，两 HIGH+证据债+离散笼第三格式闭合）。下一在途收尾：dde r2→endosulfan r2→genx A03。原型库扩充在 Biomimetic-design-library@expand 分支进行中"
+last_updated: "2026-07-22"

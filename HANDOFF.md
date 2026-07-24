@@ -209,6 +209,14 @@ New idea kept as a note only (not developed into a design): a lysosomal acid-tra
 
 Update 2026-07-20 (formalized): Pan Yao approved both reconciliation points. The electrostatic relaxation and the rule that a dynamic pH-switch may be the single primary hard correspondence are now written into `SOUL.md` and gate `orchestration/gates/G32_ELECTROSTATIC_MULTIFORCE_AND_DYNAMIC_CORRESPONDENCE.yaml`, and `docs/MATERIAL_SCOPE_BOUNDARY_ION_EXCHANGE.md` carries a dated relaxation section. In user-facing Chinese the environmental-scenario contract is now stated plainly as target application scenario setting (locked before design). A clean template-format `rounds/rox_deep_design_1/ROX_PH_RESPONSIVE_DESIGN.md` was added so all five potential schemes (PFHxS-MI1, ROX pH-responsive, PFOA-oPBU1, MAC-IF1-R2, DCP-OHP1 path A) share one format for the Zhou Jiaqi discussion. Status remains concept-level; primary and backup remain null; the E1 register is empty.
 
+## Main branch consolidation checkpoint (2026-07-24)
+
+Pan Yao requested a complete branch audit and an update of `main`. The audit found that `origin/Ultimate@534817d` already contains `origin/Qwen@25c3c7e`, and `origin/Qwen` already contains `origin/kimi-k3@100b7df`. Therefore `origin/Ultimate` was the only branch that needed to be merged into `main`; the merge preserves `main`'s 45 independent commits and imports the newer research history without resetting either line.
+
+Conflict resolution keeps the current `main` contract authoritative: municipal secondary effluent remains the primary matrix; the adaptive E1/E2 release model, nonprotein material boundary, ion-exchange disclosure rule, and owner Gate G32 remain binding. `fresh_1000` and `ultimate_200` are imported as additive research, hypothesis, and negative-audit artifacts. Their historical scores do not automatically create an E1 release on `main`. Thirty-eight Ultimate-only evidence-ledger rows were retained as `E105` through `E142` because their original `E062` through `E099` identifiers collided with existing `main` records.
+
+The next requested portfolio covers BPA, short-chain PFAS, and 2,6-DCP with ten schemes per target. Before design starts, Pan Yao must confirm whether “short-chain PFAS” means PFBS alone or a class portfolio such as PFBS/PFHxS/GenX. Every formal score remains downstream of the secondary-effluent scenario gate, innovation checklist, evidence ledger, and owner gates. No procurement, synthesis, or experiment is authorized.
+
 ## Resume instructions
 
 1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.

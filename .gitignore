@@ -10,4 +10,5 @@ data/local_only/
 data/raw/
 sources/fulltext/
 *.secret
+.claude/
 

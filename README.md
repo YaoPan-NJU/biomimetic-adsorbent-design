@@ -1,5 +1,9 @@
 # Biomimetic Selective Adsorbent Design
 
+## 2026-07-24 branch consolidation
+
+`main` now preserves its own governance and 45-commit research line while incorporating `origin/Ultimate@534817d`. That branch already contains `origin/Qwen@25c3c7e` and `origin/kimi-k3@100b7df`, so all active remote research lines are represented without resetting history. Imported `fresh_1000` and `ultimate_200` files are evidence, hypothesis, and audit inputs; they do not override the current `main` contract or automatically qualify as E1/E2 releases. The machine-readable disposition is in [`PROJECT_STATE.yaml`](PROJECT_STATE.yaml), and the narrative checkpoint is in [`HANDOFF.md`](HANDOFF.md).
+
 面向市政二级出水选择性吸附的独立研究仓库。Codex 负责证据整理、材料设计和对抗审查，Pan Yao负责科学决策，实验交接对象为 Zhou Jiaqi。本项目与 ADRMATS 无关。
 
 术语遵循 [`docs/TERMINOLOGY.md`](docs/TERMINOLOGY.md)：蛋白、酶、核糖体等称为“生物原型”或其准确类别；人工小分子、主体腔、官能团组合和孔口结构统一称为“人工识别单元”。通过水相因果验证前必须标为候选或设想，不用无修饰的“受体”指代人工结构。

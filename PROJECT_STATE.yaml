@@ -1,11 +1,11 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: multi_scheme_portfolio_recovery_and_optimization_drafts_2026_07_20
+phase: main_branch_consolidation_2026_07_24
 status: in_progress
-last_completed_step: Formalized two owner decisions on 2026-07-20 into SOUL.md and new gate G32 - electrostatic attraction may be the dominant force in multi-force biomimetic adsorption, and a dynamic pH-switch may serve as the single primary hard correspondence; relaxed docs/MATERIAL_SCOPE_BOUNDARY_ION_EXCHANGE accordingly; renamed the jargon 'scenario contract' to plain 'target application scenario setting' in the user-facing design docs; and added a clean template-format ROX pH-responsive design so all five potential schemes share one format for the Zhou Jiaqi discussion
-next_action: "Both owner decisions are formalized in SOUL.md and gate G32 (electrostatic relaxation; dynamic pH-switch may be the single primary hard correspondence). Five clean per-scheme design drafts (PFHxS-MI1, ROX pH-responsive, PFOA-oPBU1, MAC-IF1-R2, DCP-OHP1 path A) are handed to Pan Yao and Zhou Jiaqi for discussion. Next per-scheme prerequisite gates before any E1 freeze: lock each target application scenario setting; PFOA sulfate thin-film go/no-go; DCP environmental and prototype gates; MAC B0/M0; ROX 0a/0b. No procurement or experiment authorized; primary_design and backup_design remain null and PFH-1 remains terminated"
+last_completed_step: "Integrated origin/Ultimate@534817d into main while preserving main's governing contract and all main-only history. origin/Ultimate already contains origin/Qwen@25c3c7e and origin/kimi-k3@100b7df. Imported fresh_1000 and ultimate_200 research artifacts additively; retained main governance on conflicts; merged 38 Ultimate-only evidence rows as E105-E142 to avoid ID collisions."
+next_action: "Confirm whether 'short-chain PFAS' means PFBS only or a PFBS/PFHxS/GenX class portfolio. Then freeze one 30-scheme design brief for BPA, short-chain PFAS, and 2,6-DCP (10 each) under main's secondary-effluent scenario, three owner gates, innovation checklist, and evidence-ledger rules. No procurement or experiment is authorized."
 active_branch: main
-last_verified_commit: a6fdb41
+last_verified_commit: pending_2026_07_24_merge_verification
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:
@@ -14,6 +14,20 @@ candidate_count_policy:
   formal_recommendations: all_E1_or_E2_three_gate_passers
   delivery: rolling
   primary_backup_labels: inactive_unless_owner_later_requests
+branch_consolidation_20260724:
+  status: merged_pending_validation
+  source_head: origin/Ultimate@534817d7bbcb57a7df332d46670ec96ac9173a5b
+  included_ancestry:
+    - origin/Qwen@25c3c7ed4096140493895668a5466a6d72d0e0cc
+    - origin/kimi-k3@100b7df301302f71f9874123b656c24d90a081b5
+  preserved_main_head: origin/main@88b4d3e84759002d1a6ac772f642c0cba90c16eb
+  governance_precedence: main_SOUL_research_contract_and_secondary_effluent_rules
+  imported_research_role: additive_evidence_hypothesis_and_audit_artifacts_not_automatic_E1_release
+  evidence_ledger_merge: Ultimate_only_rows_rekeyed_E105_through_E142
+  user_requested_portfolio:
+    targets: [BPA, short_chain_PFAS_scope_pending_confirmation, 2_6_DCP]
+    requested_count_each: 10
+    status: design_brief_pending_owner_scope_confirmation
 historical_candidate_pollutants:
   - bisphenol A
   - PFBS
@@ -466,6 +480,19 @@ open_issues:
     status: in_progress_successor_action
     text: Freeze PFHxS occurrence distribution analytical fraction secondary-effluent matrix PFSA-class competitors temporal variability engineering endpoint and environmental/mechanism/capacity concentration tiers before reopening prototype or material design.
 artifacts:
+  innovation_checklist: INNOVATION_CHECKLIST.md
+  fresh_1000_spec: rounds/fresh_1000/SPEC.md
+  fresh_1000_status: rounds/fresh_1000/STATUS.yaml
+  fresh_1000_bpa_brief: rounds/fresh_1000/bpa/BRIEF.md
+  fresh_1000_bpa_design_space: rounds/fresh_1000/bpa/DESIGN_SPACE.md
+  fresh_1000_pfbs_brief: rounds/fresh_1000/pfbs/BRIEF.md
+  fresh_1000_pfbs_design_space: rounds/fresh_1000/pfbs/DESIGN_SPACE.md
+  fresh_1000_dcp26_brief: rounds/fresh_1000/dcp26/BRIEF.md
+  fresh_1000_dcp26_design_space: rounds/fresh_1000/dcp26/DESIGN_SPACE.md
+  ultimate_200_readme: rounds/ultimate_200/README.md
+  ultimate_200_bpa_ranking: rounds/ultimate_200/BPA_RANKING.md
+  ultimate_200_pfbs_ranking: rounds/ultimate_200/PFBS_RANKING.md
+  ultimate_200_global_ranking: rounds/ultimate_200/GLOBAL_RANKING.md
   portfolio_review_recovery_20260720: docs/PORTFOLIO_REVIEW_AND_PH_RESPONSIVE_RECOVERY_2026-07-20.md
   pfhxs_mi1_design: rounds/pfhxs_mi1_design_1/PFHXS_MI1_DESIGN.md
   pfoa_opbu1_design: rounds/pfoa_opbu1_design_1/PFOA_OPBU1_DESIGN.md

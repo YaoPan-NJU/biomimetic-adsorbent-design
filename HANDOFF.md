@@ -215,9 +215,17 @@ Pan Yao requested a complete branch audit and an update of `main`. The audit fou
 
 Conflict resolution keeps the current `main` contract authoritative: municipal secondary effluent remains the primary matrix; the adaptive E1/E2 release model, nonprotein material boundary, ion-exchange disclosure rule, and owner Gate G32 remain binding. `fresh_1000` and `ultimate_200` are imported as additive research, hypothesis, and negative-audit artifacts. Their historical scores do not automatically create an E1 release on `main`. Thirty-eight Ultimate-only evidence-ledger rows were retained as `E105` through `E142` because their original `E062` through `E099` identifiers collided with existing `main` records.
 
-The next requested portfolio covers BPA, short-chain PFAS, and 2,6-DCP with ten schemes per target. Before design starts, Pan Yao must confirm whether “short-chain PFAS” means PFBS alone or a class portfolio such as PFBS/PFHxS/GenX. Every formal score remains downstream of the secondary-effluent scenario gate, innovation checklist, evidence ledger, and owner gates. No procurement, synthesis, or experiment is authorized.
+The next requested portfolio covers BPA, short-chain PFAS, and 2,6-DCP with ten schemes per target. Pan Yao later confirmed the exact short-chain-PFAS class scope; the binding panel and scoring rules are recorded in the thirty-scheme written-spec checkpoint below. Every formal score remains downstream of the secondary-effluent scenario gate, innovation checklist, evidence ledger, and owner gates. No procurement, synthesis, or experiment is authorized.
 
 The consolidation was pushed through `f61632f`. A clean clone of `origin/main` at that commit passed 173 state-artifact checks, all six signed snapshot hashes, and a 429-file credential scan, and recovered the same target-scope clarification as the unique next action.
+
+## Thirty-scheme written-spec checkpoint (2026-07-24)
+
+The earlier short-chain-PFAS clarification request is superseded. Pan Yao confirmed that short-chain PFAS is one category-level removal problem rather than a set of compound-specific selectivity tasks. Every one of the ten PFAS schemes must address a common PFBS/PFBA/PFHxA/GenX panel. Within-class discrimination is neither required nor rewarded; the required preference is the target class over salts, DOM, anionic surfactants, and unrelated micropollutants. Long-chain PFAS are engineering references or co-targets, not negative competitors. Results must be reported per member and judged by both class mean and worst-member performance.
+
+The approved execution concept is now written in `rounds/portfolio_30_classwide_20260724/PORTFOLIO_SPEC.md`. It freezes three equal-depth audit portfolios: BPA 10, short-chain PFAS class 10, and 2,6-DCP 10. The fixed candidate count is not a pass quota; weak schemes must fail or terminate rather than survive by count or total score. All 30 entries will receive diagnostic scores using the binding six-dimension rubric, but a score becomes a formal ranking score only after environmental admission, the innovation checklist, all three owner gates, at least E1 readiness, and zero unresolved critical/high issues.
+
+The current unique next action is Pan Yao's review of the written spec. Web deep search, evidence-ledger expansion, biological-prototype retrieval, material design, attack, review, and scoring have not started for this round and must remain paused until that review is confirmed. No procurement, synthesis, or experiment is authorized.
 
 ## Resume instructions
 

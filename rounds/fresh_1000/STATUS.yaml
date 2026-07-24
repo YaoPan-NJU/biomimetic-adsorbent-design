@@ -166,10 +166,10 @@ pollutants:
     name: "壬基酚 NP"
     brief: complete
     angles_planned: 19
-    attempted: 2
+    attempted: 3
     passed: 1
-    terminated: 1
-    status: "deepening_to_10（A01 通过 92/S26；A04 终止 57/S35 结构性天花板；已通过 1/10，加深进行中；下一候选 A10 二维正交锚定×拓扑或 A06 EO 梯度；须显式区分已通过 A01）"
+    terminated: 2
+    status: "deepening_to_10（A01 通过 92/S26；A04 终止 57/S35、A10 终止 64/S36 均为结构性天花板（与已通过 A01 原创重叠）；已通过 1/10，加深中。累积教训：A01 锢定-形状耦合覆盖面比字面宽，后续不得以‘新增锢定维/二维正交/链长窗口’作原创承载；下一候选应另辟机制族：界面/两亲 A05-A06、乙氧基化梯度、氯代卤键生态位 A12、反应性活性闭合 A11/A15）"
     slots:
       A01: { r1: "82 revise 0c/1h（ipso 途径逆向标尺，α-四级碳拓扑形状选择腔；1 high 交联剂氯甲基芳烃 CMR+泄漏锚定）", r2: "92 pass 0c/0h（闭合全部 10 条台账：成网改非 CMR 点击/自由基路线、泄漏重锚健康基准 TTC 0.75 µg/L、E7 Lu2015 相关方向经 PubMed 摘要内容核验确认 R²=0.76 立体效应指数正相关、深腔笼两级 go/no-go 门+胶囊抑制论证、HC1 电子性→几何性重释；维度齐备）", status: passed, file: SCHEMES/S26_A01_ipso-alpha-quaternary-topology-cavity_passed.md, note: "NP 首个通过方案，千方案计划第四通过（继 PFOA A02/BPA A01/PFBS A17）；Sphingobium Bayram/TTNP3 ipso 羟基化途径 α-四级碳底物判据的几何转译，非蛋白间苯二酚芳烃深腔笼，生物留下/材料捕获的应用端逆读标尺" }
     phase_a_note: "五路调研（run wf_432cd329-e10）+ 综合。经核验证据含中国《重点管控新污染物清单（2023 年版）》部令第 28 号第十二项 NP 三项源头禁用官方 PDF 核验、《有毒有害水污染物名录（第一批）》2019 不含 NP 官方 PDF 核验、欧盟 WFD 优先物质第 17 号 AA-EQS 0.3/2.0 µg/L（待原文核验）、加拿大 WQG 1000 ng/L、美国 EPA 2005 水生基准 CMC~190/CCC~6.6 µg/L（待核验）；混合纺织-市政厂出水 0.53-1.4 µg/L、加拿大 241 样 1.29-477 ng/L、东江最高 14540 ng/L、武汉水源城区 92.3 ng/L。画像：酚头基+C9 壬基疏水尾两亲烷基酚（C15H24O，CAS 25154-52-3），NPEO 降解终端产物，pKa~10 环境 pH 6-8 中性分子（静电无效）、logKow~4.5-5.2 强亲固相。主目标市政二级出水（ng/L-低 µg/L，要求 Kd~10⁴ L/kg）。最危险竞争物辛基酚 OP（仅 C9 vs C8）+ NP1EO/NP2EO 前体 + BPA 异类酚。20 篇一手文献 Crossref 题录自核（摘要级）。生物处理单元部分够格（降解侧 ipso 羟基化途径机制清晰沿证据阶梯收敛；吸附/富集侧不够格）；组织富集不够格（人体配对脂肪/肝/脑 4n-NP 多低于定量限）。注：本轮 proto_classical 路内容安全分类器临时不可用，综合者输出已就证据自洽性核验。"
@@ -234,11 +234,11 @@ pollutants:
     status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，14 诚实可区分角度，上限 14<50；组织富集够格 AhR 高亲和锚；待进 Phase B）"
     phase_a_note: "五路调研（run wf_251b70df-f61）+ 综合。经核验证据含美国 EPA 饮用水 TCDD MCLG 零/MCL 30 pg/L 官方页面核验、WHO 二噁英实况页核验（TCDD 剧毒单体、419 种相关化合物约 30 种显著毒性、90%+ 暴露来自食物）、EFSA 2018 TWI 2 pg TEQ/kg/周（摘要核验）；休斯敦航道出水溶解相总 PCDD/F 0.16-13.23 pg/L TCDD 为溶解相 TEQ 最大贡献单体（Chemosphere 2015 摘要）、波兰 4 厂出水 PCDD 4.30-90.7 pg/L（Sci Rep 2019 全文 PMC6917701）、珀斯再生水二级出水中值 TEQ 4.5 pg/L TCDD 0.35-2 pg/L（IJERPH 2008 全文）、日本绫濑川 TEQ 0.26-7.0 pg-TEQ/L 8 样超基准 1.0（Chemosphere 2011 摘要）、越南 Agent Orange 遗留土壤/沉积物储库经食物链转移（Chemosphere 2002 摘要）、三氯生活性氯氯化水相原位生成二噁英（JHM 2019 摘要）。画像：C12H4Cl4O2 平面刚性二噁英、极疏水 logKow~6.8、水相极低溶 pg/L 级、主赋存土壤/沉积物/食品、AhR 芳烃受体高亲和配体。主目标溶解相 pg/L 级（须超痕量分析、Kd 要求极高）。最危险竞争物其他 PCDD/F 同系物（OCDD 优势/PeCDD）+dl-PCB。生物处理单元不够格（有机碳归一化疏水平衡分配向污泥）；组织富集够格附三条硬约束（第 4 级直接证据：AhR 直接结合 Gasiewicz&Rucci 1984 氚标 TCDD 跨物种——真实自然进化高亲和识别锚）。"
 totals:
-  attempted: 23
+  attempted: 24
   passed: 7
-  terminated: 17
+  terminated: 18
   passed_list: "7 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)/NP A01(92)/Dieldrin A01(89)/ROX A01(85)/octocrylene A01(85,S34)"
-  target_note: "（2026-07-24）目标提升为每污染物 10 个通过方案（200 总数）；当前已通过的 7 个污染物均为 1/10，优先先易后难加深。广度优先阶段（17/20 尚无通过：含 8 个 Phase A 待 B、2 个硬骨头、3 个在途）作为起点。加深已启动：NP A04 终止(57/S35 结构性天花板，与已通过 A01 原创性重叠+承重轴平庸可分)，NP 仍 1/10。"
+  target_note: "（2026-07-24）目标提升为每污染物 10 个通过方案（200 总数）；当前已通过的 7 个污染物均为 1/10，优先先易后难加深。广度优先阶段（17/20 尚无通过：含 8 个 Phase A 待 B、2 个硬骨头、3 个在途）作为起点。加深已启动：NP A04 终止(57/S35)、A10 终止(64/S36) 均为结构性天花板（与已通过 A01 定位-形状耦合覆盖重叠），NP 仍 1/10；下一候选需另辟机制族(A05/A06/A11/A12)。"
   in_flight: "dde A01 r2=75 revise→r3/角度边界（两 HIGH 闭合，C 维不通过+窗口 0-1 埃脆弱）；endosulfan A01 r2=78 revise→r3（1c+3h 闭合，SQ1 绝对速率待 Phase 0）；genx A01 终止(S33)→待转 A03 醚氧双锚"
   phase_a_awaiting_b: "pcp/betahch/chloroform/hcbd/bde209/pcb209/ddt/tcdd 已完成 Phase A 待 Phase B"
   hard_no_pass: "dcp26（3 槽全终止）/pfhxs（2 槽终止）为已试硬骨头，待回溯补角"

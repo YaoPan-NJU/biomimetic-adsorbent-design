@@ -1,11 +1,11 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: portfolio_30_written_spec_owner_review
+phase: portfolio_30_research_and_diagnostic_scoring_complete
 status: in_progress
-last_completed_step: "Wrote the owner-approved execution concept as rounds/portfolio_30_classwide_20260724/PORTFOLIO_SPEC.md. The requested audit portfolio is BPA 10 plus short-chain PFAS class 10 plus 2,6-DCP 10. Every short-chain PFAS scheme targets the common PFBS/PFBA/PFHxA/GenX panel; within-class discrimination is neither required nor rewarded, while class-over-matrix preference, member-level reporting, class mean, and worst-member performance are mandatory."
-next_action: "Pan Yao reviews and confirms PORTFOLIO_SPEC.md. Only after this written-spec gate passes may Codex freeze the three secondary-effluent scenarios, run web-based deep search, append the evidence ledger, and design/attack/review/score all 30 candidates. No procurement or experiment is authorized."
+last_completed_step: "After Pan Yao confirmed the written spec, froze the BPA and class-wide short-chain-PFAS secondary-effluent scenarios, recorded the unresolved 2,6-DCP admission gap, expanded the evidence ledger from E142 to E161, and completed designer/attacker/reviewer dispositions plus diagnostic scores for all 30 candidates in PORTFOLIO_REPORT.md. There are zero formal recommendations: all surviving leads remain E0, and all 2,6-DCP candidates fail the environmental-admission gate."
+next_action: "Pan Yao selects whether to release one minimal follow-on package: PFAS-01 class-wide thin-film mechanism screen, BPA-01 soluble-model geometry screen, or 2,6-DCP environmental-occurrence and method-gap closure. Until that choice, do not procure, synthesize, experiment, label any candidate E1, or treat diagnostic scores as predicted performance."
 active_branch: main
-last_verified_commit: f61632f
+last_verified_commit: da09ee5
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:
@@ -28,9 +28,9 @@ branch_consolidation_20260724:
   user_requested_portfolio:
     targets: [BPA, short_chain_PFAS_class_PFBS_PFBA_PFHxA_GenX, 2_6_DCP]
     requested_count_each: 10
-    status: written_spec_pending_owner_review
+    status: owner_confirmed_research_complete
 portfolio_30_classwide_20260724:
-  status: written_spec_pending_owner_review
+  status: research_design_attack_review_and_diagnostic_scoring_complete
   candidate_counts:
     BPA: 10
     short_chain_PFAS_class: 10
@@ -43,7 +43,20 @@ portfolio_30_classwide_20260724:
   reporting_rule: per_member_plus_class_mean_plus_worst_member
   count_interpretation: audit_candidates_not_pass_quota
   scoring: diagnostic_for_all_formal_only_after_environment_innovation_and_three_owner_gates
-  implementation_gate: owner_confirmation_of_written_spec
+  implementation_gate: passed_by_owner_confirmation
+  scenario_admission:
+    BPA: passed_with_cross_plant_extrapolation_risk
+    short_chain_PFAS_class: passed_with_weaker_GenX_scenario_support
+    2_6_DCP: failed_insufficient_secondary_effluent_occurrence_and_risk_evidence
+  evidence_ledger_range_added: E143-E161
+  diagnostic_leaders:
+    - PFAS-01: 87
+    - BPA-01: 84
+    - PFAS-07: 82
+    - PFAS-08: 82
+    - BPA-08: 82
+  formal_recommendation_count: 0
+  release_status: all_surviving_candidates_E0_or_control_only_no_E1
 historical_candidate_pollutants:
   - bisphenol A
   - PFBS
@@ -498,6 +511,7 @@ open_issues:
 artifacts:
   innovation_checklist: INNOVATION_CHECKLIST.md
   portfolio_30_classwide_spec: rounds/portfolio_30_classwide_20260724/PORTFOLIO_SPEC.md
+  portfolio_30_classwide_report: rounds/portfolio_30_classwide_20260724/PORTFOLIO_REPORT.md
   fresh_1000_spec: rounds/fresh_1000/SPEC.md
   fresh_1000_status: rounds/fresh_1000/STATUS.yaml
   fresh_1000_bpa_brief: rounds/fresh_1000/bpa/BRIEF.md

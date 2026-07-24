@@ -225,15 +225,25 @@ The earlier short-chain-PFAS clarification request is superseded. Pan Yao confir
 
 The approved execution concept is now written in `rounds/portfolio_30_classwide_20260724/PORTFOLIO_SPEC.md`. It freezes three equal-depth audit portfolios: BPA 10, short-chain PFAS class 10, and 2,6-DCP 10. The fixed candidate count is not a pass quota; weak schemes must fail or terminate rather than survive by count or total score. All 30 entries will receive diagnostic scores using the binding six-dimension rubric, but a score becomes a formal ranking score only after environmental admission, the innovation checklist, all three owner gates, at least E1 readiness, and zero unresolved critical/high issues.
 
-The current unique next action is Pan Yao's review of the written spec. Web deep search, evidence-ledger expansion, biological-prototype retrieval, material design, attack, review, and scoring have not started for this round and must remain paused until that review is confirmed. No procurement, synthesis, or experiment is authorized.
+At that checkpoint the unique next action was Pan Yao's review of the written spec. The 2026-07-25 checkpoint below records that confirmation and supersedes this pause. No procurement, synthesis, or experiment was authorized by the confirmation.
+
+## Thirty-scheme research and diagnostic-scoring checkpoint (2026-07-25)
+
+Pan Yao confirmed the written spec. The full paper-stage portfolio is now in `rounds/portfolio_30_classwide_20260724/PORTFOLIO_REPORT.md`; the evidence ledger was extended from E142 through E161 with primary or authoritative sources for secondary-effluent occurrence, biological/mechanistic prototypes and direct material prior art.
+
+The BPA and short-chain-PFAS class scenarios passed environmental admission with explicit boundaries. BPA is anchored by two municipal-secondary-effluent studies, including a 177 ng/L median in seven Xiamen WWTP effluents and a separate DOM-competition case. The PFBS/PFBA/PFHxA/GenX panel remains one class-wide treatment task; every PFAS candidate is judged by each member, class mean and worst member. The 2,6-DCP scenario did not pass: one authoritative compilation has no WWTP-effluent entry and one wastewater report uses an unusably high 10,000 ng/L LOQ. Its ten candidates are preserved as leads/controls but must not enter materials optimization until the scenario is independently supported.
+
+All 30 candidates have isolated designer, attacker and reviewer conclusions, innovation-checklist dispositions and six-dimension diagnostic scores. The leading diagnostics are PFAS-01 (87), BPA-01 (84), PFAS-07 (82), PFAS-08 (82) and BPA-08 (82). These values are not formal rankings or performance predictions. Formal recommendation count is zero: none is E1-ready, BPA's best routes still rely mainly on B-class biological mechanism evidence, PFAS's best routes still need a worst-member and non-ion-exchange causal screen, and every DCP route has an unresolved environmental critical.
+
+The unique next action is Pan Yao's choice among three minimal paper-stage releases: (1) PFAS-01 class-wide thin-film mechanism screen; (2) BPA-01 soluble-model geometry screen; or (3) 2,6-DCP environmental occurrence/method gap closure. No procurement, synthesis or experiment is authorized by the report itself.
 
 ## Resume instructions
 
-1. Read `AGENTS.md`, `SOUL.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml`.
-2. Verify `main`, then read `docs/SCIENTIFIC_CONSENSUS_BIOMIMETIC_AND_ION_EXCHANGE.md`, `docs/MATERIAL_SCOPE_BOUNDARY_ION_EXCHANGE.md` and `orchestration/gates/G30_BIOMIMETIC_ION_EXCHANGE_SCIENTIFIC_CONSENSUS.yaml` in that order.
-3. Read `docs/POLLUTANT_ENVIRONMENTAL_SCENARIO_MATCHING.md` and Gate G31, then freeze the PFHxS secondary-effluent scenario contract before any new biological-prototype or material search.
-4. Read the supersession notice in `DEEP_RESEARCH_PFHXS_COMPLETE_DESIGN.md` and the owner override in `rounds/pfhxs_design_1/REVIEW.md`. Treat `rounds/pfhxs_design_1/PFH1_M0_PROTOCOL.md` as historical audit only; do not execute it or regenerate another exchange-resin lead under biomimetic wording.
-5. After the PFHxS scenario contract is frozen, reopen biological-prototype discovery. Do not admit a material whose primary identity and paper contribution remain a conventional or mixed-mode exchange resin. Electrostatic and minor exchange contributions are allowed only when quantified and when matched-charge causal controls prove a separate biomimetic function.
-6. Read `docs/BIOMIMETIC_DESIGN_FRAMEWORK.md`, including the WW-0 to WW-3 wastewater-bioprocess evidence ladder. Keep BMDL excluded and commercial ion-exchange resin only as a mandatory benchmark/control. Preserve PFH-1/2/3 as terminated audit artifacts.
-7. Preserve every ROX, phosphate, top-five, S1, S11 and portfolio artifact; do not order materials or start experiments until Pan Yao approves the exact release level.
+1. Read `AGENTS.md`, then `SOUL.md`, `PROJECT_STATE.yaml`, `HANDOFF.md` and `research_contract.yaml` in the required exact order.
+2. Read `rounds/portfolio_30_classwide_20260724/PORTFOLIO_SPEC.md` and `PORTFOLIO_REPORT.md`; do not recover this portfolio from chat.
+3. Preserve the class-wide PFAS rule: PFBS/PFBA/PFHxA/GenX are tested together, long-chain PFAS are references/co-targets, and class mean cannot mask the worst member.
+4. Do not restart 2,6-DCP material design until two independent secondary-effluent sources with usable LOQ, sampling location and analytical fraction close its environmental gate.
+5. If Pan Yao selects PFAS-01, BPA-01 or DCP gap closure, write only that minimum package. Do not develop all tied candidates in parallel or label an E0 concept E1-ready.
+6. Keep BMDL excluded from design and conventional/mixed-mode ion exchange only as a benchmark/control. Any charged candidate requires IEC, Donnan, counterion and matched-charge accounting.
+7. Preserve every historical artifact; do not order materials or start experiments until Pan Yao approves the exact release level.
 8. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

@@ -79,7 +79,7 @@ Translation-evidence dossiers were prepared in parallel but are deliberately exc
 4. Use web-based deep search for all biomimetic design research; no local database dependency exists.
 5. All historical artifacts are preserved but not active; do not inherit scores or selections from former rounds.
 6. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.
-7. Work on the `Qwen` branch and push only to `origin/Qwen`; do not touch `kimi-k3` or `main`. Claude Code and Qwen share this branch sequentially: pull and re-read the state files before starting work.
+7. Work on the `Ultimate` branch and push only to `origin/Ultimate`; do not touch `Qwen`, `kimi-k3`, or `main`. Claude Code and Qwen share this branch sequentially: pull and re-read the state files before starting work. (`Qwen` was the active branch until 2026-07-24; it is now retained as historical state.)
 
 ## GLM branch takeover (2026-07-17)
 
@@ -193,6 +193,16 @@ A10 r4 produced a same-direction duplicate delivery (82 revise and 78 terminate,
 dcp26 stands at A01 terminated (75 after four rounds, S12). The A02 and A03 first-round workflows produced no output because their background forks were checkpointed and could not be resumed (adopt scriptPath rejected); they are recorded as zero-output pending restart, not as design failures, and are deferred to the backfill pass. Pan Yao directed that BPA be taken up next, ahead of completing dcp26.
 
 The active work is now BPA Phase A: the five-lane survey (occurrence, removal-difficulty, prior-art, classical-prototype, two-heuristic) plus synthesis of the brief and the mechanism-distinct angle map, rendered from `render_phaseA.py` and run as an isolated multi-agent workflow. Results assemble into `rounds/fresh_1000/bpa/BRIEF.md` and `DESIGN_SPACE.md`, after which scheme slots run in batches per `SPEC.md`. The standing quality bar is unchanged: score at least 85, zero unresolved critical/high, innovation checklist passed, every scheme a full closed loop able to support a high-level paper claim; honest N below 50 rather than padding.
+
+## Branch realignment and 10-per-pollutant target (2026-07-24)
+
+Pan Yao directed a pull, a state alignment, and a raised scheme target. Two corrections are recorded.
+
+Branch: the active workstream branch is realigned from `Qwen` to `Ultimate`. All recent fresh_1000 marathon work had migrated to `Ultimate` (ahead of `origin/Qwen`) while `CLAUDE.md`, `PROJECT_STATE.yaml`, and `research_contract.yaml` still declared `Qwen`. That documentation drift is corrected in those three files and here. `Ultimate` now syncs with `origin/Ultimate`; `Qwen` and `kimi-k3` are retained as historical state and receive no new commits; `main` remains the independent Codex workstream.
+
+Target: the scheme goal is raised from breadth-first (one passing scheme per pollutant) to **10 high-quality schemes per pollutant, 200 total**. "High-quality" is the unchanged quality gate: final_scoring at least 85/100, zero unresolved critical/high, innovation checklist passed, full closed loop per `SPEC.md`. Execution order is **easy-first**: deepen the 7 pollutants that already have a passing scheme (PFOA, BPA, PFBS, NP, Dieldrin, ROX, octocrylene) to 10 each, then tackle the pollutants with no pass yet (including the `dcp26` and `pfhxs` hard cases) in execution order. The honest-exhaustion clause is retained: a recorded N<10 with angle-exhaustion reasons beats padding. The `SPEC.md` advancement-strategy section and `STATUS.yaml` advance_policy are updated to match.
+
+Starting point: fresh_1000 stands at 22 slots attempted, 7 passed, 16 terminated (per `rounds/fresh_1000/STATUS.yaml`, 2026-07-22); the 7 passed pollutants are each at 1/10. The next action is to open new mechanism-distinct angle slots for the 7 already-passed pollutants under the `SPEC.md` Phase B per-slot workflow, committing and pushing each slot to `origin/Ultimate` and updating `STATUS.yaml` per slot. No material order, synthesis, or experiment is authorized.
 
 ## Fresh-1000 program checkpoint: BPA A01 passed (2026-07-20)
 

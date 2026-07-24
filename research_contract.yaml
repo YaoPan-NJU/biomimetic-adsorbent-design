@@ -3,9 +3,11 @@ project:
   owner: Pan Yao
   executor: Claude Code
   secondary_executor: Qwen
-  executor_branch: Qwen
+  executor_branch: Ultimate
   codex_branch: main
-  cross_executor_rule: Claude Code and Qwen share the Qwen branch and work sequentially; commit and push before switching executor or device; at most one executor is active at a time. Codex works on main independently.
+  cross_executor_rule: Claude Code and Qwen share the active Ultimate branch and work sequentially; commit and push before switching executor or device; at most one executor is active at a time. Codex works on main independently. The Qwen branch is retained as historical state and receives no new commits.
+  scheme_target_per_pollutant: 10
+  scheme_target_rule: "Design 10 high-quality schemes (final_scoring pass) per pollutant, 200 total; easy-first order (deepen the 7 already-passed pollutants to 10 first, then the unpassed ones); honor the honest-exhaustion clause so a recorded N<10 beats padding."
   experimental_handoff: Zhou Jiaqi
   independence: ADRMATS is out of scope and is not a dependency
 

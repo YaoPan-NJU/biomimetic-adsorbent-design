@@ -1,14 +1,14 @@
-# Claude Code execution entrypoint (Qwen branch)
+# Claude Code execution entrypoint (Ultimate branch)
 
-This repository is the single source of truth for the independent biomimetic selective-adsorbent project. It is not an ADRMATS component. The `Qwen` branch is the active workstream branch shared by Claude Code and Qwen (千问); the `main` branch remains the Codex workstream; `kimi-k3` is frozen at `100b7df`.
+This repository is the single source of truth for the independent biomimetic selective-adsorbent project. It is not an ADRMATS component. The `Ultimate` branch is the active workstream branch shared by Claude Code and Qwen (千问); the `main` branch remains the Codex workstream; `Qwen` and `kimi-k3` are retained as historical state and receive no new commits (`kimi-k3` frozen at `100b7df`).
 
 ## Branch convention
 
-- Claude Code is the primary collaborator. It works on `Qwen` and syncs only with `origin/Qwen`. Never push to `main` or `kimi-k3`.
-- Qwen (千问) is the cross-device secondary executor on the same `Qwen` branch and reads `AGENTS.md` as its entrypoint.
+- Claude Code is the primary collaborator. It works on `Ultimate` and syncs only with `origin/Ultimate`. Never push to `main`, `Qwen`, or `kimi-k3`.
+- Qwen (千问) is the cross-device secondary executor on the same `Ultimate` branch and reads `AGENTS.md` as its entrypoint.
 - Codex works on `main` and syncs only with `origin/main`.
-- Claude Code and Qwen share one branch, so they work sequentially, never in parallel: commit and push `Qwen` before switching executor or device; the incoming executor pulls first and reads the updated state files before any action. If true parallel work is ever needed, reopen a separate branch per executor instead.
-- `Qwen` and `main` evolve independently so concurrent Codex sessions do not clash. Do not assume state files are shared across branches. Reconcile manually only if a merge is ever explicitly requested.
+- Claude Code and Qwen share one branch, so they work sequentially, never in parallel: commit and push `Ultimate` before switching executor or device; the incoming executor pulls first and reads the updated state files before any action. If true parallel work is ever needed, reopen a separate branch per executor instead.
+- `Ultimate` and `main` evolve independently so concurrent Codex sessions do not clash. Do not assume state files are shared across branches. Reconcile manually only if a merge is ever explicitly requested.
 - `AGENTS.md` is retained as the Qwen entrypoint and shared-rules reference. On this branch `CLAUDE.md` supersedes it for executor identity and branch sync only; the binding rules below are identical.
 
 ## Reading order
@@ -32,7 +32,7 @@ The primary executor on this branch is Claude Code; Qwen (千问) is the cross-d
 - Biomimetic design research uses web-based deep search; no local database dependency exists in this branch.
 - Keep designer, attacker, and reviewer contexts isolated. Persist role deliverables and decisions, never hidden chain-of-thought.
 - Do not commit credentials, tokens, connection strings, restricted full-text papers, or private model reasoning.
-- At every material checkpoint, update `PROJECT_STATE.yaml` and `HANDOFF.md`, commit all non-sensitive state, and push `Qwen`.
+- At every material checkpoint, update `PROJECT_STATE.yaml` and `HANDOFF.md`, commit all non-sensitive state, and push `Ultimate`.
 - Never leave the only copy of a decision or next action in an uncommitted local file.
 - All tasks must be executed at maximum thinking depth; no shortcuts or reduced-depth approximations are permitted.
 - Every scheme must pass the innovation checklist (`INNOVATION_CHECKLIST.md`) before formal scoring.
@@ -43,7 +43,7 @@ The primary executor on this branch is Claude Code; Qwen (千问) is the cross-d
 
 ## Completion protocol
 
-Before declaring a checkpoint portable, verify that the worktree is clean, `Qwen` is pushed, referenced paths exist, credentials are absent, and a fresh clone of `origin/Qwen` identifies the exact next action without prior chat context. Run `python3 scripts/validate_repository.py`, `python3 scripts/scan_credentials.py`, and (when S11 artifacts are touched) `python3 scripts/validate_s11_constructs.py`.
+Before declaring a checkpoint portable, verify that the worktree is clean, `Ultimate` is pushed, referenced paths exist, credentials are absent, and a fresh clone of `origin/Ultimate` identifies the exact next action without prior chat context. Run `python3 scripts/validate_repository.py`, `python3 scripts/scan_credentials.py`, and (when S11 artifacts are touched) `python3 scripts/validate_s11_constructs.py`.
 
 ## De-AI canon
 
@@ -54,3 +54,5 @@ Follow `SOUL.md`: restrained academic Chinese in deliverables; no promotional cl
 2026-07-17: Claude Code took over the executor role from Codex at `df8a7ef`, branched to `GLM`, and re-ran the mechanical validators. See `HANDOFF.md` and `orchestration/FRESH_CLONE_READBACK.md` for the checkpoint. The research phase and next action are unchanged by the takeover.
 
 2026-07-19: Methodology correction committed as `75c8144` (supervisor rule, BMDL removal, expanded water scenarios, scientific-problem/engineering-challenge gate, innovation checklist, maximum thinking intensity). The `Qwen` branch was activated from `kimi-k3` HEAD `100b7df`; `kimi-k3` is frozen. Claude Code is the primary executor on this branch and Qwen (千问) the cross-device secondary; the two share `Qwen` sequentially and never push in parallel. See `HANDOFF.md`.
+
+2026-07-24: The active workstream branch is realigned from `Qwen` to `Ultimate`. All fresh_1000 marathon work had migrated to `Ultimate` (ahead of `Qwen`) while the governance files still declared `Qwen`; that documentation drift is corrected here and in `PROJECT_STATE.yaml`/`research_contract.yaml`. `Qwen` is retained as historical state and receives no new commits. Pan Yao also raised the scheme target: 10 high-quality (final_scoring pass) schemes per pollutant, 200 total, easy-first (deepen the 7 already-passed pollutants to 10 first). See `HANDOFF.md` and `rounds/fresh_1000/SPEC.md`.

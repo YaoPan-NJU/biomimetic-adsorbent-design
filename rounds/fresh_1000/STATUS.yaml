@@ -1,5 +1,5 @@
 program: fresh_1000
-advance_policy: "每污染物至少一个通过方案（≥85）后即推进下一污染物（广度优先）；20 污染物访问一轮后再回溯补角（每污染物上限 50 槽）；不打断运行中槽（2026-07-21 潘尧修订）"
+advance_policy: "（2026-07-24 潘尧修订）每污染物目标 10 个高质量通过方案（≥85、零未决 critical/high、创新性清单通过、完整闭环），共 200；先易后难（先把已通过的 7 个污染物加深至 10，再攻坚未通过者）；保留耗尽条款（诚实 N<10 优于凑数）；不打断运行中槽。取代 2026-07-21 广度优先（每污染物 1 个通过即推进）。"
 created: 2026-07-19
 spec: rounds/fresh_1000/SPEC.md
 pollutant_count: 20
@@ -238,6 +238,7 @@ totals:
   passed: 7
   terminated: 16
   passed_list: "7 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)/NP A01(92)/Dieldrin A01(89)/ROX A01(85)/octocrylene A01(85,S34)"
+  target_note: "（2026-07-24）目标提升为每污染物 10 个通过方案（200 总数）；当前已通过的 7 个污染物均为 1/10，优先先易后难加深。广度优先阶段（17/20 尚无通过：含 8 个 Phase A 待 B、2 个硬骨头、3 个在途）作为起点。"
   in_flight: "dde A01 r2=75 revise→r3/角度边界（两 HIGH 闭合，C 维不通过+窗口 0-1 埃脆弱）；endosulfan A01 r2=78 revise→r3（1c+3h 闭合，SQ1 绝对速率待 Phase 0）；genx A01 终止(S33)→待转 A03 醚氧双锚"
   phase_a_awaiting_b: "pcp/betahch/chloroform/hcbd/bde209/pcb209/ddt/tcdd 已完成 Phase A 待 Phase B"
   hard_no_pass: "dcp26（3 槽全终止）/pfhxs（2 槽终止）为已试硬骨头，待回溯补角"

@@ -2,10 +2,11 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: fresh_1000_scheme_marathon
 status: in_progress
-last_completed_step: "PFBS A17 通过（2026-07-21，85/100 零 critical/high，S17 入库）——PFBS 首个通过、计划第三通过（继 PFOA A02=85、BPA A01=86），轨迹 77→82→84→85：孔口几何双位点头基类型反差捕获（ModA/MolA 原型，T 三足硫脲匹配四面体磺酸根/P 中性平面双给体匹配平面羧酸根，R=α_T/α_P 反差签名）。85 认证严谨诚实双分支可发表闭环（非特异性正面主张大概率成立，S_deconvolution 阴性交付为真贡献承载）。DDT Phase A 完成（BRIEF+24 角度入库）。dcp26 A02 r1=66/A03 r1=64 待 r2。3 通过/18 attempted/13 终止。"
-next_action: "用户已决策原型库扩充策略：混合·结构数据优先接地（对有结构数据库可直接精确定位的原型如 DmpR PDB 6IY8、ERRγ PDB 2e2r、ModA PDB 1amf 做 from_source 接地，其余先 exploratory）+ 按污染物组织（先 PFOA/PFBS 全氟类，再 BPA/酚类，再 DDT/有机氯类）。下一步：在 Biomimetic-design-library 仓库 expand 分支按 V1-B schema 从历轮方案提取仿生原型入库（canon=prototypes_db/*.json，from_source 须 quote≤200+页码+scope_match，宁少而真）。并行推进 marathon：dcp26 A02/A03 r2、DDT Phase B 方案槽。"
-active_branch: Qwen
-last_verified_commit: 75c8144
+last_completed_step: "分支与目标对齐（2026-07-24）：确认 Ultimate 为活跃分支（治理文件原记 active_branch=Qwen 为文档漂移，已改 Ultimate；Qwen 冻结为历史状态）。潘尧下达新目标：20 污染物各设计 10 个高质量方案（final_scoring≥85、零未决 critical/high、创新性清单通过、完整闭环），共 200 个；执行顺序改为先易后难（先把已有通过方案的 7 个污染物 PFOA/BPA/PFBS/NP/Dieldrin/ROX/octocrylene 加深至 10，再攻坚未通过者），保留耗尽条款（诚实 N<10 优于凑数）。fresh_1000 现况见 rounds/fresh_1000/STATUS.yaml（截至 2026-07-22：22 槽 attempted / 7 passed / 16 terminated；7/20 污染物已有通过方案）。"
+next_action: "先易后难推进 200 方案目标：优先为 7 个已通过污染物各补足到 10 个通过方案（起点 PFOA 现 1/10，dieldrin/np/octocrylene/rox 各 1/10，bpa/pfbs 各 1/10——按 SPEC.md Phase B 单槽工作流开新角度槽）。每槽隔离设计-攻击-裁决、_wip 组装、逐槽提交推送 origin/Ultimate，STATUS.yaml 逐槽更新。7 个加深完成后转未通过污染物（含 dcp26/pfhxs 硬骨头，按执行顺序）。原型库扩充在 Biomimetic-design-library@expand 分支并行。"
+active_branch: Ultimate
+last_verified_commit: 534817d
+scheme_target: "10 passing schemes per pollutant (200 total); easy-first deepening; honest N<10 clause retained"
 bmdl_policy: removed_from_branch
 historical_artifacts_status: preserved_not_active
 candidate_pool_status: historical_preserved_not_active

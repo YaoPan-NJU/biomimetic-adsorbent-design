@@ -31,6 +31,8 @@ Then inspect only the artifacts listed in `PROJECT_STATE.yaml`. Do not recover d
 - Treat `rounds/portfolio_100/` as a branch-imported hypothesis archive. Do not inherit its scores, candidate status, evidence tier, or next action without the main-branch supervisor audit and current evidence verification.
 - Classify biomimicry and ion exchange on separate axes before applying project scope. Electrostatic attraction is not synonymous with ion exchange; ion exchange requires equivalent counter-ion displacement. If both biomimicry and ion exchange apply, disclose both. Never relabel an ion-exchange resin as a biomimetic adsorbent to hide its primary material identity.
 - Freeze the pollutant-environment scenario contract before biological-prototype or material deep design. Primary performance experiments must match the selected treatment stage, field concentration distribution, analytical fraction, water matrix and competitors. Elevated mechanism or capacity concentrations must be labeled separately and cannot support secondary-effluent performance claims.
+- Do not invoke or apply the `brainstorming` or `ponytail` skills in this repository. Execute research and design directly from the recorded project contract, evidence rules, innovation checklist, and owner gates.
+- Explore candidate mechanisms proactively and at maximum practical speed and depth; prioritize rapid elimination of weak or duplicated routes and immediate convergence on every high-quality E1-ready design that survives the gates.
 
 ## Completion protocol
 

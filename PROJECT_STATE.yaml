@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: short_chain_PFAS_SC_P02_E1_owner_review
+phase: BPA_AG_COF_E1_and_DCP_conditional_design_owner_review
 status: in_progress
-last_completed_step: "Executed the from-scratch short-chain-PFAS project rather than extending the old portfolio: independently froze ten material entities, then performed post-freeze historical duplication audit, current primary-source prior-art attack, isolated designer/attacker/reviewer dispositions and E1 convergence. Nine candidates were terminated or retained only as causal controls. SC-P02 PG-PMO, a fluorine-free near-zero-IEC pore-mouth urea-gradient/phenylene-cavity PMO, passed the paper-stage biomimetic, material-science and E1 engineering gates at 88/100 with exact synthesis, QC, matched controls, secondary-effluent tests, column, regeneration, leaching, statistics and non-lowerable stop rules. Performance remains unproven."
-next_action: "Pan Yao reviews rounds/short_chain_pfas_from_scratch_20260725/DEEP_RESEARCH_AND_E1_DESIGN.md and either approves SC-P02 for a separately authorized first laboratory batch or returns a specific paper-stage defect. If approved, Zhou Jiaqi executes M0/Q0 material QC before any PFAS performance claim; M0-STOP or Q0-STOP terminates the route. No procurement, synthesis or experiment is authorized by this checkpoint."
+last_completed_step: "Executed the owner-requested BPA and 2,6-DCP 20-by-2 material exploration. Forty exact material entities received innovation dispositions and six-dimension diagnostic scores. BPA20-01 AG-COF was revalidated under the current contract as an 86/100 E1 mechanism-validation-ready design with zero unresolved paper-stage critical/high issues. DCP20-01 EPS-DCA-SIP was converged to an executable 86/100 diagnostic concept using an activated-sludge EPS barrier plus direct 7M1I and 5MA0 target-pose constraints, but it remains concept_valid because only one authoritative multi-plant secondary-effluent program currently satisfies most of the scenario evidence needs; the second independent source with usable LOQ, sampling location and analytical fraction is still missing. Performance remains unproven."
+next_action: "Pan Yao reviews rounds/bpa_dcp_20x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md. BPA20-01 may proceed only after separate laboratory authorization and must start with its M0 computation and same-lattice QC stops. DCP20-01 must not be relabeled E1 or synthesized until a second independent secondary-effluent source closes ENV-STOP; after closure it receives a focused E1 release review rather than a new ideation round. SC-P02 remains unchanged and awaiting owner review. No procurement, synthesis or experiment is authorized by this checkpoint."
 active_branch: main
 last_verified_commit: be52782
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -12,6 +12,7 @@ candidate_count_policy:
   pollutant_pool: open_adaptive_from_pollutant_kb_with_independent_environmental_admission
   scheme_pool: open_no_quota
   requested_audit_portfolio: exactly_10_candidates_each_for_BPA_short_chain_PFAS_class_and_2_6_DCP_without_any_pass_quota
+  owner_requested_BPA_DCP_expansion: exactly_20_material_entities_each_without_any_pass_quota
   formal_recommendations: all_E1_or_E2_three_gate_passers
   delivery: rolling
   primary_backup_labels: inactive_unless_owner_later_requests
@@ -77,6 +78,33 @@ short_chain_PFAS_from_scratch_20260725:
   required_causal_controls: [SC-P01_uniform_same_composition, SC-P04_urea_only, SC-P05_phenylene_only]
   terminated_or_control_only_count: 9
   owner_review_pending: true
+BPA_DCP_20x2_deep_design_20260725:
+  status: executed_BPA_E1_and_DCP_scenario_blocked_high_quality_concept
+  candidate_counts:
+    BPA: 20
+    2_6_DCP: 20
+  evidence_ledger_range_added: E176-E185
+  BPA_formal_design:
+    id: BPA20-01
+    name: AG_COF_fixed_phenol_anchor_bridge_gate
+    classification: functional_biomimicry
+    score: 86
+    release_level: E1_mechanism_validation_ready
+    performance_proven: false
+    unresolved_paper_stage_critical: 0
+    unresolved_paper_stage_high: 0
+    owner_review_pending: true
+  DCP_best_design:
+    id: DCP20-01
+    name: EPS_DCA_SIP_hydrated_barrier_shallow_dummy_imprint_bead
+    classification: functional_biomimicry_with_structural_support
+    diagnostic_score: 86
+    release_level: concept_valid
+    performance_proven: false
+    blocking_gate: second_independent_secondary_effluent_source_with_usable_LOQ_sampling_location_and_analytical_fraction
+    scenario_evidence_upgrade: one_authoritative_multi_plant_Western_Australia_program_verified
+  formal_recommendation_count_added: 1
+  no_procurement_or_experiment_authorized: true
 historical_candidate_pollutants:
   - bisphenol A
   - PFBS
@@ -291,9 +319,11 @@ backup_design: null
 fixed_primary_backup_labels_active: false
 formal_recommended_designs:
   - SC-P02_PG-PMO
+  - BPA20-01_AG-COF
 experiment_release_register:
   E1_ready:
     - SC-P02_PG-PMO_owner_review_pending
+    - BPA20-01_AG-COF_owner_review_pending
   E2_ready: []
 superseded_finalists:
   - D1-A synthetic double-arm phosphate peptide clamp (93/100 historical design pass)
@@ -534,6 +564,8 @@ artifacts:
   innovation_checklist: INNOVATION_CHECKLIST.md
   short_chain_PFAS_from_scratch_spec: rounds/short_chain_pfas_from_scratch_20260725/SPEC.md
   short_chain_PFAS_from_scratch_deep_research_and_E1_design: rounds/short_chain_pfas_from_scratch_20260725/DEEP_RESEARCH_AND_E1_DESIGN.md
+  BPA_DCP_20x2_deep_design_and_scorecard: rounds/bpa_dcp_20x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md
+  BPA_DCP_20x2_attack_and_review: rounds/bpa_dcp_20x2_deep_design_20260725/ATTACK_AND_REVIEW.md
   portfolio_30_classwide_spec: rounds/portfolio_30_classwide_20260724/PORTFOLIO_SPEC.md
   portfolio_30_classwide_report: rounds/portfolio_30_classwide_20260724/PORTFOLIO_REPORT.md
   fresh_1000_spec: rounds/fresh_1000/SPEC.md

@@ -257,6 +257,18 @@ SC-P02 scores 88/100 and is `E1_mechanism_validation_ready`, with zero unresolve
 
 The unique next action is Pan Yao's scientific review of the E1 package. If approved through a separate laboratory authorization, Zhou Jiaqi starts with `M0-STOP` spatial-manufacture QC and `Q0-STOP` CTAB/IEC exclusion. Failure terminates SC-P02; the route may not be rescued by adding permanent charge, fluorinated monomers, proteins or precious metals.
 
+## BPA and 2,6-DCP 20-by-2 executed design checkpoint (2026-07-25)
+
+Pan Yao explicitly requested twenty additional material designs for BPA and twenty for 2,6-DCP and instructed Codex to execute the project aggressively rather than continue editing direction documents. He also prohibited the `brainstorming` and `ponytail` skills for this repository. `AGENTS.md` now records both the prohibition and the requirement to explore rapidly while eliminating duplicates and weak routes.
+
+The complete execution is `rounds/bpa_dcp_20x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md`, with isolated issue and decision records in `rounds/bpa_dcp_20x2_deep_design_20260725/ATTACK_AND_REVIEW.md`. It contains forty exact material entities, innovation-checklist dispositions, six-dimension diagnostic scores, prior-art attacks, and detailed executable packages for the two leaders. The evidence ledger now runs through E185; E176-E185 add the Western Australian multi-plant 2,6-DCP secondary-wastewater program, the direct activated-sludge EPS barrier study, direct 7M1I and 5MA0 2,6-DCP structures, the tick-SAR negative, a direct DCP-MIP prior, BPA EPS and activated-sludge process evidence, and recent fluorinated-COF and beta-CD-polymer BPA priors.
+
+`BPA20-01 / AG-COF` is the only new formal release. It revalidates the previously five-round-attacked DmpR anchor-gate crystalline COF under the current E1, nonprotein, scenario, controls and engineering rules rather than inheriting the imported branch status. It scores 86/100, has zero unresolved paper-stage critical/high issues, and is `E1_mechanism_validation_ready`; performance is unproven and owner review plus separate laboratory authorization are still required.
+
+`DCP20-01 / EPS-DCA-SIP` is the strongest DCP material at an 86/100 diagnostic score. It is a St-DVB macrobead with a HEMA/NVP/EGDMA hydrated shallow shell imprinted using 2,6-dichloroanisole as a non-target dummy. The functional prototype is activated-sludge EPS barrier transfer; 7M1I and 5MA0 supply independent target-pose constraints. The exact controls, two-stage suspension-polymerization draft, pH-separated positional-isomer test, DOM barrier test and seven non-lowerable stop rules are frozen. It remains `concept_valid`, not E1: the Western Australian source is one authoritative multi-plant program, but no second independent source with usable LOQ, sampling location and analytical fraction was found. Old WHO and CSIRO records do not close that gap.
+
+The next owner decision is therefore asymmetric: review BPA20-01 as an E1 paper package; for DCP20-01, first close `ENV-STOP`, then perform a focused E1 release review without restarting ideation. SC-P02 remains unchanged and pending owner review. No procurement, synthesis or experiment is authorized.
+
 ## Resume instructions
 
 1. Read `AGENTS.md`, then `SOUL.md`, `PROJECT_STATE.yaml`, `HANDOFF.md` and `research_contract.yaml` in the required exact order.
@@ -264,6 +276,6 @@ The unique next action is Pan Yao's scientific review of the E1 package. If appr
 3. Preserve the class-wide rule: PFBS/PFBA/PFHxA/GenX are tested together, long-chain PFAS are references/co-targets, and class mean cannot mask the worst member.
 4. Do not alter SC-P02 before owner review. If approved, execute M0/Q0 first; if either fails, terminate rather than redesign around charge or fluorine.
 5. Keep SC-P01, SC-P04 and SC-P05 as mandatory causal controls, not fallback recommendations.
-6. Do not restart 2,6-DCP material design until two independent secondary-effluent sources with usable LOQ, sampling location and analytical fraction close its environmental gate.
+6. Read `rounds/bpa_dcp_20x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md`. DCP material ideation is complete; do not relabel DCP20-01 E1 or start synthesis until a second independent secondary-effluent source with usable LOQ, sampling location and analytical fraction closes ENV-STOP.
 7. Preserve every historical artifact; do not order materials or start experiments until Pan Yao separately approves laboratory execution.
 8. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

@@ -239,6 +239,14 @@ The unique next action is Pan Yao's choice among three minimal paper-stage relea
 
 Commit `e3ff34083c9abc724a9366ec4b07fc746c2c9af1` was pushed to `origin/main` and restored into a fresh shallow clone. The clone matched the remote head, recovered 175 declared artifacts with no missing path, parsed 161 unique evidence rows, found exactly 10 BPA + 10 PFAS + 10 DCP candidate headings and 30 diagnostic-score rows, and found no credential-pattern hit in text files.
 
+## Short-chain-PFAS from-scratch restart (2026-07-25)
+
+Pan Yao explicitly rejected deepening PFAS-01 or any other prior PFAS portfolio concept and requested a new short-chain-PFAS design process from the beginning until a high-quality scheme is produced. The approved process is now written in `rounds/short_chain_pfas_from_scratch_20260725/SPEC.md`.
+
+The old PFAS-01 through PFAS-10 designs, historical PFHxS/PFOA/PFBS schemes and BMDL are isolated from idea generation. They may be read only after new candidate structures are frozen, for negative duplication and failure-mode auditing. The new process starts from the class-wide PFBS/PFBA/PFHxA/GenX secondary-effluent engineering gap, requires real biological adsorption/partition/barrier/transport evidence, and continues through isolated design, attack and review until one E1-ready scheme survives or the evidence supports honest termination.
+
+The current unique next action is Pan Yao's review of the written restart spec. No deep search, candidate generation, procurement or experiment is authorized before that review.
+
 ## Resume instructions
 
 1. Read `AGENTS.md`, then `SOUL.md`, `PROJECT_STATE.yaml`, `HANDOFF.md` and `research_contract.yaml` in the required exact order.

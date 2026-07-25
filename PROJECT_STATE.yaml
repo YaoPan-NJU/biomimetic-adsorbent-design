@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: BPA_AG_COF_E1_and_DCP_conditional_design_owner_review
+phase: GenX_DDT_50x2_design_DDT_E1_and_GenX_M0_owner_review
 status: in_progress
-last_completed_step: "Executed the owner-requested BPA and 2,6-DCP 20-by-2 material exploration. Forty exact material entities received innovation dispositions and six-dimension diagnostic scores. BPA20-01 AG-COF was revalidated under the current contract as an 86/100 E1 mechanism-validation-ready design with zero unresolved paper-stage critical/high issues. DCP20-01 EPS-DCA-SIP was converged to an executable 86/100 diagnostic concept using an activated-sludge EPS barrier plus direct 7M1I and 5MA0 target-pose constraints, but it remains concept_valid because only one authoritative multi-plant secondary-effluent program currently satisfies most of the scenario evidence needs; the second independent source with usable LOQ, sampling location and analytical fraction is still missing. Performance remains unproven."
-next_action: "Pan Yao reviews rounds/bpa_dcp_20x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md. BPA20-01 may proceed only after separate laboratory authorization and must start with its M0 computation and same-lattice QC stops. DCP20-01 must not be relabeled E1 or synthesized until a second independent secondary-effluent source closes ENV-STOP; after closure it receives a focused E1 release review rather than a new ideation round. SC-P02 remains unchanged and awaiting owner review. No procurement, synthesis or experiment is authorized by this checkpoint."
+last_completed_step: "Executed the owner-requested GenX and DDT 50-by-2 exploration. One hundred exact material entities received innovation-checklist dispositions, six-dimension diagnostic scores, attack findings and status-first ranking. The historical GenX HSA three-point pocket remains terminated and was not renamed or revived. GX50-01 BGE-SIP is the best new GenX-specific hypothesis at 84/100 but remains concept_valid because the nonfluorinated dummy-template geometry is an unresolved M0 critical; the already released class-wide SC-P02 remains the practical GenX removal route. DDT was frozen as a DDT DDE DDD family target with whole filtered and particulate fractions separated. DDT50-01 LPO-SIP passed environmental innovation and owner gates at 87/100 and is E1 mechanism-validation ready with zero unresolved paper-stage critical/high issues. Performance remains unproven."
+next_action: "Pan Yao reviews rounds/genx_ddt_50x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md and ATTACK_AND_REVIEW.md. After separate laboratory authorization DDT50-01 starts with one same-batch seven-material M0 set and advances to sub-ng/L secondary-effluent E1 only if PACKING POSE and BARRIER passes are met. GX50-01 is limited to a 50-to-100 mg M0 batch; it cannot be relabeled E1 unless dummy geometry produces the preregistered GenX differential effect. SC-P02 remains the practical class-wide GenX E1 route and must report each PFBS PFBA PFHxA and GenX member. No procurement synthesis or experiment is authorized by this paper checkpoint."
 active_branch: main
 last_verified_commit: 87416d229931e341ffc224d1d0a918ec3cc0f2ff
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -13,6 +13,7 @@ candidate_count_policy:
   scheme_pool: open_no_quota
   requested_audit_portfolio: exactly_10_candidates_each_for_BPA_short_chain_PFAS_class_and_2_6_DCP_without_any_pass_quota
   owner_requested_BPA_DCP_expansion: exactly_20_material_entities_each_without_any_pass_quota
+  owner_requested_GenX_DDT_expansion: exactly_50_material_entities_each_without_any_pass_quota
   formal_recommendations: all_E1_or_E2_three_gate_passers
   delivery: rolling
   primary_backup_labels: inactive_unless_owner_later_requests
@@ -105,6 +106,46 @@ BPA_DCP_20x2_deep_design_20260725:
     performance_proven: false
     blocking_gate: second_independent_secondary_effluent_source_with_usable_LOQ_sampling_location_and_analytical_fraction
     scenario_evidence_upgrade: one_authoritative_multi_plant_Western_Australia_program_verified
+  formal_recommendation_count_added: 1
+  no_procurement_or_experiment_authorized: true
+GenX_DDT_50x2_deep_design_20260725:
+  status: executed_DDT_E1_and_GenX_M0_blocked_high_quality_concept
+  candidate_counts:
+    GenX: 50
+    DDT_family: 50
+  evidence_ledger_range_added: E186-E202
+  GenX_scope:
+    target: HFPO_DA
+    actual_engineering_route: existing_SC_P02_classwide_E1
+    class_panel: [PFBS, PFBA, PFHxA, GenX]
+    historical_HSA_three_point_route: terminated_not_reopened
+  GenX_best_new_design:
+    id: GX50-01
+    name: BGE_SIP_branched_ether_dummy_shallow_imprint_hydrated_bead
+    classification: functional_biomimicry_hypothesis
+    diagnostic_score: 84
+    release_level: concept_valid
+    performance_proven: false
+    unresolved_critical: 1
+    blocking_gate: nonfluorinated_dummy_geometry_must_show_preregistered_GenX_differential_effect_in_M0
+  DDT_scope:
+    target_family: [p_p_DDT, o_p_DDT, p_p_DDE, p_p_DDD]
+    within_family_discrimination_required: false
+    reporting_rule: per_member_plus_family_sum_plus_worst_member
+    analytical_fractions: [whole_water, 0_45_um_filtrate, retained_particles]
+  DDT_formal_design:
+    id: DDT50-01
+    name: LPO_SIP_C12_lipid_packing_ordered_shallow_imprint_hydrated_bead
+    classification: functional_biomimicry
+    score: 87
+    release_level: E1_mechanism_validation_ready
+    performance_proven: false
+    unresolved_paper_stage_critical: 0
+    unresolved_paper_stage_high: 0
+    owner_review_pending: true
+  status_counts:
+    GenX: {E1_ready: 0, concept_valid: 12, control_only: 17, terminated: 21}
+    DDT: {E1_ready: 1, concept_valid: 12, control_only: 22, terminated: 15}
   formal_recommendation_count_added: 1
   no_procurement_or_experiment_authorized: true
 historical_candidate_pollutants:
@@ -564,6 +605,8 @@ open_issues:
     text: Freeze PFHxS occurrence distribution analytical fraction secondary-effluent matrix PFSA-class competitors temporal variability engineering endpoint and environmental/mechanism/capacity concentration tiers before reopening prototype or material design.
 artifacts:
   innovation_checklist: INNOVATION_CHECKLIST.md
+  GenX_DDT_50x2_deep_design_and_scorecard: rounds/genx_ddt_50x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md
+  GenX_DDT_50x2_attack_and_review: rounds/genx_ddt_50x2_deep_design_20260725/ATTACK_AND_REVIEW.md
   short_chain_PFAS_from_scratch_spec: rounds/short_chain_pfas_from_scratch_20260725/SPEC.md
   short_chain_PFAS_from_scratch_deep_research_and_E1_design: rounds/short_chain_pfas_from_scratch_20260725/DEEP_RESEARCH_AND_E1_DESIGN.md
   BPA_DCP_20x2_deep_design_and_scorecard: rounds/bpa_dcp_20x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md

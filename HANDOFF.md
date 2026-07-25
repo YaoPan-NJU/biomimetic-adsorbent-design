@@ -271,13 +271,26 @@ Content checkpoint `87416d229931e341ffc224d1d0a918ec3cc0f2ff` was pushed to `ori
 
 The next owner decision is therefore asymmetric: review BPA20-01 as an E1 paper package; for DCP20-01, first close `ENV-STOP`, then perform a focused E1 release review without restarting ideation. SC-P02 remains unchanged and pending owner review. No procurement, synthesis or experiment is authorized.
 
+## GenX and DDT 50-by-2 executed design checkpoint (2026-07-25)
+
+Pan Yao requested fifty GenX and fifty DDT biomimetic adsorbent materials, with full project-rule review, scoring, sorting and experiment-facing high-quality selection. The execution is in `rounds/genx_ddt_50x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md`; isolated attack and reviewer decisions are in `rounds/genx_ddt_50x2_deep_design_20260725/ATTACK_AND_REVIEW.md`. The files contain exactly 50 GenX and 50 DDT material identifiers, compact innovation-checklist dispositions, six-dimension score vectors, status-first rankings and frozen tests for the leaders. Evidence rows E186-E202 add GenX HSA structure and negative boundary, a second municipal-effluent GenX source, direct IX/silica/fluoropolymer/hydrogel/MIP priors, two DDT wastewater sources, DDT membrane and chylomicron functional prototypes, AC and MIP priors, EPA Method 1699 and GC-inlet-degradation QA.
+
+The old `S3 HFPO-DA/HSA` three-point branched pocket remains terminated. The 7Z57 ternary structure does not prove one independently transferable carboxylate-ether-branch cooperative site, and no renamed version is allowed to re-enter. Practical GenX removal remains the class-wide `SC-P02` E1 route, where PFBS/PFBA/PFHxA/GenX are reported individually and the worst member cannot be hidden. The best new GenX-specific hypothesis is `GX50-01 / BGE-SIP`, a nonfluorinated dummy-imprinted hydrated shallow-shell bead. It scores 84 diagnostically but remains `concept_valid`: the nonfluorinated dummy geometry is one unresolved critical that must produce a preregistered GenX differential effect in a 50-to-100 mg M0 batch. It is not E1 and may not be rescued by direct GenX templating, permanent charge or fluorination if M0 fails.
+
+DDT is frozen as a family target covering p,p'-DDT, o,p'-DDT, p,p'-DDE and p,p'-DDD; within-family selectivity is not rewarded. Every scenario sample is split into whole water, 0.45-micrometre filtrate and retained particles so clarification or bottle-wall loss is not misreported as adsorption. `DDT50-01 / LPO-SIP` is the sole new formal release: a St/DVB macrobead carrying a 1-to-3-micrometre HEMA/C12-lauryl-methacrylate shallow shell imprinted with non-target 4,4'-dichlorodiphenylmethane. Its biological function is membrane chain-order/phase-dependent DDT partition, not generic lipid affinity. The same-batch C8/C12/C18, no-LMA, no-HEMA, NIP and wrong-position dummy series isolates phase order, soft-domain absorption, hydration barrier and shape memory.
+
+DDT50-01 scores 87/100 with zero unresolved paper-stage critical/high issues and is `E1_mechanism_validation_ready`; performance remains unproven. Its E1 uses a microgram-per-litre mechanism tier before a 0.05/0.5/5 ng/L two-plant secondary-effluent tier, EPA Method 1699 or validated isotope-dilution GC-MS/MS, continuous DDT-to-DDE/DDD inlet-degradation checks, filtered/particulate mass balance, GAC and POM/LDPE controls, EfOM, short columns and non-lowerable PACKING/POSE/BARRIER/FAMILY/GAC stops. A separate laboratory authorization is still required before procurement or synthesis.
+
+The status distribution is intentionally sparse: GenX has zero new E1, 12 concepts, 17 controls and 21 terminations; DDT has one E1, 12 concepts, 22 controls and 15 terminations. Candidate count was an audit requirement, not a pass quota.
+
 ## Resume instructions
 
 1. Read `AGENTS.md`, then `SOUL.md`, `PROJECT_STATE.yaml`, `HANDOFF.md` and `research_contract.yaml` in the required exact order.
-2. Read `rounds/short_chain_pfas_from_scratch_20260725/DEEP_RESEARCH_AND_E1_DESIGN.md`; it supersedes the restart-spec pause and old PFAS diagnostic rankings.
-3. Preserve the class-wide rule: PFBS/PFBA/PFHxA/GenX are tested together, long-chain PFAS are references/co-targets, and class mean cannot mask the worst member.
-4. Do not alter SC-P02 before owner review. If approved, execute M0/Q0 first; if either fails, terminate rather than redesign around charge or fluorine.
-5. Keep SC-P01, SC-P04 and SC-P05 as mandatory causal controls, not fallback recommendations.
-6. Read `rounds/bpa_dcp_20x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md`. DCP material ideation is complete; do not relabel DCP20-01 E1 or start synthesis until a second independent secondary-effluent source with usable LOQ, sampling location and analytical fraction closes ENV-STOP.
-7. Preserve every historical artifact; do not order materials or start experiments until Pan Yao separately approves laboratory execution.
-8. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.
+2. Read `rounds/genx_ddt_50x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md` and `ATTACK_AND_REVIEW.md`; these contain the current unique next actions.
+3. For practical GenX removal preserve the class-wide SC-P02 rule: PFBS/PFBA/PFHxA/GenX are tested together, long-chain PFAS are references/co-targets, and class mean cannot mask the worst member.
+4. Do not relabel GX50-01 E1 before its dummy-geometry M0 passes. Do not revive the historical HSA S3 route or rescue a failure with GenX direct template, permanent charge or fluorinated monomers.
+5. If separately authorized, execute DDT50-01 as one same-batch seven-material set and apply PACKING/POSE/BARRIER stops before any sub-ng/L column expansion. DDT is a DDT/DDE/DDD family target and all water samples retain the three analytical fractions.
+6. Do not alter SC-P02 before owner review. If approved, execute M0/Q0 first; if either fails, terminate rather than redesign around charge or fluorine. Keep SC-P01, SC-P04 and SC-P05 as mandatory causal controls.
+7. Read `rounds/bpa_dcp_20x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md`. DCP material ideation is complete; do not relabel DCP20-01 E1 or start synthesis until a second independent secondary-effluent source with usable LOQ, sampling location and analytical fraction closes ENV-STOP.
+8. Preserve every historical artifact; do not order materials or start experiments until Pan Yao separately approves laboratory execution.
+9. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

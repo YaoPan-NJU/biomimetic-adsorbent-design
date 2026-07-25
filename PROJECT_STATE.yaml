@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: "Executed the owner-requested BPA and 2,6-DCP 20-by-2 material exploration. Forty exact material entities received innovation dispositions and six-dimension diagnostic scores. BPA20-01 AG-COF was revalidated under the current contract as an 86/100 E1 mechanism-validation-ready design with zero unresolved paper-stage critical/high issues. DCP20-01 EPS-DCA-SIP was converged to an executable 86/100 diagnostic concept using an activated-sludge EPS barrier plus direct 7M1I and 5MA0 target-pose constraints, but it remains concept_valid because only one authoritative multi-plant secondary-effluent program currently satisfies most of the scenario evidence needs; the second independent source with usable LOQ, sampling location and analytical fraction is still missing. Performance remains unproven."
 next_action: "Pan Yao reviews rounds/bpa_dcp_20x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md. BPA20-01 may proceed only after separate laboratory authorization and must start with its M0 computation and same-lattice QC stops. DCP20-01 must not be relabeled E1 or synthesized until a second independent secondary-effluent source closes ENV-STOP; after closure it receives a focused E1 release review rather than a new ideation round. SC-P02 remains unchanged and awaiting owner review. No procurement, synthesis or experiment is authorized by this checkpoint."
 active_branch: main
-last_verified_commit: be52782
+last_verified_commit: 87416d229931e341ffc224d1d0a918ec3cc0f2ff
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:
@@ -80,6 +80,8 @@ short_chain_PFAS_from_scratch_20260725:
   owner_review_pending: true
 BPA_DCP_20x2_deep_design_20260725:
   status: executed_BPA_E1_and_DCP_scenario_blocked_high_quality_concept
+  checkpoint_content_commit: 87416d229931e341ffc224d1d0a918ec3cc0f2ff
+  fresh_clone_validation: passed
   candidate_counts:
     BPA: 20
     2_6_DCP: 20

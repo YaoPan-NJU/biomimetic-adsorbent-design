@@ -267,6 +267,8 @@ The complete execution is `rounds/bpa_dcp_20x2_deep_design_20260725/DEEP_DESIGN_
 
 `DCP20-01 / EPS-DCA-SIP` is the strongest DCP material at an 86/100 diagnostic score. It is a St-DVB macrobead with a HEMA/NVP/EGDMA hydrated shallow shell imprinted using 2,6-dichloroanisole as a non-target dummy. The functional prototype is activated-sludge EPS barrier transfer; 7M1I and 5MA0 supply independent target-pose constraints. The exact controls, two-stage suspension-polymerization draft, pH-separated positional-isomer test, DOM barrier test and seven non-lowerable stop rules are frozen. It remains `concept_valid`, not E1: the Western Australian source is one authoritative multi-plant program, but no second independent source with usable LOQ, sampling location and analytical fraction was found. Old WHO and CSIRO records do not close that gap.
 
+Content checkpoint `87416d229931e341ffc224d1d0a918ec3cc0f2ff` was pushed to `origin/main` and independently verified from a depth-1 fresh clone. The clone reproduced all 20 BPA and 20 DCP identifiers, parsed `PROJECT_STATE.yaml`, found 185 unique evidence records, resolved both new artifact paths, showed no content differences, and found no credential-pattern hits in the checkpoint files.
+
 The next owner decision is therefore asymmetric: review BPA20-01 as an E1 paper package; for DCP20-01, first close `ENV-STOP`, then perform a focused E1 release review without restarting ideation. SC-P02 remains unchanged and pending owner review. No procurement, synthesis or experiment is authorized.
 
 ## Resume instructions

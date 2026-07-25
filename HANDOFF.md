@@ -283,6 +283,8 @@ DDT50-01 scores 87/100 with zero unresolved paper-stage critical/high issues and
 
 The status distribution is intentionally sparse: GenX has zero new E1, 12 concepts, 17 controls and 21 terminations; DDT has one E1, 12 concepts, 22 controls and 15 terminations. Candidate count was an audit requirement, not a pass quota.
 
+Content checkpoint `5fad9f01c9845120ad2a36d26a83669116e15559` was pushed to `origin/main` and restored from a new depth-1 clone. The clone matched the remote head, parsed `PROJECT_STATE.yaml`, resolved all 181 declared artifact paths, parsed 202 unique evidence rows through E202, reproduced exactly 50 unique GX50 and 50 unique DDT50 rows, verified every six-component score sum, recovered the GX50-01 M0 and DDT50-01 same-batch M0 as the next actions, found no checkpoint credential-pattern hit, and had a clean worktree.
+
 ## Resume instructions
 
 1. Read `AGENTS.md`, then `SOUL.md`, `PROJECT_STATE.yaml`, `HANDOFF.md` and `research_contract.yaml` in the required exact order.

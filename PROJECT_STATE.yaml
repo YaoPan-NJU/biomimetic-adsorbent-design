@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: "Executed the owner-requested GenX and DDT 50-by-2 exploration. One hundred exact material entities received innovation-checklist dispositions, six-dimension diagnostic scores, attack findings and status-first ranking. The historical GenX HSA three-point pocket remains terminated and was not renamed or revived. GX50-01 BGE-SIP is the best new GenX-specific hypothesis at 84/100 but remains concept_valid because the nonfluorinated dummy-template geometry is an unresolved M0 critical; the already released class-wide SC-P02 remains the practical GenX removal route. DDT was frozen as a DDT DDE DDD family target with whole filtered and particulate fractions separated. DDT50-01 LPO-SIP passed environmental innovation and owner gates at 87/100 and is E1 mechanism-validation ready with zero unresolved paper-stage critical/high issues. Performance remains unproven."
 next_action: "Pan Yao reviews rounds/genx_ddt_50x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md and ATTACK_AND_REVIEW.md. After separate laboratory authorization DDT50-01 starts with one same-batch seven-material M0 set and advances to sub-ng/L secondary-effluent E1 only if PACKING POSE and BARRIER passes are met. GX50-01 is limited to a 50-to-100 mg M0 batch; it cannot be relabeled E1 unless dummy geometry produces the preregistered GenX differential effect. SC-P02 remains the practical class-wide GenX E1 route and must report each PFBS PFBA PFHxA and GenX member. No procurement synthesis or experiment is authorized by this paper checkpoint."
 active_branch: main
-last_verified_commit: 87416d229931e341ffc224d1d0a918ec3cc0f2ff
+last_verified_commit: 5fad9f01c9845120ad2a36d26a83669116e15559
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:
@@ -110,6 +110,17 @@ BPA_DCP_20x2_deep_design_20260725:
   no_procurement_or_experiment_authorized: true
 GenX_DDT_50x2_deep_design_20260725:
   status: executed_DDT_E1_and_GenX_M0_blocked_high_quality_concept
+  checkpoint_content_commit: 5fad9f01c9845120ad2a36d26a83669116e15559
+  remote_push: origin_main_equal_at_5fad9f01c9845120ad2a36d26a83669116e15559
+  fresh_clone_validation: passed_at_5fad9f01c9845120ad2a36d26a83669116e15559
+  fresh_clone_checks:
+    state_paths: passed_181_artifacts_zero_missing
+    evidence_ledger: passed_202_unique_rows_E001_through_E202
+    candidate_identifiers: passed_exactly_50_GenX_and_50_DDT_unique
+    score_arithmetic: passed_all_100_rows
+    next_action_recovery: passed_GX50_01_M0_and_DDT50_01_same_batch_M0
+    worktree: clean
+    credential_patterns: zero_hits_in_checkpoint_files
   candidate_counts:
     GenX: 50
     DDT_family: 50

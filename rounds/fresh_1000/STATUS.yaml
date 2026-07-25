@@ -210,13 +210,15 @@ pollutants:
     name: "狄氏剂"
     brief: complete
     angles_planned: 17
-    attempted: 2
+    attempted: 3
     passed: 1
-    terminated: 1
-    status: "deepening_to_10（A01 通过 89/S27；A03 终止 51/S39（笼状轮廓形状互补离散主体腔；热力学不可能三角——Koc 基线 ~5×10⁶ L/kg vs Ka 天花板 ~10⁴ M⁻¹ 换算 Kd_eff ~5,000 L/kg 差 3 数量级，基础性物理约束不可修复；endrin 选择性低于可测下限）；已通过 1/10。裁决穷尽评估：A03 对 logKow > 5 中性笼状客体实质耗尽；下一候选 A02（环氧开环反应性捕获，不受 Koc 基线约束）首选，A08（刺激响应温和再生）、A17（捕获-微氧 FeS 串联）备选）"
+    terminated: 2
+    status: "deepening_to_10（A01 通过 89/S27；A03 终止 51/S39（热力学不可能三角）、A02 终止 50/S40（三重基础性死墙——ng/L 动力学断裂+Koc 脱附悖论+碳正离子重排不可控）；已通过 1/10。裁决综合评估：非共价读出族 A03 实质耗尽（Koc 基线 ~5×10⁶ vs Ka 天花板），反应性/转化族 A02 实质耗尽（pM 级碰撞频率不足以驱动转化+产物脱附悖论+酸催化化学不可控）；剩余角度均受 C1（ng/L 动力学）共同约束，狄氏剂加深难度显著升高。下一候选 A17（捕获腔-微氧 FeS 串联耦合，low 先例）或维持 A01 单通过并轮转）"
     slots:
       A01: { r1: "70 revise 0c/2h（环氧桥双氢键供体 exo-环氧识别腔；H1 疏水层近简并前提与实测 logKow 冲突、H2 解耦阈值标定错误）", r2: "89 pass 0c/0h（全部接受勘误：采用实测 logKow 艾氏剂 6.50/狄氏剂 5.40/异狄氏剂 5.20 重算疏水本底、claims 收窄为异狄氏剂对 EF≥2.5+艾氏剂对方向性验证、撤销低介电微环境声称改保守基准+阶段 0 模型化合物水相滴定 go/no-go、A302S 降为调制性证据、供体改预合成双 NH 双齿方酰胺；先例风险 low 经独立检索确证无设计型水相环氧锚定腔空白）", status: passed, file: SCHEMES/S27_A01_exo-epoxide-dual-Hbond-cavity_passed.md, note: "狄氏剂首个通过方案，千方案计划第五通过；GABA/Rdl 刚性疏水腔+单一极性接触调制原理（毒效靶标仅作机制原型）转译 SBA-15 孔壁方酰胺双 NH 阵列，exo-狄氏剂 vs endo-异狄氏剂几何读出，非 logKow 单调" }
       A03: { r1: "51 terminate（笼状轮廓形状互补离散主体腔；3c/6h——热力学不可能三角（Koc ~5×10⁶ vs Kd_eff ~5,000 差 3 数量级）、endrin 选择性低于可测下限、Koc 参数引用错误；ledger E105）", status: terminated, file: SCHEMES/S39_A03_cage-shape-discrete-host_terminated.md }
+      A02: { r1: "50 terminate（环氧开环反应性捕获；3c/7h——ng/L 动力学断裂+Koc 脱附悖论+碳正离子重排不可控；ledger E106）", status: terminated, file: SCHEMES/S40_A02_epoxide-ring-opening_terminated.md }
+      A02: { r1: "50 terminate（环氧开环反应性捕获；3c/7h——ng/L 动力学断裂（pM 级碰撞频率不足）+Koc 脱附悖论（产物 diol logKow 仍 2.5-3.5 无法脱附）+碳正离子重排不可控（Wagner-Meerwein 混合物非确定 diol）；ledger E106）", status: terminated, file: SCHEMES/S40_A02_epoxide-ring-opening_terminated.md }
     phase_a_note: "五路调研（run wf_790f61f0-9da）+ 综合。经核验证据含 ATSDR 2022 艾氏剂/狄氏剂毒理学概况第 5 章全文核验（美国地表水 2016-2021 约 5500 点位检出率 0.4%/0.0746-41 ng/L、五大湖开阔水 0.07-0.4 ng/L、地下水检出率 2%/加州 1304 井全 ND、纽约 14 厂进水全 ND 仅 2 份出水 12-28 ng/L、logKow 4.32-6.2、水溶 0.110 mg/L、水相挥发半衰期 17 d、艾氏剂环氧化制得、1974 停产）、Toxics 2025 中国 WQC 全文核验（GB3838-2002 未收录狄氏剂、组织残留途径 WQC 3.86/1.4 ng/L、BAF 58884、既往急性基准 470 ng/L）、丹江口水库水相全 ND 沉积物最大 0.98 ng/g 检出率 4.4%、额尔齐斯河 ND-4.86 ng/L 均值 0.270、印度 Thamirabarani 河超 WHO/BIS 0.03 µg/L、加纳 Builpela 坝 3.29 µg/L、科索沃 Badovci 湖 ΣOCP 0.873-33.418 µg/L HI 571.3、全球淡水超标 4.6%/非洲亚洲 50%+。监管锚点 WHO/BIS 0.03 µg/L（aldrin+dieldrin 合计）、EU WFD EQS 10 ng/L、美国五大湖野生动物值 0.071 ng/L、加拿大 RBCA 1 ng/L。画像：C12H8Cl6O CAS 60-57-1 笼状含氧有机氯含环氧桥、艾氏剂环氧化代谢产物、高疏水 logKow 5.40、强吸附沉积物/脂相。主目标一般地表水/饮用水源溶解相（发达地区 0.1-40 ng/L 双峰、热点 µg/L 级）。最危险竞争物立体异构体异狄氏剂 endrin（同分子式仅 exo/endo 环氧构型相反）+前体艾氏剂+七氯环氧化物+异狄氏剂醛/酮。生物处理单元不够格（foc/Kow 非特异疏水分配）；组织富集有条件够格部分够格（分布稳健阶梯第 1 级充分，人脑 Fleming 1994 帕金森脑 6/20，须附归因约束）。"
   endosulfan:
     name: "硫丹"
@@ -239,9 +241,9 @@ pollutants:
     status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，14 诚实可区分角度，上限 14<50；组织富集够格 AhR 高亲和锚；待进 Phase B）"
     phase_a_note: "五路调研（run wf_251b70df-f61）+ 综合。经核验证据含美国 EPA 饮用水 TCDD MCLG 零/MCL 30 pg/L 官方页面核验、WHO 二噁英实况页核验（TCDD 剧毒单体、419 种相关化合物约 30 种显著毒性、90%+ 暴露来自食物）、EFSA 2018 TWI 2 pg TEQ/kg/周（摘要核验）；休斯敦航道出水溶解相总 PCDD/F 0.16-13.23 pg/L TCDD 为溶解相 TEQ 最大贡献单体（Chemosphere 2015 摘要）、波兰 4 厂出水 PCDD 4.30-90.7 pg/L（Sci Rep 2019 全文 PMC6917701）、珀斯再生水二级出水中值 TEQ 4.5 pg/L TCDD 0.35-2 pg/L（IJERPH 2008 全文）、日本绫濑川 TEQ 0.26-7.0 pg-TEQ/L 8 样超基准 1.0（Chemosphere 2011 摘要）、越南 Agent Orange 遗留土壤/沉积物储库经食物链转移（Chemosphere 2002 摘要）、三氯生活性氯氯化水相原位生成二噁英（JHM 2019 摘要）。画像：C12H4Cl4O2 平面刚性二噁英、极疏水 logKow~6.8、水相极低溶 pg/L 级、主赋存土壤/沉积物/食品、AhR 芳烃受体高亲和配体。主目标溶解相 pg/L 级（须超痕量分析、Kd 要求极高）。最危险竞争物其他 PCDD/F 同系物（OCDD 优势/PeCDD）+dl-PCB。生物处理单元不够格（有机碳归一化疏水平衡分配向污泥）；组织富集够格附三条硬约束（第 4 级直接证据：AhR 直接结合 Gasiewicz&Rucci 1984 氚标 TCDD 跨物种——真实自然进化高亲和识别锚）。"
 totals:
-  attempted: 27
+  attempted: 28
   passed: 7
-  terminated: 21
+  terminated: 22
   passed_list: "7 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)/NP A01(92)/Dieldrin A01(89)/ROX A01(85)/octocrylene A01(85,S34)"
   target_note: "（2026-07-24）目标提升为每污染物 10 个通过方案（200 总数）；当前已通过的 7 个污染物均为 1/10，优先先易后难加深。加深已启动：NP A04(57/S35)、A10(64/S36)、A06(49/S37)、A08(52/S38) 四连终止（NP 第二次通过诚实穷尽确认）；Dieldrin A03(51/S39) 终止（热力学不可能三角）。下一加深目标：Dieldrin A02（环氧开环反应性捕获，不受 Koc 约束）或轮转至 BPA/PFBS/PFOA/ROX/octocrylene。"
   in_flight: "dde A01 r2=75 revise→r3/角度边界（两 HIGH 闭合，C 维不通过+窗口 0-1 埃脆弱）；endosulfan A01 r2=78 revise→r3（1c+3h 闭合，SQ1 绝对速率待 Phase 0）；genx A01 终止(S33)→待转 A03 醚氧双锚"

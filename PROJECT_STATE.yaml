@@ -1,11 +1,11 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: short_chain_PFAS_from_scratch_written_spec_review
+phase: short_chain_PFAS_SC_P02_E1_owner_review
 status: in_progress
-last_completed_step: "Pan Yao rejected continuation from the prior PFAS portfolio and approved a from-scratch short-chain-PFAS deep-research route. The binding written spec isolates prior PFAS-01 through PFAS-10, historical PFAS concepts and BMDL from idea generation; it requires engineering-gap-first discovery, real biological-function evidence, post-freeze prior-art attack and iterative convergence to E1 or honest termination."
-next_action: "Pan Yao reviews rounds/short_chain_pfas_from_scratch_20260725/SPEC.md. After written-spec confirmation, start web-based deep research from the frozen engineering problem without reading old PFAS candidate logic; produce one continuously updated deep-research report and append only verified evidence to the existing ledger. No procurement or experiment is authorized."
+last_completed_step: "Executed the from-scratch short-chain-PFAS project rather than extending the old portfolio: independently froze ten material entities, then performed post-freeze historical duplication audit, current primary-source prior-art attack, isolated designer/attacker/reviewer dispositions and E1 convergence. Nine candidates were terminated or retained only as causal controls. SC-P02 PG-PMO, a fluorine-free near-zero-IEC pore-mouth urea-gradient/phenylene-cavity PMO, passed the paper-stage biomimetic, material-science and E1 engineering gates at 88/100 with exact synthesis, QC, matched controls, secondary-effluent tests, column, regeneration, leaching, statistics and non-lowerable stop rules. Performance remains unproven."
+next_action: "Pan Yao reviews rounds/short_chain_pfas_from_scratch_20260725/DEEP_RESEARCH_AND_E1_DESIGN.md and either approves SC-P02 for a separately authorized first laboratory batch or returns a specific paper-stage defect. If approved, Zhou Jiaqi executes M0/Q0 material QC before any PFAS performance claim; M0-STOP or Q0-STOP terminates the route. No procurement, synthesis or experiment is authorized by this checkpoint."
 active_branch: main
-last_verified_commit: e3ff340
+last_verified_commit: be52782
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:
@@ -57,6 +57,26 @@ portfolio_30_classwide_20260724:
     - BPA-08: 82
   formal_recommendation_count: 0
   release_status: all_surviving_candidates_E0_or_control_only_no_E1
+short_chain_PFAS_from_scratch_20260725:
+  status: executed_one_E1_design_ready_for_owner_review
+  panel: [PFBS, PFBA, PFHxA, GenX]
+  selectivity_scope: class_over_DOM_salts_anionic_surfactants_and_unrelated_micropollutants
+  candidate_count: 10
+  independent_freeze_before_old_portfolio_audit: true
+  historical_BMDL_role: post_freeze_negative_audit_only
+  evidence_ledger_range_added: E162-E175
+  formal_design:
+    id: SC-P02
+    name: PG-PMO_pore_mouth_urea_gradient_phenylene_cavity
+    classification: functional_biomimicry
+    score: 88
+    release_level: E1_mechanism_validation_ready
+    performance_proven: false
+    unresolved_paper_stage_critical: 0
+    unresolved_paper_stage_high: 0
+  required_causal_controls: [SC-P01_uniform_same_composition, SC-P04_urea_only, SC-P05_phenylene_only]
+  terminated_or_control_only_count: 9
+  owner_review_pending: true
 historical_candidate_pollutants:
   - bisphenol A
   - PFBS
@@ -266,12 +286,14 @@ portfolio_20_top5:
   - PFBS-2 guanidinium-bis-urea headgroup cage with C4 finite slot
   - BPA-2 beta-CD dual-hydrogen-bond porous bead
   - ROX-1 water-compatible COF thin-layer surface imprint
-primary_design: null
+primary_design: SC-P02_PG-PMO_E1_owner_review_pending
 backup_design: null
 fixed_primary_backup_labels_active: false
-formal_recommended_designs: []
+formal_recommended_designs:
+  - SC-P02_PG-PMO
 experiment_release_register:
-  E1_ready: []
+  E1_ready:
+    - SC-P02_PG-PMO_owner_review_pending
   E2_ready: []
 superseded_finalists:
   - D1-A synthetic double-arm phosphate peptide clamp (93/100 historical design pass)
@@ -511,6 +533,7 @@ open_issues:
 artifacts:
   innovation_checklist: INNOVATION_CHECKLIST.md
   short_chain_PFAS_from_scratch_spec: rounds/short_chain_pfas_from_scratch_20260725/SPEC.md
+  short_chain_PFAS_from_scratch_deep_research_and_E1_design: rounds/short_chain_pfas_from_scratch_20260725/DEEP_RESEARCH_AND_E1_DESIGN.md
   portfolio_30_classwide_spec: rounds/portfolio_30_classwide_20260724/PORTFOLIO_SPEC.md
   portfolio_30_classwide_report: rounds/portfolio_30_classwide_20260724/PORTFOLIO_REPORT.md
   fresh_1000_spec: rounds/fresh_1000/SPEC.md

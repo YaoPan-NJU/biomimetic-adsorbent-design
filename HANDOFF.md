@@ -245,15 +245,25 @@ Pan Yao explicitly rejected deepening PFAS-01 or any other prior PFAS portfolio 
 
 The old PFAS-01 through PFAS-10 designs, historical PFHxS/PFOA/PFBS schemes and BMDL are isolated from idea generation. They may be read only after new candidate structures are frozen, for negative duplication and failure-mode auditing. The new process starts from the class-wide PFBS/PFBA/PFHxA/GenX secondary-effluent engineering gap, requires real biological adsorption/partition/barrier/transport evidence, and continues through isolated design, attack and review until one E1-ready scheme survives or the evidence supports honest termination.
 
-The current unique next action is Pan Yao's review of the written restart spec. No deep search, candidate generation, procurement or experiment is authorized before that review.
+That review pause was superseded when Pan Yao instructed Codex to execute the project and produce the design rather than continue editing direction documents. The checkpoint below records the completed execution.
+
+## Short-chain-PFAS executed E1 design checkpoint (2026-07-25)
+
+The from-scratch work is complete in `rounds/short_chain_pfas_from_scratch_20260725/DEEP_RESEARCH_AND_E1_DESIGN.md`. Ten material entities were frozen before any old PFAS design was read. Only after the freeze were PFAS-01 through PFAS-10, historical schemes and BMDL searched for duplication and known failure modes. The evidence ledger now runs through E175; E162-E175 add the SsuA alkanesulfonate uptake function, Bug/TRAP carboxylate pincers, TauA hydration thermodynamics, urea/phenylene PMO manufacturing, spatial co-condensation, fixed-bed shaping, direct PFBA-PMO prior, the 2026 short-chain-PFAS metal cage, neutral urea POP, nylon negatives, confined-water priors and EPA Method 1633A.
+
+Nine candidates were terminated or retained only as mandatory controls. The one paper-stage release is `SC-P02 / PG-PMO`: a fluorine-free, near-zero-IEC phenylene-bridged mesoporous organosilica with BTPU urea bridges enriched at open channel ends by delayed co-condensation. The hard functional correspondence is SsuA/Bug's hydrated neutral headgroup pincer followed by a second low-polarity occupancy region. The contribution is not PMO, urea, confined water or hydrophobicity alone; it is the measured gain of pore-mouth spatial placement over an equal-composition uniform material under a four-member, worst-member, real-secondary-effluent test.
+
+SC-P02 scores 88/100 and is `E1_mechanism_validation_ready`, with zero unresolved paper-stage critical/high issues. The report freezes precursor preparation, particle synthesis, CTAB/IEC exclusion, spatial QC, equal-composition and deletion controls, three concentration tiers, two-plant secondary effluent, PFAS and non-PFAS competitors, Method 1633A QA, a microcolumn, five-cycle regeneration, leaching, mixed-effects statistics and seven non-lowerable stop rules. This status is not a performance claim and does not authorize procurement, synthesis or experiment.
+
+The unique next action is Pan Yao's scientific review of the E1 package. If approved through a separate laboratory authorization, Zhou Jiaqi starts with `M0-STOP` spatial-manufacture QC and `Q0-STOP` CTAB/IEC exclusion. Failure terminates SC-P02; the route may not be rescued by adding permanent charge, fluorinated monomers, proteins or precious metals.
 
 ## Resume instructions
 
 1. Read `AGENTS.md`, then `SOUL.md`, `PROJECT_STATE.yaml`, `HANDOFF.md` and `research_contract.yaml` in the required exact order.
-2. Read `rounds/portfolio_30_classwide_20260724/PORTFOLIO_SPEC.md` and `PORTFOLIO_REPORT.md`; do not recover this portfolio from chat.
-3. Preserve the class-wide PFAS rule: PFBS/PFBA/PFHxA/GenX are tested together, long-chain PFAS are references/co-targets, and class mean cannot mask the worst member.
-4. Do not restart 2,6-DCP material design until two independent secondary-effluent sources with usable LOQ, sampling location and analytical fraction close its environmental gate.
-5. If Pan Yao selects PFAS-01, BPA-01 or DCP gap closure, write only that minimum package. Do not develop all tied candidates in parallel or label an E0 concept E1-ready.
-6. Keep BMDL excluded from design and conventional/mixed-mode ion exchange only as a benchmark/control. Any charged candidate requires IEC, Donnan, counterion and matched-charge accounting.
-7. Preserve every historical artifact; do not order materials or start experiments until Pan Yao approves the exact release level.
+2. Read `rounds/short_chain_pfas_from_scratch_20260725/DEEP_RESEARCH_AND_E1_DESIGN.md`; it supersedes the restart-spec pause and old PFAS diagnostic rankings.
+3. Preserve the class-wide rule: PFBS/PFBA/PFHxA/GenX are tested together, long-chain PFAS are references/co-targets, and class mean cannot mask the worst member.
+4. Do not alter SC-P02 before owner review. If approved, execute M0/Q0 first; if either fails, terminate rather than redesign around charge or fluorine.
+5. Keep SC-P01, SC-P04 and SC-P05 as mandatory causal controls, not fallback recommendations.
+6. Do not restart 2,6-DCP material design until two independent secondary-effluent sources with usable LOQ, sampling location and analytical fraction close its environmental gate.
+7. Preserve every historical artifact; do not order materials or start experiments until Pan Yao separately approves laboratory execution.
 8. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

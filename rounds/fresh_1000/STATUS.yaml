@@ -173,10 +173,12 @@ pollutants:
     name: "十溴二苯醚 BDE-209"
     brief: complete
     angles_planned: 26
-    attempted: 0
+    attempted: 1
     passed: 0
     terminated: 0
     status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，26 诚实可区分角度，上限 26<50；待进 Phase B）"
+    slots:
+      A02: { r1: "67 revise（PceA 双域解耦；1c/3h——共轭骨架串扰+DBDPE α<2+ng/L 传质偏乐观；达 85 概率 <15%）", status: revise, file: SCHEMES/S57_A02_PceA-dual-domain-decoupling_revise.md }
     phase_a_note: "五路调研（run wf_962c0b4b-b91）+ 综合。经核验证据含美国 TSCA 6(h) deca-BDE 2021 分阶段禁令（86 FR 880）与 2024 修订规则（89 FR 91486，2025-01-21 起禁止向水体释放）Federal Register 官方接口全文核验、斯德哥尔摩公约附件 A 消除类、欧盟 REACH 附件 XVII 0.1% 门槛、EFSA 2024 为 BDE-209 导出 BMDL；日本 deca-BDE 设施出水 PBDE 中位 610 ng/L（Suzuki 2021）、印度工业走廊溶解相 ΣPBDE 103-196 ng/L（Chakraborty 2026）、沱江沉积物 DBDPE/BDE-209 比 1.38-2.76 示替代趋势。画像：C12Br10O 超大疏水分子，水溶度<100 ng/L（PubChem OECD 105 实测核验）、logKow~10，实际水体主赋存悬浮颗粒/胶体/微塑料/污泥，溶解相受溶度上限约束。主目标 S1/S2 工业点源出水与工业走廊受纳水体（唯一提供 ng/L 级以上 BDE-209 水相负荷界面）。结构最近似竞争者 DBDPE（仅差乙烷桥）+ 重溴 PBDE 同系物。18 条 DOI Crossref 题录自核（摘要级）。两条启发式均不够格（市政处理几乎完全分配悬浮固体/污泥由 Koc 控制；大鼠 14C-BDE-209 分布可由脂分配解释）。"
   np:
     name: "壬基酚 NP"
@@ -263,7 +265,7 @@ pollutants:
       A01: { r1: "70 revise_with_phase0_prerequisite（侧位氯卤键/σ-空穴有机笼；0c/3h——卤键强度根本性限制+PeCDD 检验缺失+供体选择不自洽；DFT 预筛门控 ΔΔG_XB≥2→GO）", status: revise_with_phase0_prerequisite, file: SCHEMES/S50_A01_lateral-Cl-halogen-bond-cage_revise.md }
     phase_a_note: "五路调研（run wf_251b70df-f61）+ 综合。经核验证据含美国 EPA 饮用水 TCDD MCLG 零/MCL 30 pg/L 官方页面核验、WHO 二噁英实况页核验（TCDD 剧毒单体、419 种相关化合物约 30 种显著毒性、90%+ 暴露来自食物）、EFSA 2018 TWI 2 pg TEQ/kg/周（摘要核验）；休斯敦航道出水溶解相总 PCDD/F 0.16-13.23 pg/L TCDD 为溶解相 TEQ 最大贡献单体（Chemosphere 2015 摘要）、波兰 4 厂出水 PCDD 4.30-90.7 pg/L（Sci Rep 2019 全文 PMC6917701）、珀斯再生水二级出水中值 TEQ 4.5 pg/L TCDD 0.35-2 pg/L（IJERPH 2008 全文）、日本绫濑川 TEQ 0.26-7.0 pg-TEQ/L 8 样超基准 1.0（Chemosphere 2011 摘要）、越南 Agent Orange 遗留土壤/沉积物储库经食物链转移（Chemosphere 2002 摘要）、三氯生活性氯氯化水相原位生成二噁英（JHM 2019 摘要）。画像：C12H4Cl4O2 平面刚性二噁英、极疏水 logKow~6.8、水相极低溶 pg/L 级、主赋存土壤/沉积物/食品、AhR 芳烃受体高亲和配体。主目标溶解相 pg/L 级（须超痕量分析、Kd 要求极高）。最危险竞争物其他 PCDD/F 同系物（OCDD 优势/PeCDD）+dl-PCB。生物处理单元不够格（有机碳归一化疏水平衡分配向污泥）；组织富集够格附三条硬约束（第 4 级直接证据：AhR 直接结合 Gasiewicz&Rucci 1984 氚标 TCDD 跨物种——真实自然进化高亲和识别锚）。"
 totals:
-  attempted: 44
+  attempted: 45
   passed: 8
   terminated: 33
   passed_list: "8 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)/NP A01(92)/Dieldrin A01(89)/ROX A01(85)/octocrylene A01(85,S34)/DDT A01(86,S51)"

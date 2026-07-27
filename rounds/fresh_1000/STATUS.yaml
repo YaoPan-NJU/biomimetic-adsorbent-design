@@ -140,10 +140,12 @@ pollutants:
     name: "β-六氯环己烷 β-HCH"
     brief: complete
     angles_planned: 21
-    attempted: 0
+    attempted: 1
     passed: 0
     terminated: 0
-    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，21 诚实可区分角度，上限 21<50；待进 Phase B）"
+    status: "phase_b（A01 终止 45/S52——γ-CD 包合；核心假设被 Hosangadi 1985+He 2026 实验反向否定（β-CD 优先包合 γ-HCH 非 β-HCH）；转向 A05-A07 MIP 形状印迹或 A12 分子笼）"
+    slots:
+      A01: { r1: "45 terminate（γ-CD 包合；核心假设被实验反向否定——β-CD 优先包合 γ-HCH 非 β-HCH）", status: terminated, file: SCHEMES/S52_A01_gamma-CD-inclusion_terminated.md }
     phase_a_note: "五路调研（run wf_55d274a7-324）+ 综合。经核验证据含斯德哥尔摩公约 α/β-HCH 化学概况页面全文核验（β-HCH CAS 319-85-7 经 COP-4 决定 SC-4/11 列入附件 A 无豁免、林丹生产非故意副产物每吨林丹约产生 6-10 吨其他异构体、较冷地区水中高度持久、北极食物网生物积累、对人类可能致癌）、美国 NPDWR 页面核验（林丹 γ-HCH MCL/MCLG 均 0.2 µg/L，α/β-HCH 与总六六六不在限值表内）、Wilk/Willett 1998 ES&T HCH 异构体差异毒性与全球归趋权威综述（β-HCH 全平伏氯构型最稳定抗降解难挥发、老化后占比升高、最终成主导异构体）；中国 20010 地下水监测点全国调查（J Con Hyd 2026）、太湖浅层地下水 β-HCH 多为优势 HCH 异构体（STOTEN 2014）、捷克 Hajek 人工湿地 HCH 去除异构体序 α=γ=δ>β=ε β-HCH 最难去除（STOTEN 2024）、西班牙 Sardas 林丹工厂场地厌氧 HCH 转化（JHM 2025）、巴西饮用水林丹-HCH 均值 2.17 µg/L 超美国 MCL 一个数量级（EnvInt 2022）。画像：β-HCH（C6H6Cl6）六氯环己烷热力学最稳定异构体（全平伏氯），高疏水 logKow~5、水相低溶、持久、林丹生产副产物遗留、环境老化后占比升高最难去除。最危险竞争物 α/γ/δ-HCH 异构体（仅氯取向不同）+六氯苯杂质。生物处理单元边界够格（降解分支林丹脱氯化氢酶 LinA/脱卤酶机制清晰；吸附分支有机质平衡分配不够格）；组织富集不够格（人体消除半衰期中位 7.2 年与体脂正相关，脂质分配+代谢持久性两通道解释）。"
   chloroform:
     name: "三氯甲烷"
@@ -256,9 +258,9 @@ pollutants:
       A01: { r1: "70 revise_with_phase0_prerequisite（侧位氯卤键/σ-空穴有机笼；0c/3h——卤键强度根本性限制+PeCDD 检验缺失+供体选择不自洽；DFT 预筛门控 ΔΔG_XB≥2→GO）", status: revise_with_phase0_prerequisite, file: SCHEMES/S50_A01_lateral-Cl-halogen-bond-cage_revise.md }
     phase_a_note: "五路调研（run wf_251b70df-f61）+ 综合。经核验证据含美国 EPA 饮用水 TCDD MCLG 零/MCL 30 pg/L 官方页面核验、WHO 二噁英实况页核验（TCDD 剧毒单体、419 种相关化合物约 30 种显著毒性、90%+ 暴露来自食物）、EFSA 2018 TWI 2 pg TEQ/kg/周（摘要核验）；休斯敦航道出水溶解相总 PCDD/F 0.16-13.23 pg/L TCDD 为溶解相 TEQ 最大贡献单体（Chemosphere 2015 摘要）、波兰 4 厂出水 PCDD 4.30-90.7 pg/L（Sci Rep 2019 全文 PMC6917701）、珀斯再生水二级出水中值 TEQ 4.5 pg/L TCDD 0.35-2 pg/L（IJERPH 2008 全文）、日本绫濑川 TEQ 0.26-7.0 pg-TEQ/L 8 样超基准 1.0（Chemosphere 2011 摘要）、越南 Agent Orange 遗留土壤/沉积物储库经食物链转移（Chemosphere 2002 摘要）、三氯生活性氯氯化水相原位生成二噁英（JHM 2019 摘要）。画像：C12H4Cl4O2 平面刚性二噁英、极疏水 logKow~6.8、水相极低溶 pg/L 级、主赋存土壤/沉积物/食品、AhR 芳烃受体高亲和配体。主目标溶解相 pg/L 级（须超痕量分析、Kd 要求极高）。最危险竞争物其他 PCDD/F 同系物（OCDD 优势/PeCDD）+dl-PCB。生物处理单元不够格（有机碳归一化疏水平衡分配向污泥）；组织富集够格附三条硬约束（第 4 级直接证据：AhR 直接结合 Gasiewicz&Rucci 1984 氚标 TCDD 跨物种——真实自然进化高亲和识别锚）。"
 totals:
-  attempted: 39
+  attempted: 40
   passed: 8
-  terminated: 30
+  terminated: 31
   passed_list: "8 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)/NP A01(92)/Dieldrin A01(89)/ROX A01(85)/octocrylene A01(85,S34)/DDT A01(86,S51)"
   target_note: "（2026-07-24）目标提升为每污染物 10 个通过方案（200 总数）；当前已通过的 7 个污染物均为 1/10，优先先易后难加深。加深已启动：NP 4 槽终止（第二次通过诚实穷尽确认）；Dieldrin 2 槽终止（A03+A02）；ROX A06 终止（催化鸿沟）；octocrylene A02 终止+A04 revise 72/S45（迈克尔共价捕获，首个非终止结果，DFT 可闭合天花板）；PFBS A01 终止 62/S43；BPA A04 终止 52/S44。下一加深目标：octocrylene A04 r2（DFT 门控后），BPA A07/A10、PFBS A04/A10、ROX A02/A04。"
   in_flight: "dde A01 r2=75 revise→r3/角度边界（两 HIGH 闭合，C 维不通过+窗口 0-1 埃脆弱）；endosulfan A01 r2=78 revise→r3（1c+3h 闭合，SQ1 绝对速率待 Phase 0）；genx A01 终止(S33)→待转 A03 醚氧双锚"

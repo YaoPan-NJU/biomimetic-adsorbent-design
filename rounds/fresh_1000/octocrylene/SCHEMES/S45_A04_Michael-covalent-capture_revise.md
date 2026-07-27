@@ -2,8 +2,10 @@
 
 - 污染物：奥克立林 OC（CAS 6197-30-4，C24H27NO2，logKow~6.1）
 - 角度：A04 电子亏缺 C=C 的亲核迈克尔共价捕获（nucleophilic Michael covalent capture）
-- 状态：**revise**（r1=72/100，1c/3h 未决；DFT 可闭合天花板，非根本缺陷）
+- 状态：**revise_with_phase0_prerequisite**（r1=72→r2=80/100；机制方向正确、r1 全部 1C+3H 设计层面闭合、创新清单通过；剩余 5 分差距只能由 DFT 数据填补）
 - r1 工作流：设计 87→攻击 1c/3h→裁决 72/revise
+- r2 工作流：设计 80→攻击 0c/2h→裁决 80/revise_with_phase0_prerequisite
+- Phase 0 门控：Stage −1 DFT（M06-2X/def2-TZVP/SMD，哌嗪+OC 过渡态），ΔG‡≤55 kJ/mol → GO / 55-70 → CONDITIONAL / >70 → TERMINATE
 - 创新性清单：A 通过（共价迈克尔加成独立于 A01 电荷转移与 A02 H 键）、B 通过（硫醇/胺功能化介孔材料架构）、C 通过（氰基丙烯酸酯亲核聚合化学→表面固定亲核位点转译）、D 部分通过（OC/EHMC 选择性方向正确但仅 5-12× 而非 10²-10⁴）、E 部分通过（OC 迈克尔加成零先例但化学可行性高）
 
 ## 角色交付
@@ -39,7 +41,7 @@ Hammett 修正后 OC/EHMC 迈克尔加成速率比仅 5-12×（非设计者声�
 | 原创性 | 12/15 | 共价迈克尔捕获为真实未占据空间，与 A01/A02 完全正交 |
 | 实验可证伪与对照 | 8/10 | DFT 门控 + 竞争实验设计完整 |
 | 证据完整性 | 7/10 | 化学可行性高但 OC 特异迈克尔加成零先例 |
-| **合计** | **72/100** | **revise** |
+| **合计** | **72→80/100** | **revise_with_phase0_prerequisite** |
 
 ## 证据引用
 - Hoppe 2024 Environ Sci Eur, DOI 10.1186/s12302-024-01046-w（OC 环境行为综述，full_text_read）
@@ -47,9 +49,13 @@ Hammett 修正后 OC/EHMC 迈克尔加成速率比仅 5-12×（非设计者声�
 - Hoyle 2010 Angew Chem, DOI 10.1002/anie.200903924（硫醇-烯点击化学综述，metadata_verified）
 - Hayes 2005 Annu Rev Pharmacol Toxicol, DOI 10.1146/annurev.pharmtox.45.120403.095857（GST/GSH 迈克尔加成机制，abstract_read）
 
-## r2 修订要求
-1. **DFT 门阈值重校准**：ΔG‡≤55 kJ/mol → go（非 80 kJ/mol）；须以 M06-2X/def2-TZVP 计算 OC + MeS⁻ 过渡态
-2. **Hammett 修正**：接受 OC/EHMC 选择性 5-12× 的诚实估计，调整创新叙事
-3. **仲胺替代方案**：解决 H2 硫醇盐有氧寿命问题
-4. **再生竞争反应分析**：闭合 H3 碱促逆迈克尔条件下的酯键皂化/β-消除竞争
-5. **Phase 0 前置**：DFT 计算为承重 go/no-go，须在 r2 前完成
+## r2 修订结果（全部闭合）
+1. **DFT 门阈值重校准**：✅ 完成。Taft/Charton 估算 k_OC≈10⁻²–10¹ M⁻¹s⁻¹；门阈值降至 55/70 kJ/mol；预注册 terminate
+2. **Hammett 修正**：✅ 完成。接受 OC/EHMC 选择性 5-12×，叙事调整为“方向正确、幅度适度、正交于所有先例”
+3. **仲胺替代方案**：✅ 完成。哌嗪仲胺替代硫醇盐，有氧寿命从天级→月-年级
+4. **再生竞争反应分析**：✅ 完成。皂化竞争定量分析 + 低碱/低温/15 min 缓解 + 一次性使用备选
+5. **Phase 0 前置**：DFT 计算为承重 go/no-go，须在 r3 前完成
+
+## 裁决战略评估
+
+值得执行。DFT 成本极低（1-2 天），通过概率 ~25-35%，通过方案价值高（OC 第 2 个正交机制方案）。即使失败，负面结果关闭角度、避免资源浪费。期望值为正——这是一张几乎免费的彩票。

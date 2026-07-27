@@ -2,10 +2,10 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: fresh_1000_scheme_marathon
 status: in_progress
-last_completed_step: "多污染物加深会话完成（2026-07-24）：8 个新槽位跨 6 个已通过污染物（+1 重复确认），全部终止于基础性物理/化学约束。Dieldrin A03(51/S39)+A02(50/S40) 双封顶；ROX A06(49/S41) 催化鸿沟 7-10 OOM；octocrylene A02(55/S42) 脱水罚分+选择性反转；PFBS A05 重复确认+A01(62/S43) 伪协同+水相磺酸根 H 键不利；BPA A04(52/S44) 非单调体积阈值不成立。NP 第二次诚实穷尽确认。PFOA 加深被潘尧明确推迟（A11-A26 待 20 污染物后回填）。fresh_1000 现况见 rounds/fresh_1000/STATUS.yaml（截至 2026-07-24：32 槽 attempted / 7 passed / 26 terminated；7/20 污染物已有通过方案，均 1/10）。"
-next_action: "继续加深剩余已通过污染物（BPA A07/A10、PFBS A04/A10、ROX A02/A04、octocrylene A04/A03），或开始 20 污染物后回填（PFOA A11-A26）。按 SPEC.md Phase B 单槽工作流开新角度槽。每槽隔离设计-攻击-裁决、_wip 组装、逐槽提交推送 origin/Ultimate，STATUS.yaml 逐槽更新。"
+last_completed_step: "DDT A01 通过 86/100（2026-07-25）——第 8 个有通过方案的污染物，加深/未通过污染物中首个新通过。脱氯化氢酶 β-消除双基序反应性识别+萘扩展 resorcinarene 离散笼；Born 方程证明低介电腔去稳定 E2 过渡态安全裕度 >95 kJ/mol。同轮完成 BPA A07(39)/PFBS A04(44)/ROX A02(73)/GenX A03(61)/TCDD A01(70 revise)/β-HCH A01(45)/PCP A01(64)/HCBD A05(72 revise)/DDT A02(66 revise)。fresh_1000 现况见 rounds/fresh_1000/STATUS.yaml（截至 2026-07-25：43 槽 attempted / 8 passed / 32 terminated；8/20 污染物已有通过方案）。"
+next_action: "优先 OC A04 DFT 门控（ΔG‡≤55→GO，通过概率 ~25-35%）；TCDD A01 DFT 门控；chloroform/bde209/pcb209 首次尝试；DDT 加深 A04/A06；PFOA 回填 A11-A26。按 SPEC.md Phase B 单槽工作流。每槽隔离设计-攻击-裁决、逐槽提交推送 origin/Ultimate。"
 active_branch: Ultimate
-last_verified_commit: 48980f1
+last_verified_commit: 150ad86
 scheme_target: "10 passing schemes per pollutant (200 total); easy-first deepening; honest N<10 clause retained"
 bmdl_policy: removed_from_branch
 historical_artifacts_status: preserved_not_active

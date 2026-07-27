@@ -226,6 +226,32 @@ A comprehensive deepening session explored 8 new slots across 6 passed pollutant
 
 Fresh_1000 totals: 32 attempted, 7 passed, 26 terminated. The honest-exhaustion clause is actively functioning: every termination records specific angle-exhaustion reasons (thermodynamic impossibility triangle, catalytic gap, dehydration penalty, pseudo-cooperativity, aqueous binding unfavorable, non-monotonic threshold unsound) rather than padding. The next action is to continue deepening the remaining passed pollutants (BPA A07/A10, PFBS A04/A10, ROX A02/A04, octocrylene A04/A03) or begin the post-20-pollutant backfill pass for PFOA A11-A26.
 
+## Fresh-1000 checkpoint: DDT A01 passes — 8th pollutant milestone (2026-07-25)
+
+A major milestone: DDT A01 (dehydrochlorinase β-elimination dual-motif reactive recognition) passed at 86/100 after r1=73→r2=86 (`ddt/SCHEMES/S51_A01_dehydrochlorinase-dual-motif_passed.md`). DDT becomes the 8th pollutant with a passing scheme and the FIRST new pass from deepening/unpassed pollutant efforts. The key scientific insight: Born equation proves low-dielectric cavity DESTABILIZES E2 polar transition state (safety margin >95 kJ/mol), overturning the r1 attacker's premise. Naphthalene-extended resorcinarene discrete cage provides ±0.2 Å precision; DDT/DDE binary switch selectivity. Innovation checklist A-E all pass.
+
+Additional slots: BPA A07 (39/S46), PFBS A04 (44/S47), ROX A02 (73/S48), GenX A03 (61/S49), TCDD A01 (70/S50 revise_phase0), β-HCH A01 (45/S52, experimentally REFUTED), PCP A01 (64/S53), HCBD A05 (72/S54 revise, ceiling 82-84), DDT A02 (66/S55 revise_low, ceiling 78-80). Octocrylene A04 (80/100) remains most promising revise — DFT gate ΔG‡≤55→GO, pass probability ~25-35%.
+
+Fresh_1000 totals: 43 attempted, 8 passed, 32 terminated, 4+ revise. 8 passed pollutants: PFOA A02(85), BPA A01(86), PFBS A17(85), NP A01(92), Dieldrin A01(89), ROX A01(85), octocrylene A01(85), DDT A01(86). 3 pollutants with 0 attempts: chloroform, bde209, pcb209.
+
+**Key strategic insight**: Covalent/reactive recognition + discrete cage + low-dielectric microenvironment is the ONLY reliable strategy bypassing aqueous dehydration penalty. Three fundamental constraints: (1) dehydration penalty, (2) aqueous halogen bond energy insufficient, (3) ng/L kinetics.
+
+**Next actions**: (1) OC A04 DFT gate (highest priority); (2) TCDD A01 DFT gate; (3) chloroform/bde209/pcb209 first attempts; (4) DDT deepening A04/A06; (5) PFOA backfill A11-A26.
+
+## Fresh-1000 checkpoint: DDT A01 passes — 8th pollutant milestone (2026-07-25)
+
+A major milestone: DDT A01 (dehydrochlorinase β-elimination dual-motif reactive recognition) passed at 86/100 after r1=73→r2=86 (`ddt/SCHEMES/S51_A01_dehydrochlorinase-dual-motif_passed.md`). DDT becomes the 8th pollutant with a passing scheme and the FIRST new pass from deepening/unpassed pollutant efforts. The key scientific insight: Born equation proves low-dielectric cavity DESTABILIZES E2 polar transition state (safety margin >95 kJ/mol), overturning the r1 attacker's premise that low-ε increases base strength. Naphthalene-extended resorcinarene discrete cage provides ±0.2 Å precision; DDT/DDE binary switch selectivity (DDE lacks bridge H). Innovation checklist A-E all pass.
+
+Additional slots this session: BPA A07 (39/S46, phenol radical coupling — no independent selectivity + irreversible C-C), PFBS A04 (44/S47, GPR43 ion-lock — selectivity reverses for sulfate + mechanism equivalent to A17), ROX A02 (73/S48, oxime ether H-bond — α≈0.40 negative selection + mechanism homologous to ROX-6), GenX A03 (61/S49, polyether ionophore dual anchor — ether oxygen H-bond thermodynamically neutral in water), TCDD A01 (70/S50 revise_with_phase0, halogen bond cage — DFT gate ΔΔG_XB≥2→GO), β-HCH A01 (45/S52, γ-CD inclusion — experimentally REFUTED by Hosangadi 1985 + He 2026), PCP A01 (64/S53, TTR reverse-mode channel — aqueous C-Cl halogen bond insufficient per Herbst 2026 JACS), HCBD A05 (72/S54 revise, GST thiolate conjugation — ceiling 82-84, originality hard constraint from Heterocycles 1980 precedent), DDT A02 (66/S55 revise_with_low_ceiling, corrinoid reductive capture — ceiling 78-80, ng/L SN2 kinetics infeasible + DDE SET shadow).
+
+Octocrylene A04 (Michael covalent capture) scored 80/100 at r1 and remains the most promising revise — DFT gate ΔG‡≤55 kJ/mol → GO, pass probability ~25-35%.
+
+Fresh_1000 totals: 43 attempted, 8 passed, 32 terminated, 4+ revise. 8 passed pollutants: PFOA A02(85), BPA A01(86), PFBS A17(85), NP A01(92), Dieldrin A01(89), ROX A01(85), octocrylene A01(85), DDT A01(86). 3 pollutants with 0 attempts: chloroform, bde209, pcb209. 12 pollutants without a pass.
+
+**Key strategic insight**: Covalent/reactive recognition + discrete cage pre-organization + low-dielectric microenvironment is the ONLY reliable strategy that bypasses the aqueous dehydration penalty. Three fundamental constraints repeatedly terminate non-covalent approaches: (1) aqueous dehydration penalty (weak H-bond acceptors thermodynamically infeasible), (2) aqueous halogen bond energy insufficient (Cl σ-hole <2 kJ/mol), (3) ng/L kinetics (reactive schemes at pM concentration have insufficient rates).
+
+**Next actions**: (1) OC A04 DFT gate (external prerequisite, highest priority); (2) TCDD A01 DFT gate; (3) remaining unpassed pollutants first attempts (chloroform/bde209/pcb209); (4) DDT deepening (A04/A06); (5) PFOA backfill (A11-A26, deferred by Pan Yao).
+
 ## Fresh-1000 program checkpoint: BPA A01 passed (2026-07-20)
 
 BPA's first scheme passed: A01 (DmpR-type fixed phenol anchor plus bridge-region steric gate, crystalline beta-ketoenamine COF) at 86/100 with zero unresolved critical/high (`bpa/SCHEMES/S14_A01_DmpR-anchor-gate-COF_passed.md`). This is the program's second pass after PFOA A02 (85). Trajectory 71→82→83→84→86: round 1 surfaced two highs (criterion decoupling; amorphous HCP lacks fixed-pocket geometry); round 2 moved to a crystalline COF, read the Park 2020 DmpR phenol-bound structure (PDB 6IY8) full text with independent coordinate recomputation, and self-corrected an E135K mistranslation; rounds 3-4 closed the thermodynamic budget and prior-art boundary (registering the supervisor-level gate G-E17 for the paywalled Zhao 2022 paper) and made file-level corrections; round 5 made the final file-level supplements (DFT go/no-go threshold, statistical power budget, quaternized anchor-closed backup control C1-B plus F11) that crossed the line.

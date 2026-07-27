@@ -212,11 +212,11 @@ pollutants:
     brief: complete
     angles_planned: 24
     attempted: 1
-    passed: 0
+    passed: 1
     terminated: 0
-    status: "phase_b（A01 r1=73 revise/S51——脱氯化氢酶双基序反应性识别腔；理论上限 88，最可能 82-86；logKow 基线淹没风险+低介电 pKa 偏移；r2 须 DFT 闭合捕获不转化+离散笼+收窄 DDT/DDE 声称）"
+    status: "deepening_to_10（A01 通过 86/S51——脱氯化氢酶双基序反应性识别腔；r1=73→r2=86 pass 0c/0h；Born 方程证明低介电腔去稳定 E2 过渡态安全裕度 >95 kJ/mol；DDT 首个通过方案，千方案计划第八通过；已通过 1/10）"
     slots:
-      A01: { r1: "73 revise（脱氯化氢酶双基序反应性识别；1c/2h——logKow 基线淹没双基序增量+低介电 pKa 偏移+HCP 精度不足；理论上限 88 最可能 82-86；r2 须 DFT+离散笼+收窄声称）", status: revise, file: SCHEMES/S51_A01_dehydrochlorinase-dual-motif_revise.md }
+      A01: { r1: "73 revise 1c/2h（脱氯化氢酶双基序反应性识别）", r2: "86 pass 0c/0h（Born 方程闭合捕获不转化+离散笼+DDT/DDE 聚焦；创新清单 A-E 全通过）", status: passed, file: SCHEMES/S51_A01_dehydrochlorinase-dual-motif_passed.md, note: "DDT 首个通过方案，千方案计划第八通过；脱氯化氢酶 β-消除双基序（攫氢碱+CCl3 口袋）反应性识别，萘扩展 resorcinarene 离散笼，DDT/DDE 二元开关选择性" }
     phase_a_note: "五路调研（run wf_47972af0-8ec）+ 综合（注入修复后渲染器，五路结果真正注入）；全文级证据含 Makgoba 2024 非洲 DDT 综述 PMC10979284 全文、Montuori 2020 Volturno 河全文（溶解相 ΣDDT ND-1.34 ng/L 均值 0.38、(DDD+DDE)/DDT=13.8-16.8 历史残留）、WHO 1 µg/L 准则值经综述全文引文核实、美国 EPA 40 CFR Part 141 经 eCFR 双版本核验无 DDT 饮用水 MCL。关键画像：logKow 6.5-6.9 高疏水、水溶度极低、强烈颗粒/沉积物分配、溶解相 ng/L 级；斯德哥尔摩公约附件 B 限制用途；最关键结构近似物为 p,p'-DDE（好氧脱 HCl）/p,p'-DDD（厌氧还原脱氯），共享双(4-氯苯基)骨架仅乙烷桥 C1 取代不同（DDT -CCl3/DDE =CCl2/DDD -CHCl2），环境浓度常远超母体。两条启发式均判不够格：生物处理单元（foc/Kow 控制非特异疏水分配、去除率-logKow 线性、DDE 98% 随污泥流）；组织富集（脂肪组织富集现象稳健但可被中性脂质分配充分解释，阶梯第 1 级充分但更高阶梯无特异机制）。承重仿生源为 approach-1（脱氯化氢酶 β-消除、类咕啉/黄素-血红素还原、lipocalin/SCP-2 架构、卤键阵列、胆盐胶束、白腐真菌自由基介体、醌类电子梭）+ approach-2 工程难题驱动。"
   dieldrin:
     name: "狄氏剂"
@@ -257,9 +257,9 @@ pollutants:
     phase_a_note: "五路调研（run wf_251b70df-f61）+ 综合。经核验证据含美国 EPA 饮用水 TCDD MCLG 零/MCL 30 pg/L 官方页面核验、WHO 二噁英实况页核验（TCDD 剧毒单体、419 种相关化合物约 30 种显著毒性、90%+ 暴露来自食物）、EFSA 2018 TWI 2 pg TEQ/kg/周（摘要核验）；休斯敦航道出水溶解相总 PCDD/F 0.16-13.23 pg/L TCDD 为溶解相 TEQ 最大贡献单体（Chemosphere 2015 摘要）、波兰 4 厂出水 PCDD 4.30-90.7 pg/L（Sci Rep 2019 全文 PMC6917701）、珀斯再生水二级出水中值 TEQ 4.5 pg/L TCDD 0.35-2 pg/L（IJERPH 2008 全文）、日本绫濑川 TEQ 0.26-7.0 pg-TEQ/L 8 样超基准 1.0（Chemosphere 2011 摘要）、越南 Agent Orange 遗留土壤/沉积物储库经食物链转移（Chemosphere 2002 摘要）、三氯生活性氯氯化水相原位生成二噁英（JHM 2019 摘要）。画像：C12H4Cl4O2 平面刚性二噁英、极疏水 logKow~6.8、水相极低溶 pg/L 级、主赋存土壤/沉积物/食品、AhR 芳烃受体高亲和配体。主目标溶解相 pg/L 级（须超痕量分析、Kd 要求极高）。最危险竞争物其他 PCDD/F 同系物（OCDD 优势/PeCDD）+dl-PCB。生物处理单元不够格（有机碳归一化疏水平衡分配向污泥）；组织富集够格附三条硬约束（第 4 级直接证据：AhR 直接结合 Gasiewicz&Rucci 1984 氚标 TCDD 跨物种——真实自然进化高亲和识别锚）。"
 totals:
   attempted: 39
-  passed: 7
+  passed: 8
   terminated: 30
-  passed_list: "7 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)/NP A01(92)/Dieldrin A01(89)/ROX A01(85)/octocrylene A01(85,S34)"
+  passed_list: "8 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)/NP A01(92)/Dieldrin A01(89)/ROX A01(85)/octocrylene A01(85,S34)/DDT A01(86,S51)"
   target_note: "（2026-07-24）目标提升为每污染物 10 个通过方案（200 总数）；当前已通过的 7 个污染物均为 1/10，优先先易后难加深。加深已启动：NP 4 槽终止（第二次通过诚实穷尽确认）；Dieldrin 2 槽终止（A03+A02）；ROX A06 终止（催化鸿沟）；octocrylene A02 终止+A04 revise 72/S45（迈克尔共价捕获，首个非终止结果，DFT 可闭合天花板）；PFBS A01 终止 62/S43；BPA A04 终止 52/S44。下一加深目标：octocrylene A04 r2（DFT 门控后），BPA A07/A10、PFBS A04/A10、ROX A02/A04。"
   in_flight: "dde A01 r2=75 revise→r3/角度边界（两 HIGH 闭合，C 维不通过+窗口 0-1 埃脆弱）；endosulfan A01 r2=78 revise→r3（1c+3h 闭合，SQ1 绝对速率待 Phase 0）；genx A01 终止(S33)→待转 A03 醚氧双锚"
   phase_a_awaiting_b: "pcp/betahch/chloroform/hcbd/bde209/pcb209/ddt/tcdd 已完成 Phase A 待 Phase B"

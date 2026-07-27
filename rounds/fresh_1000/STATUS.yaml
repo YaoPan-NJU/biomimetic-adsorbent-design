@@ -117,7 +117,7 @@ pollutants:
     name: "五氯苯酚 PCP"
     brief: complete
     angles_planned: 16
-    attempted: 0
+    attempted: 1
     passed: 0
     terminated: 0
     status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，16 诚实可区分角度，上限 16<50；待进 Phase B 批量方案槽）"
@@ -258,9 +258,9 @@ pollutants:
       A01: { r1: "70 revise_with_phase0_prerequisite（侧位氯卤键/σ-空穴有机笼；0c/3h——卤键强度根本性限制+PeCDD 检验缺失+供体选择不自洽；DFT 预筛门控 ΔΔG_XB≥2→GO）", status: revise_with_phase0_prerequisite, file: SCHEMES/S50_A01_lateral-Cl-halogen-bond-cage_revise.md }
     phase_a_note: "五路调研（run wf_251b70df-f61）+ 综合。经核验证据含美国 EPA 饮用水 TCDD MCLG 零/MCL 30 pg/L 官方页面核验、WHO 二噁英实况页核验（TCDD 剧毒单体、419 种相关化合物约 30 种显著毒性、90%+ 暴露来自食物）、EFSA 2018 TWI 2 pg TEQ/kg/周（摘要核验）；休斯敦航道出水溶解相总 PCDD/F 0.16-13.23 pg/L TCDD 为溶解相 TEQ 最大贡献单体（Chemosphere 2015 摘要）、波兰 4 厂出水 PCDD 4.30-90.7 pg/L（Sci Rep 2019 全文 PMC6917701）、珀斯再生水二级出水中值 TEQ 4.5 pg/L TCDD 0.35-2 pg/L（IJERPH 2008 全文）、日本绫濑川 TEQ 0.26-7.0 pg-TEQ/L 8 样超基准 1.0（Chemosphere 2011 摘要）、越南 Agent Orange 遗留土壤/沉积物储库经食物链转移（Chemosphere 2002 摘要）、三氯生活性氯氯化水相原位生成二噁英（JHM 2019 摘要）。画像：C12H4Cl4O2 平面刚性二噁英、极疏水 logKow~6.8、水相极低溶 pg/L 级、主赋存土壤/沉积物/食品、AhR 芳烃受体高亲和配体。主目标溶解相 pg/L 级（须超痕量分析、Kd 要求极高）。最危险竞争物其他 PCDD/F 同系物（OCDD 优势/PeCDD）+dl-PCB。生物处理单元不够格（有机碳归一化疏水平衡分配向污泥）；组织富集够格附三条硬约束（第 4 级直接证据：AhR 直接结合 Gasiewicz&Rucci 1984 氚标 TCDD 跨物种——真实自然进化高亲和识别锚）。"
 totals:
-  attempted: 40
+  attempted: 41
   passed: 8
-  terminated: 31
+  terminated: 32
   passed_list: "8 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)/NP A01(92)/Dieldrin A01(89)/ROX A01(85)/octocrylene A01(85,S34)/DDT A01(86,S51)"
   target_note: "（2026-07-24）目标提升为每污染物 10 个通过方案（200 总数）；当前已通过的 7 个污染物均为 1/10，优先先易后难加深。加深已启动：NP 4 槽终止（第二次通过诚实穷尽确认）；Dieldrin 2 槽终止（A03+A02）；ROX A06 终止（催化鸿沟）；octocrylene A02 终止+A04 revise 72/S45（迈克尔共价捕获，首个非终止结果，DFT 可闭合天花板）；PFBS A01 终止 62/S43；BPA A04 终止 52/S44。下一加深目标：octocrylene A04 r2（DFT 门控后），BPA A07/A10、PFBS A04/A10、ROX A02/A04。"
   in_flight: "dde A01 r2=75 revise→r3/角度边界（两 HIGH 闭合，C 维不通过+窗口 0-1 埃脆弱）；endosulfan A01 r2=78 revise→r3（1c+3h 闭合，SQ1 绝对速率待 Phase 0）；genx A01 终止(S33)→待转 A03 醚氧双锚"

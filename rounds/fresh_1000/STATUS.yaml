@@ -199,10 +199,12 @@ pollutants:
     name: "多氯联苯-209 PCB-209"
     brief: complete
     angles_planned: 23
-    attempted: 0
+    attempted: 1
     passed: 0
     terminated: 0
-    status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，23 诚实可区分角度，上限 23<50；PCB-209 单体无实测水浓度负面发现；待进 Phase B）"
+    status: "phase_b（A01 r1=71 revise/S58——扭转正交构象形状读出腔；扭转-共平面几何差异真实（~85° vs 0°）零先例但 logKow~8.3 极端值压缩表观 α+近异构体 PCB-180/194 不可分；DFT 门控 ΔΔG≥1.5 kcal/mol 为合成前必经）"
+    slots:
+      A01: { r1: "71 revise（扭转正交构象形状读出腔；logKow 极端值压缩+近异构体不可分；DFT 门控待完成）", status: revise, file: SCHEMES/S58_A01_twisted-conformation-shape-cavity_revise.md }
     phase_a_note: "五路调研（run wf_920b2be4-157）+ 综合。关键负面发现（search_executed）：2019 年后无文献报道 PCB-209 单体在任一真实水体的实测浓度；水相 PCB 检出由低氯至中氯同系物主导，矿区排水检出最高氯数亦仅七氯（Wolkersdorfer 2025 综述全文 verified）。经核验证据含美国 EPA 总 PCB 饮用水 MCL 0.0005 mg/L（官方表 verified）、PCB 不在欧盟 WFD 优先物质清单（2013/39/EU 页面 verified）、斯德哥尔摩公约 2025/2028 消除时间表（公约官网 verified）；溶解相 ΣPCB 一般流域 0.065-1.92 ng/L（北洛河 2023 均值 0.37）、饮用水源 0.04-11 ng/L（加纳 Pra 河 2025）、单同系物水相最高 PCB-167 达 1860 ng/L（Udu 河 2022）。画像：C12Cl10 MW 498.6 XLogP3 8.3（PubChem API verified）、全氯代无氢键位点/无解离/平面刚性、水溶度推断 ng/L 级。PCB-209 单体水相浓度只能以 ΣPCB 量级+单体份额推断（pg/L-亚 ng/L），不得声称实测。主目标市政二级出水及受纳地表水溶解相。竞争谱须含低氯同系物（水相主体）+ 高氯同类 PCB-170/180/194 + 跨类全卤代姊妹物 BDE-209。两条启发式均不够格（污水厂归宿污泥相整体疏水分配；人血 PCB 以六/七氯持久同系物主导，类级分布无 PCB-209 特异机制）。"
   dde:
     name: "滴滴伊 p,p'-DDE"
@@ -265,7 +267,7 @@ pollutants:
       A01: { r1: "70 revise_with_phase0_prerequisite（侧位氯卤键/σ-空穴有机笼；0c/3h——卤键强度根本性限制+PeCDD 检验缺失+供体选择不自洽；DFT 预筛门控 ΔΔG_XB≥2→GO）", status: revise_with_phase0_prerequisite, file: SCHEMES/S50_A01_lateral-Cl-halogen-bond-cage_revise.md }
     phase_a_note: "五路调研（run wf_251b70df-f61）+ 综合。经核验证据含美国 EPA 饮用水 TCDD MCLG 零/MCL 30 pg/L 官方页面核验、WHO 二噁英实况页核验（TCDD 剧毒单体、419 种相关化合物约 30 种显著毒性、90%+ 暴露来自食物）、EFSA 2018 TWI 2 pg TEQ/kg/周（摘要核验）；休斯敦航道出水溶解相总 PCDD/F 0.16-13.23 pg/L TCDD 为溶解相 TEQ 最大贡献单体（Chemosphere 2015 摘要）、波兰 4 厂出水 PCDD 4.30-90.7 pg/L（Sci Rep 2019 全文 PMC6917701）、珀斯再生水二级出水中值 TEQ 4.5 pg/L TCDD 0.35-2 pg/L（IJERPH 2008 全文）、日本绫濑川 TEQ 0.26-7.0 pg-TEQ/L 8 样超基准 1.0（Chemosphere 2011 摘要）、越南 Agent Orange 遗留土壤/沉积物储库经食物链转移（Chemosphere 2002 摘要）、三氯生活性氯氯化水相原位生成二噁英（JHM 2019 摘要）。画像：C12H4Cl4O2 平面刚性二噁英、极疏水 logKow~6.8、水相极低溶 pg/L 级、主赋存土壤/沉积物/食品、AhR 芳烃受体高亲和配体。主目标溶解相 pg/L 级（须超痕量分析、Kd 要求极高）。最危险竞争物其他 PCDD/F 同系物（OCDD 优势/PeCDD）+dl-PCB。生物处理单元不够格（有机碳归一化疏水平衡分配向污泥）；组织富集够格附三条硬约束（第 4 级直接证据：AhR 直接结合 Gasiewicz&Rucci 1984 氚标 TCDD 跨物种——真实自然进化高亲和识别锚）。"
 totals:
-  attempted: 45
+  attempted: 46
   passed: 8
   terminated: 33
   passed_list: "8 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)/NP A01(92)/Dieldrin A01(89)/ROX A01(85)/octocrylene A01(85,S34)/DDT A01(86,S51)"

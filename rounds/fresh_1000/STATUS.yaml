@@ -64,12 +64,13 @@ pollutants:
     name: "全氟丁烷磺酸 PFBS"
     brief: complete
     angles_planned: 19
-    attempted: 2
+    attempted: 3
     passed: 1
-    terminated: 1
+    terminated: 2
     status: "phase_b_breadth_first（A17 通过 85/S17，PFBS 广度优先满足；A05 终止 58/S16；后续可回溯 A01-A04/A06-A16/A18-A19）"
     slots:
       A05: { r1: "66 revise 0c/2h（铁载体架构可溶笼捕获+固相受体回收两相体系；2 high A05-01 硫酸根排斥误归四面体几何/A05-02 TonB 归属错误）", r2: "58 terminate 0c/1h（诚实更正机制归属后暴露承重轴不可达：硫酸根排斥归 C4 链腔坍缩为单参数链腔疏水沿链长单调陷阱5、α≥10⁶ 需 ΔΔG≥34 kJ/mol 而 C4 氟碳链仅数至十余 kJ/mol；新 high A05-R2-01 E5 实为固定化流通笼吸附剂即可溶均相捕获无存在性先例）", status: terminated, file: SCHEMES/S16_A05_siderophore-two-phase-cage_terminated.md, reason: "角度内禀结构天花板（承重选择性轴单参数单调+可溶均相捕获无先例）；残余价值：铁载体两相架构传质/回收解耦+TonB 方向性能量逻辑+E5 固定化基准+nM 亲和与 α≥10⁶ 共同前置+硫酸根排斥归属教训" }
+      A01: { r1: "62 terminate（ModA/NTCP 双正交几何识别；2c/3h→裁决降为 4 HIGH——伪协同+水相磺酸根 H 键先验不利（Cveti 2024）+ng/L 不可行；ledger E109）", status: terminated, file: SCHEMES/S43_A01_ModA-NTCP-dual-geometry_terminated.md }
       A17: { r1: "77 revise 0c/1h（孔口几何双位点头基类型反差捕获，T 三足硫脲匹配四面体磺酸根/P squaramide 匹配平面羧酸根，R=α_T/α_P 反差签名；1 high H1 squaramide 质子化态未设防）", r2: "82 revise 0c/0h（零 high；H1 设计层真正闭合 P 位点重设为不可去质子中性平面双给体+pH 滴定 kill 门+四唑根/squaramate 光谱防假阳性；M1-M5/L1-L3 全闭合）", r3: "84 revise 0c/0h（议题 A-F 全闭合：2×2 因子对照分离给体计数/酸性交互、−283 论据降辅助、接枝定位门 G1 前置阶段-1、squaramate 光谱升初级判据、创新承载点精确化为几何残差+R 反差、新颖性收窄应用/增量级；裁决者明示 r4 闭合 R3-1/R3-2 为触及 85 文本可达路径）", r4: "85 pass 0c/0h（R3-1 F0 由方向先验降为一致性诊断零链长截距/ΔCp/Δn_w、R3-2 角度+间距复合几何签名+2×2 因子 bootstrap 置信区间+检测力 n≥15.7(σ_R/δ)²、R3-3-R3-6 引证精度修辞闭合+E21-E23 新增；维度 18/22/17/12/9/8 达 85；裁决者确认 85 线未降零 high 判通过）", status: passed, file: SCHEMES/S17_A17_pore-mouth-dual-site-headgroup_passed.md, note: "PFBS 首个通过方案，千方案计划第三通过（继 PFOA A02=85、BPA A01=86）；85 认证严谨诚实双分支可发表闭环而非特异性正面主张大概率成立（T/P 反差须抗约 100 倍通用趋势+几何残差 <1 kcal/mol 处 POP 噪声边缘，先验低为不可约科学事实，S_deconvolution 阴性交付为真贡献承载）；四项实验门控待阶段-1/0" }
     phase_a_note: "五路调研（run wf_bfd571d4-951）+ 综合（注入修复后渲染器，五路结果真正注入）；161 条经核验证据（联邦公报 NPDWR/UCMR5 全文、EPA 2022 PFBS HA 全文、EFSA 2020 全文 178 处 PFBS 抽查、Hu 2016 全文）。关键监管：EPA PFBS 终身 HA 2000 ng/L、2024 NPDWR 纳入 HI 混合物 MCL 2000 ng/L（无单项 MCL）、UCMR3 检出极低（8/4920 PWS）、EFSA 未将 PFBS 纳入 PFOA/PFOS/PFNA/PFHxS 组 TDI。两条启发式均判不够格：生物处理单元（出水 100% 检出、进出水负荷相当、前体转化反升短链 PFCA、碳吸附/离子交换对短链差）；组织富集（BCF/BAF 显著低于长链 PFSA、大鼠毒代消除最快尿排泄最高）。承重仿生源为 approach-1 机制匹配（NTCP/OAT4/GPR43-109A/NIS/ASBT/ModA 转运识别、铁载体架构、氟化物核糖开关）+ approach-2 工程难题驱动。低先例高价值角度：A05（铁载体两相捕获-回收）、A17（磺酸根 vs 羧酸根头基类型选择）、A18（氟化物核糖开关 F⁻ 传感）。PFOA 陷阱库可参照（阳离子位点对硫酸根/磷酸根非选择性、链长单调、ng/L 传质、含氟吸附剂风险、DOM 分组分、摩尔比 10⁻⁶-10⁻⁹）。"
   rox:
@@ -243,11 +244,11 @@ pollutants:
     status: "phase_a_complete（BRIEF.md + DESIGN_SPACE.md 入库，14 诚实可区分角度，上限 14<50；组织富集够格 AhR 高亲和锚；待进 Phase B）"
     phase_a_note: "五路调研（run wf_251b70df-f61）+ 综合。经核验证据含美国 EPA 饮用水 TCDD MCLG 零/MCL 30 pg/L 官方页面核验、WHO 二噁英实况页核验（TCDD 剧毒单体、419 种相关化合物约 30 种显著毒性、90%+ 暴露来自食物）、EFSA 2018 TWI 2 pg TEQ/kg/周（摘要核验）；休斯敦航道出水溶解相总 PCDD/F 0.16-13.23 pg/L TCDD 为溶解相 TEQ 最大贡献单体（Chemosphere 2015 摘要）、波兰 4 厂出水 PCDD 4.30-90.7 pg/L（Sci Rep 2019 全文 PMC6917701）、珀斯再生水二级出水中值 TEQ 4.5 pg/L TCDD 0.35-2 pg/L（IJERPH 2008 全文）、日本绫濑川 TEQ 0.26-7.0 pg-TEQ/L 8 样超基准 1.0（Chemosphere 2011 摘要）、越南 Agent Orange 遗留土壤/沉积物储库经食物链转移（Chemosphere 2002 摘要）、三氯生活性氯氯化水相原位生成二噁英（JHM 2019 摘要）。画像：C12H4Cl4O2 平面刚性二噁英、极疏水 logKow~6.8、水相极低溶 pg/L 级、主赋存土壤/沉积物/食品、AhR 芳烃受体高亲和配体。主目标溶解相 pg/L 级（须超痕量分析、Kd 要求极高）。最危险竞争物其他 PCDD/F 同系物（OCDD 优势/PeCDD）+dl-PCB。生物处理单元不够格（有机碳归一化疏水平衡分配向污泥）；组织富集够格附三条硬约束（第 4 级直接证据：AhR 直接结合 Gasiewicz&Rucci 1984 氚标 TCDD 跨物种——真实自然进化高亲和识别锚）。"
 totals:
-  attempted: 30
+  attempted: 31
   passed: 7
-  terminated: 24
+  terminated: 25
   passed_list: "7 通过=PFOA A02(85)/BPA A01(86)/PFBS A17(85)/NP A01(92)/Dieldrin A01(89)/ROX A01(85)/octocrylene A01(85,S34)"
-  target_note: "（2026-07-24）目标提升为每污染物 10 个通过方案（200 总数）；当前已通过的 7 个污染物均为 1/10，优先先易后难加深。加深已启动：NP 4 槽终止（第二次通过诚实穷尽确认）；Dieldrin 2 槽终止（A03+A02）；ROX A06 终止（催化鸿沟 7-10 OOM）；octocrylene A02 终止 55/S42（脱水罚分自证伪+选择性反转）。下一加深目标：BPA/PFBS/PFOA 未触碰加深，或继续 ROX A02/A04、octocrylene A04/A03。"
+  target_note: "（2026-07-24）目标提升为每污染物 10 个通过方案（200 总数）；当前已通过的 7 个污染物均为 1/10，优先先易后难加深。加深已启动：NP 4 槽终止（第二次通过诚实穷尽确认）；Dieldrin 2 槽终止（A03+A02）；ROX A06 终止（催化鸿沟）；octocrylene A02 终止（脱水罚分+选择性反转）；PFBS A01 终止 62/S43（伪协同+水相磺酸根 H 键先验不利）。下一加深目标：BPA/PFOA 未触碰加深，或继续 PFBS A04/A10、ROX A02/A04、octocrylene A04/A03。"
   in_flight: "dde A01 r2=75 revise→r3/角度边界（两 HIGH 闭合，C 维不通过+窗口 0-1 埃脆弱）；endosulfan A01 r2=78 revise→r3（1c+3h 闭合，SQ1 绝对速率待 Phase 0）；genx A01 终止(S33)→待转 A03 醚氧双锚"
   phase_a_awaiting_b: "pcp/betahch/chloroform/hcbd/bde209/pcb209/ddt/tcdd 已完成 Phase A 待 Phase B"
   hard_no_pass: "dcp26（3 槽全终止）/pfhxs（2 槽终止）为已试硬骨头，待回溯补角"

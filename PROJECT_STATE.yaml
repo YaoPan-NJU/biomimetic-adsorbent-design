@@ -2,10 +2,10 @@ schema_version: 1
 project: biomimetic-adsorbent-design
 phase: fresh_1000_scheme_marathon
 status: in_progress
-last_completed_step: "NP A08 单槽隔离三角色工作流完成并终止（2026-07-24）：设计 64→攻击 4c/5h→裁决 52/terminate。四 critical 结构性不可修复（T8 机制坍塌/对手对不成立/T4 风险反转/原创性阴影）。NP 第二次通过诚实穷尽条件成立（平衡结合型识别空间穷尽 + 反应性轴 T8 封锁），轮转至另一已通过污染物加深。fresh_1000 现况见 rounds/fresh_1000/STATUS.yaml（截至 2026-07-24：26 槽 attempted / 7 passed / 20 terminated；7/20 污染物已有通过方案，均 1/10）。"
-next_action: "先易后难推进 200 方案目标：NP 已诚实穷尽（1/10，5 槽终止），轮转至另一已通过污染物加深（BPA/PFBS/PFOA/Dieldrin/ROX/octocrylene，均 1/10）。按 SPEC.md Phase B 单槽工作流开新角度槽。每槽隔离设计-攻击-裁决、_wip 组装、逐槽提交推送 origin/Ultimate，STATUS.yaml 逐槽更新。7 个加深完成后转未通过污染物（含 dcp26/pfhxs 硬骨头，按执行顺序）。原型库扩充在 Biomimetic-design-library@expand 分支并行。"
+last_completed_step: "多污染物加深会话完成（2026-07-24）：8 个新槽位跨 6 个已通过污染物（+1 重复确认），全部终止于基础性物理/化学约束。Dieldrin A03(51/S39)+A02(50/S40) 双封顶；ROX A06(49/S41) 催化鸿沟 7-10 OOM；octocrylene A02(55/S42) 脱水罚分+选择性反转；PFBS A05 重复确认+A01(62/S43) 伪协同+水相磺酸根 H 键不利；BPA A04(52/S44) 非单调体积阈值不成立。NP 第二次诚实穷尽确认。PFOA 加深被潘尧明确推迟（A11-A26 待 20 污染物后回填）。fresh_1000 现况见 rounds/fresh_1000/STATUS.yaml（截至 2026-07-24：32 槽 attempted / 7 passed / 26 terminated；7/20 污染物已有通过方案，均 1/10）。"
+next_action: "继续加深剩余已通过污染物（BPA A07/A10、PFBS A04/A10、ROX A02/A04、octocrylene A04/A03），或开始 20 污染物后回填（PFOA A11-A26）。按 SPEC.md Phase B 单槽工作流开新角度槽。每槽隔离设计-攻击-裁决、_wip 组装、逐槽提交推送 origin/Ultimate，STATUS.yaml 逐槽更新。"
 active_branch: Ultimate
-last_verified_commit: c4e29a9
+last_verified_commit: 48980f1
 scheme_target: "10 passing schemes per pollutant (200 total); easy-first deepening; honest N<10 clause retained"
 bmdl_policy: removed_from_branch
 historical_artifacts_status: preserved_not_active

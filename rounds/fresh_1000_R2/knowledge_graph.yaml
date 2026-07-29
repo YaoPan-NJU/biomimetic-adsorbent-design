@@ -1,0 +1,94 @@
+# 知识图谱 — fresh_1000 Round 2
+# 原型-机制-材料-污染物 四维关联网络
+# 版本：v1.0 | 日期：2026-07-29 | 状态：初始化
+
+knowledge_graph:
+  version: "1.0"
+  last_updated: "2026-07-29"
+  
+  nodes:
+    # 仿生原型（当前 83 条，目标 150+）
+    prototypes:
+      # R1 通过方案使用的原型
+      - id: "serine_protease_oxyanion_hole"
+        name: "丝氨酸蛋白酶氧阴离子洞原理"
+        source_type: nonprotein
+        r1_used_in: "PFOA A02"
+      - id: "dmpr_phenol_sensor"
+        name: "DmpR 型固定酚感应转录因子"
+        source_type: protein
+        r1_used_in: "BPA A01"
+      - id: "moda_ntcp_geometry"
+        name: "ModA/NTCP 几何识别原理"
+        source_type: protein
+        r1_used_in: "PFBS A17"
+      - id: "sphingobium_ipso"
+        name: "Sphingobium ipso 羟基化途径"
+        source_type: nonprotein
+        r1_used_in: "NP A01"
+      - id: "gaba_rdl_hydrophobic_cavity"
+        name: "GABA/Rdl 刚性疏水腔"
+        source_type: protein
+        r1_used_in: "Dieldrin A01"
+      - id: "23s_rrna_npet"
+        name: "23S rRNA NPET 核苷酸碱基阵列"
+        source_type: nonprotein
+        r1_used_in: "ROX A01"
+      - id: "photosynthetic_rc_electron"
+        name: "光合反应中心电子预组织"
+        source_type: protein
+        r1_used_in: "Octocrylene A01"
+      - id: "mineral_lewis_acid"
+        name: "矿物表面 Lewis 酸水解界面"
+        source_type: mineral
+        r1_used_in: "Endosulfan A01"
+      - id: "dehydrochlorinase_dual_motif"
+        name: "脱氯化氢酶 β-消除双基序"
+        source_type: protein
+        r1_used_in: "DDT A01"
+      - id: "bpha_planar_chloro_diaryl"
+        name: "BphA 平面氯代二芳基识别"
+        source_type: protein
+        r1_used_in: "DDE A01"
+      # R2 新增原型将在此追加
+    
+    # 识别机制（随 R2 推进持续扩展）
+    mechanisms: []
+    
+    # 材料平台（随 R2 推进持续扩展）
+    materials: []
+    
+    # 污染物（固定 20 种）
+    pollutants:
+      - tcdd
+      - dcp26
+      - betahch
+      - chloroform
+      - pcp
+      - pfbs
+      - pfhxs
+      - pfoa
+      - genx
+      - hcbd
+      - bde209
+      - bpa
+      - np
+      - pcb209
+      - octocrylene
+      - dde
+      - ddt
+      - dieldrin
+      - endosulfan
+      - rox
+  
+  edges:
+    prototype_mechanism: []
+    mechanism_material: []
+    mechanism_pollutant: []
+  
+  statistics:
+    total_prototypes: 83  # 当前库大小（含 R1 未使用的）
+    total_mechanisms: 0
+    total_materials: 0
+    total_pollutants: 20
+    connectivity_density: 0.0

@@ -1,0 +1,191 @@
+program: fresh_1000_R2
+advance_policy: "20 种污染物 × 50 方案 = 1000 方案槽；每方案须与 R1 已覆盖角度/机制/材料组合正交；通过线 85/100 + 零未决 critical/high + 创新性清单通过；广度优先（每污染物至少 1 个 R2 方案后推进下一污染物）；诚实耗尽条款保留。"
+created: 2026-07-29
+spec: rounds/fresh_1000_R2/SPEC.md
+r1_baseline: rounds/fresh_1000/STATUS.yaml
+occupied_space: rounds/fresh_1000_R2/R1_OCCUPIED_SPACE.yaml
+pollutant_count: 20
+target_per_pollutant: 50
+total_target: 1000
+quality_gate: "score>=85, 0 unresolved critical/high, innovation checklist pass, full closed loop, R1-DEDUP pass"
+iteration_policy:
+  rounds_per_concept: 2
+  max_rebuilds_per_slot: 3
+  exhaustion_recorded_honestly: true
+  intermediate_artifacts_persisted: true
+execution_order: [pfoa, pfbs, pfhxs, genx, bpa, np, dcp26, rox, octocrylene, ddt, dde, dieldrin, endosulfan, betahch, tcdd, pcb209, pcp, hcbd, chloroform, bde209]
+milestones:
+  M1_prototype_library_120: pending
+  M2_all_20_pollutants_1_scheme: pending
+  M3_100_schemes_completed: pending
+  M4_30_schemes_passed: pending
+  M5_60_schemes_passed: pending
+  M6_knowledge_graph: pending
+pollutants:
+  pfoa:
+    name: "全氟辛酸 PFOA"
+    r1_status: "1 passed (A02=85), 9 terminated"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending（R2 尚未启动）"
+  pfbs:
+    name: "全氟丁烷磺酸 PFBS"
+    r1_status: "1 passed (A17=85), 3 terminated"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+  pfhxs:
+    name: "全氟己烷磺酸 PFHxS"
+    r1_status: "0 passed, 2 terminated"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+  genx:
+    name: "六氟环氧丙烷二聚酸 GenX"
+    r1_status: "0 passed, 2 terminated"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+  bpa:
+    name: "双酚 A BPA"
+    r1_status: "1 passed (A01=86), 4 terminated"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+  np:
+    name: "壬基酚 NP"
+    r1_status: "1 passed (A01=92), 4 terminated"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+  dcp26:
+    name: "2,6-二氯苯酚 DCP26"
+    r1_status: "0 passed, 3 terminated, 1 in_progress"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+  rox:
+    name: "罗红霉素 ROX"
+    r1_status: "1 passed (A01=85), 2 terminated"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+  octocrylene:
+    name: "奥克立林"
+    r1_status: "1 passed (A01=85), 1 terminated"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+  ddt:
+    name: "滴滴涕 DDT"
+    r1_status: "1 passed (A01=86), 0 terminated"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+  dde:
+    name: "滴滴伊 DDE"
+    r1_status: "0 passed, 0 terminated, 1 fragile"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+  dieldrin:
+    name: "狄氏剂"
+    r1_status: "1 passed (A01=89), 2 terminated"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+  endosulfan:
+    name: "硫丹"
+    r1_status: "1 passed (A01=85), 0 terminated"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+  betahch:
+    name: "β-六氯环己烷"
+    r1_status: "0 passed, 1 terminated"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+  tcdd:
+    name: "TCDD"
+    r1_status: "0 passed, 0 terminated, 1 revise_phase0"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+  pcb209:
+    name: "多氯联苯-209"
+    r1_status: "0 passed, 0 terminated, 1 in_progress"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+  pcp:
+    name: "五氯苯酚 PCP"
+    r1_status: "0 passed (自评 85-87), 0 terminated"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+  hcbd:
+    name: "六氯丁二烯 HCBD"
+    r1_status: "0 passed, 0 terminated, 1 in_progress"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+  chloroform:
+    name: "三氯甲烷"
+    r1_status: "0 passed, 1 terminated"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+  bde209:
+    name: "十溴二苯醚 BDE-209"
+    r1_status: "1 passed (A07=85), 1 terminated"
+    r2_angles_planned: 0
+    r2_attempted: 0
+    r2_passed: 0
+    r2_terminated: 0
+    status: "pending"
+totals:
+  r2_attempted: 0
+  r2_passed: 0
+  r2_terminated: 0
+  prototype_library_size: 83
+  prototype_library_target: 150
+last_updated: "2026-07-29T18:15"

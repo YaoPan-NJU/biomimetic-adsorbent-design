@@ -1,0 +1,528 @@
+# R1 已占据机制空间
+# 用于 R2 的 R1-DEDUP 预筛
+# 数据来源：rounds/fresh_1000/STATUS.yaml（2026-07-29 最终状态）
+# 包含：9 个正式通过方案 + 5 个自评通过方案 + 17 个终止方案（作为已知陷阱）
+
+# ============================================================
+# 第一部分：R1 正式通过方案（9 个）—— R2 必须避开的核心机制空间
+# ============================================================
+
+passed_schemes:
+  - pollutant: PFOA
+    slug: pfoa
+    scheme: S05_A02
+    score: 85
+    mechanism: "PAF-1 孔口预组织双脲氧阴离子洞 + 机制三分层 + 同碳全氟配对双向判决"
+    selectivity_dimensions: ["几何识别（孔口预组织）", "静电互补（脲/硫脲氧阴离子洞）", "疏水配对（同碳全氟）"]
+    material_platform: "PAF-1（多孔芳香框架）"
+    prototype: "丝氨酸蛋白酶氧阴离子洞原理（非蛋白重设计版）"
+    prototype_source: "nonprotein"
+    angle: A02
+    file: "SCHEMES/S05_A02_urea-oxyanion-hole-POP_passed.md"
+    key_innovation: "机制三分层解耦因果命题；选择性策略维承载"
+
+  - pollutant: BPA
+    slug: bpa
+    scheme: S14_A01
+    score: 86
+    mechanism: "DmpR 型固定酚锚 + 桥连区空间门 + 晶态 COF 几何约束"
+    selectivity_dimensions: ["氢键锚定（固定酚氧）", "几何识别（桥连区空间门）", "晶态约束（COF 定距）"]
+    material_platform: "晶态 β-酮烯胺 COF"
+    prototype: "DmpR 型固定酚感应转录因子"
+    prototype_source: "protein"
+    angle: A01
+    file: "SCHEMES/S14_A01_DmpR-anchor-gate-COF_passed.md"
+    key_innovation: "自然进化原型 DmpR；双硬对应；文件级补件可闭合"
+
+  - pollutant: PFBS
+    slug: pfbs
+    scheme: S17_A17
+    score: 85
+    mechanism: "T 三足硫脲（四面体磺酸根）/ P squaramide（平面羧酸根）反差签名 R"
+    selectivity_dimensions: ["几何残差（四面体 vs 平面头基）", "反差签名 R（α_T/α_P）"]
+    material_platform: "POP 接枝活性炭/多孔聚合物"
+    prototype: "ModA/NTCP 几何识别原理"
+    prototype_source: "protein"
+    angle: A17
+    file: "SCHEMES/S17_A17_pore-mouth-dual-site-headgroup_passed.md"
+    key_innovation: "几何残差 + R 反差双承载；2×2 因子对照"
+
+  - pollutant: NP
+    slug: np
+    scheme: S26_A01
+    score: 92
+    mechanism: "Sphingobium ipso 途径 α-四级碳底物判据的几何转译——非蛋白间苯二酚芳烃深腔笼"
+    selectivity_dimensions: ["拓扑形状选择（α-四级碳腔）", "疏水预组织（深腔笼）"]
+    material_platform: "非蛋白间苯二酚芳烃深腔笼"
+    prototype: "Sphingobium ipso 羟基化途径"
+    prototype_source: "nonprotein"
+    angle: A01
+    file: "SCHEMES/S26_A01_ipso-alpha-quaternary-topology-cavity_passed.md"
+    key_innovation: "生物留下/材料捕获逆读标尺"
+
+  - pollutant: Dieldrin
+    slug: dieldrin
+    scheme: S27_A01
+    score: 89
+    mechanism: "GABA/Rdl 刚性疏水腔 + 方酰胺双 NH 阵列 exo-环氧几何读出"
+    selectivity_dimensions: ["几何识别（exo vs endo 环氧）", "氢键阵列（方酰胺双 NH）", "疏水腔（刚性笼）"]
+    material_platform: "SBA-15 介孔硅 + 方酰胺"
+    prototype: "GABA/Rdl 刚性疏水腔"
+    prototype_source: "protein"
+    angle: A01
+    file: "SCHEMES/S27_A01_exo-epoxide-dual-Hbond-cavity_passed.md"
+    key_innovation: "立体异构体几何识别；非 logKow 单调"
+
+  - pollutant: ROX
+    slug: rox
+    scheme: S32_A01
+    score: 85
+    mechanism: "23S rRNA 核苷酸碱基阵列受限读取 → 全有机刚性凹形裂缝半笼"
+    selectivity_dimensions: ["碱基阵列读取（NPET）", "尺寸狭缝（裂缝半笼）", "肟醚类内增量"]
+    material_platform: "全有机刚性凹形裂缝半笼"
+    prototype: "23S rRNA NPET 核苷酸碱基阵列"
+    prototype_source: "nonprotein"
+    angle: A01
+    file: "SCHEMES/S32_A01_ribosome-NPET-nucleobase-cleft-cage_passed.md"
+    key_innovation: "非蛋白 RNA 原型；机制确证型研究重定位"
+
+  - pollutant: Octocrylene
+    slug: octocrylene
+    scheme: S34_A01
+    score: 85
+    mechanism: "电子亏缺氰基丙烯酸酯核 + 光合反应中心电子预组织原型——供体-受体 CT 识别腔"
+    selectivity_dimensions: ["电子识别（CT 复合物）", "电子梯度因果系列"]
+    material_platform: "离散分子笼"
+    prototype: "光合反应中心电子预组织"
+    prototype_source: "protein"
+    angle: A01
+    file: "SCHEMES/S34_A01_donor-acceptor-CT-cavity_passed.md"
+    key_innovation: "首例中性高疏水紫外过滤剂 + 电子梯度因果系列"
+
+  - pollutant: Endosulfan
+    slug: endosulfan
+    scheme: "S_A01"
+    score: 85
+    mechanism: "矿物表面 Lewis 酸水解界面 + 介孔氧化物位点密度系列 + 亚单层疏水预组织域"
+    selectivity_dimensions: ["Lewis 酸催化（水解捕获）", "反单调选择性设计"]
+    material_platform: "介孔氧化物"
+    prototype: "矿物表面 Lewis 酸水解界面"
+    prototype_source: "mineral"
+    angle: A01
+    file: "SCHEMES/_wip/A01_r3.md"
+    key_innovation: "Phase 0 计算门 GO；反单调选择性设计；C 维诚实标注不通过"
+
+  - pollutant: BDE-209
+    slug: bde209
+    scheme: A07
+    score: 85
+    mechanism: "经 5 轮迭代所有弱点降至 low 级别（具体机制见方案文件）"
+    selectivity_dimensions: ["多卤代物识别", "几何/疏水协同"]
+    material_platform: "见方案文件"
+    prototype: "见方案文件"
+    prototype_source: "见方案文件"
+    angle: A07
+    file: "SCHEMES/A07_r5_passed.md"
+    key_innovation: "千方案计划第九通过；5 轮迭代闭合"
+
+# ============================================================
+# 第二部分：R1 自评通过方案（≥85，待正式裁决）—— R2 须标注为"准占据"
+# ============================================================
+
+self_eval_passed_schemes:
+  - pollutant: DDT
+    slug: ddt
+    scheme: S51_A01
+    score: "86-88"
+    score_formal: 86
+    mechanism: "脱氯化氢酶 β-消除双基序（攫氢碱+CCl3 口袋）反应性识别 + 萘扩展 resorcinarene 离散笼"
+    selectivity_dimensions: ["反应性识别（β-消除）", "形状读出（DDT/DDE 二元开关）"]
+    material_platform: "萘扩展 resorcinarene 离散笼"
+    prototype: "脱氯化氢酶 β-消除双基序"
+    prototype_source: "protein"
+    angle: A01
+    status: "formal_passed（千方案计划第八通过）"
+
+  - pollutant: DDE
+    slug: dde
+    scheme: A01
+    score: "86"
+    mechanism: "平面轮廓形状读出 COF/环芳烃堆叠狭缝腔 + BphA 平面氯代二芳基识别原型"
+    selectivity_dimensions: ["平面轮廓形状（狭缝腔）", "厚度窗口"]
+    material_platform: "COF/环芳烃堆叠狭缝腔"
+    prototype: "BphA 平面氯代二芳基识别"
+    prototype_source: "protein"
+    angle: A01
+    status: "self_eval_passed（75 revise_r3_or_boundary，结构性脆弱）"
+
+  - pollutant: GenX
+    slug: genx
+    scheme: "自评达标"
+    score: "85"
+    mechanism: "见 DESIGN_SPACE（具体机制待方案文件落实）"
+    selectivity_dimensions: []
+    material_platform: "待定"
+    prototype: "待定"
+    prototype_source: "unknown"
+    angle: "待分配"
+    status: "self_eval_passed"
+
+  - pollutant: PCP
+    slug: pcp
+    scheme: "自评达标"
+    score: "85-87"
+    mechanism: "TTR 反向模式卤代酚通道（推测）"
+    selectivity_dimensions: []
+    material_platform: "待定"
+    prototype: "TTR 反向模式通道"
+    prototype_source: "protein"
+    angle: "待分配"
+    status: "self_eval_passed"
+
+  - pollutant: beta-HCH
+    slug: betahch
+    scheme: "自评达标"
+    score: "85-88"
+    mechanism: "待方案文件落实（A01 γ-CD 包合已被实验反向否定）"
+    selectivity_dimensions: []
+    material_platform: "待定"
+    prototype: "待重新选择"
+    prototype_source: "unknown"
+    angle: "待分配"
+    status: "self_eval_passed"
+
+# ============================================================
+# 第三部分：R1 终止方案 —— R2 的已知陷阱库
+# ============================================================
+
+terminated_schemes_as_traps:
+  # PFOA 终止方案（9 个）
+  - pollutant: PFOA
+    scheme: S01_A01
+    score: 67
+    mechanism: "胍基杯[5]芳烃"
+    trap_reason: "先例饱和（胍基杯[5]芳烃 2019、季铵 PAF-1 2022）"
+    failure_mode: "FM1 先例饱和"
+
+  - pollutant: PFOA
+    scheme: S03_A03
+    score: 74
+    mechanism: "胍基 COF"
+    trap_reason: "先例 2019-2025 六篇以上覆盖；原创上限 78-80"
+    failure_mode: "FM1 先例饱和"
+
+  - pollutant: PFOA
+    scheme: S02_A04
+    score: 55
+    mechanism: "OAT4 窗口识别"
+    trap_reason: "窗口命题结构性平凡 + 先例占据工程目标"
+    failure_mode: "FM2 单参数单调"
+
+  - pollutant: PFOA
+    scheme: S04_A05
+    score: 74
+    mechanism: "LanM 配位 / Zr-MOF"
+    trap_reason: "Zr-MOF 先例饱和（Fe-MOF-808/PCN-999/Zr-PTA）"
+    failure_mode: "FM1 先例饱和"
+
+  - pollutant: PFOA
+    scheme: S08_A06
+    score: 69
+    mechanism: "KcsA 脱水碳"
+    trap_reason: "两轮重建平台期 69→69；C 维改判不通过"
+    failure_mode: "FM4 框架内拮抗"
+
+  - pollutant: PFOA
+    scheme: S10_A09
+    score: 77
+    mechanism: "两性离子刷"
+    trap_reason: "捕获-抗污拮抗四轮持续未解；ACS ES&T Water 2026 先例覆盖"
+    failure_mode: "FM4 框架内拮抗"
+
+  - pollutant: PFOA
+    scheme: S11_A10
+    score: 82
+    mechanism: "反应性 LDH"
+    trap_reason: "结合-活化耦合同位点机制内禀张力"
+    failure_mode: "FM4 框架内拮抗"
+
+  - pollutant: PFOA
+    scheme: S09_A07
+    score: 83
+    mechanism: "hSA 层级树脂"
+    trap_reason: "底线-容量解耦在 ng/L 工况按构造不可满足"
+    failure_mode: "FM4 框架内拮抗"
+
+  - pollutant: PFOA
+    scheme: S07_A08
+    score: 68
+    mechanism: "FABP4 可塑性"
+    trap_reason: "FABP4 特异签名判别逻辑不可得；原创性封顶"
+    failure_mode: "FM1 先例饱和"
+
+  # DCP26 终止方案（3 个）
+  - pollutant: DCP26
+    scheme: S12_A01
+    score: 75
+    mechanism: "区域位阻识别"
+    trap_reason: "区域位阻识别水相定量选择性先验低（选择性因子先验 <2）"
+    failure_mode: "FM2 单参数单调"
+
+  - pollutant: DCP26
+    scheme: S18_A02
+    score: 76
+    mechanism: "UGT 头基可及性"
+    trap_reason: "氯酚区域异构体水相定量选择性先验低（与 A01 同源）"
+    failure_mode: "FM2 单参数单调"
+
+  - pollutant: DCP26
+    scheme: S19_A03
+    score: 68
+    mechanism: "咪唑鎓 pH 门控"
+    trap_reason: "pH 门控酚类富集为单参数 pKa 单调利用"
+    failure_mode: "FM2 单参数单调"
+
+  # BPA 终止方案（4 个）
+  - pollutant: BPA
+    scheme: S13_A02
+    score: 62
+    mechanism: "柔性 POP 脲/Hamilton 酚氧识别"
+    trap_reason: "水相弱氢键 + 旗舰 α≥3 对 BPA 全疏水逆风"
+    failure_mode: "FM2 单参数单调"
+
+  - pollutant: BPA
+    scheme: S15_A03
+    score: 64
+    mechanism: "异丙叉几何标尺 COF"
+    trap_reason: "BPA/BPF O-O 距离重叠 + 二面角标尺降为构象熵间接通道"
+    failure_mode: "FM2 单参数单调"
+
+  - pollutant: BPA
+    scheme: S44_A04
+    score: 52
+    mechanism: "ERβ 体积阈值窗口"
+    trap_reason: "非单调体积阈值热力学不成立 + 无生物先例"
+    failure_mode: "FM3 热力学不可行"
+
+  - pollutant: BPA
+    scheme: S46_A07
+    score: 39
+    mechanism: "酚自由基偶联反应性捕获"
+    trap_reason: "无独立选择性 + C-C 偶联不可再生 + 毒性风险"
+    failure_mode: "FM2 单参数单调"
+
+  # PFBS 终止方案（3 个）
+  - pollutant: PFBS
+    scheme: S16_A05
+    score: 58
+    mechanism: "铁载体两相笼捕获"
+    trap_reason: "承重选择性轴单参数单调 + 可溶均相捕获无先例"
+    failure_mode: "FM2 单参数单调"
+
+  - pollutant: PFBS
+    scheme: S43_A01
+    score: 62
+    mechanism: "ModA/NTCP 双正交几何识别"
+    trap_reason: "伪协同 + 水相磺酸根 H 键先验不利"
+    failure_mode: "FM3 热力学不可行"
+
+  - pollutant: PFBS
+    scheme: S47_A04
+    score: 44
+    mechanism: "GPR43 离子锁分子笼"
+    trap_reason: "离子锁对硫酸根方向反转 + 机制等价 A17"
+    failure_mode: "FM2 单参数单调"
+
+  # PFHxS 终止方案（2 个）
+  - pollutant: PFHxS
+    scheme: S31_A01
+    score: 70
+    mechanism: "四面体磺酸头中性氢键笼"
+    trap_reason: "头基维中性氢键对强水合磺酸头水相本质弱"
+    failure_mode: "FM3 中性氢键不可行"
+
+  - pollutant: PFHxS
+    scheme: S28_A07
+    score: 78
+    mechanism: "C6 链长窗口刚性盲腔深度匹配"
+    trap_reason: "承重反转臂必然成立无机制区分力 + Å 级定深合成可达性差"
+    failure_mode: "FM4 框架内拮抗"
+
+  # GenX 终止方案（2 个）
+  - pollutant: GenX
+    scheme: S33_A01
+    score: 36
+    mechanism: "氧阴离子洞中性氢键供体阵列"
+    trap_reason: "中性氢键对 GenX 离域羧酸根 + 强水合永久阴离子四重缺陷"
+    failure_mode: "FM3 中性氢键不可行"
+
+  - pollutant: GenX
+    scheme: S49_A03
+    score: 61
+    mechanism: "多酚醚离子载体反极性醚氧双锚"
+    trap_reason: "醚氧 H 键水相热力学中性 + monensin 类比能量尺度失配"
+    failure_mode: "FM3 热力学不可行"
+
+  # NP 终止方案（4 个）
+  - pollutant: NP
+    scheme: S35_A04
+    score: 57
+    mechanism: "C15 链长窗口加支链几何排斥狭缝"
+    trap_reason: "A01 原创阴影 + 承重对被 logKow/形状单调可分"
+    failure_mode: "FM2 单参数单调"
+
+  - pollutant: NP
+    scheme: S36_A10
+    score: 64
+    mechanism: "对位定位×α-分支拓扑二维正交"
+    trap_reason: "A01 交叉项非零 + 亚 kT 交叉项"
+    failure_mode: "FM2 单参数单调"
+
+  - pollutant: NP
+    scheme: S37_A06
+    score: 49
+    mechanism: "乙氧基化数梯度读取"
+    trap_reason: "NPEO 在酚氧乙氧基化 + 亚 kT + A01 阴影"
+    failure_mode: "FM2 单参数单调"
+
+  - pollutant: NP
+    scheme: S38_A08
+    score: 52
+    mechanism: "ipso 位选择性氧化反应性识别"
+    trap_reason: "4 critical：T8 机制坍塌 + 对手对不成立 + T4 风险反转 + 原创性阴影"
+    failure_mode: "FM4 框架内拮抗"
+
+  # ROX 终止方案（2 个）
+  - pollutant: ROX
+    scheme: S41_A06
+    score: 49
+    mechanism: "大环内酯酯酶反应性捕获"
+    trap_reason: "催化鸿沟 7-10 OOM + 类内无选择性"
+    failure_mode: "FM3 热力学不可行"
+
+  - pollutant: ROX
+    scheme: S48_A02
+    score: 73
+    mechanism: "肟醚定向 H 键"
+    trap_reason: "α≈0.40 负选择模态预测 + 机制同源"
+    failure_mode: "FM2 单参数单调"
+
+  # Octocrylene 终止方案（1 个）
+  - pollutant: Octocrylene
+    scheme: S42_A02
+    score: 55
+    mechanism: "氰基偶极 H 键锚位阵列"
+    trap_reason: "脱水罚分 ≥60 kJ/mol 热力学自证伪 + 选择性反转"
+    failure_mode: "FM3 热力学不可行"
+
+  # Dieldrin 终止方案（2 个）
+  - pollutant: Dieldrin
+    scheme: S39_A03
+    score: 51
+    mechanism: "笼状轮廓形状互补离散主体腔"
+    trap_reason: "热力学不可能三角（Koc ~5×10⁶ vs Ka 天花板差 3 数量级）"
+    failure_mode: "FM3 热力学不可行"
+
+  - pollutant: Dieldrin
+    scheme: S40_A02
+    score: 50
+    mechanism: "环氧开环反应性捕获"
+    trap_reason: "ng/L 动力学断裂 + Koc 脱附悖论 + 碳正离子重排不可控"
+    failure_mode: "FM3 热力学不可行"
+
+  # β-HCH 终止方案（1 个）
+  - pollutant: beta-HCH
+    scheme: S52_A01
+    score: 45
+    mechanism: "γ-CD 包合"
+    trap_reason: "核心假设被实验反向否定（β-CD 优先包合 γ-HCH 非 β-HCH）"
+    failure_mode: "FM3 热力学不可行"
+
+  # Chloroform 终止方案（1 个）
+  - pollutant: Chloroform
+    scheme: S56_A01
+    score: 45
+    mechanism: "α-CD 尺寸匹配"
+    trap_reason: "µg/L 亲和力缺口 + 尺寸差 0.5 Å + 创新清单全不通过"
+    failure_mode: "FM3 热力学不可行"
+
+  # DDE 进行中的脆弱方案
+  - pollutant: DDE
+    scheme: A01
+    score: 75
+    mechanism: "平面轮廓形状读出 COF/环芳烃堆叠狭缝腔"
+    trap_reason: "厚度窗口约 0-1 埃 + 反转余量小 + C 维仿生不通过（结构性脆弱）"
+    failure_mode: "FM2 单参数单调"
+
+# ============================================================
+# 第四部分：R1 已使用材料平台汇总
+# ============================================================
+
+occupied_material_platforms:
+  - "PAF-1（多孔芳香框架）"
+  - "晶态 β-酮烯胺 COF"
+  - "POP 接枝活性炭/多孔聚合物"
+  - "非蛋白间苯二酚芳烃深腔笼"
+  - "SBA-15 介孔硅 + 方酰胺"
+  - "全有机刚性凹形裂缝半笼"
+  - "离散分子笼"
+  - "介孔氧化物"
+  - "萘扩展 resorcinarene 离散笼"
+  - "COF/环芳烃堆叠狭缝腔"
+
+# ============================================================
+# 第五部分：R1 已使用仿生原型汇总
+# ============================================================
+
+occupied_prototypes:
+  - id: "丝氨酸蛋白酶氧阴离子洞原理"
+    used_in: "PFOA A02"
+    source_type: "nonprotein"
+  - id: "DmpR 型固定酚感应转录因子"
+    used_in: "BPA A01"
+    source_type: "protein"
+  - id: "ModA/NTCP 几何识别原理"
+    used_in: "PFBS A17"
+    source_type: "protein"
+  - id: "Sphingobium ipso 羟基化途径"
+    used_in: "NP A01"
+    source_type: "nonprotein"
+  - id: "GABA/Rdl 刚性疏水腔"
+    used_in: "Dieldrin A01"
+    source_type: "protein"
+  - id: "23S rRNA NPET 核苷酸碱基阵列"
+    used_in: "ROX A01"
+    source_type: "nonprotein"
+  - id: "光合反应中心电子预组织"
+    used_in: "Octocrylene A01"
+    source_type: "protein"
+  - id: "矿物表面 Lewis 酸水解界面"
+    used_in: "Endosulfan A01"
+    source_type: "mineral"
+  - id: "脱氯化氢酶 β-消除双基序"
+    used_in: "DDT A01"
+    source_type: "protein"
+  - id: "BphA 平面氯代二芳基识别"
+    used_in: "DDE A01"
+    source_type: "protein"
+  - id: "TTR 反向模式卤代酚通道"
+    used_in: "PCP（自评）"
+    source_type: "protein"
+
+# ============================================================
+# 统计摘要
+# ============================================================
+
+summary:
+  total_passed: 9
+  total_self_eval_passed: 5
+  total_terminated: 17
+  total_attempted: 31
+  occupied_angles: 14  # 9 passed + 5 self-eval
+  occupied_material_platforms: 10
+  occupied_prototypes: 11
+  failure_mode_distribution:
+    FM1_prior_art_saturation: 7
+    FM2_single_parameter_monotonic: 10
+    FM3_thermodynamic_infeasibility: 8
+    FM4_in_framework_antagonism: 6

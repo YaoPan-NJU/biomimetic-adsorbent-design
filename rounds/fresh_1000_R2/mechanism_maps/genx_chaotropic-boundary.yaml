@@ -1,0 +1,24 @@
+# 机制映射记录 — fresh_1000 Round 2
+# 每个机制-污染物组合独立记录（SPEC 3.1b）
+
+mechanism_id: MECH_genx_001
+pollutant: genx
+mechanism_name: "趋液水合识别对亲水醚羧酸 GenX（terminated，结构性 TFG fail — 趋液路线适用性下界）"
+biological_source: "生物阴离子通道 Hofmeister 序选择性（PROTO_R2_002，负结果测试）"
+material_implementation: "竹环/葫芦脲型高能水释放腔（拟）；因客体亲水本质不匹配，未推进材料细化"
+selectivity_signature:
+  primary_dimension: "趋液水合轴（对 GenX 弱：GenX 强水化 kosmotrope 侧，脱水增益小）"
+  orthogonal_dimensions: ["无第二正交维（GenX 不在 OAT4 底物谱，无 ≥C6 窗口支撑）"]
+aqueous_feasibility:
+  tfg_assessment: fail
+  reason: "趋液效应要求客体为弱水化 chaotropic 阴离子；GenX 为强亲水短链醚羧酸（logKow~0.5-1.5），趋液脱水增益小、净结合弱，结构性不匹配"
+verdict: terminated
+score: "41/100 (r1 terminate, 1 critical 结构性)"
+r1_overlap: false
+scheme_ref: "genx/SCHEMES/R2_S04_A01_chaotropic-hydrophilic-boundary_terminated.md"
+transferable_negative_knowledge: >
+  **趋液路线在 PFAS 组的完整适用性映射（可传递负知识）**：趋液识别沿疏水性/趋液性呈梯度——
+  PFHxS（C6 疏水磺酸，~82，GO 先验高）> PFBS（C4 磺酸，~72，边缘）> GenX（亲水醚羧酸，fail，结构性不适用）。
+  趋液路线适用阈值约在"中等疏水性"以上；对亲水短链醚酸结构性不适用。指导后续任何 PFAS/亲水阴离子的趋液角度 TFG 预筛：
+  先判客体 Hofmeister 位次（chaotrope 侧方可行）。GenX 为 A 组唯一无可行 R2 正交角度的污染物（诚实耗尽）。
+last_updated: "2026-07-29"

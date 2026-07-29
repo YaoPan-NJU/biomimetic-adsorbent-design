@@ -84,6 +84,10 @@ knowledge_graph:
         name: "趋液水合识别 × OAT4 型 ≥C6 链长窗口（双正交）"
         pollutant: pfhxs
         map: mechanism_maps/pfhxs_chaotropic-oat4.yaml
+      - id: "MECH_genx_001"
+        name: "趋液水合识别对亲水 GenX（terminated，趋液路线适用性下界）"
+        pollutant: genx
+        map: mechanism_maps/genx_chaotropic-boundary.yaml
 
     # 材料平台（随 R2 推进持续扩展）
     materials:
@@ -131,11 +135,13 @@ knowledge_graph:
       - ["MECH_pfoa_001", "pfoa", "revise_with_phase0_~74"]
       - ["MECH_pfbs_001", "pfbs", "revise_with_phase0_~72"]
       - ["MECH_pfhxs_001", "pfhxs", "revise_with_phase0_~82"]
+      - ["MECH_genx_001", "genx", "terminated_41_chaotropic_lower_bound"]
   
   statistics:
     total_prototypes: 86  # 83 基线 + 3 R2 新增（flavoprotein_anion_pi, hofmeister_chaotropic_channel, oat4_c6_window）
-    total_mechanisms: 3
+    total_mechanisms: 4
     total_materials: 2
     total_pollutants: 20
-    connectivity_density: 0.15
-    r2_note: "PFAS 组头基-水合识别方向互补知识：anion-π 偏好高电荷密度硫酸根=负债；趋液效应偏好弱水化 PFAS=资产；趋液路线随链长上移 C4~72→C6~82"
+    connectivity_density: 0.18
+    a_group_coverage: "complete (PFOA/PFBS/PFHxS revise + GenX terminate)"
+    r2_note: "PFAS 组头基-水合识别方向互补知识：anion-π 偏好高电荷密度硫酸根=负债；趋液效应偏好弱水化 PFAS=资产；趋液路线适用性映射 PFHxS(C6)~82 > PFBS(C4)~72 > GenX(亲水)fail"

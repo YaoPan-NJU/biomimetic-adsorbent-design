@@ -1,0 +1,92 @@
+# GenX R2 角度地图
+# fresh_1000 Round 2 — 污染物 4/20（梯队 1，A 组 PFAS 末位）
+# 生成日期：2026-07-29
+# 继承：rounds/fresh_1000/genx/BRIEF.md + DESIGN_SPACE.md（R1 Phase A，22 角度）
+# 去重基准：rounds/fresh_1000_R2/R1_OCCUPIED_SPACE.yaml
+
+pollutant: genx
+pollutant_name: "六氟环氧丙烷二聚酸 GenX / HFPO-DA（全氟-2-丙氧基丙酸，支链醚羧酸根）"
+tier: 1
+group: "A（PFAS）"
+r1_phase_a_files:
+  brief: rounds/fresh_1000/genx/BRIEF.md
+  design_space: rounds/fresh_1000/genx/DESIGN_SPACE.md
+r1_honest_ceiling: 22
+r1_intrinsic_constraints: >
+  GenX 为项目最难 PFAS 案例（R1 A01=36 全项目最低分）。本征硬约束：疏水机制对 GenX 近乎失效（强亲水短链醚酸，logKow~0.5-1.5，
+  活性炭容量仅树脂约 1/4）；羧酸根离域 + 强水化永久阴离子；氟特异识别生物界不存在（anion-π/氟亲和分支移出仿生空间）；
+  OAT4 底物谱**不含 GenX**（故 PFHxS 的 OAT4 ≥C6 窗口支撑对 GenX 不适用）；两条启发式均不够格。剩余可正交分解描述符仅
+  羧酸根头基、链内醚氧、支链几何、永久电荷、还原-氧化不对称五条。
+
+r1_locked_angles:
+  - angle_id: A01
+    mechanism: "氧阴离子洞中性氢键供体阵列接枝活性炭"
+    scheme: S33_A01
+    status: terminated
+    score: 36
+    failure_mode: "FM3（中性氢键对 GenX 离域羧酸根 + 强水化永久阴离子四重缺陷，全项目最低分）"
+    r2_dedup_note: "R2 不得以中性氢键氧阴离子洞识别 GenX 羧酸头（已证灾难性失败）"
+  - angle_id: A03
+    mechanism: "多酚醚离子载体反极性醚氧双锚"
+    scheme: S49_A03
+    status: terminated
+    score: 61
+    failure_mode: "FM3（醚氧 H 键水相热力学中性 β₂H≈0.2 净贡献 0 至 −1 kJ/mol；monensin 类比能量尺度失配 100 vs 2 kJ/mol）"
+    r2_dedup_note: "R2 不得以醚氧双锚点识别 GenX 链内醚氧（已证水相热力学中性）"
+  - angle_id: A02_A04_to_A22
+    mechanism: "SBP 纯氢键裂隙 / OxlT 电荷不对称 / 电摆动 / HSA 支链亚腔 / 还原脱卤 / Murray 分级孔 / i-motif pH 开关 + 7 对照角度（R1 枚举 22 角度）"
+    status: enumerated_not_attempted
+    r2_dedup_note: "R1 枚举 22 角度整体为已占据设计空间；R2 须第六类机制轴或可实验量化增量"
+
+r2_new_angles:
+  - angle_id: R2_A01
+    mechanism: "趋液（chaotropic/Hofmeister）水合识别（承 PFBS/PFHxS 趋液路线，检验其对亲水醚羧酸 GenX 的适用性下界）"
+    prototype: "生物阴离子通道 Hofmeister 序选择性（PROTO_R2_002）"
+    prototype_source: protein
+    material_platform: "竹环/葫芦脲型高能水释放腔"
+    pre_screen:
+      tfg:
+        conclusion: fail
+        note: >
+          **趋液路线对 GenX 结构性不可行**：趋液效应要求客体为弱水化（chaotropic）阴离子，结合驱动力源自客体脱去高能水；
+          GenX 为强亲水短链醚羧酸（logKow~0.5-1.5，强水化 kosmotrope 侧），趋液性弱、脱水增益小。此为趋液路线的适用性下界——
+          与 PFHxS（C6，趋液性强，~82）方向相反。趋液路线在 A 组的适用性映射：C6+ 疏水磺酸（PFHxS ~82，GO 先验高）→ C4 磺酸
+          （PFBS ~72，边缘）→ 亲水醚羧酸（GenX，fail）。TFG fail。
+      pads: { score: 30, saturation: false, note: "趋液归因空白但 TFG fail 使先例无关" }
+      odc: { dimensions: 1, monotonic_risk: high, note: "趋液单轴且对 GenX 弱；无第二正交维（GenX 不在 OAT4 底物谱，无 ≥C6 窗口支撑）" }
+      r1_dedup: { conclusion: pass }
+      verdict: X
+      override_reason: "TFG fail（GenX 强亲水，趋液路线结构性不适用）→ X 级。记录为趋液路线适用性下界（可传递负知识），不开启方案槽外的正式设计。"
+    status: excluded_documented_as_terminate
+
+  - angle_id: R2_A02
+    mechanism: "anion-π 缺电子 π 面识别羧酸头基"
+    pre_screen: { tfg: { conclusion: fail, note: "anion-π 偏好高电荷密度硫酸根反转（PFAS 组可传递负知识）+ GenX 离域羧酸根 anion-π 更弱（R1 A01=36 已证中性识别灾难）" }, verdict: X }
+    status: excluded
+
+  - angle_id: R2_A03
+    mechanism: "支链醚酸几何形状识别腔（MIP/刚性笼）"
+    prototype: "无自然进化原型（支链醚酸形状无进化识别器）"
+    pre_screen:
+      tfg: { conclusion: borderline_fail, note: "小柔性亲水醚酸水相形状识别本质弱（脱水罚分主导），ng/L 亲和力不可达；与 R1 A03 醚氧识别同族失败" }
+      odc: { dimensions: 1, monotonic_risk: high }
+      verdict: X
+      override_reason: "生物原型门 fail（无进化原型）+ TFG borderline_fail → X 级"
+    status: excluded
+
+pre_screen_summary:
+  candidates_evaluated: 3
+  graded_S: 0
+  graded_A: 0
+  graded_B: 0
+  graded_X: 3
+  honest_exhaustion_note: >
+    **GenX R2 无可行 A/B 级正交角度**（3 候选全 X 级）。GenX 为项目最难 PFAS（R1 A01=36 最低分）：强亲水醚羧酸使
+    (1) 趋液路线结构性不适用（客体须弱水化，GenX 强水化）；(2) anion-π 硫酸根反转 + 离域羧酸更弱；(3) 支链形状识别无进化原型 + 水相弱。
+    R1 已占据/证否中性氢键（A01=36）与醚氧双锚（A03=61）。这是诚实的角度耗尽，非降标（诚实 N 优于凑数）。
+  execution_decision: >
+    GenX R2 记录为**诚实角度耗尽**：无可行正交角度，不强开 Phase B 通过型方案槽。以 R2_A01（趋液）为代表开一个 slot 并在
+    r1 即诚实终止（结构性 TFG fail），完成广度优先"≥1 槽尝试"并提取趋液路线适用性下界负知识。A 组覆盖至此完成
+    （PFOA/PFBS/PFHxS revise + GenX 诚实终止/耗尽）。下一步转 D 组 BPA（通过更可期）。
+
+last_updated: "2026-07-29"

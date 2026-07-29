@@ -61,11 +61,15 @@ pollutants:
   genx:
     name: "六氟环氧丙烷二聚酸 GenX"
     r1_status: "0 passed, 2 terminated"
-    r2_angles_planned: 0
-    r2_attempted: 0
+    r2_angles_planned: 3   # 全 X 级（诚实角度耗尽）
+    r2_attempted: 1
     r2_passed: 0
-    r2_terminated: 0
-    status: "pending"
+    r2_terminated: 1
+    r2_revise: 0
+    angle_map: rounds/fresh_1000_R2/angle_maps/genx_ANGLES.yaml
+    slots:
+      R2_S04_A01: { r1: "41 terminate (1c 结构性)", status: terminated, file: "genx/SCHEMES/R2_S04_A01_chaotropic-hydrophilic-boundary_terminated.md", mechanism: "MECH_genx_001", note: "趋液路线对亲水ether-carboxylate GenX 结构性 TFG fail（客体须弱水化，GenX 强水化）；记录趋液路线适用性下界负知识" }
+    status: "honest_exhaustion（R2 3 候选全 X 级；GenX 为项目最难 PFAS（R1 A01=36），强亲水ether-carboxylate无可行正交角度；代表性终止槽 R2_S04_A01 已开并诚实终止，A 组覆盖完成）"
   bpa:
     name: "双酚 A BPA"
     r1_status: "1 passed (A01=86), 4 terminated"
@@ -195,13 +199,14 @@ pollutants:
     r2_terminated: 0
     status: "pending"
 totals:
-  r2_attempted: 3
+  r2_attempted: 4
   r2_passed: 0
-  r2_terminated: 0
+  r2_terminated: 1
   r2_revise: 3
-  prototype_library_size: 86   # +3 R2: PROTO_R2_001 anion-π / PROTO_R2_002 Hofmeister 通道 / PROTO_R2_003 OAT4 ≥C6 窗口
+  prototype_library_size: 86   # +3 R2（PROTO_R2_001/002/003）
   prototype_library_target: 150
-  mechanism_maps: 3   # MECH_pfoa_001, MECH_pfbs_001, MECH_pfhxs_001
-  angle_maps: 3       # pfoa, pfbs, pfhxs
-  r2_score_trajectory_note: "A 组 PFAS 诚实轨迹：PFOA ~74 / PFBS ~72 / PFHxS ~82（趋液路线随链长上移）；均 revise_with_phase0，无通过（A 组近耗尽，符合 R1）"
-last_updated: "2026-07-29T23:40"
+  mechanism_maps: 4   # pfoa, pfbs, pfhxs, genx
+  angle_maps: 4       # pfoa, pfbs, pfhxs, genx
+  a_group_coverage: "complete（PFOA/PFBS/PFHxS revise_with_phase0 + GenX terminate/耗尽）"
+  r2_score_trajectory_note: "A 组 PFAS 诚实轨迹：PFOA ~74 / PFBS ~72 / PFHxS ~82 / GenX 41(terminate)；趋液路线适用性映射 C6>C4>亲水ether-carboxylate；无通过（A 组近耗尽，符合 R1 仅 2 通过）；下一步转 D 组 BPA 通过更可期"
+last_updated: "2026-07-30T00:30"

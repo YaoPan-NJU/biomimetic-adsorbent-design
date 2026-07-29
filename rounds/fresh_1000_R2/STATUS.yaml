@@ -2,6 +2,7 @@ program: fresh_1000_R2
 advance_policy: "20 种污染物 × 50 方案 = 1000 方案槽；每方案须与 R1 已覆盖角度/机制/材料组合正交；通过线 85/100 + 零未决 critical/high + 创新性清单通过；广度优先（每污染物至少 1 个 R2 方案后推进下一污染物）；诚实耗尽条款保留。"
 created: 2026-07-29
 spec: rounds/fresh_1000_R2/SPEC.md
+closeout: rounds/fresh_1000_R2/R2_CLOSEOUT.md   # completion assessment + honest reality + remaining path (2026-07-30)
 r1_baseline: rounds/fresh_1000/STATUS.yaml
 occupied_space: rounds/fresh_1000_R2/R1_OCCUPIED_SPACE.yaml
 pollutant_count: 20
@@ -56,7 +57,7 @@ pollutants:
     r2_revise: 1
     angle_map: rounds/fresh_1000_R2/angle_maps/pfhxs_ANGLES.yaml
     slots:
-      R2_S03_A01: { r1: "72 (1c/1h)", r2: "~82 revise_with_phase0_prerequisite (0c/1h)", status: revise_with_phase0_prerequisite, file: "pfhxs/SCHEMES/R2_S03_A01_chaotropic-OAT4-C6-window_revise.md", prototype: "PROTO_R2_002 Hofmeister 通道 + PROTO_R2_003 OAT4 ≥C6 窗口", mechanism: "MECH_pfhxs_001", note: "趋液水合×OAT4 ≥C6 链长窗口双正交；较 PFBS 显著上移(~72→~82)：C6 亲和力 + OAT4 窗口方向正确(PFBS 被 OAT4 排除故此支撑 ≥C6 独有) + 无主张收窄；未达 85 因 ng/L 绝对亲和力量热未证 + 原创性受平台拥挤封顶；量热(ITC) 门挂起" }
+      R2_S03_A01: { r1: "72 (1c/1h)", r2: "~82 revise (0c/1h)", r3: "~84 revise_with_phase0_prerequisite (0c/1h; depth-phase: design layer fully closed, sole blocker = external ITC ng/L Ka)", status: revise_with_phase0_prerequisite, file: "pfhxs/SCHEMES/R2_S03_A01_chaotropic-OAT4-C6-window_revise.md", prototype: "PROTO_R2_002 Hofmeister 通道 + PROTO_R2_003 OAT4 ≥C6 窗口", mechanism: "MECH_pfhxs_001", note: "趋液水合×OAT4 ≥C6 链长窗口双正交；较 PFBS 显著上移(~72→~82)：C6 亲和力 + OAT4 窗口方向正确(PFBS 被 OAT4 排除故此支撑 ≥C6 独有) + 无主张收窄；未达 85 因 ng/L 绝对亲和力量热未证 + 原创性受平台拥挤封顶；量热(ITC) 门挂起" }
     status: "phase_b（R2_A01 落 revise_with_phase0_prerequisite ~82/100 0c/1h，较 PFBS 显著上移；量热 门挂起后建议轮转 GenX 完成 A 组覆盖）"
   genx:
     name: "六氟环氧丙烷二聚酸 GenX"

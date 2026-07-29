@@ -327,6 +327,7 @@ artifacts:
   fresh_1000_r2_status: rounds/fresh_1000_R2/STATUS.yaml
   fresh_1000_r2_occupied_space: rounds/fresh_1000_R2/R1_OCCUPIED_SPACE.yaml
   fresh_1000_r2_decisions: rounds/fresh_1000_R2/DECISIONS.md
+  fresh_1000_r2_closeout: rounds/fresh_1000_R2/R2_CLOSEOUT.md
   fresh_1000_r2_knowledge_graph: rounds/fresh_1000_R2/knowledge_graph.yaml
   fresh_1000_r2_pfoa_angle_map: rounds/fresh_1000_R2/angle_maps/pfoa_ANGLES.yaml
   fresh_1000_r2_pfoa_slot1: rounds/fresh_1000_R2/pfoa/SCHEMES/R2_S01_A01_anion-pi-electron-deficient-pore_revise.md

@@ -401,6 +401,8 @@ R2 的中间产物持久化策略支持仿生设计库扩展：
 
 R2 广度优先 **20/20 全覆盖完成（M2 里程碑达成）**：A 组 4 + B 组 4（PCP/HCBD/Chloroform/BDE-209）+ C 组 7 + D 组 3（BPA/NP/DCP26）+ E 组 2（ROX/OC）。**0 通过（8 revise + 12 terminate/近耗尽）**。这是 SPEC 预期的诚实结果：R2 正交约束（须避开 R1 已通过/已映射的最优角度）+ 平台饱和 + R1 深挖耗尽使通过（85）本质难于 R1。8 个 revise（最佳 PFHxS/BPA ~82、ROX/DDT/TCDD/PCP ~78-81）须深度多轮补角 + 外部门（Phase 0 DFT/量热/付费文献）才能达 85（同 R1 通过需至多 5 轮）。M4/M5（通过数）与 M1（库 150）在 R2 诚实正交空间内、外部门未解前不可达——此为记录在案的诚实结果，非执行缺陷。M6（知识图谱）达成。仿生原型库 83→90（新 PROTO_R2_006 TTR halogen-bond、PROTO_R2_007 AhR pi-stack + PROTO_R2_002 域扩展至 PCP）。
 
+**完整性评估 + 诚实现实 + 剩余路径见闭合文档：`rounds/fresh_1000_R2/R2_CLOSEOUT.md`**（含逐项完成审计、为何 0 通过的诚实原因、可传递元知识、到 SPEC 目标的精确剩余路径）。深度阶段已对最强 revise PFHxS 做 r3（~82→~84，设计层全闭合，唯一阻碍 = 外部 ITC 门）。
+
 ### 已完成
 
 1. **PFOA R2 角度地图**（`rounds/fresh_1000_R2/angle_maps/pfoa_ANGLES.yaml`）：锁定 R1 已占据角度（A02 通过 + A01/A03-A10 终止 + A11-A26 枚举），新增 4 个正交候选并执行 Phase A+ 预筛（TFG/PADS/ODC/R1-DEDUP）。仅 R2_A01（anion-π）为 A 级；R2_A02/A03/A04 均判 X 级（命中 TFG 门或生物原型门 G2）。

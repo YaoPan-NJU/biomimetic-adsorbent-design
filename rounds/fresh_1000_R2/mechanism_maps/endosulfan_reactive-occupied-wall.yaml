@@ -1,0 +1,18 @@
+# Mechanism map — fresh_1000 R2
+mechanism_id: MECH_endosulfan_001
+pollutant: endosulfan
+mechanism_name: "Endosulfan reactive-handle-occupied wall (honest near-exhaustion — Lewis-acid hydrolysis axis spent in R1)"
+biological_source: "n/a (R1 S_A01=85 already took the one distinctive reactive Lewis-acid hydrolysis handle; no orthogonal prototype)"
+material_implementation: "n/a (all R2 candidates X-graded)"
+selectivity_signature:
+  primary_dimension: "Lewis-acid hydrolysis of cyclic sulfite ester (R1-occupied, 85)"
+  orthogonal_dimensions: ["none viable (non-reactive sulfite H-bond weaker/adjacent-occupied; hexachloronorbornene halogen class-wide; alpha/beta isomer FM2-monotonic)"]
+aqueous_feasibility: { tfg_assessment: fail, note: "the one distinctive group (cyclic sulfite) is captured reactively in R1; non-reactive recognition of the same group is weaker occupied-adjacent, not orthogonal" }
+verdict: terminated_near_exhaustion
+score: "~45 (r1 terminate, structural)"
+r1_overlap: false
+scheme_ref: "endosulfan/SCHEMES/R2_S13_A01_reactive-handle-occupied-wall_terminated.md"
+transferable_negative_knowledge: >
+  When a pollutant's one distinctive group is a reactive/hydrolyzable ester captured reactively in R1, non-reactive recognition of
+  the same group is a weaker occupied-adjacent angle, not an orthogonal gain; residual axes are class-wide-halogen or FM2. Honest near-exhaustion.
+last_updated: "2026-07-30"

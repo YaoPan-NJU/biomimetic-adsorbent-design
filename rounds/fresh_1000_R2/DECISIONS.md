@@ -192,3 +192,32 @@ pollutant's best axis, so honest outcomes are revise/near-exhaustion.
 **R2 cumulative: 9/20 covered, 0 pass (5 revise + 4 terminate/exhaustion), prototype library 88, 9 mechanism maps, 9 angle maps.**
 Honest reality reaffirmed and documented: R2's orthogonality-to-R1 constraint + prior-art saturation / R1 deep-exhaustion make
 passing intrinsically harder than R1; best R2 revises (PFHxS/BPA/ROX ~81-82) need deep multi-round backfill to reach 85. Next: DDT (Group C).
+
+---
+
+## 2026-07-30 Batch: DDT + DDE + Dieldrin + Endosulfan R2 slots (Group C batch-1, breadth-first, English-heavy)
+
+Processed 4 Group-C organochlorine pollutants this turn (13/20 covered). Group C are high-logKow hydrophobic OCP where
+hydrophobic partitioning is FM2-monotonic, so selectivity must come from shape/stereochemistry/reactivity — and R1 already took
+each pollutant's best such angle. Honest outcomes: 1 revise + 3 near-exhaustion.
+
+- **DDT (slot R2_S10_A01, revise_with_phase0_prerequisite ~79, 0c/1h)**: R1 A01=86 occupied the reactive beta-elimination axis +
+  whole-propeller shape. R2 orthogonal angle = **halogen-bond sigma-hole PATTERN** on the two aromatic para-Cl, templated on
+  **transthyretin (TTR) thyroxine-channel biological halogen bonds** -> NEW prototype **PROTO_R2_006**. Reads halogen POSITION,
+  orthogonal to reactivity + whole-shape. Ceiling ~78-80: aqueous aromatic C-Cl halogen bond is weak (< C-I of thyroxine;
+  DCP26-A04 regime) + halogen-bonding-host prior art caps originality; Phase-0 DFT gate pending. MECH_ddt_001. **Transferable to
+  PCB-209/BDE-209** (more/heavier halogens -> stronger bond, richer pattern, higher ceiling).
+- **DDE (slot R2_S11_A01, terminate ~44, honest near-exhaustion)**: DDE is the hardest DDT-family target — NO reactive/polar
+  handle, only a fragile planar-shape thickness window (0-1 A, R1-occupied). =CCl2 electronic too weak + IS the DDT/DDE binary
+  switch; AhR = occupied shape + promiscuous; para-Cl halogen pattern regio-degenerate with DDT. All 3 X. MECH_dde_001.
+- **Dieldrin (slot R2_S12_A01, terminate ~46, honest near-exhaustion)**: clearest **FM3 Koc ~5e6 impossibility-triangle** case —
+  R1 confirmed it twice (S39=51, S40=50); only the one ultra-high-affinity exo-epoxide geometric angle (A01=89) is thermodynamically
+  reachable. Halogen pattern class-wide; chaotropic n/a for a neutral hydrophobe; no 2nd H-bond geometry. All 3 X. MECH_dieldrin_001.
+- **Endosulfan (slot R2_S13_A01, terminate ~45, honest near-exhaustion)**: R1 A01=85 spent the one distinctive handle (Lewis-acid
+  HYDROLYSIS of the cyclic sulfite). Non-reactive recognition of the same group is weaker/adjacent-occupied; hexachloronorbornene
+  halogen is class-wide; alpha/beta isomer is FM2-monotonic. All 3 X. MECH_endosulfan_001.
+
+**R2 cumulative: 13/20 covered, 0 pass (6 revise + 7 terminate/exhaustion), prototype library 89, 13 mechanism maps, 13 angle maps.**
+Group-C transferable knowledge: for high-logKow OCP, the ONLY escapes from hydrophobic-FM2-monotonicity are (a) a distinctive
+reactive/geometric handle (which R1 already took) or (b) a halogen-bond POSITION pattern (DDT R2, promising for polyhalogen PCB/BDE).
+Extreme-Koc caged cyclodienes (Dieldrin) are FM3-capped to a single geometric point. Next: beta-HCH / TCDD / PCB-209, then Group B.

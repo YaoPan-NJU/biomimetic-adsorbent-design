@@ -1,0 +1,26 @@
+# Prototype card — fresh_1000 R2
+prototype_id: PROTO_R2_006
+name: "Transthyretin (TTR) thyroxine-channel biological halogen bond"
+source_type: protein
+biological_origin: >
+  Transthyretin (TTR), the serum/CSF thyroid-hormone transport protein, binds thyroxine (T4) in a central channel where the
+  hormone's iodine atoms make short, directional contacts to backbone carbonyls and pocket residues — a documented biological
+  HALOGEN BOND (sigma-hole ... Lewis-base). Biological function: thyroid-hormone transport (not aqueous pollutant capture).
+applicable_pollutants: ["ddt"]   # polychloro/bromo-aromatics broadly (PCB-209, BDE-209 candidates)
+recognition_mechanism: >
+  An electron-poor halogen sigma-hole is engaged by a Lewis base (backbone C=O / N) with strong directionality (C-X...B ~180 deg).
+  Translated: a rigid pattern of Lewis-base acceptors (pyridyl-N / amide-C=O) pre-positioned to engage BOTH para-Cl sigma-holes of
+  DDT at the fixed 2,2-bis(4-chlorophenyl) geometry -> a two-point geometric pattern (non-monotonic escape from hydrophobic FM2).
+  Aromatic C-Cl sigma-holes are weaker than the C-I used biologically, so aqueous strength is the limiting factor.
+literature_support:
+  - { doi: "TTR-T4 structural studies (halogen bonding in thyroid-hormone binding; e.g. Wojtczak/Cody TTR crystallography + halogen-bond analyses)", year: 2000, claim_supported: "biological halogen bond recognizing halogen sigma-holes in a protein channel, functional in aqueous serum", evidence_tier: fact }
+translation_distance_note: >
+  TTR function is hormone transport, not pollutant capture; halogen bonding is a general supramolecular principle. Cl (DDT) is a
+  weaker halogen-bond donor than the I (thyroxine) of the prototype -> translation distance is real (C-dim analogy-level; honest).
+evolution_solution_judgement: >
+  Passes G2 conditionally: biological halogen-bond recognition is an evolved aqueous binding physics (TTR channel), but for
+  hormone transport not selective pollutant capture -> mechanism-analogy strength.
+r1_used: false
+r2_first_used_in: "DDT R2_A01"
+r2_outcome_note: "DDT slot revise ~79 (aromatic C-Cl halogen bond weak, Phase-0 DFT-gated; halogen-bonding-host prior art caps originality). Higher ceiling expected for PCB-209/BDE-209 (heavier/more halogens)."
+last_updated: "2026-07-30"

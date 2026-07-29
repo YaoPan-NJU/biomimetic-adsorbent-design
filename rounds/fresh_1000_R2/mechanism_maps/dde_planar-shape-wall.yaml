@@ -1,0 +1,18 @@
+# Mechanism map — fresh_1000 R2
+mechanism_id: MECH_dde_001
+pollutant: dde
+mechanism_name: "DDE planar-shape wall (honest near-exhaustion — fragile thickness window + no reactive/polar handle)"
+biological_source: "n/a (no viable orthogonal prototype; DDE's only handle is fragile planar shape, R1-occupied)"
+material_implementation: "n/a (all R2 candidates X-graded)"
+selectivity_signature:
+  primary_dimension: "planar-profile thickness window (0-1 Angstrom)"
+  orthogonal_dimensions: ["none viable (=CCl2 electronic too weak + IS the DDT/DDE binary switch; AhR = occupied shape + promiscuous; para-Cl halogen pattern degenerate with DDT)"]
+aqueous_feasibility: { tfg_assessment: fail, note: "no reactive/polar handle; sole axis (planar thickness) R1-occupied + fragile" }
+verdict: terminated_near_exhaustion
+score: "~44 (r1 terminate, structural)"
+r1_overlap: false
+scheme_ref: "dde/SCHEMES/R2_S11_A01_fragile-planar-shape-wall_terminated.md"
+transferable_negative_knowledge: >
+  For a fully-symmetric planar polychloro-diaryl with no reactive/polar group (DDE), shape thickness is the sole (fragile) axis and
+  halogen-pattern angles are regio-degenerate with the tetrahedral parent (DDT). DDE R2 = honest near-exhaustion.
+last_updated: "2026-07-30"

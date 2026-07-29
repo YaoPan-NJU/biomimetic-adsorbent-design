@@ -133,35 +133,51 @@ pollutants:
   ddt:
     name: "滴滴涕 DDT"
     r1_status: "1 passed (A01=86), 0 terminated"
-    r2_angles_planned: 0
-    r2_attempted: 0
+    r2_angles_planned: 3
+    r2_attempted: 1
     r2_passed: 0
     r2_terminated: 0
-    status: "pending"
+    r2_revise: 1
+    angle_map: rounds/fresh_1000_R2/angle_maps/ddt_ANGLES.yaml
+    slots:
+      R2_S10_A01: { r1: "86 passed (reactive+shape)", r2: "~79 revise_with_phase0_prerequisite (0c/1h)", status: revise_with_phase0_prerequisite, file: "ddt/SCHEMES/R2_S10_A01_halogen-bond-para-Cl-pattern_revise.md", prototype: "PROTO_R2_006 transthyretin halogen-bond", mechanism: "MECH_ddt_001", note: "halogen-bond sigma-hole PATTERN on 2x para-Cl (TTR/thyroxine prototype); orthogonal to R1 reactive beta-elimination + whole-shape; ceiling ~78-80 (aqueous aromatic C-Cl weak + halogen-host prior art); Phase-0 DFT gate pending" }
+    status: "phase_b (R2_A01 revise_with_phase0_prerequisite ~79; new prototype PROTO_R2_006 TTR halogen-bond; halogen-bond pattern route transferable to PCB209/BDE209)"
   dde:
     name: "滴滴伊 DDE"
     r1_status: "0 passed, 0 terminated, 1 fragile"
-    r2_angles_planned: 0
-    r2_attempted: 0
+    r2_angles_planned: 3
+    r2_attempted: 1
     r2_passed: 0
-    r2_terminated: 0
-    status: "pending"
+    r2_terminated: 1
+    r2_revise: 0
+    angle_map: rounds/fresh_1000_R2/angle_maps/dde_ANGLES.yaml
+    slots:
+      R2_S11_A01: { r1: "75 revise (fragile planar shape)", r2: "~44 terminate (1c structural)", status: terminated, file: "dde/SCHEMES/R2_S11_A01_fragile-planar-shape-wall_terminated.md", mechanism: "MECH_dde_001", note: "planar-shape thickness window R1-occupied+fragile (0-1 A); =CCl2 electronic too weak + IS DDT/DDE binary switch; para-Cl halogen degenerate with DDT; honest near-exhaustion" }
+    status: "honest_exhaustion (3 R2 candidates X; DDE hardest DDT-family target: no reactive/polar handle, only fragile planar window)"
   dieldrin:
     name: "狄氏剂"
     r1_status: "1 passed (A01=89), 2 terminated"
-    r2_angles_planned: 0
-    r2_attempted: 0
+    r2_angles_planned: 3
+    r2_attempted: 1
     r2_passed: 0
-    r2_terminated: 0
-    status: "pending"
+    r2_terminated: 1
+    r2_revise: 0
+    angle_map: rounds/fresh_1000_R2/angle_maps/dieldrin_ANGLES.yaml
+    slots:
+      R2_S12_A01: { r1: "89 passed (exo-epoxide geometry)", r2: "~46 terminate (1c FM3)", status: terminated, file: "dieldrin/SCHEMES/R2_S12_A01_FM3-Koc-impossibility-wall_terminated.md", mechanism: "MECH_dieldrin_001", note: "FM3 Koc ~5e6 impossibility triangle (R1 confirmed twice) caps all angles except the one strong geometric pass A01=89; halogen pattern class-wide; honest near-exhaustion" }
+    status: "honest_exhaustion (3 R2 candidates X; clearest FM3 Koc thermodynamic-ceiling case in Group C)"
   endosulfan:
     name: "硫丹"
     r1_status: "1 passed (A01=85), 0 terminated"
-    r2_angles_planned: 0
-    r2_attempted: 0
+    r2_angles_planned: 3
+    r2_attempted: 1
     r2_passed: 0
-    r2_terminated: 0
-    status: "pending"
+    r2_terminated: 1
+    r2_revise: 0
+    angle_map: rounds/fresh_1000_R2/angle_maps/endosulfan_ANGLES.yaml
+    slots:
+      R2_S13_A01: { r1: "85 passed (Lewis-acid hydrolysis)", r2: "~45 terminate (1c structural)", status: terminated, file: "endosulfan/SCHEMES/R2_S13_A01_reactive-handle-occupied-wall_terminated.md", mechanism: "MECH_endosulfan_001", note: "reactive Lewis-acid hydrolysis axis spent in R1 (85); non-reactive sulfite H-bond weaker/adjacent-occupied; halogen class-wide; alpha/beta isomer FM2; honest near-exhaustion" }
+    status: "honest_exhaustion (3 R2 candidates X; reactive-handle-occupied + class-wide-halogen wall)"
   betahch:
     name: "β-六氯环己烷"
     r1_status: "0 passed, 1 terminated"
@@ -219,14 +235,14 @@ pollutants:
     r2_terminated: 0
     status: "pending"
 totals:
-  r2_attempted: 9
+  r2_attempted: 13
   r2_passed: 0
-  r2_terminated: 4
-  r2_revise: 5
-  prototype_library_size: 88   # +5 R2 (PROTO_R2_001..005)
+  r2_terminated: 7
+  r2_revise: 6
+  prototype_library_size: 89   # +6 R2 (PROTO_R2_001..006)
   prototype_library_target: 150
-  mechanism_maps: 9
-  angle_maps: 9
-  coverage_note: "9/20 pollutants covered (A group 4 + D group BPA/NP/DCP26 + E group ROX/OC). 0 pass (5 revise + 4 terminate/exhaustion)."
-  r2_score_trajectory_note: "Honest R2 reality: R2 orthogonality (avoid R1 best angles) + prior-art saturation / R1 deep-exhaustion make passing intrinsically harder than R1 (SPEC-anticipated, honest N > padding). Best R2 revises: PFHxS ~82, BPA ~82, ROX ~81. Passes require deep multi-round backfill (as R1 A01 needed 5 rounds)."
-last_updated: "2026-07-30T05:30"
+  mechanism_maps: 13
+  angle_maps: 13
+  coverage_note: "13/20 pollutants covered (A group 4 + D group BPA/NP/DCP26 + E group ROX/OC + C group DDT/DDE/Dieldrin/Endosulfan). 0 pass (6 revise + 7 terminate/exhaustion)."
+  r2_score_trajectory_note: "Honest R2 reality: R2 orthogonality (avoid R1 best angles) + prior-art saturation / R1 deep-exhaustion make passing intrinsically harder than R1 (SPEC-anticipated, honest N > padding). Best R2 revises: PFHxS ~82, BPA ~82, ROX ~81, DDT ~79. Group C is FM3/reactive-handle-occupied dominated: DDT 1 revise (new halogen-bond-pattern prototype PROTO_R2_006), DDE/Dieldrin/Endosulfan honest near-exhaustion (fragile planar shape / Koc impossibility / reactive handle spent in R1)."
+last_updated: "2026-07-30T06:10"

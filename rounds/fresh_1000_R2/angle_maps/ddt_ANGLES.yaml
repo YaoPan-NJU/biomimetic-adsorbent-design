@@ -1,0 +1,50 @@
+# DDT R2 angle map — fresh_1000 R2, pollutant 10/20 (Tier 2, Group C organochlorine)
+# 2026-07-30 | Inherits R1 rounds/fresh_1000/ddt (S51_A01=86 self_eval_passed) | English-heavy (glyph safety)
+pollutant: ddt
+pollutant_name: "DDT 1,1,1-trichloro-2,2-bis(4-chlorophenyl)ethane (high logKow ~6.9, neutral, aliphatic-CCl3 + 2x aromatic para-Cl)"
+tier: 2
+group: "C (organochlorine pesticides / OCP)"
+r1_honest_ceiling: 86
+r1_intrinsic_constraint: >
+  R1 S51_A01 (score 86, formal_passed, 8th program pass) took DDT's two strongest tractable axes: (1) REACTIVE recognition via
+  dehydrochlorinase beta-elimination dual-motif (H-abstracting base + CCl3 pocket), and (2) SHAPE readout as the DDT/DDE binary
+  switch (sp3 -CCl3 vs sp2 =CCl2). Material: naphthalene-extended resorcinarene discrete cage. So R2 must avoid both the reactive
+  beta-elimination axis and the overall propeller-shape axis. logKow-hydrophobic partitioning is FM2-monotonic (co-occurring DDE/
+  DDD/other OCP), unusable as a primary selectivity axis.
+r1_locked_angles:
+  - { angle_id: A01, mechanism: "dehydrochlorinase beta-elimination dual-motif (reactive) + DDT/DDE shape binary switch", status: formal_passed, score: 86, note: "occupies reactive axis + propeller-shape axis; naphthalene-resorcinarene cage" }
+r2_new_angles:
+  - angle_id: R2_A01
+    mechanism: "Halogen-bond sigma-hole PATTERN recognition of the two aromatic para-Cl (transthyretin/thyroxine biological halogen-bond prototype)"
+    rationale: >
+      Aromatic para-C-Cl carry sigma-holes; transthyretin (TTR) recognizes thyroxine iodines via documented biological halogen
+      bonds (I...O=C backbone in the T4 channel). Translated to DDT: a Lewis-base pattern (backbone C=O / pyridyl-N array) reading
+      the two para-Cl at the fixed 2,2-bis(4-chlorophenyl) geometry. Orthogonal to A01: reads halogen POSITION not reactivity, and
+      keys on the para-Cl pattern rather than the whole propeller shape.
+    pre_screen:
+      tfg: { conclusion: borderline, note: "aromatic C-Cl halogen bond in water is weak (< C-Br/C-I; ~ DCP26 A04 regime); needs Phase-0 DFT of aqueous Cl...base energy + geometric pattern gain to clear absolute affinity at ng/L" }
+      pads: { conclusion: pass, grade: B, note: "halogen-bonding MOF/organic-host prior art exists but para-Cl-PATTERN geometric recognition (vs single halogen) is less crowded; TTR prototype is novel-for-DDT" }
+      odc: { conclusion: pass, note: "orthogonal to reactive A01 + orthogonal to whole-shape A01 (halogen-position pattern axis)" }
+      r1_dedup: { conclusion: pass, note: "no R1 DDT halogen-bond angle; TTR prototype not in R1 occupied set" }
+      verdict: B
+    status: opened_slot_R2_S10_A01
+  - angle_id: R2_A02
+    mechanism: "Reductive dechlorination reactive capture"
+    pre_screen: { tfg: { conclusion: fail, note: "adjacent to R1 reactive beta-elimination axis (A01-occupied family); ng/L reductive kinetics broken; not orthogonal" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A03
+    mechanism: "Hydrophobic propeller-shape deep cavity"
+    pre_screen: { tfg: { conclusion: fail, note: "overlaps A01 shape axis + logKow-monotonic FM2 vs DDE/DDD/OCP co-contaminants" }, verdict: X }
+    status: excluded
+pre_screen_summary:
+  graded_S: 0
+  graded_A: 0
+  graded_B: 1
+  graded_X: 2
+  honest_note: >
+    DDT R2 has ONE viable orthogonal angle (R2_A01 halogen-bond sigma-hole PATTERN on the aromatic para-Cl, TTR/thyroxine
+    prototype), orthogonal to R1's reactive beta-elimination + whole-propeller-shape axes. It is Phase-0-DFT-gated (aqueous
+    aromatic C-Cl halogen bond is weak, DCP26-A04 regime) and prior-art-capped (halogen-bonding hosts exist). Expected verdict:
+    revise ~78-80 with Phase-0 prerequisite. Reactive (A02) and hydrophobic-shape (A03) angles are X (A01-occupied / FM2).
+  execution_decision: "Open slot R2_S10_A01 (halogen-bond pattern, revise route, new prototype PROTO_R2_006 transthyretin). Next: DDE."
+last_updated: "2026-07-30"

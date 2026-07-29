@@ -1,0 +1,39 @@
+# DDE R2 angle map — fresh_1000 R2, pollutant 11/20 (Tier 2, Group C)
+# 2026-07-30 | Inherits R1 rounds/fresh_1000/dde (A01=75 revise, self_eval 86 fragile) | English-heavy
+pollutant: dde
+pollutant_name: "DDE 1,1-dichloro-2,2-bis(4-chlorophenyl)ethylene (planar sp2 =CCl2, dehydrochlorination product of DDT, high logKow)"
+tier: 2
+group: "C (organochlorine pesticides / OCP)"
+r1_honest_ceiling: 75
+r1_intrinsic_constraint: >
+  R1 A01 (score 75, revise_r3_or_boundary, structurally FRAGILE) took DDE's only tractable axis: planar-profile SHAPE readout
+  (COF/cyclophane stacked slit cavity, BphA planar chlorinated-diaryl prototype) keyed on the thickness window that separates
+  planar DDE from tetrahedral DDT. R1 flagged this fragile: thickness window ~0-1 Angstrom + small reversal margin + C-dim
+  biomimetic fail (FM2 single-parameter monotonic). DDE is also the "off" state of DDT's DDT/DDE binary shape switch (occupied).
+r1_locked_angles:
+  - { angle_id: A01, mechanism: "planar-profile shape / thickness-window slit cavity (BphA planar diaryl prototype)", status: revise_fragile, score: 75, note: "occupies planar-shape axis; thickness window 0-1 A, fragile; = DDT binary-switch off-state" }
+r2_new_angles:
+  - angle_id: R2_A01
+    mechanism: "=CCl2 vinylidene electronic / CT readout"
+    pre_screen: { tfg: { conclusion: fail, note: "the sp2 =CCl2 is only weakly electron-poor; aqueous CT/anion-pi too weak for ng/L; distinguishing =CCl2 vs DDT -CCl3 is the SHAPE binary switch already occupied by DDT A01 + DDE A01" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A02
+    mechanism: "Aryl-hydrocarbon-receptor planar-ligand recognition"
+    pre_screen: { tfg: { conclusion: fail, note: "AhR planar-aromatic binding IS the planar-shape axis (A01-occupied) + AhR is promiscuous across planar aromatics (FM2, no intra-DDE selectivity)" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A03
+    mechanism: "Halogen-bond on para-Cl (as DDT R2)"
+    pre_screen: { tfg: { conclusion: fail, note: "DDE shares the 2x para-Cl with DDT; a halogen-bond pattern angle cannot separate DDE from DDT (regio-degenerate para-Cl) -> not DDE-selective, collapses into the DDT slot" }, verdict: X }
+    status: excluded
+pre_screen_summary:
+  graded_A: 0
+  graded_B: 0
+  graded_X: 3
+  honest_exhaustion_note: >
+    DDE R2 has NO viable orthogonal angle. Its one tractable handle (planar-profile shape / thickness window) is R1-occupied AND
+    structurally fragile (0-1 A window). The =CCl2 electronic readout is too weak (aqueous) and doubles as the DDT/DDE binary
+    shape switch (occupied); AhR planar recognition = the occupied shape axis + promiscuous; para-Cl halogen bond is regio-
+    degenerate with DDT (not DDE-selective). Honest near-exhaustion (honest N > padding). DDE is intrinsically the hardest DDT-
+    family target: no reactive handle (unlike DDT beta-elimination), only a fragile planar-shape window.
+  execution_decision: "Record DDE R2 honest near-exhaustion; representative terminate slot R2_S11_A01 documents the fragile-planar-shape wall. Next: Dieldrin."
+last_updated: "2026-07-30"

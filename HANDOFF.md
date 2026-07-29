@@ -397,9 +397,9 @@ R2 的中间产物持久化策略支持仿生设计库扩展：
 | 分类 Spec | `rounds/fresh_1000/SPEC_GROUP_*.md` | 继承的分组规范 |
 | 仿生原型库 | `data/bmdl_snapshot/biological_prototypes.json` | 83 条已入库 |
 
-## fresh_1000 R2 执行检查点：9/20 覆盖 (2026-07-30)
+## fresh_1000 R2 执行检查点：13/20 覆盖 (2026-07-30)
 
-R2 广度优先已覆盖 9/20：A 组 PFOA/PFBS/PFHxS/GenX、D 组 BPA/NP/DCP26、E 组 ROX/Octocrylene。**0 通过（5 revise + 4 terminate/耗尽）**。这是 SPEC 预期的诚实结果：R2 正交约束（避开 R1 已通过最优角度）+ 平台饱和/R1 深挖耗尽使通过本质难于 R1（诚实 N 优于凑数）。最佳 R2 revise：PFHxS/BPA/ROX ~81-82（需深度多轮补角至 85，同 R1 A01 的 5 轮）。仿生原型库 83→88。
+R2 广度优先已覆盖 13/20：A 组 PFOA/PFBS/PFHxS/GenX、C 组 DDT/DDE/Dieldrin/Endosulfan、D 组 BPA/NP/DCP26、E 组 ROX/Octocrylene。**0 通过（6 revise + 7 terminate/耗尽）**。这是 SPEC 预期的诚实结果：R2 正交约束（避开 R1 已通过最优角度）+ 平台饱和/R1 深挖耗尽使通过本质难于 R1（诚实 N 优于凑数）。最佳 R2 revise：PFHxS/BPA/ROX ~81-82、DDT ~79（需深度多轮补角至 85）。C 组以 FM3 热力学/反应性基序已占为主：DDT 1 revise（新 halogen-bond-pattern 原型 PROTO_R2_006 transthyretin），DDE/Dieldrin/Endosulfan 诚实近耗尽（fragile planar-shape / Koc impossibility-triangle / reactive-handle R1 已用）。仿生原型库 83→89。
 
 ### 已完成
 
@@ -413,10 +413,9 @@ PFOA R2 正交空间接近诚实耗尽：4 个候选 3 个 X 级、1 个 revise_
 
 ### 下一步行动（更新）
 
-1. **PFOA + PFBS Phase 0/量热门挂起**：PFOA DFT-SAPT anion-π 净选择性；PFBS 量热(ITC)+Phase 0 C4 趋液绝对 Ka 与 α(PFBS/SO₄²⁻)。均为仓库外动作，不阻断推进。
-2. **转 DDT**（execution_order 第 10 位，C 组有机氯），随后 DDE/Dieldrin/Endosulfan/β-HCH/TCDD/PCB-209 + B 组 PCP/HCBD/Chloroform/BDE-209；继续广度优先（C/B 组为高-logKow 疏水有机物，多为形状/卤键识别，R1 已取最佳角，预期 revise/近耗尽）。
-3. 继续广度优先：20 种污染物各至少 1 个 R2 slot 后回溯补角。
-4. 每完成一个方案即提取中间产物并逐槽提交推送 `origin/Ultimate`。
+1. **PFOA/PFBS/PFHxS/BPA/DDT revise 的外部门挂起**：PFOA/PFBS/PFHxS/BPA Phase 0/量热门；DDT halogen-bond-pattern Phase 0 DFT（水相芳香 C-Cl sigma-hole 能量 + 双点 pattern 增益）。均为仓库外动作，不阻断推进。
+2. **转 β-HCH**（execution_order 第 14 位，C 组剩余），随后 TCDD/PCB-209 + B 组 PCP/HCBD/Chloroform/BDE-209；继续广度优先至 20/20 全覆盖。PCB-209/BDE-209 可承接 DDT 的 halogen-bond-pattern 路线（more/heavier halogen atoms 使 halogen bond 更强、pattern 更丰富，天花板更高）。
+3. 每完成一个方案即提取中间产物并逐槽提交推送 `origin/Ultimate`。
 
 **跨槽知识（PFOA↔PFBS 互补）**：PFAS 组头基-水合识别方向——anion-π 偏好高电荷密度硫酸根=选择性负债；趋液效应偏好弱水化 PFAS、排斥硫酸根=选择性资产。对后续 PFHxS/GenX 有传递价值。
 

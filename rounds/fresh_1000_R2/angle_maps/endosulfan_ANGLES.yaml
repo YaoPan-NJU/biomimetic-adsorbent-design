@@ -1,0 +1,41 @@
+# Endosulfan R2 angle map — fresh_1000 R2, pollutant 13/20 (Tier 2, Group C)
+# 2026-07-30 | Inherits R1 rounds/fresh_1000/endosulfan (S_A01=85 passed, Phase-0 GO) | English-heavy
+pollutant: endosulfan
+pollutant_name: "Endosulfan (cyclodiene with hydrolyzable cyclic sulfite ester -O-S(=O)-O- bridge + hexachloronorbornene, high logKow)"
+tier: 2
+group: "C (organochlorine pesticides / OCP)"
+r1_honest_ceiling: 85
+r1_intrinsic_constraint: >
+  R1 S_A01 (score 85, passed; Phase-0 computational gate GO) took Endosulfan's one distinctive tractable handle: REACTIVE
+  Lewis-acid HYDROLYSIS of the cyclic sulfite ester at a mineral-oxide interface (mesoporous oxide site-density series +
+  submonolayer hydrophobic pre-organization domain), with anti-monotonic selectivity design; C-dim (biomimetic correspondence)
+  honestly marked not-passing (mineral prototype = analogy-level). So R2 must avoid the Lewis-acid hydrolysis axis. The remaining
+  handles are the hexachloronorbornene chlorine cage (shared class-wide with dieldrin/aldrin) and hydrophobic partitioning
+  (FM2-monotonic) — neither is orthogonal-and-selective.
+r1_locked_angles:
+  - { angle_id: S_A01, mechanism: "mineral Lewis-acid hydrolysis of cyclic sulfite + mesoporous oxide site-density series", status: passed, score: 85, note: "occupies the reactive hydrolysis axis; anti-monotonic design; Phase-0 GO" }
+r2_new_angles:
+  - angle_id: R2_A01
+    mechanism: "Cyclic-sulfite ester H-bond-acceptor recognition (non-reactive)"
+    pre_screen: { tfg: { conclusion: fail, note: "the S=O / ester O are weak H-bond acceptors, hydrated; non-reactive recognition of the sulfite is far weaker than the R1 Lewis-acid HYDROLYSIS route on the same group (adjacent/occupied handle) and cannot reach ng/L" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A02
+    mechanism: "Hexachloronorbornene halogen-bond pattern"
+    pre_screen: { tfg: { conclusion: fail, note: "class-wide across cyclodienes (shared with dieldrin/aldrin/endrin) -> not endosulfan-selective; aqueous C-Cl halogen bond weak" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A03
+    mechanism: "alpha/beta-endosulfan isomer geometric discrimination"
+    pre_screen: { tfg: { conclusion: fail, note: "alpha vs beta differ only in sulfite-ring puckering; aqueous selectivity single-parameter geometric-monotonic (FM2), SF prior <2; both hydrolyze via the R1 route" }, verdict: X }
+    status: excluded
+pre_screen_summary:
+  graded_A: 0
+  graded_B: 0
+  graded_X: 3
+  honest_exhaustion_note: >
+    Endosulfan R2 has NO viable orthogonal angle. R1 already captured the one distinctive handle — Lewis-acid HYDROLYSIS of the
+    cyclic sulfite ester (score 85, Phase-0 GO). Non-reactive recognition of the same sulfite group is weaker and adjacent
+    (occupied); the hexachloronorbornene halogen pattern is class-wide (shared with dieldrin, not selective); alpha/beta isomer
+    discrimination is single-parameter geometric-monotonic (FM2). Honest near-exhaustion (honest N > padding). Like Dieldrin,
+    Endosulfan's selectivity budget was spent on its one distinctive (reactive/geometric) handle in R1.
+  execution_decision: "Record Endosulfan R2 honest near-exhaustion; representative terminate slot R2_S13_A01 documents the reactive-handle-occupied + class-wide-halogen wall. Next: beta-HCH (Group C continues)."
+last_updated: "2026-07-30"

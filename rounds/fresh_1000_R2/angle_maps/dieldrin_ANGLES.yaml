@@ -1,0 +1,43 @@
+# Dieldrin R2 angle map — fresh_1000 R2, pollutant 12/20 (Tier 2, Group C)
+# 2026-07-30 | Inherits R1 rounds/fresh_1000/dieldrin (S27_A01=89 passed; S39/S40 terminated FM3) | English-heavy
+pollutant: dieldrin
+pollutant_name: "Dieldrin (caged cyclodiene, exo-epoxide + hexachloronorbornene, extreme logKow, Koc ~5e6)"
+tier: 2
+group: "C (organochlorine pesticides / OCP)"
+r1_honest_ceiling: 89
+r1_intrinsic_constraint: >
+  R1 S27_A01 (score 89, passed — a strong pass near ceiling) took Dieldrin's one viable geometric axis: exo-epoxide GEOMETRIC
+  readout via squaramide dual-NH H-bond array in a GABA/Rdl rigid hydrophobic cavity (SBA-15 + squaramide), non-logKow-monotonic
+  (exo vs endo). R1 also terminated TWO other angles on FM3 THERMODYNAMIC IMPOSSIBILITY: S39_A03 shape-complementary cage (Koc
+  ~5e6 vs achievable Ka ceiling gap ~3 orders — adsorbent cannot beat natural-organic-matter partitioning) and S40_A02 epoxide
+  ring-opening reactive (ng/L kinetics broken + Koc desorption paradox + uncontrolled carbocation rearrangement). The FM3 Koc
+  impossibility triangle is the binding constraint: it caps essentially every Dieldrin angle except the one strong geometric pass.
+r1_locked_angles:
+  - { angle_id: S27_A01, mechanism: "exo-epoxide dual-NH squaramide H-bond geometric readout in GABA/Rdl rigid cavity", status: passed, score: 89, note: "occupies the one viable geometric axis; near ceiling" }
+  - { angle_id: S39_A03, mechanism: "shape-complementary discrete cage", status: terminated, score: 51, failure: "FM3 Koc ~5e6 impossibility triangle" }
+  - { angle_id: S40_A02, mechanism: "epoxide ring-opening reactive capture", status: terminated, score: 50, failure: "FM3 ng/L kinetics + Koc desorption paradox" }
+r2_new_angles:
+  - angle_id: R2_A01
+    mechanism: "Hexachloronorbornene halogen-bond pattern"
+    pre_screen: { tfg: { conclusion: fail, note: "the hexachloronorbornene chlorine cage is SHARED across cyclodienes (aldrin/isodrin/endrin/endosulfan) -> class-wide, not Dieldrin-selective; and still capped by FM3 Koc impossibility triangle" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A02
+    mechanism: "Chaotropic / hydration-difference recognition"
+    pre_screen: { tfg: { conclusion: fail, note: "Dieldrin is neutral extreme-hydrophobe; no charge/hydration handle for chaotropic axis; FM3 Koc ceiling" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A03
+    mechanism: "Additional H-bond geometry beyond exo-epoxide"
+    pre_screen: { tfg: { conclusion: fail, note: "the exo-epoxide is the only polar H-bond handle and is R1-occupied (A01=89); no second orthogonal H-bond geometry exists on the caged skeleton" }, verdict: X }
+    status: excluded
+pre_screen_summary:
+  graded_A: 0
+  graded_B: 0
+  graded_X: 3
+  honest_exhaustion_note: >
+    Dieldrin R2 has NO viable orthogonal angle. R1 already captured the single viable geometric axis (exo-epoxide dual-NH,
+    score 89 strong pass), and R1 twice confirmed the FM3 Koc ~5e6 THERMODYNAMIC IMPOSSIBILITY triangle that caps every other
+    route (shape-cage terminated 51, reactive-ring-opening terminated 50). R2 candidates (class-wide halogen pattern, chaotropic
+    on a neutral extreme-hydrophobe, second H-bond geometry) all fail on class-degeneracy or the same Koc ceiling. Honest near-
+    exhaustion (honest N > padding). Dieldrin is the clearest FM3-thermodynamic-ceiling case in Group C.
+  execution_decision: "Record Dieldrin R2 honest near-exhaustion; representative terminate slot R2_S12_A01 documents the FM3 Koc impossibility wall. Next: Endosulfan."
+last_updated: "2026-07-30"

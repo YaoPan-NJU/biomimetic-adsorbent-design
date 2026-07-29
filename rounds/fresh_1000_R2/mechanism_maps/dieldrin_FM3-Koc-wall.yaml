@@ -1,0 +1,18 @@
+# Mechanism map — fresh_1000 R2
+mechanism_id: MECH_dieldrin_001
+pollutant: dieldrin
+mechanism_name: "Dieldrin FM3 Koc impossibility wall (honest near-exhaustion — extreme-Koc thermodynamic ceiling)"
+biological_source: "n/a (R1 S27_A01=89 already took the one viable exo-epoxide geometric axis; no orthogonal prototype)"
+material_implementation: "n/a (all R2 candidates X-graded)"
+selectivity_signature:
+  primary_dimension: "exo-epoxide dual-NH H-bond geometry (R1-occupied, 89)"
+  orthogonal_dimensions: ["none viable (hexachloronorbornene halogen pattern class-wide; chaotropic n/a for neutral hydrophobe; no 2nd H-bond geometry)"]
+aqueous_feasibility: { tfg_assessment: fail, note: "FM3 Koc ~5e6 impossibility triangle (R1 confirmed twice: S39=51, S40=50); caps every angle except the one strong geometric pass" }
+verdict: terminated_near_exhaustion
+score: "~46 (r1 terminate, FM3 thermodynamic)"
+r1_overlap: false
+scheme_ref: "dieldrin/SCHEMES/R2_S12_A01_FM3-Koc-impossibility-wall_terminated.md"
+transferable_negative_knowledge: >
+  For extreme-Koc caged cyclodienes, only ONE ultra-high-affinity geometric angle (exo-epoxide, R1=89) is thermodynamically
+  reachable; all others hit the FM3 Koc impossibility triangle or are class-degenerate. Do not spend R2 slots. Honest near-exhaustion.
+last_updated: "2026-07-30"

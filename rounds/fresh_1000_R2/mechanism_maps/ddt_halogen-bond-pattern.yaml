@@ -1,0 +1,19 @@
+# Mechanism map — fresh_1000 R2
+mechanism_id: MECH_ddt_001
+pollutant: ddt
+mechanism_name: "DDT halogen-bond sigma-hole PATTERN recognition (transthyretin/thyroxine prototype) — revise"
+biological_source: "Transthyretin (TTR) T4-binding channel: documented biological halogen bonds (thyroxine iodine ... backbone C=O)"
+material_implementation: "Lewis-base acceptor pattern (pyridyl-N / amide-C=O) pre-positioned in a rigid COF/cage hydrophobic pocket to engage BOTH para-Cl sigma-holes at the fixed 2,2-bis(4-chlorophenyl) geometry"
+selectivity_signature:
+  primary_dimension: "two-point para-Cl halogen-bond geometric pattern"
+  orthogonal_dimensions: ["orthogonal to R1 reactive beta-elimination axis (S51_A01)", "orthogonal to R1 whole-propeller shape axis"]
+aqueous_feasibility: { tfg_assessment: borderline, note: "aromatic C-Cl sigma-hole weak (< C-I of thyroxine; DCP26-A04 regime); Phase-0 DFT gate pending on ng/L absolute affinity" }
+verdict: revise_with_phase0_prerequisite
+score: "~79 (0c/1h, ceiling ~78-80)"
+r1_overlap: false
+scheme_ref: "ddt/SCHEMES/R2_S10_A01_halogen-bond-para-Cl-pattern_revise.md"
+prototype_ref: "PROTO_R2_006"
+transferable_knowledge: >
+  Aromatic C-Cl halogen-bond PATTERN (two-point, geometry-directed) is the orthogonal escape from FM2 hydrophobic-monotonicity for
+  polychloroaromatic OCP; carry to PCB-209 / BDE-209 where more/heavier halogens strengthen the bond and enrich the pattern.
+last_updated: "2026-07-30"

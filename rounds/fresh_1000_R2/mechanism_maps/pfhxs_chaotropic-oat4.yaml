@@ -1,0 +1,33 @@
+# 机制映射记录 — fresh_1000 Round 2
+# 每个机制-污染物组合独立记录（SPEC 3.1b）
+
+mechanism_id: MECH_pfhxs_001
+pollutant: pfhxs
+mechanism_name: "趋液（chaotropic/Hofmeister）水合识别 × OAT4 型 ≥C6 链长窗口（双正交）"
+biological_source: "生物阴离子通道 Hofmeister 序选择性（PROTO_R2_002）+ OAT4 型 ≥C6 链长窗口（PROTO_R2_003）"
+material_implementation: >
+  竹环（bambusuril，脲基/硫代端口阴离子友好，规避葫芦脲羰基排阴离子）型高能水释放受限腔，腔深匹配 ≥C6，接枝水稳定
+  多孔载体。轴 1 趋液水合门（优先纳弱水化 PFHxS、内禀排斥强水化二价硫酸根）；轴 2 OAT4 型 ≥C6 链长窗口（腔深优先
+  PFHxS 于短链 PFBS，方向正确无逆向问题）。
+selectivity_signature:
+  primary_dimension: "趋液水合轴（Hofmeister 位次，排斥强水化二价硫酸根/磷酸根）"
+  orthogonal_dimensions:
+    - "OAT4 型 ≥C6 链长窗口轴（腔深优先 PFHxS 于短链 PFBS；C4/C6/C8 系列解耦；PFBS 被 OAT4 排除故此支撑 ≥C6 独有）"
+  causal_control: "Hofmeister 序滴定（随趋液性单调/随电荷密度反相关）+ C4/C6/C8 链长系列（PFBS 低 PFHxS 高）+ ITC 焓-熵分解 + 葫芦脲羰基端口对照 M-rim"
+aqueous_feasibility:
+  tfg_assessment: borderline
+  sulfate_competition: "解决（趋液内禀排斥强水化二价硫酸根）"
+  short_chain_affinity: "C6 绝对亲和力显著优于 PFBS 的 C4（趋液性/疏水面积随链长增）；ng/L 占位仍须量热(ITC)确认，GO 先验高于 PFBS"
+  chain_discrimination: "OAT4 ≥C6 窗口方向正确（优先 PFHxS 于 PFBS，无逆向问题）；PFOS co-capture（两者均管制可接受）"
+  net_binding_free_energy_kj_mol: "待量热(ITC) C6 绝对 Ka + α(PFHxS/SO₄²⁻)"
+r1_overlap: false
+r1_overlap_note: >
+  R1-DEDUP 通过：R1 明确将大环腔方向列为未枚举推迟方向（未占据），R2 以竹环阴离子端口腔占据；机制（趋液×OAT4窗口）与
+  R1 A01（中性氢键头基）/A07（盲腔深度单轴）正交；原型（Hofmeister 通道 + OAT4 ≥C6 窗口）与 R1 全部方案正交。
+scheme_ref: "pfhxs/SCHEMES/R2_S03_A01_chaotropic-OAT4-C6-window_revise.md"
+verdict: revise_with_phase0_prerequisite
+score: "~82（区间 80-84）"
+transferable_knowledge: >
+  趋液路线链长适用性定量进阶 C4(PFBS ~72)→C6(PFHxS ~82)：趋液路线在 ≥C6 显著改善，链长阈值约在 C6 附近；OAT4 ≥C6 窗口
+  为 ≥C6 PFAS 独有第二正交维（PFBS 被 OAT4 排除）。竹环阴离子友好端口规避葫芦脲羰基排阴离子（材料端口选择原则，可传递）。
+last_updated: "2026-07-29"

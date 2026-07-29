@@ -397,9 +397,9 @@ R2 的中间产物持久化策略支持仿生设计库扩展：
 | 分类 Spec | `rounds/fresh_1000/SPEC_GROUP_*.md` | 继承的分组规范 |
 | 仿生原型库 | `data/bmdl_snapshot/biological_prototypes.json` | 83 条已入库 |
 
-## fresh_1000 R2 执行检查点：PFOA + PFBS slot 1 完成 (2026-07-29)
+## fresh_1000 R2 执行检查点：PFOA + PFBS + PFHxS slot 1 完成 (2026-07-29)
 
-R2 广度优先前两槽（污染物 1-2/20，PFOA→PFBS）已各完成一个完整的设计-攻击-裁决闭环并提取全部中间产物。两槽均落 revise_with_phase0_prerequisite（A 组 PFAS 正交空间本征狭窄，诚实结果）。
+R2 广度优先前三槽（污染物 1-3/20，PFOA→PFBS→PFHxS）已各完成设计-攻击-裁决闭环并提取中间产物。三槽均 revise_with_phase0_prerequisite（A 组 PFAS 正交空间本征狭窄）；诚实轨迹 PFOA ~74 / PFBS ~72 / PFHxS ~82（趋液路线随链长上移，清晰可发表规律）。
 
 ### 已完成
 
@@ -414,7 +414,7 @@ PFOA R2 正交空间接近诚实耗尽：4 个候选 3 个 X 级、1 个 revise_
 ### 下一步行动（更新）
 
 1. **PFOA + PFBS Phase 0/量热门挂起**：PFOA DFT-SAPT anion-π 净选择性；PFBS 量热(ITC)+Phase 0 C4 趋液绝对 Ka 与 α(PFBS/SO₄²⁻)。均为仓库外动作，不阻断推进。
-2. **轮转下一污染物 PFHxS**（execution_order 第 3 位，A 组）：建 `angle_maps/pfhxs_ANGLES.yaml`（锁定 R1 A01/A07 终止）→ Phase A+ 预筛（趋液路线对 C6 绝对亲和力优于 C4，可作链长适用性检验）→ 开 slot 1 设计-攻击-裁决 → 提取中间产物。
+2. **轮转下一污染物 GenX**（execution_order 第 4 位，A 组末位）：建 `angle_maps/genx_ANGLES.yaml`（锁定 R1 A01=36/A03=61 终止）→ Phase A+ 预筛（GenX 为六氟环氧丙烷二聚酸、趋液性弱且离域羧酸，趋液路线预期弱于磺酸，需新正交轴）→ 开 slot 1 → 提取中间产物；完成 A 组覆盖后转 D 组（BPA/NP，通过更可期）。
 3. 继续广度优先：20 种污染物各至少 1 个 R2 slot 后回溯补角。
 4. 每完成一个方案即提取中间产物并逐槽提交推送 `origin/Ultimate`。
 
@@ -424,10 +424,10 @@ PFOA R2 正交空间接近诚实耗尽：4 个候选 3 个 X 级、1 个 revise_
 
 | 指标 | 数值 |
 |------|------|
-| R2 已尝试 slot | 2（PFOA R2_A01 / PFBS R2_A01） |
+| R2 已尝试 slot | 3（PFOA / PFBS / PFHxS R2_A01） |
 | R2 通过 | 0 |
-| R2 revise（含 Phase 0/量热挂起） | 2 |
+| R2 revise（含 Phase 0/量热挂起） | 3 |
 | R2 终止 | 0 |
-| 仿生原型库 | 85（目标 150） |
-| 机制映射 | 2 |
-| 角度地图 | 2（pfoa, pfbs） |
+| 仿生原型库 | 86（目标 150） |
+| 机制映射 | 3 |
+| 角度地图 | 3（pfoa, pfbs, pfhxs） |

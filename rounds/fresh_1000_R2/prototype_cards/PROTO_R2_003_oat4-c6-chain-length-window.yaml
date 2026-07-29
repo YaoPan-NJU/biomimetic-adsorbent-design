@@ -1,0 +1,41 @@
+# 仿生原型卡片 — fresh_1000 Round 2
+# 每个新发现的仿生原型独立成卡（SPEC 3.1a）
+
+prototype_id: PROTO_R2_003
+name: "OAT4 型 ≥C6 链长窗口（有机阴离子转运体非单调链长阈值）"
+source_type: protein
+biological_origin: >
+  肾有机阴离子转运体 OAT4（SLC22A11）对全氟烷基磺酸的链长依赖转运呈非单调阈值：转运 PFHxS（C6）及更长者，
+  而**排除 PFBS（C4）**（Louisse 2023）。相关转运体佐证：人 NTCP Km PFBS 39.6<PFHxS 112<PFOS 130 µM；人 ASBT 仅转运
+  PFOS 而不转 PFHxS（Zhao 2015）。生物功能为肾小管重吸收/肠肝循环处置（决定人体滞留），非水相选择捕获。
+applicable_pollutants: ["pfhxs", "pfoa"]   # ≥C6 PFAS；PFBS 恰被排除，故该窗口对 ≥C6 独有支撑
+recognition_mechanism: >
+  ≥C6 链长阈值窗口：结合/转运位点几何优先容纳 ≥C6 全氟链，排除更短的 C4（PFBS）。作为第二正交识别维（几何/链长）
+  与趋液水合轴（PROTO_R2_002）叠加时，可为 ≥C6 PFAS（PFHxS）提供相对短链 PFBS 的方向正确窗口（非逆向，无 PFBS
+  R2 的逆向排 PFOS 问题）。
+literature_support:
+  - doi: "Louisse 2023（Arch Toxicol；DOI 待全文核）"
+    title: "OAT4 mediates renal reabsorption of PFAS; transports PFHxS but excludes PFBS"
+    year: 2023
+    claim_supported: "OAT4 转运 PFHxS 而排除 PFBS——文献支撑的非单调 ≥C6 链长阈值窗口"
+    evidence_tier: source_backed_lead
+  - doi: "Zhao 2015（Toxicol Sci；DOI 待全文核）"
+    title: "NTCP/ASBT PFAS transport chain-length dependence"
+    year: 2015
+    claim_supported: "NTCP Km PFBS 39.6<PFHxS 112<PFOS 130 µM；ASBT 仅 PFOS——转运体层级非单调链长分化"
+    evidence_tier: source_backed_lead
+translation_distance_note: >
+  转译距离大：OAT4/NTCP/ASBT 生物功能为转运处置（人体滞留决定），非水相竞争基质选择捕获。作机制类比层（几何/链长
+  约束）转译，C 维诚实不通过。三条硬约束（继承 R1 BRIEF）：不复制蛋白；归因限转运体层级不外推组织富集；转译产物须
+  经真实基质竞争验证。
+evolution_solution_judgement: >
+  条件性通过 G2：转运体链长选择性为进化出的底物识别几何（非 SELEX/非配位/非毒性受体），但进化目的为转运处置，
+  与"选择性水相阴离子捕获"仅机制类比。承载机制类比级仿生强度，仅约束人工识别单元的链长窗口几何（第二正交维）。
+key_role: >
+  作为趋液水合轴（PROTO_R2_002）的第二正交维原型：趋液轴排斥无机 kosmotrope（硫酸根），OAT4 ≥C6 窗口轴优先 ≥C6 PFAS
+  于短链 PFBS。两维正交组合提供 ≥C6 PFAS 的方向正确双识别（PFHxS R2_S03_A01）。
+r1_used: false   # R1 PFHxS BRIEF 将 OAT4 作证据锚，R2 首次将其作为第二正交维原型独立成卡
+r2_first_used_in: "R2_S03_A01（PFHxS 趋液 × OAT4 ≥C6 窗口）"
+r2_outcome_note: >
+  首次使用（PFHxS）：作趋液轴的第二正交维，使 PFHxS 方案（~82）显著优于 PFBS（~72）——PFBS 恰被 OAT4 排除故无此支撑。
+last_updated: "2026-07-29"

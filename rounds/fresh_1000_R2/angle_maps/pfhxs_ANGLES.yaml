@@ -1,0 +1,122 @@
+# PFHxS R2 角度地图
+# fresh_1000 Round 2 — 污染物 3/20（梯队 1，A 组 PFAS）
+# 生成日期：2026-07-29
+# 继承：rounds/fresh_1000/pfhxs/BRIEF.md + DESIGN_SPACE.md（R1 Phase A，13 角度）
+# 去重基准：rounds/fresh_1000_R2/R1_OCCUPIED_SPACE.yaml
+
+pollutant: pfhxs
+pollutant_name: "全氟己烷磺酸 PFHxS（perfluorohexanesulfonate，C6F13SO3⁻）"
+tier: 1
+group: "A（PFAS）"
+r1_phase_a_files:
+  brief: rounds/fresh_1000/pfhxs/BRIEF.md
+  design_space: rounds/fresh_1000/pfhxs/DESIGN_SPACE.md
+r1_honest_ceiling: 13
+r1_deferred_direction_note: >
+  关键：R1 DESIGN_SPACE 明确将"离散大环主体（葫芦脲/环糊精）腔体方向"**列为未枚举的推迟方向**（先例核验超出 R1 五路证据集，
+  且葫芦脲端口羰基对阴离子静电排斥的可行性不确定）。故 R2 的趋液大环腔路线（尤其阴离子友好端口的竹环 bambusuril）为 R1 未占据的
+  正交空间，R1-DEDUP 通过。R1 记录的葫芦脲羰基端口排阴离子问题在 R2 以竹环（脲基硫代端口，阴离子友好）规避。
+r1_biological_anchor: >
+  R1 组织富集启发式够格锚：OAT4 转运 PFHxS 而排除 PFBS（Louisse 2023 摘要逐字核）；人 NTCP Km PFBS 39.6/PFHxS 112/PFOS 130 µM；
+  ASBT 仅 PFOS 不转 PFHxS（Zhao 2015）。C6 指纹 OAT4(+)/ASBT(−) 构成文献支撑的非单调链长窗口（≥C6 阈值）。
+
+# ============================================================
+# 第一部分：R1 已锁定角度
+# ============================================================
+
+r1_locked_angles:
+  - angle_id: A01
+    mechanism: "四面体磺酸头中性氢键笼几何识别（Sbp/ModA 原型）"
+    scheme: S31_A01
+    status: terminated
+    score: 70
+    failure_mode: "FM3（头基维中性氢键对强水化磺酸头水相本质弱；四轮 69→70→81→70）"
+    r2_dedup_note: "R2 不得以中性氢键头基几何为核心识别维（A01 已证水相弱）"
+  - angle_id: A07
+    mechanism: "C6 链长窗口刚性盲腔深度匹配"
+    scheme: S28_A07
+    status: terminated
+    score: 78
+    failure_mode: "FM4（承重反转臂对一切长链不全埋近必然成立无区分力 + Å 级定深合成可达性差）"
+    r2_dedup_note: "R2 若用链长窗口须与新识别轴正交叠加，不得单独承重（A07 已证盲腔深度窗口结构性天花板）"
+  - angle_id: A02_A03_A04_A05_A06_A08_A13
+    mechanism: "磺酸头 MIP / 头基×C6 双轴双功能孔 / 亲氟 / 捕获态还原 / C-S 切断 / 界面分配 / 可及性开关（R1 枚举 13 角度）"
+    status: enumerated_not_attempted
+    r2_dedup_note: "R1 枚举 13 角度整体为已占据设计空间；离散大环腔方向为 R1 明确推迟（未占据），R2 可探索"
+
+# ============================================================
+# 第二部分：R2 新增正交候选角度（Phase A+ 预筛）
+# ============================================================
+
+r2_new_angles:
+  - angle_id: R2_A01
+    mechanism: "趋液（chaotropic/Hofmeister）水合识别 × OAT4 型 ≥C6 链长窗口双正交：阴离子友好端口的高能水释放竹环腔按 Hofmeister 位次优先纳弱水化 PFHxS、内禀排斥强水化二价硫酸根（趋液轴），且腔深/端口以 OAT4 型 ≥C6 阈值优先 PFHxS 于短链 PFBS（链长窗口轴）"
+    prototype: "生物阴离子通道 Hofmeister/趋液序选择性（PROTO_R2_002）+ OAT4 型 ≥C6 链长窗口（Louisse 2023 转运 PFHxS 排除 PFBS，作第二正交维原型）"
+    prototype_source: protein
+    material_platform: "竹环（bambusuril）型阴离子友好端口高能水释放受限腔（非葫芦脲羰基端口，规避 R1 记录的排阴离子问题），接枝多孔载体"
+    orthogonality_to_r1:
+      vs_A01: "非中性氢键头基几何（趋液水合轴，规避 A01 水相弱氢键）"
+      vs_A07: "链长窗口不单独承重，与趋液轴正交叠加（规避 A07 盲腔深度单轴天花板）；且用 OAT4 ≥C6 阈值（文献支撑非单调）非 Å 级定深盲腔"
+      vs_r1_deferred: "R1 明确推迟大环腔方向，R2 以竹环阴离子友好端口占据该未占据空间"
+      vs_pfbs_R2: "同趋液原理但 C6 绝对亲和力显著优于 C4（趋液性/疏水面积随链长增，SETAC 2026 短链弱→长链强）；主张不收窄，可正向主张 PFHxS vs 无机 + vs 短链 PFBS"
+    pre_screen:
+      tfg:
+        conclusion: borderline
+        note: >
+          强项：趋液效应内禀排斥强水化二价硫酸根（正面解决陷阱 4）；C6 绝对亲和力显著优于 PFBS 的 C4（趋液性随链长增，
+          host-guest Ka 随链长升，Wei 2024/Kancharla 2022 佐证长链强结合），ng/L 可达性优于 PFBS。弱项：C6 绝对 Ka 仍须量热确认
+          达 ng/L 占位阈值；趋液偏好更长 PFOS（co-capture，两者均受管制可接受）。净判 borderline（较 PFBS 的 fail 边缘上移）。
+      pads:
+        score: 40
+        direct: 0        # PFHxS 特异趋液竹环腔 + Hofmeister 因果对照 + OAT4 ≥C6 窗口：检索未发现
+        directional: 3   # CD/CB/bambusuril 趋液阴离子结合 + CD-PFAS host-guest
+        platform: 4      # 大环主客体平台密集
+        saturation: false
+        note: "R1 明确推迟大环腔方向（未占据）；竹环阴离子友好端口 + 趋液归因 + OAT4 ≥C6 窗口的 PFHxS 特异组合为空白。平台拥挤但机制归因开放。"
+      odc:
+        dimensions: 2
+        dimension_list:
+          - "趋液水合轴（Hofmeister 位次，排斥强水化二价硫酸根/磷酸根；Hofmeister 序滴定解耦）"
+          - "OAT4 型 ≥C6 链长窗口轴（腔深/端口优先 PFHxS 于短链 PFBS；C4/C6/C8 系列解耦；文献支撑非单调 OAT4 阈值）"
+        monotonic_risk: low
+        note: "两维正交且各有生物原型（Hofmeister 通道 + OAT4）：趋液（水合）× 链长窗口（几何/OAT4 阈值）。较 PFBS 的单趋液轴更稳（PFBS 缺 OAT4 支撑，PFBS 恰被 OAT4 排除）。"
+      r1_dedup:
+        mechanism_overlap: false
+        material_overlap: false
+        prototype_overlap: false
+        conclusion: pass
+        note: "机制（趋液水合×OAT4窗口）/材料（竹环阴离子端口腔）/原型（Hofmeister通道+OAT4）三者与 R1 全部方案正交；大环腔为 R1 明确推迟方向"
+      verdict: A
+      override_reason: >
+        判 A 级：趋液轴正面解决硫酸根竞争 + C6 绝对亲和力显著优于 PFBS 的 C4 + 双正交维各有生物原型（Hofmeister 通道 + OAT4 ≥C6 窗口，
+        且 PFBS 恰被 OAT4 排除故 PFHxS 的 OAT4 支撑独有）+ R1 明确推迟大环方向（未占据）。定位机制确证型研究 + 量热(ITC) go/no-go
+        （C6 绝对 Ka）。诚实预判：C6 较 C4 显著上移，天花板 80-84，通过 85 仍需 ng/L 绝对亲和力量热确认 + 原创性突破平台拥挤。
+    status: in_progress
+    slot: R2_S03_A01
+    scheme_file: "pfhxs/SCHEMES/R2_S03_A01_chaotropic-OAT4-C6-window_revise.md"
+
+  - angle_id: R2_A02
+    mechanism: "anion-π 缺电子 π 面识别磺酸头基"
+    pre_screen: { tfg: { conclusion: fail, note: "anion-π 偏好高电荷密度硫酸根反转（PFAS 组可传递负知识）" }, verdict: X, override_reason: "X 级，不开槽" }
+    status: excluded
+  - angle_id: R2_A03
+    mechanism: "σ-空穴卤键识别磺酸根氧"
+    pre_screen: { tfg: { conclusion: fail, note: "水相卤键弱 + 硫酸根竞争 + 无自然进化原型" }, verdict: X, override_reason: "X 级" }
+    status: excluded
+
+# ============================================================
+# 第三部分：Phase A+ 预筛汇总与执行决策
+# ============================================================
+
+pre_screen_summary:
+  candidates_evaluated: 3
+  graded_A: 1   # R2_A01 趋液 × OAT4 ≥C6 窗口（较 PFBS 上移：C6 亲和力 + OAT4 独有支撑）
+  graded_X: 2   # anion-π（硫酸根反转）/ 卤键（TFG+原型门）
+  chaotropic_chain_length_progression_note: >
+    趋液路线链长适用性检验：C4（PFBS，绝对亲和力边缘，revise ~72）→ C6（PFHxS，亲和力上移 + OAT4 ≥C6 窗口独有支撑，预期高 revise ~80-84）。
+    该系列本身为可发表的趋液路线链长适用边界研究（PFAS 组可传递知识）。
+  execution_decision: >
+    执行 R2_A01（趋液 × OAT4 ≥C6 窗口，竹环阴离子端口腔）为 PFHxS R2 广度优先 slot 1。定位机制确证型研究 + 量热 go/no-go。
+    其余 2 候选 X 级不开槽。
+
+last_updated: "2026-07-29"

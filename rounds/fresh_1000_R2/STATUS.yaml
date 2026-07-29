@@ -49,11 +49,15 @@ pollutants:
   pfhxs:
     name: "全氟己烷磺酸 PFHxS"
     r1_status: "0 passed, 2 terminated"
-    r2_angles_planned: 0
-    r2_attempted: 0
+    r2_angles_planned: 3   # R2_A01 趋液×OAT4 ≥C6 窗口 (A 级) + R2_A02/A03 (X 级)
+    r2_attempted: 1
     r2_passed: 0
     r2_terminated: 0
-    status: "pending"
+    r2_revise: 1
+    angle_map: rounds/fresh_1000_R2/angle_maps/pfhxs_ANGLES.yaml
+    slots:
+      R2_S03_A01: { r1: "72 (1c/1h)", r2: "~82 revise_with_phase0_prerequisite (0c/1h)", status: revise_with_phase0_prerequisite, file: "pfhxs/SCHEMES/R2_S03_A01_chaotropic-OAT4-C6-window_revise.md", prototype: "PROTO_R2_002 Hofmeister 通道 + PROTO_R2_003 OAT4 ≥C6 窗口", mechanism: "MECH_pfhxs_001", note: "趋液水合×OAT4 ≥C6 链长窗口双正交；较 PFBS 显著上移(~72→~82)：C6 亲和力 + OAT4 窗口方向正确(PFBS 被 OAT4 排除故此支撑 ≥C6 独有) + 无主张收窄；未达 85 因 ng/L 绝对亲和力量热未证 + 原创性受平台拥挤封顶；量热(ITC) 门挂起" }
+    status: "phase_b（R2_A01 落 revise_with_phase0_prerequisite ~82/100 0c/1h，较 PFBS 显著上移；量热 门挂起后建议轮转 GenX 完成 A 组覆盖）"
   genx:
     name: "六氟环氧丙烷二聚酸 GenX"
     r1_status: "0 passed, 2 terminated"
@@ -191,12 +195,13 @@ pollutants:
     r2_terminated: 0
     status: "pending"
 totals:
-  r2_attempted: 2
+  r2_attempted: 3
   r2_passed: 0
   r2_terminated: 0
-  r2_revise: 2
-  prototype_library_size: 85   # +2 R2: PROTO_R2_001 黄素蛋白 anion-π / PROTO_R2_002 Hofmeister 选择通道
+  r2_revise: 3
+  prototype_library_size: 86   # +3 R2: PROTO_R2_001 anion-π / PROTO_R2_002 Hofmeister 通道 / PROTO_R2_003 OAT4 ≥C6 窗口
   prototype_library_target: 150
-  mechanism_maps: 2   # MECH_pfoa_001, MECH_pfbs_001
-  angle_maps: 2       # pfoa, pfbs
-last_updated: "2026-07-29T22:10"
+  mechanism_maps: 3   # MECH_pfoa_001, MECH_pfbs_001, MECH_pfhxs_001
+  angle_maps: 3       # pfoa, pfbs, pfhxs
+  r2_score_trajectory_note: "A 组 PFAS 诚实轨迹：PFOA ~74 / PFBS ~72 / PFHxS ~82（趋液路线随链长上移）；均 revise_with_phase0，无通过（A 组近耗尽，符合 R1）"
+last_updated: "2026-07-29T23:40"

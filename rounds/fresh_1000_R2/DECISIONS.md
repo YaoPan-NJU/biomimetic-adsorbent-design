@@ -91,3 +91,29 @@
 
 - **PFAS 组头基-水合识别方向一对互补知识**：anion-π（PFOA R2）偏好高电荷密度硫酸根=**选择性负债**；趋液效应（PFBS R2）偏好弱水化 PFAS、排斥硫酸根=**选择性资产**。该方向知识对后续 PFHxS/GenX 有传递价值。
 - PFBS R2 正交空间同 PFOA 接近诚实耗尽；建议量热/Phase 0 挂起后轮转 PFHxS（C6 链长趋液性强于 C4，趋液路线对 PFHxS 绝对亲和力优于 PFBS，可作趋液路线链长适用性检验）。
+
+---
+
+## 2026-07-29 PFHxS R2 广度优先 slot 1 执行
+
+### 一、角度地图与预筛（`angle_maps/pfhxs_ANGLES.yaml`）
+
+1. 锁定 R1：A01（中性氢键头基，终止 70）/A07（盲腔深度窗口，终止 78）+ 13 角度枚举。**关键：R1 明确将大环腔（cucurbituril 葫芦脲/环糊精）方向列为未枚举推迟方向（未占据）**。
+2. R2_A01 趋液水合 × OAT4 型 ≥C6 链长窗口双正交判 A 级；R2_A02 anion-π/R2_A03 卤键 X 级。
+3. **决策**：执行 R2_A01。关键设计：用阴离子友好端口的竹环（bambusuril）规避 R1 记录的cucurbituril 端口 C=O 基对阴离子静电排斥问题；第二正交维用 OAT4 ≥C6 窗口（PFBS 恰被 OAT4 排除，此支撑 PFHxS 独有）。
+
+### 二、slot R2_S03_A01 裁决
+
+- 轨迹：r1 72（1c/1h）→ r2 ~82（0c/1h）。**较 PFBS（~72）显著上移**。
+- 1 critical（C6 ng/L 绝对亲和力未证）经 r2 转前置量热(ITC) go/no-go 消解（C6 GO 先验高于 PFBS）。
+- 残 1 角度内禀 high（原创性受 CD/CB PFAS 平台拥挤 + 趋液为 R2 第二次用封顶），天花板 82-84，**未达 85**。
+- **verdict：revise_with_phase0_prerequisite**；量热(ITC) 门挂起。
+
+### 三、中间产物提取
+
+- 新原型卡片 `PROTO_R2_003_oat4-c6-chain-length-window.yaml`（OAT4 ≥C6 窗口，库 85→86）；机制映射 `mechanism_maps/pfhxs_chaotropic-oat4.yaml`（MECH_pfhxs_001）；角度地图；知识图谱 +1 原型/+1 机制/+4 边。
+
+### 四、A 组诚实轨迹小结
+
+- A 组 PFAS 三槽：PFOA ~74 / PFBS ~72 / PFHxS ~82，均 revise_with_phase0（无通过）。与 R1 一致（A 组全轮仅 PFOA A02/PFBS A17 通过，机制空间近耗尽）。趋液路线随链长上移为清晰可发表规律。
+- 下一步：轮转 GenX（A 组末位，六氟环氧丙烷二聚酸（短链离域羧酸头），趋液性弱，预期趋液路线弱于磺酸）完成 A 组覆盖，随后转 D 组（BPA/NP，通过更可期）。

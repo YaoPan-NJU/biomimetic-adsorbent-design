@@ -1,0 +1,68 @@
+# NP R2 angle map — fresh_1000 Round 2, pollutant 6/20 (Tier 2, Group D phenolics)
+# date: 2026-07-30
+# Inherits R1 Phase A: rounds/fresh_1000/np/BRIEF.md + DESIGN_SPACE.md (19 angles)
+# Dedup baseline: rounds/fresh_1000_R2/R1_OCCUPIED_SPACE.yaml
+# NOTE: written English-heavy to avoid recurring CJK rare-glyph corruption (醚/羧/羰/疏/脲/锚).
+
+pollutant: np
+pollutant_name: "Nonylphenol NP (branched C9-alkylphenol, neutral, pKa~10, logKow 4.5-5.2)"
+tier: 2
+group: "D (phenolics / endocrine disruptors)"
+r1_phase_a_files:
+  brief: rounds/fresh_1000/np/BRIEF.md
+  design_space: rounds/fresh_1000/np/DESIGN_SPACE.md
+r1_honest_ceiling: 19
+r1_deep_exhaustion_note: >
+  R1 recorded NP as DEEP-EXHAUSTED: A01=92 (highest R1 score, ipso alpha-quaternary-carbon topology cavity, Sphingobium ipso
+  pathway) PASSED; A04(57)/A10(64)/A06(49) terminated on a shared deadlock (sub-kT equilibrium binding floor + A01 originality
+  shadow + load-bearing pairs trivially separable by logKow/shape); A08(52) reactive ipso terminated (4 critical, T8: ipso
+  selectivity resides at non-replicable carbocation-release step). R1 verdict: "equilibrium-binding space exhausted + reactive
+  axis T8-blocked." NP's three special features (alpha-branch topology / ethoxylation number / amphiphilic behavior): topology
+  taken by A01, ethoxylation terminated (A06), reactive terminated (A08/T8). Head chemistry (phenol) is family-shared (no
+  selectivity). So R2 orthogonal space is very tight.
+
+r1_locked_angles:
+  - { angle_id: A01, mechanism: "ipso alpha-quaternary-carbon topology cavity (resorcinarene deep cage)", scheme: S26_A01, status: passed, score: 92 }
+  - { angle_id: A04, mechanism: "C15 chain-length window + branch steric slit", scheme: S35_A04, status: terminated, score: 57, failure: "A01 originality shadow + logKow/shape-separable" }
+  - { angle_id: A10, mechanism: "para-position x alpha-branch topology 2D orthogonal", scheme: S36_A10, status: terminated, score: 64, failure: "A01 cross-term non-zero + sub-kT" }
+  - { angle_id: A06, mechanism: "ethoxylation-number gradient readout", scheme: S37_A06, status: terminated, score: 49, failure: "NP1EO/NP2EO shared terminal primary-OH + sub-kT + A01 shadow" }
+  - { angle_id: A08, mechanism: "ipso-position selective-oxidation reactive recognition", scheme: S38_A08, status: terminated, score: 52, failure: "T8 mechanism collapse (carbocation-release step non-replicable) + risk inversion" }
+  - { angle_id: A02_A03_A05_A07_A09_A11_to_A19, mechanism: "host-guest / interface-amphiphilic / reactive / switch / entropy / niche families (R1 enumerated 19)", status: enumerated_not_attempted }
+
+r2_new_angles:
+  - angle_id: R2_A01
+    mechanism: "Amphiphilic bilayer/admicelle-interface partitioning + oriented-phenol readout (exploit NP surfactant self-assembly; prototype: lipid-membrane / lung-surfactant interfacial partitioning)"
+    prototype: "Lipid-bilayer / pulmonary-surfactant interfacial partitioning of amphiphiles (biological interface partitioning)"
+    prototype_source: nonprotein
+    pre_screen:
+      tfg: { conclusion: borderline_fail, note: "NP-vs-OP both amphiphilic -> interfacial partitioning is logKow-monotonic (T1 trap); oriented-phenol adds no orthogonal selectivity vs OP (also para-alkylphenol). Absolute ng/L partitioning weak." }
+      pads: { score: 35, note: "admicelle/surfactant-templated NP sorption has precedent; not saturated but T1-limited" }
+      odc: { dimensions: 1, monotonic_risk: high, note: "single amphiphilic-partitioning axis; degrades to logKow monotonic (T1)" }
+      r1_dedup: { conclusion: pass, note: "interface-amphiphilic family (A05/A06 region) but framed as bilayer partitioning; orthogonal to A01 topology" }
+      verdict: B
+      override_reason: "B/borderline-fail: amphiphilic interface partitioning degrades to logKow monotonic (T1) vs OP; no orthogonal 2nd dim. Representative slot to document the T1 monotonic trap for NP's amphiphilic axis."
+    status: representative_slot
+  - angle_id: R2_A02
+    mechanism: "Chaotropic/Hofmeister recognition"
+    pre_screen: { tfg: { conclusion: fail, note: "NP is NEUTRAL (not an anion); chaotropic-anion route N/A. Hydrophobic partitioning of neutral NP is logKow-monotonic (T1)." }, verdict: X }
+    status: excluded
+  - angle_id: R2_A03
+    mechanism: "Reactive ipso-oxidation recognition (revisit)"
+    pre_screen: { tfg: { conclusion: fail, note: "R1 A08 T8-blocked: ipso selectivity at non-replicable carbocation-release step; risk inversion (enriches most-estrogenic isomers). Structurally unfixable." }, verdict: X }
+    status: excluded
+
+pre_screen_summary:
+  candidates_evaluated: 3
+  graded_A: 0
+  graded_B: 1   # R2_A01 amphiphilic interface (T1-limited)
+  graded_X: 2   # chaotropic (neutral N/A) / reactive ipso (T8-blocked)
+  honest_exhaustion_note: >
+    NP R2 has NO viable A-grade orthogonal angle. R1 already deep-exhausted NP (A01=92 topology took the best axis; equilibrium-
+    binding space exhausted; reactive axis T8-blocked). Remaining R2 candidates: amphiphilic-interface (B, degrades to logKow-
+    monotonic T1 vs OP), chaotropic (X, NP neutral), reactive-ipso (X, T8-blocked). This is honest near-exhaustion (honest N > padding).
+  execution_decision: >
+    Run R2_A01 (amphiphilic interface) as the representative breadth-first slot; expected honest TERMINATE (T1 monotonic trap,
+    no orthogonal 2nd dim vs OP). Documents NP's amphiphilic-axis boundary. NP R2 recorded as honest near-exhaustion.
+    Next: DCP26 (Group D, R1 3x terminated on single-parameter-monotonic).
+
+last_updated: "2026-07-30"

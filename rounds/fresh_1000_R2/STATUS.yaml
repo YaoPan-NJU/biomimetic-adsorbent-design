@@ -85,11 +85,15 @@ pollutants:
   np:
     name: "壬基酚 NP"
     r1_status: "1 passed (A01=92), 4 terminated"
-    r2_angles_planned: 0
-    r2_attempted: 0
+    r2_angles_planned: 3   # 均非 A 级（诚实近耗尽，R1 已深挖）
+    r2_attempted: 1
     r2_passed: 0
-    r2_terminated: 0
-    status: "pending"
+    r2_terminated: 1
+    r2_revise: 0
+    angle_map: rounds/fresh_1000_R2/angle_maps/np_ANGLES.yaml
+    slots:
+      R2_S06_A01: { r1: "48 terminate (1c T1 structural)", status: terminated, file: "np/SCHEMES/R2_S06_A01_amphiphilic-interface-boundary_terminated.md", mechanism: "MECH_np_001", note: "amphiphilic interface partitioning = logKow-monotonic T1 vs OP; NP R1-deep-exhausted (A01=92 topology took best axis); honest near-exhaustion" }
+    status: "honest_exhaustion（R2 3 候选均非 A 级；R1 已明确深挖耗尽 NP 平衡结合空间 + 反应性 T8 封锁；代表性终止槽已开）"
   dcp26:
     name: "2,6-二氯苯酚 DCP26"
     r1_status: "0 passed, 3 terminated, 1 in_progress"
@@ -203,15 +207,15 @@ pollutants:
     r2_terminated: 0
     status: "pending"
 totals:
-  r2_attempted: 5
+  r2_attempted: 6
   r2_passed: 0
-  r2_terminated: 1
+  r2_terminated: 2
   r2_revise: 4
   prototype_library_size: 87   # +4 R2（PROTO_R2_001/002/003/004）
   prototype_library_target: 150
-  mechanism_maps: 5   # pfoa, pfbs, pfhxs, genx, bpa
-  angle_maps: 5       # pfoa, pfbs, pfhxs, genx, bpa
+  mechanism_maps: 6   # pfoa, pfbs, pfhxs, genx, bpa, np
+  angle_maps: 6       # pfoa, pfbs, pfhxs, genx, bpa, np
   a_group_coverage: "complete（PFOA/PFBS/PFHxS revise + GenX terminate）"
-  d_group_progress: "BPA slot 1 revise ~82（与 A01=86 互补的类去除路线）；下一 NP"
-  r2_score_trajectory_note: "A 组：PFOA~74/PFBS~72/PFHxS~82/GenX 41(term)；D 组：BPA~82；均未通过（R2 正交约束 + 平台饱和使通过本质难，诚实结果）"
-last_updated: "2026-07-30T02:00"
+  d_group_progress: "BPA revise ~82 + NP terminate 48（近耗尽）；下一 DCP26"
+  r2_score_trajectory_note: "6 槽 0 通过（4 revise + 2 terminate）；R2 正交约束 + 平台饱和/R1 深挖耗尽使通过本质难于 R1（SPEC 预期，诚实 N 优于凑数）；广度优先推进中"
+last_updated: "2026-07-30T03:30"

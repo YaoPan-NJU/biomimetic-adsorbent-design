@@ -161,3 +161,12 @@
 
 - D 组首槽完成（BPA revise ~82，与 A01=86 互补的类去除路线）。轮转 NP（D 组，R1 A01=92 通过，R1 深挖已诚实耗尽平衡结合空间，R2 须新正交轴）。
 - **诚实观察**：R2 前 5 槽 0 通过（4 revise + 1 terminate）。R2 正交约束（须避开 R1 已通过的最优角度）+ 平台饱和，使 R2 通过本质难于 R1；这是 SPEC 预期的诚实结果（诚实 N 优于凑数），非执行缺陷。后续可能需深度补角多轮迭代（同 R1 A01 的 5 轮）方能从 revise 推至通过。
+
+---
+
+## 2026-07-30 NP R2 slot 1（诚实近耗尽，英文精简处理）
+
+- 角度地图 `angle_maps/np_ANGLES.yaml`：R1 已深挖（A01=92 topology PASSED，A04/A06/A08/A10 terminated，平衡结合空间耗尽 + 反应性 T8 封锁）。R2 3 候选均非 A：amphiphilic-interface（B/T1）、chaotropic（X，NP 中性）、reactive-ipso（X/T8）。
+- slot R2_S06_A01（amphiphilic interface）r1 48 **terminate**（1c 结构性 T1）：amphiphilic partitioning 对 NP vs OP 为 logKow 单调（T1），无正交第二维（topology=A01 已占），不可重建。
+- 中间产物：MECH_np_001（负知识：NP amphiphilic 轴为 T1 陷阱，只有 topology 给正交选择性）。无新原型。
+- **NP R2 诚实近耗尽**（R1 已捕获可处理空间）。R2 累计 6 槽 0 通过（4 revise + 2 terminate）。下一 DCP26。

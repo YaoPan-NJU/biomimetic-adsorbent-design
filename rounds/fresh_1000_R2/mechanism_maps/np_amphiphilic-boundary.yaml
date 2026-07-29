@@ -1,0 +1,22 @@
+# Mechanism map — fresh_1000 Round 2
+mechanism_id: MECH_np_001
+pollutant: np
+mechanism_name: "Amphiphilic bilayer/admicelle-interface partitioning (terminated, T1 monotonic trap — NP amphiphilic-axis boundary)"
+biological_source: "Lipid-membrane / pulmonary-surfactant interfacial partitioning of amphiphiles (negative test)"
+material_implementation: "lipid-bilayer/admicelle-mimetic oriented amphiphilic interface (not advanced — structurally monotonic)"
+selectivity_signature:
+  primary_dimension: "amphiphilic interfacial partitioning (logKow-scaled)"
+  orthogonal_dimensions: ["none (degrades to single monotonic parameter vs OP; T1)"]
+aqueous_feasibility:
+  tfg_assessment: fail
+  reason: "NP vs OP both amphiphilic para-alkylphenols, near-degenerate logKow; interfacial partitioning cannot resolve them without a topology axis (=A01 occupied). Structural T1."
+verdict: terminated
+score: "48/100 (r1 terminate, 1 critical structural T1)"
+r1_overlap: false
+scheme_ref: "np/SCHEMES/R2_S06_A01_amphiphilic-interface-boundary_terminated.md"
+transferable_negative_knowledge: >
+  NP amphiphilic-axis boundary: NP's surfactant/amphiphilic behavior is NOT a selective recognition axis vs OP (logKow-degenerate,
+  T1 monotonic). Only NP's alpha-quaternary-carbon topology (A01, passed 92) resolves NP from OP, and it is occupied. Generalizes:
+  for neutral alkylphenol/amphiphile pollutants the amphiphilic-partitioning axis is a T1 trap; only branch-topology/shape gives
+  orthogonal selectivity. NP is honest near-exhaustion in R2 (R1 already captured the tractable space).
+last_updated: "2026-07-30"

@@ -414,7 +414,7 @@ PFOA R2 正交空间接近诚实耗尽：4 个候选 3 个 X 级、1 个 revise_
 ### 下一步行动（更新）
 
 1. **PFOA + PFBS Phase 0/量热门挂起**：PFOA DFT-SAPT anion-π 净选择性；PFBS 量热(ITC)+Phase 0 C4 趋液绝对 Ka 与 α(PFBS/SO₄²⁻)。均为仓库外动作，不阻断推进。
-2. **转 NP**（execution_order 第 6 位，D 组）：建 `angle_maps/np_ANGLES.yaml`（锁定 R1 A01=92 ipso-α-四级碳拓扑腔通过 + A04/A06/A08/A10 终止；R1 深挖已诚实耗尽平衡结合空间）→ Phase A+ 预筛新正交轴 → 开 slot 1 → 提取中间产物。
+2. **转 DCP26**（execution_order 第 7 位，D 组）：建 `angle_maps/dcp26_ANGLES.yaml`（锁定 R1 A01/A02/A03 均终止于单参数单调/区域异构体水相选择性先验低）→ Phase A+ 预筛 → slot 1 → 提取中间产物。
 3. 继续广度优先：20 种污染物各至少 1 个 R2 slot 后回溯补角。
 4. 每完成一个方案即提取中间产物并逐槽提交推送 `origin/Ultimate`。
 
@@ -424,11 +424,11 @@ PFOA R2 正交空间接近诚实耗尽：4 个候选 3 个 X 级、1 个 revise_
 
 | 指标 | 数值 |
 |------|------|
-| R2 已尝试 slot | 5（A 组 4 + D 组 BPA 1） |
+| R2 已尝试 slot | 6（A 组 4 + D 组 BPA/NP 2） |
 | R2 通过 | 0 |
-| R2 revise（含 Phase 0/量热挂起） | 4 |
-| R2 终止 | 1 |
+| R2 revise（含外部门挂起） | 4 |
+| R2 终止 | 2 |
 | 仿生原型库 | 87（目标 150） |
-| 机制映射 | 5 |
-| 角度地图 | 5（pfoa/pfbs/pfhxs/genx/bpa） |
-| A 组覆盖 | 完成（无通过）；D 组 BPA 已开（revise） |
+| 机制映射 | 6 |
+| 角度地图 | 6 |
+| A 组 | 完成（无通过）；D 组 BPA revise/NP terminate | 

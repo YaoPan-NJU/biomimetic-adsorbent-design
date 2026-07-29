@@ -98,6 +98,10 @@ knowledge_graph:
         name: "PXR 定向混杂大腔 + 双齿 avidity 双酚类捕获"
         pollutant: bpa
         map: mechanism_maps/bpa_pxr-avidity.yaml
+      - id: "MECH_np_001"
+        name: "NP amphiphilic-interface partitioning (terminated, T1 monotonic boundary)"
+        pollutant: np
+        map: mechanism_maps/np_amphiphilic-boundary.yaml
 
     # 材料平台（随 R2 推进持续扩展）
     materials:
@@ -150,12 +154,14 @@ knowledge_graph:
       - ["MECH_pfhxs_001", "pfhxs", "revise_with_phase0_~82"]
       - ["MECH_genx_001", "genx", "terminated_41_chaotropic_lower_bound"]
       - ["MECH_bpa_001", "bpa", "revise_with_phase0_~82"]
+      - ["MECH_np_001", "np", "terminated_48_amphiphilic_T1_boundary"]
   
   statistics:
     total_prototypes: 87  # 83 基线 + 4 R2（anion-π/Hofmeister 通道/OAT4 窗口/PXR 定向混杂）
-    total_mechanisms: 5
+    total_mechanisms: 6
     total_materials: 3
     total_pollutants: 20
-    connectivity_density: 0.22
+    connectivity_density: 0.25
+    r2_slots_note: "6 slots, 0 pass (4 revise-with-external-gate + 2 terminate); R2 orthogonality + prior-art saturation make passing harder than R1 (SPEC-anticipated honest result)"
     a_group_coverage: "complete (PFOA/PFBS/PFHxS revise + GenX terminate)"
     r2_note: "A 组 PFAS 头基-水合识别：anion-π=负债/趋液=资产（C6>C4>亲水）；D 组 BPA：PXR 定向混杂+双齿 avidity 类去除（与 A01 类内判别互补）"

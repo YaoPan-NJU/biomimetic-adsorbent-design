@@ -1,0 +1,40 @@
+# HCBD R2 angle map — fresh_1000 R2, pollutant 18/20 (Tier 3, Group B)
+# 2026-07-30 | Inherits R1 rounds/fresh_1000/hcbd (A02 in_progress halogen-bond-donor-array; SL05/SL12 revise) | English-heavy
+pollutant: hcbd
+pollutant_name: "HCBD hexachlorobutadiene (C4Cl6, fully chlorinated diene, vinylic sp2 C-Cl, no H-bond site, chemically inert, logKow 4.8, volatile, point-source target)"
+tier: 3
+group: "B (halogenated aliphatic)"
+r1_honest_ceiling: "in_progress (A02 S-grade halogen-bond-donor-array x hydrophobic)"
+r1_intrinsic_constraint: >
+  R1 covered HCBD with three angles: A02 (in_progress, S-grade) = halogen-bond-donor-array hydrophobic cavity (Lewis-base-lined
+  rigid microporous polymer, directional halogen-bond + non-directional hydrophobic orthogonal 2D); SL05_A01 (revise, tending
+  terminate) = CD-cavity length + rim halogen-bond; SL12_A04 (revise) = corrinoid reductive reactive capture. So the halogen-bond
+  axis, the hydrophobic-cavity axis, the CD-shape axis AND the reactive-reductive axis are ALL R1-occupied. HCBD has NO polar / no
+  aromatic / no charge handle (perchloro-diene, inert); its only recognition handles are halogen-bond + hydrophobic shape + reactive.
+r1_locked_angles:
+  - { angle_id: A02, mechanism: "halogen-bond-donor-array x hydrophobic cavity", status: in_progress, note: "S-grade; occupies halogen-bond + hydrophobic axes" }
+  - { angle_id: SL05_A01, mechanism: "CD-cavity length + rim halogen-bond", status: revise, note: "occupies CD-shape axis" }
+  - { angle_id: SL12_A04, mechanism: "corrinoid reductive reactive capture", status: revise, note: "occupies reactive-reductive axis" }
+r2_new_angles:
+  - angle_id: R2_A01
+    mechanism: "Chaotropic recognition (as PCP)"
+    pre_screen: { tfg: { conclusion: fail, note: "HCBD is NEUTRAL (no charge/anion); chaotropic/Hofmeister axis needs an ion. Not applicable" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A02
+    mechanism: "Halogen-bond pattern on 6 vinylic C-Cl (PROTO_R2_006 transfer)"
+    pre_screen: { tfg: { conclusion: fail, note: "R1-DEDUP fail: R1 A02 (in_progress, S-grade) already IS halogen-bond-donor-array; vinylic sp2 C-Cl also weaker than aromatic; not orthogonal" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A03
+    mechanism: "s-cis/s-trans conformer or diene pi recognition"
+    pre_screen: { tfg: { conclusion: fail, note: "the perchloro-diene pi is electron-poor and flexible (s-cis/s-trans); shape is R1-occupied (A02 hydrophobic + SL05 CD); no orthogonal-and-selective pi handle; HCE competitor near-degenerate" }, verdict: X }
+    status: excluded
+pre_screen_summary:
+  graded_A: 0
+  graded_B: 0
+  graded_X: 3
+  honest_exhaustion_note: >
+    HCBD R2 has NO viable orthogonal angle. R1 occupies FOUR axes (halogen-bond-donor-array + hydrophobic + CD-shape + reductive).
+    HCBD is a neutral, inert, perchloro-diene with no polar/aromatic/charge handle, so chaotropic is N/A, halogen-bond is
+    R1-occupied (and vinylic-Cl weaker than aromatic), and pi/shape is R1-occupied + HCE-degenerate. Honest near-exhaustion.
+  execution_decision: "Record HCBD R2 honest near-exhaustion; representative terminate slot R2_S18_A01. Next: Chloroform."
+last_updated: "2026-07-30"

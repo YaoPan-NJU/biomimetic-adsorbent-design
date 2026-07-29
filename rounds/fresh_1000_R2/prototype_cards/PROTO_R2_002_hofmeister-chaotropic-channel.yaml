@@ -8,7 +8,7 @@ biological_origin: >
   生物离子通道对阴离子的选择性/电导遵循 Hofmeister（lyotropic/趋液）序：弱水化（趋液，chaotropic）阴离子（如 SCN⁻、ClO4⁻）
   与通道内低电荷密度/疏水结合区作用更强，强水化（kosmotropic）阴离子（如 SO4²⁻、H2PO4⁻）作用弱。生物功能为离子通透与
   电导调制，而非从竞争水基质中选择性捕获阴离子。趋液效应的物化基础为高能水从疏水腔/结合区释放（焓-熵补偿，Nau/Assaf）。
-applicable_pollutants: ["pfbs", "pfhxs", "genx", "pfoa"]   # 弱水化 PFAS 阴离子头基普适；R2 后续按链长评估绝对亲和力
+applicable_pollutants: ["pfbs", "pfhxs", "genx", "pfoa", "pcp"]   # 弱水化 PFAS 阴离子头基普适；R2 extended to pcp (pentachlorophenolate = large hydrophobic chaotropic ORGANIC anion)
 recognition_mechanism: >
   按 Hofmeister 位次读取阴离子水化自由能：优先结合弱水化/趋液阴离子（PFAS 头基），内禀排斥强水化二价硫酸根/磷酸根。
   与 anion-π 方向相反（anion-π 偏好高电荷密度硫酸根=负债；趋液偏好弱水化 PFAS=资产）。绝对亲和力随链长（趋液性/疏水面积）
@@ -52,7 +52,11 @@ key_limitation: >
   PFOS（PFOS 更趋液→结合更强），类内分离须额外尺寸窗口（逆向链长，硬）。
 r1_used: false
 r2_first_used_in: "R2_S02_A01（PFBS 趋液 × C4 尺寸窗口）"
+r2_reuse_note: >
+  Reused in R2_S17_A01 (PCP, revise ~78): the chaotropic principle extends beyond PFAS to a large hydrophobic weakly-hydrated
+  ORGANIC anion (pentachlorophenolate); chlorination/hydrophobicity gradient gives correct-direction selectivity for the most-
+  substituted chlorophenol. Broadens the prototype's applicability domain from PFAS head-groups to hydrophobic organic acid anions.
 r2_outcome_note: >
   首次使用（PFBS）落 revise_with_phase0_prerequisite（~72/100）：趋液轴正面解决硫酸根竞争（方向正确），但 C4 短链绝对亲和力边缘
   + 逆向尺寸窗口排 PFOS 硬约束，主张收窄为 PFBS vs 无机阴离子。量热/Phase 0 门挂起。
-last_updated: "2026-07-29"
+last_updated: "2026-07-30"

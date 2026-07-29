@@ -1,0 +1,44 @@
+# BDE-209 R2 angle map — fresh_1000 R2, pollutant 20/20 (Tier 3, Group B) — FINAL pollutant
+# 2026-07-30 | Inherits R1 rounds/fresh_1000/bde209 (A07 passed 85 r5; A03 sigma-hole halogen-bond-array TERMINATED r5) | English-heavy
+pollutant: bde209
+pollutant_name: "BDE-209 decabromodiphenyl ether (C12Br10O, 10 aromatic Br, diphenyl-ether bridge, extreme logKow ~10, water solubility <100 ng/L)"
+tier: 3
+group: "B (brominated flame retardant)"
+r1_honest_ceiling: "85 (A07 passed, r5, 9th program pass)"
+r1_intrinsic_constraint: >
+  R1 A07 PASSED at 85 (r5, 9th program pass; all weaknesses driven to low over 5 rounds) - the occupied best angle. Critically,
+  R1 A03 (sigma-hole halogen-bond ARRAY) was worked to r5 and TERMINATED: aqueous halogen bond weak (ε_eff modulation is a design
+  assumption, COF micropore effect uncertain) + DBDPE (decabromodiphenyl ETHANE, the replacement) is very hard to distinguish
+  (identical Br pattern; differ only ether-O vs ethane bridge; B-center water stability poor, 3-dim additivity unverified). So the
+  halogen-bond-ARRAY axis is R1-EXPLORED-AND-TERMINATED. HONEST CORRECTION: the DDT PROTO_R2_006 halogen-bond-PATTERN transfer,
+  flagged as promising for BDE-209 (aromatic C-Br, stronger than C-Cl), was ALREADY tried in R1 (A03) and terminated because the
+  Br pattern is identical between BDE-209 and its co-occurring replacement DBDPE (pattern cannot resolve the ether-vs-ethane bridge).
+r1_locked_angles:
+  - { angle_id: A07, mechanism: "(passed, 5-round consolidated; occupied best angle)", status: passed, score: 85, note: "9th program pass; occupies BDE-209's viable angle" }
+  - { angle_id: A03, mechanism: "sigma-hole halogen-bond array", status: terminated, note: "r5 terminate: aqueous halogen bond weak + DBDPE Br-pattern-indistinguishable (ether vs ethane bridge)" }
+r2_new_angles:
+  - angle_id: R2_A01
+    mechanism: "Halogen-bond PATTERN on 10 aromatic Br (PROTO_R2_006 transfer, C-Br stronger than C-Cl)"
+    pre_screen: { tfg: { conclusion: fail, note: "R1-DEDUP fail + STRUCTURAL: R1 A03 already tried sigma-hole halogen-bond array and TERMINATED it because BDE-209 and DBDPE share an IDENTICAL Br pattern (differ only ether-O vs ethane bridge) - a halogen-pattern host cannot resolve them. Aromatic C-Br is stronger BUT the pattern is competitor-degenerate" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A02
+    mechanism: "Diphenyl-ether-oxygen recognition (the unique BDE-209 vs DBDPE feature)"
+    pre_screen: { tfg: { conclusion: fail, note: "the ether-O is the ONLY feature distinguishing BDE-209 from DBDPE, but it is a weak H-bond acceptor STERICALLY SHIELDED between two perbrominated aryl rings (buried, inaccessible); cannot be engaged selectively in water at <100 ng/L" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A03
+    mechanism: "AhR planar pi-stack class capture (as TCDD)"
+    pre_screen: { tfg: { conclusion: fail, note: "BDE-209 is NON-planar (deca-substitution + ether bridge force a large inter-ring twist), so the planar-pi-stack AhR host (PROTO_R2_007) does not fit; BDE-209 is also a weak AhR ligand vs planar dioxins" }, verdict: X }
+    status: excluded
+pre_screen_summary:
+  graded_A: 0
+  graded_B: 0
+  graded_X: 3
+  honest_exhaustion_note: >
+    BDE-209 R2 has NO viable orthogonal angle. R1 A07 passed (occupied best angle) and R1 A03 already EXPLORED-AND-TERMINATED the
+    halogen-bond array. The PROTO_R2_006 halogen-bond-PATTERN transfer (C-Br stronger than C-Cl) is BOTH R1-tried AND structurally
+    defeated by DBDPE Br-pattern-degeneracy (identical Br pattern; ether-vs-ethane bridge is the only difference). The distinguishing
+    ether-O is sterically shielded; AhR pi-stack (PROTO_R2_007) fails because BDE-209 is non-planar. Honest near-exhaustion.
+    This CLOSES the DDT halogen-bond-pattern transfer analysis: the route is AROMATIC-halogen-only AND requires the halogen pattern
+    to be competitor-DISTINGUISHING (fails for BDE-209 vs DBDPE) AND the halogen-bond axis to be R1-unoccupied (fails for TCDD/PCB/BDE).
+  execution_decision: "Record BDE-209 R2 honest near-exhaustion; representative terminate slot R2_S20_A01. **20/20 COVERAGE COMPLETE (M2).** Breadth-first done."
+last_updated: "2026-07-30"

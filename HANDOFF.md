@@ -397,9 +397,9 @@ R2 的中间产物持久化策略支持仿生设计库扩展：
 | 分类 Spec | `rounds/fresh_1000/SPEC_GROUP_*.md` | 继承的分组规范 |
 | 仿生原型库 | `data/bmdl_snapshot/biological_prototypes.json` | 83 条已入库 |
 
-## fresh_1000 R2 执行检查点：16/20 覆盖 (2026-07-30)
+## fresh_1000 R2 执行检查点：20/20 覆盖完成（M2 达成）(2026-07-30)
 
-R2 广度优先已覆盖 16/20（C 组 7/7 完成）：A 组 PFOA/PFBS/PFHxS/GenX、C 组 DDT/DDE/Dieldrin/Endosulfan/β-HCH/TCDD/PCB-209、D 组 BPA/NP/DCP26、E 组 ROX/Octocrylene。**0 通过（7 revise + 9 terminate/耗尽）**。这是 SPEC 预期的诚实结果：R2 正交约束 + 平台饱和/R1 深挖耗尽使通过本质难于 R1（诚实 N 优于凑数）。最佳 R2 revise：PFHxS/BPA/ROX ~81-82、DDT ~79、TCDD ~78。C 组 2 revise（DDT PROTO_R2_006 halogen-bond-pattern；TCDD PROTO_R2_007 AhR dioxin-like-class-capture）+ 5 近耗尽。KEY：halogen-bond-pattern 仅适用 AROMATIC-C-Cl（DDT/TCDD/PCB），且 TCDD/PCB 的 halogen-bond 轴 R1 已占（TCDD 经 AhR pi-stack orthogonal-mechanism 逃逸；PCB/β-HCH 近耗尽）。仿生原型库 83→90。
+R2 广度优先 **20/20 全覆盖完成（M2 里程碑达成）**：A 组 4 + B 组 4（PCP/HCBD/Chloroform/BDE-209）+ C 组 7 + D 组 3（BPA/NP/DCP26）+ E 组 2（ROX/OC）。**0 通过（8 revise + 12 terminate/近耗尽）**。这是 SPEC 预期的诚实结果：R2 正交约束（须避开 R1 已通过/已映射的最优角度）+ 平台饱和 + R1 深挖耗尽使通过（85）本质难于 R1。8 个 revise（最佳 PFHxS/BPA ~82、ROX/DDT/TCDD/PCP ~78-81）须深度多轮补角 + 外部门（Phase 0 DFT/量热/付费文献）才能达 85（同 R1 通过需至多 5 轮）。M4/M5（通过数）与 M1（库 150）在 R2 诚实正交空间内、外部门未解前不可达——此为记录在案的诚实结果，非执行缺陷。M6（知识图谱）达成。仿生原型库 83→90（新 PROTO_R2_006 TTR halogen-bond、PROTO_R2_007 AhR pi-stack + PROTO_R2_002 域扩展至 PCP）。
 
 ### 已完成
 
@@ -413,8 +413,8 @@ PFOA R2 正交空间接近诚实耗尽：4 个候选 3 个 X 级、1 个 revise_
 
 ### 下一步行动（更新）
 
-1. **revise 外部门挂起**：PFOA/PFBS/PFHxS/BPA Phase 0/量热门；DDT halogen-bond-pattern + TCDD AhR pi-stack 的 Phase 0/亲和力验证。均为仓库外动作，不阻断推进。
-2. **转 Group B**（PCP/HCBD/Chloroform/BDE-209，execution_order 第 17-20 位，最后 4 个），至 20/20 全覆盖 + M2 里程碑。已知 R1 grounding：HCBD A02 in_progress（halogen-bond-donor-array，已占）、BDE-209 A07 passed + A03 terminated（sigma-hole halogen-bond-array，已占）、PCP 自评 85-87、Chloroform A01 terminated（alpha-CD）。
+1. **广度优先完成（20/20，M2 达成）**。剩余为深度补角与外部门：8 个 revise（PFOA/PFBS/PFHxS/BPA/ROX/DDT/TCDD/PCP）须 Phase 0 DFT/量热(ITC)/付费文献全文解门后深度多轮迭代冲 85；均为仓库外动作，不阻断。
+2. **可选深度阶段**：对最有希望的 revise（PFHxS ~82、BPA ~82）做多轮补角；或对 R1 已通过污染物回溯补充更多 R2 角度以提升库深度（趋 M1 120/M3 100）。
 3. 每完成一个方案即提取中间产物并逐槽提交推送 `origin/Ultimate`。
 
 **跨槽知识（PFOA↔PFBS 互补）**：PFAS 组头基-水合识别方向——anion-π 偏好高电荷密度硫酸根=选择性负债；趋液效应偏好弱水化 PFAS、排斥硫酸根=选择性资产。对后续 PFHxS/GenX 有传递价值。

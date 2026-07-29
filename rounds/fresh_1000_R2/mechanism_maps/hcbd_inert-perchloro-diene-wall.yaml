@@ -1,0 +1,18 @@
+# Mechanism map — fresh_1000 R2
+mechanism_id: MECH_hcbd_001
+pollutant: hcbd
+mechanism_name: "HCBD inert-perchloro-diene wall (honest near-exhaustion — four axes R1-occupied, no charge/aromatic/polar handle)"
+biological_source: "n/a (R1 occupies halogen-bond-array + hydrophobic + CD-shape + reductive; no orthogonal prototype)"
+material_implementation: "n/a (all R2 candidates X-graded)"
+selectivity_signature:
+  primary_dimension: "halogen-bond-donor-array x hydrophobic (R1-occupied A02)"
+  orthogonal_dimensions: ["none viable (chaotropic N/A for neutral HCBD; halogen-pattern R1-occupied + vinylic-Cl weak; pi/shape R1-occupied + HCE-degenerate)"]
+aqueous_feasibility: { tfg_assessment: fail, note: "neutral inert perchloro-diene; only halogen-bond+hydrophobic+reactive handles, all R1-occupied; no charge/aromatic/polar axis" }
+verdict: terminated_near_exhaustion
+score: "~45 (r1 terminate, structural)"
+r1_overlap: false
+scheme_ref: "hcbd/SCHEMES/R2_S18_A01_inert-perchloro-diene-wall_terminated.md"
+transferable_negative_knowledge: >
+  A small neutral inert perchloro-diene offers only halogen-bond + hydrophobic + reactive handles (all R1-occupied) and NO
+  charge/aromatic/polar axis for an orthogonal R2 angle (chaotropic needs an ion). Honest near-exhaustion.
+last_updated: "2026-07-30"

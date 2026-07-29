@@ -1,0 +1,38 @@
+# Chloroform R2 angle map — fresh_1000 R2, pollutant 19/20 (Tier 3, Group B)
+# 2026-07-30 | Inherits R1 rounds/fresh_1000/chloroform (A01=45 terminated alpha-CD) | English-heavy
+pollutant: chloroform
+pollutant_name: "Chloroform CHCl3 (smallest target: 5 atoms, only 3 aliphatic C-Cl, weak polar logKow ~2, volatile DBP, drinking-water target 10-190 ug/L)"
+tier: 3
+group: "B (trihalomethane DBP)"
+r1_honest_ceiling: 45
+r1_intrinsic_constraint: >
+  R1 A01 (alpha-CD size matching) TERMINATED at 45: ug/L affinity gap + size difference ~0.5 Angstrom + innovation checklist ALL
+  fail. Chloroform is the SMALLEST/HARDEST target in the program: a 5-atom molecule with only 3 aliphatic C-Cl and a weak C-H,
+  no aromatic ring, no charge, no distinctive polar group. Its only handles are its small size/shape and 3 sp3 C-Cl. Removal is
+  dominated by volatility/air-stripping in practice, not selective adsorption. Competitors: BDCM/DBCM/bromoform + HAA/HAN DBPs.
+r1_locked_angles:
+  - { angle_id: A01, mechanism: "alpha-CD size matching", status: terminated, score: 45, failure: "ug/L affinity gap + 0.5 A size diff + innovation checklist all fail" }
+r2_new_angles:
+  - angle_id: R2_A01
+    mechanism: "Halogen-bond on 3 aliphatic C-Cl (PROTO_R2_006 transfer)"
+    pre_screen: { tfg: { conclusion: fail, note: "ALIPHATIC (sp3) C-Cl, weak sigma-holes (aromatic-only boundary, cf beta-HCH); only 3 Cl (sparse pattern); ug/L target -> cannot clear affinity. Not viable" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A02
+    mechanism: "C-H halogen-adjacent weak H-bond-donor recognition"
+    pre_screen: { tfg: { conclusion: fail, note: "chloroform's C-H is a very weak H-bond donor; a single weak C-H...B contact cannot deliver ug/L aqueous affinity or selectivity vs other THMs" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A03
+    mechanism: "Confinement / molecular-sieve size exclusion"
+    pre_screen: { tfg: { conclusion: fail, note: "= the R1 alpha-CD size axis (occupied, terminated); 0.5 A size difference from co-THMs is below reliable aqueous size-discrimination; ug/L affinity gap intrinsic" }, verdict: X }
+    status: excluded
+pre_screen_summary:
+  graded_A: 0
+  graded_B: 0
+  graded_X: 3
+  honest_exhaustion_note: >
+    Chloroform R2 has NO viable orthogonal angle. It is the smallest/hardest target: only 3 ALIPHATIC C-Cl (halogen-bond aromatic-
+    only boundary applies + sparse pattern), a very weak C-H donor, and only a size/shape handle (R1 alpha-CD terminated on the
+    ug/L affinity gap + 0.5 A discrimination). No aromatic/charge/polar handle exists. Honest near-exhaustion (the clearest
+    "too-small-no-handle" case in the program; real-world removal is volatility-driven, not selective adsorption).
+  execution_decision: "Record Chloroform R2 honest near-exhaustion; representative terminate slot R2_S19_A01. Next: BDE-209."
+last_updated: "2026-07-30"

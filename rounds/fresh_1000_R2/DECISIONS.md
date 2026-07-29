@@ -251,3 +251,35 @@ Group-C final tally: 2 revise (DDT PROTO_R2_006 halogen-bond-pattern; TCDD PROTO
 Two new prototypes this Group. Refined transferable knowledge: (1) halogen-bond-PATTERN route is AROMATIC-C-Cl-only; (2) for
 aromatic-Cl targets whose halogen-bond axis is R1-occupied (TCDD/PCB), the escape is an evolved-receptor pi-stack/shape CLASS-capture
 angle (AhR), not more halogen bonding. Next: Group B (PCP/HCBD/Chloroform/BDE-209) to reach 20/20 + M2 milestone.
+
+---
+
+## 2026-07-30 Batch: PCP + HCBD + Chloroform + BDE-209 R2 slots (Group B) -> 20/20 COVERAGE COMPLETE (M2 + M6 achieved)
+
+Processed the final 4 pollutants (Group B). Deep R1-grounding again reshaped the assessment (PCP's R1 map already contained the
+halogen-bond angles), and the DDT PROTO_R2_006 transfer analysis was closed out across all polyhalogen targets.
+
+- **PCP (slot R2_S17_A01, revise ~78, 0c/1h)**: R1 mapped 16 angles including A01 TTR-halophenol (= PROTO_R2_006 halogen-bond) +
+  A03 five-point sigma-hole + A02 H-bond + A04 beta-CD (self-eval pass) + A07 reductive. So the halogen-bond transfer is R1-MAPPED
+  here too. The genuinely orthogonal R2 angle is **chaotropic recognition of the pentachlorophenolate anion** (PCP anion = large
+  hydrophobic weakly-hydrated ORGANIC anion) -> **PROTO_R2_002 REUSE** (from PFBS/PFHxS), orthogonal to all 5 R1-mapped axes
+  (hydration-thermodynamic axis). Chlorination gradient FAVORS PCP (most chaotropic chlorophenol). Ceiling ~78-80 (intra-penta/tetra
+  narrow + chaotropic-host prior art). MECH_pcp_001. Broadens PROTO_R2_002 domain: PFAS head-groups -> hydrophobic organic acid anions.
+- **HCBD (slot R2_S18_A01, terminate ~45, near-exhaustion)**: R1 occupies 4 axes (A02 halogen-bond-donor-array + hydrophobic; SL05
+  CD-shape; SL12 reductive). Neutral inert perchloro-diene with no charge/aromatic/polar handle (chaotropic N/A). MECH_hcbd_001.
+- **Chloroform (slot R2_S19_A01, terminate ~42, near-exhaustion)**: smallest/hardest target - 5-atom neutral THM, only 3 aliphatic
+  C-Cl (weak) + a size handle (R1 alpha-CD terminated on ug/L gap). Real-world removal is volatility-driven. MECH_chloroform_001.
+- **BDE-209 (slot R2_S20_A01, terminate ~46, near-exhaustion)**: A07 passed (occupied); A03 halogen-bond-array R1-TERMINATED because
+  BDE-209 and DBDPE share an IDENTICAL Br pattern (differ only ether-vs-ethane bridge) - halogen pattern cannot resolve them; ether-O
+  sterically shielded; AhR pi-stack N/A (non-planar). MECH_bde209_001.
+
+**R2 FINAL (breadth-first complete): 20/20 COVERED, 0 pass (8 revise + 12 terminate/near-exhaustion), prototype library 90, 20 mechanism maps, 20 angle maps.**
+**Milestones: M2 (all-20 coverage) ACHIEVED; M6 (knowledge graph) ACHIEVED. M1 (library 120)=90 pending; M3 (100 schemes)=20 pending; M4/M5 (30/60 passed)=0 pending.**
+
+Honest program conclusion (SPEC-anticipated, honest N > padding): R2's orthogonality-to-R1 constraint + prior-art saturation + R1
+deep-exhaustion make PASSING (85) intrinsically harder than R1. Breadth-first coverage is DONE (M2); the 8 revises need deep
+multi-round backfill + EXTERNAL gates (Phase 0 DFT / calorimetry / paid literature) to reach 85 - as R1's own passes needed up to
+5 rounds. Those gates are out-of-repo and cannot be resolved here. The pass targets (M4/M5) and library-150 (M1) are therefore
+not reachable within R2's honest orthogonal space this session; this is the documented honest outcome. Two new R2 prototypes
+(PROTO_R2_006 TTR halogen-bond, PROTO_R2_007 AhR pi-stack) + PROTO_R2_002 domain-broadening are the net library gain.
+DDT halogen-bond-pattern transfer analysis CLOSED: valid only for AROMATIC-C-Cl + competitor-distinguishing + R1-unoccupied (only DDT qualified).

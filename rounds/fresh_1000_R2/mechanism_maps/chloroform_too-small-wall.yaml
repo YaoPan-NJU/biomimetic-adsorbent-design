@@ -1,0 +1,18 @@
+# Mechanism map — fresh_1000 R2
+mechanism_id: MECH_chloroform_001
+pollutant: chloroform
+mechanism_name: "Chloroform too-small-no-handle wall (honest near-exhaustion — 5-atom neutral THM, only weak aliphatic-Cl + size)"
+biological_source: "n/a (R1 alpha-CD size terminated; no orthogonal prototype)"
+material_implementation: "n/a (all R2 candidates X-graded)"
+selectivity_signature:
+  primary_dimension: "size/shape (R1 alpha-CD, terminated on ug/L affinity gap)"
+  orthogonal_dimensions: ["none viable (aliphatic-Cl halogen-bond weak + sparse [3 Cl]; weak C-H donor; size axis R1-terminated)"]
+aqueous_feasibility: { tfg_assessment: fail, note: "5-atom neutral molecule, no aromatic/charge/polar handle; ug/L affinity gap intrinsic; real-world removal is volatility-driven" }
+verdict: terminated_near_exhaustion
+score: "~42 (r1 terminate, structural)"
+r1_overlap: false
+scheme_ref: "chloroform/SCHEMES/R2_S19_A01_too-small-no-handle-wall_terminated.md"
+transferable_negative_knowledge: >
+  Selective aqueous adsorption is infeasible for tiny neutral trihalomethanes: only weak aliphatic-Cl (aromatic-only halogen-bond
+  boundary) + a size handle (R1-terminated on ug/L affinity). Clearest small-molecule exhaustion case. Honest near-exhaustion.
+last_updated: "2026-07-30"

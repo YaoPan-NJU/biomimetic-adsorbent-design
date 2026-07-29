@@ -1,0 +1,19 @@
+# Mechanism map — fresh_1000 R2
+mechanism_id: MECH_bde209_001
+pollutant: bde209
+mechanism_name: "BDE-209 A07-passed + halogen-bond-R1-terminated wall (honest near-exhaustion; closes PROTO_R2_006 transfer analysis)"
+biological_source: "n/a (R1 A07 passed occupied; A03 halogen-bond-array terminated; no orthogonal prototype)"
+material_implementation: "n/a (all R2 candidates X-graded)"
+selectivity_signature:
+  primary_dimension: "R1 A07 passed (occupied best angle)"
+  orthogonal_dimensions: ["none viable (halogen-bond-array R1-terminated + DBDPE Br-pattern-degenerate; ether-O sterically shielded; AhR pi-stack fails - non-planar)"]
+aqueous_feasibility: { tfg_assessment: fail, note: "halogen-pattern R1-tried-terminated + competitor-degenerate (BDE-209 vs DBDPE identical Br pattern, differ only ether-vs-ethane bridge); ether-O buried; non-planar so AhR N/A" }
+verdict: terminated_near_exhaustion
+score: "~46 (r1 terminate, structural)"
+r1_overlap: false
+scheme_ref: "bde209/SCHEMES/R2_S20_A01_A07-passed-halogen-terminated-wall_terminated.md"
+transferable_negative_knowledge: >
+  CLOSES the PROTO_R2_006 halogen-bond-pattern transfer analysis: the route needs (i) AROMATIC halogen (not aliphatic, cf beta-HCH),
+  (ii) the halogen pattern to be competitor-DISTINGUISHING (fails BDE-209 vs DBDPE), (iii) the halogen-bond axis R1-unoccupied
+  (fails TCDD/PCB/BDE). DDT is the one target where all three held. 20/20 coverage complete.
+last_updated: "2026-07-30"

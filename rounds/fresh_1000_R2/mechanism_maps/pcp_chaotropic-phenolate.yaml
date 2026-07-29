@@ -1,0 +1,20 @@
+# Mechanism map — fresh_1000 R2
+mechanism_id: MECH_pcp_001
+pollutant: pcp
+mechanism_name: "PCP chaotropic recognition of the pentachlorophenolate anion (PROTO_R2_002 reuse; orthogonal to R1 halogen-bond/H-bond/shape/reactive) — revise"
+biological_source: "Biological anion channels' Hofmeister/chaotropic selectivity (PROTO_R2_002, from PFBS/PFHxS)"
+material_implementation: "Chaotropic-selective high-energy-water-release macrocyclic cavity (cucurbituril/CD-derived) sized to the pentachlorophenolate; hydrophobic lining rejects strongly-hydrated competitors"
+selectivity_signature:
+  primary_dimension: "hydration thermodynamics (chaotropicity of the large hydrophobic pentachlorophenolate anion)"
+  orthogonal_dimensions: ["orthogonal to ALL 5 R1-mapped PCP axes (A01 TTR halogen-bond, A02 H-bond, A03 five-point sigma-hole, A04 beta-CD shape, A07 reductive)"]
+aqueous_feasibility: { tfg_assessment: pass, note: "PCP anion is genuinely chaotropic; chaotropic host-guest aqueous-viable; chlorination gradient FAVORS PCP (most chaotropic chlorophenol) - correct-direction selectivity" }
+verdict: revise
+score: "~78 (0c/1h, ceiling ~78-80)"
+r1_overlap: false
+scheme_ref: "pcp/SCHEMES/R2_S17_A01_chaotropic-pentachlorophenolate_revise.md"
+prototype_ref: "PROTO_R2_002 (reuse)"
+transferable_knowledge: >
+  The chaotropic recognition principle (PROTO_R2_002) extends beyond PFAS to any large, hydrophobic, weakly-hydrated ORGANIC anion
+  (chlorophenolates, other hydrophobic acid anions); chlorination/hydrophobicity gradient gives correct-direction selectivity for
+  the most-substituted congener. Also: PROTO_R2_006 halogen-bond transfer is R1-mapped for PCP (A01 TTR + A03 five-point).
+last_updated: "2026-07-30"

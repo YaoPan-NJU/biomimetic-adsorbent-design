@@ -1,0 +1,40 @@
+# 仿生原型卡片 — fresh_1000 Round 2
+# 每个新发现的仿生原型独立成卡（SPEC 3.1a）
+
+prototype_id: PROTO_R2_004
+name: "PXR 定向混杂（大容忍疏水腔 + 少量锚点）"
+source_type: protein
+biological_origin: >
+  人源异生物质核受体 PXR（NR1I2）以大而柔性的疏水配体结合腔 + 少量极性锚点实现"定向混杂"（directed promiscuity）：
+  结合结构高度多样的异生物质/内源物（类固醇、药物、双酚类等），用于异生物质传感与代谢酶诱导。生物功能为传感/代谢诱导，
+  非从水相选择捕获污染物。
+applicable_pollutants: ["bpa"]   # 双酚类/多官能团类去除；可迁移至其他 regrettable-substitute 类
+recognition_mechanism: >
+  大容忍疏水腔容纳骨架多样性 + 少量锚点提供方向性——"容忍性广谱识别"设计原理。转译为类去除材料时，配合双齿 avidity
+  （2 锚点识别双官能团骨架 vs 单官能团）实现类选择性（多官能团骨架 vs 单官能团），而非按 logKow 单调。
+literature_support:
+  - doi: "10.1021/bi901578n（PMC2789303，Ngan 2009）"
+    title: "The structural basis of pregnane X receptor binding promiscuity"
+    year: 2009
+    claim_supported: "PXR 大疏水腔 + 少锚 = 定向混杂结合结构多样化合物（计算溶剂映射解析混杂结构来源，106 引）"
+    evidence_tier: source_backed_lead
+  - doi: "Watkins 2001 Science（DOI 待全文核）"
+    title: "The Human Nuclear Xenobiotic Receptor PXR: Structural Determinants of Directed Promiscuity"
+    year: 2001
+    claim_supported: "PXR 定向混杂的结构决定因素（大疏水腔 + 少量极性锚）"
+    evidence_tier: source_backed_lead
+translation_distance_note: >
+  转译距离大：PXR 生物功能为异生物质传感/代谢诱导（非水相捕获），双酚为其配体之一（approach-3 边界）。
+  本方案转译的是"大腔 + 少锚 = 容忍性广谱识别"设计原理（approach-1/2，同 A01 用 DmpR 传感原理），C 维诚实类比级不通过。
+evolution_solution_judgement: >
+  条件性通过 G2：PXR 定向混杂为进化出的广谱异生物质识别原理（非 SELEX/非配位），但进化目的为传感/代谢诱导，
+  与"选择性水相类捕获"仅设计原理类比。承载机制类比级仿生强度，用于类去除设计范式（大腔容忍 + 双齿 avidity）。
+key_role: >
+  与 A01（DmpR 固定锚 + 桥连区空间门，类内 BPA-vs-BPF 判别）互补：PXR 定向混杂用于双酚类去除（容忍桥多样性 +
+  双齿 avidity 区分双酚 2 锚 vs 单环酚 1 锚），面向共存 regrettable substitutes（BPF/BPS/BPAF）。
+r1_used: false   # R1 BPA DESIGN_SPACE 列 A10（PXR 定向混杂）为枚举未开启角度，R2 首次开启并成卡
+r2_first_used_in: "R2_S05_A01（BPA PXR 定向混杂 + 双齿 avidity 类捕获）"
+r2_outcome_note: >
+  首次使用（BPA）落 revise_with_phase0_prerequisite（~82）：原型真实、类去除工程价值真实，但双酚类 COF/MIP 平台饱和
+  封顶原创性 + 酚锚水相弱氢键使 avidity 磁度须量热确认。
+last_updated: "2026-07-30"

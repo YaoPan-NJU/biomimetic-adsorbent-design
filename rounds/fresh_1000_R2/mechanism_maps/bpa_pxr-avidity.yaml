@@ -1,0 +1,30 @@
+# 机制映射记录 — fresh_1000 Round 2
+# 每个机制-污染物组合独立记录（SPEC 3.1b）
+
+mechanism_id: MECH_bpa_001
+pollutant: bpa
+mechanism_name: "PXR 定向混杂大腔 + 双齿 avidity 双酚类捕获（类去除，正交于 A01 类内判别）"
+biological_source: "PXR 定向混杂（PROTO_R2_004）"
+material_implementation: >
+  大腔多孔有机聚合物 POP/HCP，孔内两个间隔约 0.8-1.0 nm 酚锚点嵌于容忍性疏水大腔。轴 1 双齿 avidity（双酚 2 锚 >> 单环酚 1 锚，
+  非 logKow 单调）；轴 2 PXR 型大容忍疏水腔（容纳双酚骨架 + 桥多样性）。酚锚仅作定位（规避 A02 单点水相弱氢键依赖）。
+selectivity_signature:
+  primary_dimension: "双齿 avidity 几何（2 点 vs 1 点，双酚类 vs 单环酚，非单调）"
+  orthogonal_dimensions:
+    - "PXR 型大容忍疏水腔（容纳桥多样性，类捕获 BPA/BPF/BPS/BPAF）"
+  causal_control: "单锚变体 M-mono（avidity kill）+ 锚间距系列 + 类面板（双酚 vs 单环酚）+ ITC 双齿 vs 单齿结合焓 + 雌激素活性闭合"
+aqueous_feasibility:
+  tfg_assessment: borderline
+  strength: "双齿 avidity 非单调（规避 T1 疏水单调）；类去除工程价值真实（regrettable substitutes）"
+  weakness: "酚锚水相氢键本质弱（A02 教训），双齿 avidity 增益（2×弱）达 ng/L + 足够 avidity 选择性须量热(ITC)确认"
+verdict: revise_with_phase0_prerequisite
+score: "~82（区间 80-84）"
+r1_overlap: false
+r1_overlap_note: >
+  R1-DEDUP 通过：与 A01（DmpR 固定锚+桥连区空间门，类内判别）选择性哲学相反（类去除）；机制（定向混杂+avidity vs 固定锚+门）、
+  原型（PXR vs DmpR）、材料（大腔 POP vs 晶态 β-酮烯胺 COF）三重正交。非对称大腔非 T4 刚性会聚钳。
+scheme_ref: "bpa/SCHEMES/R2_S05_A01_PXR-bidentate-avidity-class-capture_revise.md"
+transferable_knowledge: >
+  双齿 avidity（2 点 vs 1 点）"多官能团骨架 vs 单官能团"类选择性原理 + PXR 定向混杂类去除设计范式，可迁移至其他 regrettable-substitute
+  类去除。与 A01 互补构成 BPA 判别（类内）/去除（全类）双策略。角度内禀约束：双酚类 COF/MIP 平台饱和封顶原创性；酚锚水相弱。
+last_updated: "2026-07-30"

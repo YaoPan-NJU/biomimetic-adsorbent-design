@@ -73,11 +73,15 @@ pollutants:
   bpa:
     name: "双酚 A BPA"
     r1_status: "1 passed (A01=86), 4 terminated"
-    r2_angles_planned: 0
-    r2_attempted: 0
+    r2_angles_planned: 3   # R2_A01 A 级 + R2_A02 B(deferred) + R2_A03 X
+    r2_attempted: 1
     r2_passed: 0
     r2_terminated: 0
-    status: "pending"
+    r2_revise: 1
+    angle_map: rounds/fresh_1000_R2/angle_maps/bpa_ANGLES.yaml
+    slots:
+      R2_S05_A01: { r1: "68 (1c/2h)", r2: "~82 revise_with_phase0_prerequisite (0c/1h)", status: revise_with_phase0_prerequisite, file: "bpa/SCHEMES/R2_S05_A01_PXR-bidentate-avidity-class-capture_revise.md", prototype: "PROTO_R2_004 PXR 定向混杂", mechanism: "MECH_bpa_001", note: "PXR 定向混杂大腔 + 双齿 avidity 双酚类去除（正交于 A01 类内判别，与 A01 互补）；未达 85 因双酚 COF/MIP 平台饱和封顶原创 + 酚锚水相弱（A02 教训）avidity 磁度须量热确认；量热门挂起" }
+    status: "phase_b（R2_A01 落 revise_with_phase0_prerequisite ~82/100 0c/1h；D 组首槽；量热门挂起后轮转 NP）"
   np:
     name: "壬基酚 NP"
     r1_status: "1 passed (A01=92), 4 terminated"
@@ -199,14 +203,15 @@ pollutants:
     r2_terminated: 0
     status: "pending"
 totals:
-  r2_attempted: 4
+  r2_attempted: 5
   r2_passed: 0
   r2_terminated: 1
-  r2_revise: 3
-  prototype_library_size: 86   # +3 R2（PROTO_R2_001/002/003）
+  r2_revise: 4
+  prototype_library_size: 87   # +4 R2（PROTO_R2_001/002/003/004）
   prototype_library_target: 150
-  mechanism_maps: 4   # pfoa, pfbs, pfhxs, genx
-  angle_maps: 4       # pfoa, pfbs, pfhxs, genx
-  a_group_coverage: "complete（PFOA/PFBS/PFHxS revise_with_phase0 + GenX terminate/耗尽）"
-  r2_score_trajectory_note: "A 组 PFAS 诚实轨迹：PFOA ~74 / PFBS ~72 / PFHxS ~82 / GenX 41(terminate)；趋液路线适用性映射 C6>C4>亲水ether-carboxylate；无通过（A 组近耗尽，符合 R1 仅 2 通过）；下一步转 D 组 BPA 通过更可期"
-last_updated: "2026-07-30T00:30"
+  mechanism_maps: 5   # pfoa, pfbs, pfhxs, genx, bpa
+  angle_maps: 5       # pfoa, pfbs, pfhxs, genx, bpa
+  a_group_coverage: "complete（PFOA/PFBS/PFHxS revise + GenX terminate）"
+  d_group_progress: "BPA slot 1 revise ~82（与 A01=86 互补的类去除路线）；下一 NP"
+  r2_score_trajectory_note: "A 组：PFOA~74/PFBS~72/PFHxS~82/GenX 41(term)；D 组：BPA~82；均未通过（R2 正交约束 + 平台饱和使通过本质难，诚实结果）"
+last_updated: "2026-07-30T02:00"

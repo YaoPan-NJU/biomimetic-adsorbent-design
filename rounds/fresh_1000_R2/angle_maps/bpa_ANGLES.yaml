@@ -1,0 +1,127 @@
+# BPA R2 角度地图
+# fresh_1000 Round 2 — 污染物 5/20（梯队 2，D 组 酚类/内分泌干扰物）
+# 生成日期：2026-07-30
+# 继承：rounds/fresh_1000/bpa/BRIEF.md + DESIGN_SPACE.md（R1 Phase A，23 角度）
+# 去重基准：rounds/fresh_1000_R2/R1_OCCUPIED_SPACE.yaml
+
+pollutant: bpa
+pollutant_name: "双酚 A BPA（4,4'-异丙叉二酚，中性双酚，pKa~9.6-10.2）"
+tier: 2
+group: "D（酚类/内分泌干扰物）"
+r1_phase_a_files:
+  brief: rounds/fresh_1000/bpa/BRIEF.md
+  design_space: rounds/fresh_1000/bpa/DESIGN_SPACE.md
+r1_honest_ceiling: 23
+r1_intrinsic_constraints: >
+  BPA 硬约束：中性分子（阴离子头基识别轴家族整体缺席）；居中疏水性（BPS<BPF<BPA<BPAF，任何 logKow/尺寸单调选择性对 BPA
+  结构性无解，T1）；approach-3 排除（ERRγ 毒性受体，portfolio_100 二十案无一达 85）；先例密度饱和（MIP/生物炭/CD/COF 簇成熟）；
+  **酚氧水相氢键本质弱**（A02 终止的核心，水强烈竞争）。承重仿生源为 approach-1（DmpR 酚感应、PXR 定向混杂、ERβ 体积窗口、TTR 卤酚通道）。
+
+r1_locked_angles:
+  - angle_id: A01
+    mechanism: "DmpR 型固定酚锚 + 桥连区空间门 + 晶态 β-酮烯胺 COF"
+    scheme: S14_A01
+    status: passed
+    score: 86
+    r2_dedup_note: "R2 不得用固定酚锚+桥连区空间门（DmpR 原型，锚定端不变只调门）；材料不得为晶态 β-酮烯胺 COF"
+  - angle_id: A02
+    mechanism: "脲/硫脲/Hamilton 定向多点氢键供体酚氧识别"
+    scheme: S13_A02
+    status: terminated
+    score: 62
+    failure_mode: "FM2/水相弱氢键（酚氧水相氢键近热中性，旗舰 α≥3 对 BPA 全疏水逆风）"
+    r2_dedup_note: "R2 不得单纯依赖酚氧定向氢键（水相弱，A02 已证）"
+  - angle_id: A03
+    mechanism: "异丙叉固定酚-酚间距 C2 几何标尺"
+    scheme: S15_A03
+    status: terminated
+    score: 64
+    failure_mode: "FM2（BPA/BPF O-O 距离重叠，二面角标尺降为构象熵间接通道）"
+  - angle_id: A04
+    mechanism: "ERβ 型口袋体积阈值窗口"
+    scheme: S44_A04
+    status: terminated
+    score: 52
+    failure_mode: "FM3（非单调体积阈值热力学不成立 + 无生物先例）"
+  - angle_id: A07
+    mechanism: "酚自由基偶联反应性捕获"
+    scheme: S46_A07
+    status: terminated
+    score: 39
+    failure_mode: "FM2（无独立选择性 + C-C 偶联不可再生 + 毒性风险）"
+  - angle_id: A05_A06_A08_to_A23
+    mechanism: "ERRγ 单酚锚 / pH 窗口 / 捕获-结合级联 / PBP 脱水腔 / PXR 定向混杂 / TTR 卤酚 / MV1 桥裂解 / 卤键 / 硼酸 / MIP / CD / 工程外壳（R1 枚举 23 角度）"
+    status: enumerated_not_attempted
+    r2_dedup_note: "R1 枚举 23 角度为已占据设计空间；A10（PXR 定向混杂）为 R1 未开启的高价值角度，R2 探索之"
+
+r2_new_angles:
+  - angle_id: R2_A01
+    mechanism: "PXR 型定向混杂大腔 + 双齿双酚亲和（avidity）：大容忍疏水腔容纳双酚骨架多样性，两个间隔酚锚点以双齿协同（2 点 avidity）捕获双酚类全谱（BPA/BPF/BPS/BPAF），以 2 点 vs 1 点 avidity 区分双酚（2 个对位酚）于单环酚（壬基酚/苯酚/雌二醇 1 个酚）——类去除选择性（正交于 A01 的类内 BPA-vs-BPF 判别）"
+    prototype: "人源异生物质核受体 PXR 定向混杂（大疏水腔 + 少量极性锚，Watkins 2001 Science；结构基础 Ngan 2009）"
+    prototype_source: protein
+    material_platform: "大腔多孔有机聚合物 POP/HCP，两间隔酚锚点（区别于 A01 晶态 β-酮烯胺 COF 的固定锚+门）"
+    orthogonality_to_r1:
+      vs_A01: "选择性哲学相反：A01 判别桥连区（BPA vs BPF/BPS，类内）；A10 容忍桥多样性、以双齿 avidity 捕获双酚全类（类 vs 单环酚）。机制（定向混杂大腔+avidity vs 固定锚+空间门）、原型（PXR vs DmpR）、材料（大腔 POP vs 晶态 COF）三重正交"
+      vs_A02: "A02 单纯酚氧定向氢键（水相弱，终止）；A10 承重维为双齿 avidity 几何（2 点 vs 1 点）+ 大腔疏水，酚锚仅作定位，选择性来自 avidity 增益而非单点氢键强度"
+      vs_T4: "非对称双端夹持（T4 已否，9.27 Å 刚性会聚钳）；A10 用柔性容忍大腔（非刚性会聚），双齿为 avidity 非几何钳位"
+    pre_screen:
+      tfg:
+        conclusion: borderline
+        note: >
+          强项：双齿 avidity（2 点 vs 1 点）为非单调选择性（规避 T1 疏水单调）；类去除工程价值真实（BPF/BPS/BPAF 为共存 regrettable
+          substitutes）。弱项：酚锚水相氢键本质弱（A02 教训），双齿 avidity 增益（2×弱）能否达 ng/L 绝对亲和力 + 足够 avidity 选择性
+          须量热(ITC)确认。净判 borderline。
+      pads:
+        score: 48
+        direct: 2   # 双酚类 COF/MIP 类捕获密集（Li 2017 ChemComm 367 引；Huo 2025 双模板 MIP-COF；Wei 2026）
+        directional: 3
+        platform: 4
+        saturation: false
+        note: >
+          双酚类 COF/MIP 类捕获**平台饱和**（Li 2017 367 引等）。但既有工作多为性能导向（容量），未articulate PXR 定向混杂设计原理 +
+          双齿 avidity 类选择性机制归因（2 点 vs 1 点，含单锚因果对照）+ 雌激素活性闭合。机制归因增量为空白（同 A02 平台已存/机制归因空白情形）。
+      odc:
+        dimensions: 2
+        dimension_list:
+          - "双齿 avidity 几何（2 个间隔酚锚点，双酚 2 点 vs 单环酚 1 点，非 logKow 单调；单锚变体因果 kill）"
+          - "PXR 型大容忍疏水腔（容纳双酚骨架 + 桥多样性；腔容系列解耦）"
+        monotonic_risk: low
+        note: "avidity 轴非单调（高 logKow 单环酚仍仅 1 锚）；与大腔疏水正交"
+      r1_dedup: { conclusion: pass, note: "机制/材料/原型三重正交于 A01 及 R1 全部方案；A10 为 R1 未开启角度" }
+      verdict: A
+      override_reason: >
+        判 A 级（条件性）：定向混杂 + 双齿 avidity 为正交于 A01 的类去除选择性哲学，真实原型（PXR）+ 真实工程价值（regrettable-substitute
+        类去除）+ 非单调 avidity 机制（单锚因果对照）。TFG borderline（酚锚水相弱，avidity 增益磁度须 ITC 确认）；PADS 48（平台饱和，
+        原创靠机制归因增量）。定位机制确证型研究 + 量热 go/no-go。诚实预判：天花板 82-84，原创性受平台饱和 + avidity 磁度不确定压制。
+    status: in_progress
+    slot: R2_S05_A01
+    scheme_file: "bpa/SCHEMES/R2_S05_A01_PXR-bidentate-avidity-class-capture_revise.md"
+
+  - angle_id: R2_A02
+    mechanism: "PBP/lipocalin 预组织刚性脱水腔痕量捕获"
+    prototype: "PBP/lipocalin 花萼腔（A09）"
+    pre_screen:
+      tfg: { conclusion: borderline_fail, note: "无中性酚类 PBP（approach-2 类比非机制匹配）；桥连区判别上限低；C 维弱" }
+      verdict: B
+      override_reason: "B 级（脱水熵可行但桥判别弱、C 维弱）；仅 A 级失败后尝试"
+    status: deferred
+  - angle_id: R2_A03
+    mechanism: "MV1 桥氧化裂解再生性捕获"
+    prototype: "MV1 菌株 BPA 代谢（ipso 羟基化 + 桥裂解，Spivack 1994）"
+    pre_screen:
+      tfg: { conclusion: fail, note: "非酶转译难 + ng/L 反应性动力学（反应性捕获族反复终止）；须验碎片雌激素活性下降" }
+      verdict: X
+      override_reason: "TFG fail（ng/L 反应性动力学 + 非酶转译难）→ X 级"
+    status: excluded
+
+pre_screen_summary:
+  candidates_evaluated: 3
+  graded_A: 1   # R2_A01 PXR 定向混杂 + 双齿 avidity 类捕获
+  graded_B: 1   # R2_A02 PBP 脱水腔（deferred）
+  graded_X: 1   # R2_A03 MV1 桥裂解（ng/L 反应性）
+  execution_decision: >
+    执行 R2_A01（PXR 定向混杂 + 双齿 avidity 双酚类捕获）为 BPA R2 广度优先 slot 1。正交于 A01（类去除 vs 类内判别），真实原型
+    + 真实工程价值。定位机制确证型研究 + 量热 go/no-go（avidity 磁度）。诚实预判 revise ~82（平台饱和 + 酚锚水相弱）。若终止/revise，
+    A 级备选 R2_A02（PBP 脱水腔）留待深度补角。
+
+last_updated: "2026-07-30"

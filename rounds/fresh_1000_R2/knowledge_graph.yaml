@@ -69,6 +69,12 @@ knowledge_graph:
         r1_used_in: null
         r2_first_used_in: "PFHxS R2_A01"
         card: prototype_cards/PROTO_R2_003_oat4-c6-chain-length-window.yaml
+      - id: "pxr_directed_promiscuity"
+        name: "PXR 定向混杂（大容忍疏水腔 + 少量锚点）"
+        source_type: protein
+        r1_used_in: null
+        r2_first_used_in: "BPA R2_A01"
+        card: prototype_cards/PROTO_R2_004_pxr-directed-promiscuity.yaml
     
     # 识别机制（随 R2 推进持续扩展）
     mechanisms:
@@ -88,6 +94,10 @@ knowledge_graph:
         name: "趋液水合识别对亲水 GenX（terminated，趋液路线适用性下界）"
         pollutant: genx
         map: mechanism_maps/genx_chaotropic-boundary.yaml
+      - id: "MECH_bpa_001"
+        name: "PXR 定向混杂大腔 + 双齿 avidity 双酚类捕获"
+        pollutant: bpa
+        map: mechanism_maps/bpa_pxr-avidity.yaml
 
     # 材料平台（随 R2 推进持续扩展）
     materials:
@@ -97,6 +107,9 @@ knowledge_graph:
       - id: "chaotropic_high_energy_water_cavity"
         name: "趋液选择型高能水释放受限腔（竹环/葫芦脲型）"
         first_used_in: "PFBS R2_A01"
+      - id: "pxr_type_large_tolerant_cavity"
+        name: "PXR 型大容忍疏水腔 + 双间隔酚锚点（大腔 POP/HCP）"
+        first_used_in: "BPA R2_A01"
     
     # 污染物（固定 20 种）
     pollutants:
@@ -136,12 +149,13 @@ knowledge_graph:
       - ["MECH_pfbs_001", "pfbs", "revise_with_phase0_~72"]
       - ["MECH_pfhxs_001", "pfhxs", "revise_with_phase0_~82"]
       - ["MECH_genx_001", "genx", "terminated_41_chaotropic_lower_bound"]
+      - ["MECH_bpa_001", "bpa", "revise_with_phase0_~82"]
   
   statistics:
-    total_prototypes: 86  # 83 基线 + 3 R2 新增（flavoprotein_anion_pi, hofmeister_chaotropic_channel, oat4_c6_window）
-    total_mechanisms: 4
-    total_materials: 2
+    total_prototypes: 87  # 83 基线 + 4 R2（anion-π/Hofmeister 通道/OAT4 窗口/PXR 定向混杂）
+    total_mechanisms: 5
+    total_materials: 3
     total_pollutants: 20
-    connectivity_density: 0.18
+    connectivity_density: 0.22
     a_group_coverage: "complete (PFOA/PFBS/PFHxS revise + GenX terminate)"
-    r2_note: "PFAS 组头基-水合识别方向互补知识：anion-π 偏好高电荷密度硫酸根=负债；趋液效应偏好弱水化 PFAS=资产；趋液路线适用性映射 PFHxS(C6)~82 > PFBS(C4)~72 > GenX(亲水)fail"
+    r2_note: "A 组 PFAS 头基-水合识别：anion-π=负债/趋液=资产（C6>C4>亲水）；D 组 BPA：PXR 定向混杂+双齿 avidity 类去除（与 A01 类内判别互补）"

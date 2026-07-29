@@ -37,11 +37,15 @@ pollutants:
   pfbs:
     name: "全氟丁烷磺酸 PFBS"
     r1_status: "1 passed (A17=85), 3 terminated"
-    r2_angles_planned: 0
-    r2_attempted: 0
+    r2_angles_planned: 4   # R2_A01 趋液 (A 级执行) + R2_A02/A03/A04 (X 级)
+    r2_attempted: 1
     r2_passed: 0
     r2_terminated: 0
-    status: "pending"
+    r2_revise: 1
+    angle_map: rounds/fresh_1000_R2/angle_maps/pfbs_ANGLES.yaml
+    slots:
+      R2_S02_A01: { r1: "62 (2c/2h)", r2: "~72 revise_with_phase0_prerequisite (0c/1h)", status: revise_with_phase0_prerequisite, file: "pfbs/SCHEMES/R2_S02_A01_chaotropic-size-window-cavity_revise.md", prototype: "PROTO_R2_002 Hofmeister 选择通道", mechanism: "MECH_pfbs_001", note: "趋液(chaotropic/Hofmeister)水合识别×C4 尺寸窗口；趋液轴正面解决硫酸根竞争（方向优于 anion-π），但 C4 短链绝对亲和力边缘+逆向尺寸窗口排 PFOS 硬约束；天花板 78-82；量热/Phase 0 门挂起" }
+    status: "phase_b（R2_A01 落 revise_with_phase0_prerequisite ~72/100 0c/1h；其余 3 候选 X 级；正交空间近耗尽，量热/Phase 0 挂起后建议轮转 PFHxS）"
   pfhxs:
     name: "全氟己烷磺酸 PFHxS"
     r1_status: "0 passed, 2 terminated"
@@ -187,12 +191,12 @@ pollutants:
     r2_terminated: 0
     status: "pending"
 totals:
-  r2_attempted: 1
+  r2_attempted: 2
   r2_passed: 0
   r2_terminated: 0
-  r2_revise: 1
-  prototype_library_size: 84   # +1: PROTO_R2_001 黄素蛋白 anion-π
+  r2_revise: 2
+  prototype_library_size: 85   # +2 R2: PROTO_R2_001 黄素蛋白 anion-π / PROTO_R2_002 Hofmeister 选择通道
   prototype_library_target: 150
-  mechanism_maps: 1   # MECH_pfoa_001
-  angle_maps: 1       # pfoa
-last_updated: "2026-07-29T20:30"
+  mechanism_maps: 2   # MECH_pfoa_001, MECH_pfbs_001
+  angle_maps: 2       # pfoa, pfbs
+last_updated: "2026-07-29T22:10"

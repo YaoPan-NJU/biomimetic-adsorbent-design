@@ -57,6 +57,12 @@ knowledge_graph:
         r1_used_in: null
         r2_first_used_in: "PFOA R2_A01"
         card: prototype_cards/PROTO_R2_001_flavoprotein-anion-pi.yaml
+      - id: "hofmeister_chaotropic_channel"
+        name: "生物阴离子通道的 Hofmeister/趋液序选择性"
+        source_type: protein
+        r1_used_in: null
+        r2_first_used_in: "PFBS R2_A01"
+        card: prototype_cards/PROTO_R2_002_hofmeister-chaotropic-channel.yaml
     
     # 识别机制（随 R2 推进持续扩展）
     mechanisms:
@@ -64,12 +70,19 @@ knowledge_graph:
         name: "缺电子芳香 π 面 anion-π 识别全氟羧酸头基（受限腔脱溶剂化门辅助）"
         pollutant: pfoa
         map: mechanism_maps/pfoa_anion-pi.yaml
+      - id: "MECH_pfbs_001"
+        name: "趋液（chaotropic/Hofmeister）水合热力学识别 + C4 尺寸窗口"
+        pollutant: pfbs
+        map: mechanism_maps/pfbs_chaotropic.yaml
 
     # 材料平台（随 R2 推进持续扩展）
     materials:
       - id: "electron_deficient_triazine_NDI_COF"
         name: "缺电子三嗪/NDI 基共价有机框架（正四极矩 π 面）"
         first_used_in: "PFOA R2_A01"
+      - id: "chaotropic_high_energy_water_cavity"
+        name: "趋液选择型高能水释放受限腔（竹环/葫芦脲型）"
+        first_used_in: "PFBS R2_A01"
     
     # 污染物（固定 20 种）
     pollutants:
@@ -97,14 +110,18 @@ knowledge_graph:
   edges:
     prototype_mechanism:
       - ["flavoprotein_anion_pi", "MECH_pfoa_001", "source_backed_lead"]
+      - ["hofmeister_chaotropic_channel", "MECH_pfbs_001", "source_backed_lead"]
     mechanism_material:
       - ["MECH_pfoa_001", "electron_deficient_triazine_NDI_COF", "borderline"]
+      - ["MECH_pfbs_001", "chaotropic_high_energy_water_cavity", "borderline"]
     mechanism_pollutant:
       - ["MECH_pfoa_001", "pfoa", "revise_with_phase0_~74"]
+      - ["MECH_pfbs_001", "pfbs", "revise_with_phase0_~72"]
   
   statistics:
-    total_prototypes: 84  # 83 基线 + 1 R2 新增（flavoprotein_anion_pi）
-    total_mechanisms: 1
-    total_materials: 1
+    total_prototypes: 85  # 83 基线 + 2 R2 新增（flavoprotein_anion_pi, hofmeister_chaotropic_channel）
+    total_mechanisms: 2
+    total_materials: 2
     total_pollutants: 20
-    connectivity_density: 0.05
+    connectivity_density: 0.10
+    r2_note: "PFAS 组头基-水合识别方向互补知识：anion-π 偏好高电荷密度硫酸根=负债；趋液效应偏好弱水化 PFAS=资产"

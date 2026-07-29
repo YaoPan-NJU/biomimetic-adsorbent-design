@@ -397,9 +397,9 @@ R2 的中间产物持久化策略支持仿生设计库扩展：
 | 分类 Spec | `rounds/fresh_1000/SPEC_GROUP_*.md` | 继承的分组规范 |
 | 仿生原型库 | `data/bmdl_snapshot/biological_prototypes.json` | 83 条已入库 |
 
-## fresh_1000 R2 执行检查点：PFOA slot 1 完成 (2026-07-29)
+## fresh_1000 R2 执行检查点：PFOA + PFBS slot 1 完成 (2026-07-29)
 
-R2 广度优先第一槽（污染物 1/20，PFOA）已完成一个完整的设计-攻击-裁决闭环并提取全部中间产物。
+R2 广度优先前两槽（污染物 1-2/20，PFOA→PFBS）已各完成一个完整的设计-攻击-裁决闭环并提取全部中间产物。两槽均落 revise_with_phase0_prerequisite（A 组 PFAS 正交空间本征狭窄，诚实结果）。
 
 ### 已完成
 
@@ -413,19 +413,21 @@ PFOA R2 正交空间接近诚实耗尽：4 个候选 3 个 X 级、1 个 revise_
 
 ### 下一步行动（更新）
 
-1. **PFOA Phase 0 门挂起**：DFT-SAPT+SMD 计算 ΔΔG_net(PFOA−SO₄²⁻)@受限 π 孔，为仓库外计算动作（同 OC A04/TCDD A01 模式），不阻断推进。
-2. **轮转下一污染物 PFBS**（执行顺序 `STATUS.yaml` execution_order 第 2 位，A 组）：建 `angle_maps/pfbs_ANGLES.yaml`（锁定 R1 A17 通过 + A01/A04/A05 终止）→ Phase A+ 预筛新正交候选 → 开 slot 1 设计-攻击-裁决 → 提取中间产物。
+1. **PFOA + PFBS Phase 0/量热门挂起**：PFOA DFT-SAPT anion-π 净选择性；PFBS 量热(ITC)+Phase 0 C4 趋液绝对 Ka 与 α(PFBS/SO₄²⁻)。均为仓库外动作，不阻断推进。
+2. **轮转下一污染物 PFHxS**（execution_order 第 3 位，A 组）：建 `angle_maps/pfhxs_ANGLES.yaml`（锁定 R1 A01/A07 终止）→ Phase A+ 预筛（趋液路线对 C6 绝对亲和力优于 C4，可作链长适用性检验）→ 开 slot 1 设计-攻击-裁决 → 提取中间产物。
 3. 继续广度优先：20 种污染物各至少 1 个 R2 slot 后回溯补角。
-4. 每完成一个方案即提取中间产物（原型卡片/机制映射/角度地图/知识图谱），并逐槽提交推送 `origin/Ultimate`。
+4. 每完成一个方案即提取中间产物并逐槽提交推送 `origin/Ultimate`。
+
+**跨槽知识（PFOA↔PFBS 互补）**：PFAS 组头基-水合识别方向——anion-π 偏好高电荷密度硫酸根=选择性负债；趋液效应偏好弱水化 PFAS、排斥硫酸根=选择性资产。对后续 PFHxS/GenX 有传递价值。
 
 ### R2 累计状态
 
 | 指标 | 数值 |
 |------|------|
-| R2 已尝试 slot | 1（PFOA R2_A01） |
+| R2 已尝试 slot | 2（PFOA R2_A01 / PFBS R2_A01） |
 | R2 通过 | 0 |
-| R2 revise（含 Phase 0 挂起） | 1 |
+| R2 revise（含 Phase 0/量热挂起） | 2 |
 | R2 终止 | 0 |
-| 仿生原型库 | 84（目标 150） |
-| 机制映射 | 1 |
-| 角度地图 | 1（pfoa） |
+| 仿生原型库 | 85（目标 150） |
+| 机制映射 | 2 |
+| 角度地图 | 2（pfoa, pfbs） |

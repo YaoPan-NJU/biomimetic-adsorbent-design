@@ -1,0 +1,58 @@
+# 仿生原型卡片 — fresh_1000 Round 2
+# 每个新发现的仿生原型独立成卡（SPEC 3.1a）
+
+prototype_id: PROTO_R2_002
+name: "生物阴离子通道的 Hofmeister/趋液序选择性"
+source_type: protein
+biological_origin: >
+  生物离子通道对阴离子的选择性/电导遵循 Hofmeister（lyotropic/趋液）序：弱水化（趋液，chaotropic）阴离子（如 SCN⁻、ClO4⁻）
+  与通道内低电荷密度/疏水结合区作用更强，强水化（kosmotropic）阴离子（如 SO4²⁻、H2PO4⁻）作用弱。生物功能为离子通透与
+  电导调制，而非从竞争水基质中选择性捕获阴离子。趋液效应的物化基础为高能水从疏水腔/结合区释放（焓-熵补偿，Nau/Assaf）。
+applicable_pollutants: ["pfbs", "pfhxs", "genx", "pfoa"]   # 弱水化 PFAS 阴离子头基普适；R2 后续按链长评估绝对亲和力
+recognition_mechanism: >
+  按 Hofmeister 位次读取阴离子水化自由能：优先结合弱水化/趋液阴离子（PFAS 头基），内禀排斥强水化二价硫酸根/磷酸根。
+  与 anion-π 方向相反（anion-π 偏好高电荷密度硫酸根=负债；趋液偏好弱水化 PFAS=资产）。绝对亲和力随链长（趋液性/疏水面积）
+  升高，故对最短链 PFBS 边缘、对 C6/C8 更强。
+literature_support:
+  - doi: "PMC5518747（DOI 待全文核）"
+    title: "Cation-selective channel is regulated by anions according to the Hofmeister series"
+    year: 2017
+    claim_supported: "生物通道阴离子选择性遵循 Hofmeister 序（电导 KH₂PO₄→KSCN 递增）——自然进化 Hofmeister 选择性存在锚"
+    evidence_tier: source_backed_lead
+  - doi: "10.1021/acsomega.0c00237"
+    title: "Hofmeister Series: Insights of Ion Specificity from Amphiphilic Assembly and Interface Property"
+    year: 2020
+    claim_supported: "Hofmeister/lyotropic 序为大量生物与物化过程的关键机制（514 引）"
+    evidence_tier: fact
+  - doi: "10.1021/acs.cgd.3c00726"
+    title: "Chaotropic Effect-Driven Selective Anion Recognition"
+    year: 2023
+    claim_supported: "大环经趋液效应选择性识别 PF₆⁻（弱水化大阴离子）——趋液选择识别直接先例"
+    evidence_tier: fact
+  - doi: "PMC4510780（Assaf & Nau）"
+    title: "High-Affinity Binding of Dodecaborate Clusters to γ-Cyclodextrin (chaotropic effect)"
+    year: 2015
+    claim_supported: "趋液离子降低周围水结构，高亲和结合疏水腔（趋液效应机制经典，312 引）"
+    evidence_tier: fact
+  - doi: "10.1002/anie.201506589"
+    title: "Anion Recognition in Water: Recent Advances from a Supramolecular Perspective"
+    year: 2016
+    claim_supported: "水相阴离子识别受脱水/水竞争支配（561 引）"
+    evidence_tier: fact
+translation_distance_note: >
+  转译距离大：生物功能（通道通透/电导调制）≠ 水相选择捕获；趋液效应为通用超分子物化原理（Nau/Assaf）。作机制类比层转译，
+  创新性 C 维诚实不通过（同 anion-π/氧阴离子洞）。
+evolution_solution_judgement: >
+  条件性通过 G2：生物通道的 Hofmeister 选择性为进化出的阴离子选择物理（非 SELEX/非配位/非毒性受体），但进化目的为通透调制，
+  与"选择性水相阴离子捕获"仅机制类比，承载机制类比级仿生强度。
+key_advantage: >
+  与 anion-π（PROTO_R2_001）方向互补：趋液效应内禀排斥强水化硫酸根，正面解决 PFAS 吸附的头号竞争陷阱（硫酸根竞争）。
+key_limitation: >
+  绝对亲和力随链长单调（趋液性/疏水面积），对最短链 PFBS 边缘（SETAC 2026 短链对 CD 腔亲和力低）；趋液轴不区分 PFBS 与更长
+  PFOS（PFOS 更趋液→结合更强），类内分离须额外尺寸窗口（逆向链长，硬）。
+r1_used: false
+r2_first_used_in: "R2_S02_A01（PFBS 趋液 × C4 尺寸窗口）"
+r2_outcome_note: >
+  首次使用（PFBS）落 revise_with_phase0_prerequisite（~72/100）：趋液轴正面解决硫酸根竞争（方向正确），但 C4 短链绝对亲和力边缘
+  + 逆向尺寸窗口排 PFOS 硬约束，主张收窄为 PFBS vs 无机阴离子。量热/Phase 0 门挂起。
+last_updated: "2026-07-29"

@@ -16,7 +16,7 @@ spec_framework:
   category_specs_status: 已完成（4 份：AE 联合、B、C、D）
   phase_a_plus_mechanism: TFG + PADS + ODC 三道快速预筛 + S/A/B/X 角度预分类
 last_completed_step: "fresh_1000 千方案马拉松迭代完成（2026-07-29）：20/20 污染物全覆盖，经 10 轮迭代。14 种污染物自评通过（≥85 分，待正式裁决确认）：NP(92)/Dieldrin(89)/DDT(87-88)/BPA(86)/DDE(86)/Endosulfan(85)/PFOA(85)/PFBS(85)/ROX(85)/Octocrylene(85)/GenX(85)/PCP(85-87)/beta-HCH(85-88)/BDE-209(85)。6 种全面巩固（全 low 弱点）：TCDD/PFHxS/DCP26/PCB-209/HCBD/Chloroform。BDE-209 A03 终止、A07 r5 通过（W1 最终降至 low）。所有 20 种污染物方案弱点均为 low 级别。9 个正式通过方案（含 PFOA A02/BPA A01/PFBS A17/NP A01/Dieldrin A01/ROX A01/Octocrylene A01/Endosulfan A01/BDE-209 A07）。"
-next_action: "fresh_1000 R2 进行中（广度优先）。PFOA slot 1（R2_A01 anion-π 缺电子 π 面识别）已落 revise_with_phase0_prerequisite（~74/100，0c/1h，Phase 0 计算门挂起为仓库外动作）。下一步：按 rounds/fresh_1000_R2/STATUS.yaml execution_order 轮转 PFBS R2（建 angle_maps/pfbs_ANGLES.yaml → Phase A+ 预筛新正交候选 → slot 1 设计-攻击-裁决 → 提取中间产物）；继续广度优先至 20 种污染物各 1 slot。R2 主计划 rounds/fresh_1000_R2/SPEC.md，状态 rounds/fresh_1000_R2/STATUS.yaml，HANDOFF.md 置 R2 检查点。"
+next_action: "fresh_1000 R2 进行中（广度优先）。已完成 PFOA slot 1（R2_A01 anion-π，revise_with_phase0 ~74）与 PFBS slot 1（R2_A01 趋液×C4 尺寸窗口，revise_with_phase0 ~72）；两槽 Phase 0/量热门挂起为仓库外动作。下一步：按 rounds/fresh_1000_R2/STATUS.yaml execution_order 轮转 PFHxS R2（建 angle_maps/pfhxs_ANGLES.yaml → Phase A+ 预筛 → slot 1 设计-攻击-裁决 → 提取中间产物）；继续广度优先至 20 种污染物各 1 slot。跨槽知识：PFAS 组 anion-π 偏好硫酸根=负债 / 趋液偏好弱水化 PFAS=资产。R2 主计划 rounds/fresh_1000_R2/SPEC.md，状态 STATUS.yaml，HANDOFF.md 置 R2 检查点。"
 active_branch: Ultimate
 last_verified_commit: 3a187f6
 bmdl_policy: removed_from_branch
@@ -332,6 +332,10 @@ artifacts:
   fresh_1000_r2_pfoa_slot1: rounds/fresh_1000_R2/pfoa/SCHEMES/R2_S01_A01_anion-pi-electron-deficient-pore_revise.md
   fresh_1000_r2_proto_r2_001: rounds/fresh_1000_R2/prototype_cards/PROTO_R2_001_flavoprotein-anion-pi.yaml
   fresh_1000_r2_mech_pfoa_001: rounds/fresh_1000_R2/mechanism_maps/pfoa_anion-pi.yaml
+  fresh_1000_r2_pfbs_angle_map: rounds/fresh_1000_R2/angle_maps/pfbs_ANGLES.yaml
+  fresh_1000_r2_pfbs_slot1: rounds/fresh_1000_R2/pfbs/SCHEMES/R2_S02_A01_chaotropic-size-window-cavity_revise.md
+  fresh_1000_r2_proto_r2_002: rounds/fresh_1000_R2/prototype_cards/PROTO_R2_002_hofmeister-chaotropic-channel.yaml
+  fresh_1000_r2_mech_pfbs_001: rounds/fresh_1000_R2/mechanism_maps/pfbs_chaotropic.yaml
   biomimetic_design_framework: docs/BIOMIMETIC_DESIGN_FRAMEWORK.md
   portfolio_100_bpa: rounds/portfolio_100/BPA.md
   portfolio_100_bpa_cull: rounds/portfolio_100/BPA_CULL.md

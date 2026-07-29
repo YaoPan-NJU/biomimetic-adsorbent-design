@@ -65,3 +65,29 @@
 - PFOA R2 正交空间接近诚实耗尽（4 候选 3 个 X 级、1 个 revise_with_phase0），与 R1 记录的机制空间本征狭窄（诚实上限 26）一致。
 - Phase 0 计算门挂起（外部计算动作，同 OC A04/TCDD A01 模式）；建议轮转下一污染物 PFBS（A 组，头基/几何正交空间较宽）。
 - 可传递负知识：anion-π 对单价全氟羧酸根在硫酸根背景下为潜在选择性负债——若证实，收窄全 PFAS 组 anion-π 分支设计空间。
+
+---
+
+## 2026-07-29 PFBS R2 广度优先 slot 1 执行
+
+### 一、角度地图与预筛（`angle_maps/pfbs_ANGLES.yaml`）
+
+1. 锁定 R1 已占据角度：A17（通过，头基几何反差）+ A01/A04/A05（终止）+ 19 角度枚举空间。
+2. R2 新增 4 候选 Phase A+ 预筛：**R2_A01 趋液（chaotropic/Hofmeister）水合识别 × C4 尺寸窗口** 判 A 级（第六类机制轴=水合热力学）；anion-π（继承 PFOA 槽可传递负知识，硫酸根反转）/卤键/穿套均 X 级。
+3. **决策**：执行唯一 A 级 R2_A01。选择趋液的关键理由：与 anion-π 方向相反，趋液效应内禀排斥 kosmotrope 硫酸根，**正面解决 PFBS 头号竞争陷阱（陷阱 4）**。
+
+### 二、slot R2_S02_A01 裁决
+
+- 轨迹：r1 62（2c/2h）→ r2 ~72（0c/1h）。
+- 2 critical（C1 C4 短链趋液绝对亲和力不足 ng/L；C2 逆向尺寸窗口排 PFOS 不成立）经 r2：C1 转前置量热(ITC)/Phase 0 go/no-go + 清洁负结果；C2 转**适用范围声明**（主张收窄为 PFBS vs 无机含氧阴离子，放弃 PFAS 类内分离）消解。
+- 残 1 角度内禀 high（C4 绝对亲和力先验低 + 主张收窄致链长维承重削弱），天花板 78-82，**未达 85**。
+- **verdict：revise_with_phase0_prerequisite**；量热/Phase 0 计算门挂起。
+
+### 三、中间产物提取
+
+- 原型卡片 `prototype_cards/PROTO_R2_002_hofmeister-chaotropic-channel.yaml`（库 84→85）；机制映射 `mechanism_maps/pfbs_chaotropic.yaml`（MECH_pfbs_001）；角度地图更新；知识图谱 +1 原型/+1 机制/+1 材料/+3 边。
+
+### 四、跨槽知识沉淀（PFOA↔PFBS 互补）
+
+- **PFAS 组头基-水合识别方向一对互补知识**：anion-π（PFOA R2）偏好高电荷密度硫酸根=**选择性负债**；趋液效应（PFBS R2）偏好弱水化 PFAS、排斥硫酸根=**选择性资产**。该方向知识对后续 PFHxS/GenX 有传递价值。
+- PFBS R2 正交空间同 PFOA 接近诚实耗尽；建议量热/Phase 0 挂起后轮转 PFHxS（C6 链长趋液性强于 C4，趋液路线对 PFHxS 绝对亲和力优于 PFBS，可作趋液路线链长适用性检验）。

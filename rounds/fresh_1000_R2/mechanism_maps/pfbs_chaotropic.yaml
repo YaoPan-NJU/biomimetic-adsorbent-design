@@ -1,0 +1,35 @@
+# 机制映射记录 — fresh_1000 Round 2
+# 每个机制-污染物组合独立记录（SPEC 3.1b）
+
+mechanism_id: MECH_pfbs_001
+pollutant: pfbs
+mechanism_name: "趋液（chaotropic/Hofmeister）水合热力学识别 + C4 尺寸窗口"
+biological_source: "生物阴离子通道的 Hofmeister/趋液序选择性（PROTO_R2_002）"
+material_implementation: >
+  竹环（bambusuril）/葫芦脲（cucurbituril）型高能水释放受限腔或深疏水限尺寸有机笼，接枝水稳定多孔载体；腔形按 C4F9 契合
+  + 高能水释放优化。三层：层 A 趋液水合门（高能水释放腔优先纳弱水化 PFBS、内禀排斥强水化二价硫酸根，创新+承重）/ 层 B
+  C4 尺寸窗口（限尺寸腔口，承重待验，逆向排 PFOS 硬约束）/ 层 C 弱疏水基线（单调容量）。
+selectivity_signature:
+  primary_dimension: "趋液水合轴（Hofmeister 位次，优先弱水化 PFBS、排斥强水化硫酸根/磷酸根）"
+  orthogonal_dimensions:
+    - "C4 尺寸窗口/腔深轴（限尺寸腔口调 C4 契合，可由 C4/C6/C8 排除系列解耦）"
+    - "（承重收窄）主张限于 PFBS vs 无机含氧阴离子；放弃 PFAS 类内分离（趋液偏好更长 PFOS）"
+  causal_control: "Hofmeister 序滴定（选择性随趋液性单调、随电荷密度反相关）+ ITC 焓-熵分解（高能水释放熵驱动）+ 腔深系列"
+aqueous_feasibility:
+  tfg_assessment: borderline
+  sulfate_competition: "解决（趋液效应内禀排斥强水化二价硫酸根，方向优于 anion-π 与静电捕获）"
+  short_chain_affinity: "边缘（C4 为 PFSA 最短、趋液性最弱；SETAC 2026 短链对 CD 腔亲和力低；ng/L 占位需 Ka≥10⁶-10⁸ 量级）"
+  net_binding_free_energy_kj_mol: "待量热(ITC)+Phase 0 计算 C4 趋液绝对 Ka 与 α(PFBS/SO₄²⁻)"
+  critical_risk: "C4 短链绝对亲和力不足（ng/L 边缘）+ 逆向尺寸窗口排 PFOS 硬约束"
+r1_overlap: false
+r1_overlap_note: >
+  R1-DEDUP 通过：机制（趋液水合热力学，第六类机制轴）与 A17（头基几何反差）/A01（头基氢键）/A05（单调链疏水）正交；
+  材料（趋液选择腔）≠ POP 接枝炭；原型（Hofmeister 选择通道）≠ ModA。
+scheme_ref: "pfbs/SCHEMES/R2_S02_A01_chaotropic-size-window-cavity_revise.md"
+verdict: revise_with_phase0_prerequisite
+score: "~72（区间 70-77）"
+transferable_knowledge: >
+  可传递正知识（与 MECH pfoa anion-π 互补）：PFAS 组头基-水合识别方向——anion-π 偏好高电荷密度硫酸根=选择性负债；
+  趋液效应偏好弱水化 PFAS、排斥硫酸根=选择性资产。趋液路线对 PFHxS/GenX 等更长/更趋液 PFAS 的绝对亲和力优于 PFBS，
+  可作趋液路线链长适用性检验的起点。负知识：趋液识别对最短链 PFBS 存在绝对亲和力下限。
+last_updated: "2026-07-29"

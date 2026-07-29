@@ -1,0 +1,27 @@
+# Prototype card — fresh_1000 R2
+prototype_id: PROTO_R2_007
+name: "Aryl-hydrocarbon receptor (AhR) planar pi-stack / shape recognition"
+source_type: protein
+biological_origin: >
+  The aryl-hydrocarbon receptor (AhR) is a ligand-activated transcription factor whose PAS-B ligand-binding domain binds
+  2,3,7,8-TCDD and other planar dioxin-like compounds with very high affinity in aqueous cellular environments. Direct binding of
+  tritiated TCDD to AhR is documented across species (Gasiewicz & Rucci 1984). Recognition physics: planar pi-stacking + a
+  shape-complementary hydrophobic pocket. Biological function: xenobiotic sensing / transcriptional response (not pollutant capture).
+applicable_pollutants: ["tcdd"]   # dioxin-like compounds broadly (PCDD/F, dl-PCB) as a class
+recognition_mechanism: >
+  A rigid planar aromatic scaffold is bound by pi-stacking against electron-rich aromatic surfaces plus hydrophobic desolvation of
+  a shape-matched pocket. Translated: an electron-rich extended-aromatic COF / cyclophane pi-stacking cleft, interlayer spacing
+  shape-matched to the planar dioxin, in a hydrophobic desolvating pocket -> captures the dioxin-like-compound (DLC) CLASS. Because
+  AhR is promiscuous across coplanar DLCs, the recognition is class-level (not intra-congener); this is a CLASS-capture principle.
+literature_support:
+  - { doi: "Gasiewicz & Rucci 1984 (tritiated-TCDD direct binding to AhR, cross-species)", year: 1984, claim_supported: "evolved high-affinity aqueous recognition of planar dioxin via a protein ligand-binding domain (pi-stack + shape)", evidence_tier: fact }
+translation_distance_note: >
+  AhR function is xenobiotic sensing/transcription, not pollutant capture; pi-stacking + hydrophobic shape complementarity is a
+  general supramolecular principle. AhR promiscuity means the translated host is DLC-class-selective, not TCDD-specific (honest).
+evolution_solution_judgement: >
+  Passes G2: AhR is an evolved biological high-affinity aqueous recognition of the planar dioxin (real natural recognition anchor),
+  though promiscuous across the dioxin-like class -> class-capture-strength correspondence.
+r1_used: false
+r2_first_used_in: "TCDD R2_A01"
+r2_outcome_note: "TCDD slot revise ~78 (orthogonal MECHANISM to R1 occupied lateral-Cl halogen-bond; promiscuity -> DLC class capture; planar-host prior art + pg/L extreme-Kd cap it). Transferable to dl-PCB (class-capture)."
+last_updated: "2026-07-30"

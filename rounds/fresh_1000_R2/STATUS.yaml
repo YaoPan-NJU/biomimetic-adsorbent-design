@@ -180,28 +180,40 @@ pollutants:
     status: "honest_exhaustion (3 R2 candidates X; reactive-handle-occupied + class-wide-halogen wall)"
   betahch:
     name: "β-六氯环己烷"
-    r1_status: "0 passed, 1 terminated"
-    r2_angles_planned: 0
-    r2_attempted: 0
+    r1_status: "0 passed, 1 terminated (self-eval pass 85-88 shape-imprint/cage)"
+    r2_angles_planned: 3
+    r2_attempted: 1
     r2_passed: 0
-    r2_terminated: 0
-    status: "pending"
+    r2_terminated: 1
+    r2_revise: 0
+    angle_map: rounds/fresh_1000_R2/angle_maps/betahch_ANGLES.yaml
+    slots:
+      R2_S14_A01: { r1: "45 terminate (gamma-CD refuted) + self-eval-pass shape", r2: "~44 terminate (1c structural)", status: terminated, file: "betahch/SCHEMES/R2_S14_A01_aliphatic-Cl-weak-shape-occupied-wall_terminated.md", mechanism: "MECH_betahch_001", note: "halogen-belt is ALIPHATIC-C-Cl-weak (PROTO_R2_006 aromatic-only); shape R1-occupied; dipole-null non-engineerable; reactive fails for E2-resistant isomer; honest near-exhaustion" }
+    status: "honest_exhaustion (3 R2 candidates X; KEY: PROTO_R2_006 halogen-bond-pattern transfers to AROMATIC-C-Cl only, not aliphatic beta-HCH)"
   tcdd:
     name: "TCDD"
-    r1_status: "0 passed, 0 terminated, 1 revise_phase0"
-    r2_angles_planned: 0
-    r2_attempted: 0
+    r1_status: "0 passed, 0 terminated, 1 revise_phase0 (A01 lateral-Cl halogen-bond)"
+    r2_angles_planned: 2
+    r2_attempted: 1
     r2_passed: 0
     r2_terminated: 0
-    status: "pending"
+    r2_revise: 1
+    angle_map: rounds/fresh_1000_R2/angle_maps/tcdd_ANGLES.yaml
+    slots:
+      R2_S15_A01: { r1: "70 revise_phase0 (halogen-bond, R1)", r2: "~78 revise (0c/1h)", status: revise, file: "tcdd/SCHEMES/R2_S15_A01_AhR-dioxin-like-class-capture_revise.md", prototype: "PROTO_R2_007 AhR", mechanism: "MECH_tcdd_001", note: "AhR-templated dioxin-like-class capture (planar pi-stack + shape); orthogonal MECHANISM to R1 A01 lateral-Cl halogen-bond; ceiling ~78-80 (AhR promiscuity = class-capture not intra-selectivity + planar-host prior art + pg/L extreme-Kd)" }
+    status: "phase_b (R2_A01 revise ~78; new prototype PROTO_R2_007 AhR; orthogonal-mechanism escape when halogen-bond axis R1-occupied; DLC class-capture route)"
   pcb209:
     name: "多氯联苯-209"
-    r1_status: "0 passed, 0 terminated, 1 in_progress"
-    r2_angles_planned: 0
-    r2_attempted: 0
+    r1_status: "0 passed, 0 terminated, 1 in_progress + 3 supervisor-revise (A01A03/SL02/SL06/SL08)"
+    r2_angles_planned: 3
+    r2_attempted: 1
     r2_passed: 0
-    r2_terminated: 0
-    status: "pending"
+    r2_terminated: 1
+    r2_revise: 0
+    angle_map: rounds/fresh_1000_R2/angle_maps/pcb209_ANGLES.yaml
+    slots:
+      R2_S16_A01: { r1: "A01A03 in_progress (torsional x halogen-bond array, S-grade)", r2: "~45 terminate (1c structural)", status: terminated, file: "pcb209/SCHEMES/R2_S16_A01_four-axes-R1-occupied-wall_terminated.md", mechanism: "MECH_pcb209_001", note: "R1 occupies 4 axes (halogen-bond-array + torsional + PXR + multi-epitope); DDT PROTO_R2_006 halogen-bond transfer found R1-occupied (A01A03); no real aqueous occurrence; honest near-exhaustion" }
+    status: "honest_exhaustion (3 R2 candidates X; DDT halogen-bond-pattern transfer VALIDATED as route but R1-occupied here)"
   pcp:
     name: "五氯苯酚 PCP"
     r1_status: "0 passed (自评 85-87), 0 terminated"
@@ -235,14 +247,14 @@ pollutants:
     r2_terminated: 0
     status: "pending"
 totals:
-  r2_attempted: 13
+  r2_attempted: 16
   r2_passed: 0
-  r2_terminated: 7
-  r2_revise: 6
-  prototype_library_size: 89   # +6 R2 (PROTO_R2_001..006)
+  r2_terminated: 9
+  r2_revise: 7
+  prototype_library_size: 90   # +7 R2 (PROTO_R2_001..007)
   prototype_library_target: 150
-  mechanism_maps: 13
-  angle_maps: 13
-  coverage_note: "13/20 pollutants covered (A group 4 + D group BPA/NP/DCP26 + E group ROX/OC + C group DDT/DDE/Dieldrin/Endosulfan). 0 pass (6 revise + 7 terminate/exhaustion)."
-  r2_score_trajectory_note: "Honest R2 reality: R2 orthogonality (avoid R1 best angles) + prior-art saturation / R1 deep-exhaustion make passing intrinsically harder than R1 (SPEC-anticipated, honest N > padding). Best R2 revises: PFHxS ~82, BPA ~82, ROX ~81, DDT ~79. Group C is FM3/reactive-handle-occupied dominated: DDT 1 revise (new halogen-bond-pattern prototype PROTO_R2_006), DDE/Dieldrin/Endosulfan honest near-exhaustion (fragile planar shape / Koc impossibility / reactive handle spent in R1)."
-last_updated: "2026-07-30T06:10"
+  mechanism_maps: 16
+  angle_maps: 16
+  coverage_note: "16/20 pollutants covered (A group 4 + C group 7 [DDT/DDE/Dieldrin/Endosulfan/betaHCH/TCDD/PCB209] + D group BPA/NP/DCP26 + E group ROX/OC). 0 pass (7 revise + 9 terminate/exhaustion). Group C COMPLETE."
+  r2_score_trajectory_note: "Honest R2 reality: R2 orthogonality (avoid R1 best angles) + prior-art saturation / R1 deep-exhaustion make passing intrinsically harder than R1 (SPEC-anticipated, honest N > padding). Best R2 revises: PFHxS ~82, BPA ~82, ROX ~81, DDT ~79, TCDD ~78. Group C (7/7): 2 revise (DDT halogen-bond-pattern PROTO_R2_006; TCDD AhR dioxin-like-class-capture PROTO_R2_007) + 5 near-exhaustion. KEY finding: PROTO_R2_006 halogen-bond-pattern transfers to AROMATIC-C-Cl only (DDT/TCDD/PCB), and for TCDD/PCB the halogen-bond axis was already R1-occupied (TCDD A01 / PCB A01A03), so TCDD escaped via orthogonal-MECHANISM AhR pi-stack while PCB/betaHCH hit near-exhaustion."
+last_updated: "2026-07-30T07:00"

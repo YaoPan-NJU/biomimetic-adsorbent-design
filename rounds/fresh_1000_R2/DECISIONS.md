@@ -221,3 +221,33 @@ each pollutant's best such angle. Honest outcomes: 1 revise + 3 near-exhaustion.
 Group-C transferable knowledge: for high-logKow OCP, the ONLY escapes from hydrophobic-FM2-monotonicity are (a) a distinctive
 reactive/geometric handle (which R1 already took) or (b) a halogen-bond POSITION pattern (DDT R2, promising for polyhalogen PCB/BDE).
 Extreme-Koc caged cyclodienes (Dieldrin) are FM3-capped to a single geometric point. Next: beta-HCH / TCDD / PCB-209, then Group B.
+
+---
+
+## 2026-07-30 Batch: beta-HCH + TCDD + PCB-209 R2 slots (Group C batch-2 -> Group C COMPLETE 7/7, 16/20 covered)
+
+Processed the final 3 Group-C pollutants (16/20 covered). Deep R1-grounding produced an important, honest reshaping of the R2
+assessment vs the DDT-slot hypothesis:
+
+- **TCDD (slot R2_S15_A01, revise ~78, 0c/1h)**: R1 A01 (S50, revise_phase0 ~70) ALREADY occupies TCDD's lateral-Cl halogen-bond
+  axis. So the DDT PROTO_R2_006 halogen-bond transfer is NOT orthogonal here. Instead R2 uses TCDD's OTHER evolved recognition:
+  the **aryl-hydrocarbon receptor (AhR)** (real high-affinity aqueous TCDD receptor, Gasiewicz&Rucci 1984 direct binding) -> NEW
+  prototype **PROTO_R2_007**. Mechanism = planar pi-stack + shape (orthogonal MECHANISM to sigma-hole halogen bond). AhR is
+  promiscuous -> **dioxin-like-compound (DLC) CLASS capture** (mirrors ROX macrolide-class / BPA PXR-class). Ceiling ~78-80
+  (class-capture not intra-selectivity + planar-host prior art + pg/L extreme-Kd). MECH_tcdd_001. Key transferable rule: when the
+  halogen-bond axis is R1-occupied, an evolved-receptor pi-stack/shape angle is the orthogonal-MECHANISM escape.
+- **beta-HCH (slot R2_S14_A01, terminate ~44, honest near-exhaustion)**: R1 gamma-CD terminated (assumption refuted) + shape-
+  imprint/cage self-eval-pass (all-equatorial symmetric shape, occupied). R2 halogen-bond belt fails: beta-HCH's C-Cl are
+  ALIPHATIC (sp3), too weak for aqueous ng/L. **KEY negative knowledge: PROTO_R2_006 halogen-bond-PATTERN transfers to AROMATIC-
+  C-Cl only (DDT/TCDD/PCB), NOT aliphatic-C-Cl (beta-HCH)** -> sharpens the prototype's applicability domain. MECH_betahch_001.
+- **PCB-209 (slot R2_S16_A01, terminate ~45, honest near-exhaustion)**: R1 occupies FOUR axes (A01A03 torsional x halogen-bond
+  ARRAY + SL02 torsional-cavity + SL06 PXR-soft-cavity + SL08 multi-epitope). **Honest correction**: the DDT PROTO_R2_006
+  transfer, flagged in the DDT slot as promising for PCB-209, is here found R1-OCCUPIED (A01A03) — the hypothesis is VALIDATED as
+  a real route but yields no NEW R2 angle. Residual pi-acid/atropisomer angles fail. No real-world aqueous occurrence post-2019.
+  MECH_pcb209_001.
+
+**R2 cumulative: 16/20 covered, 0 pass (7 revise + 9 terminate/exhaustion), prototype library 90, 16 mechanism maps, 16 angle maps. GROUP C COMPLETE (7/7).**
+Group-C final tally: 2 revise (DDT PROTO_R2_006 halogen-bond-pattern; TCDD PROTO_R2_007 AhR DLC-class-capture) + 5 near-exhaustion.
+Two new prototypes this Group. Refined transferable knowledge: (1) halogen-bond-PATTERN route is AROMATIC-C-Cl-only; (2) for
+aromatic-Cl targets whose halogen-bond axis is R1-occupied (TCDD/PCB), the escape is an evolved-receptor pi-stack/shape CLASS-capture
+angle (AhR), not more halogen bonding. Next: Group B (PCP/HCBD/Chloroform/BDE-209) to reach 20/20 + M2 milestone.

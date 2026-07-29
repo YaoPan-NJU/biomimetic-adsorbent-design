@@ -397,9 +397,9 @@ R2 的中间产物持久化策略支持仿生设计库扩展：
 | 分类 Spec | `rounds/fresh_1000/SPEC_GROUP_*.md` | 继承的分组规范 |
 | 仿生原型库 | `data/bmdl_snapshot/biological_prototypes.json` | 83 条已入库 |
 
-## fresh_1000 R2 执行检查点：13/20 覆盖 (2026-07-30)
+## fresh_1000 R2 执行检查点：16/20 覆盖 (2026-07-30)
 
-R2 广度优先已覆盖 13/20：A 组 PFOA/PFBS/PFHxS/GenX、C 组 DDT/DDE/Dieldrin/Endosulfan、D 组 BPA/NP/DCP26、E 组 ROX/Octocrylene。**0 通过（6 revise + 7 terminate/耗尽）**。这是 SPEC 预期的诚实结果：R2 正交约束（避开 R1 已通过最优角度）+ 平台饱和/R1 深挖耗尽使通过本质难于 R1（诚实 N 优于凑数）。最佳 R2 revise：PFHxS/BPA/ROX ~81-82、DDT ~79（需深度多轮补角至 85）。C 组以 FM3 热力学/反应性基序已占为主：DDT 1 revise（新 halogen-bond-pattern 原型 PROTO_R2_006 transthyretin），DDE/Dieldrin/Endosulfan 诚实近耗尽（fragile planar-shape / Koc impossibility-triangle / reactive-handle R1 已用）。仿生原型库 83→89。
+R2 广度优先已覆盖 16/20（C 组 7/7 完成）：A 组 PFOA/PFBS/PFHxS/GenX、C 组 DDT/DDE/Dieldrin/Endosulfan/β-HCH/TCDD/PCB-209、D 组 BPA/NP/DCP26、E 组 ROX/Octocrylene。**0 通过（7 revise + 9 terminate/耗尽）**。这是 SPEC 预期的诚实结果：R2 正交约束 + 平台饱和/R1 深挖耗尽使通过本质难于 R1（诚实 N 优于凑数）。最佳 R2 revise：PFHxS/BPA/ROX ~81-82、DDT ~79、TCDD ~78。C 组 2 revise（DDT PROTO_R2_006 halogen-bond-pattern；TCDD PROTO_R2_007 AhR dioxin-like-class-capture）+ 5 近耗尽。KEY：halogen-bond-pattern 仅适用 AROMATIC-C-Cl（DDT/TCDD/PCB），且 TCDD/PCB 的 halogen-bond 轴 R1 已占（TCDD 经 AhR pi-stack orthogonal-mechanism 逃逸；PCB/β-HCH 近耗尽）。仿生原型库 83→90。
 
 ### 已完成
 
@@ -413,8 +413,8 @@ PFOA R2 正交空间接近诚实耗尽：4 个候选 3 个 X 级、1 个 revise_
 
 ### 下一步行动（更新）
 
-1. **PFOA/PFBS/PFHxS/BPA/DDT revise 的外部门挂起**：PFOA/PFBS/PFHxS/BPA Phase 0/量热门；DDT halogen-bond-pattern Phase 0 DFT（水相芳香 C-Cl sigma-hole 能量 + 双点 pattern 增益）。均为仓库外动作，不阻断推进。
-2. **转 β-HCH**（execution_order 第 14 位，C 组剩余），随后 TCDD/PCB-209 + B 组 PCP/HCBD/Chloroform/BDE-209；继续广度优先至 20/20 全覆盖。PCB-209/BDE-209 可承接 DDT 的 halogen-bond-pattern 路线（more/heavier halogen atoms 使 halogen bond 更强、pattern 更丰富，天花板更高）。
+1. **revise 外部门挂起**：PFOA/PFBS/PFHxS/BPA Phase 0/量热门；DDT halogen-bond-pattern + TCDD AhR pi-stack 的 Phase 0/亲和力验证。均为仓库外动作，不阻断推进。
+2. **转 Group B**（PCP/HCBD/Chloroform/BDE-209，execution_order 第 17-20 位，最后 4 个），至 20/20 全覆盖 + M2 里程碑。已知 R1 grounding：HCBD A02 in_progress（halogen-bond-donor-array，已占）、BDE-209 A07 passed + A03 terminated（sigma-hole halogen-bond-array，已占）、PCP 自评 85-87、Chloroform A01 terminated（alpha-CD）。
 3. 每完成一个方案即提取中间产物并逐槽提交推送 `origin/Ultimate`。
 
 **跨槽知识（PFOA↔PFBS 互补）**：PFAS 组头基-水合识别方向——anion-π 偏好高电荷密度硫酸根=选择性负债；趋液效应偏好弱水化 PFAS、排斥硫酸根=选择性资产。对后续 PFHxS/GenX 有传递价值。

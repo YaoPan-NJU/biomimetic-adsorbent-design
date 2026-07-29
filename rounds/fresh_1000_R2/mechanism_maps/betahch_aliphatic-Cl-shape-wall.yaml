@@ -1,0 +1,18 @@
+# Mechanism map — fresh_1000 R2
+mechanism_id: MECH_betahch_001
+pollutant: betahch
+mechanism_name: "beta-HCH aliphatic-Cl-weak + shape-occupied wall (honest near-exhaustion)"
+biological_source: "n/a (R1 shape-imprint/cage self-eval pass took the one distinctive all-equatorial shape axis; no orthogonal prototype)"
+material_implementation: "n/a (all R2 candidates X-graded)"
+selectivity_signature:
+  primary_dimension: "all-equatorial (eeeeee) symmetric shape (R1-occupied)"
+  orthogonal_dimensions: ["none viable (halogen-belt aliphatic-C-Cl too weak; dipole-null non-engineerable; reactive route fails for E2-resistant isomer)"]
+aqueous_feasibility: { tfg_assessment: fail, note: "the DDT PROTO_R2_006 halogen-bond-PATTERN requires AROMATIC C-Cl; beta-HCH's sp3 aliphatic C-Cl sigma-holes are too weak for ng/L in water" }
+verdict: terminated_near_exhaustion
+score: "~44 (r1 terminate, structural)"
+r1_overlap: false
+scheme_ref: "betahch/SCHEMES/R2_S14_A01_aliphatic-Cl-weak-shape-occupied-wall_terminated.md"
+transferable_negative_knowledge: >
+  KEY boundary: the DDT PROTO_R2_006 halogen-bond-PATTERN route transfers ONLY to AROMATIC-C-Cl OCP (DDT/TCDD/PCB), NOT to
+  aliphatic-C-Cl OCP (beta-HCH). Sharpens PROTO_R2_006 applicability domain. beta-HCH R2 = honest near-exhaustion (shape R1-occupied).
+last_updated: "2026-07-30"

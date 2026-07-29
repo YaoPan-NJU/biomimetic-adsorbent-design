@@ -87,6 +87,12 @@ knowledge_graph:
         r1_used_in: null
         r2_first_used_in: "DDT R2_A01"
         card: prototype_cards/PROTO_R2_006_transthyretin-halogen-bond.yaml
+      - id: "ahr_planar_pi_stack"
+        name: "Aryl-hydrocarbon receptor (AhR) planar pi-stack / shape recognition (dioxin-like-class)"
+        source_type: protein
+        r1_used_in: null
+        r2_first_used_in: "TCDD R2_A01"
+        card: prototype_cards/PROTO_R2_007_ahr-planar-pi-stack.yaml
     
     # 识别机制（随 R2 推进持续扩展）
     mechanisms:
@@ -142,6 +148,18 @@ knowledge_graph:
         name: "Endosulfan reactive-handle-occupied wall (near-exhaustion, Lewis-acid hydrolysis axis spent in R1)"
         pollutant: endosulfan
         map: mechanism_maps/endosulfan_reactive-occupied-wall.yaml
+      - id: "MECH_betahch_001"
+        name: "beta-HCH aliphatic-Cl-weak + shape-occupied wall (near-exhaustion; PROTO_R2_006 aromatic-only boundary)"
+        pollutant: betahch
+        map: mechanism_maps/betahch_aliphatic-Cl-shape-wall.yaml
+      - id: "MECH_tcdd_001"
+        name: "TCDD AhR-templated dioxin-like-class capture (planar pi-stack + shape; orthogonal to R1 halogen-bond, revise)"
+        pollutant: tcdd
+        map: mechanism_maps/tcdd_ahr-pi-stack-class.yaml
+      - id: "MECH_pcb209_001"
+        name: "PCB-209 four-axes-R1-occupied wall (near-exhaustion; DDT halogen-bond transfer found R1-occupied)"
+        pollutant: pcb209
+        map: mechanism_maps/pcb209_four-axes-occupied-wall.yaml
 
     # 材料平台（随 R2 推进持续扩展）
     materials:
@@ -185,6 +203,7 @@ knowledge_graph:
       - ["hofmeister_chaotropic_channel", "MECH_pfhxs_001", "source_backed_lead"]
       - ["oat4_c6_window", "MECH_pfhxs_001", "source_backed_lead"]
       - ["transthyretin_halogen_bond", "MECH_ddt_001", "source_backed_lead"]
+      - ["ahr_planar_pi_stack", "MECH_tcdd_001", "source_backed_lead"]
     mechanism_material:
       - ["MECH_pfoa_001", "electron_deficient_triazine_NDI_COF", "borderline"]
       - ["MECH_pfbs_001", "chaotropic_high_energy_water_cavity", "borderline"]
@@ -204,15 +223,18 @@ knowledge_graph:
       - ["MECH_dde_001", "dde", "terminated_44_fragile_planar_shape"]
       - ["MECH_dieldrin_001", "dieldrin", "terminated_46_FM3_Koc_impossibility"]
       - ["MECH_endosulfan_001", "endosulfan", "terminated_45_reactive_handle_occupied"]
+      - ["MECH_betahch_001", "betahch", "terminated_44_aliphatic_Cl_weak_shape_occupied"]
+      - ["MECH_tcdd_001", "tcdd", "revise_78_ahr_dioxin_like_class_capture"]
+      - ["MECH_pcb209_001", "pcb209", "terminated_45_four_axes_R1_occupied"]
   
   statistics:
-    total_prototypes: 89  # 83 + 6 R2 (anion-pi, Hofmeister channel, OAT4 window, PXR promiscuity, AChE cation-pi, TTR halogen-bond)
-    total_mechanisms: 13
+    total_prototypes: 90  # 83 + 7 R2 (anion-pi, Hofmeister channel, OAT4 window, PXR promiscuity, AChE cation-pi, TTR halogen-bond, AhR pi-stack)
+    total_mechanisms: 16
     total_materials: 3
     total_pollutants: 20
-    r2_coverage: "13/20 pollutants; 0 pass (6 revise + 7 terminate/exhaustion)"
+    r2_coverage: "16/20 pollutants; 0 pass (7 revise + 9 terminate/exhaustion)"
     connectivity_density: 0.34
-    r2_slots_note: "13 slots, 0 pass (6 revise-with-external-gate + 7 terminate); R2 orthogonality + prior-art saturation make passing harder than R1 (SPEC-anticipated honest result)"
-    c_group_coverage: "batch-1 complete (DDT revise halogen-bond-pattern PROTO_R2_006 + DDE/Dieldrin/Endosulfan honest near-exhaustion; remaining C: betaHCH/TCDD/PCB209)"
+    r2_slots_note: "16 slots, 0 pass (7 revise-with-external-gate + 9 terminate); R2 orthogonality + prior-art saturation make passing harder than R1 (SPEC-anticipated honest result)"
+    c_group_coverage: "COMPLETE 7/7 (DDT revise PROTO_R2_006 halogen-bond-pattern + TCDD revise PROTO_R2_007 AhR dioxin-like-class-capture + DDE/Dieldrin/Endosulfan/betaHCH/PCB209 near-exhaustion)"
     a_group_coverage: "complete (PFOA/PFBS/PFHxS revise + GenX terminate)"
     r2_note: "A 组 PFAS 头基-水合识别：anion-π=负债/趋液=资产（C6>C4>亲水）；D 组 BPA：PXR 定向混杂+双齿 avidity 类去除（与 A01 类内判别互补）"

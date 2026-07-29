@@ -1,0 +1,18 @@
+# Mechanism map — fresh_1000 R2
+mechanism_id: MECH_pcb209_001
+pollutant: pcb209
+mechanism_name: "PCB-209 four-axes-R1-occupied wall (honest near-exhaustion; DDT halogen-bond transfer found R1-occupied)"
+biological_source: "n/a (R1 occupies halogen-bond-array + torsional + PXR + multi-epitope; no orthogonal prototype remains)"
+material_implementation: "n/a (all R2 candidates X-graded)"
+selectivity_signature:
+  primary_dimension: "torsional profile x C-Cl halogen-bond array (R1-occupied A01A03)"
+  orthogonal_dimensions: ["none viable (halogen-array R1-occupied; pi-acid EDA weak/PCB-degenerate; atropisomer n/a for symmetric deca-PCB)"]
+aqueous_feasibility: { tfg_assessment: fail, note: "DDT PROTO_R2_006 halogen-bond-PATTERN transfer is R1-DEDUP-fail (R1 A01A03 already IS torsional x halogen-bond array); no measured real-world aqueous PCB-209 monomer occurrence post-2019" }
+verdict: terminated_near_exhaustion
+score: "~45 (r1 terminate, structural — orthogonal space R1-exhausted)"
+r1_overlap: false
+scheme_ref: "pcb209/SCHEMES/R2_S16_A01_four-axes-R1-occupied-wall_terminated.md"
+transferable_negative_knowledge: >
+  The DDT PROTO_R2_006 halogen-bond-PATTERN route DOES apply to PCB-209 (10 aromatic Cl) — hypothesis validated — but R1 already
+  occupies it (A01A03), so it yields no NEW R2 angle. R1 also occupies PXR + multi-epitope + torsional. Honest near-exhaustion.
+last_updated: "2026-07-30"

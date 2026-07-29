@@ -1,0 +1,19 @@
+# Mechanism map — fresh_1000 R2
+mechanism_id: MECH_tcdd_001
+pollutant: tcdd
+mechanism_name: "TCDD AhR-templated dioxin-like-class capture (planar pi-stack + shape; orthogonal to R1 halogen-bond) — revise"
+biological_source: "Aryl-hydrocarbon receptor (AhR) ligand-binding domain: evolved high-affinity aqueous binding of TCDD (direct tritiated-TCDD binding, Gasiewicz & Rucci 1984)"
+material_implementation: "Electron-rich extended-aromatic COF / cyclophane pi-stacking cleft, interlayer spacing shape-matched to the planar dioxin, in a hydrophobic desolvating pocket -> dioxin-like-compound (DLC) class capture"
+selectivity_signature:
+  primary_dimension: "planar pi-stack + shape (dioxin-like class)"
+  orthogonal_dimensions: ["orthogonal MECHANISM to R1 A01 lateral-Cl halogen-bond / sigma-hole (pi-stack vs sigma-hole)"]
+aqueous_feasibility: { tfg_assessment: borderline, note: "pi-stack + hydrophobic desolvation reaches high affinity in water (AhR proves it); plausibly > the sub-1-kJ/mol single-site halogen bond of A01; pg/L target demands extreme Kd" }
+verdict: revise
+score: "~78 (0c/1h, ceiling ~78-80)"
+r1_overlap: false
+scheme_ref: "tcdd/SCHEMES/R2_S15_A01_AhR-dioxin-like-class-capture_revise.md"
+prototype_ref: "PROTO_R2_007"
+transferable_knowledge: >
+  When a pollutant's halogen-bond axis is R1-occupied, an evolved-receptor pi-stack/shape angle (AhR) is the orthogonal-MECHANISM
+  escape and delivers CLASS capture (promiscuous receptor -> dioxin-like-compound class). Carry DLC-class-capture host to dl-PCB.
+last_updated: "2026-07-30"

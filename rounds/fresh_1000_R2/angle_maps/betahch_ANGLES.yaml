@@ -1,0 +1,43 @@
+# beta-HCH R2 angle map — fresh_1000 R2, pollutant 14/20 (Tier 2, Group C)
+# 2026-07-30 | Inherits R1 rounds/fresh_1000/betahch (A01=45 terminated; later self-eval-pass 85-88 shape-imprint/cage) | English-heavy
+pollutant: betahch
+pollutant_name: "beta-HCH beta-hexachlorocyclohexane (all-equatorial eeeeee chair, most stable/persistent HCH isomer, centrosymmetric ~zero dipole, logKow ~3.8-5, neutral)"
+tier: 2
+group: "C (organochlorine pesticides / OCP)"
+r1_honest_ceiling: "85-88 (self-eval, shape-imprint/cage)"
+r1_intrinsic_constraint: >
+  R1 A01 (gamma-CD inclusion) TERMINATED at 45: the core assumption was experimentally REFUTED (Hosangadi 1985 + He 2026: beta-CD
+  preferentially includes gamma-HCH, NOT beta-HCH) -> FM3. R1 then pivoted to shape-imprint (MIP A05-A07) / molecular cage (A12)
+  and reached a self-eval pass (85-88) on beta-HCH's ONE distinctive handle: the all-equatorial (eeeeee) symmetric rigid chair =
+  unique compact SHAPE / near-zero dipole that separates beta- from alpha/gamma/delta-HCH (which differ only in Cl orientation).
+  So R2 must avoid the shape/geometric-imprint axis. Isomer discrimination among HCH is fundamentally Cl-orientation geometry
+  (single-axis), and beta-HCH is the hardest-to-remove isomer (STOTEN 2024: removal order alpha=gamma=delta>beta).
+r1_locked_angles:
+  - { angle_id: A01, mechanism: "gamma-CD inclusion", status: terminated, score: 45, failure: "FM3 core assumption experimentally refuted (beta-CD prefers gamma-HCH)" }
+  - { angle_id: "A05-A07/A12", mechanism: "shape-imprint MIP / molecular cage (all-equatorial symmetric shape readout)", status: self_eval_passed, score: "85-88", note: "occupies the one distinctive shape/geometry axis" }
+r2_new_angles:
+  - angle_id: R2_A01
+    mechanism: "Halogen-bond belt on the 6 equatorial C-Cl (transthyretin-style, PROTO_R2_006 transfer)"
+    pre_screen: { tfg: { conclusion: borderline_fail, note: "the 6 equatorial Cl form a symmetric belt, BUT these are ALIPHATIC C-Cl (sp3), whose sigma-holes are markedly WEAKER than the aromatic C-Cl of DDT/TCDD; aqueous aliphatic-Cl halogen bond cannot reach ng/L. Unlike DDT (aromatic para-Cl), the PROTO_R2_006 transfer does not clear TFG here" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A02
+    mechanism: "Dipole-null / high-symmetry electrostatic recognition"
+    pre_screen: { tfg: { conclusion: fail, note: "beta-HCH's centrosymmetric near-zero dipole is a NEGATIVE property (absence of dipole); you cannot positively bind a molecule for LACKING a feature -> not an engineerable selective interaction; collapses into shape (occupied)" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A03
+    mechanism: "Reactive dehydrochlorination (LinA-type) capture"
+    pre_screen: { tfg: { conclusion: fail, note: "LinA dehydrochlorinase acts on gamma/alpha-HCH; beta-HCH (all-equatorial) is the DEGRADATION-RESISTANT isomer (no antiperiplanar H-Cl for E2) -> reactive route intrinsically fails for beta specifically; class-wide + ng/L kinetics" }, verdict: X }
+    status: excluded
+pre_screen_summary:
+  graded_A: 0
+  graded_B: 0
+  graded_X: 3
+  honest_exhaustion_note: >
+    beta-HCH R2 has NO viable orthogonal angle. Its one distinctive handle (all-equatorial symmetric SHAPE) is R1-occupied (shape-
+    imprint/cage self-eval pass); gamma-CD inclusion was already refuted (R1 A01 terminate). R2 candidates all fail: the halogen-
+    bond belt is ALIPHATIC-C-Cl-weak (PROTO_R2_006 transfers to aromatic Cl only, not sp3 Cl); dipole-null is a non-engineerable
+    absence; reactive dehydrochlorination intrinsically fails for the E2-resistant all-equatorial isomer. Honest near-exhaustion.
+    KEY negative knowledge: the DDT halogen-bond-PATTERN route (PROTO_R2_006) does NOT transfer to aliphatic-C-Cl OCP (beta-HCH) —
+    it requires AROMATIC C-Cl sigma-holes (DDT/TCDD/PCB).
+  execution_decision: "Record beta-HCH R2 honest near-exhaustion; representative terminate slot R2_S14_A01 documents the aliphatic-Cl-weak + shape-occupied wall. Next: TCDD."
+last_updated: "2026-07-30"

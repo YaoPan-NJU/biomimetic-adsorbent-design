@@ -1,0 +1,45 @@
+# PCB-209 R2 angle map — fresh_1000 R2, pollutant 16/20 (Tier 3, Group C)
+# 2026-07-30 | Inherits R1 rounds/fresh_1000/pcb209 (A01A03 in_progress torsional x halogen-bond-array; SL02/SL06/SL08 revise) | English-heavy
+pollutant: pcb209
+pollutant_name: "PCB-209 decachlorobiphenyl (C12Cl10, fully chlorinated, twisted biphenyl, no H-bond site, electron-poor aromatic, logKow ~8.3, ng/L-sub-ng/L, no measured monomer aqueous occurrence post-2019)"
+tier: 3
+group: "C (organochlorine / PCB)"
+r1_honest_ceiling: "in_progress (A01A03 S-grade torsional x halogen-bond-array)"
+r1_intrinsic_constraint: >
+  R1 heavily covered PCB-209 with FOUR angles: A01A03 (in_progress, S-grade) = torsional profile x C-Cl halogen-bond ARRAY
+  orthogonal 2D; SL02_A01 (revise 64) = torsional-complementary cavity; SL06_A16 (revise) = PXR large-soft-cavity; SL08_A23
+  (revise) = multi-epitope orthogonal receptor. So the halogen-bond-array axis, the torsional-shape axis, the PXR-soft-cavity
+  axis AND the multi-epitope axis are ALL R1-occupied. CRITICAL: my DDT PROTO_R2_006 halogen-bond-PATTERN transfer hypothesis
+  (flagged in the DDT slot as "transferable to PCB-209") is here found to be R1-OCCUPIED (A01A03 torsional x halogen-bond-array) —
+  an honest correction. Also: no PCB-209 monomer has been measured in any real water body post-2019 (Wolkersdorfer 2025) — the
+  aqueous competitors are lower-chlorinated PCBs, so it is a low-real-world-priority target.
+r1_locked_angles:
+  - { angle_id: A01A03, mechanism: "torsional profile x C-Cl halogen-bond ARRAY (orthogonal 2D)", status: in_progress, note: "S-grade; occupies halogen-bond-array + torsional-shape axes" }
+  - { angle_id: SL02_A01, mechanism: "torsional-complementary cavity", status: revise, score: 64 }
+  - { angle_id: SL06_A16, mechanism: "PXR large-soft-cavity", status: revise, note: "occupies PXR directed-promiscuity axis" }
+  - { angle_id: SL08_A23, mechanism: "multi-epitope orthogonal receptor", status: revise, note: "occupies multi-epitope pre-organization axis" }
+r2_new_angles:
+  - angle_id: R2_A01
+    mechanism: "Halogen-bond PATTERN on the 10 aromatic Cl (DDT PROTO_R2_006 transfer)"
+    pre_screen: { tfg: { conclusion: fail, note: "OCCUPIED: R1 A01A03 (in_progress, S-grade) already IS torsional x C-Cl halogen-bond ARRAY. The DDT-transfer route landed but R1 got there first. R1-DEDUP fail (not orthogonal)" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A02
+    mechanism: "anion-pi / EDA on electron-poor decachlorobiphenyl (pi-acid to electron-rich host)"
+    pre_screen: { tfg: { conclusion: fail, note: "decachlorobiphenyl is a weak pi-acid; aqueous EDA/CT to an electron-rich host is weak (< kT at ng/L) and prior-art-crowded; also degenerate with lower-chlorinated PCB pi-acidity (FM2-ish, not PCB-209-specific)" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A03
+    mechanism: "Twisted-biphenyl chirality / atropisomer recognition"
+    pre_screen: { tfg: { conclusion: fail, note: "PCB-209 (deca) is symmetric with a low twist barrier and is NOT a stable atropisomer (unlike some tri/tetra-ortho PCBs); no chiral handle; and shape/torsion is R1-occupied (SL02/A01A03)" }, verdict: X }
+    status: excluded
+pre_screen_summary:
+  graded_A: 0
+  graded_B: 0
+  graded_X: 3
+  honest_exhaustion_note: >
+    PCB-209 R2 has NO viable orthogonal angle. R1 already occupies FOUR axes (halogen-bond-array + torsional-shape + PXR-soft-
+    cavity + multi-epitope). The DDT PROTO_R2_006 halogen-bond-PATTERN transfer, which the DDT slot flagged as promising for
+    PCB-209, is found here to be R1-OCCUPIED (A01A03) — honest correction: the polyhalogen-aromatic pattern route was independently
+    reached in R1. Residual R2 candidates (pi-acid EDA, atropisomer chirality) fail on weakness/degeneracy/occupation. Combined
+    with no measured real-world aqueous occurrence, PCB-209 R2 = honest near-exhaustion.
+  execution_decision: "Record PCB-209 R2 honest near-exhaustion; representative terminate slot R2_S16_A01 documents the four-axes-R1-occupied + DDT-transfer-already-occupied wall. Group C complete (16/20). Next: Group B (PCP)."
+last_updated: "2026-07-30"

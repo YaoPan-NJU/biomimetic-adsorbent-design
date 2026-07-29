@@ -1,0 +1,49 @@
+# TCDD R2 angle map — fresh_1000 R2, pollutant 15/20 (Tier 3, Group C dioxin)
+# 2026-07-30 | Inherits R1 rounds/fresh_1000/tcdd (A01=70 revise_with_phase0, lateral-Cl halogen-bond cage) | English-heavy
+pollutant: tcdd
+pollutant_name: "TCDD 2,3,7,8-tetrachlorodibenzo-p-dioxin (planar rigid dioxin, 4 lateral aromatic Cl, logKow ~6.8, neutral, high-affinity AhR ligand, pg/L target)"
+tier: 3
+group: "C (organochlorine / dioxin)"
+r1_honest_ceiling: "78-82 (A01 revise_with_phase0, halogen-bond)"
+r1_intrinsic_constraint: >
+  R1 A01 (S50, score 70, revise_with_phase0_prerequisite) ALREADY took TCDD's halogen-bond angle: lateral-Cl halogen-bond /
+  sigma-hole organic cage (DFT-gated ddG_XB>=2 kJ/mol -> GO), with a fundamental strength limit (single-site aqueous halogen bond
+  < 1 kJ/mol), ceiling 78-82 and a very narrow path to 85. So R2 must NOT re-use the lateral-Cl halogen-bond axis (occupied).
+  TCDD's other physical handles are planar SHAPE and its evolved high-affinity AhR recognition (Gasiewicz&Rucci 1984 tritiated-
+  TCDD direct binding = 4th-level evidence, a real evolved aqueous recognition anchor). AhR is promiscuous across coplanar
+  dioxin-like compounds (other PCDD/F, dl-PCB), so AhR-based recognition delivers DIOXIN-LIKE-CLASS capture, not intra-selectivity.
+r1_locked_angles:
+  - { angle_id: A01, mechanism: "lateral-Cl halogen-bond / sigma-hole organic cage", status: revise_with_phase0_prerequisite, score: 70, note: "occupies the halogen-bond axis; ceiling 78-82; single-site XB < 1 kJ/mol fundamental limit" }
+r2_new_angles:
+  - angle_id: R2_A01
+    mechanism: "AhR-templated dioxin-like-class capture (planar pi-stack + shape-matched aromatic cavity)"
+    rationale: >
+      The aryl-hydrocarbon receptor (AhR) is a real, evolved, aqueous-functional high-affinity receptor for TCDD (direct
+      tritiated-TCDD binding, cross-species). Its recognition physics = planar pi-stacking + shape-complementary hydrophobic
+      pocket (NOT halogen bonding). Translated: an electron-rich planar aromatic host (pi-stacking cleft, e.g. extended-aromatic
+      COF / cyclophane) shape-matched to the planar dioxin -> captures the dioxin-like-compound (DLC) CLASS. Orthogonal MECHANISM
+      to R1's sigma-hole halogen-bond axis.
+    pre_screen:
+      tfg: { conclusion: borderline, note: "planar pi-stack + hydrophobic desolvation can reach high affinity (AhR proves it in water), plausibly better absolute affinity than the sub-1-kJ/mol single-site halogen bond of A01; but pg/L target demands extreme Kd" }
+      pads: { conclusion: pass, grade: B, note: "planar-aromatic hosts (COF/cyclophane) for dioxins have prior art; the AhR-templated DLC-class-capture framing + orthogonality to the R1 halogen-bond angle is the delta" }
+      odc: { conclusion: pass, note: "orthogonal MECHANISM to A01 (pi-stack/shape vs sigma-hole halogen bond)" }
+      r1_dedup: { conclusion: pass, note: "no R1 TCDD AhR/pi-stack angle; AhR prototype not in R1 occupied set (R1 A01 was halogen-bond)" }
+      verdict: B
+    status: opened_slot_R2_S15_A01
+  - angle_id: R2_A02
+    mechanism: "Intra-PCDD/F selectivity (TCDD vs OCDD/PeCDD)"
+    pre_screen: { tfg: { conclusion: fail, note: "intra-dioxin selectivity is planar-size/logKow monotonic (FM2); AhR itself is promiscuous, so no biological template for intra-selectivity; only the (occupied) lateral-Cl halogen-bond pattern is non-monotonic" }, verdict: X }
+    status: excluded
+pre_screen_summary:
+  graded_S: 0
+  graded_A: 0
+  graded_B: 1
+  graded_X: 1
+  honest_note: >
+    TCDD R2 has ONE viable orthogonal angle (R2_A01 AhR-templated dioxin-like-CLASS capture via planar pi-stack + shape),
+    orthogonal in MECHANISM to R1's occupied lateral-Cl halogen-bond axis, and grounded in a real evolved high-affinity aqueous
+    receptor (AhR). Expected verdict: revise ~78 (promiscuity = class-capture not intra-selectivity; planar-aromatic-host prior
+    art + pg/L extreme-Kd demand cap it). New prototype PROTO_R2_007 (AhR ligand-binding domain). Intra-PCDD/F selectivity (A02)
+    is X (FM2 monotonic + no template). This is the productive orthogonal-mechanism escape when the halogen-bond axis is occupied.
+  execution_decision: "Open slot R2_S15_A01 (AhR dioxin-like-class capture, revise route, new prototype PROTO_R2_007). Next: PCB-209."
+last_updated: "2026-07-30"

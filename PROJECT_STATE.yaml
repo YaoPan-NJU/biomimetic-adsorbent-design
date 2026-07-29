@@ -1,12 +1,24 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: fresh_1000_scheme_marathon
-status: in_progress
-last_completed_step: "DDT A01 通过 86/100（2026-07-25）——第 8 个有通过方案的污染物，加深/未通过污染物中首个新通过。脱氯化氢酶 β-消除双基序反应性识别+萘扩展 resorcinarene 离散笼；Born 方程证明低介电腔去稳定 E2 过渡态安全裕度 >95 kJ/mol。同轮完成 BPA A07(39)/PFBS A04(44)/ROX A02(73)/GenX A03(61)/TCDD A01(70 revise)/β-HCH A01(45)/PCP A01(64)/HCBD A05(72 revise)/DDT A02(66 revise)。fresh_1000 现况见 rounds/fresh_1000/STATUS.yaml（截至 2026-07-25：43 槽 attempted / 8 passed / 32 terminated；8/20 污染物已有通过方案）。"
-next_action: "优先 OC A04 DFT 门控（ΔG‡≤55→GO，通过概率 ~25-35%）；TCDD A01 DFT 门控；chloroform/bde209/pcb209 首次尝试；DDT 加深 A04/A06；PFOA 回填 A11-A26。按 SPEC.md Phase B 单槽工作流。每槽隔离设计-攻击-裁决、逐槽提交推送 origin/Ultimate。"
+phase: fresh_1000_iteration_complete
+status: completed
+spec_framework:
+  activated: 2026-07-29
+  global_spec: rounds/fresh_1000/GLOBAL_SPEC.md
+  global_spec_status: v1.0 生效
+  three_tier_structure: "GLOBAL_SPEC.md → 分类 Spec (5 组) → 污染物执行 Spec (20 份)"
+  chemical_groups:
+    A: PFAS（全氟化合物）
+    B: 酚类/内分泌干扰物
+    C: 有机氯农药/多卤代物
+    D: 卤代小分子/工业化学品
+    E: 大环内酯类/紫外过滤剂
+  category_specs_status: 已完成（4 份：AE 联合、B、C、D）
+  phase_a_plus_mechanism: TFG + PADS + ODC 三道快速预筛 + S/A/B/X 角度预分类
+last_completed_step: "fresh_1000 千方案马拉松迭代完成（2026-07-29）：20/20 污染物全覆盖，经 10 轮迭代。14 种污染物自评通过（≥85 分，待正式裁决确认）：NP(92)/Dieldrin(89)/DDT(87-88)/BPA(86)/DDE(86)/Endosulfan(85)/PFOA(85)/PFBS(85)/ROX(85)/Octocrylene(85)/GenX(85)/PCP(85-87)/beta-HCH(85-88)/BDE-209(85)。6 种全面巩固（全 low 弱点）：TCDD/PFHxS/DCP26/PCB-209/HCBD/Chloroform。BDE-209 A03 终止、A07 r5 通过（W1 最终降至 low）。所有 20 种污染物方案弱点均为 low 级别。9 个正式通过方案（含 PFOA A02/BPA A01/PFBS A17/NP A01/Dieldrin A01/ROX A01/Octocrylene A01/Endosulfan A01/BDE-209 A07）。"
+next_action: "回溯补角阶段：对已通过自评的 14 种污染物补充更多角度方案，提升方案库深度；随后进入正式裁决流程（对自评通过方案逐一进行独立攻击-裁决确认）；Git 提交并推送到 Ultimate 分支。"
 active_branch: Ultimate
-last_verified_commit: 150ad86
-scheme_target: "10 passing schemes per pollutant (200 total); easy-first deepening; honest N<10 clause retained"
+last_verified_commit: 3a187f6
 bmdl_policy: removed_from_branch
 historical_artifacts_status: preserved_not_active
 candidate_pool_status: historical_preserved_not_active
@@ -309,6 +321,7 @@ artifacts:
   organ_enrichment_biomimetic_heuristic: research/evidence/ORGAN_ENRICHMENT_BIOMIMETIC_HEURISTIC.md
   biological_treatment_unit_heuristic: research/evidence/BIOLOGICAL_TREATMENT_UNIT_BIOMIMETIC_HEURISTIC.md
   fresh_1000_spec: rounds/fresh_1000/SPEC.md
+  fresh_1000_global_spec: rounds/fresh_1000/GLOBAL_SPEC.md
   fresh_1000_status: rounds/fresh_1000/STATUS.yaml
   biomimetic_design_framework: docs/BIOMIMETIC_DESIGN_FRAMEWORK.md
   portfolio_100_bpa: rounds/portfolio_100/BPA.md

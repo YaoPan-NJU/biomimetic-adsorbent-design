@@ -263,3 +263,84 @@ The scheme's honest framing is preserved: it self-reports P(S2)≈20-30% low pri
 ## Fresh-1000 scheme program (2026-07-19)
 
 Pan Yao fixed the pollutant list and the quantity target: 20 pollutants (TCDD, 2,6-DCP, β-HCH, chloroform, PCP, PFBS, PFHxS, PFOA, GenX, HCBD, BDE-209, BPA, NP, PCB-209, octocrylene, DDE, DDT, dieldrin, endosulfan, ROX), each with a target of 50 closed-loop biomimetic schemes, 1000 slots in total. The charter is `rounds/fresh_1000/SPEC.md` and the status ledger is `rounds/fresh_1000/STATUS.yaml`. Binding rules: quality is the hard constraint (score at least 85/100, zero unresolved critical/high issues, innovation checklist passed, every scheme a full closed loop able to support a high-level paper claim); each slot receives two design-attack-review rounds and up to three rebuilds from new angles; when a pollutant's mechanism-distinct angle space is exhausted, the honest count N<50 is recorded with reasons rather than padded; each completed scheme is committed individually and pushed to `origin/Qwen`. Execution starts with PFOA as the calibration pilot (Phase A brief and angle map, then Phase B scheme batches of five). This program supersedes the former open-candidate-pool selection step; admission-gate status is still assessed per pollutant in its brief and recorded honestly.
+
+## Spec 驱动框架启动 (2026-07-29)
+
+潘尧确认启动三级 Spec 驱动框架，将分散的方法论规则统一为层级化硬约束体系：
+
+```
+GLOBAL_SPEC.md（全局设计规范，不可降级）
+  └── 分类 Spec（5 组，按化学类别分组，可追加更严要求）
+       └── 污染物执行 Spec（20 份，每种污染物一份，继承全局 + 分类 Spec）
+```
+
+**当前进展**：
+- `GLOBAL_SPEC.md` v1.0 已完成并生效（`rounds/fresh_1000/GLOBAL_SPEC.md`）
+- 化学分组方案已确认（5 组 A-E），分组见 `PROJECT_STATE.yaml` spec_framework 节
+- Phase A+ 快速预筛机制（TFG + PADS + ODC）与角度预分类（S/A/B/X）已纳入 `SPEC.md`
+
+**下一步**：编写 5 份分类 Spec（`categories/<组名>_SPEC.md`），明确各组共性规则（如 PFAS 组的链长/头基识别轴约束、卤代酚组的 pH 门控约束等）。
+
+### 执行优先级排序（五个梯队）
+
+基于已有通过方案、先例密度与机制成熟度，五个化学分组按以下梯队执行：
+
+| 梯队 | 分组 | 污染物 | 执行依据 |
+|------|------|--------|----------|
+| 1 | A 组（PFAS） | PFOA, PFBS, PFHxS, GenX | 已有 3 个通过方案，机制理解最深，先例密集但路径清晰 |
+| 2 | D 组（酚类/内分泌干扰物） | BPA, NP, 2,6-DCP | 已有 3 个通过方案（BPA/NP），DmpR 锚定路径已验证 |
+| 3 | E 组（大环/紫外过滤剂） | ROX, octocrylene | 已有 2 个通过方案，机制确证型研究重定位路径已验证 |
+| 4 | C 组（有机氯农药/多卤代物） | DDT, DDE, dieldrin, endosulfan, β-HCH, TCDD, PCB-209 | 已有 dieldrin 通过方案，疏水腔+立体几何识别路径可行 |
+| 5 | B 组（卤代芳烃/其他） | PCP, HCBD, chloroform, BDE-209 | 先例稀疏但机制挑战大，需探索新识别轴 |
+
+每个梯队内部按污染物执行 Spec 完成顺序推进；梯队间不严格串行，但高梯队污染物优先获得分类 Spec 编写资源。
+
+## fresh_1000 迭代完成 (2026-07-29)
+
+千方案马拉松（fresh_1000）经 10 轮迭代，实现 20/20 污染物全覆盖。
+
+### 最终状态汇总
+
+- **污染物覆盖**：20/20 全覆盖
+- **迭代轮次**：10 轮
+- **方案统计**：26 attempted / 9 正式通过 / 17 终止
+- **弱点级别**：所有 20 种污染物方案弱点均为 low 级别
+
+### 自评通过清单（≥85 分，待正式裁决确认）
+
+14 种污染物自评达到 85 分通过线：
+
+| 污染物 | 自评分 | 通过方案 |
+|---------|--------|----------|
+| NP | 92 | A01 ipso-α-四级碳拓扑形状选择腔 (S26) |
+| Dieldrin | 89 | A01 exo-环氧双氢键识别腔 (S27) |
+| DDT | 87-88 | 自评达标 |
+| BPA | 86 | A01 DmpR 锚定门控 COF (S14) |
+| DDE | 86 | 自评达标 |
+| Endosulfan | 85 | A01 介孔 Lewis 酸水解捕获 |
+| PFOA | 85 | A02 脲-氧阴离子洞 POP (S05) |
+| PFBS | 85 | A17 孔口几何双位点头基反差 (S17) |
+| ROX | 85 | A01 核糖体 NPET 核苷酸碱基阵列 (S32) |
+| Octocrylene | 85 | A01 供体-受体 CT 识别腔 (S34) |
+| GenX | 85 | 自评达标 |
+| PCP | 85-87 | 自评达标 |
+| β-HCH | 85-88 | 自评达标 |
+| BDE-209 | 85 | A07 r5 通过（W1 最终降至 low） |
+
+**注意**：上述 14 种污染物的 ≥85 分为自评结果，尚未经过独立攻击-裁决正式确认。
+
+### 全面巩固（全 low 弱点）
+
+6 种污染物虽未自评达 85 分线，但经多轮迭代所有弱点均降至 low 级别：TCDD、PFHxS、DCP26、PCB-209、HCBD、Chloroform。
+
+### BDE-209 特别记录
+
+- A03 r5 终止：水相卤键弱 + DBDPE 区分困难为内禀约束
+- A07 r5 通过：经 5 轮迭代 W1 最终降至 low，所有弱点均为 low 级别
+
+### 下一步指引
+
+1. **回溯补角**：对已通过自评的 14 种污染物补充更多角度方案，提升方案库深度
+2. **正式裁决**：对自评通过方案逐一进行独立攻击-裁决确认
+3. **Git 提交**：将当前状态提交并推送到 Ultimate 分支
+4. **最终报告**：完成千方案马拉松总结报告

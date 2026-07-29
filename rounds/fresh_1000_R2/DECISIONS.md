@@ -170,3 +170,25 @@
 - slot R2_S06_A01（amphiphilic interface）r1 48 **terminate**（1c 结构性 T1）：amphiphilic partitioning 对 NP vs OP 为 logKow 单调（T1），无正交第二维（topology=A01 已占），不可重建。
 - 中间产物：MECH_np_001（负知识：NP amphiphilic 轴为 T1 陷阱，只有 topology 给正交选择性）。无新原型。
 - **NP R2 诚实近耗尽**（R1 已捕获可处理空间）。R2 累计 6 槽 0 通过（4 revise + 2 terminate）。下一 DCP26。
+
+---
+
+## 2026-07-30 Batch: DCP26 + ROX + Octocrylene R2 slots (breadth-first acceleration, English-heavy)
+
+Processed 3 pollutants this turn (9/20 covered). Rationale: budget-limited breadth-first (M2); R1 already captured each
+pollutant's best axis, so honest outcomes are revise/near-exhaustion.
+
+- **DCP26 (slot R2_S07_A01, terminate 44, honest near-exhaustion)**: chlorophenol regio-isomer aqueous selectivity is
+  single-parameter-monotonic (R1 3/3 terminated); only geometric halogen-bond sigma-hole pattern (A04) is non-monotonic and is
+  R1-occupied + aqueous-weak. All 3 R2 candidates X. MECH_dcp26_001 (negative knowledge).
+- **ROX (slot R2_S08_A01, revise ~81, 0c/1h)**: cation-pi aromatic-cage recognition of the protonated desosamine amine +
+  14-membered size window -> macrolide-CLASS capture (orthogonal to A01 NPET / A02 oxime / A06 esterase). New prototype
+  PROTO_R2_005 (AChE aromatic-gorge cation-pi). Ceiling 82-83 (cation-pi moderate to tertiary amine; class not intra-macrolide;
+  CD-inclusion prior art caps originality). MECH_rox_001. Transferable class-capture axis for protonated-amine pharmaceuticals.
+- **Octocrylene (slot R2_S09_A01, terminate 46, honest near-exhaustion)**: OC's only orthogonal recognition handle is its
+  electron-deficient acrylate (CT=A01 passed / Michael=A04 revise, both R1-occupied); hydrophobic/shape axes are T1-monotonic
+  vs co-occurring UV filters. All 3 R2 candidates X. MECH_octocrylene_001 (negative knowledge).
+
+**R2 cumulative: 9/20 covered, 0 pass (5 revise + 4 terminate/exhaustion), prototype library 88, 9 mechanism maps, 9 angle maps.**
+Honest reality reaffirmed and documented: R2's orthogonality-to-R1 constraint + prior-art saturation / R1 deep-exhaustion make
+passing intrinsically harder than R1; best R2 revises (PFHxS/BPA/ROX ~81-82) need deep multi-round backfill to reach 85. Next: DDT (Group C).

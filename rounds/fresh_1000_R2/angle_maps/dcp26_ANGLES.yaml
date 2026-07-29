@@ -1,0 +1,43 @@
+# DCP26 R2 angle map — fresh_1000 R2, pollutant 7/20 (Tier 2, Group D)
+# 2026-07-30 | Inherits R1 rounds/fresh_1000/dcp26/{BRIEF,DESIGN_SPACE}.md (35 angles) | English-heavy (glyph safety)
+pollutant: dcp26
+pollutant_name: "2,6-dichlorophenol (weak acid, pKa~6.8; regio-isomer of 2,4-/2,5-/3,4-DCP)"
+tier: 2
+group: "D (chlorophenols)"
+r1_honest_ceiling: 35
+r1_intrinsic_constraint: >
+  R1 terminated A01/A02/A03 on the SAME structural deadlock: aqueous quantitative selectivity among chlorophenol
+  regio-isomers is single-parameter-monotonic (pKa / logKow), selectivity-factor prior <2 (FM2). A04 (halogen-bond
+  sigma-hole PATTERN geometry, S-grade PADS 18, 3 orthogonal dims) is R1's one non-monotonic geometric angle and remains
+  R1's in-progress best route (Phase-0 DFT-gated: aqueous C-Cl halogen bond weak). So R2 orthogonal space beyond A04 is
+  near-empty for regio-isomer discrimination.
+r1_locked_angles:
+  - { angle_id: A01, mechanism: "regio-steric recognition", status: terminated, score: 75, failure: "FM2 single-param monotonic, SF prior <2" }
+  - { angle_id: A02, mechanism: "UGT headgroup accessibility", status: terminated, score: 76, failure: "FM2 (homologous to A01)" }
+  - { angle_id: A03, mechanism: "imidazolium pH-gated adsorption", status: terminated, score: 68, failure: "FM2 single-param pKa monotonic" }
+  - { angle_id: A04, mechanism: "halogen-bond sigma-hole pattern (C2v dipyridyl COF)", status: r1_in_progress, note: "S-grade, R1's best geometric angle (Phase-0 DFT-gated); occupied by R1" }
+r2_new_angles:
+  - angle_id: R2_A01
+    mechanism: "Chaotropic/anion-pi on chlorophenolate (partially anionic at neutral pH)"
+    pre_screen: { tfg: { conclusion: fail, note: "regio-isomers have near-identical hydration/charge; chaotropic/anion-pi cannot resolve 2,6- vs 2,4- (regio-degenerate). anion-pi favors sulfate. Not regio-selective." }, verdict: X }
+    status: excluded
+  - angle_id: R2_A02
+    mechanism: "Reactive dehalogenation capture"
+    pre_screen: { tfg: { conclusion: fail, note: "dehalogenation is class-wide (all chlorophenols), not 2,6-regio-selective; ng/L reactive kinetics" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A03
+    mechanism: "flanked-OH (2,6-diortho-Cl) H-bond-blocked recognition"
+    pre_screen: { tfg: { conclusion: borderline_fail, note: "the 2,6-diortho-Cl flanks the phenol OH (blocks intramolecular H-bond, raises steric); but this IS regio-steric = A01 occupied/terminated. No orthogonal addition." }, verdict: X }
+    status: excluded
+pre_screen_summary:
+  graded_A: 0
+  graded_B: 0
+  graded_X: 3
+  honest_exhaustion_note: >
+    DCP26 R2 has NO viable orthogonal angle. Chlorophenol regio-isomer aqueous selectivity is fundamentally single-parameter-
+    monotonic (R1 3x confirmed, A01/A02/A03 terminated); the one non-monotonic geometric axis (halogen-bond sigma-hole pattern,
+    A04) is R1's occupied in-progress best angle and is itself aqueous-halogen-bond-weak (Phase-0 DFT-gated). R2 candidates
+    (chaotropic/anion-pi, reactive dehalogenation, flanked-OH) all fail: regio-degenerate hydration, class-wide reaction, or
+    collapse into A01's occupied regio-steric axis. Honest near-exhaustion (honest N > padding).
+  execution_decision: "Record DCP26 R2 honest near-exhaustion; representative terminate slot R2_S07_A01 documents the regio-monotonic wall. Next: ROX."
+last_updated: "2026-07-30"

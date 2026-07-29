@@ -1,0 +1,18 @@
+# Mechanism map — fresh_1000 R2
+mechanism_id: MECH_dcp26_001
+pollutant: dcp26
+mechanism_name: "Chlorophenol regio-isomer discrimination (honest near-exhaustion — single-parameter monotonic wall)"
+biological_source: "n/a (no viable orthogonal prototype; regio-selectivity is physicochemically monotonic)"
+material_implementation: "n/a (all R2 candidates X-graded)"
+selectivity_signature:
+  primary_dimension: "regio-isomer position (2,6- vs 2,4-/2,5-)"
+  orthogonal_dimensions: ["none viable (pKa/logKow monotonic; only geometric halogen-bond sigma-hole pattern A04 is non-monotonic and R1-occupied + aqueous-weak)"]
+aqueous_feasibility: { tfg_assessment: fail, note: "regio-isomer aqueous selectivity single-parameter-monotonic (FM2); SF prior <2" }
+verdict: terminated_near_exhaustion
+score: "44 (r1 terminate, structural FM2)"
+r1_overlap: false
+scheme_ref: "dcp26/SCHEMES/R2_S07_A01_regio-monotonic-wall_terminated.md"
+transferable_negative_knowledge: >
+  For small-halophenol positional-isomer discrimination in water, only geometric sigma-hole (halogen-bond) pattern escapes the
+  pKa/logKow monotonic trap, and it is aqueous-halogen-bond-limited. DCP26 R2 = honest near-exhaustion (R1 3/3 terminated).
+last_updated: "2026-07-30"

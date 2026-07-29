@@ -97,27 +97,39 @@ pollutants:
   dcp26:
     name: "2,6-二氯苯酚 DCP26"
     r1_status: "0 passed, 3 terminated, 1 in_progress"
-    r2_angles_planned: 0
-    r2_attempted: 0
+    r2_angles_planned: 3
+    r2_attempted: 1
     r2_passed: 0
-    r2_terminated: 0
-    status: "pending"
+    r2_terminated: 1
+    r2_revise: 0
+    angle_map: rounds/fresh_1000_R2/angle_maps/dcp26_ANGLES.yaml
+    slots:
+      R2_S07_A01: { r1: "44 terminate (1c structural FM2)", status: terminated, file: "dcp26/SCHEMES/R2_S07_A01_regio-monotonic-wall_terminated.md", mechanism: "MECH_dcp26_001", note: "regio-isomer aqueous selectivity single-param-monotonic; only halogen-bond sigma-hole (A04, R1-occupied) is non-monotonic; honest near-exhaustion" }
+    status: "honest_exhaustion (3 R2 candidates X; regio-monotonic wall; R1 3/3 terminated)"
   rox:
     name: "罗红霉素 ROX"
     r1_status: "1 passed (A01=85), 2 terminated"
-    r2_angles_planned: 0
-    r2_attempted: 0
+    r2_angles_planned: 2
+    r2_attempted: 1
     r2_passed: 0
     r2_terminated: 0
-    status: "pending"
+    r2_revise: 1
+    angle_map: rounds/fresh_1000_R2/angle_maps/rox_ANGLES.yaml
+    slots:
+      R2_S08_A01: { r1: "66", r2: "~81 revise (0c/1h)", status: revise, file: "rox/SCHEMES/R2_S08_A01_cation-pi-aromatic-cage-class-capture_revise.md", prototype: "PROTO_R2_005 AChE cation-pi", mechanism: "MECH_rox_001", note: "cation-pi aromatic cage (protonated desosamine amine) + 14-membered size window, macrolide-class capture; orthogonal to A01 NPET; ceiling 82-83 (cation-pi moderate to tertiary amine + CD-inclusion prior art)" }
+    status: "phase_b (R2_A01 revise ~81; new prototype PROTO_R2_005; macrolide-class capture route)"
   octocrylene:
     name: "奥克立林"
     r1_status: "1 passed (A01=85), 1 terminated"
-    r2_angles_planned: 0
-    r2_attempted: 0
+    r2_angles_planned: 3
+    r2_attempted: 1
     r2_passed: 0
-    r2_terminated: 0
-    status: "pending"
+    r2_terminated: 1
+    r2_revise: 0
+    angle_map: rounds/fresh_1000_R2/angle_maps/octocrylene_ANGLES.yaml
+    slots:
+      R2_S09_A01: { r1: "46 terminate (1c structural)", status: terminated, file: "octocrylene/SCHEMES/R2_S09_A01_electronic-axis-occupied_terminated.md", mechanism: "MECH_octocrylene_001", note: "OC recognition handle = electron-deficient acrylate (CT=A01 passed / Michael=A04 revise, both R1-occupied); hydrophobic/shape T1-monotonic vs UV filters; honest near-exhaustion" }
+    status: "honest_exhaustion (3 R2 candidates X; electronic axis R1-occupied; hydrophobic T1)"
   ddt:
     name: "滴滴涕 DDT"
     r1_status: "1 passed (A01=86), 0 terminated"
@@ -207,15 +219,14 @@ pollutants:
     r2_terminated: 0
     status: "pending"
 totals:
-  r2_attempted: 6
+  r2_attempted: 9
   r2_passed: 0
-  r2_terminated: 2
-  r2_revise: 4
-  prototype_library_size: 87   # +4 R2（PROTO_R2_001/002/003/004）
+  r2_terminated: 4
+  r2_revise: 5
+  prototype_library_size: 88   # +5 R2 (PROTO_R2_001..005)
   prototype_library_target: 150
-  mechanism_maps: 6   # pfoa, pfbs, pfhxs, genx, bpa, np
-  angle_maps: 6       # pfoa, pfbs, pfhxs, genx, bpa, np
-  a_group_coverage: "complete（PFOA/PFBS/PFHxS revise + GenX terminate）"
-  d_group_progress: "BPA revise ~82 + NP terminate 48（近耗尽）；下一 DCP26"
-  r2_score_trajectory_note: "6 槽 0 通过（4 revise + 2 terminate）；R2 正交约束 + 平台饱和/R1 深挖耗尽使通过本质难于 R1（SPEC 预期，诚实 N 优于凑数）；广度优先推进中"
-last_updated: "2026-07-30T03:30"
+  mechanism_maps: 9
+  angle_maps: 9
+  coverage_note: "9/20 pollutants covered (A group 4 + D group BPA/NP/DCP26 + E group ROX/OC). 0 pass (5 revise + 4 terminate/exhaustion)."
+  r2_score_trajectory_note: "Honest R2 reality: R2 orthogonality (avoid R1 best angles) + prior-art saturation / R1 deep-exhaustion make passing intrinsically harder than R1 (SPEC-anticipated, honest N > padding). Best R2 revises: PFHxS ~82, BPA ~82, ROX ~81. Passes require deep multi-round backfill (as R1 A01 needed 5 rounds)."
+last_updated: "2026-07-30T05:30"

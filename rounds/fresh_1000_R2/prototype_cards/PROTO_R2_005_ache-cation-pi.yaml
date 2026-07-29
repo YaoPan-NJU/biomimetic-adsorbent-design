@@ -1,0 +1,27 @@
+# Prototype card — fresh_1000 R2
+prototype_id: PROTO_R2_005
+name: "Acetylcholinesterase aromatic-gorge / nicotinic-receptor aromatic-cage cation-pi"
+source_type: protein
+biological_origin: >
+  Acetylcholinesterase (AChE) active-site gorge and nicotinic acetylcholine receptor binding site recognize the protonated/
+  quaternary amine of acetylcholine primarily via CATION-PI interactions with a box of aromatic residues (Trp/Tyr/Phe), a
+  well-established biological cation-pi motif (Dougherty and co-workers). Biological function: neurotransmitter binding/
+  hydrolysis (not aqueous pollutant capture).
+applicable_pollutants: ["rox"]   # protonated-amine pharmaceuticals broadly (macrolides, alkaloids, aminoglycosides)
+recognition_mechanism: >
+  Electron-rich aromatic cage stabilizes a protonated/quaternary amine cation via ion-quadrupole (cation-pi), surviving in
+  water (as in AChE). Translated: aromatic-rich macrocyclic cage (calixarene/pillararene) captures the protonated desosamine
+  tertiary amine of macrolides; combined with a size window -> macrolide-class capture. Cation-pi to tertiary-ammonium is
+  moderate (weaker than to quaternary ammonium).
+literature_support:
+  - { doi: "Dougherty (cation-pi in AChE/nAChR; textbook, e.g. Science 1996 / PNAS studies)", year: 1996, claim_supported: "cation-pi recognition of protonated/quaternary amine in aromatic protein cages, functional in water", evidence_tier: fact }
+translation_distance_note: >
+  AChE function is neurotransmitter hydrolysis, not pollutant capture; cation-pi is a general supramolecular principle. C-dim
+  analogy-level (honest). Class-wide for cationic amines (not intra-macrolide).
+evolution_solution_judgement: >
+  Passes G2 conditionally: cation-pi amine recognition is an evolved biological binding physics (AChE/nAChR), but for
+  neurotransmission not selective aqueous capture -> mechanism-analogy strength.
+r1_used: false
+r2_first_used_in: "ROX R2_A01"
+r2_outcome_note: "ROX slot revise ~81 (cation-pi moderate to tertiary amine + class-capture + CD-inclusion prior art cap originality)."
+last_updated: "2026-07-30"

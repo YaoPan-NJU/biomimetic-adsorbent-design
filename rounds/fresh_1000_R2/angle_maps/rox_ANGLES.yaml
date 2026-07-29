@@ -1,0 +1,37 @@
+# ROX R2 angle map — fresh_1000 R2, pollutant 8/20 (Tier 3, Group E macrolide)
+# 2026-07-30 | Inherits R1 rounds/fresh_1000/rox/{BRIEF,DESIGN_SPACE}.md (22 angles) | English-heavy
+pollutant: rox
+pollutant_name: "Roxithromycin (14-membered macrolide, MW 837, desosamine tertiary amine pKa~8.8 -> cationic at env pH; C9 oxime-ether)"
+tier: 3
+group: "E (macrolides / UV filters)"
+r1_honest_ceiling: 22
+r1_locked_angles:
+  - { angle_id: A01, mechanism: "23S rRNA NPET nucleobase-array cleft half-cage", status: passed, score: 85, note: "R1 pass; occupied" }
+  - { angle_id: A02, mechanism: "oxime-ether directed H-bond", status: terminated, score: 73, failure: "alpha~0.40 negative-selection + mechanism homologous to ROX-6" }
+  - { angle_id: A06, mechanism: "macrolide esterase reactive capture", status: terminated, score: 49, failure: "catalytic gap 7-10 OOM (Bose 2023) + class-wide not ROX-selective" }
+r2_new_angles:
+  - angle_id: R2_A01
+    mechanism: "Cation-pi aromatic-cage recognition of the protonated desosamine tertiary amine + 14-membered macrocycle size window (macrolide-CLASS capture, orthogonal to A01 NPET base-array / A02 oxime-H-bond / A06 esterase)"
+    prototype: "Acetylcholinesterase aromatic gorge / nicotinic receptor aromatic cage: cation-pi recognition of protonated/quaternary amine (Dougherty; well-established biological cation-pi motif)"
+    prototype_source: protein
+    material_platform: "aromatic-rich electron-dense macrocyclic cage (calixarene/pillararene/aromatic HCP) presenting a cation-pi pocket + size-limited portal"
+    orthogonality_to_r1:
+      vs_A01: "cation-pi to protonated amine (ion-quadrupole) vs NPET nucleobase H-bond array; different physics, different prototype (AChE vs 23S rRNA)"
+      vs_A02_A06: "not oxime-ether H-bond (A02, negative alpha); not reactive esterase (A06)"
+    pre_screen:
+      tfg: { conclusion: borderline, note: "cation-pi survives in water (AChE precedent); protonated amine + aromatic cage moderate affinity. Weakness: class-wide (all macrolides cationic) so this is macrolide-CLASS capture not intra-macrolide; competitor = other cationic amines (mitigated by 14-membered size window)." }
+      pads: { score: 45, direct: 0, directional: 3, platform: 3, saturation: false, note: "macrolide-CD inclusion published (gamma-CD/erythromycin-beta-CD, solubilization) but NOT cation-pi-attributed selective adsorption; cation-pi-cage macrolide-class capture with size window is a mechanistic gap" }
+      odc: { dimensions: 2, dimension_list: ["cation-pi to protonated amine (ion-quadrupole electronic)", "14-membered macrocycle size window (geometric)"], monotonic_risk: low }
+      r1_dedup: { conclusion: pass, note: "mechanism/material/prototype orthogonal to A01/A02/A06" }
+      verdict: A
+      override_reason: "A-grade: cation-pi (real AChE prototype, orthogonal to R1) + size window; macrolide-class capture (co-occurring macrolide antibiotics) real engineering value. TFG borderline (class not intra-class; cation-pi moderate). Expected revise ~80-83."
+    status: representative_slot
+  - angle_id: R2_A02
+    mechanism: "Chaotropic recognition"
+    pre_screen: { tfg: { conclusion: fail, note: "ROX cationic (not weakly-hydrated anion); chaotropic-anion route N/A" }, verdict: X }
+    status: excluded
+pre_screen_summary:
+  graded_A: 1
+  graded_X: 1
+  execution_decision: "Run R2_A01 (cation-pi aromatic cage + size, macrolide-class capture). Expected honest revise ~80-83 (class-capture, cation-pi moderate in water, CD-inclusion prior art caps originality). New prototype PROTO_R2_005 (AChE cation-pi)."
+last_updated: "2026-07-30"

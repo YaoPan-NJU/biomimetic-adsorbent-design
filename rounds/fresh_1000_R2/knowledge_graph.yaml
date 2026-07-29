@@ -75,6 +75,12 @@ knowledge_graph:
         r1_used_in: null
         r2_first_used_in: "BPA R2_A01"
         card: prototype_cards/PROTO_R2_004_pxr-directed-promiscuity.yaml
+      - id: "ache_cation_pi"
+        name: "AChE/nAChR aromatic-cage cation-pi (protonated-amine recognition)"
+        source_type: protein
+        r1_used_in: null
+        r2_first_used_in: "ROX R2_A01"
+        card: prototype_cards/PROTO_R2_005_ache-cation-pi.yaml
     
     # 识别机制（随 R2 推进持续扩展）
     mechanisms:
@@ -102,6 +108,18 @@ knowledge_graph:
         name: "NP amphiphilic-interface partitioning (terminated, T1 monotonic boundary)"
         pollutant: np
         map: mechanism_maps/np_amphiphilic-boundary.yaml
+      - id: "MECH_dcp26_001"
+        name: "Chlorophenol regio-isomer discrimination (near-exhaustion, single-param monotonic wall)"
+        pollutant: dcp26
+        map: mechanism_maps/dcp26_regio-monotonic.yaml
+      - id: "MECH_rox_001"
+        name: "Cation-pi aromatic-cage macrolide-class capture + size window"
+        pollutant: rox
+        map: mechanism_maps/rox_cation-pi.yaml
+      - id: "MECH_octocrylene_001"
+        name: "OC hydrophobic/shape (near-exhaustion, electronic axis R1-occupied + T1)"
+        pollutant: octocrylene
+        map: mechanism_maps/octocrylene_hydrophobic-boundary.yaml
 
     # 材料平台（随 R2 推进持续扩展）
     materials:
@@ -155,13 +173,18 @@ knowledge_graph:
       - ["MECH_genx_001", "genx", "terminated_41_chaotropic_lower_bound"]
       - ["MECH_bpa_001", "bpa", "revise_with_phase0_~82"]
       - ["MECH_np_001", "np", "terminated_48_amphiphilic_T1_boundary"]
+      - ["ache_cation_pi", "MECH_rox_001", "source_backed_lead"]
+      - ["MECH_dcp26_001", "dcp26", "terminated_44_regio_monotonic"]
+      - ["MECH_rox_001", "rox", "revise_81_cation_pi_class_capture"]
+      - ["MECH_octocrylene_001", "octocrylene", "terminated_46_electronic_occupied"]
   
   statistics:
-    total_prototypes: 87  # 83 基线 + 4 R2（anion-π/Hofmeister 通道/OAT4 窗口/PXR 定向混杂）
-    total_mechanisms: 6
+    total_prototypes: 88  # 83 + 5 R2 (anion-pi, Hofmeister channel, OAT4 window, PXR promiscuity, AChE cation-pi)
+    total_mechanisms: 9
     total_materials: 3
     total_pollutants: 20
-    connectivity_density: 0.25
+    r2_coverage: "9/20 pollutants; 0 pass (5 revise + 4 terminate/exhaustion)"
+    connectivity_density: 0.34
     r2_slots_note: "6 slots, 0 pass (4 revise-with-external-gate + 2 terminate); R2 orthogonality + prior-art saturation make passing harder than R1 (SPEC-anticipated honest result)"
     a_group_coverage: "complete (PFOA/PFBS/PFHxS revise + GenX terminate)"
     r2_note: "A 组 PFAS 头基-水合识别：anion-π=负债/趋液=资产（C6>C4>亲水）；D 组 BPA：PXR 定向混杂+双齿 avidity 类去除（与 A01 类内判别互补）"

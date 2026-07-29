@@ -1,0 +1,35 @@
+# Octocrylene R2 angle map — fresh_1000 R2, pollutant 9/20 (Tier 3, Group E UV filter)
+# 2026-07-30 | Inherits R1 rounds/fresh_1000/octocrylene/{BRIEF,DESIGN_SPACE}.md | English-heavy
+pollutant: octocrylene
+pollutant_name: "Octocrylene (2-ethylhexyl 2-cyano-3,3-diphenylacrylate; neutral, logKow~6.1; electron-deficient acrylate)"
+tier: 3
+group: "E (UV filters)"
+r1_locked_angles:
+  - { angle_id: A01, mechanism: "donor-acceptor charge-transfer (CT) recognition cavity (electron-deficient cyanoacrylate core; photosynthetic-RC prototype)", status: passed, score: 85 }
+  - { angle_id: A02, mechanism: "cyano-dipole H-bond anchor array", status: terminated, score: 55, failure: "dehydration penalty >=60 kJ/mol self-falsifying; selectivity reversal (EHMC methoxy pKBHX > OC cyano)" }
+  - { angle_id: A04, mechanism: "Michael covalent capture (electron-deficient acrylate + amine nucleophile)", status: revise_with_phase0, score: 80, note: "R1 revise, DFT gate dG++<=55->GO; R1-occupied best reactive angle" }
+r2_new_angles:
+  - angle_id: R2_A01
+    mechanism: "Hydrophobic partitioning + twisted-diphenyl shape recognition (deep aromatic cavity)"
+    pre_screen: { tfg: { conclusion: borderline_fail, note: "OC logKow~6; competitor UV filters (EHMC, BP-3, avobenzone, homosalate) similarly hydrophobic -> partitioning is logKow-monotonic (T1); twisted-diphenyl shape overlaps A01 CT cavity geometry. No orthogonal 2nd dim vs other UV filters." }, verdict: X }
+    status: excluded
+  - angle_id: R2_A02
+    mechanism: "E/Z photo-isomerization photo-gated capture"
+    pre_screen: { tfg: { conclusion: fail, note: "no biological prototype for photo-gated selective adsorption of OC; speculative; OC E/Z photoisomerization does not create a selective binding handle vs other UV filters" }, verdict: X }
+    status: excluded
+  - angle_id: R2_A03
+    mechanism: "Ester-hydrolysis reactive capture"
+    pre_screen: { tfg: { conclusion: fail, note: "ester hydrolysis is class-wide (esters ubiquitous), not OC-selective; adjacent to A04 reactive family (R1-occupied); ng/L kinetics" }, verdict: X }
+    status: excluded
+pre_screen_summary:
+  graded_A: 0
+  graded_B: 0
+  graded_X: 3
+  honest_exhaustion_note: >
+    Octocrylene R2 has NO viable orthogonal angle. R1 captured OC's tractable axes: CT electronic recognition (A01, passed,
+    the electron-deficient cyanoacrylate is the unique handle), cyano-dipole (A02, terminated on dehydration + reversal), and
+    Michael covalent reactive capture (A04, R1 revise, DFT-gated best reactive angle). R2 candidates all fail: hydrophobic/
+    shape (T1 monotonic vs co-occurring UV filters + overlaps A01 cavity), photo-gating (no prototype, speculative),
+    ester-hydrolysis (class-wide, adjacent A04). Honest near-exhaustion (honest N > padding).
+  execution_decision: "Record OC R2 honest near-exhaustion; representative terminate slot R2_S09_A01 documents the UV-filter T1/electronic-axis-occupied wall. Next: DDT (Group C)."
+last_updated: "2026-07-30"

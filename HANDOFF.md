@@ -397,9 +397,9 @@ R2 的中间产物持久化策略支持仿生设计库扩展：
 | 分类 Spec | `rounds/fresh_1000/SPEC_GROUP_*.md` | 继承的分组规范 |
 | 仿生原型库 | `data/bmdl_snapshot/biological_prototypes.json` | 83 条已入库 |
 
-## fresh_1000 R2 执行检查点：A 组完成 + D 组 BPA（5 slots）(2026-07-30)
+## fresh_1000 R2 执行检查点：9/20 覆盖 (2026-07-30)
 
-R2 广度优先已完成 5 槽（污染物 1-5/20）：A 组 PFOA/PFBS/PFHxS（revise ~74/~72/~82）+ GenX（terminate 41）；D 组 BPA（revise ~82，PXR 定向混杂 + 双齿 avidity 双酚类去除，与 A01=86 互补）。**R2 前 5 槽 0 通过（4 revise + 1 terminate）**：这是诚实结果——R2 正交约束（避开 R1 已通过的最优角度）+ 平台饱和使 R2 通过本质难于 R1（SPEC 预期，诚实 N 优于凑数）。
+R2 广度优先已覆盖 9/20：A 组 PFOA/PFBS/PFHxS/GenX、D 组 BPA/NP/DCP26、E 组 ROX/Octocrylene。**0 通过（5 revise + 4 terminate/耗尽）**。这是 SPEC 预期的诚实结果：R2 正交约束（避开 R1 已通过最优角度）+ 平台饱和/R1 深挖耗尽使通过本质难于 R1（诚实 N 优于凑数）。最佳 R2 revise：PFHxS/BPA/ROX ~81-82（需深度多轮补角至 85，同 R1 A01 的 5 轮）。仿生原型库 83→88。
 
 ### 已完成
 
@@ -414,7 +414,7 @@ PFOA R2 正交空间接近诚实耗尽：4 个候选 3 个 X 级、1 个 revise_
 ### 下一步行动（更新）
 
 1. **PFOA + PFBS Phase 0/量热门挂起**：PFOA DFT-SAPT anion-π 净选择性；PFBS 量热(ITC)+Phase 0 C4 趋液绝对 Ka 与 α(PFBS/SO₄²⁻)。均为仓库外动作，不阻断推进。
-2. **转 DCP26**（execution_order 第 7 位，D 组）：建 `angle_maps/dcp26_ANGLES.yaml`（锁定 R1 A01/A02/A03 均终止于单参数单调/区域异构体水相选择性先验低）→ Phase A+ 预筛 → slot 1 → 提取中间产物。
+2. **转 DDT**（execution_order 第 10 位，C 组有机氯），随后 DDE/Dieldrin/Endosulfan/β-HCH/TCDD/PCB-209 + B 组 PCP/HCBD/Chloroform/BDE-209；继续广度优先（C/B 组为高-logKow 疏水有机物，多为形状/卤键识别，R1 已取最佳角，预期 revise/近耗尽）。
 3. 继续广度优先：20 种污染物各至少 1 个 R2 slot 后回溯补角。
 4. 每完成一个方案即提取中间产物并逐槽提交推送 `origin/Ultimate`。
 
@@ -424,11 +424,11 @@ PFOA R2 正交空间接近诚实耗尽：4 个候选 3 个 X 级、1 个 revise_
 
 | 指标 | 数值 |
 |------|------|
-| R2 已尝试 slot | 6（A 组 4 + D 组 BPA/NP 2） |
+| R2 已尝试 slot | 9（A 4 + D BPA/NP/DCP26 + E ROX/OC） |
 | R2 通过 | 0 |
-| R2 revise（含外部门挂起） | 4 |
-| R2 终止 | 2 |
-| 仿生原型库 | 87（目标 150） |
-| 机制映射 | 6 |
-| 角度地图 | 6 |
-| A 组 | 完成（无通过）；D 组 BPA revise/NP terminate | 
+| R2 revise（含外部门挂起） | 5 |
+| R2 终止/耗尽 | 4 |
+| 仿生原型库 | 88（目标 150） |
+| 机制映射 | 9 |
+| 角度地图 | 9 |
+| 新原型 | PROTO_R2_001..005（anion-π/Hofmeister/OAT4/PXR/AChE cation-π） |

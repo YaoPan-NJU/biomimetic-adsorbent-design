@@ -1,0 +1,18 @@
+# Mechanism map — fresh_1000 R2
+mechanism_id: MECH_octocrylene_001
+pollutant: octocrylene
+mechanism_name: "Octocrylene hydrophobic/shape recognition (honest near-exhaustion — electronic axis occupied + UV-filter T1)"
+biological_source: "n/a (no viable orthogonal prototype; OC recognition handle is its electron-deficient acrylate = A01 CT / A04 Michael, both R1-occupied)"
+material_implementation: "n/a (all R2 candidates X-graded)"
+selectivity_signature:
+  primary_dimension: "hydrophobic partitioning / twisted-diphenyl shape"
+  orthogonal_dimensions: ["none viable (logKow-monotonic T1 vs co-occurring UV filters; electron-deficiency handle occupied by A01/A04)"]
+aqueous_feasibility: { tfg_assessment: fail, note: "hydrophobic partitioning T1-monotonic vs EHMC/BP-3/avobenzone/homosalate; shape overlaps A01 CT cavity" }
+verdict: terminated_near_exhaustion
+score: "46 (r1 terminate, structural)"
+r1_overlap: false
+scheme_ref: "octocrylene/SCHEMES/R2_S09_A01_electronic-axis-occupied_terminated.md"
+transferable_negative_knowledge: >
+  For hydrophobic UV-filter micropollutants, the electron-deficiency handle (CT / reactive) is the only orthogonal recognition
+  axis; hydrophobic partitioning is a T1 trap in a UV-filter-rich matrix. OC R2 = honest near-exhaustion (R1 captured CT+reactive).
+last_updated: "2026-07-30"

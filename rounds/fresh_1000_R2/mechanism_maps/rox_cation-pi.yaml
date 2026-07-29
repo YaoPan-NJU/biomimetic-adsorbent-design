@@ -1,0 +1,22 @@
+# Mechanism map — fresh_1000 R2
+mechanism_id: MECH_rox_001
+pollutant: rox
+mechanism_name: "Cation-pi aromatic-cage recognition of protonated desosamine amine + 14-membered size window (macrolide-class capture)"
+biological_source: "AChE/nAChR aromatic-cage cation-pi (PROTO_R2_005)"
+material_implementation: "aromatic-rich electron-dense macrocyclic cage (calixarene/pillararene/aromatic HCP) + cation-pi pocket + size-limited portal"
+selectivity_signature:
+  primary_dimension: "cation-pi to protonated tertiary amine (ion-quadrupole)"
+  orthogonal_dimensions: ["14-membered macrocycle size window (geometric)"]
+  causal_control: "electron-poor-cage cation-pi kill control; size series; des-amine/N-methyl-amine control; ITC cation-pi magnitude"
+aqueous_feasibility:
+  tfg_assessment: borderline
+  note: "cation-pi survives in water (AChE) but moderate for tertiary (vs quaternary) ammonium; macrolide-CLASS capture not intra-macrolide"
+verdict: revise
+score: "~81 (r1 66 -> r2 81, 0c/1h; ceiling 82-83)"
+r1_overlap: false
+r1_overlap_note: "orthogonal to A01 (NPET H-bond array) / A02 (oxime H-bond) / A06 (esterase reactive); prototype AChE vs 23S rRNA"
+scheme_ref: "rox/SCHEMES/R2_S08_A01_cation-pi-aromatic-cage-class-capture_revise.md"
+transferable_knowledge: >
+  Cation-pi aromatic-cage = reusable class-capture axis for protonated-amine micropollutants (macrolides/alkaloids/
+  aminoglycosides), orthogonal to H-bond and reactive routes. Origin capped by CD-inclusion prior art + class (not intra) + tertiary-amine cation-pi magnitude.
+last_updated: "2026-07-30"

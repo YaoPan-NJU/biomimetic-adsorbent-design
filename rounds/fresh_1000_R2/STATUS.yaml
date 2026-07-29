@@ -25,11 +25,15 @@ pollutants:
   pfoa:
     name: "全氟辛酸 PFOA"
     r1_status: "1 passed (A02=85), 9 terminated"
-    r2_angles_planned: 0
-    r2_attempted: 0
+    r2_angles_planned: 4   # R2_A01 anion-π (A 级执行) + R2_A02/A03/A04 (X 级，未开槽)
+    r2_attempted: 1
     r2_passed: 0
     r2_terminated: 0
-    status: "pending（R2 尚未启动）"
+    r2_revise: 1
+    angle_map: rounds/fresh_1000_R2/angle_maps/pfoa_ANGLES.yaml
+    slots:
+      R2_S01_A01: { r1: "62 (1c/3h)", r2: "~74 revise_with_phase0_prerequisite (0c/1h)", status: revise_with_phase0_prerequisite, file: "pfoa/SCHEMES/R2_S01_A01_anion-pi-electron-deficient-pore_revise.md", prototype: "PROTO_R2_001 黄素蛋白 anion-π", mechanism: "MECH_pfoa_001", note: "anion-π 缺电子 π 面识别全氟羧酸头基；critical（硫酸根反转）经 Phase 0 前置门消解，残 1 角度内禀 high；天花板 76-80；Phase 0 计算门挂起" }
+    status: "phase_b（R2_A01 落 revise_with_phase0_prerequisite ~74/100 0c/1h；其余 3 候选 X 级；正交空间接近诚实耗尽，Phase 0 挂起后建议轮转 PFBS）"
   pfbs:
     name: "全氟丁烷磺酸 PFBS"
     r1_status: "1 passed (A17=85), 3 terminated"
@@ -183,9 +187,12 @@ pollutants:
     r2_terminated: 0
     status: "pending"
 totals:
-  r2_attempted: 0
+  r2_attempted: 1
   r2_passed: 0
   r2_terminated: 0
-  prototype_library_size: 83
+  r2_revise: 1
+  prototype_library_size: 84   # +1: PROTO_R2_001 黄素蛋白 anion-π
   prototype_library_target: 150
-last_updated: "2026-07-29T18:15"
+  mechanism_maps: 1   # MECH_pfoa_001
+  angle_maps: 1       # pfoa
+last_updated: "2026-07-29T20:30"

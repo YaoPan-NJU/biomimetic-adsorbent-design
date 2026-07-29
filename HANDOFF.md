@@ -396,3 +396,36 @@ R2 的中间产物持久化策略支持仿生设计库扩展：
 | 全局 Spec | `rounds/fresh_1000/GLOBAL_SPEC.md` | 继承的硬约束 |
 | 分类 Spec | `rounds/fresh_1000/SPEC_GROUP_*.md` | 继承的分组规范 |
 | 仿生原型库 | `data/bmdl_snapshot/biological_prototypes.json` | 83 条已入库 |
+
+## fresh_1000 R2 执行检查点：PFOA slot 1 完成 (2026-07-29)
+
+R2 广度优先第一槽（污染物 1/20，PFOA）已完成一个完整的设计-攻击-裁决闭环并提取全部中间产物。
+
+### 已完成
+
+1. **PFOA R2 角度地图**（`rounds/fresh_1000_R2/angle_maps/pfoa_ANGLES.yaml`）：锁定 R1 已占据角度（A02 通过 + A01/A03-A10 终止 + A11-A26 枚举），新增 4 个正交候选并执行 Phase A+ 预筛（TFG/PADS/ODC/R1-DEDUP）。仅 R2_A01（anion-π）为 A 级；R2_A02/A03/A04 均判 X 级（命中 TFG 门或生物原型门 G2）。
+2. **slot R2_S01_A01**（`rounds/fresh_1000_R2/pfoa/SCHEMES/R2_S01_A01_anion-pi-electron-deficient-pore_revise.md`）：缺电子芳香 π 面 anion-π 识别全氟羧酸头基 + 受限腔脱溶剂化门。原型取黄素蛋白天然 anion-π（Lucas 2015 PMC5967298；Yurenko 2017 ChemEurJ）。轨迹 r1 62（1c/3h）→ r2 ~74（0c/1h）。critical（anion-π 对二价硫酸根方向反转、创新层即负债层）经重构为前置 Phase 0 决定性检验 + 清洁负结果交付而消解；残 1 个角度内禀 high；天花板 76-80，**未达 85**。verdict：**revise_with_phase0_prerequisite**。角色文件持久化于 `pfoa/SCHEMES/_wip/`。
+3. **中间产物提取**：原型卡片 `prototype_cards/PROTO_R2_001_flavoprotein-anion-pi.yaml`（库 83→84）；机制映射 `mechanism_maps/pfoa_anion-pi.yaml`（MECH_pfoa_001）；知识图谱 `knowledge_graph.yaml` v1.1（+1 原型/+1 机制/+1 材料/+3 边）。
+
+### 诚实发现
+
+PFOA R2 正交空间接近诚实耗尽：4 个候选 3 个 X 级、1 个 revise_with_phase0，与 R1 记录的 PFOA 机制空间本征狭窄（诚实上限 26）一致。anion-π 分支对单价全氟羧酸根在硫酸根背景下为潜在选择性负债（可传递负知识，收窄全 PFAS 组 anion-π 分支）。
+
+### 下一步行动（更新）
+
+1. **PFOA Phase 0 门挂起**：DFT-SAPT+SMD 计算 ΔΔG_net(PFOA−SO₄²⁻)@受限 π 孔，为仓库外计算动作（同 OC A04/TCDD A01 模式），不阻断推进。
+2. **轮转下一污染物 PFBS**（执行顺序 `STATUS.yaml` execution_order 第 2 位，A 组）：建 `angle_maps/pfbs_ANGLES.yaml`（锁定 R1 A17 通过 + A01/A04/A05 终止）→ Phase A+ 预筛新正交候选 → 开 slot 1 设计-攻击-裁决 → 提取中间产物。
+3. 继续广度优先：20 种污染物各至少 1 个 R2 slot 后回溯补角。
+4. 每完成一个方案即提取中间产物（原型卡片/机制映射/角度地图/知识图谱），并逐槽提交推送 `origin/Ultimate`。
+
+### R2 累计状态
+
+| 指标 | 数值 |
+|------|------|
+| R2 已尝试 slot | 1（PFOA R2_A01） |
+| R2 通过 | 0 |
+| R2 revise（含 Phase 0 挂起） | 1 |
+| R2 终止 | 0 |
+| 仿生原型库 | 84（目标 150） |
+| 机制映射 | 1 |
+| 角度地图 | 1（pfoa） |

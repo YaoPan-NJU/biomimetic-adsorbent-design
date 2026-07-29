@@ -1,0 +1,53 @@
+# 仿生原型卡片 — fresh_1000 Round 2
+# 每个新发现的仿生原型独立成卡（SPEC 3.1a）
+
+prototype_id: PROTO_R2_001
+name: "黄素蛋白 anion-π 相互作用"
+source_type: protein
+biological_origin: >
+  黄素蛋白（flavoproteins）中缺电子异咯嗪（isoalloxazine）环及缺电子芳香残基与阴离子/阴离子性辅因子之间的
+  anion-π 相互作用；更广义地，anion-π 相互作用在蛋白质与核酸中广泛自然存在（大规模 PDB 统计）。生物功能为
+  稳定黄素辅因子并调制其氧化还原电位（含显著电荷转移分量），而非从竞争水基质中选择性捕获阴离子。
+applicable_pollutants: ["pfoa"]   # 候选可扩展至其他含氧阴离子污染物（pfbs/genx 头基），R2 后续评估
+recognition_mechanism: >
+  缺电子芳香 π 面（正四极矩）对阴离子提供 anion-π 定向静电+诱导+电荷转移稳定；结合强度随阴离子电荷密度升高
+  而增强（此特性对本项目为双刃：偏好高电荷密度二价硫酸根，对单价全氟羧酸头基选择性为潜在负债）。
+literature_support:
+  - doi: "PMC5967298（RSC Adv 2015；DOI 待全文核）"
+    title: "A thorough anion–π interaction study in biomolecules"
+    year: 2015
+    claim_supported: "anion-π 相互作用在蛋白质与核酸中广泛自然存在（大规模 PDB 分析）——自然进化存在性锚"
+    evidence_tier: source_backed_lead
+  - doi: "Chem Eur J 2017, 23:3246（Yurenko 等；DOI 待全文核）"
+    title: "Anion–π Interactions in Flavoproteins Involve a Substantial Charge Transfer Component"
+    year: 2017
+    claim_supported: "黄素蛋白 anion-π 稳定黄素并调制氧化还原电位，含显著电荷转移分量"
+    evidence_tier: source_backed_lead
+  - doi: "10.1039/... ChemCommun 2016, 52:1778（Giese 等；DOI 待核）"
+    title: "Experimental investigation of anion–π interactions"
+    year: 2016
+    claim_supported: "anion-π 气/液/固相实验证据综述；结合强度随阴离子电荷密度增强（负锚：偏好高电荷密度阴离子）"
+    evidence_tier: fact
+  - doi: "10.1021/acs.inorgchem.9b00295"
+    title: "Anion−π-Directed Self-Assembly between Di/Trisulfonate Anions and a Rigid Cage with Electron-Deficient V-Clefts"
+    year: 2019
+    claim_supported: "缺电子 π 腔经 anion-π 选键二/三磺酸根——缺电子腔偏好高电荷密度含氧阴离子的直接证据"
+    evidence_tier: fact
+  - doi: "hal-03883161（综述）"
+    title: "Anion-π Interaction for Molecular Recognition of Anions"
+    year: 2023
+    claim_supported: "anion-π 与氢键协同用于阴离子分子识别；anion-π 供体家族"
+    evidence_tier: fact
+translation_distance_note: >
+  转译距离大：生物功能（氧化还原调制/辅因子结合）≠ 水相选择性阴离子捕获。作机制类比层转译，创新性清单 C 维
+  诚实不通过（anion-π 为 Schneider/Matile 以降通用超分子原则，非黄素蛋白特异提取）。
+evolution_solution_judgement: >
+  条件性通过 G2"自然界进化解决方案"判据：anion-π 在黄素蛋白中确为进化出的阴离子结合物理（非 SELEX/非配位化学/
+  非毒性受体）；但其进化目的是辅因子氧化还原调制，与"选择性水相阴离子捕获"仅机制类比而非功能同源，故仅承载
+  机制类比级仿生强度。
+r1_used: false
+r2_first_used_in: "R2_S01_A01（PFOA anion-π 缺电子 π 面识别）"
+r2_outcome_note: >
+  首次使用即暴露该原型对本项目的关键局限：anion-π 偏好高电荷密度阴离子（硫酸根），对单价全氟羧酸根选择性为
+  潜在负债。R2_S01_A01 落 revise_with_phase0_prerequisite（~74/100），Phase 0 计算门挂起裁定。
+last_updated: "2026-07-29"

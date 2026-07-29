@@ -1,0 +1,37 @@
+# 机制映射记录 — fresh_1000 Round 2
+# 每个机制-污染物组合独立记录（SPEC 3.1b）
+
+mechanism_id: MECH_pfoa_001
+pollutant: pfoa
+mechanism_name: "缺电子芳香 π 面 anion-π 识别全氟羧酸头基（受限腔脱溶剂化门辅助）"
+biological_source: "黄素蛋白 anion-π 相互作用（PROTO_R2_001）"
+material_implementation: >
+  缺电子三嗪/共价三嗪框架(CTF)或萘二酰亚胺(NDI)基水稳定 COF，孔径 0.7–1.1 nm，孔壁正四极矩 π 面朝向疏水通道；
+  全氮/全烃骨架不含氟；水稳定 sp²-碳或 β-酮烯胺连接。三层机制：层 A 脱溶剂化门（排斥二价硫酸根）/ 层 B anion-π
+  正贡献（创新锚点，正交轴）/ 层 C 全氟尾疏水分配（单调容量）。
+selectivity_signature:
+  primary_dimension: "anion-π 电子识别（π 面正四极矩 V_s,max / Q_zz 对羧酸头）"
+  orthogonal_dimensions:
+    - "脱溶剂化几何门（受限低介电孔排斥二价强水合硫酸根）"
+    - "全氟尾疏水分配（单调容量分量，非承重选择性）"
+  causal_control: "electron-gradient 错向判据（苯→吡啶→三嗪→氰基三嗪缺电子系列 + 富电子咔唑壁对照 + DFT-SAPT 分项）"
+aqueous_feasibility:
+  tfg_assessment: borderline
+  dehydration_penalty_kj_mol: "SO₄²⁻ 约 -1080（水合自由能，Marcus 1991）；乙酸根约 -365；二价约 3× 单价"
+  net_binding_free_energy_kj_mol: "待 Phase 0（DFT-SAPT+SMD）计算 ΔΔG_net(PFOA−SO₄²⁻)@受限 π 孔；全氟尾进腔驱动约 -20 至 -35（推断待核）"
+  critical_risk: >
+    anion-π 结合能随阴离子电荷密度升高而增强，二价 SO₄²⁻ 先验偏好强于单价全氟羧酸根——创新层（层 B anion-π）
+    对头号竞争物方向反转。可行性取决于受限腔脱溶剂化门 + 全氟尾疏水驱动能否反转 bulk anion-π 硫酸根偏好。
+    基线预测倾向 NO-GO（硫酸根胜出）。
+r1_overlap: false   # 识别物理（anion-π）与 R1 全部通过方案正交
+r1_overlap_note: >
+  R1-DEDUP 通过：机制（anion-π vs A02 中性氢键/A01 阳离子/OC A01 π-π 供体受体 CT）、材料（缺电子 π 骨架 vs
+  PAF-1 全烃）、原型（黄素蛋白 vs 氧阴离子洞/光合反应中心）三重正交。但注意：若 anion-π 层为负债（NO-GO 分支），
+  剩余选择性来源（脱溶剂化门 + 全氟尾）与 A02 机制 A/C 同构，实质落入 A02 已占据空间。
+scheme_ref: "pfoa/SCHEMES/R2_S01_A01_anion-pi-electron-deficient-pore_revise.md"
+verdict: revise_with_phase0_prerequisite
+score: "~74（区间 71–76）"
+transferable_negative_knowledge: >
+  anion-π 分支对单价全氟羧酸根（乃至全 PFAS 组永久阴离子头基）在硫酸根背景下为潜在选择性负债——若 Phase 0/
+  实验证实，可将 anion-π 识别轴标为 PFAS 组 X 级角度，收窄后续 PFBS/PFHxS/GenX 的 anion-π 分支设计空间。
+last_updated: "2026-07-29"

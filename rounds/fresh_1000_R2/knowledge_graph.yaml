@@ -3,7 +3,7 @@
 # 版本：v1.0 | 日期：2026-07-29 | 状态：初始化
 
 knowledge_graph:
-  version: "1.0"
+  version: "1.1"
   last_updated: "2026-07-29"
   
   nodes:
@@ -50,13 +50,26 @@ knowledge_graph:
         name: "BphA 平面氯代二芳基识别"
         source_type: protein
         r1_used_in: "DDE A01"
-      # R2 新增原型将在此追加
+      # R2 新增原型（持续追加）
+      - id: "flavoprotein_anion_pi"
+        name: "黄素蛋白 anion-π 相互作用"
+        source_type: protein
+        r1_used_in: null
+        r2_first_used_in: "PFOA R2_A01"
+        card: prototype_cards/PROTO_R2_001_flavoprotein-anion-pi.yaml
     
     # 识别机制（随 R2 推进持续扩展）
-    mechanisms: []
-    
+    mechanisms:
+      - id: "MECH_pfoa_001"
+        name: "缺电子芳香 π 面 anion-π 识别全氟羧酸头基（受限腔脱溶剂化门辅助）"
+        pollutant: pfoa
+        map: mechanism_maps/pfoa_anion-pi.yaml
+
     # 材料平台（随 R2 推进持续扩展）
-    materials: []
+    materials:
+      - id: "electron_deficient_triazine_NDI_COF"
+        name: "缺电子三嗪/NDI 基共价有机框架（正四极矩 π 面）"
+        first_used_in: "PFOA R2_A01"
     
     # 污染物（固定 20 种）
     pollutants:
@@ -82,13 +95,16 @@ knowledge_graph:
       - rox
   
   edges:
-    prototype_mechanism: []
-    mechanism_material: []
-    mechanism_pollutant: []
+    prototype_mechanism:
+      - ["flavoprotein_anion_pi", "MECH_pfoa_001", "source_backed_lead"]
+    mechanism_material:
+      - ["MECH_pfoa_001", "electron_deficient_triazine_NDI_COF", "borderline"]
+    mechanism_pollutant:
+      - ["MECH_pfoa_001", "pfoa", "revise_with_phase0_~74"]
   
   statistics:
-    total_prototypes: 83  # 当前库大小（含 R1 未使用的）
-    total_mechanisms: 0
-    total_materials: 0
+    total_prototypes: 84  # 83 基线 + 1 R2 新增（flavoprotein_anion_pi）
+    total_mechanisms: 1
+    total_materials: 1
     total_pollutants: 20
-    connectivity_density: 0.0
+    connectivity_density: 0.05

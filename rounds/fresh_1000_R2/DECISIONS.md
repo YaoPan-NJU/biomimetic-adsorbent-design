@@ -31,3 +31,37 @@
 - 继承 R1 全部质量规则（GLOBAL_SPEC.md G1-G10）
 - 新增 R1-DEDUP 预筛
 - 通过线不变：85/100 + 零未决 critical/high + 创新性清单通过
+
+---
+
+## 2026-07-29 PFOA R2 广度优先 slot 1 执行
+
+### 一、角度地图与预筛（`angle_maps/pfoa_ANGLES.yaml`）
+
+1. 锁定 R1 已占据角度：A02（通过，脲氧阴离子洞中性氢键）+ A01/A03-A10（终止）+ A11-A26（枚举未开启）。
+2. R2 新增 4 个正交候选并执行 Phase A+ 预筛（TFG/PADS/ODC/R1-DEDUP）：
+   - **R2_A01 anion-π 缺电子 π 面识别**：A 级（条件性）——识别轴正交、正交维度 2、PADS 45（平台拥挤/机制空白）、TFG borderline（硫酸根反转风险）。
+   - R2_A02 大环穿套动力学识别：X 级（TFG fail，ng/L 穿套动力学 + 无独立热力学锚）。
+   - R2_A03 σ-空穴卤键受体：X 级（TFG fail + 生物原型门 fail）。
+   - R2_A04 全氟螺旋横截面形状腔：X 级（生物原型门 fail，无自然进化刚性杆识别器，逼近 AT1 氟特异边界）。
+3. **决策**：执行唯一 A 级候选 R2_A01 为 slot 1，定位机制确证型研究（E 组 S5 模式）+ Phase 0 前置门。
+
+### 二、slot R2_S01_A01 裁决
+
+- 轨迹：r1 62（1c/3h）→ r2 ~74（0c/1h）。
+- critical（C1 anion-π 对二价硫酸根方向反转，创新层即负债层）经 r2 重构为**前置 Phase 0 决定性检验 + 清洁负结果交付**消解（同 Endosulfan/OC A04/TCDD 范式）。
+- 残 1 个**角度内禀 high**（C2：NO-GO 分支剩余选择性落入 A02 已占据空间 + 正向选择性先验低），天花板诚实评估 76-80，**未达 85**。
+- **verdict：revise_with_phase0_prerequisite**；Phase 0 计算门（DFT-SAPT+SMD）挂起为仓库外计算动作。
+
+### 三、中间产物提取（每方案完成即提取）
+
+- 原型卡片：`prototype_cards/PROTO_R2_001_flavoprotein-anion-pi.yaml`（黄素蛋白 anion-π，仿生原型库 83→84）。
+- 机制映射：`mechanism_maps/pfoa_anion-pi.yaml`（MECH_pfoa_001）。
+- 角度地图：`angle_maps/pfoa_ANGLES.yaml`（R2_A01 状态更新为 revise_with_phase0_prerequisite）。
+- 知识图谱：`knowledge_graph.yaml` 追加 1 原型 + 1 机制 + 1 材料 + 3 边。
+
+### 四、去向决策
+
+- PFOA R2 正交空间接近诚实耗尽（4 候选 3 个 X 级、1 个 revise_with_phase0），与 R1 记录的机制空间本征狭窄（诚实上限 26）一致。
+- Phase 0 计算门挂起（外部计算动作，同 OC A04/TCDD A01 模式）；建议轮转下一污染物 PFBS（A 组，头基/几何正交空间较宽）。
+- 可传递负知识：anion-π 对单价全氟羧酸根在硫酸根背景下为潜在选择性负债——若证实，收窄全 PFAS 组 anion-π 分支设计空间。

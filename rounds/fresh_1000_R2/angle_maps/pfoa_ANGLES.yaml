@@ -1,0 +1,248 @@
+# PFOA R2 角度地图
+# fresh_1000 Round 2 — 污染物 1/20（梯队 1，A 组 PFAS）
+# 生成日期：2026-07-29
+# 继承：rounds/fresh_1000/pfoa/BRIEF.md + DESIGN_SPACE.md（R1 Phase A，26 角度）
+# 去重基准：rounds/fresh_1000_R2/R1_OCCUPIED_SPACE.yaml
+# 说明：R1 复用 Phase A 简报与设计空间；本文件锁定 R1 已覆盖角度，新增 R2 正交候选角度并执行 Phase A+ 预筛（TFG/PADS/ODC/R1-DEDUP）。
+
+pollutant: pfoa
+pollutant_name: "全氟辛酸 PFOA（perfluorooctanoate，C7F15COO⁻）"
+tier: 1
+group: "A（PFAS）"
+r1_phase_a_files:
+  brief: rounds/fresh_1000/pfoa/BRIEF.md
+  design_space: rounds/fresh_1000/pfoa/DESIGN_SPACE.md
+r1_honest_ceiling: 26  # R1 诚实可区分上限 26<50，机制空间本征狭窄
+r1_intrinsic_narrowness_note: >
+  R1 明确记录 PFOA 机制空间本征狭窄的四条硬约束：(1) 生物氟特异识别在自然界不存在（AT1/陷阱1），
+  整个"氟亲和仿生"分支移出设计空间；(2) approach-3 直接复制蛋白默认排除（FABP4/白蛋白仅原则来源）；
+  (3) 先例密度饱和（β-CD 聚合物/Zr-MOF/阳离子 COF/含氟聚合物 2019-2026 密集占据）；
+  (4) 单价两亲阴离子机制空间本征窄，可正交分解为头基识别×尾链腔×链长再叠加工程外壳，约 26 组合。
+  故 R2 正交空间极紧，多数新角度将命中生物原型门或 TFG 门，诚实耗尽条款优先适用。
+
+# ============================================================
+# 第一部分：R1 已锁定角度（占据机制空间，R2 须避开）
+# ============================================================
+
+r1_locked_angles:
+  # R1 通过方案（核心占据）
+  - angle_id: A02
+    mechanism: "脲/硫脲氧阴离子洞中性氢键阵列 POP + 机制三分层 + 同碳全氟配对双向判决"
+    scheme: S05_A02
+    material_platform: "PAF-1（多孔芳香框架，全烃）"
+    prototype: "丝氨酸蛋白酶氧阴离子洞原理（超分子家族，非蛋白）"
+    recognition_dimension: "中性氢键供体阵列识别羧酸头基（+脱溶剂化门控+全氟尾锚定）"
+    status: passed
+    score: 85
+    r2_dedup_note: "R2 识别机制核心维度不得为中性氢键供体阵列；材料不得为 PAF-1 全烃骨架"
+  # R1 已尝试并终止角度（已知陷阱）
+  - angle_id: A01
+    mechanism: "胍基-β-环糊精双识别（阳离子静电）"
+    scheme: S01_A01
+    status: terminated
+    score: 67
+    failure_mode: "FM1 先例饱和（胍基杯[5]芳烃 2019、季铵 PAF-1 2022）"
+  - angle_id: A03
+    mechanism: "刚性 COF 限域胍基通道（阳离子静电+刚性限域）"
+    scheme: S03_A03
+    status: terminated
+    score: 74
+    failure_mode: "FM1 先例饱和（2019-2025 六篇以上；上限 78-80）"
+  - angle_id: A04
+    mechanism: "OAT4 式链长阈值窗口分子筛"
+    scheme: S02_A04
+    status: terminated
+    score: 55
+    failure_mode: "FM2 单参数单调（窗口命题结构性平凡）"
+  - angle_id: A05
+    mechanism: "Lanmodulin 式配位几何窗口（Zr/Cu 开放金属位）"
+    scheme: S04_A05
+    status: terminated
+    score: 74
+    failure_mode: "FM1 先例饱和（Fe-MOF-808/PCN-999/Zr-PTA）"
+  - angle_id: A06
+    mechanism: "KcsA 式脱水加多点位紧配纳米孔"
+    scheme: S08_A06
+    status: terminated
+    score: 69
+    failure_mode: "FM4 框架内拮抗（平台期 69→69）"
+  - angle_id: A07
+    mechanism: "hSA 式多点位亲和力层级材料"
+    scheme: S09_A07
+    status: terminated
+    score: 83
+    failure_mode: "FM4 框架内拮抗（底线-容量解耦 ng/L 不可满足）"
+  - angle_id: A08
+    mechanism: "FABP4 式构象塑性宽谱捕获"
+    scheme: S07_A08
+    status: terminated
+    score: 68
+    failure_mode: "FM1 先例饱和（FABP4 特异签名判别不可得）"
+  - angle_id: A09
+    mechanism: "磷脂样两性离子界面捕获"
+    scheme: S10_A09
+    status: terminated
+    score: 77
+    failure_mode: "FM4 框架内拮抗（捕获-抗污同一水化层）"
+  - angle_id: A10
+    mechanism: "头基化学活化加碱性脱羧破坏性再生（反应性 LDH）"
+    scheme: S11_A10
+    status: terminated
+    score: 82
+    failure_mode: "FM4 框架内拮抗（结合-活化同位点张力）"
+  # A11-A26：R1 已枚举但未开启（用户指令留待回溯补角），作为已占据设计空间标注
+  - angle_id: A11_A26
+    mechanism: "水合电子/光催化耦合、电摆动门控、界面富集、磁核壳、MscL 门控、Murray 分级孔、SLIPS 抗污、氟亲和口袋、MIP 形状、羧酸/磺酸头基区分、钙桥配位、多价协同、肠肝循环向量、CDI 电场、氟胺折中、杯芳烃疏水腔"
+    scheme: "未开启（R1 枚举 A11-A26）"
+    status: enumerated_not_attempted
+    r2_dedup_note: "这些识别/工程维度已在 R1 设计空间枚举，R2 不得原样复用；仅当声明可实验量化的全新正交维度时方可重启"
+
+# ============================================================
+# 第二部分：R2 新增正交候选角度（Phase A+ 预筛）
+# ============================================================
+
+r2_new_angles:
+  - angle_id: R2_A01
+    mechanism: "缺电子芳香 π 面阴离子-π 识别全氟羧酸头基 + 疏水受限腔脱溶剂化门排斥二价阴离子（三层：阴离子-π 正贡献 / 脱溶剂化门物理基底 / 全氟尾疏水锚）"
+    prototype: "黄素蛋白 anion-π 相互作用（自然进化 anion-π，用于结合阴离子辅因子并调制黄素氧化还原电位）"
+    prototype_source: protein
+    material_platform: "缺电子三嗪/萘二酰亚胺(NDI)基共价有机框架或共价三嗪框架（CTF），孔壁正四极矩 π 面"
+    orthogonality_to_r1:
+      vs_A02: "识别机制为 anion-π（π 面四极矩静电）而非中性氢键供体阵列；材料为缺电子 π 骨架而非全烃 PAF-1；原型为黄素蛋白 anion-π 而非氧阴离子洞——三者均正交"
+      vs_A01_A03: "非阳离子静电（无正电荷中心，规避硫酸根阳离子过补偿陷阱 AT3）"
+      vs_octocrylene_A01: "OC A01 为 π-π 供体-受体 CT（中性富电子客体入缺电子腔）；本角度为 anion-π（阴离子对 π 面），物理相互作用不同、污染物不同、原型不同（黄素蛋白 vs 光合反应中心）"
+    pre_screen:
+      tfg:
+        conclusion: borderline
+        note: >
+          关键风险：anion-π 结合能随阴离子电荷密度升高而增强，二价 SO₄²⁻（电荷密度高）先验上比单价全氟羧酸根
+          结合更强，存在选择性反转风险（同 FM3 家族）。可行性依赖疏水受限腔对二价强水合阴离子的脱溶剂化门排斥
+          （SO₄²⁻ 水合自由能约 −1080 kJ/mol，约为乙酸根 −365 的 3 倍）与全氟尾疏水驱动力共同把单价靶标拉入腔内。
+          净选择性为低先验科学赌注，须 Phase 0 计算门（DFT/隐式溶剂）判 anion-π+脱溶剂化门能否压过 SO₄²⁻ anion-π 偏好后方可推进。
+      pads:
+        score: 45
+        direct: 0
+        directional: 3
+        platform: 5
+        saturation: false
+        note: >
+          直接先例（PFOA + anion-π 机制）：检索未发现（0）。方向先例：缺电子三嗪/CTF 框架已用于 PFOA（F-CTF、
+          富氮三嗪 POP），但机制归因为 fluorophilic/疏水/阴离子交换，非 anion-π（约 3 篇，各 −5）。平台先例：三嗪/NDI
+          COF 用于其他污染物密集（约 5 篇 −3）。anion-π 识别机制对全氟羧酸根为真实空白，平台拥挤但机制开放，
+          与 A02 情形同构（平台已存/机制为空白）。
+      odc:
+        dimensions: 2
+        dimension_list: ["anion-π 电子识别（π 面四极矩，可由 π 面电子密度梯度系列因果解耦）", "疏水受限腔脱溶剂化门（几何/去溶剂化，排斥二价阴离子，可由孔径/疏水性系列解耦）"]
+        monotonic_risk: low
+        note: "全氟尾疏水分配为第三分量但单调（非承重）；承重两维（anion-π 电子 + 脱溶剂化门）正交，改变 π 面电子密度不影响腔疏水性"
+      r1_dedup:
+        mechanism_overlap: false
+        material_overlap: false
+        prototype_overlap: false
+        conclusion: pass
+        note: "机制/材料/原型三者均与 A02 及其余 R1 通过方案正交，R1-DEDUP 通过"
+      verdict: A
+      override_reason: >
+        判 A 级（条件性）：识别轴 anion-π 明确正交、正交维度 2、PADS 45（平台拥挤但机制空白）。TFG 为 borderline（硫酸根
+        anion-π 反转为核心风险），非 X 级 fail——因脱溶剂化门为真实可承载机制且靶标全氟尾提供进腔驱动力。定位为机制确证型
+        研究（继承 E 组 S5 模式）：基线预测可能为"硫酸根胜出"（负结果亦可发表），α>1 为待 Phase 0 门验证的假设。
+    status: revise_with_phase0_prerequisite
+    score: "~74（区间 71-76）"
+    verdict_note: "r1=62(1c/3h) → r2=~74(0c/1h)；critical(anion-π 硫酸根反转)经 Phase 0 前置门+清洁负结果交付消解；残 1 high(NO-GO 分支落 A02 空间+正向选择性先验低，角度内禀)；天花板 76-80，未达 85；Phase 0 计算门挂起"
+    slot: R2_S01_A01
+    scheme_file: "pfoa/SCHEMES/R2_S01_A01_anion-pi-electron-deficient-pore_revise.md"
+
+  - angle_id: R2_A02
+    mechanism: "大环穿套（rotaxane/threading）对全氟线性尾的动力学互锁捕获（区别于热力学氢键/静电）"
+    prototype: "DNA 滑动钳 / processive 酶穿线（自然进化拓扑穿套）"
+    prototype_source: protein
+    material_platform: "表面锚定大环阵列 / 假轮烷聚合物"
+    pre_screen:
+      tfg:
+        conclusion: fail
+        note: >
+          双重致命：(1) ng/L 工况下穿套动力学（pM 级碰撞频率 + 穿线取向熵垒）不足，与反应性捕获 ng/L 动力学断裂同族；
+          (2) 穿套本身不提供保持大环于线性尾上的热力学锚（需额外头基锚，退化回 A01/A02 已占据机制）。
+      pads:
+        score: 15
+        direct: 0
+        directional: 0
+        platform: 1
+        saturation: false
+        note: "无 PFAS 穿套识别先例（机制新颖），但新颖性不能补偿 TFG 不可行"
+      odc:
+        dimensions: 2
+        dimension_list: ["线性杆穿套形状（排斥球形硫酸根，内禀正交）", "头基锚定"]
+        monotonic_risk: low
+      r1_dedup:
+        conclusion: pass
+      verdict: X
+      override_reason: "TFG fail（ng/L 穿套动力学不可行 + 无独立热力学锚）→ X 级，记录为结构性不可行，不开启方案槽"
+    status: excluded
+
+  - angle_id: R2_A03
+    mechanism: "σ-空穴卤键/硫属键供体识别羧酸根氧（区别于氢键）"
+    prototype: "无清晰自然进化原型（卤键在生物界罕见且非阴离子选择识别）"
+    prototype_source: none
+    pre_screen:
+      tfg:
+        conclusion: fail
+        note: "水相卤键/硫属键对羧酸根氧本质弱（σ 空穴 <2-5 kJ/mol），脱溶剂化罚能主导，与中性氢键对强水合阴离子不可行同族（FM3）；且硫酸根同为受体存在竞争"
+      pads:
+        score: 20
+      odc:
+        dimensions: 1
+        monotonic_risk: high
+        note: "σ 空穴供体单维度，退化风险高"
+      r1_dedup:
+        conclusion: pass
+      verdict: X
+      override_reason: "TFG fail + 生物原型门 fail（无自然进化卤键阴离子识别原型）→ X 级"
+    status: excluded
+
+  - angle_id: R2_A04
+    mechanism: "全氟螺旋链横截面形状/刚性匹配刚性狭腔（几何形状识别，区分全氟 5.6 Å 螺旋 vs 烃链 4.2 Å）"
+    prototype: "无自然进化原型（刚性杆横截面识别器不存在；全氟为合成物，无进化识别）"
+    prototype_source: none
+    pre_screen:
+      tfg:
+        conclusion: borderline
+        note: "全氟螺旋横截面（约 5.6 Å）与烃链（约 4.2 Å）几何可区分，非 logKow 单调；但绝对亲和仍主自疏水基线"
+      pads:
+        score: 30
+      odc:
+        dimensions: 2
+        dimension_list: ["全氟横截面形状匹配", "头基定位"]
+        monotonic_risk: low
+      r1_dedup:
+        conclusion: pass
+        note: "与 A26 芳腔疏水匹配部分重叠但增加螺旋横截面判据"
+      verdict: X
+      override_reason: >
+        生物原型门 fail：无自然进化的刚性杆横截面识别原型，且'全氟形状识别'逼近 AT1 氟特异边界（虽为几何非氟亲和主张，
+        仍无进化原型支撑 G2）。判 X 级，记录为生物原型门不可通过；若潘尧重开 approach-3 个案则可作纯理性设计对照。
+    status: excluded
+
+# ============================================================
+# 第三部分：Phase A+ 预筛汇总与执行决策
+# ============================================================
+
+pre_screen_summary:
+  candidates_evaluated: 4
+  graded_S: 0
+  graded_A: 1   # R2_A01 anion-π（条件性 A，TFG borderline）
+  graded_B: 0
+  graded_X: 3   # R2_A02 穿套（TFG fail）/ R2_A03 卤键（TFG+原型门 fail）/ R2_A04 全氟形状（原型门 fail）
+  honest_orthogonal_ceiling_note: >
+    PFOA R2 正交空间极紧，与 R1 记录的机制空间本征狭窄一致。4 个候选中 3 个命中 TFG 门或生物原型门（G2 自然进化原型判据），
+    仅 anion-π（R2_A01）为条件性可行的正交角度且带核心硫酸根反转风险。这是诚实的近耗尽状态，非降标。
+  execution_decision: >
+    已执行 R2_A01（anion-π 缺电子 π 面识别）为 PFOA R2 广度优先 slot 1。定位为机制确证型研究（E 组 S5 模式）+ Phase 0
+    计算门前置。其余 3 个候选记录为 X 级角度耗尽清单条目，不开启方案槽。
+  execution_outcome: >
+    R2_S01_A01 落 revise_with_phase0_prerequisite（~74/100，0c/1h）：critical（anion-π 对硫酸根方向反转）经前置 Phase 0
+    决定性检验 + 清洁负结果交付消解，但残 1 个角度内禀 high（NO-GO 分支剩余选择性落入 A02 空间 + 正向选择性先验低），
+    天花板 76-80，未达 85。Phase 0 计算门（DFT-SAPT+SMD）挂起为仓库外计算动作。PFOA R2 正交空间接近诚实耗尽（4 候选
+    3 个 X 级、1 个 revise_with_phase0），叠加 R1 记录的机制空间本征狭窄，建议 Phase 0 挂起后轮转下一污染物 PFBS。
+
+last_updated: "2026-07-29"

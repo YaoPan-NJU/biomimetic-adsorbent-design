@@ -397,6 +397,12 @@ R2 的中间产物持久化策略支持仿生设计库扩展：
 | 分类 Spec | `rounds/fresh_1000/SPEC_GROUP_*.md` | 继承的分组规范 |
 | 仿生原型库 | `data/bmdl_snapshot/biological_prototypes.json` | 83 条已入库 |
 
+## fresh_1000 R3 启动：深度轮（合同目标 10 通过/污染物 = 200，easy-first）(2026-07-30)
+
+R3 = **深度轮**，推进 research_contract 真实目标（每污染物 10 个正式通过方案、共 200），easy-first（先深化已通过污染物），honest-N（N<10 优于凑数）。**不是再凑 1000 个正交角度**——R2 已记录正交空间近耗尽（见 R2_CLOSEOUT.md）。R3 把现有最佳候选（R1 通过方案的姊妹角度 + R1 已映射未执行角度 + R2 revise）在诚实可达处转化为额外正式通过。当前：9 个 R1 正式通过 + 1 个 pass_pending_gate（PFHxS ~84，ITC 门）。主计划 `rounds/fresh_1000_R3/SPEC.md`；追踪 `rounds/fresh_1000_R3/STATUS.yaml`。**下一步**：tier-1 候选审计（BPA/PFOA）冲第 2 个正式通过。
+
+---
+
 ## fresh_1000 R2 执行检查点：20/20 覆盖完成（M2 达成）(2026-07-30)
 
 R2 广度优先 **20/20 全覆盖完成（M2 里程碑达成）**：A 组 4 + B 组 4（PCP/HCBD/Chloroform/BDE-209）+ C 组 7 + D 组 3（BPA/NP/DCP26）+ E 组 2（ROX/OC）。**0 通过（8 revise + 12 terminate/近耗尽）**。这是 SPEC 预期的诚实结果：R2 正交约束（须避开 R1 已通过/已映射的最优角度）+ 平台饱和 + R1 深挖耗尽使通过（85）本质难于 R1。8 个 revise（最佳 PFHxS/BPA ~82、ROX/DDT/TCDD/PCP ~78-81）须深度多轮补角 + 外部门（Phase 0 DFT/量热/付费文献）才能达 85（同 R1 通过需至多 5 轮）。M4/M5（通过数）与 M1（库 150）在 R2 诚实正交空间内、外部门未解前不可达——此为记录在案的诚实结果，非执行缺陷。M6（知识图谱）达成。仿生原型库 83→90（新 PROTO_R2_006 TTR halogen-bond、PROTO_R2_007 AhR pi-stack + PROTO_R2_002 域扩展至 PCP）。

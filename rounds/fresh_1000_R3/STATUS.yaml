@@ -1,0 +1,53 @@
+# fresh_1000 Round 3 — depth tracker (contract target: 10 formal passes/pollutant, 200 total)
+program: fresh_1000_R3
+created: 2026-07-30
+spec: rounds/fresh_1000_R3/SPEC.md
+predecessors: [rounds/fresh_1000/STATUS.yaml, rounds/fresh_1000_R2/STATUS.yaml, rounds/fresh_1000_R2/R2_CLOSEOUT.md]
+contract_target_per_pollutant: 10   # research_contract.yaml scheme_target_per_pollutant
+contract_total_target: 200
+mode: depth   # NOT breadth; convert best existing candidates -> additional formal passes; honest-N
+order_policy: "easy-first: deepen already-passed pollutants toward 10 first, then unpassed; honest N<10 beats padding"
+pass_definition: "score>=85, 0 unresolved critical/high, innovation checklist pass, >=1 hard correspondence, distinct axis from already-counted passes"
+external_gate_policy: "design-complete but only-external-gate-blocked -> status pass_pending_gate (~83-84), NOT counted as formal pass, record+bypass (no padding)"
+
+# current formal passes = R1 confirmed (9). self-eval (14) are >=85 but await formal adjudication.
+# R2 produced 0 new formal passes (8 revise incl PFHxS pass_pending_gate ~84; 12 near-exhaustion).
+tiers:
+  tier1_deepen_rich: [pfoa, bpa, octocrylene, rox, ddt]
+  tier2_passed_but_r1_terminated: [np, dieldrin, endosulfan, pfbs, bde209]
+  tier3_unpassed_r2revise_gatebound: [pfhxs, pcp, tcdd, dde, genx, dcp26, betahch, pcb209, hcbd, chloroform]
+
+pollutants:
+  # tier 1 (easy-first)
+  pfoa:      { r1_formal_passes: 1, r1_pass_angle: "A02 (85, urea oxyanion-hole POP)", r2_carryin: "R2_S01 anion-pi ~74 revise (Phase-0 DFT gate)", depth_target: 10, depth_done: 0, honest_n: pending, note: "26 R1 angles mapped; audit A03-A26 terminated set for any depth-workable pass candidate" }
+  bpa:       { r1_formal_passes: 1, r1_pass_angle: "A01 (86, DmpR phenol sensor)", r2_carryin: "R2_S05 PXR avidity ~82 (ITC gate)", depth_target: 10, depth_done: 0, honest_n: pending, note: "phenolic, rich recognition chemistry (H-bond/pi/shape); best tier-1 candidate for additional passes" }
+  octocrylene: { r1_formal_passes: 1, r1_pass_angle: "A01 (85, CT donor-acceptor cavity)", r2_carryin: "R1 A04 Michael covalent ~80 revise_with_phase0 (DFT gate)", depth_target: 10, depth_done: 0, honest_n: pending, note: "A04 Michael is a near-pass pending DFT; R2 near-exhaustion otherwise" }
+  rox:       { r1_formal_passes: 1, r1_pass_angle: "A01 (85, 23S rRNA NPET cleft)", r2_carryin: "R2_S08 cation-pi class-capture ~81 revise", depth_target: 10, depth_done: 0, honest_n: pending, note: "macrolide; A02 oxime/A06 esterase mapped" }
+  ddt:       { r1_formal_passes: 1, r1_pass_angle: "A01 (86, dehydrochlorinase dual-motif)", r2_carryin: "R2_S10 halogen-bond pattern ~79 revise (DFT gate)", depth_target: 10, depth_done: 0, honest_n: pending, note: "A02 corrinoid reductive revise_low_ceiling ~78" }
+  # tier 2 (passed but heavily R1-terminated -> expect low honest-N)
+  np:        { r1_formal_passes: 1, r1_pass_angle: "A01 (92, ipso alpha-quaternary topology)", r2_carryin: "R2_S06 amphiphilic terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low", note: "R1 A04/A06/A08/A10 all terminated (equilibrium-binding space exhausted + reactive T8 locked)" }
+  dieldrin:  { r1_formal_passes: 1, r1_pass_angle: "A01 (89, exo-epoxide dual-NH)", r2_carryin: "R2_S12 FM3 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low", note: "FM3 Koc impossibility caps non-A01 angles" }
+  endosulfan:{ r1_formal_passes: 1, r1_pass_angle: "A01 (85, Lewis-acid hydrolysis)", r2_carryin: "R2_S13 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low", note: "reactive handle spent; residual FM2/class-wide" }
+  pfbs:      { r1_formal_passes: 1, r1_pass_angle: "A17 (85, ModA/NTCP geometry)", r2_carryin: "R2_S02 chaotropic C4 ~72 revise (ITC gate)", depth_target: 10, depth_done: 0, honest_n: "likely_low", note: "short-chain PFAS, affinity marginal" }
+  bde209:    { r1_formal_passes: 1, r1_pass_angle: "A07 (85, r5)", r2_carryin: "R2_S20 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low", note: "A03 halogen-bond terminated (DBDPE degeneracy)" }
+  # tier 3 (unpassed; R2 revises mostly external-gate-bound)
+  pfhxs:     { r1_formal_passes: 0, r2_carryin: "R2_S03 chaotropic x OAT4 C6 ~84 pass_pending_gate (ITC)", depth_target: 10, depth_done: 0, honest_n: pending, note: "CLOSEST to a pass; ITC-GO -> ~86-88 = first R3/R2 pass" }
+  pcp:       { r1_formal_passes: 0, r1_selfeval: "85-87 (A04 beta-CD)", r2_carryin: "R2_S17 chaotropic phenolate ~78 revise (ITC)", depth_target: 10, depth_done: 0, honest_n: pending, note: "self-eval A04 needs formal adjudication; could seed a pass" }
+  tcdd:      { r1_formal_passes: 0, r2_carryin: "R2_S15 AhR class-capture ~78 revise", depth_target: 10, depth_done: 0, honest_n: pending }
+  dde:       { r1_formal_passes: 0, r1_selfeval: "86 (fragile) / 75 revise", r2_carryin: "R2_S11 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
+  genx:      { r1_formal_passes: 0, r1_selfeval: "85?", r2_carryin: "R2_S04 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
+  dcp26:     { r1_formal_passes: 0, r2_carryin: "R2_S07 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
+  betahch:   { r1_formal_passes: 0, r1_selfeval: "85-88 (shape-imprint)", r2_carryin: "R2_S14 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
+  pcb209:    { r1_formal_passes: 0, r2_carryin: "R2_S16 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
+  hcbd:      { r1_formal_passes: 0, r2_carryin: "R2_S18 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
+  chloroform:{ r1_formal_passes: 0, r2_carryin: "R2_S19 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
+
+totals:
+  r1_formal_passes: 9
+  r3_new_formal_passes: 0
+  r3_pass_pending_gate: 1   # PFHxS ~84 (ITC)
+  formal_passes_total: 9    # toward 200
+  prototype_library_size: 90
+  prototype_library_target_M1: 120
+  status: "R3 launched (depth mode). Scaffold created. First depth action: tier-1 candidate audit (BPA/PFOA) for a 2nd formal pass."
+last_updated: "2026-07-30"

@@ -399,7 +399,7 @@ R2 的中间产物持久化策略支持仿生设计库扩展：
 
 ## fresh_1000 R3 启动：深度轮（合同目标 10 通过/污染物 = 200，easy-first）(2026-07-30)
 
-R3 = **深度轮**，推进 research_contract 真实目标（每污染物 10 个正式通过方案、共 200），easy-first（先深化已通过污染物），honest-N（N<10 优于凑数）。**不是再凑 1000 个正交角度**——R2 已记录正交空间近耗尽（见 R2_CLOSEOUT.md）。R3 把现有最佳候选（R1 通过方案的姊妹角度 + R1 已映射未执行角度 + R2 revise）在诚实可达处转化为额外正式通过。当前：9 个 R1 正式通过 + 1 个 pass_pending_gate（PFHxS ~84，ITC 门）。主计划 `rounds/fresh_1000_R3/SPEC.md`；追踪 `rounds/fresh_1000_R3/STATUS.yaml`。**下一步**：tier-1 候选审计（BPA/PFOA）冲第 2 个正式通过。
+R3 = **深度轮**，推进 research_contract 真实目标（每污染物 10 个正式通过方案、共 200），easy-first（先深化已通过污染物），honest-N（N<10 优于凑数）。**不是再凑 1000 个正交角度**——R2 已记录正交空间近耗尽（见 R2_CLOSEOUT.md）。R3 把现有最佳候选（R1 通过方案的姊妹角度 + R1 已映射未执行角度 + R2 revise）在诚实可达处转化为额外正式通过。当前：9 个 R1 正式通过 + 1 个 pass_pending_gate（PFHxS ~84，ITC 门）。主计划 `rounds/fresh_1000_R3/SPEC.md`；追踪 `rounds/fresh_1000_R3/STATUS.yaml`。**已完成**：BPA 深度槽 1（ERRgamma ~79 revise，新原型 PROTO_R3_001；诚实发现 BPA 可用角度近耗尽于 A01通过+ERRgamma revise+PXR pass_pending_gate，honest-N ~1 正式，远低于 10）。**下一步**：PFOA（26 角度）/ROX/DDT 深度审计。
 
 ---
 

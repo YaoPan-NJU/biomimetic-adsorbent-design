@@ -1,0 +1,30 @@
+# Prototype card — fresh_1000 R3
+prototype_id: PROTO_R3_001
+name: "Estrogen-related receptor gamma (ERRgamma) high-affinity phenol-anchor + pocket"
+source_type: protein
+biological_origin: >
+  ERRgamma is a constitutively active orphan nuclear receptor whose ligand-binding domain binds bisphenol A with unusually high
+  affinity (Kd ~nM), far stronger than the classical estrogen receptors. A solved ERRgamma-LBD-BPA crystal structure (Matsushima
+  et al. 2007) shows one phenol OH H-bonded to the pocket while a hydrophobic sub-pocket accommodates the C(CH3)2 bridge; ERRgamma
+  is BPA-preferring among bisphenols. Biological function: transcriptional regulation (not pollutant capture).
+applicable_pollutants: ["bpa"]   # bisphenols/xenoestrogen phenolics broadly (BPF/BPS, alkylphenols) as a class
+recognition_mechanism: >
+  A single phenol OH is anchored by a pre-organized H-bond donor while a hydrophobic aromatic pocket, dimensioned to the C(CH3)2
+  bridge, provides shape/volume complementarity and desolvation-driven affinity. Translated: an ERRgamma-mimetic MIP/COF pocket
+  (one H-bond donor + hydrophobic bridge-sized sub-pocket) captures BPA with bisphenol-class selectivity (BPA > BPF > BPS by fit).
+literature_support:
+  - { doi: "Matsushima 2007 (J Biochem; ERRgamma-LBD-BPA crystal structure)", year: 2007, claim_supported: "high-affinity aqueous BPA recognition via phenol H-bond + hydrophobic dimethyl-bridge pocket, crystallographically defined", evidence_tier: fact }
+  - { doi: "Okada 2008 (Environ Health Perspect; ERRgamma-BPA binding)", year: 2008, claim_supported: "ERRgamma binds BPA with ~nM affinity, BPA-preferring among bisphenols", evidence_tier: fact }
+translation_distance_note: >
+  ERRgamma function is transcriptional regulation, not pollutant capture; the anchor+pocket recognition is a general supramolecular
+  principle. ERRgamma is promiscuous across bisphenols/xenoestrogens -> translated host is bisphenol-CLASS-selective (honest).
+  Distinct from the terminated ERbeta-volume-threshold angle (BPA R1 A04): ERRgamma is optimal-fit (not threshold) and has a solved
+  BPA co-crystal precedent that A04 lacked.
+evolution_solution_judgement: >
+  Passes G2: ERRgamma is an evolved high-affinity aqueous BPA recognition (real nuclear-receptor binding, crystallographically
+  defined), though for transcription not selective capture -> class-capture-strength correspondence.
+r1_used: false
+r2_used: false
+r3_first_used_in: "BPA R3_BPA_S01"
+r3_outcome_note: "BPA depth slot revise ~79 (0c/2h): strong prototype + orthogonal to A01 DmpR spatial-gate, but material pocket-volume precision (A04 lesson) + absolute affinity ITC gate cap it. Bisphenol-class capture."
+last_updated: "2026-07-30"

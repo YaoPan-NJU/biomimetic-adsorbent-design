@@ -1,0 +1,20 @@
+# Mechanism map — fresh_1000 R3
+mechanism_id: MECH_R3_bpa_002
+pollutant: bpa
+mechanism_name: "BPA ERRgamma-templated high-affinity phenol-anchor + bridge-pocket (bisphenol-class capture) — revise"
+biological_source: "ERRgamma ligand-binding domain (PROTO_R3_001): crystallographically-defined high-affinity aqueous BPA recognition (Matsushima 2007)"
+material_implementation: "ERRgamma-mimetic MIP/COF pocket: one pre-organized H-bond donor (phenol OH) + hydrophobic aromatic sub-pocket sized to the C(CH3)2 bridge"
+selectivity_signature:
+  primary_dimension: "high-affinity phenol-anchor + bridge-pocket volume complementarity (bisphenol class)"
+  orthogonal_dimensions: ["orthogonal to R1 A01 DmpR anchor + bridge-region SPATIAL GATE (distinct mechanism: pocket-fit vs spatial-gate; nuclear receptor vs bacterial sensor)"]
+aqueous_feasibility: { tfg_assessment: borderline, note: "ERRgamma binds BPA at nM in water (documented, crystal structure); material pocket-volume precision (A04 lesson) + absolute nM->ng/L affinity ITC-gated" }
+verdict: revise
+score: "~79 (0c/2h, ceiling ~80-82)"
+r1_overlap: false
+scheme_ref: "bpa/SCHEMES/R3_BPA_S01_ERRgamma-pocket-class-capture_revise.md"
+prototype_ref: "PROTO_R3_001"
+transferable_knowledge: >
+  Evolved high-affinity nuclear-receptor pockets (ERRgamma for BPA, like AhR for TCDD) are the orthogonal-mechanism route to a 2nd
+  recognition axis when the first pass took a different anchor; they deliver CLASS capture (bisphenol/xenoestrogen). Transferable to
+  NP/alkylphenols. Honest-N note: BPA tractable angles = A01 pass + ERRgamma revise + PXR pass_pending_gate; 10-pass target not in-repo-attainable.
+last_updated: "2026-07-30"

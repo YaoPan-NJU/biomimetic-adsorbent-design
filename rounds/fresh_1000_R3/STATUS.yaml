@@ -20,7 +20,7 @@ tiers:
 pollutants:
   # tier 1 (easy-first)
   pfoa:      { r1_formal_passes: 1, r1_pass_angle: "A02 (85, urea oxyanion-hole POP)", r2_carryin: "R2_S01 anion-pi ~74 revise (Phase-0 DFT gate)", depth_target: 10, depth_done: 0, honest_n: pending, note: "26 R1 angles mapped; audit A03-A26 terminated set for any depth-workable pass candidate" }
-  bpa:       { r1_formal_passes: 1, r1_pass_angle: "A01 (86, DmpR phenol sensor)", r2_carryin: "R2_S05 PXR avidity ~82 (ITC gate)", depth_target: 10, depth_done: 0, honest_n: pending, note: "phenolic, rich recognition chemistry (H-bond/pi/shape); best tier-1 candidate for additional passes" }
+  bpa:       { r1_formal_passes: 1, r1_pass_angle: "A01 (86, DmpR phenol sensor)", r2_carryin: "R2_S05 PXR avidity ~82 pass_pending_gate (ITC)", depth_target: 10, depth_done: 1, r3_slots: "R3_BPA_S01 ERRgamma ~79 revise (PROTO_R3_001)", honest_n: "~1 formal + 2 near-pass (ERRgamma revise + PXR pass_pending_gate); 10 NOT in-repo-attainable", note: "R1 A02/A03/A04/A07 terminated (aqueous phenol H-bond near-thermoneutral); tractable angles ~exhausted at A01+ERRgamma+PXR" }
   octocrylene: { r1_formal_passes: 1, r1_pass_angle: "A01 (85, CT donor-acceptor cavity)", r2_carryin: "R1 A04 Michael covalent ~80 revise_with_phase0 (DFT gate)", depth_target: 10, depth_done: 0, honest_n: pending, note: "A04 Michael is a near-pass pending DFT; R2 near-exhaustion otherwise" }
   rox:       { r1_formal_passes: 1, r1_pass_angle: "A01 (85, 23S rRNA NPET cleft)", r2_carryin: "R2_S08 cation-pi class-capture ~81 revise", depth_target: 10, depth_done: 0, honest_n: pending, note: "macrolide; A02 oxime/A06 esterase mapped" }
   ddt:       { r1_formal_passes: 1, r1_pass_angle: "A01 (86, dehydrochlorinase dual-motif)", r2_carryin: "R2_S10 halogen-bond pattern ~79 revise (DFT gate)", depth_target: 10, depth_done: 0, honest_n: pending, note: "A02 corrinoid reductive revise_low_ceiling ~78" }
@@ -45,9 +45,10 @@ pollutants:
 totals:
   r1_formal_passes: 9
   r3_new_formal_passes: 0
+  r3_revise: 1              # BPA ERRgamma ~79
   r3_pass_pending_gate: 1   # PFHxS ~84 (ITC)
   formal_passes_total: 9    # toward 200
-  prototype_library_size: 90
+  prototype_library_size: 91   # +PROTO_R3_001 ERRgamma
   prototype_library_target_M1: 120
-  status: "R3 launched (depth mode). Scaffold created. First depth action: tier-1 candidate audit (BPA/PFOA) for a 2nd formal pass."
-last_updated: "2026-07-30"
+  status: "R3 depth in progress. BPA depth slot 1 done: ERRgamma ~79 revise (PROTO_R3_001, new prototype). Honest finding: BPA tractable angles ~exhausted at A01(pass)+ERRgamma(revise)+PXR(pass_pending_gate) -> honest-N ~1 formal, far below contract 10. Next: PFOA/ROX/DDT depth (easy-first Tier 1)."
+last_updated: "2026-07-30T09:00"

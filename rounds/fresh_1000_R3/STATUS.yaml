@@ -37,7 +37,7 @@ pollutants:
   dde:       { r1_formal_passes: 0, r1_selfeval: "86 (fragile) / 75 revise", r2_carryin: "R2_S11 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
   genx:      { r1_formal_passes: 0, r1_selfeval: "85?", r2_carryin: "R2_S04 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
   dcp26:     { r1_formal_passes: 0, r2_carryin: "R2_S07 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
-  betahch:   { r1_formal_passes: 0, r1_selfeval: "85-88 (shape-imprint)", r2_carryin: "R2_S14 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
+  betahch:   { r1_formal_passes: 0, r1_selfeval: "85-88 (A08 shape+dipole / A12 halide-cage, DESIGNER self-eval awaiting-attacker)", r2_carryin: "R2_S14 terminate", depth_target: 10, depth_done: 1, r3_slots: "R3_betaHCH_S01 A08/A12 formal adjudication -> revise ~82-83 (H1 weak biomimetic correspondence)", honest_n: "0 formal; self-evals did NOT survive review (revise ~82-83); no strong evolved template for recalcitrant all-equatorial isomer" }
   pcb209:    { r1_formal_passes: 0, r2_carryin: "R2_S16 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
   hcbd:      { r1_formal_passes: 0, r2_carryin: "R2_S18 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
   chloroform: { r1_formal_passes: 0, r2_carryin: "R2_S19 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
@@ -45,7 +45,7 @@ pollutants:
 totals:
   r1_formal_passes: 9
   r3_new_formal_passes: 0
-  r3_revise: 2              # BPA ERRgamma ~79 + PCP A04 formal-adjudication ~83
+  r3_revise: 3              # BPA ERRgamma ~79 + PCP A04 ~83 + betaHCH A08/A12 ~82-83 (all formal-adjudicated, none reach pass)
   r3_pass_pending_gate: 3   # PFHxS ITC~84 + Octocrylene A04 DFT~80 + BPA PXR ITC~82
   formal_passes_total: 9    # toward 200
   prototype_library_size: 91   # +PROTO_R3_001 ERRgamma
@@ -55,5 +55,6 @@ totals:
   honest_conclusion_tier1: "All 5 Tier-1 (richest, easy-first) pollutants: honest-N = 1 formal + 1-2 gate-bound/revise near-passes; NO 2nd in-repo formal pass. Implies contract 200 NOT attainable in-repo; realistic honest total ~9 formal + a few external-gate-GO conversions (PFHxS ITC, OC A04 DFT)."
   honest_conclusion_all20: "20-pollutant depth map complete + PCP self-eval formally adjudicated. 9 confirmed formal passes (1/pollutant for 9 R1-passed; 11 have 0 formal). CRITICAL R3 finding: PCP A04 (best self-eval 85-87) did NOT survive independent adjudication -> revise ~83 (prior-art originality cap); correcting the documented self-eval inflation (R1 misdelivery: self-evals ran ~10-20 pts high), the self-eval-adjudication path does NOT reliably yield formal passes. Realistic honest total = ~9 formal + up to ~3 external-gate-GO conversions (PFHxS ITC, OC A04 DFT, BPA PXR ITC). Contract 200 (10x20) NOT honestly attainable: most pollutants angle-space-exhausted at N=1; the honest ceiling is ~9-12 formal."
   self_eval_adjudication_candidates: ["pcp A04 -> DONE: revise ~83 (did not survive review)", "betahch 85-88 (weaker/unbacked -> expect revise/collapse)"]
-  status: "R3 depth: 20-pollutant map complete + PCP A04 formally adjudicated (revise ~83, self-eval did not survive). 0 new formal passes (honest). Next: (optional) betaHCH self-eval adjudication, then R3_CLOSEOUT with honest ceiling ~9-12 formal + external-gate path."
-last_updated: "2026-07-30T12:00"
+  closeout: rounds/fresh_1000_R3/R3_CLOSEOUT.md
+  status: "R3 depth COMPLETE (honest end state). 20/20 pollutants depth-assessed + honest-N recorded; both self-eval candidates (PCP/betaHCH) formally adjudicated to revise (did not survive independent review); 0 new formal passes (honest). Honest ceiling ~9 formal + 3 pass_pending_gate (external-gate-GO). Contract 200 NOT attainable in-repo (documented in R3_CLOSEOUT). Remaining path fully external-gate-bound (out-of-repo)."
+last_updated: "2026-07-30T13:00"

@@ -399,7 +399,7 @@ R2 的中间产物持久化策略支持仿生设计库扩展：
 
 ## fresh_1000 R3 启动：深度轮（合同目标 10 通过/污染物 = 200，easy-first）(2026-07-30)
 
-R3 = **深度轮**，推进 research_contract 真实目标（每污染物 10 个正式通过方案、共 200），easy-first（先深化已通过污染物），honest-N（N<10 优于凑数）。**不是再凑 1000 个正交角度**——R2 已记录正交空间近耗尽（见 R2_CLOSEOUT.md）。R3 把现有最佳候选（R1 通过方案的姊妹角度 + R1 已映射未执行角度 + R2 revise）在诚实可达处转化为额外正式通过。当前：9 个 R1 正式通过 + 1 个 pass_pending_gate（PFHxS ~84，ITC 门）。主计划 `rounds/fresh_1000_R3/SPEC.md`；追踪 `rounds/fresh_1000_R3/STATUS.yaml`。**已完成**：Tier-1 深度审计（BPA/PFOA/OC/ROX/DDT）——0 新正式通过（诚实）；2 pass_pending_gate（PFHxS ITC、OC A04 DFT）+ BPA ERRgamma revise（新原型 PROTO_R3_001）。诚实结论：Tier-1（最富）污染物 honest-N=1 正式 + 1-2 门控近通过，无第 2 个仓库内正式通过 → 合同 200 仓库内不可达，现实诚实总数 ~9 正式 + 少量外部门 GO 转化（详 TIER1_DEPTH_AUDIT.md）。**下一步**：Tier 2（NP/Dieldrin/Endosulfan/PFBS/BDE209）审计（预期近耗尽）。
+R3 = **深度轮**，推进 research_contract 真实目标（每污染物 10 个正式通过方案、共 200），easy-first（先深化已通过污染物），honest-N（N<10 优于凑数）。**不是再凑 1000 个正交角度**——R2 已记录正交空间近耗尽（见 R2_CLOSEOUT.md）。R3 把现有最佳候选（R1 通过方案的姊妹角度 + R1 已映射未执行角度 + R2 revise）在诚实可达处转化为额外正式通过。当前：9 个 R1 正式通过 + 1 个 pass_pending_gate（PFHxS ~84，ITC 门）。主计划 `rounds/fresh_1000_R3/SPEC.md`；追踪 `rounds/fresh_1000_R3/STATUS.yaml`。**已完成**：Tier-1 深度审计（BPA/PFOA/OC/ROX/DDT）——0 新正式通过（诚实）；2 pass_pending_gate（PFHxS ITC、OC A04 DFT）+ BPA ERRgamma revise（新原型 PROTO_R3_001）。诚实结论：Tier-1（最富）污染物 honest-N=1 正式 + 1-2 门控近通过，无第 2 个仓库内正式通过 → 合同 200 仓库内不可达，现实诚实总数 ~9 正式 + 少量外部门 GO 转化（详 TIER1_DEPTH_AUDIT.md）。**R3 深度轮完成（诚实终态）**：20/20 污染物深度评估 + honest-N 记录；Tier-1/2/3 三份审计 + BPA ERRgamma 新槽（PROTO_R3_001）+ PCP A04 与 betaHCH A08/A12 两次正式裁决（设计者自评未过独立复核 → revise ~82-83）。**0 个新正式通过**（诚实）；诚实上限 ~9 正式 + 3 pass_pending_gate（PFHxS ITC、OC A04 DFT、BPA PXR ITC 外部门 GO 后转化）。合同 200（10×20）仓库内不可达——详 R3_CLOSEOUT.md（含 pass_pending_gate 清单 + 到 200 的精确外部门路径）。剩余路径全为仓库外外部门。
 
 ---
 

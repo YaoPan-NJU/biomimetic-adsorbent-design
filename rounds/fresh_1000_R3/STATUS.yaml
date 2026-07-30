@@ -46,11 +46,14 @@ totals:
   r1_formal_passes: 9
   r3_new_formal_passes: 0
   r3_revise: 1              # BPA ERRgamma ~79
-  r3_pass_pending_gate: 2   # PFHxS ~84 (ITC) + Octocrylene A04 Michael ~80 (DFT)
+  r3_pass_pending_gate: 3   # PFHxS ITC~84 + Octocrylene A04 DFT~80 + BPA PXR ITC~82
   formal_passes_total: 9    # toward 200
   prototype_library_size: 91   # +PROTO_R3_001 ERRgamma
   prototype_library_target_M1: 120
   tier1_audit: rounds/fresh_1000_R3/TIER1_DEPTH_AUDIT.md
+  tier2_tier3_audit: rounds/fresh_1000_R3/TIER2_TIER3_DEPTH_AUDIT.md
   honest_conclusion_tier1: "All 5 Tier-1 (richest, easy-first) pollutants: honest-N = 1 formal + 1-2 gate-bound/revise near-passes; NO 2nd in-repo formal pass. Implies contract 200 NOT attainable in-repo; realistic honest total ~9 formal + a few external-gate-GO conversions (PFHxS ITC, OC A04 DFT)."
-  status: "R3 depth: Tier-1 audit complete (BPA/PFOA/OC/ROX/DDT). 0 new formal passes (honest); 2 pass_pending_gate (PFHxS ITC, OC A04 DFT) + BPA ERRgamma revise. Next: Tier 2 audit (NP/Dieldrin/Endosulfan/PFBS/BDE209, expect near-exhaustion)."
-last_updated: "2026-07-30T10:00"
+  honest_conclusion_all20: "20-pollutant depth map complete. 9 confirmed formal passes (1/pollutant for the 9 R1-passed; 11 pollutants have 0 formal). In-repo formal-pass candidates: PCP A04 self-eval 85-87 (solid, adjudication-pending) + betaHCH 85-88 (weak/unbacked). pass_pending_gate x3 (PFHxS ITC~84, OC A04 DFT~80, BPA PXR ITC~82). Realistic honest total ~9 + up to 2 self-eval-adjudication + up to 3 gate-GO = best-case ~11-14 formal. Contract 200 (10x20) NOT honestly attainable: most pollutants angle-space-exhausted at N=1."
+  self_eval_adjudication_candidates: ["pcp A04 85-87 (priority, S31_A04 exists)", "betahch 85-88 (weak, unbacked)"]
+  status: "R3 depth: 20-pollutant depth map COMPLETE (Tier-1 + Tier-2/3 audits). 0 new formal passes yet (honest). Next: formally adjudicate PCP A04 (85-87 self-eval) as the priority in-repo pass candidate, then R3_CLOSEOUT."
+last_updated: "2026-07-30T11:00"

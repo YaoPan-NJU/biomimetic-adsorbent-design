@@ -27,7 +27,7 @@ pollutants:
   # tier 2 (passed but heavily R1-terminated -> expect low honest-N)
   np:        { r1_formal_passes: 1, r1_pass_angle: "A01 (92, ipso alpha-quaternary topology)", r2_carryin: "R2_S06 amphiphilic terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low", note: "R1 A04/A06/A08/A10 all terminated (equilibrium-binding space exhausted + reactive T8 locked)" }
   dieldrin:  { r1_formal_passes: 1, r1_pass_angle: "A01 (89, exo-epoxide dual-NH)", r2_carryin: "R2_S12 FM3 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low", note: "FM3 Koc impossibility caps non-A01 angles" }
-  endosulfan:{ r1_formal_passes: 1, r1_pass_angle: "A01 (85, Lewis-acid hydrolysis)", r2_carryin: "R2_S13 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low", note: "reactive handle spent; residual FM2/class-wide" }
+  endosulfan: { r1_formal_passes: 1, r1_pass_angle: "A01 (85, Lewis-acid hydrolysis)", r2_carryin: "R2_S13 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low", note: "reactive handle spent; residual FM2/class-wide" }
   pfbs:      { r1_formal_passes: 1, r1_pass_angle: "A17 (85, ModA/NTCP geometry)", r2_carryin: "R2_S02 chaotropic C4 ~72 revise (ITC gate)", depth_target: 10, depth_done: 0, honest_n: "likely_low", note: "short-chain PFAS, affinity marginal" }
   bde209:    { r1_formal_passes: 1, r1_pass_angle: "A07 (85, r5)", r2_carryin: "R2_S20 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low", note: "A03 halogen-bond terminated (DBDPE degeneracy)" }
   # tier 3 (unpassed; R2 revises mostly external-gate-bound)
@@ -40,7 +40,7 @@ pollutants:
   betahch:   { r1_formal_passes: 0, r1_selfeval: "85-88 (shape-imprint)", r2_carryin: "R2_S14 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
   pcb209:    { r1_formal_passes: 0, r2_carryin: "R2_S16 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
   hcbd:      { r1_formal_passes: 0, r2_carryin: "R2_S18 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
-  chloroform:{ r1_formal_passes: 0, r2_carryin: "R2_S19 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
+  chloroform: { r1_formal_passes: 0, r2_carryin: "R2_S19 terminate", depth_target: 10, depth_done: 0, honest_n: "likely_low" }
 
 totals:
   r1_formal_passes: 9

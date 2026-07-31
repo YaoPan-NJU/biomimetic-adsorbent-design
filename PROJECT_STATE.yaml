@@ -1,6 +1,6 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: human_adjudication_dossier_pollutant_mechanism_expanded_owner_review_pending
+phase: human_adjudication_dossier_causal_narrative_rewritten_owner_review_pending
 status: in_progress
 spec_framework:
   activated: 2026-07-29
@@ -15,8 +15,8 @@ spec_framework:
     E: 大环内酯类/紫外过滤剂
   category_specs_status: 已完成（4 份：AE 联合、B、C、D）
   phase_a_plus_mechanism: TFG + PADS + ODC 三道快速预筛 + S/A/B/X 角度预分类
-last_completed_step: "2026-07-31 按负责人反馈扩展 HUMAN_ADJUDICATION_DOSSIER_20_SCHEMES_2026-07-31.md：新增 15 类靶污染物的结构简式、水中主要形态、普通材料基线去除机制、方案声称的选择性增量和六类去除机制判别表；并为 20 条方案逐条增加固定的污染物结构—吸附/去除机制卡，明确靶标是单体、异构体、技术混合物还是同系物，材料究竟瞄准哪个真实暴露的结构把手，以及何种差分信号才能排除疏水分配、静电/离子交换、孔填充、颗粒截留和容器损失。权威处置仍为 A3/B2/C12/D3。结构反查进一步坐实 PCP 近中性酚盐与 beta-CD 中性包结叙事错位、beta-HCH A12 将共价 C-Cl 等同 Cl-、BDE-209 醚 O 严重位阻和 Endosulfan 本质为反应性水解而非吸附再生等问题。"
-next_action: "负责人按扩展底稿第 4 节九问，对 20 条逐项给出 是/否/需补证据：先确认靶标身份和水中形态，再裁决结构把手可及性、基线机制排除、原型功能方向、承重机理同一性、exact target material、合成可执行性、真实基质因果签名和吸附再生/反应产物闭合。人工判别前不采购、不合成、不进入完整验证。若批准 Gate 0，仍只按 A1/A2/A3 顺序重建 SC-P02 径向梯度 PMO、DDT50-01 可证明薄壳和 BPA20-01 可溶锚模型；GX/DCP 只做一票否决 pre-M0；C/D 不得沿用旧分数推进。"
+last_completed_step: "2026-07-31 按项目自身的科学主线和 De-AI Canon 重写 HUMAN_ADJUDICATION_DOSSIER_20_SCHEMES_2026-07-31.md。20 条方案不再由污染物卡、仿生卡、材料卡和审稿意见机械拼接，而是逐条按 污染物难去除根因 -> 传统材料能力缺口 -> 生物原型真实功能 -> 可转译原理 -> 人工材料与合成 -> 选择性去除过程 -> 可证伪实验 -> 第三方处置 连续讲述。A/B 类保留完整方案叙述、路线诊断和裁决问题；C/D 类在保留污染物结构、原型、映射、材料/反应、合成障碍和停止条件的同时压缩重复模板。权威处置仍为 A3/B2/C12/D3；未新增性能或文献主张，E111-E125 证据边界不变。"
+next_action: "负责人直接阅读因果叙事版底稿并按文末九问逐条给出 是/否/需补证据。优先审查 SC-P02、DDT50-01 和 BPA20-01 是否保留承重科学问题，以及是否接受报告给出的路线重建范围；随后决定 GX50-01、DCP20-01 是否值得开展一票否决 pre-M0。人工裁决前不采购、不合成、不进入完整验证。C/D 不得沿用旧分数推进；若批准 Gate 0，仍只做承重机制和目标结构真实性的最小验证。"
 active_branch: Ultimate
 last_verified_commit: 972128403004
 bmdl_policy: removed_from_branch
@@ -44,6 +44,13 @@ cross_branch_review:
     evidence_ledger_ids: E111-E125
     disposition_changed: false
     new_review_order: "pollutant identity -> aqueous speciation/phase -> baseline removal -> claimed structural handle -> biomimetic mapping -> material/synthesis -> mechanism controls -> regeneration or product closure"
+  causal_narrative_rewrite:
+    date: 2026-07-31
+    narrative_spine: "pollutant root cause -> conventional capability gap -> biological prototype -> translatable principle -> artificial material and synthesis -> selective removal mechanism -> falsifiable experiment -> reviewer disposition"
+    schemes_rewritten: 20
+    disposition_changed: false
+    evidence_changed: false
+    owner_review_pending: true
   current_disposition_counts:
     A_route_redevelopment_M0_only: 3
     B_pre_M0_gate_only: 2

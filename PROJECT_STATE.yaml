@@ -1,6 +1,6 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: human_adjudication_dossier_complete_owner_review_pending
+phase: human_adjudication_dossier_pollutant_mechanism_expanded_owner_review_pending
 status: in_progress
 spec_framework:
   activated: 2026-07-29
@@ -15,8 +15,8 @@ spec_framework:
     E: 大环内酯类/紫外过滤剂
   category_specs_status: 已完成（4 份：AE 联合、B、C、D）
   phase_a_plus_mechanism: TFG + PADS + ODC 三道快速预筛 + S/A/B/X 角度预分类
-last_completed_step: "2026-07-31 在 skill-guided 第二轮处置基础上，把 20 条候选逐一重建为可供负责人手工判别的完整链条：真实仿生原型及其功能、机理事实/推断/假设、原型到人工特征的映射、目标材料实体、源稿合成步骤、现步骤能否制得目标结构、第三方修订路线和人工裁决问题。新增 deliverables/attachments/HUMAN_ADJUDICATION_DOSSIER_20_SCHEMES_2026-07-31.md。底稿维持 A3/B2/C12/D3，不用旧分数替代化学或制造准入，并进一步明确：BPA20-01/PXR/ROX/PFHxS 等 exact chemistry 未冻结者只能称概念路线；beta-HCH A12 把 Cl- 稳定穴外推到中性共价 C-Cl 属硬映射错误；Octocrylene A04 必须先做分子反应动力学；Endosulfan 若继续应改立催化水解课题。"
-next_action: "负责人先按 HUMAN_ADJUDICATION_DOSSIER_20_SCHEMES_2026-07-31.md 对 20 条逐项给出 是/否/需补证据，重点裁决原型功能方向、承重机理同一性、exact target structure、合成可执行性、反 logKow 因果签名、真实基质可测性和再生废流闭合。人工判别完成前不采购、不合成、不进入完整验证。若负责人批准 Gate 0，仅按 A1/A2/A3 顺序重建 SC-P02 径向梯度 PMO、DDT50-01 可证明薄壳和 BPA20-01 可溶锚模型；GX/DCP 只做一票否决 pre-M0；C/D 不得沿用旧分数推进。"
+last_completed_step: "2026-07-31 按负责人反馈扩展 HUMAN_ADJUDICATION_DOSSIER_20_SCHEMES_2026-07-31.md：新增 15 类靶污染物的结构简式、水中主要形态、普通材料基线去除机制、方案声称的选择性增量和六类去除机制判别表；并为 20 条方案逐条增加固定的污染物结构—吸附/去除机制卡，明确靶标是单体、异构体、技术混合物还是同系物，材料究竟瞄准哪个真实暴露的结构把手，以及何种差分信号才能排除疏水分配、静电/离子交换、孔填充、颗粒截留和容器损失。权威处置仍为 A3/B2/C12/D3。结构反查进一步坐实 PCP 近中性酚盐与 beta-CD 中性包结叙事错位、beta-HCH A12 将共价 C-Cl 等同 Cl-、BDE-209 醚 O 严重位阻和 Endosulfan 本质为反应性水解而非吸附再生等问题。"
+next_action: "负责人按扩展底稿第 4 节九问，对 20 条逐项给出 是/否/需补证据：先确认靶标身份和水中形态，再裁决结构把手可及性、基线机制排除、原型功能方向、承重机理同一性、exact target material、合成可执行性、真实基质因果签名和吸附再生/反应产物闭合。人工判别前不采购、不合成、不进入完整验证。若批准 Gate 0，仍只按 A1/A2/A3 顺序重建 SC-P02 径向梯度 PMO、DDT50-01 可证明薄壳和 BPA20-01 可溶锚模型；GX/DCP 只做一票否决 pre-M0；C/D 不得沿用旧分数推进。"
 active_branch: Ultimate
 last_verified_commit: 972128403004
 bmdl_policy: removed_from_branch
@@ -37,6 +37,13 @@ cross_branch_review:
   detailed_six_axis_review: deliverables/attachments/DETAILED_PER_SCHEME_EXPERT_REVIEW_2026-07-31.md
   skill_guided_second_pass_review: deliverables/attachments/SKILL_GUIDED_SECOND_PASS_REVIEW_2026-07-31.md
   human_adjudication_dossier: deliverables/attachments/HUMAN_ADJUDICATION_DOSSIER_20_SCHEMES_2026-07-31.md
+  pollutant_structure_mechanism_expansion:
+    date: 2026-07-31
+    distinct_pollutant_classes: 15
+    per_scheme_structure_cards: 20
+    evidence_ledger_ids: E111-E125
+    disposition_changed: false
+    new_review_order: "pollutant identity -> aqueous speciation/phase -> baseline removal -> claimed structural handle -> biomimetic mapping -> material/synthesis -> mechanism controls -> regeneration or product closure"
   current_disposition_counts:
     A_route_redevelopment_M0_only: 3
     B_pre_M0_gate_only: 2

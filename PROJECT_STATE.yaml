@@ -1,6 +1,6 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: detailed_per_scheme_review_complete_optimization_pending
+phase: skill_guided_second_pass_review_complete_gate0_pending
 status: in_progress
 spec_framework:
   activated: 2026-07-29
@@ -15,17 +15,17 @@ spec_framework:
     E: 大环内酯类/紫外过滤剂
   category_specs_status: 已完成（4 份：AE 联合、B、C、D）
   phase_a_plus_mechanism: TFG + PADS + ODC 三道快速预筛 + S/A/B/X 角度预分类
-last_completed_step: "2026-07-31 在全分支去重审查基础上，完成 20 条高分/近通过设计线的逐项六维专家审查：化学物种与水相作用、工程床体、合成是否得到目标空间结构、真实二级出水吸附、再生废流、修改路径与停止条件。A 主线仍为 SC-P02/PG-PMO、BPA20-01/AG-COF、DDT50-01/LPO-SIP；B 门控池仍为 GX50-01、DCP20-01、NP A01、PFHxS R2_S03、Dieldrin A01。新增发现：Octocrylene A04 把 pKa=10.2 的哌嗪在 pH 7 的游离碱比例写反（若该 pKa 对应反应性 N，一元模型约 0.063%；严格位点分布仍需微观 pKa/直接速率），现有反应性捕获前提失效；PCP A04 与 beta-HCH A12 存在多条承重 DOI 错配；PCP 在 pH 7 主要为 phenolate，原中性 snug-fit 叙事不成立。详 deliverables/attachments/DETAILED_PER_SCHEME_EXPERT_REVIEW_2026-07-31.md。"
-next_action: "负责人先审批逐项处置，不进入完整验证。若批准优化，按顺序执行四个独立 M0：1) SC-P02 仅做同批四材料的空间梯度、CTAB/Br、zeta、IEC、湿态孔与可及位点 QC；2) BPA20-01 先做可溶锚存在/删除模型的水相 DeltaDeltaG，再冻结同晶格 G0/G1/G2；3) DDT50-01 先闭合容器/管路/过滤/提取回收、whole/filtrate/particle 三相和 GC 入口降解 QA，再做同批七材料；4) B 级只做各自生死前置门。任何 STOP 条件触发即停；C/D 级不得沿用旧分数推进。"
+last_completed_step: "2026-07-31 依据用户提供的 adrmats-review skill 对 20 条设计完成第二轮严格复审。复审把合成步骤可执行性、研究生/专家双视角、六环论文链、跨章节一致性和累计错误模式设为硬门，并联网核验了承重争议。当前权威处置为 A3/B2/C12/D3：NP A01、PFHxS R2_S03、Dieldrin A01 从 B 降为 C；A 类顺序调整为 SC-P02、DDT50-01、BPA20-01，三条均只允许路线重建/M0，不是 E1-ready；B 仅保留 GX50-01 和 DCP20-01。新增根因包括 BDE-209 TpPa-1 后修饰位点不存在、DCP 单一均质壳不能形成顺序双层且 dummy 缺 OH、DDT/GX 的延迟投料不能定义薄壳、SC 的现证据只能支持颗粒径向梯度。详 deliverables/attachments/SKILL_GUIDED_SECOND_PASS_REVIEW_2026-07-31.md。"
+next_action: "负责人先审批第二轮处置，不采购、不进入完整验证。若批准 Gate 0：1) SC-P02 冻结 5 mmol 可执行 SOP、压力安全参数、前体纯度和径向梯度/孔口两级证据；2) DDT50-01 由同锅延迟投料改为独立种珠后的表面引发或经验证两段种子薄壳路线，并先证明 dummy-单体预组织；3) BPA20-01 先冻结唯一单体/键型，并以可溶存在/删除模型证明水相锚增量；4) GX50-01 与 DCP20-01 仅完成可执行配方/薄壳或顺序双层的 pre-M0 生死门。NP/PFHxS/Dieldrin 如继续，只能另立 exact soluble-host 基础化学课题。任何 STOP 条件触发即停；C/D 不得沿用旧分数推进。"
 active_branch: Ultimate
-last_verified_commit: 75c31d9
+last_verified_commit: 2632928
 bmdl_policy: removed_from_branch
 historical_artifacts_status: preserved_not_active
 candidate_pool_status: historical_preserved_not_active
 cross_branch_review:
   date: 2026-07-31
   source_refs:
-    ultimate: 75c31d9
+    ultimate: 2632928
     main: 6bd30c542a7d
   distinct_branches_reviewed:
     - origin/Ultimate
@@ -35,14 +35,21 @@ cross_branch_review:
     - origin/kimi-k3
   unique_high_score_or_near_pass_design_lines: 20
   detailed_six_axis_review: deliverables/attachments/DETAILED_PER_SCHEME_EXPERT_REVIEW_2026-07-31.md
+  skill_guided_second_pass_review: deliverables/attachments/SKILL_GUIDED_SECOND_PASS_REVIEW_2026-07-31.md
+  current_disposition_counts:
+    A_route_redevelopment_M0_only: 3
+    B_pre_M0_gate_only: 2
+    C_foundational_or_control_only: 12
+    D_stop_current_version: 3
   legacy_pass_ledger_status: inconsistent_and_not_experiment_admissible
   optimization_priority:
     - SC-P02 / PG-PMO
-    - BPA20-01 / AG-COF
     - DDT50-01 / LPO-SIP
+    - BPA20-01 / AG-COF
   gate_only_pool:
     - GX50-01 / BGE-SIP
     - DCP20-01 / EPS-DCA-SIP
+  foundation_research_only:
     - NP A01 soluble-host screen
     - PFHxS R2_S03 soluble-host affinity/selectivity gate
     - Dieldrin A01 soluble-receptor water gate
@@ -363,6 +370,7 @@ artifacts:
   fresh_1000_r3_tier23_audit: rounds/fresh_1000_R3/TIER2_TIER3_DEPTH_AUDIT.md
   cross_branch_high_score_review: deliverables/attachments/CROSS_BRANCH_HIGH_SCORE_REVIEW_2026-07-31.md
   detailed_per_scheme_expert_review: deliverables/attachments/DETAILED_PER_SCHEME_EXPERT_REVIEW_2026-07-31.md
+  skill_guided_second_pass_review: deliverables/attachments/SKILL_GUIDED_SECOND_PASS_REVIEW_2026-07-31.md
   fresh_1000_r2_knowledge_graph: rounds/fresh_1000_R2/knowledge_graph.yaml
   fresh_1000_r2_pfoa_angle_map: rounds/fresh_1000_R2/angle_maps/pfoa_ANGLES.yaml
   fresh_1000_r2_pfoa_slot1: rounds/fresh_1000_R2/pfoa/SCHEMES/R2_S01_A01_anion-pi-electron-deficient-pore_revise.md

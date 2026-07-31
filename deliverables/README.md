@@ -4,6 +4,8 @@
 
 ## 核心交付
 
+- `attachments/SKILL_GUIDED_SECOND_PASS_REVIEW_2026-07-31.md`：当前权威的 20 条高分方案第二轮严格复审；按合成可执行性、双视角和六环论文链给出 A3/B2/C12/D3 处置。
+- `attachments/DETAILED_PER_SCHEME_EXPERT_REVIEW_2026-07-31.md`：第一轮逐方案六维审查，保留审计历史；与第二轮冲突时以第二轮为准。
 - `MAIN_REPORT_ZH.md`：中文主报告，主案与备选均已完成设计终审。
 - `attachments/FINAL_SCORECARD.md`：候选漏斗、各轮评分和终选理由。
 - `attachments/REVIEW_ISSUE_LEDGER.md`：攻击、复审、修订和剩余实验风险。

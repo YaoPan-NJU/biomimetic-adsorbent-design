@@ -506,3 +506,30 @@ B 级方案只允许最小决定性前置门；C/D 级不得沿用旧分数推�
 4. B 级：每条只允许报告中定义的低成本决定性门；失败即停。
 
 任何方案都尚未获准进入完整 E1 性能验证或动态床 E2。
+
+---
+
+## 基于用户审阅 skill 的第二轮严格复审检查点（2026-07-31）
+
+用户提供的 `adrmats-review` skill 已作为本轮审阅协议使用。由于本仓库明确不是 ADRMATS，本轮没有套用 ADRMATS run 自动发现和目录结构；采用了其中适用于本项目的实质硬门：合成步骤最高优先级、研究生/专家双视角、六环论文链、跨章节一致性、累计错误模式和关键争议联网核验。
+
+完整的当前权威报告为 `deliverables/attachments/SKILL_GUIDED_SECOND_PASS_REVIEW_2026-07-31.md`。第一轮报告 `deliverables/attachments/DETAILED_PER_SCHEME_EXPERT_REVIEW_2026-07-31.md` 保留审计历史，并已增加第二轮覆盖提示。
+
+### 当前权威处置
+
+- **A（3；只允许路线重建后进入 M0）：** SC-P02 / PG-PMO；DDT50-01 / LPO-SIP；BPA20-01 / AG-COF。
+- **B（2；只允许 pre-M0 生死门）：** GX50-01 / BGE-SIP；DCP20-01 / EPS-DCA-SIP。
+- **C（12；基础机理或对照）：** NP A01、PFHxS R2_S03、Dieldrin A01，以及第一轮已有九条 C 级设计。
+- **D（3；当前版本停止）：** BDE-209 A07、Ultimate DDT A01、Endosulfan A01（作为吸附剂）。
+
+### 相对第一轮的实质修正
+
+1. NP A01、PFHxS R2_S03、Dieldrin A01 由 B 降为 C：三者分别在“生物电子反应→人工形状腔”“运输→环境吸附”“毒性靶点→富集原型”处发生硬对应断裂；即使做出 soluble host，也不能回填为本项目的硬仿生吸附材料。
+2. A 类顺序改为 SC-P02 → DDT50-01 → BPA20-01。该顺序反映当前合成路线可冻结程度，而不是纸面得分或预期容量。
+3. 三条 A 类都撤销任何 E1-ready 含义：SC 目前最多证明颗粒径向外层梯度；DDT 的同锅延迟投料不能定义 1–3 µm 浅壳；BPA 尚未冻结 exact monomer、键型和可执行 SOP。
+4. BDE-209 A07 的核心合成进一步确认不可执行：标准 TpPa-1 网络没有现稿 Step 2 所需的自由 `COF-NH2`，水相 Lewis acid 位点还面临水占位。
+5. 20 条线共同暴露的根因不是“缺一两篇文献”，而是 exact material 未冻结、投料被当作空间结构证据、关键试剂去向/副反应未闭合、SOP 缺实际用量与异常处理、再生只转移污染物而未闭合废流。
+
+### 唯一允许的下一动作
+
+先由负责人审批第二轮处置；在批准前不采购、不做完整性能验证。若批准，只进入 Gate 0：为 SC、DDT、BPA 分别重写唯一目标结构与可执行 SOP；GX/DCP 只做能一票否决的配方/形貌 pre-M0；NP/PFHxS/Dieldrin 若保留，必须拆成独立的 exact soluble-host 基础化学研究。任何方案都仍未获准进入完整 E1 或动态床 E2。

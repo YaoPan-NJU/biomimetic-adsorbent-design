@@ -439,3 +439,40 @@ PFOA R2 正交空间接近诚实耗尽：4 个候选 3 个 X 级、1 个 revise_
 | 机制映射 | 9 |
 | 角度地图 | 9 |
 | 新原型 | PROTO_R2_001..005（anion-π/Hofmeister/OAT4/PXR/AChE cation-π） |
+
+---
+
+## 全分支高分方案独立技术审查检查点（2026-07-31）
+
+### 审查快照与分支去重
+
+- `origin/Ultimate@1412685b938d` 已同步远端最新。
+- `origin/kimi-k3` 已被 `origin/Qwen` 包含，`origin/Qwen` 已被 `origin/Ultimate` 包含，不重复计数。
+- `origin/main@6bd30c542a7d` 与 Ultimate 独立分叉，纳入独立审查。
+- 去重后共审查 20 条高分、正式通过、门控近通过或当前负责人设计线。
+
+### 关键纠错
+
+1. `rounds/fresh_1000/STATUS.yaml` 逐项有 10 条 `status: passed`，汇总却写 9，并漏列 DDT A01。
+2. BDE-209 状态指向不存在的 passed 文件；实际 r5 文件仍为 `design`、待攻击-裁决，不能算通过。
+3. Ultimate DDT A01 的 passed 文件缺少可复核的 r2 完整设计、攻击、精确材料/SOP 和计算证据，不能算通过。
+4. 其余高分代表的是设计文件成熟度或可证伪性，不能直接等同于真实二级出水性能或 E1 准入。
+
+### 严格分层
+
+- **A 级优化主线：** SC-P02 / PG-PMO；BPA20-01 / AG-COF；DDT50-01 / LPO-SIP。
+- **B 级决定性小试门：** GX50-01；DCP20-01；NP A01；PFHxS R2_S03；Dieldrin A01。
+- **C 级研究假设/对照：** PFOA A02、PFBS A17、ROX A01、Octocrylene A01/A04、BPA PXR、PCP A04、beta-HCH A08/A12。
+- **D 级当前版本淘汰：** BDE-209 A07、Ultimate DDT A01、Endosulfan A01（作为吸附剂）。
+
+完整依据、逐项问题和优化门见 `deliverables/attachments/CROSS_BRANCH_HIGH_SCORE_REVIEW_2026-07-31.md`。
+
+### 下一动作
+
+先由负责人对 A 级三条主线深入 review；确认后才进入优化，不直接进入完整验证。优化顺序：
+
+1. SC-P02：冻结唯一配方、孔口梯度表征、CTAB/IEC/QC 与同组成对照。
+2. BPA20-01：冻结唯一 COF/SOP，先证实水相锚增量，并替换带电删除对照。
+3. DDT50-01：先关闭容器/管路回收、三相质量平衡和 GC 入口降解 QA，再做同批材料 M0。
+
+B 级方案只允许最小决定性前置门；C/D 级不得沿用旧分数推进。

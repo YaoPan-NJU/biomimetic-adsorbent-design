@@ -1,6 +1,6 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: fresh_1000_R3_complete_honest_ceiling
+phase: cross_branch_high_score_review_complete_optimization_pending
 status: in_progress
 spec_framework:
   activated: 2026-07-29
@@ -15,13 +15,40 @@ spec_framework:
     E: 大环内酯类/紫外过滤剂
   category_specs_status: 已完成（4 份：AE 联合、B、C、D）
   phase_a_plus_mechanism: TFG + PADS + ODC 三道快速预筛 + S/A/B/X 角度预分类
-last_completed_step: "fresh_1000 千方案马拉松迭代完成（2026-07-29）：20/20 污染物全覆盖，经 10 轮迭代。14 种污染物自评通过（≥85 分，待正式裁决确认）：NP(92)/Dieldrin(89)/DDT(87-88)/BPA(86)/DDE(86)/Endosulfan(85)/PFOA(85)/PFBS(85)/ROX(85)/Octocrylene(85)/GenX(85)/PCP(85-87)/beta-HCH(85-88)/BDE-209(85)。6 种全面巩固（全 low 弱点）：TCDD/PFHxS/DCP26/PCB-209/HCBD/Chloroform。BDE-209 A03 终止、A07 r5 通过（W1 最终降至 low）。所有 20 种污染物方案弱点均为 low 级别。9 个正式通过方案（含 PFOA A02/BPA A01/PFBS A17/NP A01/Dieldrin A01/ROX A01/Octocrylene A01/Endosulfan A01/BDE-209 A07）。"
-next_action: "fresh_1000 R3 深度轮完成（诚实终态）。20/20 污染物深度评估 + honest-N 记录（Tier-1/2/3 三份审计）；BPA ERRgamma 新槽（PROTO_R3_001，库 91）+ PCP A04、betaHCH A08/A12 两次正式裁决（设计者自评未过独立复核 → revise ~82-83，未凑数）。**0 个新正式通过**（诚实）；诚实上限 ~9 正式 + 3 pass_pending_gate（PFHxS ITC~84、OC A04 DFT~80、BPA PXR ITC~82）。合同 200 仓库内不可达（honest-N）。剩余路径全为仓库外外部门（ITC/DFT/潘尧审批）：PFHxS ITC-GO 为最高概率首个转化通过。详 rounds/fresh_1000_R3/R3_CLOSEOUT.md。"
+last_completed_step: "2026-07-31 完成全分支高分/近通过方案独立技术审查。已确认 origin/Qwen 包含 origin/kimi-k3、origin/Ultimate 包含 origin/Qwen，origin/main 与 Ultimate 独立分叉；去重审查 20 条设计线。Ultimate STATUS 的逐项通过数为 10、汇总为 9 且漏列 DDT；BDE-209 指向不存在的 passed 文件，实际 r5 仍待攻击-裁决；Ultimate DDT passed 文件缺完整 r2 设计/攻击/材料/SOP/计算证据。旧通过数撤销为待重审台账。严格分层：A 主线=SC-P02/PG-PMO、BPA20-01/AG-COF、DDT50-01/LPO-SIP；B 门控池=GX50-01、DCP20-01、NP A01、PFHxS R2_S03、Dieldrin A01；BDE-209 A07 与 Ultimate DDT A01 淘汰，Endosulfan A01 移出吸附路线。详 deliverables/attachments/CROSS_BRANCH_HIGH_SCORE_REVIEW_2026-07-31.md。"
+next_action: "由负责人先对 A 级三条主线做深入 review 和优化确认，不进入完整性能验证。顺序：1) SC-P02 冻结唯一配方、孔口梯度表征与 CTAB/IEC/QC 门；2) BPA20-01 冻结唯一 COF/SOP、先做水相可溶锚模型并替换带电删除对照；3) DDT50-01 先闭合容器回收、三相质量平衡与 GC 入口降解 QA，再做同批 C8/C12/C18/dummy/NIP M0。B 级仅允许决定性小试门，失败即停；C/D 级不得以旧分数推进。"
 active_branch: Ultimate
-last_verified_commit: 3a187f6
+last_verified_commit: 1412685
 bmdl_policy: removed_from_branch
 historical_artifacts_status: preserved_not_active
 candidate_pool_status: historical_preserved_not_active
+cross_branch_review:
+  date: 2026-07-31
+  source_refs:
+    ultimate: 1412685b938d
+    main: 6bd30c542a7d
+  distinct_branches_reviewed:
+    - origin/Ultimate
+    - origin/main
+  contained_branches_not_double_counted:
+    - origin/Qwen
+    - origin/kimi-k3
+  unique_high_score_or_near_pass_design_lines: 20
+  legacy_pass_ledger_status: inconsistent_and_not_experiment_admissible
+  optimization_priority:
+    - SC-P02 / PG-PMO
+    - BPA20-01 / AG-COF
+    - DDT50-01 / LPO-SIP
+  gate_only_pool:
+    - GX50-01 / BGE-SIP
+    - DCP20-01 / EPS-DCA-SIP
+    - NP A01 soluble-host screen
+    - PFHxS R2_S03 soluble-host affinity/selectivity gate
+    - Dieldrin A01 soluble-receptor water gate
+  rejected_current_versions:
+    - BDE-209 A07
+    - Ultimate DDT A01
+    - Endosulfan A01 as an adsorbent
 historical_preserved:
   note: All candidates, schemes, and scores below are preserved as audit evidence and counter-examples but are no longer active selections under the corrected methodology.
   former_candidate_pollutants:
@@ -333,6 +360,7 @@ artifacts:
   fresh_1000_r3_closeout: rounds/fresh_1000_R3/R3_CLOSEOUT.md
   fresh_1000_r3_tier1_audit: rounds/fresh_1000_R3/TIER1_DEPTH_AUDIT.md
   fresh_1000_r3_tier23_audit: rounds/fresh_1000_R3/TIER2_TIER3_DEPTH_AUDIT.md
+  cross_branch_high_score_review: deliverables/attachments/CROSS_BRANCH_HIGH_SCORE_REVIEW_2026-07-31.md
   fresh_1000_r2_knowledge_graph: rounds/fresh_1000_R2/knowledge_graph.yaml
   fresh_1000_r2_pfoa_angle_map: rounds/fresh_1000_R2/angle_maps/pfoa_ANGLES.yaml
   fresh_1000_r2_pfoa_slot1: rounds/fresh_1000_R2/pfoa/SCHEMES/R2_S01_A01_anion-pi-electron-deficient-pore_revise.md

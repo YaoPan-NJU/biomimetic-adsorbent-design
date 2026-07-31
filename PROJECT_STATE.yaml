@@ -1,6 +1,6 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: human_adjudication_dossier_causal_narrative_rewritten_owner_review_pending
+phase: owner_adjudication_round1_in_progress
 status: in_progress
 spec_framework:
   activated: 2026-07-29
@@ -15,8 +15,8 @@ spec_framework:
     E: 大环内酯类/紫外过滤剂
   category_specs_status: 已完成（4 份：AE 联合、B、C、D）
   phase_a_plus_mechanism: TFG + PADS + ODC 三道快速预筛 + S/A/B/X 角度预分类
-last_completed_step: "2026-07-31 按项目自身的科学主线和 De-AI Canon 重写 HUMAN_ADJUDICATION_DOSSIER_20_SCHEMES_2026-07-31.md。20 条方案不再由污染物卡、仿生卡、材料卡和审稿意见机械拼接，而是逐条按 污染物难去除根因 -> 传统材料能力缺口 -> 生物原型真实功能 -> 可转译原理 -> 人工材料与合成 -> 选择性去除过程 -> 可证伪实验 -> 第三方处置 连续讲述。A/B 类保留完整方案叙述、路线诊断和裁决问题；C/D 类在保留污染物结构、原型、映射、材料/反应、合成障碍和停止条件的同时压缩重复模板。权威处置仍为 A3/B2/C12/D3；未新增性能或文献主张，E111-E125 证据边界不变。"
-next_action: "负责人直接阅读因果叙事版底稿并按文末九问逐条给出 是/否/需补证据。优先审查 SC-P02、DDT50-01 和 BPA20-01 是否保留承重科学问题，以及是否接受报告给出的路线重建范围；随后决定 GX50-01、DCP20-01 是否值得开展一票否决 pre-M0。人工裁决前不采购、不合成、不进入完整验证。C/D 不得沿用旧分数推进；若批准 Gate 0，仍只做承重机制和目标结构真实性的最小验证。"
+last_completed_step: "2026-07-31 记录负责人首轮逐条裁决并修正材料架构偏置。DDT50-01 与 GX50-01 当前版本停止：前者薄壳合成可操作性和成功率不可接受，后者同时存在理想化核壳制造和生物原型说服力不足。BPA20-01 保留为下一轮重点讨论；PFBS A17、ROX A01、PCP A04 进入待讨论池。DCP20-01 保留科学问题，但停止把从头构筑 St/DVB 核壳作为默认路线，改为载体先行的表面功能化/表面印迹比较。审查确认当前 A/B 五条中三条共享 St/DVB 核壳，属于方案生成偏置；后续须并列比较从零核壳、高比表面积载体薄层、非印迹表面功能化和未修饰载体。SC-P02 的微米径向梯度也未获负责人接受为强仿生硬对应。"
+next_action: "下一轮先详细讨论 BPA20-01：冻结污染物类似物判别问题、DmpR/PoxR 原型证据、分子锚和桥区门的最小可溶模型，再决定是否保留 COF。随后依次讨论 PFBS A17、ROX A01 和 PCP A04。DCP20-01 只允许设计载体筛选门，不得直接采购或合成：候选至少包括颗粒活性炭、层级孔碳和一种低本底无机载体，并以 MIP-NIP 增量、孔堵塞、DOM耐受、总复合材料质量利用率和床层性能裁决。DDT50-01、GX50-01 当前版本不得继续；所有保留讨论方案仍未获准进入 M0/E1。"
 active_branch: Ultimate
 last_verified_commit: 972128403004
 bmdl_policy: removed_from_branch
@@ -51,19 +51,35 @@ cross_branch_review:
     disposition_changed: false
     evidence_changed: false
     owner_review_pending: true
+  owner_adjudication_round1:
+    date: 2026-07-31
+    log_ids: U-017-U-022
+    status: in_progress
+    stop_current_version:
+      - DDT50-01 / LPO-SIP
+      - GX50-01 / BGE-SIP
+    priority_discussion:
+      - BPA20-01 / AG-COF
+    retained_for_later_discussion:
+      - PFBS A17
+      - ROX A01
+      - PCP A04
+    architecture_rebuild:
+      - "DCP20-01: replace de-novo St/DVB core-shell default with carrier-first surface functionalization/imprinting screen"
+    biomimetic_mapping_not_accepted:
+      - "SC-P02: micron-scale radial gradient is not yet a hard molecular-scale correspondence"
+    no_synthesis_or_M0_authorized: true
   current_disposition_counts:
     A_route_redevelopment_M0_only: 3
     B_pre_M0_gate_only: 2
     C_foundational_or_control_only: 12
     D_stop_current_version: 3
   legacy_pass_ledger_status: inconsistent_and_not_experiment_admissible
+  expert_disposition_counts_status: pre_owner_baseline_superseded_for_execution
   optimization_priority:
-    - SC-P02 / PG-PMO
-    - DDT50-01 / LPO-SIP
     - BPA20-01 / AG-COF
   gate_only_pool:
-    - GX50-01 / BGE-SIP
-    - DCP20-01 / EPS-DCA-SIP
+    - DCP20-01 carrier-first architecture screen design only
   foundation_research_only:
     - NP A01 soluble-host screen
     - PFHxS R2_S03 soluble-host affinity/selectivity gate

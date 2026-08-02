@@ -10,6 +10,15 @@ timing:
   generate_after: independent_design_first_attack_and_reviewer_decision_are_frozen
   required_before: standalone_owner_delivery
   may_influence_design_generation: false
+prompt_and_render_separation:
+  prompt_package_required_for: [concept_valid, E1_ready, E2_ready]
+  actual_imagegen_call_when_strict_owner_visual_review_requested_requires: owner_visual_ready
+  owner_visual_ready_requirements:
+    - load_bearing_claims_in_evidence_ledger
+    - exact_material_and_reaction_sequence_frozen
+    - zero_unresolved_critical_or_high_scientific_chemical_or_synthesis_findings
+    - no_imagegen_invented_precision_required
+  owner_visual_ready_changes_E1_or_E2_automatically: false
 required_sections:
   - version_lock
   - visual_claim_ledger

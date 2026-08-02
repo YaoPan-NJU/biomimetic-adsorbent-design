@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: visual_explanation_prompt_workflow_integrated_initial_E1_backfill
+phase: ultimate_R4_scientific_and_synthesis_audit_complete_zero_owner_visual_ready
 status: in_progress
-last_completed_step: "Integrated an owner-requested visual-explanation workflow for human expert review. Every standalone owner-facing concept_valid, E1 or E2 package now requires a version-locked ImageGen prompt package generated only after independent design, first attack and reviewer adjudication are frozen. The package separates OBSERVED biological evidence, ABSTRACTED transfer logic, PROPOSED artificial design and UNKNOWN_OMITTED details; it also includes reference-asset requirements, synthesis logic, causal controls, post-render QC and a targeted correction prompt. Initial copy-ready packages were backfilled for SC-P02, BPA20-01 and DDT50-01. Generated images remain non-evidentiary and no release status or laboratory authorization changed."
-next_action: "Pan Yao reviews the G33 lineage protocol together with docs/VISUAL_EXPLANATION_PROMPT_PACKAGE_PROTOCOL.md and the three initial E1 prompt packages. Any generated render must pass the package-specific visual QC before formal use. After owner confirmation, Codex backfills SP-ER ledgers and visual prompt packages for standalone active concept_valid lineages, starting with GX50-01 and DCP20-01; no procurement synthesis or experiment is authorized."
+last_completed_step: "Independently re-audited origin/Ultimate fresh_1000_R4 without inheriting scores or pass states. The nominal 1000 IDs contain 140 expanded cards, 460 table-only records and 400 IDs without per-ID records. Primary-source scenario review found occurrence support sufficient to continue full scenario-contract freezing for six pollutants, paused eight and stopped six; no new full SP contract was declared passed. Biological-prototype, chemistry, prior-art and stepwise synthesis review found zero of nineteen normalized material entities at the owner-requested strict owner-visual gate. SC-P02 remains E1 on owner-visual hold; BPA20-01 and DDT50-01 moved to E1_status_under_review because their exact route or full SP requirements are not closed. No design was eligible for actual ImageGen, so no image was generated."
+next_action: "Freeze a BPA-DmpR minimal soluble-model paper package before selecting another solid platform: exact one-to-two-step artificial recognition unit, synthesis and identity SOP, deletion/mismatch controls, future BPA/BPF/BPS/phenol competition method, preregistered thresholds and stop rules. Submit that package for Pan Yao approval; no procurement, synthesis, measurement, experiment or ImageGen is authorized."
 active_branch: main
 last_verified_commit: f3a989090d2d374af7545c4e9c82929b05e5141a
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -17,6 +17,42 @@ candidate_count_policy:
   formal_recommendations: all_E1_or_E2_three_gate_passers
   delivery: rolling
   primary_backup_labels: inactive_unless_owner_later_requests
+ultimate_R4_deep_audit_20260802:
+  status: passed_zero_owner_visual_ready
+  input_ref: origin/Ultimate@d26d423cb84160cd962c1a2c6cc813544632556e
+  checkpoint_content_commit: 36a35b1
+  nominal_ids: 1000
+  expanded_concept_cards: 140
+  table_or_score_only_ids: 460
+  ids_without_per_id_record: 400
+  evidence_ledger_range_added: E203-E247
+  scenario_disposition:
+    occurrence_supported_continue_full_contract_freeze: [PFOA, PFBS, PFHxS, BPA, NP, ROX]
+    full_SP_contract_passed: []
+    conditional_pause_design: [GenX, Octocrylene, 2_6_DCP, DDT, DDE, Endosulfan, beta_HCH, BDE_209]
+    invalid_stop_current_scenario: [PCP, Dieldrin, PCB_209, HCBD, TCDD, Chloroform]
+  normalized_material_entities: 19
+  strict_owner_visual_synthesis_closure_passers: 0
+  owner_review_and_imagegen_eligible: 0
+  imagegen_called: false
+  reject_embodiment_retain_lineage:
+    - BPA_DmpR_minimal_soluble_model_gate
+    - short_chain_PFAS_SsuA_Bug_manufacturing_first_spatial_model_gate
+  retain_prototype_retranslate:
+    - NP_Bayram_discrete_host_model_gate
+  historical_E1_automatic_status_change: false
+  owner_visual_holds:
+    SC_P02: ME_SR_spatial_manufacture_evidence_required
+    BPA20_01: exact_monomer_route_purification_and_isoreticularity_status_review_required
+    DDT50_01: full_secondary_effluent_SP_contract_required
+  gate: G35_ULTIMATE_R4_SCIENTIFIC_SYNTHESIS_AUDIT
+  report: rounds/ultimate_r4_deep_audit_20260802/DEEP_RESEARCH_ULTIMATE_R4_SCIENTIFIC_AND_SYNTHESIS_AUDIT.md
+  input_manifest: rounds/ultimate_r4_deep_audit_20260802/INPUT_AUDIT_AND_LINEAGE_MANIFEST.md
+  no_procurement_synthesis_experiment_or_image_authorized: true
+  independent_reviewer:
+    final_decision: PASS
+    unresolved_critical: 0
+    unresolved_high: 0
 branch_consolidation_20260724:
   status: merged_pushed_and_fresh_clone_validated
   source_head: origin/Ultimate@534817d7bbcb57a7df332d46670ec96ac9173a5b
@@ -196,6 +232,8 @@ modular_lineage_rescue_20260802:
   no_procurement_or_experiment_authorized: true
 visual_explanation_prompt_workflow_20260802:
   status: binding_protocol_integrated_initial_E1_backfill_pushed_fresh_clone_validated
+  release_registry_automatically_changed_by_G35: false
+  initial_prompts_status_after_G35: retained_but_actual_imagegen_and_owner_visual_delivery_on_hold
   checkpoint_content_commit: f3a989090d2d374af7545c4e9c82929b05e5141a
   remote_push: origin_main_equal_at_f3a989090d2d374af7545c4e9c82929b05e5141a
   fresh_clone_validation: passed_at_f3a989090d2d374af7545c4e9c82929b05e5141a
@@ -431,19 +469,22 @@ portfolio_20_top5:
   - PFBS-2 guanidinium-bis-urea headgroup cage with C4 finite slot
   - BPA-2 beta-CD dual-hydrogen-bond porous bead
   - ROX-1 water-compatible COF thin-layer surface imprint
-primary_design: SC-P02_PG-PMO_E1_owner_review_pending
+primary_design: SC-P02_PG-PMO_E1_owner_review_pending_but_G35_owner_visual_hold
 backup_design: null
 fixed_primary_backup_labels_active: false
 formal_recommended_designs:
-  - SC-P02_PG-PMO
-  - BPA20-01_AG-COF
-  - DDT50-01_LPO-SIP
+  - SC-P02_PG-PMO_G35_owner_visual_hold
 experiment_release_register:
   E1_ready:
-    - SC-P02_PG-PMO_owner_review_pending
-    - BPA20-01_AG-COF_owner_review_pending
-    - DDT50-01_LPO-SIP_owner_review_pending
+    - SC-P02_PG-PMO_owner_review_pending_G35_owner_visual_hold
+  E1_status_under_review:
+    - BPA20-01_AG-COF_exact_monomer_and_route_review
+    - DDT50-01_LPO-SIP_full_SP_contract_review
   E2_ready: []
+G35_owner_visual_holds_do_not_automatically_change_E1:
+  - SC-P02_PG-PMO_ME_SR_spatial_manufacture_evidence_required
+  - BPA20-01_AG-COF_SR_exact_monomer_and_route_status_review_required
+  - DDT50-01_LPO-SIP_full_secondary_effluent_SP_contract_required
 superseded_finalists:
   - D1-A synthetic double-arm phosphate peptide clamp (93/100 historical design pass)
   - D1-B C-terminally immobilized PBP trace-polishing bed (89/100 historical design pass)
@@ -688,6 +729,9 @@ open_issues:
     status: resolved_binding_protocol_initial_E1_backfill_complete
     text: Provide every standalone owner-facing concept-valid or experiment-ready design with an auditable ImageGen prompt package that visually separates evidence, abstraction and unvalidated material hypotheses and requires post-render scientific QC.
 artifacts:
+  ultimate_R4_deep_audit_report: rounds/ultimate_r4_deep_audit_20260802/DEEP_RESEARCH_ULTIMATE_R4_SCIENTIFIC_AND_SYNTHESIS_AUDIT.md
+  ultimate_R4_input_and_lineage_manifest: rounds/ultimate_r4_deep_audit_20260802/INPUT_AUDIT_AND_LINEAGE_MANIFEST.md
+  gate_g35_ultimate_R4_scientific_synthesis_audit: orchestration/gates/G35_ULTIMATE_R4_SCIENTIFIC_SYNTHESIS_AUDIT.yaml
   visual_explanation_prompt_protocol: docs/VISUAL_EXPLANATION_PROMPT_PACKAGE_PROTOCOL.md
   visual_explanation_prompt_template: templates/VISUAL_EXPLANATION_PROMPT_PACKAGE_TEMPLATE.md
   gate_g34_visual_explanation_prompt_package: orchestration/gates/G34_VISUAL_EXPLANATION_PROMPT_PACKAGE.yaml

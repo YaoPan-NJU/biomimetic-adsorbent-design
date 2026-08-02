@@ -420,6 +420,16 @@ visual_explanation_prompt_policy:
   generated_image_can_change_gate_score_or_release_status: false
   exact_structural_or_chemical_detail_requires_validated_reference_asset: true
   prompt_and_image_become_stale_when_source_design_changes: true
+  prompt_package_and_actual_image_generation_are_separate_gates: true
+  strict_owner_visual_ready_when_owner_requires_fully_audited_images:
+    required: true
+    requirements:
+      - every_load_bearing_visual_claim_is_in_the_evidence_ledger
+      - exact_material_identity_and_reaction_sequence_are_frozen
+      - zero_unresolved_critical_or_high_scientific_chemical_or_synthesis_findings
+      - no_required_precision_must_be_invented_by_imagegen
+    changes_E1_or_E2_status_automatically: false
+    failed_gate_disposition: retain_prompt_draft_do_not_call_imagegen_or_deliver_owner_review_image
 
 rox_mac_if1_rescue:
   status: terminated_as_main_by_G29_G30_mixed_mode_control_only

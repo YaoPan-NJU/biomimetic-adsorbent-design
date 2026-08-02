@@ -1,5 +1,5 @@
 gate: G35_ULTIMATE_R4_SCIENTIFIC_SYNTHESIS_AUDIT
-status: passed_zero_owner_ready_release
+status: passed_zero_owner_visual_ready
 date: 2026-08-02
 input:
   branch_ref: origin/Ultimate@d26d423cb84160cd962c1a2c6cc813544632556e
@@ -8,13 +8,22 @@ input:
   independently_expanded_concept_cards: 140
   table_or_score_only_ids: 460
   ids_without_per_id_record: 400
+evidence_ledger:
+  rows_added: E203-E247
+  covers:
+    - occurrence_support_and_boundaries
+    - prototype_corrections
+    - direct_material_priors
+    - internal_reaction_and_route_audits
 governance:
   inherited_scores_or_pass_states: false
   review_modules: [SP, BP, TR, ME, SR, ER]
   total_score_can_compensate_hard_gate: false
-  minimum_owner_and_image_release: E1_ready
+  strict_owner_visual_gate: owner_visual_ready
+  owner_visual_ready_is_stricter_than_and_does_not_automatically_change_E1_E2: true
 scenario_audit:
-  valid: [PFOA, PFBS, PFHxS, BPA, NP, ROX]
+  occurrence_supported_continue_full_contract_freeze: [PFOA, PFBS, PFHxS, BPA, NP, ROX]
+  full_SP_contract_passed: []
   conditional_pause_design: [GenX, Octocrylene, 2_6_DCP, DDT, DDE, Endosulfan, beta_HCH, BDE_209]
   invalid_stop_current_scenario: [PCP, Dieldrin, PCB_209, HCBD, TCDD, Chloroform]
 prototype_corrections:
@@ -27,29 +36,37 @@ prototype_corrections:
   SsuA_Bug: retained_after_correcting_apo_holo_and_analogue_boundaries
 synthesis_audit:
   normalized_material_entities: 19
-  strict_E1_synthesis_passers: 0
+  strict_owner_visual_synthesis_closure_passers: 0
   bench_plausible_but_control_only:
     - PFBS_triurea_SBA15_without_precise_tetrahedral_claim
     - Dieldrin_phenyl_squaramide_SBA15_as_ordinary_bifunctional_silica
     - ROX_PVI_GAC_as_generic_pH_or_charge_control
     - alpha_CD_DVS_as_known_inclusion_baseline
 lineage_dispositions:
-  retained_priority:
+  reject_embodiment_retain_lineage:
     - BPA_DmpR_minimal_soluble_model_gate
     - short_chain_PFAS_SsuA_Bug_manufacturing_first_spatial_model_gate
+  retain_prototype_retranslate:
     - NP_Bayram_discrete_host_model_gate
   no_release_status_inherited_from_R4: true
-historical_release_correction:
-  formal_E1_registry: []
-  withdrawn:
-    SC_P02: ME_SR_spatial_manufacture_not_established
-    BPA20_01: exact_monomer_route_purification_and_isoreticularity_not_frozen
-    DDT50_01: secondary_effluent_dissolved_phase_scenario_not_closed
+historical_release_impact:
+  G35_automatically_changes_formal_E1_registry: false
+  current_formal_recommendation_after_review: [SC_P02_owner_visual_hold]
+  E1_status_under_review: [BPA20_01, DDT50_01]
+  owner_visual_hold:
+    SC_P02: ME_SR_spatial_manufacture_evidence_required
+    BPA20_01: exact_monomer_route_purification_and_isoreticularity_status_review_required
+    DDT50_01: full_secondary_effluent_SP_contract_required
   lineage_termination_implied: false
 visualization:
   eligible_designs: []
   imagegen_called: false
-  reason: no_zero_critical_high_E1_or_E2_design
+  reason: no_design_passed_owner_visual_ready
 report: rounds/ultimate_r4_deep_audit_20260802/DEEP_RESEARCH_ULTIMATE_R4_SCIENTIFIC_AND_SYNTHESIS_AUDIT.md
-next_action: execute_BPA_DmpR_minimal_soluble_model_gate_before_any_new_solid_platform_or_image
+next_action: freeze_BPA_DmpR_minimal_soluble_model_SOP_controls_thresholds_and_owner_approval_package_without_experiment
 laboratory_authorization: false
+independent_reviewer:
+  final_decision: PASS
+  unresolved_critical: 0
+  unresolved_high: 0
+  medium_note: ledger_range_display_checked_as_E203_E247

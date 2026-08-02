@@ -1,17 +1,17 @@
 # Ultimate fresh_1000_R4 科学与合成深审
 
-日期：2026-08-02  
-输入：`origin/Ultimate@d26d423cb84160cd962c1a2c6cc813544632556e`  
-审查边界：市政二级出水、非蛋白人工吸附材料、非传统/混合模式离子交换主材料、最低正式释放级别 E1。  
-状态：独立检索、设计审查、首次攻击、潘尧补充视角与 Reviewer 裁决均已完成。
+日期：2026-08-02
+输入：`origin/Ultimate@d26d423cb84160cd962c1a2c6cc813544632556e`
+审查边界：市政二级出水、非蛋白人工吸附材料、非传统/混合模式离子交换主材料，以及潘尧本轮要求的严格人工审阅/出图门。
+状态：独立检索、设计审查、首次攻击、潘尧补充视角与 Reviewer 修订后复审均已完成。
 
 ## 1. 结论
 
-本轮没有发现可以直接进入潘尧人工论证和 ImageGen 绘图的方案。
+本轮没有发现可以直接进入潘尧本次严格人工论证和 ImageGen 绘图的方案。该结论是一个比现行 E1 更严格的 `owner_visual_ready` 裁决，不自动改写历史 E1；E1 可以把未知空间结构交给预注册 M0 机制/制造门，而本轮用户要求在出图前先把承重科学和合成环节核准。
 
 - R4 名义上有 1000 个编号，但只有 140 个独立展开概念卡；400 个编号没有逐项记录，另外 460 个只有表格短语或诊断分。
-- 20 个污染物中，只有 PFOA、PFBS、PFHxS、BPA、NP 和 ROX 的市政二级出水吸附场景通过本轮证据门；8 个场景需要暂停并补证，6 个场景应终止。
-- R4 压缩出的 19 个材料实体中，**0/19** 同时满足确切化学实体、反应闭合、可执行计量、空间主张可制造、关键 QC、可成型和可验证对照这组严格 E1 合成条件。
+- 20 个污染物中，PFOA、PFBS、PFHxS、BPA、NP 和 ROX 获得了足以继续冻结完整场景合同的发生/工程支持；这不是八字段 SP 合同已经通过。8 个场景需要暂停并补证，6 个场景应终止。
+- R4 压缩出的 19 个材料实体中，**0/19** 同时满足确切化学实体、反应闭合、可执行计量、空间主张可制造、关键 QC、可成型和可验证对照这组严格 owner-visual 合成闭合条件。
 - BPA–DmpR 与短链 PFAS–SsuA/Bug 是最值得保留的上游谱系；NP 的污染问题和 Bayram 过程证据也值得保留。但 R4 给它们选择的 COF、PMO 或深腔网络实现均未过材料/合成门。
 - Dieldrin、PFBS/OAT4、氟离子核糖开关、DMSP 等若干原型存在方向相反、对象不一致或化学分类错误，不能靠改材料修复。
 - 因为不存在零 critical/high 的 E1/E2 实现，本轮**不生成图片**。在当前项目规则下，为未过门方案画“候选材料说明图”会把概念占位符视觉固化为貌似真实的化学实体，反而妨碍人工审阅。
@@ -27,7 +27,9 @@
 3. 对材料家族查直接污染物先例、水相竞争、离子形态、DOM/无机盐干扰和骨架稳定性。
 4. 把每条合成路线拆成确切起始物、反应类型、计量、顺序、纯化、结构确认、空间分布确认和成型 QC。
 5. 独立攻击后，再使用潘尧提供的经验视角检查新手可执行性、安全、放大、全文一致性和六段仿生故事；这些视角只补充审查，不代替科学门。
-6. Reviewer 只允许 `E1_ready`/`E2_ready` 进入 owner 图示包；评分不允许补偿任何硬门。
+6. Reviewer 把本轮 `owner_visual_ready` 作为独立的、更严格出图门：现行 `concept_valid` 提示词包义务和历史 E1 可以保留，但实际调用 ImageGen 前还必须没有承重科学/合成 high。评分不允许补偿任何硬门。
+
+本轮新增承重来源和内部反应审计已经登记为 `research/evidence/evidence_ledger.csv` 的 E203–E247。表中网页链接便于阅读，ledger 记录 source type、locator、验证状态、适用边界和不得外推项；内部路线审计使用 Tier 2，不能冒充外部实验先例。
 
 ## 3. 输入真实性
 
@@ -44,17 +46,17 @@ R4 的 L2 也不是 150 次逐方案深审：5 个方案有新增完整文件，
 
 ## 4. 场景门：20 个污染物
 
-`valid` 只表示可以继续审查 BP/TR/ME，不表示已有可放行材料。
+`occurrence_supported` 只表示发生证据足以继续冻结八字段场景合同，不表示 SP 已通过，更不表示已有可放行材料。
 
 | 污染物 | 主要一手/官方证据 | 裁决 | 对设计的约束 |
 |---|---|---|---|
-| PFOA | 中国市政出水 3–107 ng/L；美国多厂均值约 9.7 ng/L。[中国](https://doi.org/10.1016/j.envpol.2012.12.019)，[美国](https://doi.org/10.1021/acs.est.4c12167) | valid | PFAS 混合物、EfOM、主要阴离子和连续柱穿透必须是主实验。 |
-| PFBS | 中国/美国多厂均有检出，短链常规去除困难。[中国](https://doi.org/10.1016/j.envint.2022.107447)，[美国](https://doi.org/10.1021/acs.est.4c12167) | valid | 不允许只用去离子水高浓度容量；需以最差短链成员报告。 |
-| PFHxS | 中国全国调查与美国多厂均支持最终出水存在。[中国](https://doi.org/10.1016/j.envint.2022.107447)，[美国](https://doi.org/10.1021/acsestwater.4c00541) | valid | 作为中链磺酸 PFAS；工业输入高值不能当生活污水典型值。 |
+| PFOA | 中国市政出水 3–107 ng/L；美国多厂均值约 9.7 ng/L。[中国](https://doi.org/10.1016/j.envpol.2012.12.019)，[美国](https://doi.org/10.1021/acs.est.4c12167) | occurrence_supported | PFAS 混合物、EfOM、主要阴离子和连续柱穿透必须是主实验；仍需冻结八字段合同。 |
+| PFBS | 中国/美国多厂均有检出，短链常规去除困难。[中国](https://doi.org/10.1016/j.envint.2022.107447)，[美国](https://doi.org/10.1021/acs.est.4c12167) | occurrence_supported | 不允许只用去离子水高浓度容量；需以最差短链成员报告并冻结八字段合同。 |
+| PFHxS | 中国全国调查与美国多厂均支持最终出水存在。[中国](https://doi.org/10.1016/j.envint.2022.107447)，[美国](https://doi.org/10.1021/acsestwater.4c00541) | occurrence_supported | 作为中链磺酸 PFAS；工业输入高值不能当生活污水典型值；仍需冻结八字段合同。 |
 | GenX/HFPO-DA | 中国五厂全部低于 0.5 ng/L，而其他调查提示区域性风险；结果不一致。[中国数据](https://static1.squarespace.com/static/5759f142c6fc085e2d4b8854/t/62a75184c958fc5231e3b225/1655132548884/HFPO-DA_Data_Reports_US_China_Statera_May_2022.pdf)，[美国](https://doi.org/10.1021/acsestwater.4c00541) | conditional | 暂停 GenX 专属材料；先闭合生活污水主导厂的分布和来源。 |
-| BPA | 厦门七厂溶解/吸附相监测，出水中位数约 177 ng/L。[发生](https://doi.org/10.1016/j.envpol.2017.03.018)，[EfOM 干扰](https://doi.org/10.1016/j.chemosphere.2012.01.026) | valid | 现实入口为几十至数百 ng/L；BPS/BPF、酚类、PAC/GAC 是必需竞争与基准。 |
-| NP | 天津一年监测年均约 2.92 µg/L；广东 38 厂溶解态证据支持持续存在。[天津](https://doi.org/10.1016/j.chemosphere.2009.06.036)，[广东](https://doi.org/10.1016/j.scitotenv.2020.136689) | valid | 必须覆盖 NP 异构体和 NP1EO/NP2EO/NPEC，防止把前体转化误判为负去除。 |
-| ROX | 珠三角多厂与一年期监测支持几十至数百 ng/L。[四厂](https://doi.org/10.1016/j.watres.2007.06.023)，[一年监测](https://doi.org/10.1007/s11270-021-05053-y) | valid | 目标应是大环内酯类别相对 EfOM/类外阳离子药物，而非强行单分子分辨。 |
+| BPA | 厦门七厂溶解/吸附相监测，出水中位数约 177 ng/L。[发生](https://doi.org/10.1016/j.envpol.2017.03.018)，[EfOM 干扰](https://doi.org/10.1016/j.chemosphere.2012.01.026) | occurrence_supported | 现实入口为几十至数百 ng/L；BPS/BPF、酚类、PAC/GAC 是必需竞争与基准；仍需冻结八字段合同。 |
+| NP | 天津一年监测年均约 2.92 µg/L；广东 38 厂溶解态证据支持持续存在。[天津](https://doi.org/10.1016/j.chemosphere.2009.06.036)，[广东](https://doi.org/10.1016/j.scitotenv.2020.136689) | occurrence_supported | 必须覆盖 NP 异构体和 NP1EO/NP2EO/NPEC，防止把前体转化误判为负去除；仍需冻结八字段合同。 |
+| ROX | 珠三角多厂与一年期监测支持几十至数百 ng/L。[四厂](https://doi.org/10.1016/j.watres.2007.06.023)，[一年监测](https://doi.org/10.1007/s11270-021-05053-y) | occurrence_supported | 目标应是大环内酯类别相对 EfOM/类外阳离子药物，而非强行单分子分辨；仍需冻结八字段合同。 |
 | Octocrylene | 全国检出、厦门未检出和东北单厂风险结果互相不一致。[厦门](https://doi.org/10.1016/j.jhazmat.2013.11.056)，[东北](https://doi.org/10.1016/j.chemosphere.2024.142179) | conditional | 先做未过滤/0.45 µm/颗粒三相监测，证明吸附优于强化固液分离。 |
 | 2,6-DCP | 仅有一套可用多厂官方计划，缺第二独立地区和中国数据。[官方报告](https://www.healthywa.wa.gov.au/~/media/Files/Corporate/general%20documents/water/Groundwater%20replenishment/PCRP%20Chapter6-9.pdf) | conditional | 暂停材料释放，先补场景与分析口径。 |
 | PCP | 现代市政二级出水分布不足，且 pH 7 主要为阴离子。 | invalid | 停止当前市政二级出水主场景。 |
@@ -69,7 +71,7 @@ R4 的 L2 也不是 150 次逐方案深审：5 个方案有新增完整文件，
 | TCDD | 多厂报告没有检出 2,3,7,8-TCDD；TEQ 不能代替单体浓度。[官方报告](https://www.healthywa.wa.gov.au/~/media/Files/Corporate/general%20documents/water/Groundwater%20replenishment/PCRP%20Chapter6-9.pdf) | invalid | 停止当前场景，禁止用混合物 TEQ 回填。 |
 | Chloroform | 主要在氯化后生成，不是一般二沉出水问题。[EPA](https://www.epa.gov/sites/default/files/2020-11/documents/chloroform.pdf)，[华东](https://doi.org/10.1016/j.watres.2019.03.072) | invalid | 可另立消毒副产物控制项目，不能混入当前主场景。 |
 
-汇总：6 valid、8 conditional、6 invalid。
+汇总：6 occurrence_supported、8 conditional、6 invalid。六个 occurrence-supported 对象的处理阶段、浓度分布、分析分数、基质、竞争物、时空变化、工程终点和三浓度层级仍要逐项冻结；在此之前不得把它们登记为 SP passed。
 
 ## 5. BP/TR 证据裁决
 
@@ -97,25 +99,25 @@ R4 的 L2 也不是 150 次逐方案深审：5 个方案有新增完整文件，
 
 | # | R4 实体 | 最早断裂点 | Reviewer 裁决 |
 |---:|---|---|---|
-| 1 | NP 深腔 resorcinarene 网络 | ME/SR：缺兼具深壁、酚锚和交联手柄的确切单体；高官能交联会凝胶并埋腔 | `reject_embodiment_retain_lineage`；先做离散主体溶液模型，再单点低密度固定。 |
+| 1 | NP 深腔 resorcinarene 网络 | TR/ME/SR：alpha-quaternary 规则首先是催化/电子要求；又缺兼具深壁、酚锚和交联手柄的确切单体 | `retain_prototype_retranslate`；先重译可检验 TR，再决定是否需要离散主体模型。 |
 | 2 | BPA β-酮烯胺 COF 门系列 | SR：定制吡啶二胺、R 基、合成纯化均未冻结；变体不能默认同晶格 | `reject_embodiment_retain_lineage`；先做可溶锚/门模型。 |
 | 3 | Dieldrin 苯基-SBA-15＋方酰胺 | BP：EH 证据相反；ME 只能得到统计双功能表面 | `terminate_lineage`（当前 BP/TR）；材料仅可作普通疏水/氢键对照。 |
 | 4 | PFHxS resorcinarene 盲腔 | SR：R4 所写 CuAAC/异氰酸酯连接不成立，C4/C3 几何与“链长=腔深”均错误 | `reject_embodiment_retain_lineage`，但须先删除 OAT4 精确深度主张。 |
 | 5 | BTEB/BTPU PMO＋C6 封底 | ME/SR：延迟加料不证明孔口分子定位；C6 硅烷只会缩孔/改润湿/堵孔，不会制造盲底 | `reject_embodiment_retain_lineage`。PMO 可保留为统计双区机制筛选，不得画固定 C6 腔。 |
-| 6 | DDT 碱位 PMO＋C12 壁 | TR/SR：所谓水相中性超强碱会质子化；随机 C12 接枝不等于膜链有序；还会转化为反应捕获 | `reject_embodiment_retain_BP_only`；先做均相速率与产物。 |
-| 7 | PFBS 三脲-SBA-15 | TR/ME：tren＋3 异氰酸硅烷可形成三脲，但柔性链不保证四面体；SBP 会优先提示 sulfate 竞争 | `control_only`；不能以“精确四面体夹口”进入 E1。 |
-| 8 | GenX 支链腔 PMO | ME：GenX 甲酯加入普通溶胶凝胶不会形成 Y 形腔，且删除了关键羧酸头 | `reject_embodiment`; SP 又为 conditional。 |
-| 9 | ROX NPET 碗＋PVI 刷 | ME/SR：NPET 碗无单体，PVI 刷无引发剂/链长/Cu 清除/堵孔 SOP；组合无制造基础 | `split_and_reject`; PVI-GAC 仅可作通用 pH/电荷对照。 |
-| 10 | PCP 卤键＋酚锚＋β-CD/SBA-15 | SP invalid；三元随机接枝不能形成同一识别位点 | `terminate_current_scenario`。 |
-| 11 | β-HCH 轴向氯“缺失识别” | TR/ME：没有正结合能、单体或骨架 | `reject`; SP conditional。 |
-| 12 | Octocrylene NDI 笼＋Michael 位点 | BP/TR/ME：未实例化；β-碳强位阻；不可逆反应耗尽容量 | `reject`; 先做均相 k2 与产物谱，且 SP conditional。 |
-| 13 | DCP 2,6-双氯轮廓腔 | SP conditional；ME 无单体/模板固定/聚合路线 | `retain_concept_only`；先补场景，再考虑 carrier-first 薄层印迹。 |
-| 14 | BDE-209 卤键＋醚氧 | TR：把碘/硒功能单元和污染物卤素的供受体方向混淆；无确切 POP | `reject`; SP conditional。强水相卤键需专门电子贫化卤键供体，不能从普通 C–Cl/C–Br 外推。[水相卤键](https://doi.org/10.1038/nchem.2111) |
-| 15 | TCDD 芘/萘 POP＋侧位卤键 | SP invalid；随机芳香网络不能编码 2,3,7,8 图案 | `terminate_current_scenario`; POP 仅作普通疏水/π 对照。 |
-| 16 | PCB-209 扭转角腔 | SP invalid；ME 只是约 85° 的文字占位符 | `terminate_current_scenario`。 |
-| 17 | DDE 平面腔 | SP conditional；ME 无化学结构，普通芳香孔只产生疏水/π 分配 | `reject_embodiment`。 |
-| 18 | Endosulfan MOF-808/POM | SP conditional；POM 未定义且功能是催化水解而非可逆吸附 | `reject_as_adsorbent`; 若另立反应路线需完整产物/毒性/元素平衡。 |
-| 19 | α-CD/DVS–CHCl3 | SP invalid；合成本身成熟但只是已知包结/材料基线 | `control_only`; CHCl3–CD 水相缔合已有直接先例。[先例](https://doi.org/10.1246/bcsj.62.3718) |
+| 6 | DDT 碱位 PMO＋C12 壁 | TR/SR：所谓水相中性超强碱会质子化；随机 C12 接枝不等于膜链有序；还会转化为反应捕获 | `retain_prototype_retranslate`；先在纸面冻结均相速率、产物与可逆/不可逆边界。 |
+| 7 | PFBS 三脲-SBA-15 | TR/ME：tren＋3 异氰酸硅烷可形成三脲，但柔性链不保证四面体；SBP 会优先提示 sulfate 竞争 | `retain_as_control`；不能以“精确四面体夹口”进入 E1。 |
+| 8 | GenX 支链腔 PMO | ME：GenX 甲酯加入普通溶胶凝胶不会形成 Y 形腔，且删除了关键羧酸头 | `reject_embodiment_retain_lineage`；场景状态另为 conditional。 |
+| 9 | ROX NPET 碗＋PVI 刷 | BP/TR/ME/SR：NPET 是 B 类靶点，碗无单体；PVI 刷无引发剂/链长/Cu 清除/堵孔 SOP；组合无制造基础 | `retain_prototype_retranslate`；拆分后的 PVI-GAC 另按 `retain_as_control` 处理。 |
+| 10 | PCP 卤键＋酚锚＋β-CD/SBA-15 | SP invalid；三元随机接枝不能形成同一识别位点 | `terminate_lineage`（当前市政二级出水范围）。 |
+| 11 | β-HCH 轴向氯“缺失识别” | TR/ME：没有正结合能、单体或骨架 | `retain_prototype_retranslate`；SP conditional，当前缺失接触 TR 不得继续。 |
+| 12 | Octocrylene NDI 笼＋Michael 位点 | BP/TR/ME：未实例化；β-碳强位阻；不可逆反应耗尽容量 | `retain_prototype_retranslate`；先在纸面闭合均相 k2、产物谱和吸附/反应分支，且 SP conditional。 |
+| 13 | DCP 2,6-双氯轮廓腔 | SP conditional；ME 无单体/模板固定/聚合路线 | `retain_prototype_retranslate`；先补场景，再考虑 carrier-first 薄层印迹。 |
+| 14 | BDE-209 卤键＋醚氧 | TR：把碘/硒功能单元和污染物卤素的供受体方向混淆；无确切 POP | `retain_prototype_retranslate`；SP conditional。强水相卤键需专门电子贫化卤键供体，不能从普通 C–Cl/C–Br 外推。[水相卤键](https://doi.org/10.1038/nchem.2111) |
+| 15 | TCDD 芘/萘 POP＋侧位卤键 | SP invalid；随机芳香网络不能编码 2,3,7,8 图案 | `terminate_lineage`（当前市政二级出水范围）；POP 仅作普通疏水/π 对照。 |
+| 16 | PCB-209 扭转角腔 | SP invalid；ME 只是约 85° 的文字占位符 | `terminate_lineage`（当前市政二级出水范围）。 |
+| 17 | DDE 平面腔 | SP conditional；ME 无化学结构，普通芳香孔只产生疏水/π 分配 | `retain_prototype_retranslate`。 |
+| 18 | Endosulfan MOF-808/POM | SP conditional；POM 未定义且功能是催化水解而非可逆吸附 | `terminate_lineage`（当前选择性吸附分支）；若另立反应路线需新场景合同和完整产物/毒性/元素平衡。 |
+| 19 | α-CD/DVS–CHCl3 | SP invalid；合成本身成熟但只是已知包结/材料基线 | `retain_as_control`；CHCl3–CD 水相缔合已有直接先例。[先例](https://doi.org/10.1246/bcsj.62.3718) |
 
 ### 材料家族层面的先例攻击
 
@@ -134,25 +136,25 @@ R4 的 L2 也不是 150 次逐方案深审：5 个方案有新增完整文件，
 
 | 谱系 | 尝试的制造优先实现 | 保留资产 | 未通过 E1 的原因 | 当前状态 |
 |---|---|---|---|---|
-| BPA–DmpR | 可溶双酚/吡啶锚模型；成熟 BPA dummy-MIP/半共价 MIP 作为制造基线 | valid SP；DmpR 酚锚＋邻接疏水环境 | 可溶模型尚未证明水相锚/门增益；普通 MIP 先例占满且不能体现 DmpR 门变量；AG-COF 单体/SOP 未闭合 | `lineage_retained_E0` |
-| 短链 PFAS–SsuA/Bug | BTEB PMO＋模板保留时外表面短时胺化，再完全封端为中性脲，随后去模板；与均匀接枝体做空间单变量 | valid SP；含水头基定位＋邻接低极性区 | 外表面选择性功能化有方法先例，但迁移到 phenylene-PMO 并转成脲仍是推断；不能保证孔口共定位；PMO 在中性/偏碱连续流下的 Si/功能层稳定性是 high 风险 | `lineage_retained_E0` |
-| NP–Bayram | 已验证离散 cavitand 溶液模型→单点低密度固定于大孔载体 | valid SP；NP 直接生物过程 | alpha-quaternary 依赖首先是催化/电子规则；尚无目标/异构体水相选择性的小分子证据；定制主体昂贵且多步 | `lineage_retained_model_gate` |
-| ROX 类别 | 低 DP PVI-co-HEMA/GAC 短刷，只保留 pH 捕获/释放 | valid SP；大环内酯类工程目标 | FcRn 与 ROX 无直接对应；ROX 在 pH 7 主要为阳离子，PVI/阴离子材料容易退化为普通电荷或离子交换；直接印迹先例拥挤 | `control_only` |
-| DCP | carrier-first 后的纳米薄层表面印迹 | DHPB/PceA B 类结构 | SP conditional；位置异构体增益、模板泄漏和第二场景源均未闭合 | `scenario_blocked` |
+| BPA–DmpR | 可溶双酚/吡啶锚模型；成熟 BPA dummy-MIP/半共价 MIP 作为制造基线 | occurrence-supported 场景；DmpR 酚锚＋邻接疏水环境 | 可溶模型尚未证明水相锚/门增益；普通 MIP 先例占满且不能体现 DmpR 门变量；AG-COF 单体/SOP 未闭合 | `reject_embodiment_retain_lineage` |
+| 短链 PFAS–SsuA/Bug | BTEB PMO＋模板保留时外表面短时胺化，再完全封端为中性脲，随后去模板；与均匀接枝体做空间单变量 | occurrence-supported 场景；含水头基定位＋邻接低极性区 | 外表面选择性功能化有方法先例，但迁移到 phenylene-PMO 并转成脲仍是推断；不能保证孔口共定位；PMO 在中性/偏碱连续流下的 Si/功能层稳定性是 high 风险 | `reject_embodiment_retain_lineage` |
+| NP–Bayram | 已验证离散 cavitand 溶液模型→单点低密度固定于大孔载体 | occurrence-supported 场景；NP 直接生物过程 | alpha-quaternary 依赖首先是催化/电子规则；尚无目标/异构体水相选择性的小分子证据；定制主体昂贵且多步 | `retain_prototype_retranslate` |
+| ROX 类别 | 低 DP PVI-co-HEMA/GAC 短刷，只保留 pH 捕获/释放 | occurrence-supported 场景；大环内酯类工程目标 | FcRn 与 ROX 无直接对应；ROX 在 pH 7 主要为阳离子，PVI/阴离子材料容易退化为普通电荷或离子交换；直接印迹先例拥挤 | `retain_as_control` |
+| DCP | carrier-first 后的纳米薄层表面印迹 | DHPB/PceA B 类结构 | SP conditional；位置异构体增益、模板泄漏和第二场景源均未闭合 | `retain_prototype_retranslate`；场景状态另列为 conditional |
 
 外表面短时功能化可作为制造工具，但不是已证成的孔口人工识别单元。已有研究显示短时 APTMEES 处理可以偏向外表面，而延长时间会进入内孔；这支持“时间是可制造变量”，也同时否定“模板在孔中就必然只改外表面”的简单假设。[外表面功能化](https://doi.org/10.1016/j.micromeso.2016.10.023)
 
-## 8. 对既有主分支 E1 登记的影响
+## 8. 对既有主分支 E1 与本轮出图门的影响
 
-R4 深审还暴露出主分支三个历史 E1 包的承重缺口。按不可继承原则，本轮 Reviewer 重新裁决如下：
+R4 深审还暴露出主分支三个历史 E1 包的承重缺口。E1 本身允许把未知空间结构交给预注册 M0，因此本轮不以“尚未验证”自动撤回 E1；但潘尧本次要求在出图前把承重科学与合成环节核准，所以三者均进入 `owner_visual_hold`：
 
-| 历史包 | 新发现的最早断裂点 | 新状态 |
+| 历史包 | 新发现的最早缺口 | G35 状态 |
 |---|---|---|
-| SC-P02 / PG-PMO | ME/SR：延迟共缩合不能保证所画的孔端 BTPU/内腔 BTEB 空间结构；缺少可重复制造该变量的直接先例 | `E1_withdrawn_lineage_retained` |
-| BPA20-01 / AG-COF | SR：确切二胺/R 系列、单体制备、纯化和同晶格性未冻结；开放介孔不等于局部门 | `E1_withdrawn_lineage_retained` |
-| DDT50-01 / LPO-SIP | SP：当前可用证据不足以稳定定义市政二级出水溶解相 DDT 工程负荷；颗粒/胶体与 ΣDDT 口径未闭合 | `E1_withdrawn_scenario_blocked` |
+| SC-P02 / PG-PMO | ME/SR high：延迟共缩合尚未证明会形成所画的孔端 BTPU/内腔 BTEB 空间结构 | 历史 E1 暂不改写；`owner_visual_hold_pending_spatial_manufacture_evidence` |
+| BPA20-01 / AG-COF | SR high：确切二胺/R 系列、单体制备、纯化和同晶格性未冻结；开放介孔不等于局部门 | 移出当前正式推荐，登记 `E1_status_under_review`；`owner_visual_hold` |
+| DDT50-01 / LPO-SIP | SP high：当前可用证据不足以完整冻结市政二级出水溶解/颗粒相 DDT 场景合同 | 移出当前正式推荐，登记 `E1_status_under_review`；`owner_visual_hold` |
 
-这三项撤回不等于性能被实验否定，也不终止其上游谱系；它只纠正“纸面包已经可以直接开做”的过早表述。正式 E1/E2 登记因此暂时清空。
+这三项 hold 不等于性能被实验否定，也不终止其上游谱系。G35 不再一刀切清空历史登记：SC-P02 暂留 E1，但不进入本轮出图；BPA20-01 和 DDT50-01 因缺口直接触及 E1 所需的确切材料/SOP或完整 SP，移入 `E1_status_under_review`，在专项复核前不属于当前正式推荐。
 
 ## 9. 潘尧补充视角审查
 
@@ -171,25 +173,26 @@ R4 深审还暴露出主分支三个历史 E1 包的承重缺口。按不可继�
 | 状态 | 数量 | 对象 |
 |---|---:|---|
 | E2_ready | 0 | 无 |
-| E1_ready | 0 | 无 |
-| owner review / ImageGen eligible | 0 | 无 |
-| upstream lineage retained | 3 个主要谱系 | BPA–DmpR、短链 PFAS–SsuA/Bug、NP–Bayram |
+| R4 current embodiment at strict owner_visual_ready | 0 | 无 |
+| owner review / actual ImageGen eligible | 0 | 无 |
+| reject_embodiment_retain_lineage | 2 个优先谱系 | BPA–DmpR、短链 PFAS–SsuA/Bug |
+| retain_prototype_retranslate | 1 个优先谱系 | NP–Bayram |
 | scenario blocked | 8 个污染物 | GenX、Octocrylene、2,6-DCP、DDT、DDE、Endosulfan、β-HCH、BDE-209 |
 | current scenario terminated | 6 个污染物 | PCP、Dieldrin、PCB-209、HCBD、TCDD、Chloroform |
 
 因此，本轮没有更新 ImageGen 提示词，也没有调用 ImageGen。只有当某一再平台化实现补齐确切实体、逐步 SOP、空间/QC 证据路径和因果对照并通过重新攻击后，才会生成 A 生物证据—B 功能抽象—C 候选材料与合成的版本锁定图示包。
 
-## 11. 下一轮唯一研究动作
+## 11. 下一轮唯一纸面研究动作
 
-不再从 R4 评分表中横向扩展。按信息增益排序，下一轮先对 **BPA–DmpR 谱系做可溶最小模型门**：
+不再从 R4 评分表中横向扩展。按信息增益排序，下一轮先为 **BPA–DmpR 谱系冻结可溶最小模型包**：
 
 1. 选择可购买或一至两步可制备的、结构确切的人工识别单元模型；
-2. 在 pH 6.5–8.0、真实离子强度和可控 DOC 下，测 BPA/BPF/BPS/phenol 的竞争结合或谱学扰动；
-3. 用删除锚、错位锚和等疏水平面分子排除单纯 logD/π 面积；
-4. 只有存在预注册的非单调几何增益，才重新选择 COF、表面印迹或其他固体平台；
-5. 若最小模型失败，终止 DmpR→人工静态锚门 TR，而不是继续换载体。
+2. 写出未来实验在 pH 6.5–8.0、真实离子强度和可控 DOC 下测 BPA/BPF/BPS/phenol 竞争结合或谱学扰动的 SOP、样本量和分析方法；
+3. 冻结删除锚、错位锚和等疏水平面分子对照，以排除单纯 logD/π 面积；
+4. 预注册非单调几何增益的成功/失败阈值、停止规则和后续固体平台选择规则；
+5. 将完整纸面包提交潘尧审批；只有另行授权实验后才能实际采购、合成或测量。若未来最小模型失败，终止 DmpR→人工静态锚门 TR，而不是继续换载体。
 
-短链 PFAS 谱系排第二：先验证模板保留的外表面短时功能化能否在 phenylene-PMO 上稳定制造可测的中性脲空间差异，并同时完成 Si/有机层浸出；在此之前不恢复 SC-P02 的 E1。
+短链 PFAS 谱系排第二：先在纸面冻结模板保留外表面短时功能化的 SOP、空间判定与 Si/有机层浸出门；在这些 high 关闭前不解除 SC-P02 的 `owner_visual_hold`。
 
 ## 12. 证据边界
 

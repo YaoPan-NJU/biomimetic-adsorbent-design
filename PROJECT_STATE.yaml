@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: "Independently re-audited origin/Ultimate fresh_1000_R4 without inheriting scores or pass states. The nominal 1000 IDs contain 140 expanded cards, 460 table-only records and 400 IDs without per-ID records. Primary-source scenario review found occurrence support sufficient to continue full scenario-contract freezing for six pollutants, paused eight and stopped six; no new full SP contract was declared passed. Biological-prototype, chemistry, prior-art and stepwise synthesis review found zero of nineteen normalized material entities at the owner-requested strict owner-visual gate. SC-P02 remains E1 on owner-visual hold; BPA20-01 and DDT50-01 moved to E1_status_under_review because their exact route or full SP requirements are not closed. No design was eligible for actual ImageGen, so no image was generated."
 next_action: "Freeze a BPA-DmpR minimal soluble-model paper package before selecting another solid platform: exact one-to-two-step artificial recognition unit, synthesis and identity SOP, deletion/mismatch controls, future BPA/BPF/BPS/phenol competition method, preregistered thresholds and stop rules. Submit that package for Pan Yao approval; no procurement, synthesis, measurement, experiment or ImageGen is authorized."
 active_branch: main
-last_verified_commit: f3a989090d2d374af7545c4e9c82929b05e5141a
+last_verified_commit: 6303e5519d8b5565035f22c1faedb0274e39e4d0
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:
@@ -21,6 +21,18 @@ ultimate_R4_deep_audit_20260802:
   status: passed_zero_owner_visual_ready
   input_ref: origin/Ultimate@d26d423cb84160cd962c1a2c6cc813544632556e
   checkpoint_content_commit: 36a35b1
+  checkpoint_state_integration_commit: 6303e5519d8b5565035f22c1faedb0274e39e4d0
+  remote_push: origin_main_equal_at_6303e5519d8b5565035f22c1faedb0274e39e4d0
+  fresh_clone_validation: passed_at_6303e5519d8b5565035f22c1faedb0274e39e4d0
+  fresh_clone_checks:
+    state_artifacts: passed_193_zero_missing
+    snapshot_files: passed_6
+    branch: passed_main
+    credential_patterns: passed_449_tracked_files_zero_hits
+    evidence_ledger: passed_247_unique_rows_through_E247
+    report_external_links: passed_53_all_ledger_mapped
+    reviewer: passed_zero_critical_high
+    owner_visual_ready: passed_zero_eligible_and_imagegen_not_called
   nominal_ids: 1000
   expanded_concept_cards: 140
   table_or_score_only_ids: 460

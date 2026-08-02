@@ -343,6 +343,8 @@ Audit content commit `36a35b1` records the report, manifest and G35 before state
 
 After two revision cycles, the independent Reviewer passed G35 with zero unresolved critical/high findings. The ledger range is E203-E247; all 53 external links used in the report resolve to a ledger DOI/URL exactly or to the full DOI when Markdown truncates a parenthesized suffix.
 
+State-integration commit `6303e5519d8b5565035f22c1faedb0274e39e4d0` was pushed to `origin/main` and restored in a fresh depth-1 clone. The clone passed 193 state-artifact checks, six snapshot checks, the main-branch check, a 449-file credential scan, 247 unique evidence rows through E247, all 53 report-link-to-ledger mappings, the zero-critical/high Reviewer decision and the zero-eligible/no-ImageGen owner-visual state.
+
 ## Resume instructions
 
 1. Read `AGENTS.md`, then `SOUL.md`, `PROJECT_STATE.yaml`, `HANDOFF.md` and `research_contract.yaml` in the required exact order.

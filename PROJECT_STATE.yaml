@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: "Integrated the owner-requested design-lineage correction without lowering Gate A/B/C or E1/E2. New work now separates SP scenario/problem, BP biological prototype, TR transferable rule, ME material embodiment, SR synthesis route and ER release. Reviewers must localize the first broken module and distinguish embodiment rejection from whole-lineage termination. Pan Yao's domain, novice-operator, synthesis-expert, cross-section and six-link story lenses enter only after independent design and first attack are frozen and cannot directly change status. A pilot audit reclassified the failure propagation of SC-P02, BPA20-01, DDT50-01, GX50-01, DCP20-01 and S1-SYN without changing any release status or authorizing laboratory work."
 next_action: "Pan Yao reviews docs/MODULAR_LINEAGE_RESCUE_AND_REPLATFORMING.md and rounds/modular_lineage_recovery_20260802/LINEAGE_RECOVERY_AUDIT.md. After confirmation, Codex backfills SP-ER module ledgers for active concept_valid lineages before generating more materials, starting with the BPA anchor-gate, DDT membrane-packing, GenX Bug/TauA and DCP EPS-barrier lineages. Existing SC-P02 BPA20-01 and DDT50-01 E1 statuses remain paper-only; no procurement synthesis or experiment is authorized."
 active_branch: main
-last_verified_commit: 5fad9f01c9845120ad2a36d26a83669116e15559
+last_verified_commit: 1bf83210776ce30630e11847ed0b757ff6853615
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:
@@ -161,6 +161,17 @@ GenX_DDT_50x2_deep_design_20260725:
   no_procurement_or_experiment_authorized: true
 modular_lineage_rescue_20260802:
   status: binding_protocol_integrated_pilot_audit_complete_no_release_change
+  checkpoint_content_commit: 1bf83210776ce30630e11847ed0b757ff6853615
+  remote_push: origin_main_equal_at_1bf83210776ce30630e11847ed0b757ff6853615
+  fresh_clone_validation: passed_at_1bf83210776ce30630e11847ed0b757ff6853615
+  fresh_clone_checks:
+    state_paths: passed_184_artifacts_zero_missing
+    snapshot_files: passed_6
+    credential_patterns: passed_440_tracked_files_zero_hits
+    module_schema: passed_SP_BP_TR_ME_SR_ER
+    release_status_changes: none
+    next_action_recovery: passed_owner_review_then_concept_valid_lineage_backfill
+    worktree: clean_in_fresh_clone
   gate: G33_MODULAR_LINEAGE_RESCUE_AND_REPLATFORMING
   modules: [SP_scenario_problem, BP_biological_prototype, TR_transfer_rule, ME_material_embodiment, SR_synthesis_route, ER_experimental_release]
   reviewer_dispositions:

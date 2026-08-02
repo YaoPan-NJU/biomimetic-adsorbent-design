@@ -297,6 +297,8 @@ Pan Yao's supplied review experience is integrated only after independent design
 
 The pilot audit is `rounds/modular_lineage_recovery_20260802/LINEAGE_RECOVERY_AUDIT.md`. It leaves all release states unchanged but clarifies failure propagation. SC-P02 manufacture failure would retain the short-chain-PFAS lineage unless spatial causality itself fails. BPA20-04 is not automatically a same-lineage backup for AG-COF because its wall-gate fidelity is weaker. DDT `POSE` failure can retain the membrane-packing lineage, whereas `PACKING` failure breaks the core TR rule. GenX dummy failure does not invalidate the class-wide Bug/TauA lineage. DCP remains blocked at the environmental SP module, and S1-SYN requires TR retranslation rather than another carrier change.
 
+Content checkpoint `1bf83210776ce30630e11847ed0b757ff6853615` was pushed to `origin/main` and restored from a new depth-1 clone. The clone matched the remote head, resolved 184 state artifacts and six snapshot files, scanned 440 tracked files with no credential-pattern hit, recovered the `SP/BP/TR/ME/SR/ER` schema, confirmed zero release-status changes and recovered the owner-review-then-lineage-backfill next action with a clean worktree.
+
 ## Resume instructions
 
 1. Read `AGENTS.md`, then `SOUL.md`, `PROJECT_STATE.yaml`, `HANDOFF.md` and `research_contract.yaml` in the required exact order.

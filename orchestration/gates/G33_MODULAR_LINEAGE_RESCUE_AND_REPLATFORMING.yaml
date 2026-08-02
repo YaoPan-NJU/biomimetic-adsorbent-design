@@ -1,0 +1,39 @@
+gate: G33_MODULAR_LINEAGE_RESCUE_AND_REPLATFORMING
+status: binding_owner_direction_integrated_no_release_change
+date: 2026-08-02
+owner_direction:
+  problem: valuable_problem_prototype_and_translation_assets_were_lost_when_one_material_or_synthesis_route_failed
+  decision: localize_failure_and_preserve_valid_upstream_modules_without_lowering_release_gates
+binding_protocol: docs/MODULAR_LINEAGE_RESCUE_AND_REPLATFORMING.md
+pilot_audit: rounds/modular_lineage_recovery_20260802/LINEAGE_RECOVERY_AUDIT.md
+module_ledger:
+  - SP_scenario_and_engineering_problem
+  - BP_biological_prototype
+  - TR_transferable_function_rule
+  - ME_material_embodiment
+  - SR_synthesis_route
+  - ER_experimental_release
+reviewer_dispositions:
+  - advance_current_embodiment
+  - repair_current_embodiment
+  - reject_embodiment_retain_lineage
+  - retain_prototype_retranslate
+  - retain_as_control
+  - terminate_lineage
+non_compensation:
+  gate_A_B_C_unchanged: true
+  E1_E2_unchanged: true
+  inherited_score_or_release_status_prohibited: true
+  module_retention_is_not_performance_evidence: true
+owner_review_lens:
+  timing: after_independent_design_and_first_attack_are_frozen
+  role: question_generation_and_failure_localization_only
+  perspectives:
+    - environmental_materials_domain_reviewer
+    - novice_operator_safety_and_executability
+    - synthesis_expert_chemistry_and_scale
+    - cross_section_consistency
+    - six_link_manuscript_story
+  case_specific_verification_required: true
+current_release_status_changes: none
+next_gate: backfill_module_ledgers_for_active_concept_valid_lineages

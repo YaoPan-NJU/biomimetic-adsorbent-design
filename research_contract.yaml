@@ -1,20 +1,15 @@
 project:
   name: biomimetic-adsorbent-design
   owner: Pan Yao
-  executor: Claude Code
-  secondary_executor: Qwen
-  executor_branch: Ultimate
-  codex_branch: main
-  cross_executor_rule: Claude Code and Qwen share the active Ultimate branch and work sequentially; commit and push before switching executor or device; at most one executor is active at a time. Codex works on main independently. The Qwen branch is retained as historical state and receives no new commits.
-  scheme_target_per_pollutant: 10
-  scheme_target_rule: "Design 10 high-quality schemes (final_scoring pass) per pollutant, 200 total; easy-first order (deepen the 7 already-passed pollutants to 10 first, then the unpassed ones); honor the honest-exhaustion clause so a recorded N<10 beats padding."
+  executor: Codex
   experimental_handoff: Zhou Jiaqi
   independence: ADRMATS is out of scope and is not a dependency
 
 deliverable:
   language: zh-CN
-  primary_designs: 1
-  backup_designs: 1
+  design_count_policy: all_designs_that_pass_three_owner_gates
+  primary_backup_labels_required: false
+  minimum_formal_release_level: E1_mechanism_validation_ready
   includes:
     - scientific causal chain
     - biomimetic correspondence matrix
@@ -24,6 +19,7 @@ deliverable:
     - adsorption, selectivity, matrix, regeneration, leaching, and stability experiments
     - success and failure criteria
     - evidence ledger and adversarial audit trail
+    - version_locked_visual_explanation_prompt_package_for_each_standalone_owner_facing_design
   excludes:
     - actual laboratory execution
     - experimental results
@@ -31,26 +27,50 @@ deliverable:
     - user-facing CLI or agent product
 
 water_context:
-  principle: any_environmental_water_treatment_scenario_with_demonstrated_significance
-  eligible_examples:
-    - municipal_wwtp_secondary_effluent
-    - industrial_wastewater
-    - surface_water
-    - drinking_water_source
-    - groundwater
-  mechanism_control: ultrapure_or_deionized_water
-  admission_requirement: independently_verified_environmental_relevance_and_practical_value
+  primary: municipal wastewater treatment secondary effluent
+  mechanism_control: ultrapure water
+  optional_external_validation:
+    - surface water
+    - drinking water
+
+environmental_scenario_matching:
+  required_before:
+    - biological_prototype_deep_search
+    - material_deep_design
+    - E0_release
+  primary_scenario: municipal_or_domestic_wastewater_treatment_secondary_effluent
+  required_fields:
+    - exact_treatment_and_sampling_location
+    - pollutant_target_scope
+    - detection_frequency_and_concentration_distribution_not_maximum_only
+    - dissolved_colloidal_total_fraction_filtration_and_LOQ
+    - pH_DOC_UV254_ionic_strength_major_ions_Ca_Mg_solids_and_surfactants
+    - target_class_and_out_of_class_competitors
+    - temporal_spatial_process_and_sampling_year_variability
+    - treatment_endpoint_dose_EBCT_regeneration_and_waste_boundary
+  evidence_rule:
+    preferred: at_least_two_independent_primary_or_authoritative_sources_for_the_primary_scenario
+    sparse_data: record_as_admission_risk_do_not_fill_with_other_scenarios
+    prohibit:
+      - maximum_only_as_typical_concentration
+      - point_source_or_influent_data_as_secondary_effluent_substitute
+      - review_range_as_only_evidence
+      - fixed_irrelevant_scenario_quota
+  experiment_concentration_tiers:
+    environmental_relevance: supports_secondary_effluent_performance_claims
+    mechanism_measurement: elevated_when_analytically_needed_and_cannot_replace_field_relevance
+    capacity_boundary: isotherm_or_saturation_only_and_cannot_predict_trace_performance
+  performance_target_rule: derive_from_case_specific_mass_balance_or_column_design_not_a_universal_Kd
+  binding_guidance: docs/POLLUTANT_ENVIRONMENTAL_SCENARIO_MATCHING.md
 
 pollutant_admission:
   scope: organic_pollutants_with_priority_for_emerging_contaminants
-  seed_source: web_literature_search_and_regulatory_lists
+  seed_source: pollutant_kb.pollutant_index
   seed_source_role: candidate_discovery_not_risk_authority
   hard_gates:
     - organic_pollutant
-    - independently_verified_environmental_relevance
-    - independently_verified_practical_treatment_value
-    - identified_specific_scientific_problem
-    - identified_engineering_challenge
+    - independently_verified_secondary_effluent_relevance
+    - independently_verified_environmental_or_health_concern
     - meaningful_selective_adsorption_problem
     - falsifiable_biomimetic_design_opportunity
   priority_verification_group:
@@ -65,21 +85,57 @@ pollutant_admission:
     - admit_nutrients_or_inorganic_pollutants_without_explicit_scope_reopening
 
 funnel:
-  source_pollutants: open_candidate_pool
-  scientific_problem_gate: required_before_scheme_design
-  scheme_portfolio: mechanism_distinct
-  recommended_schemes: 5
-  deep_concepts: 5
-  finalists: 2
-  primary: 1
-  backup: 1
+  mode: adaptive_no_fixed_quota
+  source_pollutant_count: open
+  scheme_portfolio_count: open
+  recommended_design_count: all_three_gate_passers
+  delivery: rolling_do_not_wait_for_batch_completion
+  primary_backup_assignment: owner_optional_after_review
+  prohibited_behavior:
+    - retain_weak_schemes_to_fill_a_quota
+    - lower_a_gate_because_no_scheme_has_passed
+    - delay_a_ready_design_until_a_fixed_batch_is_full
 
-scientific_problem_gate:
-  required_before_prototype_search: true
-  must_identify:
-    - specific_scientific_problem: "ensures academic depth and mechanistic novelty"
-    - engineering_challenge: "ensures practical application scenario and paper closure"
-  closure_requirement: "the paper introduction must show: pollutant difficulty -> scientific problem -> engineering challenge -> why conventional methods fail -> biological solution -> material translation"
+discovery_strategy:
+  primary_spine: unsolved_secondary_effluent_engineering_problem
+  mechanism_method: retrieve_real_biological_processes_that_address_the_frozen_problem
+  pollutant_role: environmental_boundary_competitor_definition_and_validation_case
+  prohibited_shortcut: assume_nature_has_a_pollutant_specific_prototype
+  prototype_budget:
+    preferred_primary: 1
+    maximum_supporting_without_scope_review: 1
+    supporting_requires_distinct_necessary_testable_function: true
+  wastewater_bioprocess_discovery:
+    eligible_systems:
+      - activated_sludge
+      - wastewater_biofilm
+      - aerobic_granular_sludge
+      - anaerobic_sludge
+      - other_wastewater_biological_multiphase_systems
+    candidate_observations:
+      - sludge_water_partitioning
+      - rapid_initial_sorption
+      - desorption_hysteresis
+      - biomass_or_EPS_enrichment
+      - differential_behavior_across_sludge_structures
+    evidence_ladder:
+      WW_0: overall_removal_or_sludge_detection_discovery_signal_only
+      WW_1: mass_balance_and_inhibited_or_inactivated_control_support_process_hypothesis
+      WW_2: EPS_removal_readdition_fractionation_enzymatic_or_surface_perturbation_localizes_function
+      WW_3: repeatable_causal_perturbation_with_alternative_explanations_excluded_supports_hard_correspondence
+    required_alternative_explanations:
+      - biodegradation_or_cometabolism
+      - volatilization_or_photolysis
+      - precipitation_or_inorganic_solid_association
+      - colloid_entrapment
+      - cellular_uptake
+      - sampling_filtration_and_analytical_loss
+    EPS_extraction_artifact_checks:
+      - cell_lysis_and_intracellular_release
+      - floc_disruption
+      - changed_ionic_bridging
+      - extraction_mass_recovery
+    translation_rule: identify_and_translate_the_functional_organization_not_raw_EPS_as_default_material
 
 pollutant_scoring:
   applies_only_after_all_admission_gates_pass: true
@@ -91,15 +147,48 @@ pollutant_scoring:
   novelty_and_evidence_opportunity: 15
 
 final_scoring:
+  applies_only_after_three_owner_gates_pass: true
+  ranking_only: true
+  cannot_compensate_for_failed_gate: true
   causal_closure: 20
   selective_adsorption_mechanism: 25
   artificial_material_translatability: 20
   originality: 15
   experimental_falsifiability_and_controls: 10
   evidence_integrity: 10
-  pass_score: 85
   unresolved_critical_allowed: 0
   unresolved_high_allowed: 0
+
+owner_hard_gates:
+  biomimetic_story:
+    required: true
+    preferred_evidence: observed_biological_adsorption_accumulation_sequestration_barrier_partition_or_selective_transport
+    analogous_natural_function_allowed: true
+    pollutant_target_protein_binding_alone_is_sufficient: false
+  material_and_experimental_science:
+    required: true
+    exact_nonprotein_material_entity: true
+    matched_deletion_mismatch_and_conventional_controls: true
+    aqueous_selectivity_and_prior_art_attack: true
+    class_level_selectivity_allowed: true
+    within_class_selectivity_required: false
+    class_selectivity_requirement: preferential_removal_over_DOM_salts_and_unrelated_micropollutants
+    selectivity_scope_must_be_frozen_per_design: true
+    selectivity_scopes:
+      single_compound:
+        use_when: treatment_or_paper_claim_requires_within_class_discrimination
+        within_class_competitor_discrimination_required: true
+      pollutant_class:
+        use_when: class_members_are_environmentally_relevant_and_should_be_jointly_removed
+        within_class_competitor_discrimination_required: false
+        required_external_preference: target_class_over_DOM_salts_and_unrelated_micropollutants
+      broad_micropollutant_enrichment:
+        use_when: multiple_unrelated_organic_micropollutant_classes_are_joint_targets
+        prohibited_claim: class_specific_recognition
+  engineering_validation:
+    required: true
+    minimum_release_level: E1
+    E2_requires_full_secondary_effluent_column_regeneration_leaching_stability_package: true
 
 hard_correspondence:
   required_static: 1
@@ -113,8 +202,92 @@ hard_correspondence:
     - measurement
     - causal_control
 
+biomimetic_classification:
+  required_for_every_concept: true
+  classes:
+    functional_biomimicry: biological_system_solves_an_analogous_natural_function_with_direct_evidence
+    biological_mechanism_informed: direct_biological_binding_or_structure_constrains_design_but_is_not_a_natural_pollution_solution
+    rational_chemical_design: no_supported_biological_hard_correspondence
+  rational_design_cannot_be_retrofitted_with_generic_protein_analogy: true
+  engineering_problem_statement_precedes_prototype_retrieval: true
+  minimum_hard_correspondences: 1
+  second_hard_correspondence_is_bonus_not_gate: true
+  dynamic_correspondence_remains_optional: true
+  B_class_alone_cannot_enter_formal_recommendation: true
+
 material_translation:
   default_material_class: synthetic_nonbiological_adsorbent
+  current_product_form: recoverable_solid_particle_or_packed_bed_adsorbent
+  non_ion_exchange_scope:
+    scientific_classification_rule: biomimetic_and_ion_exchange_are_independent_nonexclusive_axes_and_electrostatics_is_not_synonymous_with_ion_exchange
+    main_material_requirement: biomimetic_adsorbent_not_primarily_classified_or_published_as_a_conventional_or_mixed_mode_ion_exchange_resin
+    excluded_as_main_material:
+      - anion_exchange_resin
+      - cation_exchange_resin
+      - mixed_mode_ion_exchange_resin
+      - fixed_charge_material_principally_operating_by_counterion_exchange
+      - spatially_patterned_or_core_shell_material_that_only_rearranges_exchange_sites
+    ion_exchange_allowed_roles:
+      - mandatory_engineering_benchmark
+      - mechanism_control
+    charged_feature_admission:
+      - auxiliary_to_independently_supported_biomimetic_function
+      - principal_innovation_and_performance_not_fully_explained_by_accessible_IEC_Donnan_partition_or_counterion_release
+      - matched_total_charge_deletion_or_mismatch_control_proves_non_exchange_function
+      - salt_dependence_and_counterion_mass_balance_quantify_any_exchange_contribution
+      - all_applicable_biomimetic_and_ion_exchange_labels_are_disclosed
+    minor_or_auxiliary_ion_exchange_automatically_prohibited: false
+    project_boundary_does_not_redefine_scientific_categories: true
+    scientific_consensus: docs/SCIENTIFIC_CONSENSUS_BIOMIMETIC_AND_ION_EXCHANGE.md
+    binding_guidance: docs/MATERIAL_SCOPE_BOUNDARY_ION_EXCHANGE.md
+  excluded_current_product_forms:
+    - membrane_separation
+    - liquid_receiver_process
+  affordability_and_scale:
+    prohibit_default_components:
+      - antibody
+      - protein
+      - peptide
+      - expensive_two_dimensional_material
+      - precious_metal
+      - custom_multistep_host
+    preferred_operations:
+      - simple_suspension_polymerization
+      - bead_formation
+      - one_step_surface_reaction
+      - simple_hydrolysis
+      - furnace_pyrolysis_or_activation
+    added_step_requires_measurable_gain: true
+    comparison_basis:
+      - finished_material_cost_per_kg
+      - material_regeneration_and_waste_cost_per_m3_treated_water
+    arbitrary_material_price_threshold_is_sufficient: false
+  platform_screening:
+    porous_carbon_role: high_priority_low_cost_platform_or_mandatory_engineering_benchmark
+    porous_polymer_role: eligible_when_covalent_placement_bead_form_or_functional_colocalization_is_necessary
+    advanced_framework_rule: MIP_COF_PAF_MOF_require_case_specific_cost_water_stability_leaching_shaping_and_regeneration_gate
+    carrier_class_remains_not_preselected: true
+  local_geometric_constraint_gate:
+    allowed_sources:
+      - rigid_covalent_topology
+      - cyclization_or_preorganized_scaffold
+      - defined_coordination_geometry
+      - verified_multisite_non_covalent_array
+    required_checks:
+      - aqueous_speciation_at_target_pH
+      - salt_DOM_and_competing_ligand_stability
+      - wet_state_accessibility
+      - deletion_position_mismatch_and_random_controls
+      - component_leaching_and_cycle_stability
+      - direct_structural_measurement
+    generic_bond_geometry_alone_is_sufficient: false
+  terminology_policy:
+    biological_evidence_source: biological_prototype_or_exact_biological_category
+    synthetic_recognition_term_zh: 人工识别单元
+    unvalidated_synthetic_term_zh: 候选人工识别单元
+    validated_synthetic_term_zh: 已验证人工识别单元
+    prohibit_unqualified_receptor_for_synthetic_elements: true
+    historical_artifacts_are_not_bulk_rewritten: true
   carrier_class: not_preselected
   carrier_mass_efficiency:
     principle: minimize_inactive_mass_without_sacrificing_selectivity_or_operability
@@ -141,14 +314,6 @@ material_translation:
       - toxicokinetic_and_nonspecific_partitioning_alternatives_considered
       - direct_molecular_or_microenvironment_mechanism_evidence
     active_route_or_next_action_unchanged: true
-  biological_treatment_unit_heuristic:
-    status: optional_non_scoring_reference
-    purpose: discover_candidate_sorption_structural_or_metabolic_mechanisms_in_wwtp_biological_units
-    required_before_material_translation:
-      - documented_unit_level_specific_mechanism_not_bulk_removal
-      - sorption_degradation_and_extracellular_intracellular_attribution_separated
-      - translatable_design_principle_extracted
-    active_route_or_next_action_unchanged: true
   protein_peptide_or_biohybrid_requires_explicit_owner_scope_reopening: true
   prohibited_shortcuts:
     - introduce_protein_or_folded_peptide_only_to_satisfy_dynamic_correspondence
@@ -159,28 +324,135 @@ material_translation:
     - report_capacity_only_per_receptor_or_active_fraction
     - ignore_inert_carrier_mass_in_gravimetric_comparisons
 
-bmdl_gate: removed_from_branch
-
-innovation_check:
-  checklist_file: INNOVATION_CHECKLIST.md
-  required_before_scoring: true
-  dimensions:
-    - mechanism_innovation
-    - material_architecture_innovation
-    - selectivity_strategy_innovation
-    - biomimetic_translation_innovation
-  pass_rule: "at least one dimension must demonstrate clear novelty beyond prior art; pure carrier swap or parameter tuning does not count"
-
-execution_intensity:
-  rule: maximum_thinking_depth_for_all_tasks
-  prohibition: no_shortcuts_no_omission_no_reduced_depth
+bmdl_gate:
+  baseline_must_be_frozen_first: true
+  design_assist:
+    minimum_pairwise_wins: 6
+    minimum_mean_gain: 5
+    maximum_originality_drop: 2
+    maximum_severe_misleading_links: 1
+  exclude_from_design:
+    diversity_ratio_below: 0.80
+    severe_misleading_links_at_least: 2
 
 adversarial_process:
   isolated_roles: true
-  roles:
-    - designer
-    - attacker
-    - reviewer
-  required_rounds_all_concepts: 2
-  final_review_rounds_top_two: 1
+  round_policy: adaptive_until_pass_or_terminate
+  minimum_attack_and_review_cycles_before_release: 1
+  additional_cycle_trigger: any_resolvable_critical_or_high_issue
+  no_fixed_top_two_or_finalist_count: true
   persist_hidden_reasoning: false
+
+modular_lineage_policy:
+  binding_guidance: docs/MODULAR_LINEAGE_RESCUE_AND_REPLATFORMING.md
+  lineage_identity:
+    - frozen_scenario_and_engineering_problem
+    - supported_primary_biological_prototype
+    - specific_testable_transferable_function_rule
+  module_ledger_required:
+    SP: scenario_and_engineering_problem
+    BP: biological_prototype
+    TR: transferable_function_rule
+    ME: material_embodiment
+    SR: synthesis_route
+    ER: experimental_release
+  failure_localization_required: true
+  downstream_failure_automatically_invalidates_upstream: false
+  reviewer_dispositions:
+    - advance_current_embodiment
+    - repair_current_embodiment
+    - reject_embodiment_retain_lineage
+    - retain_prototype_retranslate
+    - retain_as_control
+    - terminate_lineage
+  replatform_when:
+    - SP_and_BP_are_retained
+    - TR_is_specific_necessary_measurable_and_causally_testable
+    - failure_is_limited_to_material_or_synthesis
+    - materially_distinct_implementation_space_remains
+  replatforming_rules:
+    no_fixed_candidate_or_backup_quota: true
+    materially_distinct_not_parameter_tuning: true
+    include_manufacturability_first_implementation_or_document_why_none_exists: true
+    new_embodiment_inherits_score_or_release_status: false
+  terminate_lineage_only_when:
+    - scenario_or_prototype_or_transfer_rule_is_invalid
+    - project_scope_conflict_is_intrinsic
+    - core_publishable_claim_is_fully_occupied_by_prior_art
+    - bounded_materially_distinct_search_is_exhausted
+  owner_supplementary_review_lens:
+    timing: after_independent_design_and_first_attack_are_frozen
+    function: generate_questions_localize_failure_and_check_consistency
+    direct_gate_authority: false
+    perspectives:
+      - environmental_and_materials_domain
+      - novice_operator_safety_and_executability
+      - synthesis_expert_chemistry_and_scale
+      - global_cross_section_consistency
+      - six_link_manuscript_story
+    case_specific_source_verification_required: true
+    examples_cannot_become_blanket_chemistry_rules: true
+
+visual_explanation_prompt_policy:
+  binding_guidance: docs/VISUAL_EXPLANATION_PROMPT_PACKAGE_PROTOCOL.md
+  template: templates/VISUAL_EXPLANATION_PROMPT_PACKAGE_TEMPLATE.md
+  required_for_standalone_owner_facing_statuses:
+    - concept_valid
+    - E1_ready
+    - E2_ready
+  generate_after:
+    - independent_design_frozen
+    - first_attack_frozen
+    - reviewer_adjudication_frozen
+  required_contents:
+    - version_lock_with_source_file_sha256
+    - visual_claim_ledger
+    - reference_asset_manifest
+    - copy_ready_imagegen_prompt
+    - post_render_QC_checklist
+    - targeted_correction_prompt
+  claim_classes:
+    OBSERVED: directly_source_supported
+    ABSTRACTED: source_bounded_transfer_rule
+    PROPOSED: unvalidated_artificial_design_or_interaction
+    UNKNOWN_OMITTED: insufficient_evidence_do_not_draw
+  generated_image_is_evidence: false
+  generated_image_can_change_gate_score_or_release_status: false
+  exact_structural_or_chemical_detail_requires_validated_reference_asset: true
+  prompt_and_image_become_stale_when_source_design_changes: true
+
+rox_mac_if1_rescue:
+  status: terminated_as_main_by_G29_G30_mixed_mode_control_only
+  owner_authorized_directional_redesign: false_superseded_by_current_material_scope
+  target_scope: macrolide_class_joint_removal
+  primary_biological_observation: mature_inactivated_wastewater_biofilm_joint_CLA_ERY_ROX_partition
+  supporting_biophysical_mechanism: shallow_macrolide_partition_at_anionic_lipid_interfaces
+  causal_link_between_observation_and_mechanism_is_already_proven: false
+  artificial_spatial_rule: low_coverage_weak_anionic_shallow_zone_adjacent_to_exposed_low_polarity_pore_wall
+  manufacturing_route_status: not_locked_simplicity_screen_required
+  preferred_manufacturing_envelope:
+    final_form: recoverable_particle_or_packed_bed_adsorbent
+    route_A: commodity_or_simple_suspension_polymerized_porous_bead_plus_one_low_cost_post_treatment
+    route_B: direct_bead_formation_plus_simple_hydrolysis
+    UV_photografting: comparison_route_not_default
+    furnace_treatment: eligible_when_it_preserves_the_required_spatial_rule_and_adds_more_than_generic_carbon_adsorption
+    excluded:
+      - membrane_separation_or_liquid_receiver
+      - antibody_protein_peptide_or_other_labile_biological_reagent
+      - expensive_two_dimensional_material
+      - precious_metal
+      - custom_multistep_host_or_precision_synthesis_without_unique_measured_gain
+  baseline_retention:
+    uniform_MAC_BI1_deleted: false
+    role: uniform_mixed_mode_causal_control
+  required_pre_E1_gates:
+    status: cancelled_do_not_execute
+    historical_B0: biological_interface_class_boundary_against_matched_cationic_amphiphiles
+    historical_M0: same_batch_shallow_deep_uniform_spatial_manufacture_and_characterization
+    historical_C0: spatial_causal_gain_over_composition_pore_and_commercial_controls
+  prohibited_claims_before_gate_pass:
+    - biofilm_EPS_or_lipid_component_is_already_causally_localized
+    - ROX_atomic_interfacial_orientation_is_known
+    - carboxylate_plus_hydrophobicity_is_macrolide_specific
+    - surface_carboxylated_or_core_shell_beads_are_novel_by_themselves
+    - MAC_IF1_is_E1_ready

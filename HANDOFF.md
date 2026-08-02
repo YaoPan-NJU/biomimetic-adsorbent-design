@@ -299,15 +299,34 @@ The pilot audit is `rounds/modular_lineage_recovery_20260802/LINEAGE_RECOVERY_AU
 
 Content checkpoint `1bf83210776ce30630e11847ed0b757ff6853615` was pushed to `origin/main` and restored from a new depth-1 clone. The clone matched the remote head, resolved 184 state artifacts and six snapshot files, scanned 440 tracked files with no credential-pattern hit, recovered the `SP/BP/TR/ME/SR/ER` schema, confirmed zero release-status changes and recovered the owner-review-then-lineage-backfill next action with a clean worktree.
 
+## Visual-explanation prompt-package checkpoint (2026-08-02)
+
+Pan Yao requested that every completed scheme be accompanied by an ImageGen prompt for a publication-quality explanation figure, because a human expert can often detect a wrong biological mechanism, unreasonable functional mapping or implausible material design more easily in a visual narrative than in a long cross-disciplinary report.
+
+The binding workflow is `docs/VISUAL_EXPLANATION_PROMPT_PACKAGE_PROTOCOL.md` and Gate G34. Every standalone owner-facing `concept_valid`, `E1_ready` or `E2_ready` design now receives its prompt package only after independent design, first attack and Reviewer adjudication are frozen. The default figure is A biological evidence, B material-independent functional abstraction, and C proposed artificial material plus a compact synthesis inset and causal controls. A visual claim ledger distinguishes `OBSERVED`, `ABSTRACTED`, `PROPOSED` and `UNKNOWN_OMITTED` content.
+
+Generated images are review aids, not scientific evidence. They cannot close a gate, change a score or advance a release level. Exact PDB geometry, chemical connectivity, quantitative curves and material dimensions require a separately validated reference asset; without one, the prompt must use a schematic rather than allow ImageGen to invent precision. Every render remains `rendered_unreviewed` until text, chemistry, geometry, synthesis order, evidence status and added-claim QC passes. Any material change to SP, BP, TR, ME or SR makes the old prompt and image stale.
+
+The owner-provided ERRγ–BPA–P1-MAPy figure is used only as a workflow reference. Its useful separation of evidence, abstraction and hypothesis was retained, while exact-structure hallucination, incorrect chemical connectivity, dense-text corruption and conceptual-matrix overclaiming are now explicit QC risks. It does not restore the later-revised P1-MAPy scientific route.
+
+Initial copy-ready prompt packages have been backfilled for all three current E1 paper designs:
+
+- `rounds/short_chain_pfas_from_scratch_20260725/visual_prompts/SC-P02_IMAGEGEN_PROMPT.md`;
+- `rounds/bpa_dcp_20x2_deep_design_20260725/visual_prompts/BPA20-01_IMAGEGEN_PROMPT.md`;
+- `rounds/genx_ddt_50x2_deep_design_20260725/visual_prompts/DDT50-01_IMAGEGEN_PROMPT.md`.
+
+This checkpoint does not generate or approve the images themselves and does not authorize procurement, synthesis or experiment. It also corrects the state register to include the already recorded DDT50-01 E1 release alongside SC-P02 and BPA20-01; no scientific status changed.
+
 ## Resume instructions
 
 1. Read `AGENTS.md`, then `SOUL.md`, `PROJECT_STATE.yaml`, `HANDOFF.md` and `research_contract.yaml` in the required exact order.
-2. Read `docs/MODULAR_LINEAGE_RESCUE_AND_REPLATFORMING.md`, Gate G33 and `rounds/modular_lineage_recovery_20260802/LINEAGE_RECOVERY_AUDIT.md`; these define the current unique next action and failure-localization rules.
-3. Backfill SP–ER ledgers for active `concept_valid` lineages only after Pan Yao confirms the protocol. Do not bulk relabel historical files or inherit scores and E1 states.
-4. For practical GenX removal preserve the class-wide SC-P02 rule: PFBS/PFBA/PFHxA/GenX are tested together, long-chain PFAS are references/co-targets, and class mean cannot mask the worst member.
-5. Do not relabel GX50-01 E1 before its dummy-geometry M0 passes. Do not revive the historical HSA S3 route or rescue a failure with GenX direct template, permanent charge or fluorinated monomers.
-6. If separately authorized, execute DDT50-01 as one same-batch seven-material set and apply PACKING/POSE/BARRIER stops before any sub-ng/L column expansion. DDT is a DDT/DDE/DDD family target and all water samples retain the three analytical fractions.
-7. Do not alter SC-P02 before owner review. If approved, execute M0/Q0 first; if either fails, distinguish manufacturing failure from TR causal failure before any lineage disposition. Keep SC-P01, SC-P04 and SC-P05 as mandatory causal controls.
-8. Read `rounds/bpa_dcp_20x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md`. DCP material ideation is complete; do not relabel DCP20-01 E1 or start synthesis until a second independent secondary-effluent source with usable LOQ, sampling location and analytical fraction closes ENV-STOP.
-9. Preserve every historical artifact; do not order materials or start experiments until Pan Yao separately approves laboratory execution.
-10. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.
+2. Read `docs/MODULAR_LINEAGE_RESCUE_AND_REPLATFORMING.md`, Gate G33 and `rounds/modular_lineage_recovery_20260802/LINEAGE_RECOVERY_AUDIT.md`; these define failure-localization and replatforming rules.
+3. Read `docs/VISUAL_EXPLANATION_PROMPT_PACKAGE_PROTOCOL.md`, Gate G34 and the applicable scheme prompt before any standalone owner delivery. Generated images never count as evidence and must pass visual QC.
+4. Backfill SP–ER ledgers and visual prompt packages for active standalone `concept_valid` lineages only after Pan Yao confirms the protocols. Start with GX50-01 and DCP20-01. Do not bulk relabel historical files or inherit scores and E1 states.
+5. For practical GenX removal preserve the class-wide SC-P02 rule: PFBS/PFBA/PFHxA/GenX are tested together, long-chain PFAS are references/co-targets, and class mean cannot mask the worst member.
+6. Do not relabel GX50-01 E1 before its dummy-geometry M0 passes. Do not revive the historical HSA S3 route or rescue a failure with GenX direct template, permanent charge or fluorinated monomers.
+7. If separately authorized, execute DDT50-01 as one same-batch seven-material set and apply PACKING/POSE/BARRIER stops before any sub-ng/L column expansion. DDT is a DDT/DDE/DDD family target and all water samples retain the three analytical fractions.
+8. Do not alter SC-P02 before owner review. If approved, execute M0/Q0 first; if either fails, distinguish manufacturing failure from TR causal failure before any lineage disposition. Keep SC-P01, SC-P04 and SC-P05 as mandatory causal controls.
+9. Read `rounds/bpa_dcp_20x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md`. DCP material ideation is complete; do not relabel DCP20-01 E1 or start synthesis until a second independent secondary-effluent source with usable LOQ, sampling location and analytical fraction closes ENV-STOP.
+10. Preserve every historical artifact; do not order materials or start experiments until Pan Yao separately approves laboratory execution.
+11. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

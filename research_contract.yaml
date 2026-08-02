@@ -19,6 +19,7 @@ deliverable:
     - adsorption, selectivity, matrix, regeneration, leaching, and stability experiments
     - success and failure criteria
     - evidence ledger and adversarial audit trail
+    - version_locked_visual_explanation_prompt_package_for_each_standalone_owner_facing_design
   excludes:
     - actual laboratory execution
     - experimental results
@@ -391,6 +392,34 @@ modular_lineage_policy:
       - six_link_manuscript_story
     case_specific_source_verification_required: true
     examples_cannot_become_blanket_chemistry_rules: true
+
+visual_explanation_prompt_policy:
+  binding_guidance: docs/VISUAL_EXPLANATION_PROMPT_PACKAGE_PROTOCOL.md
+  template: templates/VISUAL_EXPLANATION_PROMPT_PACKAGE_TEMPLATE.md
+  required_for_standalone_owner_facing_statuses:
+    - concept_valid
+    - E1_ready
+    - E2_ready
+  generate_after:
+    - independent_design_frozen
+    - first_attack_frozen
+    - reviewer_adjudication_frozen
+  required_contents:
+    - version_lock_with_source_file_sha256
+    - visual_claim_ledger
+    - reference_asset_manifest
+    - copy_ready_imagegen_prompt
+    - post_render_QC_checklist
+    - targeted_correction_prompt
+  claim_classes:
+    OBSERVED: directly_source_supported
+    ABSTRACTED: source_bounded_transfer_rule
+    PROPOSED: unvalidated_artificial_design_or_interaction
+    UNKNOWN_OMITTED: insufficient_evidence_do_not_draw
+  generated_image_is_evidence: false
+  generated_image_can_change_gate_score_or_release_status: false
+  exact_structural_or_chemical_detail_requires_validated_reference_asset: true
+  prompt_and_image_become_stale_when_source_design_changes: true
 
 rox_mac_if1_rescue:
   status: terminated_as_main_by_G29_G30_mixed_mode_control_only

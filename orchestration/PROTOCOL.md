@@ -26,8 +26,9 @@
 3. `A2 material science`：先冻结不依赖材料名称的TR可转译功能原则，再对每个ME材料实现分别完成确切实体、水相化学、匹配对照、选择性机制、先例攻击和SR合成审查。
 4. `A3 engineering release`：E1或E2所需SOP、质量账本、分析、二级出水/床层矩阵和停止阈值完整。
 5. `A4 adversarial review`：至少一次隔离攻击和独立Reviewer裁决，无未解决critical/high；必须提交SP–ER模块台账、最早断裂点、失败传播范围和谱系处置。
-6. `A5 rolling delivery`：方案单独交付潘尧审阅，不等待固定批次、主备组合或数量目标。
-7. `A6 continuity`：状态一致、凭据扫描通过、远端已推送、全新克隆可恢复唯一下一动作。
+6. `A5 visual explanation`：独立方案进入 owner 交付前，按 Gate G34 生成版本锁定的 ImageGen 提示词包；图像不参与证据和状态裁决。
+7. `A6 rolling delivery`：方案单独交付潘尧审阅，不等待固定批次、主备组合或数量目标。
+8. `A7 continuity`：状态一致、凭据扫描通过、远端已推送、全新克隆可恢复唯一下一动作。
 
 每个门禁必须由主代理独立检查产物和校验结果，并在 `orchestration/gates/` 写入记录后，才能进入下一阶段。门禁记录只保存可审计的结论和证据，不保存模型隐藏推理。
 

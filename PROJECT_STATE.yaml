@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: modular_lineage_rescue_protocol_integrated_owner_review_and_backfill
+phase: visual_explanation_prompt_workflow_integrated_initial_E1_backfill
 status: in_progress
-last_completed_step: "Integrated the owner-requested design-lineage correction without lowering Gate A/B/C or E1/E2. New work now separates SP scenario/problem, BP biological prototype, TR transferable rule, ME material embodiment, SR synthesis route and ER release. Reviewers must localize the first broken module and distinguish embodiment rejection from whole-lineage termination. Pan Yao's domain, novice-operator, synthesis-expert, cross-section and six-link story lenses enter only after independent design and first attack are frozen and cannot directly change status. A pilot audit reclassified the failure propagation of SC-P02, BPA20-01, DDT50-01, GX50-01, DCP20-01 and S1-SYN without changing any release status or authorizing laboratory work."
-next_action: "Pan Yao reviews docs/MODULAR_LINEAGE_RESCUE_AND_REPLATFORMING.md and rounds/modular_lineage_recovery_20260802/LINEAGE_RECOVERY_AUDIT.md. After confirmation, Codex backfills SP-ER module ledgers for active concept_valid lineages before generating more materials, starting with the BPA anchor-gate, DDT membrane-packing, GenX Bug/TauA and DCP EPS-barrier lineages. Existing SC-P02 BPA20-01 and DDT50-01 E1 statuses remain paper-only; no procurement synthesis or experiment is authorized."
+last_completed_step: "Integrated an owner-requested visual-explanation workflow for human expert review. Every standalone owner-facing concept_valid, E1 or E2 package now requires a version-locked ImageGen prompt package generated only after independent design, first attack and reviewer adjudication are frozen. The package separates OBSERVED biological evidence, ABSTRACTED transfer logic, PROPOSED artificial design and UNKNOWN_OMITTED details; it also includes reference-asset requirements, synthesis logic, causal controls, post-render QC and a targeted correction prompt. Initial copy-ready packages were backfilled for SC-P02, BPA20-01 and DDT50-01. Generated images remain non-evidentiary and no release status or laboratory authorization changed."
+next_action: "Pan Yao reviews the G33 lineage protocol together with docs/VISUAL_EXPLANATION_PROMPT_PACKAGE_PROTOCOL.md and the three initial E1 prompt packages. Any generated render must pass the package-specific visual QC before formal use. After owner confirmation, Codex backfills SP-ER ledgers and visual prompt packages for standalone active concept_valid lineages, starting with GX50-01 and DCP20-01; no procurement synthesis or experiment is authorized."
 active_branch: main
 last_verified_commit: 1bf83210776ce30630e11847ed0b757ff6853615
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -192,6 +192,22 @@ modular_lineage_rescue_20260802:
     L_GENX_01: classwide_lineage_retained_GenX_specific_dummy_geometry_conditional
     L_DCP_01: SP_scenario_blocked_material_replatforming_cannot_fix_environment_evidence
     L_S1SYN_01: SP_BP_retained_TR_requires_retranslation_before_carrier_changes
+  release_status_changes: none
+  no_procurement_or_experiment_authorized: true
+visual_explanation_prompt_workflow_20260802:
+  status: binding_protocol_integrated_initial_E1_backfill_complete_validation_pending
+  gate: G34_VISUAL_EXPLANATION_PROMPT_PACKAGE
+  required_for_standalone_owner_facing_statuses: [concept_valid, E1_ready, E2_ready]
+  timing: after_independent_design_first_attack_and_reviewer_adjudication_are_frozen
+  claim_classes: [OBSERVED, ABSTRACTED, PROPOSED, UNKNOWN_OMITTED]
+  generated_image_is_evidence: false
+  generated_image_can_change_gate_score_or_release_status: false
+  exact_structural_detail_requires_validated_reference_asset: true
+  initial_backfill:
+    - SC-P02_PG-PMO
+    - BPA20-01_AG-COF
+    - DDT50-01_LPO-SIP
+  reference_ERRgamma_BPA_P1_MAPy_role: historical_workflow_reference_only_not_current_scientific_source
   release_status_changes: none
   no_procurement_or_experiment_authorized: true
 historical_candidate_pollutants:
@@ -409,10 +425,12 @@ fixed_primary_backup_labels_active: false
 formal_recommended_designs:
   - SC-P02_PG-PMO
   - BPA20-01_AG-COF
+  - DDT50-01_LPO-SIP
 experiment_release_register:
   E1_ready:
     - SC-P02_PG-PMO_owner_review_pending
     - BPA20-01_AG-COF_owner_review_pending
+    - DDT50-01_LPO-SIP_owner_review_pending
   E2_ready: []
 superseded_finalists:
   - D1-A synthetic double-arm phosphate peptide clamp (93/100 historical design pass)
@@ -653,7 +671,17 @@ open_issues:
     severity: high
     status: resolved_binding_protocol_owner_review_pending
     text: Prevent a material-specific synthesis manufacturability or structural-precision failure from automatically invalidating a supported scenario biological prototype and transferable function rule; require module-level failure localization and bounded replatforming without inherited scores or lowered gates.
+  - id: VISUAL-001
+    severity: high
+    status: resolved_binding_protocol_initial_E1_backfill_complete
+    text: Provide every standalone owner-facing concept-valid or experiment-ready design with an auditable ImageGen prompt package that visually separates evidence, abstraction and unvalidated material hypotheses and requires post-render scientific QC.
 artifacts:
+  visual_explanation_prompt_protocol: docs/VISUAL_EXPLANATION_PROMPT_PACKAGE_PROTOCOL.md
+  visual_explanation_prompt_template: templates/VISUAL_EXPLANATION_PROMPT_PACKAGE_TEMPLATE.md
+  gate_g34_visual_explanation_prompt_package: orchestration/gates/G34_VISUAL_EXPLANATION_PROMPT_PACKAGE.yaml
+  SC_P02_visual_explanation_prompt: rounds/short_chain_pfas_from_scratch_20260725/visual_prompts/SC-P02_IMAGEGEN_PROMPT.md
+  BPA20_01_visual_explanation_prompt: rounds/bpa_dcp_20x2_deep_design_20260725/visual_prompts/BPA20-01_IMAGEGEN_PROMPT.md
+  DDT50_01_visual_explanation_prompt: rounds/genx_ddt_50x2_deep_design_20260725/visual_prompts/DDT50-01_IMAGEGEN_PROMPT.md
   modular_lineage_rescue_protocol: docs/MODULAR_LINEAGE_RESCUE_AND_REPLATFORMING.md
   modular_lineage_recovery_pilot_audit: rounds/modular_lineage_recovery_20260802/LINEAGE_RECOVERY_AUDIT.md
   gate_g33_modular_lineage_rescue_and_replatforming: orchestration/gates/G33_MODULAR_LINEAGE_RESCUE_AND_REPLATFORMING.yaml

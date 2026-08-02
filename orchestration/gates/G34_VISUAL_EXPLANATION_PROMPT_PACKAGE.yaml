@@ -1,0 +1,42 @@
+gate: G34_VISUAL_EXPLANATION_PROMPT_PACKAGE
+status: binding_owner_direction_integrated
+date: 2026-08-02
+owner_direction:
+  problem: text_only_design_packages_make_cross_domain_mechanism_and_mapping_errors_hard_for_human_experts_to_detect
+  decision: every_standalone_owner_facing_concept_valid_E1_or_E2_design_requires_an_auditable_imagegen_prompt_package
+binding_protocol: docs/VISUAL_EXPLANATION_PROMPT_PACKAGE_PROTOCOL.md
+template: templates/VISUAL_EXPLANATION_PROMPT_PACKAGE_TEMPLATE.md
+timing:
+  generate_after: independent_design_first_attack_and_reviewer_decision_are_frozen
+  required_before: standalone_owner_delivery
+  may_influence_design_generation: false
+required_sections:
+  - version_lock
+  - visual_claim_ledger
+  - reference_asset_manifest
+  - copy_ready_imagegen_prompt
+  - post_render_qc_checklist
+  - targeted_correction_prompt
+claim_classes:
+  - OBSERVED
+  - ABSTRACTED
+  - PROPOSED
+  - UNKNOWN_OMITTED
+non_evidentiary_boundary:
+  generated_image_is_scientific_evidence: false
+  generated_image_can_change_gate_or_release_status: false
+  proposed_material_must_be_marked_unvalidated: true
+precision_rule:
+  exact_PDB_geometry_requires_validated_reference_asset: true
+  exact_chemical_connectivity_requires_validated_reference_asset: true
+  safe_fallback_without_asset: schematic_without_atomic_or_quantitative_precision
+stale_when:
+  - any_SP_BP_TR_ME_SR_module_materially_changes
+  - release_status_or_stop_rule_changes
+  - evidence_invalidates_a_depicted_relation
+  - source_design_sha256_changes
+initial_backfill:
+  - SC-P02
+  - BPA20-01
+  - DDT50-01
+release_status_changes: none

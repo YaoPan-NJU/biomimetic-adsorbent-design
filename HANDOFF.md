@@ -285,14 +285,27 @@ The status distribution is intentionally sparse: GenX has zero new E1, 12 concep
 
 Content checkpoint `5fad9f01c9845120ad2a36d26a83669116e15559` was pushed to `origin/main` and restored from a new depth-1 clone. The clone matched the remote head, parsed `PROJECT_STATE.yaml`, resolved all 181 declared artifact paths, parsed 202 unique evidence rows through E202, reproduced exactly 50 unique GX50 and 50 unique DDT50 rows, verified every six-component score sum, recovered the GX50-01 M0 and DDT50-01 same-batch M0 as the next actions, found no checkpoint credential-pattern hit, and had a clean worktree.
 
+## Modular design-lineage rescue checkpoint (2026-08-02)
+
+Pan Yao identified a process error: a scheme can have a precise secondary-effluent problem, strong biological prototype and valuable transferable principle, yet be discarded because the first material embodiment is too difficult to synthesize or requires unrealistic structural precision. Material design and synthesis are not unique solutions, so a downstream implementation failure must not silently erase supported upstream research assets.
+
+The binding correction is `docs/MODULAR_LINEAGE_RESCUE_AND_REPLATFORMING.md` and Gate G33. Every new review separates `SP` scenario/problem, `BP` biological prototype, `TR` transferable function rule, `ME` material embodiment, `SR` synthesis route and `ER` experimental release. Reviewers must identify the first broken module, failure propagation, retained assets and one of six dispositions. New work uses `embodiment_rejected` for a material-specific failure and `terminate_lineage` only for invalid upstream evidence, intrinsic scope conflict, fully occupied core prior art or an exhausted bounded search. Historical bare `terminated` records remain unchanged.
+
+Gate A/B/C and E1/E2 are unchanged. Retaining a lineage is not candidate advancement, performance evidence or laboratory authorization. A replatformed material receives a new identity and must repeat prior-art, causal-control, synthesis and release review without inheriting a score or status. When SP, BP and TR remain strong and the failure is limited to platform, precision, safety, shaping, scale or QC, the project compares a materially distinct manufacturability-first implementation or documents why no such implementation exists; it does not impose a fixed backup quota.
+
+Pan Yao's supplied review experience is integrated only after independent design and the first attack are frozen. It adds domain, novice-operator, synthesis-expert, cross-section consistency and six-link manuscript-story questions. It has no direct gate authority. Specific examples such as coupling systems, magnetic mass penalties, pore blocking or strong-acid/base hazards must be verified for the actual chemistry rather than encoded as universal prohibitions.
+
+The pilot audit is `rounds/modular_lineage_recovery_20260802/LINEAGE_RECOVERY_AUDIT.md`. It leaves all release states unchanged but clarifies failure propagation. SC-P02 manufacture failure would retain the short-chain-PFAS lineage unless spatial causality itself fails. BPA20-04 is not automatically a same-lineage backup for AG-COF because its wall-gate fidelity is weaker. DDT `POSE` failure can retain the membrane-packing lineage, whereas `PACKING` failure breaks the core TR rule. GenX dummy failure does not invalidate the class-wide Bug/TauA lineage. DCP remains blocked at the environmental SP module, and S1-SYN requires TR retranslation rather than another carrier change.
+
 ## Resume instructions
 
 1. Read `AGENTS.md`, then `SOUL.md`, `PROJECT_STATE.yaml`, `HANDOFF.md` and `research_contract.yaml` in the required exact order.
-2. Read `rounds/genx_ddt_50x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md` and `ATTACK_AND_REVIEW.md`; these contain the current unique next actions.
-3. For practical GenX removal preserve the class-wide SC-P02 rule: PFBS/PFBA/PFHxA/GenX are tested together, long-chain PFAS are references/co-targets, and class mean cannot mask the worst member.
-4. Do not relabel GX50-01 E1 before its dummy-geometry M0 passes. Do not revive the historical HSA S3 route or rescue a failure with GenX direct template, permanent charge or fluorinated monomers.
-5. If separately authorized, execute DDT50-01 as one same-batch seven-material set and apply PACKING/POSE/BARRIER stops before any sub-ng/L column expansion. DDT is a DDT/DDE/DDD family target and all water samples retain the three analytical fractions.
-6. Do not alter SC-P02 before owner review. If approved, execute M0/Q0 first; if either fails, terminate rather than redesign around charge or fluorine. Keep SC-P01, SC-P04 and SC-P05 as mandatory causal controls.
-7. Read `rounds/bpa_dcp_20x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md`. DCP material ideation is complete; do not relabel DCP20-01 E1 or start synthesis until a second independent secondary-effluent source with usable LOQ, sampling location and analytical fraction closes ENV-STOP.
-8. Preserve every historical artifact; do not order materials or start experiments until Pan Yao separately approves laboratory execution.
-9. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.
+2. Read `docs/MODULAR_LINEAGE_RESCUE_AND_REPLATFORMING.md`, Gate G33 and `rounds/modular_lineage_recovery_20260802/LINEAGE_RECOVERY_AUDIT.md`; these define the current unique next action and failure-localization rules.
+3. Backfill SP–ER ledgers for active `concept_valid` lineages only after Pan Yao confirms the protocol. Do not bulk relabel historical files or inherit scores and E1 states.
+4. For practical GenX removal preserve the class-wide SC-P02 rule: PFBS/PFBA/PFHxA/GenX are tested together, long-chain PFAS are references/co-targets, and class mean cannot mask the worst member.
+5. Do not relabel GX50-01 E1 before its dummy-geometry M0 passes. Do not revive the historical HSA S3 route or rescue a failure with GenX direct template, permanent charge or fluorinated monomers.
+6. If separately authorized, execute DDT50-01 as one same-batch seven-material set and apply PACKING/POSE/BARRIER stops before any sub-ng/L column expansion. DDT is a DDT/DDE/DDD family target and all water samples retain the three analytical fractions.
+7. Do not alter SC-P02 before owner review. If approved, execute M0/Q0 first; if either fails, distinguish manufacturing failure from TR causal failure before any lineage disposition. Keep SC-P01, SC-P04 and SC-P05 as mandatory causal controls.
+8. Read `rounds/bpa_dcp_20x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md`. DCP material ideation is complete; do not relabel DCP20-01 E1 or start synthesis until a second independent secondary-effluent source with usable LOQ, sampling location and analytical fraction closes ENV-STOP.
+9. Preserve every historical artifact; do not order materials or start experiments until Pan Yao separately approves laboratory execution.
+10. Update this file and `PROJECT_STATE.yaml` before every checkpoint commit and push.

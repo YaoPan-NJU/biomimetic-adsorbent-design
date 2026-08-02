@@ -1,9 +1,9 @@
 schema_version: 1
 project: biomimetic-adsorbent-design
-phase: GenX_DDT_50x2_design_DDT_E1_and_GenX_M0_owner_review
+phase: modular_lineage_rescue_protocol_integrated_owner_review_and_backfill
 status: in_progress
-last_completed_step: "Executed the owner-requested GenX and DDT 50-by-2 exploration. One hundred exact material entities received innovation-checklist dispositions, six-dimension diagnostic scores, attack findings and status-first ranking. The historical GenX HSA three-point pocket remains terminated and was not renamed or revived. GX50-01 BGE-SIP is the best new GenX-specific hypothesis at 84/100 but remains concept_valid because the nonfluorinated dummy-template geometry is an unresolved M0 critical; the already released class-wide SC-P02 remains the practical GenX removal route. DDT was frozen as a DDT DDE DDD family target with whole filtered and particulate fractions separated. DDT50-01 LPO-SIP passed environmental innovation and owner gates at 87/100 and is E1 mechanism-validation ready with zero unresolved paper-stage critical/high issues. Performance remains unproven."
-next_action: "Pan Yao reviews rounds/genx_ddt_50x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md and ATTACK_AND_REVIEW.md. After separate laboratory authorization DDT50-01 starts with one same-batch seven-material M0 set and advances to sub-ng/L secondary-effluent E1 only if PACKING POSE and BARRIER passes are met. GX50-01 is limited to a 50-to-100 mg M0 batch; it cannot be relabeled E1 unless dummy geometry produces the preregistered GenX differential effect. SC-P02 remains the practical class-wide GenX E1 route and must report each PFBS PFBA PFHxA and GenX member. No procurement synthesis or experiment is authorized by this paper checkpoint."
+last_completed_step: "Integrated the owner-requested design-lineage correction without lowering Gate A/B/C or E1/E2. New work now separates SP scenario/problem, BP biological prototype, TR transferable rule, ME material embodiment, SR synthesis route and ER release. Reviewers must localize the first broken module and distinguish embodiment rejection from whole-lineage termination. Pan Yao's domain, novice-operator, synthesis-expert, cross-section and six-link story lenses enter only after independent design and first attack are frozen and cannot directly change status. A pilot audit reclassified the failure propagation of SC-P02, BPA20-01, DDT50-01, GX50-01, DCP20-01 and S1-SYN without changing any release status or authorizing laboratory work."
+next_action: "Pan Yao reviews docs/MODULAR_LINEAGE_RESCUE_AND_REPLATFORMING.md and rounds/modular_lineage_recovery_20260802/LINEAGE_RECOVERY_AUDIT.md. After confirmation, Codex backfills SP-ER module ledgers for active concept_valid lineages before generating more materials, starting with the BPA anchor-gate, DDT membrane-packing, GenX Bug/TauA and DCP EPS-barrier lineages. Existing SC-P02 BPA20-01 and DDT50-01 E1 statuses remain paper-only; no procurement synthesis or experiment is authorized."
 active_branch: main
 last_verified_commit: 5fad9f01c9845120ad2a36d26a83669116e15559
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
@@ -158,6 +158,30 @@ GenX_DDT_50x2_deep_design_20260725:
     GenX: {E1_ready: 0, concept_valid: 12, control_only: 17, terminated: 21}
     DDT: {E1_ready: 1, concept_valid: 12, control_only: 22, terminated: 15}
   formal_recommendation_count_added: 1
+  no_procurement_or_experiment_authorized: true
+modular_lineage_rescue_20260802:
+  status: binding_protocol_integrated_pilot_audit_complete_no_release_change
+  gate: G33_MODULAR_LINEAGE_RESCUE_AND_REPLATFORMING
+  modules: [SP_scenario_problem, BP_biological_prototype, TR_transfer_rule, ME_material_embodiment, SR_synthesis_route, ER_experimental_release]
+  reviewer_dispositions:
+    - advance_current_embodiment
+    - repair_current_embodiment
+    - reject_embodiment_retain_lineage
+    - retain_prototype_retranslate
+    - retain_as_control
+    - terminate_lineage
+  owner_review_lens:
+    timing: after_independent_design_and_first_attack_are_frozen
+    direct_gate_authority: false
+    case_specific_verification_required: true
+  pilot_lineages:
+    L_SCPFAS_01: lineage_active_SC_P02_E1_manufacture_failure_does_not_automatically_invalidate_TR
+    L_BPA_01: lineage_active_AG_COF_E1_MAPy_gradient_not_an_automatic_same_lineage_backup
+    L_DDT_01: lineage_active_DDT50_01_E1_POSE_failure_can_retain_PACKING_lineage_PACKING_failure_breaks_TR
+    L_GENX_01: classwide_lineage_retained_GenX_specific_dummy_geometry_conditional
+    L_DCP_01: SP_scenario_blocked_material_replatforming_cannot_fix_environment_evidence
+    L_S1SYN_01: SP_BP_retained_TR_requires_retranslation_before_carrier_changes
+  release_status_changes: none
   no_procurement_or_experiment_authorized: true
 historical_candidate_pollutants:
   - bisphenol A
@@ -614,7 +638,14 @@ open_issues:
     severity: critical
     status: in_progress_successor_action
     text: Freeze PFHxS occurrence distribution analytical fraction secondary-effluent matrix PFSA-class competitors temporal variability engineering endpoint and environmental/mechanism/capacity concentration tiers before reopening prototype or material design.
+  - id: LINEAGE-001
+    severity: high
+    status: resolved_binding_protocol_owner_review_pending
+    text: Prevent a material-specific synthesis manufacturability or structural-precision failure from automatically invalidating a supported scenario biological prototype and transferable function rule; require module-level failure localization and bounded replatforming without inherited scores or lowered gates.
 artifacts:
+  modular_lineage_rescue_protocol: docs/MODULAR_LINEAGE_RESCUE_AND_REPLATFORMING.md
+  modular_lineage_recovery_pilot_audit: rounds/modular_lineage_recovery_20260802/LINEAGE_RECOVERY_AUDIT.md
+  gate_g33_modular_lineage_rescue_and_replatforming: orchestration/gates/G33_MODULAR_LINEAGE_RESCUE_AND_REPLATFORMING.yaml
   innovation_checklist: INNOVATION_CHECKLIST.md
   GenX_DDT_50x2_deep_design_and_scorecard: rounds/genx_ddt_50x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md
   GenX_DDT_50x2_attack_and_review: rounds/genx_ddt_50x2_deep_design_20260725/ATTACK_AND_REVIEW.md

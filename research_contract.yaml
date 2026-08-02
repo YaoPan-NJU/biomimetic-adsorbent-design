@@ -342,6 +342,56 @@ adversarial_process:
   no_fixed_top_two_or_finalist_count: true
   persist_hidden_reasoning: false
 
+modular_lineage_policy:
+  binding_guidance: docs/MODULAR_LINEAGE_RESCUE_AND_REPLATFORMING.md
+  lineage_identity:
+    - frozen_scenario_and_engineering_problem
+    - supported_primary_biological_prototype
+    - specific_testable_transferable_function_rule
+  module_ledger_required:
+    SP: scenario_and_engineering_problem
+    BP: biological_prototype
+    TR: transferable_function_rule
+    ME: material_embodiment
+    SR: synthesis_route
+    ER: experimental_release
+  failure_localization_required: true
+  downstream_failure_automatically_invalidates_upstream: false
+  reviewer_dispositions:
+    - advance_current_embodiment
+    - repair_current_embodiment
+    - reject_embodiment_retain_lineage
+    - retain_prototype_retranslate
+    - retain_as_control
+    - terminate_lineage
+  replatform_when:
+    - SP_and_BP_are_retained
+    - TR_is_specific_necessary_measurable_and_causally_testable
+    - failure_is_limited_to_material_or_synthesis
+    - materially_distinct_implementation_space_remains
+  replatforming_rules:
+    no_fixed_candidate_or_backup_quota: true
+    materially_distinct_not_parameter_tuning: true
+    include_manufacturability_first_implementation_or_document_why_none_exists: true
+    new_embodiment_inherits_score_or_release_status: false
+  terminate_lineage_only_when:
+    - scenario_or_prototype_or_transfer_rule_is_invalid
+    - project_scope_conflict_is_intrinsic
+    - core_publishable_claim_is_fully_occupied_by_prior_art
+    - bounded_materially_distinct_search_is_exhausted
+  owner_supplementary_review_lens:
+    timing: after_independent_design_and_first_attack_are_frozen
+    function: generate_questions_localize_failure_and_check_consistency
+    direct_gate_authority: false
+    perspectives:
+      - environmental_and_materials_domain
+      - novice_operator_safety_and_executability
+      - synthesis_expert_chemistry_and_scale
+      - global_cross_section_consistency
+      - six_link_manuscript_story
+    case_specific_source_verification_required: true
+    examples_cannot_become_blanket_chemistry_rules: true
+
 rox_mac_if1_rescue:
   status: terminated_as_main_by_G29_G30_mixed_mode_control_only
   owner_authorized_directional_redesign: false_superseded_by_current_material_scope

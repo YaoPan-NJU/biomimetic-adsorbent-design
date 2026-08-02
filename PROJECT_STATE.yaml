@@ -5,7 +5,7 @@ status: in_progress
 last_completed_step: "Integrated an owner-requested visual-explanation workflow for human expert review. Every standalone owner-facing concept_valid, E1 or E2 package now requires a version-locked ImageGen prompt package generated only after independent design, first attack and reviewer adjudication are frozen. The package separates OBSERVED biological evidence, ABSTRACTED transfer logic, PROPOSED artificial design and UNKNOWN_OMITTED details; it also includes reference-asset requirements, synthesis logic, causal controls, post-render QC and a targeted correction prompt. Initial copy-ready packages were backfilled for SC-P02, BPA20-01 and DDT50-01. Generated images remain non-evidentiary and no release status or laboratory authorization changed."
 next_action: "Pan Yao reviews the G33 lineage protocol together with docs/VISUAL_EXPLANATION_PROMPT_PACKAGE_PROTOCOL.md and the three initial E1 prompt packages. Any generated render must pass the package-specific visual QC before formal use. After owner confirmation, Codex backfills SP-ER ledgers and visual prompt packages for standalone active concept_valid lineages, starting with GX50-01 and DCP20-01; no procurement synthesis or experiment is authorized."
 active_branch: main
-last_verified_commit: 1bf83210776ce30630e11847ed0b757ff6853615
+last_verified_commit: f3a989090d2d374af7545c4e9c82929b05e5141a
 bmdl_policy: exclude_design_stage_allow_posthoc_negative_audit_only
 candidate_pool_status: adaptive_open_discovery_no_fixed_pollutant_scheme_or_finalist_count
 candidate_count_policy:
@@ -195,7 +195,19 @@ modular_lineage_rescue_20260802:
   release_status_changes: none
   no_procurement_or_experiment_authorized: true
 visual_explanation_prompt_workflow_20260802:
-  status: binding_protocol_integrated_initial_E1_backfill_complete_validation_pending
+  status: binding_protocol_integrated_initial_E1_backfill_pushed_fresh_clone_validated
+  checkpoint_content_commit: f3a989090d2d374af7545c4e9c82929b05e5141a
+  remote_push: origin_main_equal_at_f3a989090d2d374af7545c4e9c82929b05e5141a
+  fresh_clone_validation: passed_at_f3a989090d2d374af7545c4e9c82929b05e5141a
+  fresh_clone_checks:
+    state_paths: passed_190_artifacts_zero_missing
+    snapshot_files: passed_6
+    credential_patterns: passed_446_tracked_files_zero_hits
+    prompt_packages: passed_3_required_sections_and_source_hashes
+    formal_E1_registry: passed_SC_P02_BPA20_01_DDT50_01
+    generated_image_non_evidence_boundary: recovered
+    next_action_recovery: passed_owner_review_then_GX50_01_and_DCP20_01_backfill
+    worktree: clean
   gate: G34_VISUAL_EXPLANATION_PROMPT_PACKAGE
   required_for_standalone_owner_facing_statuses: [concept_valid, E1_ready, E2_ready]
   timing: after_independent_design_first_attack_and_reviewer_adjudication_are_frozen
@@ -867,6 +879,13 @@ artifacts:
   gate_g6_delivery: orchestration/gates/G6_DELIVERY.yaml
   fresh_clone_readback: orchestration/FRESH_CLONE_READBACK.md
 checks:
+  visual_prompt_workflow_content_commit: f3a989090d2d374af7545c4e9c82929b05e5141a
+  visual_prompt_workflow_remote_push: origin_main_equal_at_f3a989090d2d374af7545c4e9c82929b05e5141a
+  visual_prompt_workflow_fresh_clone: passed_at_f3a989090d2d374af7545c4e9c82929b05e5141a
+  visual_prompt_workflow_state_paths: passed_190_artifacts_zero_missing
+  visual_prompt_workflow_secrets_scan: passed_446_tracked_files
+  visual_prompt_workflow_packages: passed_3_packages_required_sections_source_hashes_and_non_evidence_boundary
+  visual_prompt_workflow_registry: passed_SC_P02_BPA20_01_DDT50_01_E1_owner_review_pending
   portfolio_30_classwide_report_commit: passed_at_e3ff34083c9abc724a9366ec4b07fc746c2c9af1
   portfolio_30_classwide_fresh_clone: passed_origin_main_equal_e3ff34083c9a
   portfolio_30_classwide_state_paths: passed_175_artifacts_zero_missing

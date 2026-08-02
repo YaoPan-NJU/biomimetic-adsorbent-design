@@ -1,0 +1,55 @@
+gate: G35_ULTIMATE_R4_SCIENTIFIC_SYNTHESIS_AUDIT
+status: passed_zero_owner_ready_release
+date: 2026-08-02
+input:
+  branch_ref: origin/Ultimate@d26d423cb84160cd962c1a2c6cc813544632556e
+  archive: rounds/fresh_1000_R4
+  nominal_ids: 1000
+  independently_expanded_concept_cards: 140
+  table_or_score_only_ids: 460
+  ids_without_per_id_record: 400
+governance:
+  inherited_scores_or_pass_states: false
+  review_modules: [SP, BP, TR, ME, SR, ER]
+  total_score_can_compensate_hard_gate: false
+  minimum_owner_and_image_release: E1_ready
+scenario_audit:
+  valid: [PFOA, PFBS, PFHxS, BPA, NP, ROX]
+  conditional_pause_design: [GenX, Octocrylene, 2_6_DCP, DDT, DDE, Endosulfan, beta_HCH, BDE_209]
+  invalid_stop_current_scenario: [PCP, Dieldrin, PCB_209, HCBD, TCDD, Chloroform]
+prototype_corrections:
+  dieldrin_epoxide_hydrolase: primary_evidence_reports_resistance_fatal
+  fluoride_riboswitch: free_fluoride_not_covalent_C_F_fatal
+  DMSP: sulfonium_zwitterionic_carboxylate_not_sulfonate_fatal
+  OAT4: PFBS_negative_and_no_validated_C6_or_10A_cavity_threshold
+  SBP: sulfate_preference_is_competitor_warning_not_PFAS_over_sulfate_support
+  DmpR: retained_as_phenol_anchor_adjacent_hydrophobic_environment_BPA_is_analogue
+  SsuA_Bug: retained_after_correcting_apo_holo_and_analogue_boundaries
+synthesis_audit:
+  normalized_material_entities: 19
+  strict_E1_synthesis_passers: 0
+  bench_plausible_but_control_only:
+    - PFBS_triurea_SBA15_without_precise_tetrahedral_claim
+    - Dieldrin_phenyl_squaramide_SBA15_as_ordinary_bifunctional_silica
+    - ROX_PVI_GAC_as_generic_pH_or_charge_control
+    - alpha_CD_DVS_as_known_inclusion_baseline
+lineage_dispositions:
+  retained_priority:
+    - BPA_DmpR_minimal_soluble_model_gate
+    - short_chain_PFAS_SsuA_Bug_manufacturing_first_spatial_model_gate
+    - NP_Bayram_discrete_host_model_gate
+  no_release_status_inherited_from_R4: true
+historical_release_correction:
+  formal_E1_registry: []
+  withdrawn:
+    SC_P02: ME_SR_spatial_manufacture_not_established
+    BPA20_01: exact_monomer_route_purification_and_isoreticularity_not_frozen
+    DDT50_01: secondary_effluent_dissolved_phase_scenario_not_closed
+  lineage_termination_implied: false
+visualization:
+  eligible_designs: []
+  imagegen_called: false
+  reason: no_zero_critical_high_E1_or_E2_design
+report: rounds/ultimate_r4_deep_audit_20260802/DEEP_RESEARCH_ULTIMATE_R4_SCIENTIFIC_AND_SYNTHESIS_AUDIT.md
+next_action: execute_BPA_DmpR_minimal_soluble_model_gate_before_any_new_solid_platform_or_image
+laboratory_authorization: false

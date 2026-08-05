@@ -478,3 +478,11 @@ E 先例区分：通过。系统检索加三组 Crossref 复搜 corroborate NP-�
   主张：styrene MCL 0.1 mg/L（有机化学品节），苯乙烯类残留单体泄漏报告限锚点（4.4、S6、F8）
 - https://www.ich.org/page/multidisciplinary-guidelines | ICH M7(R2) Assessment and Control of DNA Reactive (Mutagenic) Impurities in Pharmaceuticals to Limit Potential Carcinogenic Risk | 2026 | 监管文件 | established_regulatory_document（既有监管文件，本轮未抓取页面，不作内容级核验）
   主张：TTC 1.5 µg/日在监管中的现行化文本，泄漏锚定的监管框架参照（4.4 节）
+
+---
+
+## 附录 Q1（2026-08-05）：选择性价值判据审计（仅追加，原文未动）
+
+依据 `docs/SELECTIVITY_VALUE_CRITERION_2026-08-05.md`（潘尧 2026-08-05 质询 Q1 共识化文本）：
+
+**判定：符合（正面范例）。** 选择性指向高风险组分：E7（Lu 2015，PMID 25462736）给出出水残留与立体效应指数正相关 R²=0.76、富集 NP193a/b、NP110a、NP194 的共现证据；E6/E9 给出残留组分雌激素活性最高、最抗降解的风险对比。材料优先捕获的恰是生物处理留下的高风险异构体，低风险线性异构体为被区分对象——完全符合判据 2.3 第一行（高频共现且风险较低的同系物值得被选择性排除，以免浪费位点）。特此记录，供后续方案参照本文件的论证方式。

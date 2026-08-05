@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全分支高质量仿生吸附设计方案 · 审阅卷（2026-08-05）</title>
+<style>
+  :root {
+    --ink: #1a2332; --sub: #5a6a7e; --line: #d9e0e8; --bg: #f5f7fa; --card: #ffffff;
+    --blue: #1f5f8b; --blue-bg: #eaf2f8; --green: #2e7d32; --green-bg: #e8f3e9;
+    --amber: #b07d10; --amber-bg: #fdf3dd; --red: #a63d2f; --red-bg: #faeae7;
+    --violet: #5e4b8b; --violet-bg: #efeaf7; --gray-bg: #eef1f4;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font-family: "Source Han Serif SC", "Noto Serif CJK SC", "SimSun", "Times New Roman", serif;
+         font-size: 15px; line-height: 1.75; }
+  header.top { background: linear-gradient(135deg, #16324f 0%, #1f5f8b 100%); color: #fff; padding: 34px 8% 26px; }
+  header.top h1 { margin: 0 0 8px; font-size: 26px; letter-spacing: 1px; }
+  header.top .meta { font-size: 13px; opacity: .85; line-height: 1.9; }
+  nav.toc { position: sticky; top: 0; z-index: 20; background: #16324f; padding: 8px 8%; font-size: 13px; box-shadow: 0 2px 6px rgba(0,0,0,.15); }
+  nav.toc a { color: #cfe3f2; text-decoration: none; margin-right: 18px; white-space: nowrap; }
+  nav.toc a:hover { color: #fff; text-decoration: underline; }
+  main { padding: 26px 8% 80px; max-width: 1280px; margin: 0 auto; }
+  h2 { font-size: 21px; border-left: 6px solid var(--blue); padding-left: 12px; margin: 46px 0 14px; }
+  h3 { font-size: 17px; margin: 26px 0 10px; }
+  p { margin: 8px 0; text-align: justify; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13.5px; background: var(--card); }
+  th, td { border: 1px solid var(--line); padding: 6px 9px; text-align: left; vertical-align: top; }
+  th { background: var(--blue-bg); font-weight: 700; }
+  tr:nth-child(even) td { background: #fafbfd; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .note { background: var(--amber-bg); border-left: 4px solid var(--amber); padding: 10px 14px; margin: 14px 0; font-size: 13.5px; }
+  .warn { background: var(--red-bg); border-left: 4px solid var(--red); padding: 10px 14px; margin: 14px 0; font-size: 13.5px; }
+  .badge { display: inline-block; padding: 1px 9px; border-radius: 10px; font-size: 12px; font-weight: 700; margin-right: 6px; white-space: nowrap; }
+  .b-A { background: var(--green-bg); color: var(--green); border: 1px solid var(--green); }
+  .b-B { background: var(--blue-bg); color: var(--blue); border: 1px solid var(--blue); }
+  .b-C { background: var(--amber-bg); color: var(--amber); border: 1px solid var(--amber); }
+  .b-D { background: var(--red-bg); color: var(--red); border: 1px solid var(--red); }
+  .b-hist { background: var(--gray-bg); color: var(--sub); border: 1px solid var(--sub); }
+  .b-pass { background: var(--green-bg); color: var(--green); }
+  .b-stop { background: var(--red-bg); color: var(--red); }
+  .b-wait { background: var(--amber-bg); color: var(--amber); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; margin: 22px 0;
+          box-shadow: 0 1px 3px rgba(20,40,60,.08); overflow: hidden; }
+  .card > .cardhead { padding: 14px 20px; background: linear-gradient(90deg, var(--blue-bg), #fff); border-bottom: 1px solid var(--line); }
+  .card > .cardhead h3 { margin: 0 0 6px; font-size: 17.5px; }
+  .card .sub { font-size: 13px; color: var(--sub); }
+  .card .body { padding: 6px 20px 16px; }
+  details.sec { border-top: 1px dashed var(--line); padding: 6px 0; }
+  details.sec summary { cursor: pointer; font-weight: 700; font-size: 15px; padding: 7px 2px; color: var(--blue); list-style: none; }
+  details.sec summary::before { content: "▸ "; }
+  details.sec[open] summary::before { content: "▾ "; }
+  details.sec .secbody { padding: 2px 6px 10px 18px; }
+  .kv { font-size: 13.5px; }
+  .kv b { color: var(--blue); }
+  .tag-row { margin: 4px 0 0; }
+  footer { padding: 26px 8%; background: #16324f; color: #b9cddd; font-size: 12.5px; line-height: 1.9; }
+  code { background: var(--gray-bg); padding: 0 5px; border-radius: 3px; font-size: 12.5px;
+         font-family: Consolas, "Courier New", monospace; }
+  .small { font-size: 12.5px; color: var(--sub); }
+  .tier-cell { white-space: nowrap; }
+  @media print { nav.toc { position: static; } .card { break-inside: avoid-page; } body { font-size: 11px; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <h1>全分支高质量仿生吸附设计方案 · 人工审阅卷（HTML 版）</h1>
+  <div class="meta">
+    编制日期：2026-08-05　|　课题负责人：潘尧　|　编制：Claude Code（后台多智能体提取 + 对抗核验）<br>
+    源快照：<code>main@6bd30c5</code>（07-25）· <code>Qwen@25c3c7e</code>（07-22）· <code>Ultimate@9772855</code>（07-31）· <code>kimi-k3@100b7df</code>（07-19，已被 Qwen 包含）· <code>dsreview@8a9392c</code>（08-02）<br>
+    依据文档：任务总纲、fresh_1000 STATUS 台账、2026-07-31 跨分支独立技术审查、20 方案人工裁决底稿、2026-08-02 全分支高质量方案叙述卷（逐条与源文件对抗核验）
+  </div>
+</header>
+
+<nav class="toc">
+  <a href="#read">阅读口径</a>
+  <a href="#stats">一 统计总览</a>
+  <a href="#tiers">二 分层与裁决</a>
+  <a href="#cardsA">三 负责人在议与改道方案</a>
+  <a href="#cardsB">四 通过待裁方案</a>
+  <a href="#cardsC">五 已停高分方案（存档）</a>
+  <a href="#hist">六 历史设计通过</a>
+  <a href="#brief">七 简卡（C/D 级）</a>
+  <a href="#open">八 开放问题</a>
+</nav>
+
+<main>
+
+<section id="read">
+<h2>阅读口径</h2>
+<p><b>高质量门槛。</b>本卷收录标准沿用项目自身硬门槛：fresh_1000 规约下六维诊断分不低于 85、未决 critical 与 high 均为零、创新清单通过、完整闭环；或 main 分支 E1_mechanism_validation_ready 释放（须过环境门、创新门、三道 owner gate、E1 完整性与零未决 critical/high）；历史产物则以设计通过（design pass）记录收录并单独标注。</p>
+<p><b>三方立场并列。</b>每条设计同时受三个独立判断约束：其一，方案裁决（隔离裁决者，分数与 pass/revise/terminate）；其二，2026-07-31 跨分支独立技术审查（五道非补偿门，A/B/C/D 分层）；其三，负责人首轮逐条裁决（U-017 至 U-022）。三者并不总是一致，本卷如实并列，不替任何一方下结论。</p>
+<p><b>性能口径。</b>全部方案均为纸面设计，性能未证实。文中所有 K<sub>d</sub>、α、容量、BV 数值均为预注册判据或推断值，不得读作已测性能。本卷不构成任何采购、合成或实验授权。</p>
+<p><b>四要素结构。</b>按任务总纲的"痛点–仿生因果链"要求，每条方案依次给出：①科学/工程难题（为什么难去除、为什么难设计吸附剂、须排除的基线机制）；②仿生故事（原型→自然功能→可转译原理→硬对应）；③材料设计方案（唯一实体、空间组织、识别元、因果对照）；④合成方法（路线、条件、QC 判据）；另附验证逻辑、质量依据与诚实限制。</p>
+</section>
+
+<section id="stats">
+<h2>一、统计总览</h2>
+
+<h3>1.1 分支地图</h3>
+<table>
+<tr><th>分支</th><th>快照</th><th>角色</th><th>本卷相关产物</th></tr>
+<tr><td><code>main</code></td><td>6bd30c5（07-25）</td><td>主线：初始磷酸盐三轮对抗 + 2026-07-25 五条深度设计线</td><td>D1-A/D1-B 历史设计通过；SC-P02、BPA20-01、DCP20-01、DDT50-01、GX50-01</td></tr>
+<tr><td><code>kimi-k3</code></td><td>100b7df（07-19）</td><td>早期执行分支（已被 Qwen 包含，不重复计数）</td><td>PFBS-CD-OG1、PFBS AFI/GAC 准入等（均随 Qwen/Ultimate 继承）</td></tr>
+<tr><td><code>Qwen</code></td><td>25c3c7e（07-22）</td><td>fresh_1000 千方案计划主执行分支</td><td>通过方案 S05/S14/S17/S26/S27/S32（六条）</td></tr>
+<tr><td><code>Ultimate</code></td><td>9772855（07-31）</td><td>自 Qwen 派生的延续分支（含 fresh_1000 续期与 07-31 审查卷宗）</td><td>通过方案 S34/S51；复核线 S31；20 方案裁决底稿与跨分支审查</td></tr>
+<tr><td><code>dsreview</code></td><td>8a9392c（08-02）</td><td>负责人审阅工作分支</td><td>高质量方案叙述卷、对抗优化合集、三条主线视觉提示包</td></tr>
+</table>
+<p class="small">分支包含关系（2026-07-31 审查确认）：kimi-k3 ⊂ Qwen ⊂ Ultimate；main 与 Ultimate 独立分叉。独立有效信息源为 Ultimate 与 main，kimi-k3/Qwen 的通过方案在 Ultimate 均有副本，不重复计数。</p>
+
+<h3>1.2 方案生成漏斗（时间顺序）</h3>
+<table>
+<tr><th>阶段</th><th>时间</th><th>规模</th><th>结果</th></tr>
+<tr><td>初始三轮对抗（round_1→round_3）</td><td>07-16 前</td><td>5 污染物 × 1 设计（磷酸盐/克拉霉素/PFOA/硝酸盐/ODV）</td><td>仅 D1 磷酸盐存活至 Round 3：D1-A 93 分（主案）、D1-B 89 分（备选），均 design pass；D2–D5 终止。磷酸盐后经 U-012 移出论文主目标，转为历史审计产物</td></tr>
+<tr><td>组合轮 portfolio_100（GLM 时代）</td><td>07-17 前后</td><td>BPA/ROX/PFOA/PFBS/DCP × 各 20 = 100 条</td><td>无方案达 85 分；最高 PFOA-FABP4 83 分；经 SUPERVISOR_AUDIT 审计后不得直接继承</td></tr>
+<tr><td>组合轮 portfolio_20_reopen</td><td>07-17 前后</td><td>BPA 6 / PFBS 5 / ROX 5 / 2,6-DCP 4 = 20 条</td><td>前 5 获 advance（BPA-1 ERRγ 夹 88 分居首）；G7 批准 S1/S3/S4/S5/S6 进入隔离对抗轮</td></tr>
+<tr><td>深度设计轮（deep design）</td><td>07-18~24</td><td>bpa1/bpa2/pfbs1/pfbs2/pfoa 深设、prototype_reopen S11、synthetic_recovery S1-SYN</td><td>S11 Gate 1a 仅设计层通过、采购门从未授权；PFBS_CD_GAC_V2 终止建议；PFBS-CD-OG1 完成完整设计并收到负责人反馈 PDF</td></tr>
+<tr><td><b>fresh_1000 千方案计划</b>（方法学校正 07-19 后新合同）</td><td>07-19~31</td><td>20 污染物 × 每污染物目标 50 角度 = 1000 目标；实际开启 55 个角度槽（Ultimate 台账）</td><td>台账通过 10 条：其中 <b>8 条</b>具备完整 <code>_passed.md</code> 与闭环记录（S05/S14/S17/S26/S27/S32/S34/S51）；BDE-209 A07 的 passed 登记系文件错指（实为未裁决设计稿）；Endosulfan A01 仅 _wip 稿。终止 30+ 条，其余未开启</td></tr>
+<tr><td>main 深度设计五条线（E1 规约再验证）</td><td>07-25</td><td>SC-P02、BPA20-01、DCP20-01、DDT50-01、GX50-01</td><td>88/86/86/87/84；两条 E1_ready、一条 concept_valid（环境门阻断）、两条 concept_valid 后被负责人判停</td></tr>
+<tr><td>跨分支独立审查 + 人工裁决</td><td>07-31</td><td>20 条去重后高分/近通过设计线</td><td>初判 A3/B5/C9/D3；第二轮 skill 复审改判为 <b>A3/B2/C12/D3</b>（NP/PFHxS/Dieldrin 三条 B→C，撤销全部 E1_ready 含义）；负责人就 8 条作出首轮裁决（U-017~U-022），其决定优先于第三方分层</td></tr>
+<tr><td>dsreview 审阅卷</td><td>08-02</td><td>高质量方案叙述卷 14 条完整 + 7 条简卡 + 历史产物</td><td>本 HTML 的底稿；视觉提示包（SC-P02/BPA20-01/DDT50-01）与模块化谱系救援完成</td></tr>
+</table>
+
+<h3>1.3 fresh_1000 逐污染物台账（Ultimate 快照）</h3>
+<table>
+<tr><th>污染物</th><th class="num">开启角度</th><th class="num">台账通过</th><th class="num">终止</th><th>通过方案</th></tr>
+<tr><td>PFOA 全氟辛酸</td><td class="num">10</td><td class="num">1</td><td class="num">9</td><td>S05 A02 双脲氧阴离子洞 PAF（85）</td></tr>
+<tr><td>BPA 双酚A</td><td class="num">5</td><td class="num">1</td><td class="num">4</td><td>S14 A01 DmpR 锚门 COF（86）</td></tr>
+<tr><td>PFBS 全氟丁烷磺酸</td><td class="num">4</td><td class="num">1</td><td class="num">3</td><td>S17 A17 孔口几何双位点（85）</td></tr>
+<tr><td>ROX 罗红霉素</td><td class="num">3</td><td class="num">1</td><td class="num">2</td><td>S32 A01 NPET 核碱基半笼（85）</td></tr>
+<tr><td>NP 壬基酚</td><td class="num">5</td><td class="num">1</td><td class="num">4</td><td>S26 A01 ipso α-四级碳深腔笼（92，全计划最高）</td></tr>
+<tr><td>Dieldrin 狄氏剂</td><td class="num">4</td><td class="num">1</td><td class="num">3</td><td>S27 A01 exo-环氧方酰胺腔（89）</td></tr>
+<tr><td>Octocrylene 奥克立林</td><td class="num">4</td><td class="num">1</td><td class="num">2</td><td>S34 A01 供体-受体 CT 腔（85）</td></tr>
+<tr><td>DDT 滴滴涕</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td>S51 A01 脱氯化氢酶双基序笼（86）</td></tr>
+<tr><td>BDE-209</td><td class="num">2</td><td class="num">1*</td><td class="num">1</td><td>*A07 登记不可采信：STATUS 指向不存在文件，实为未裁决设计稿</td></tr>
+<tr><td>Endosulfan 硫丹</td><td class="num">1</td><td class="num">1*</td><td class="num">0</td><td>*仅 _wip/A01_r3 稿，独立审查列 D 级（转催化水解课题）</td></tr>
+<tr><td>其余 10 污染物（2,6-DCP/GenX/PFHxS/PCP/β-HCH/氯仿/HCBD/PCB-209/DDE/TCDD）</td><td class="num">15</td><td class="num">0</td><td class="num">9</td><td>部分角度在途（如 DCP26 A04 σ-空穴 r1 待攻击），部分仅开简报</td></tr>
+<tr><th>合计</th><th class="num">55</th><th class="num">10（8 条完整）</th><th class="num">38</th><th>—</th></tr>
+</table>
+<div class="warn"><b>台账不一致提醒（2026-07-31 独立审查指出，尚未修复）。</b>Ultimate <code>rounds/fresh_1000/STATUS.yaml</code>：①逐污染物共 10 条 <code>status: passed</code>，汇总却写 9 个通过，DDT A01（S51）从 passed_list 消失；②BDE-209 状态指向不存在的 <code>SCHEMES/A07_r5_passed.md</code>，实际文件明写"待攻击-裁决、status: design"。采信任何"通过数"前应先处置。</div>
+
+<h3>1.4 目标污染物速览（九种主要目标）</h3>
+<table>
+<tr><th>污染物</th><th>分子式</th><th class="num">MW</th><th class="num">logK<sub>ow</sub></th><th>环境形态</th><th>核心识别把手</th><th>选择性难度</th></tr>
+<tr><td>NP 壬基酚</td><td>C₁₅H₂₄O</td><td class="num">220</td><td class="num">4.5–5.2</td><td>中性（pKa≈10.3）</td><td>酚羟基锚定 + α-支链拓扑</td><td>高</td></tr>
+<tr><td>Dieldrin 狄氏剂</td><td>C₁₂H₈Cl₆O</td><td class="num">381</td><td class="num">5.40</td><td>中性</td><td>6,7-环氧桥几何（唯一弱氢键受体）</td><td>极高</td></tr>
+<tr><td>BPA 双酚A</td><td>C₁₅H₁₆O₂</td><td class="num">228</td><td class="num">3.3–3.4</td><td>中性（pKa≈9.6–10.2）</td><td>异丙叉桥几何 + 双酚间距</td><td>高</td></tr>
+<tr><td>DDT 滴滴涕</td><td>C₁₄H₉Cl₅</td><td class="num">354</td><td class="num">6.5–6.9</td><td>中性</td><td>C1 桥 -CCl₃ 四面体几何</td><td>极高</td></tr>
+<tr><td>PFBS</td><td>C₄F₉SO₃H</td><td class="num">300</td><td class="num">极低</td><td>永久阴离子（pKa&lt;0）</td><td>四面体磺酸根 + C4 链窗口</td><td>极高</td></tr>
+<tr><td>PFOA</td><td>C₈HF₁₅O₂</td><td class="num">414</td><td class="num">≈4.9</td><td>永久阴离子（pKa≈0–1）</td><td>平面羧酸根 + C8 链窗口</td><td>高</td></tr>
+<tr><td>ROX 罗红霉素</td><td>C₄₁H₇₆N₂O₁₅</td><td class="num">837</td><td class="num">logP 1.7</td><td>阳离子（叔胺 pKa≈8.8–9.0）</td><td>C9 肟醚侧臂 + 14 元环</td><td>极高</td></tr>
+<tr><td>Octocrylene 奥克立林</td><td>C₂₄H₂₇NO₂</td><td class="num">362</td><td class="num">6.1–7.5</td><td>中性</td><td>氰基电子亏缺核（CT 受体）</td><td>极高</td></tr>
+<tr><td>PCP 五氯苯酚</td><td>C₆Cl₅OH</td><td class="num">266</td><td class="num">≈5</td><td>中性/酚盐共存（pKa≈4.7）</td><td>五氯环轮廓 + 酚氧头基</td><td>高</td></tr>
+</table>
+</section>
+
+<section id="tiers">
+<h2>二、分层与裁决汇总</h2>
+<p>下表汇总全部进入评审视野的设计线。独立审查分层以 2026-07-31 第二轮 skill 复审的<b>当前权威处置</b>为准（初判与改判不同的，括注初判）；负责人裁决出自 U-017 至 U-022 首轮记录，优先于第三方分层。完整叙述见第三章起各卡片。</p>
+<table>
+<tr><th>方案</th><th>分支</th><th class="num">裁决分</th><th>方案裁决状态</th><th>独立审查分层</th><th>负责人首轮裁决</th><th>本卷位置</th></tr>
+<tr><td>BPA20-01 / AG-COF</td><td>main</td><td class="num">86</td><td>E1_ready</td><td class="tier-cell"><span class="badge b-A">A 科学价值最高</span></td><td>U-019 较有兴趣，下一轮详细讨论</td><td>卡片 1</td></tr>
+<tr><td>SC-P02 / PG-PMO</td><td>main</td><td class="num">88</td><td>E1_ready</td><td class="tier-cell"><span class="badge b-A">A 工程潜力最高</span></td><td>U-017 不接受微米径向梯度为强仿生对应，待分子尺度重建</td><td>卡片 5</td></tr>
+<tr><td>DDT50-01 / LPO-SIP</td><td>main</td><td class="num">87</td><td>E1_ready（二轮复审撤销，改"重建薄壳制造后才可 M0"）</td><td class="tier-cell"><span class="badge b-A">A 机制可证伪性最好</span></td><td>U-018 合成可操性不可接受，<b>当前版本停止</b></td><td>卡片 13</td></tr>
+<tr><td>DCP20-01 / EPS-DCA-SIP</td><td>main</td><td class="num">86</td><td>concept_valid（环境门阻断）</td><td class="tier-cell"><span class="badge b-B">B 决定性前置门</span></td><td>U-021 停核壳，改载体先行架构筛选</td><td>卡片 6</td></tr>
+<tr><td>GX50-01 / BGE-SIP</td><td>main</td><td class="num">84</td><td>concept_valid（1 未决 critical）</td><td class="tier-cell"><span class="badge b-B">B</span></td><td>U-020 整体一般，<b>当前版本停止</b></td><td>卡片 14</td></tr>
+<tr><td>S26 / NP A01 深腔笼</td><td>Qwen</td><td class="num">92</td><td>passed</td><td class="tier-cell"><span class="badge b-C">C（初判 B，二轮改判）</span></td><td>未裁决</td><td>卡片 9</td></tr>
+<tr><td>S27 / Dieldrin A01 方酰胺腔</td><td>Qwen</td><td class="num">89</td><td>passed</td><td class="tier-cell"><span class="badge b-C">C（初判 B，二轮改判）</span></td><td>未裁决</td><td>卡片 10</td></tr>
+<tr><td>S14 / BPA A01 DmpR COF</td><td>Qwen</td><td class="num">86</td><td>passed</td><td class="tier-cell"><span class="badge b-A">A（经同源 main 版）</span></td><td>讨论对象为同源 BPA20-01</td><td>卡片 8</td></tr>
+<tr><td>S51 / DDT A01 脱氯化氢酶笼</td><td>Ultimate</td><td class="num">86</td><td>passed（证据完整性 6/10）</td><td class="tier-cell"><span class="badge b-D">D 现版本停止</span></td><td>未裁决（DDT 方向整体收缩）</td><td>卡片 12</td></tr>
+<tr><td>S05 / PFOA A02 双脲 PAF</td><td>Qwen</td><td class="num">85</td><td>passed</td><td class="tier-cell"><span class="badge b-C">C 研究假设</span></td><td>未裁决</td><td>卡片 7</td></tr>
+<tr><td>S17 / PFBS A17 双位点</td><td>Qwen</td><td class="num">85</td><td>passed</td><td class="tier-cell"><span class="badge b-C">C 对照/负知识</span></td><td>U-022 保留待讨论</td><td>卡片 2</td></tr>
+<tr><td>S32 / ROX A01 NPET 半笼</td><td>Qwen</td><td class="num">85</td><td>passed</td><td class="tier-cell"><span class="badge b-C">C 研究假设</span></td><td>U-022 保留待讨论</td><td>卡片 3</td></tr>
+<tr><td>S34 / Octocrylene A01 CT 腔</td><td>Ultimate</td><td class="num">85</td><td>passed</td><td class="tier-cell"><span class="badge b-C">C 科学赌注</span></td><td>未裁决</td><td>卡片 11</td></tr>
+<tr><td>S31 / PCP A04 β-CD snug-fit</td><td>Ultimate</td><td class="num">≈83</td><td>revise（自评 85-87 未存活）</td><td class="tier-cell"><span class="badge b-C">C 工程阳性对照</span></td><td>U-022 保留待讨论</td><td>卡片 4</td></tr>
+<tr><td>PFHxS R2_S03（初判 B，二轮改判 C）/ BPA PXR / β-HCH A08、A12 / OC A04（C 级）</td><td>Ultimate</td><td class="num">—</td><td>revise/未定义/未裁决稿</td><td class="tier-cell"><span class="badge b-C">C</span></td><td>未逐一裁决</td><td>第七章简卡</td></tr>
+<tr><td>BDE-209 A07 / Endosulfan A01（作为吸附剂）</td><td>Ultimate</td><td class="num">—</td><td>未裁决设计稿 / _wip 稿</td><td class="tier-cell"><span class="badge b-D">D 现版本停止</span></td><td>未逐一裁决</td><td>第七章简卡</td></tr>
+<tr><td>D1-A / D1-B 磷酸盐（93/89）</td><td>全分支</td><td class="num">93/89</td><td>历史 design pass</td><td class="tier-cell"><span class="badge b-hist">历史</span></td><td>U-012/U-016 历史审计保留</td><td>第六章</td></tr>
+<tr><td>FcRn pH 开关 PVI 刷 GAC</td><td>全分支（GLM 遗产）</td><td class="num">未走六维</td><td>实验交接版（校正前）</td><td class="tier-cell"><span class="badge b-hist">历史</span></td><td>—</td><td>第六章</td></tr>
+</table>
+<div class="note"><b>口径提示。</b>"方案裁决 pass"与"独立审查分层"存在系统差异：S05/S17/S32/S34 裁决通过但被列 C 级（正面主张先验低），S51 列 D 级（证据完整性 6/10）。S26/S27 初判 B 级，第二轮复审改判 C 级：NP 的生物 ipso 代谢承重是碳正离子电子稳定，不存在对应的天然形状识别腔；Dieldrin 的 Rdl/GABA 系毒性靶点结合且突变记载方向为削弱、方酰胺物种与孔内几何亦不成立。裁决分认证的是<b>设计严谨度与可证伪闭环</b>，不是材料成功概率。负责人尚未就八条通过方案（S05/S14/S17/S26/S27/S32/S34/S51）逐一裁决。</div>
+<div class="warn"><b>二轮复审的最重要口径修正（2026-07-31）。</b>88/87/86 等设计分数不能证明合成就绪；经第二轮逐步合成复审后，<b>当前没有任何方案达到"可照 SOP 制得目标材料且可进入完整 E1"的状态</b>，三条 A 类一律改为"合成路线再开发后才可进入 M0"，A 类执行顺序调整为 SC-P02 → DDT50-01 → BPA20-01（该顺序随后被负责人 U-018 判停 DDT50-01、U-019 指定 BPA20-01 为下一轮重点讨论所更新）。注意：2026-08-02 叙述卷总览表对 S26/S27 仍按初判标注 B 级，与本卷采用的二轮权威处置（C 级）存在文档间口径差，本卷以裁决底稿与二轮复审为准并如实并列。</div>
+</section>
+
+<section id="cardsA">
+<h2>三、负责人在议与改道方案（卡片 1–6）</h2>
+<p>本章按负责人指定的下一轮讨论次序（先 BPA20-01，随后 PFBS A17、ROX A01、PCP A04）与改道方案（SC-P02、DCP20-01）排列。全部为纸面设计，性能未证实。</p>
+
+<!-- 卡片 1 -->
+<div class="card" id="card1">
+<div class="cardhead">
+<h3>卡片 1 · BPA20-01 / AG-COF · 双酚 A 痕量抛光</h3>
+<div class="sub tag-row">
+<span class="badge b-pass">86 · E1_ready</span><span class="badge b-A">独立审查 A 级 · 科学价值最高</span><span class="badge b-wait">U-019 较有兴趣，下一轮详细讨论</span>
+分支：<code>main</code>　源：<code>rounds/bpa_dcp_20x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md</code>（与 Qwen S14 同源，main 侧为按 E1/非蛋白/二级出水规约的严格再验证版）
+</div></div>
+<div class="body">
+<details class="sec" open><summary>① 科学/工程难题</summary><div class="secbody">
+<p>目标场景：市政二级出水痕量 BPA 抛光，环境层 10/100/1000 ng/L，两厂二级出水各三次独立采样（既有环境门继续有效，本轮在 E1 中增加两厂、三时点与过滤/未过滤成对验证以避免跨厂外推）。</p>
+<p><b>痛点一（为什么难去除）：</b>BPA 与结构类似物 BPF、BPS、BPAF 共存，DOM、盐与无关微污染物构成基质竞争；普通疏水吸附尤其无法解释 BPA 与疏水性更强的 BPAF 之间的<b>逆向区分</b>——仅靠 logKow、孔径、双端对称夹持、裸 β-CD、常规 MIP 或单溶质 qmax 证明 BPA 识别的主张均不能成立。</p>
+<p><b>痛点二（为什么难设计吸附剂）：</b>直接先例饱和——BPA 直接模板与 BPF 假模板 4VP/EGDMA MIP（含热敏/假模板先例）、交联 β-CD 网络（不区分 BPF/BPA）、polycalix[4]arene（直接水相 BPA 先例）、N-rich HCP、TT-COF 型氢键/π 孔道（2024 直接先例）、氟化 COF 与 CoNi-MOF@MIP（2026 直接先例）均已存在；AG-COF 的可发表增量只能是同晶格锚—门解耦、门谱移动、去锚因果与逆 logKow 四元竞争，任一核心项失败都必须收窄或终止。</p>
+<p><b>基线排除：</b>普通疏水/logKow 单调性（门系列×四类似物 16 点池化回归、门项部分 F 检验扣除）、孔径/尺寸筛分（扣除动力学尺寸后门身份仍须显著）、非特异孔道吸附；禁止用增加永久电荷、氟化比例或模板印迹救场。20 案淘汰结论：只有 AG-COF 同时给出同晶格可换门、去锚体、逆 logKow 的 BPA/BPAF 判据、四元混合与可降级路径。</p>
+</div></details>
+<details class="sec" open><summary>② 仿生故事（DmpR/PoxR 酚识别调节蛋白）</summary><div class="secbody">
+<p><b>生物原型：</b>DmpR/PoxR 调节蛋白，其自然功能不是被动结合，而是在水相识别酚类效应物并调控下游降解通路——属可迁移的识别与效应物谱调控功能，非毒性靶标。<b>结构证据：</b>PDB 6IY8（DmpR 酚结合结构）把 His100 型 sp2-N 极性锚钉死——His100 咪唑氮对酚 OH 的固定锚；同一酚结合位点周围的壁身份改变会改变效应物谱，即"门身份决定谱"。（总结卷转述独立审查核验细节：酚-O···ND1 约 2.42–2.54 Å、3.42 Å 分辨率、酚 Kd 约 16 µM、His100 在酚响应调节子 PoxR/MopR 保守而在甲苯/二甲苯响应 XylR 中被酪氨酸替换。）</p>
+<p><b>可转译原理：</b>固定单酚锚定姿态，加可更换的邻位门身份决定底物谱。</p>
+<p><b>硬对应条目：</b>H1（结构验证级）——β-酮烯胺 COF 周期孔壁的内向吡啶 N 对应 His100 型锚，把 BPA 一个酚端固定在统一姿态；测量为湿态 ssNMR/IR、吸附自由能、可及 N；因果对照为 C1 去锚体与 C1-B 吡啶 N 封闭后备体。H2（设计者推断级）——同晶格 G0/G1/G2 门交换对应位点周壁身份改变，对异丙叉、亚甲基、砜、六氟异丙叉桥连区产生不同谱；测量为四双酚混合 α 与 16 点描述符回归；因果对照为同拓扑同孔性验收加门项部分 F 检验。</p>
+<p><b>诚实边界：</b>口袋是晶格周期固定的壁载识别基序，而非蛋白式全封闭腔；仿生强度为机制类比加单点结构锚验证；材料架构轴为晶态等网状 COF（偏离角度已正式备案，HCP/PAF 轴为机制必要——同位点门交换以晶格周期为前提）。</p>
+</div></details>
+<details class="sec" open><summary>③ 材料设计方案</summary><div class="secbody">
+<p><b>唯一实体：</b>水稳定 β-酮烯胺 AG-COF 微晶（目标 2–5 µm），周期孔壁同时含一个内向吡啶 N（单酚锚）与面向桥连区的甲基门；造粒到 150–300 µm 时使用不超过干质量 15% 的惰性多孔粘结相；所有容量按总干复合体 mg/g 与床层 mg/mL 双报，不用活性位点归一掩盖载体质量。</p>
+<p><b>同晶格系列与对照实体：</b>G1 完整体（甲基门面向 BPA 异丙叉桥）；G0 同晶格无甲基门；G2 氟门；C1 同晶格去锚体；C1-B 吡啶 N 封闭后备体（源文件未给封闭化学方法，总结卷载为甲基化/季铵化路线，独立审查已要求改为电中性匹配对照）。门谱检验体：BPA20-02 同拓扑甲氧基门版（预测偏向 BPS，证明谱随门移动）、BPA20-03 同拓扑氟门版（预测偏向 BPAF，直接检验门谱）。</p>
+<p><b>识别元：</b>固定酚锚（内向吡啶 N 对 BPA 一个酚端的统一姿态锚定）+ 桥连区空间门（门身份对四种桥连区的谱切换）；锚与门在同一晶格拓扑内可分别删除或更换。工程基准（总结卷转述）：β-CDP、BPA-MIP、BPA/BPF 共印迹、活性炭同条件平行。创新清单：A/C/D/E 通过，B 部分。</p>
+</div></details>
+<details class="sec" open><summary>④ 合成方法</summary><div class="secbody">
+<p>源文件只给出最小制备与 QC 框架，<b>未冻结唯一单体配方</b>（独立审查已把补齐唯一配方与完整小批 SOP 列为进入 M0 的前置条件）。源文件步骤：第一步，先做 G0/G1/G2/C1 单体级 DFT（水簇/隐式水双轨），若 G1 对 BPA 相对 BPAF 的壁面增益不能补偿实测疏水基线，触发 M0-STOP。第二步，按既有 β-酮烯胺 COF 缩合窗口制备 50–100 mg 微晶，洗至单体低于 LC-MS 定量限。第三步，PXRD、N₂/Ar 孔结构、TGA、元素分析、XPS/ssNMR 确认身份；<b>等网状验收：</b>G0/G1/G2/C1 的 d100 偏差 ≤2%、孔径众数偏差 ≤0.15 nm、可及位点 CV ≤12%，任一失败不能把谱差归因于门。第四步，E1 只需微晶批次完成水相机制；造粒用于短柱可行性，不把柱性能作为 E1 通过条件。</p>
+<p>（同源 Qwen S14 已给出单体合成路线：2,6-二溴吡啶与 4-硝基-3,5-R₂-苯硼酸 Suzuki 偶联→还原为二胺；Tp:二胺=2:3，均三甲苯/1,4-二氧六环 1:1、6 mol/L 乙酸水溶液、冻融脱气三次、120 °C 72 h；G2/G3 放行线收率 ≥60%、PXRD(100)、BET ≥500 m²/g、残余醛碳 <5%；C1-B 以 MeOTf/MeI 甲基化且 XPS 季铵氮 ≥90%。该细节来自 S14 文件，main 本源文件未载。）</p>
+</div></details>
+<details class="sec"><summary>⑤ 验证逻辑</summary><div class="secbody">
+<p>机制层：BPA/BPF/BPS/BPAF 各 0.5/5/50 µg/L，pH 6.0±0.2，10 mM NaCl，n=5，稳定同位素内标 LC-MS/MS。环境层：BPA 10/100/1000 ng/L，两厂各三次采样，同步测 DOC、UV254、主要离子与胶体前后分级。<b>硬合取 go 门：</b>α*(BPA/BPAF) 均值 ≥1.20 且单侧 95% CI 下限 >1；门身份在扣除 ΔlogKow 与动力学尺寸后仍显著；C1/C1-B 锚贡献方向一致；G1 在二级出水中保持纯水 Kd ≥60%。<b>证伪停止线：</b>S2-STOP（逆 logKow 签名不过线，硬 go/no-go、低先验）、CAUSAL-STOP（G1 与 C1 差异可由孔结构解释）、MATRIX-STOP（任一厂保留率 <40%）、LEACH-STOP，上游另有 M0-STOP（DFT 壁面增益不补偿疏水基线）。不得用永久电荷、氟化或模板印迹救场。</p>
+</div></details>
+<details class="sec"><summary>⑥ 质量依据与三方立场</summary><div class="secbody">
+<p>承接 fresh_1000 五轮攻防（同源 Qwen S14，轨迹 r1=71→r2=82→r3=83→r4=84→r5=86 pass、0 critical/0 high，源文件未载该轨迹）；本轮按当前 E1、非蛋白材料、二级出水和环境门规约重新复核，未继承未经复核的旧状态。纸面评分 86/100，六维 18/22/17/12/9/8（因果闭环 20/选择性机制 25/可转译 20/原创 15/可证伪 10/证据 10）；源文件注明只有环境门、创新清单、三道 owner gate、E1 完整性和零 critical/high 同时通过后分数才成为正式排序分。最终裁决 <b>E1_mechanism_validation_ready</b>，待潘尧审阅后才可另行授权 M0 计算/微批。未决 critical/high 为 0；残余 medium 三项均已变成实测停止线。BPA 20 案淘汰：1 案 E1、4 案概念、10 案对照、5 案终止；BPA20-04 MAPy 梯度珠（82）为低成本备份，仅在 AG-COF 制造 M0 失败时进入。独立审查列 A 级三条主线之一、评科学价值最高，要求先冻结唯一 SOP、以可溶模型验证水相锚增量、将带电 C1-B 换成电中性匹配对照；负责人 U-019 较有兴趣、下一轮详细讨论，未批准 COF 合成。</p>
+</div></details>
+<details class="sec"><summary>⑦ 诚实限制</summary><div class="secbody">
+<p>①水相酚与吡啶氢键的净锚贡献可能趋零，锚若消失方案退化为孔径与疏水分配；②S2 逆 logKow 签名低先验，方案自承大概率失败（P(S2)≈20–30% 为总结卷自同源 S14 转述的定量先验）；③最近闭源先例（E17 类）全文未取得，原创性仍是有条件的；④唯一单体与配方尚未冻结，2–5 µm COF 同晶格系列同时满足 d100 ±2%、孔径模态 ±0.15 nm、可及位点 CV ≤12% 的制造难度高；⑤C1-B 季铵化引入永久电荷，会把锚删除与静电变化混淆，独立审查已要求改为电中性匹配对照；⑥BPA-MIP、β-CD 网络、polycalixarene、N-rich HCP、TT-COF、氟化 COF、MOF@MIP 均有直接先例，可发表增量仅限同晶格锚门解耦、门谱移动、去锚因果与逆 logKow 四元竞争；⑦口袋为晶格壁载基序而非蛋白全封闭腔。</p>
+</div></details>
+</div>
+</div>
+
+<!-- 卡片 2 -->
+<div class="card" id="card2">
+<div class="cardhead">
+<h3>卡片 2 · S17 / PFBS A17 · 孔口几何双位点头基类型反差</h3>
+<div class="sub tag-row">
+<span class="badge b-pass">85 · passed（千方案计划第三通过）</span><span class="badge b-C">独立审查 C 级 · 对照/负知识</span><span class="badge b-wait">U-022 保留待讨论</span>
+分支：<code>Qwen</code>　源：<code>rounds/fresh_1000/pfbs/SCHEMES/S17_A17_pore-mouth-dual-site-headgroup_passed.md</code>
+</div></div>
+<div class="body">
+<details class="sec" open><summary>① 科学/工程难题</summary><div class="secbody">
+<p>PFBS（C₄F₉SO₃⁻，pKa<0）与配对物 PFBA（C₃F₇COO⁻）在运行 pH 4–9 均完全解离为单价阴离子，同 C4 全氟尾、近等尺寸；常规吸附与生物界仅见链长单调趋势，<b>头基类型维（四面体磺酸根对平面羧酸根）的吸附侧识别无先例</b>。疏水驱动力降至 PFSA 同系物最低；需同时区分同头基长链（PFOS/PFHxS）与同链长羧酸（PFBA）；无机含氧阴离子 mM 量级（摩尔比 10⁶–10⁹ 过量）。背景浓度 1–10 ng/L。</p>
+</div></details>
+<details class="sec" open><summary>② 仿生故事（ModA 钼酸根结合蛋白）</summary><div class="secbody">
+<p><b>原型：</b>ModA 钼酸根结合蛋白（周质转运识别蛋白），自然功能是在细胞 mM 硫酸根背景下以预组织中性氢键阵列结合四面体钼酸根与钨酸根（E1 Hu 1997，Nat Struct Biol 4(9):703-707，PDB 1amf/1wod；E2 Lawson 1997）；硫酸盐结合蛋白以纯氢键（无金属、无阳离子）结合四面体硫酸根（E3 Pflugrath 与 Quiocho 1985，Nature 314:257-260）。<b>可转译原理：</b>给体排布对受体氧排布的几何互补加脱溶剂化互补决定氧阴离子选择性，能耐竞争氧阴离子大过量。<b>硬对应：</b>PAF-1 孔口预组织双位点——T 位点三足三硫脲汇聚给体匹配磺酸根三氧四面体（O–S–O 约 112–113°、O···O 约 2.42 Å），P 位点中性平面双给体匹配羧酸根平面双氧（O–C–O 约 124–130°、O···O 约 2.22 Å，差约 0.2 Å），判决签名 R=α_T/α_P。<b>诚实边界：</b>原型区分在四面体内部（钼酸根对硫酸根），四面体对平面属原理外推而非功能同源；氢键化学本体为成熟超分子受体家族。</p>
+</div></details>
+<details class="sec" open><summary>③ 材料设计方案</summary><div class="secbody">
+<p><b>唯一实体：</b>孔口几何双位点功能化多孔芳香框架。载体 PAF-1/PPN-6（四(4-溴苯基)甲烷 Yamamoto 偶联，水稳、本征疏水芳烃孔容纳 C4F9），经氯甲基化与叠氮化后点击接枝识别单元。空间组织两格式：T 与 P 分别接枝的串联双床（可达备选），或同载体分步正交点击的单框架分区孔口（高风险）。T 位点为 C3 对称三足三硫脲（1,3,5-三(氨甲基)苯或 tren 骨架加 4-硝基苯基异硫氰酸酯，单臂带炔基把手）；P 位点为中性平面双给体分层候选：P-主吡啶-2,6-二甲酰胺或 N,N'-二芳基脲、P-iso 间苯二甲酰胺归因对照、P-备脂肪族 squaramide（须过 pKa 门控）、P-降级二芳基 squaramide。识别元：角度+间距复合几何签名+孔口去润湿低介电环境；三机制分层为 A 脱溶剂化门控基底、B 头基几何识别核心、C 全氟链单调疏水分量。载体非创新来源：E11 已系统功能化该平台，其中性氢键供体臂从未测试。</p>
+</div></details>
+<details class="sec" open><summary>④ 合成方法</summary><div class="secbody">
+<p><b>骨架：</b>四(4-溴苯基)甲烷经 Ni(COD)₂/2,2'-联吡啶 Yamamoto 偶联制 PAF-1。<b>氯甲基化：</b>多聚甲醛/AcOH/H₃PO₄/HCl 约 90 °C（原位生成强致癌 BCME，须安全评审）。<b>叠氮化：</b>过量 NaN₃、DMF、60 °C 24 h（苄基叠氮震敏，安全评审）。<b>T 单体：</b>1,3,5-三(氨甲基)苯或 tren 加 3–3.3 当量 4-硝基苯基异硫氰酸酯，无水二氯甲烷或 THF 室温 12 h，一臂引入炔基把手，柱层析+重结晶。<b>P-主：</b>吡啶-2,6-二甲酰氯依次与一当量 4-氨基苯基炔基把手、一当量调谐芳胺反应。<b>接枝：</b>PAF-1-CH₂N₃ 加 ≥10 当量单体，CuSO₄/抗坏血酸钠或 CuBr/PMDTA，THF/水 50 °C 氮气 24–48 h；悬空端炔以过量苄基叠氮封端，0.1 M EDTA 洗铜、索氏提取；残余叠氮以丙炔醇、残余苄氯以乙醇钠封端，游离胺低于受体负荷 1% 为硬上限。<b>QC：</b>元素分析、FTIR、固体 ¹³C/¹⁵N NMR、N₂/CO₂ 吸附孔径分项、TGA、XPS 深度剖析、桥连分数 IR 2100–2140 cm⁻¹。</p>
+</div></details>
+<details class="sec"><summary>⑤ 验证逻辑</summary><div class="secbody">
+<p>十一重因果对照：M0 空白、T-Me/P-Me 等立体 N-甲基阻断、T-dist/T-C1 与 P-dist 计数匹配几何错位、T-flex/P-flex 柔性、M2a 电荷、质子化态、2×2 给体计数×酸性因子、P-iso 自抑制归因、M1c 介孔、G1 接枝定位门。go/no-go 门：G1 外表面分数阈值约 0.5；F1a P 位点中性分数 <0.80 暂停；F1 分离因子 ≤1.2 或 R ≤2 判几何证伪；F1' 因子调整后 95% 置信区间跨零判未解耦；F2 硫酸盐竞争。统计预注册：bootstrap ≥2000 次，n ≥15.7(σ_R/δ)²，δ=0.41 kcal/mol，不足判未解耦，不事后扩 n；ITC 焓序与竞争吸附序双轨收敛。</p>
+</div></details>
+<details class="sec"><summary>⑥ 质量依据与三方立场</summary><div class="secbody">
+<p>轨迹 r1=77（0c/1h，squaramide 质子化假阳性通道）→r2=82（0c/0h）→r3=84→r4=85 pass（0c/0h），85 线未降。方案裁决明示 85 认证设计严谨度而非正面主张概率，S_deconvolution 阴性交付被诚实定位为真贡献承载。跨分支独立审查列 C 级（不进入材料验证，可保留为对照或负知识，建议仅做最小单体级头基几何实验）。负责人 U-022 保留待讨论。</p>
+</div></details>
+<details class="sec"><summary>⑦ 诚实限制</summary><div class="secbody">
+<p>正面主张先验低为不可约科学事实，文件列四项不可文本消除的不确定性：①中性 P 位点能否保持中性且呈可测几何偏好（P-主 dipicolinamide 存在分子内 N-H···N 构象自抑制与吡啶 N 孤对排斥，结合或不可测）；②T/P 反差能否对抗约 100 倍通用趋势与氢键碱性共模；③几何残差自估 <1 kcal/mol，处 POP 噪声检测边缘；④三足 footprint 约 1.3–1.5 nm 对 PAF-1 孔口约 1.2 nm 的接枝定位单点风险。动机水体含 mM 硫酸根，F2 与 F5 大概率触发，反差几不可在动机水体直接读出。新颖性为应用/增量级，C 维仿生处边界态。</p>
+</div></details>
+</div>
+</div>
+
+<!-- 卡片 3 -->
+<div class="card" id="card3">
+<div class="cardhead">
+<h3>卡片 3 · S32 / ROX A01 · 核糖体 NPET 核苷酸碱基裂缝半笼</h3>
+<div class="sub tag-row">
+<span class="badge b-pass">85 · passed</span><span class="badge b-C">独立审查 C 级 · 研究假设</span><span class="badge b-wait">U-022 保留待讨论</span>
+分支：<code>Qwen</code>　源：<code>rounds/fresh_1000/rox/SCHEMES/S32_A01_ribosome-NPET-nucleobase-cleft-cage_passed.md</code>
+</div></div>
+<div class="body">
+<details class="sec" open><summary>① 科学/工程难题</summary><div class="secbody">
+<p>罗红霉素（ROX，837 Da，极性表面积 217 Å²，最长轴约 15–18 Å）在市政二级出水与再生水中以 ng/L 级存在（全球水体大环内酯最高约 3847 ng/L，E8），与红霉素等五种类内大环内酯共存；最难区分的罗红霉素对红霉素仅差 C9 一个官能团（肟醚对酮），且大环内酯在非选择性吸附剂上吸附垫底（E7 负证据）。叔胺 pKa 8.8–9.0，pH 7–8.5 大部分质子化（阳离子为类内共有陷阱）；超大极性使微孔可及性差。</p>
+</div></details>
+<details class="sec" open><summary>② 仿生故事（50S 核糖体 NPET 类级读取）</summary><div class="secbody">
+<p><b>生物原型：</b>细菌 50S 核糖体新生肽出口隧道 NPET，其大环内酯结合位点完全由 23S rRNA 核苷酸构成、不涉及核糖体蛋白（E1，PDB 1JZZ，3.8 Å）；该 RNA 阵列在受限隧道内读取 C5 糖支链、内酯羟基与羰基等类级共有特征，对 14、15、16 元环均结合（E2），自然功能为类级结合而非排阻，属可迁移的分子识别功能。攻击方测距示 C9 肟醚臂无规范核苷酸碱基接触（肟氮距 A2045 N1 为 4.61 Å），且红霉素 9-酮氧可给等价接触。<b>可转译原理：</b>核苷酸碱基阵列的受限读取逻辑可脱离蛋白骨架，以全有机核苷酸碱基模拟氢键站位阵列在刚性凹形裂缝受限微环境中复现。<b>硬对应主张：</b>23S rRNA 阵列类级读取转译为碗壁预组织站位阵列对类级共有图案的读取（有原型支持，预期强度中等，类级 α 设计估计约 1.5–3）；肟醚类内区分与环尺寸排阻无原型支持，明标为受 NPET 启发而超越原型的工程假设。</p>
+</div></details>
+<details class="sec" open><summary>③ 材料设计方案</summary><div class="secbody">
+<p><b>唯一实体：</b>刚性凹形裂缝半笼碗单元共价锚定于介孔有机聚合物孔壁的主平台复合体（β-酮烯胺 COF 为次平台，裂缝机制确立后再论）。碗单元两个水稳候选：候选甲为间苯二酚[4]芳烃型深腔碗（上口沿内径约 13–14 Å），须取酰胺型或醚型开敞水稳碗；候选乙为 Gibb 型八酸水溶深腔空腔分子（腔径约 8–9 Å 设计估计偏小，须扩侧壁或二聚胶囊构型）。空间组织：14 元环主环半嵌入碗口呈浅搭靠（半嵌深度约 5–8 Å，217 Å² 极性表面积大部分暴露本体水）；碗壁预组织核苷酸碱基模拟站位（二氨基三嗪、酰亚胺、嘧啶酮、脲或酰胺）；碗沿埋置磺酸根或羧酸根配对离子站构成去氧糖胺铵亲和力锚。识别元分三层：类级糖基/内酯图案读取、面向 C9 肟醚侧臂两个醚氧的几何独特站位、碗口 14 对 16 元环尺寸窗口。碗口内径、腔深、站位间距全部待提取或待标定。</p>
+</div></details>
+<details class="sec" open><summary>④ 合成方法（SOP 草图六步，未实例化）</summary><div class="secbody">
+<p>第零步：电位滴定实测去氧糖胺叔胺 pKa（文献值约 8.6–9.0，未核验），先于一切计算。第一步：建模复核客体最长轴与最小截面，DFT 优化（B3LYP-D3/def2-SVP，SMD 水）取紧凑亚集成布居并回代 ΔΔG 收支；碗模型化合物上 ROX 对 Ery 显式溶剂自由能计算（FEP/TI 或 umbrella sampling）；go/no-go 闸为 ΔΔG > +1.7 kJ/mol（α < 0.5）且无可补偿修订空间则合成前终止（F10）。第二步：构筑碗单元（酰胺型或醚型间苯二酚[4]芳烃深腔碗，或八酸扩侧壁/二聚胶囊），碗壁引入功能化站位单体与配对离子站；设正排体、错排体、空白体、扩口体、窄口体、氢键面移位同分异构体六组。第三步：mg/L 批次可及性门槛加 ng/L–mg/L 等温线线性桥检定。第四步：碗共价接枝介孔孔壁，造粒或核壳颗粒。第五步：PXRD、BET、元素分析加酸碱滴定测站位密度、水稳定性复测、SEM。第六步：pH 10/10.5/11 缓冲液水解半衰期实测，以释放率对分解率之比 ≥10 界定 pH 摆幅上限。文件未给具体投料配比、反应温度与时间（方案自承处于参数化而非实例化阶段）。</p>
+</div></details>
+<details class="sec"><summary>⑤ 验证逻辑</summary><div class="secbody">
+<p>关键因果对照：置换探针红霉素（C9 为酮，一致性检查）、站位错排体（M2 丧失增量 ≥50%，判别核心）、空白体、扩口体与窄口体（14 对 16 元环尺寸证伪）、阳离子交换边界体（T1）、氢键面移位同分异构体；NOM 三组闭合与 mM 阳离子竞争闭合（M7：10 mM Ca²⁺ 容量坍缩不超 50%）；logKow 与总氢键数单调性检验。证伪判据：F1a（α_H ≤1，基线模态预测的干净证伪）、F3（错排体保留全部增量，几何参数化前提证伪）、F4（水相氢键阵列淬灭）。通过线 M-gray：1 < α_H(ROX/Ery) < 2、95% 置信区间排除 1 且 M2 通过；M1（α ≥2）与理想线（α ≥5）为争取目标。精度口径：Henry 极限 α_H，K_H 相对标准误 ≤5%，可分辨阈值 α≈1.15。</p>
+</div></details>
+<details class="sec"><summary>⑥ 质量依据与三方立场</summary><div class="secbody">
+<p>轨迹 r1=66→r2=78→r3=82→r4=85 pass（0c/0h，未决 medium 1 项 R4-01、low 4 项）。第 4 轮经熵核算方向更正与收支透明重推，诚实声明基线 ΔΔG 中点 +2.25 kJ/mol、α≈0.40，α ≤1 为基线全支撑模态预测；方案重定位为机制确证型研究，五组因果对照（置换探针/错排体/空白体/扩窄口体/阳离子边界）在任何结果下给干净归因，F1a 干净证伪亦为交付物。跨分支独立审查列 C 级（研究假设）。负责人 U-022 保留待讨论。</p>
+</div></details>
+<details class="sec"><summary>⑦ 诚实限制</summary><div class="secbody">
+<p>①中心选择性声称按方案自身数字更可能被证伪（基线 α≈0.40，α>1 为有利半区事件）；②肟醚读取无原型锚点且置换在原型中近中性；③水相氢键被水化削弱为核心化学风险（F4）；④最大成本项 p_compact 无实测值；⑤亲和力层要求抗体级 K_a（10⁸–10⁹ L/mol），较接地水相碗宿主先例高四至六个数量级；⑥R4-01（mg/L 线性桥与 ng/L 锚窗口按自身数字互斥）未修订；⑦全部 21 篇证据仅摘要或题录层级、无一篇全文核验；⑧方案处于参数化而非实例化阶段。</p>
+</div></details>
+</div>
+</div>
+
+<!-- 卡片 4 -->
+<div class="card" id="card4">
+<div class="cardhead">
+<h3>卡片 4 · S31 / PCP A04 · β-CD snug-fit 五氯轮廓腔</h3>
+<div class="sub tag-row">
+<span class="badge b-wait">自评 85–87 / 正式裁决 revise ≈83</span><span class="badge b-C">独立审查 C 级 · 工程阳性对照</span><span class="badge b-wait">U-022 保留待讨论</span>
+分支：<code>Ultimate</code>　源：<code>rounds/fresh_1000/pcp/SCHEMES/S31_A04_pentachloro-snug-fit-beta-CD-polymer_r3.md</code>
+</div></div>
+<div class="body">
+<div class="note">注意：本案自评高分未在独立复核中存活，正式裁决为 revise 约 83，不应写成已通过。</div>
+<details class="sec" open><summary>① 科学/工程难题</summary><div class="secbody">
+<p>PCP 为弱酸性氯代酚（pKa≈4.7），水相中以中性酚与酚氧阴离子共存，logKow 高；普通疏水吸附对它与低氯同族物无区分能力，需要一种独立于 logKow 的形状读出机制。注意独立审查指出：近中性水中主要物种是 pentachlorophenolate，而源稿按中性 PCP 进入 β-CD 疏水腔设计，目标物种、脱水代价与静电环境在方案起点未对齐。</p>
+</div></details>
+<details class="sec" open><summary>② 仿生故事（FABP/Lipocalin 疏水腔轮廓读出）</summary><div class="secbody">
+<p><b>原型：</b>两个独立进化的原型作收敛验证——FABP（脂肪酸结合蛋白）以疏水内腔结合并转运脂肪酸等疏水配体，Lipocalin 以 β-桶疏水腔结合疏水小分子；二者均执行可迁移的识别与分配功能，非毒性靶标。<b>证据状态：</b>文件仅给族级归属（族 B）与原理性描述，未给 PDB 编号或具体残基证据；方案自评亦诚实标注为摘要级证据、"仿生启发"层级，且明确 FABP/Lipocalin 无 PCP 结合蛋白。<b>可转译原理：</b>疏水腔对客体轮廓的 snug-fit 几何互补加腔口极性基团对头基的锚定。<b>硬对应主张：</b>交联 β-CD 聚合物中 β-CD 腔对 PCP 五氯氯鞘轮廓的 snug-fit 包结（预测取向为五氯环入腔、酚氧向缘羟基），加 CD 缘羟基对酚氧头基的氢键锚定；ΔΔG_snug-fit(PCP vs 2,3,4,6-TeCP) 约 1.5–4.0 kJ/mol（推断值，待阶段 0 计算门检验）。</p>
+</div></details>
+<details class="sec" open><summary>③ 材料设计方案</summary><div class="secbody">
+<p><b>唯一实体：</b>交联 β-环糊精（β-CD）聚合物，分级孔结构，合成参照 Front Chem 2018 路线。识别元有二：β-CD 疏水腔（对 PCP 五氯环轮廓的 snug-fit 几何互补）与 CD 缘羟基（对酚氧头基的氢键锚定）。交联剂在源文件中本并列 ECH/DVS 两选项，r3 修订选用 DVS（二乙烯基砜，非 CMR，参照 Carbohydr Polym 2019，交联效率与 ECH 相当）替代 ECH（环氧氯丙烷，CMR 物质）。备选腔型决策：若 β-CD snug-fit 能量不足，换 α-CD（腔约 5.5 Å），γ-CD 为腔过大对照。成型与孔结构：源文件给出 50–300 µm 分筛与 HIPE 分级孔（大孔 >50 nm/介孔 2–50 nm/微孔 <2 nm）；未给出交联度窗口与定量批次放行判据（对抗核验确认，总结卷"未给出粒径、孔径分布"的表述过强）。另注：源文件 r1 §9.1 的等氯数对比值方向与 §4.3 自相矛盾（源文件内部笔误），r2 起统一为 SF(2,3,4,6-TeCP/2,3,5,6-TeCP) > 1.3。</p>
+</div></details>
+<details class="sec" open><summary>④ 合成方法</summary><div class="secbody">
+<p><b>主体材料（r3 DVS 路线）：</b>β-CD 10 g + DVS 15 mL + NaOH（0.5 M，50 mL），40 °C 搅拌 4 h；过滤、水洗至中性、60 °C 真空干燥。<b>等氯数对照物 2,3,5,6-TeCP（参照 E39）：</b>2,3,5,6-四氯苯胺（1.0 eq）+ NaNO₂（1.1 eq）+ HCl（3 M）0 °C 反应 30 min 得重氮盐，经还原、硝化、还原、重氮化、水解得 2,3,5,6-TeCP，3 步总收率约 40–55%，柱层析纯化（硅胶，正己烷/乙酸乙酯 9:1）。<b>再生与处置：</b>吸附饱和后以甲醇/乙腈（含 0.1% 醋酸）洗脱，浓缩物经 NaOH（2 M）/乙二醇 160 °C 密封 4 h 碱性水解，脱氯率 >99%（E38）。材料本体 QC 判据文件未给出。</p>
+</div></details>
+<details class="sec"><summary>⑤ 验证逻辑</summary><div class="secbody">
+<p>阶段 0 建模门：B3LYP-D4/def2-TZVP + SMD 水模型，含 5 个显式水分子；构象搜索为 PCP 在腔内旋转 0–360°（步长 30°）、z 轴平移 −3 至 +3 Å（步长 0.5 Å），PM7 预优化后取最低 5 构型精算。Go 判据：ΔΔG_snug-fit(PCP vs 2,3,4,6-TeCP) ≥1.0 kJ/mol（95% CI 下限 >0）；0.5–1.0 为 marginal 换 α-CD 或缘羟基修饰；<0.5 终止或转 A02。因果对照：等氯数对 2,3,4,6-TeCP vs 2,3,5,6-TeCP（SF >1.3）、PCA 五氯苯甲醚头基缺失对照、氯酚同族物 5 点加 2 个等氯数对共 7 点的非单调性统计框架（PCP 残差 >2σ，p<0.05）。成功判据含 S1 SF(PCP/TeCP) ≥2、S11 ΔΔG ≥1.0、S12 十次循环 Kd 变化 <15%。</p>
+</div></details>
+<details class="sec"><summary>⑥ 质量依据与三方立场</summary><div class="secbody">
+<p>PCP A01 经 r1=74→r2=64→r3=76→r4=76 四轮后终止（承重反转型非单调几何不可实现），转 A04；A04 r1 待裁决→r2 自评 83–85→r3 自评 85–87 并自判 pass。方案方 r3 逐条闭合 r2 残余 10 项弱点后自评达通过线；<b>Ultimate 分支 R3 正式裁决为 revise 约 83</b>；跨分支独立审查列 C 级，指 β-CD/卤代酚主客体先例拥挤、原创性与硬仿生对应均不足，最高定位为工程阳性对照，不应以高分名义进入材料验证；负责人 U-022 保留待讨论。</p>
+</div></details>
+<details class="sec"><summary>⑦ 诚实限制</summary><div class="secbody">
+<p>①全部性能（Kd 约 10³–10⁴ L/kg、SF ≥2、HA 抑制 <30%）为纸面推断；②等氯数对 SF >1 方案自承先验概率仅约 25–35%；③ΔΔG_snug-fit 在 r3 仍为待计算检验的推断，水相弱相互作用对竞争水化的固有风险未消除；④FABP/Lipocalin 证据为摘要级，无 PDB 编号，方案自标"仿生启发"而非硬对应；⑤独立审查另指出 β-CD/卤代酚主客体先例拥挤，与方案自称 PCP→β-CD 零实验先例存在口径张力；材料实体未冻结粒径、孔径与批次 QC。</p>
+</div></details>
+</div>
+</div>
+
+<!-- 卡片 5 -->
+<div class="card" id="card5">
+<div class="cardhead">
+<h3>卡片 5 · SC-P02 / PG-PMO · 短链 PFAS 类级孔口脲梯度周期介孔有机硅</h3>
+<div class="sub tag-row">
+<span class="badge b-pass">88 · E1_mechanism_validation_ready（正式分）</span><span class="badge b-A">独立审查 A 级 · 工程潜力最高</span><span class="badge b-wait">U-017 不接受微米径向梯度为强仿生对应，分子尺度重建在途</span>
+分支：<code>main</code>　源：<code>rounds/short_chain_pfas_from_scratch_20260725/DEEP_RESEARCH_AND_E1_DESIGN.md</code>
+</div></div>
+<div class="body">
+<details class="sec" open><summary>① 科学/工程难题</summary><div class="secbody">
+<p>目标物：PFBA、PFHxA、PFBS、GenX 在市政二级出水中以痕量共存，头基（磺酸根/羧酸根/醚羧酸根）在运行 pH 下完全解离、强水合；实验分层 T1 环境层四成员各 10 ng/L、T2 方法层各 100 ng/L、T3 结构层各 1 µg/L；基质含 mM 级 HCO₃⁻/Cl⁻/SO₄²⁻ 与 EfOM（DOC 3–10 mg/L）。</p>
+<p><b>痛点一（为什么难去除）：</b>真实障碍不是容量上限而是痕量竞争——传统 GAC 上短链 PFAS 位于更易被置换的外层位点，长链 PFAS 与无机/有机离子使其提前穿透（E116）；PA6 对 PFBA/PFHxA 容量很低且 DOM 显著抑制（E171）；四成员必须按最差成员判定，任一成员不达标即否定类别去除，不得用 PFBS/PFHxA 的较好结果掩盖 PFBA/GenX。</p>
+<p><b>痛点二（为什么难设计吸附剂）：</b>带正电与含氟路线已拥挤（2023 含胺/含氟 PMO 已直接研究 PFBA 并在复杂天然水测混合 PFAS，E168；PPN、AER、β-CD、含氟凝胶、2026 金属笼均强先例），增加电荷、氟亲和或孔面积不能构成本项目贡献；受限水也非空白区（含水活性炭、2026 动态羟基沸石 E173/E174）；中性氢键必须接受最强反证：中性脲 POP 已能在水中吸附磺酸盐/羧酸盐染料（E170），而 TauA 证据表明即使头基配位几何相同，不同水合/去溶剂代价仍可造成数量级亲和差异（E164）——故只有脲桥加疏水孔不够，必须证明空间放置本身在实际水中有独立因果增益。</p>
+<p><b>基线排除：</b>残余 CTAB 伪装成 AER 的离子交换、永久阳离子/可滴定正电 IEC、等当量反离子释放、普通疏水/总脲量、孔填充；设计以 ζ 电位 ≤+5 mV、正电 IEC ≤0.02 mmol/g、残余 CTAB ≤0.005 mmol/g、等当量阴离子释放检验和同组成均匀体对照逐项排除。</p>
+</div></details>
+<details class="sec" open><summary>② 仿生故事（SsuA 烷基磺酸盐营养捕获蛋白）</summary><div class="secbody">
+<p><b>主原型：</b>细菌 SsuA 烷基磺酸盐营养捕获蛋白（E162）——在缺硫条件下捕获多种烷基磺酸盐并向 ABC 转运系统递送；磺酸氧由多重主链 NH、侧链极性基团与保守结构水共同定位，烷基部分进入含疏水残基且保留结构水的宽口袋；属可迁移的识别/分配功能。<b>支持原型：</b>Bug/TRAP 家族羧酸夹钳（E163），两个保守结构模体经直接及水桥氢键抓取羧酸头，随后第二结构域检验尾部是否形成生产性占位。<b>反证参照：</b>TauA/SsuA（E164）说明头基几何不是充分条件，水合/去溶剂代价控制亲和。</p>
+<p><b>可转译原理：</b>不是复制蛋白，而是把"入口处中性多齿含水夹口 + 相邻低极性受限腔体"固定到非蛋白颗粒中；不用固定正电，在含水入口集中多个中性氢键供体；头基锚定与尾部占位分成相邻而非混匀的两个区域。</p>
+<p><b>硬对应条目（源文件三行对应表，因果推翻方式逐条配对）：</b>其一，SsuA 含水入口中性氢键捕获多烷基磺酸盐 → BTPU 的两个 NH 在开放通道端富集、允许保留部分水而非完全干燥头基；推翻：SC-P02 对 SC-P01（同组成均匀体）若无最差成员增益，空间仿生主张失败。其二，Bug/TRAP 头基锚定与尾部占位分域 → 孔端 BTPU 先接触 PFBA/PFHxA/GenX 羧酸头、后方 BTEB 内腔承担短尾/醚支链低极性接触；推翻：<b>去脲 SC-P05（Ph-only，BTEB/TEOS）或去苯 SC-P04（U-only，BTPU/TEOS）任一与完整体等效，则双区协同失败</b>（编号经对抗核验修正）。其三，TauA/SsuA 水合代价控制亲和 → 必须在目标水质测水合竞争、干态 BET 不作选择性证据；推翻：纯水有效而二级出水保留率 <50% 则终止主方案。</p>
+<p><b>诚实边界：</b>仿生分类为功能仿生；SsuA 是主原型、Bug/TRAP 是支持原型，两者是天然营养物选择性运输系统，不是 PFAS 毒性靶蛋白；人工材料只保留"含水头基夹口—相邻尾腔"的功能组织，不复制蛋白折叠或动态闭合。负责人 U-017 裁决：微米级径向梯度本身不被接受为强仿生硬对应，分子尺度硬对应重建在途；若只保留径向梯度，应作为非仿生材料课题重新分类。</p>
+</div></details>
+<details class="sec" open><summary>③ 材料设计方案</summary><div class="secbody">
+<p><b>唯一实体：</b>5–10 µm 球形介孔有机硅颗粒（PG-PMO），由 BTEB（1,4-双(三乙氧基硅基)苯）苯桥低极性通道与后延迟加入的 BTPU（双(3-三乙氧基硅丙基)脲）脲桥共同缩合构成；干基目标组成 BTPU:BTEB = 20:80 mol%；主介孔 2.5–4.5 nm；BTPU 在颗粒外层/开放通道端区域相对富集。材料不含永久阳离子、氟化单体、蛋白、金属笼或不可逆 PFAS 模板。</p>
+<p><b>空间组织：</b>由加料时序定义——BTEB 先成核形成苯桥内腔通道，BTPU 延迟进料（延迟 20 min 为唯一空间变量）形成孔口脲富集，使中性双 NH 夹口位于低极性腔体入口；空间梯度 QC 为横截面 ToF-SIMS 或经验证的 STEM-EELS 测外层 100 nm 的 N/苯桥信号比相对颗粒中心 ≥2.0（至少 30 颗粒，三批中位数均达标）。</p>
+<p><b>识别元：</b>BTPU 的两个中性脲 NH（头基氢键供体夹口，允许保留部分结构水）+ 相邻 BTEB 苯桥低极性腔（短氟尾/醚支链分配接触）；近零 IEC、无永久电荷。</p>
+<p><b>因果对照系列（同批四个必需对照）：</b>U-PMO 即 SC-P01（相同 20:80 总组成但 BTEB/BTPU 同时加入的同组成均匀体）；U-only 即 SC-P04（BTPU/TEOS 构成、调 TEOS 匹配总 Si 与孔容的尾腔删除体）；Ph-only 即 SC-P05（BTEB/TEOS 构成、无 BTPU 的夹口删除体）；time-zero process blank（无硅烷但走完整模板提取流程，排查 CTAB/器皿背景）。商业基准：Filtrasorb 400 类 GAC、强碱 AER、E168 型含胺/含氟 PMO（基准只比较性能、不进入创新归属）。</p>
+</div></details>
+<details class="sec" open><summary>④ 合成方法</summary><div class="secbody">
+<p><b>第一步 BTPU 前体（一次反应）：</b>干燥氮气通风橱中，5.00 mmol 3-氨丙基三乙氧基硅烷溶于 20.0 mL 无水乙酸乙酯，冰浴 0–5 °C；5.00 mmol 3-异氰酸丙基三乙氧基硅烷溶于 10.0 mL 无水乙酸乙酯，20 min 滴加、保持 <10 °C；升至 25 °C 搅拌 4 h；减压、<40 °C 除溶剂，不做柱层析，氮气下保存并于 48 h 内使用。批次放行：ATR-FTIR NCO 约 2270 cm⁻¹ 峰低于起始物峰面积 1%、出现脲羰基带、¹H NMR 投料计量偏差 ≤5%、收率 ≥90%，未达整批废弃。</p>
+<p><b>第二步 PG-PMO 微球共缩合</b>（固定批量总桥联硅烷 5.00 mmol：BTEB 4.00 mmol、BTPU 1.00 mmol）：反应液为去离子水 180 mL、无水乙醇 60 mL、2.0 M HCl 8.0 mL、P123 2.00 g、CTAB 0.50 g，40 °C、500 rpm 搅拌至澄清；BTEB 于 10 mL 乙醇预分散后 5 min 加入，继续 20 min 形成苯桥通道先行凝聚；BTPU 于 10 mL 乙醇配成进料液 10 min 匀速加入，再搅拌 30 min，延迟 20 min 为唯一空间变量；转入经空白验证的玻璃内衬不锈钢压力反应器（全流程不使用含氟衬里或密封件），80 °C 5 h，随后 130 °C 12 h。</p>
+<p><b>第三步模板提取：</b>0.10 M HCl/乙醇，60 °C、8 h，三轮；再以乙醇和超纯水各洗至中性，60 °C 真空干燥 12 h；所有 CTAB/酸性乙醇提取液作危险废液。<b>第四步分级：</b>湿法差速离心取得 5–10 µm 主级分，不得引入表面改性剂或改变化学组成。</p>
+<p><b>批次质量放行（三个独立批次均需满足）：</b>主粒径 5–10 µm、CV ≤20%；BET ≥500 m²/g；孔容 ≥0.50 cm³/g；主孔径 2.5–4.5 nm；元素分析/固态 ¹³C、²⁹Si NMR 支持 BTPU:BTEB 为目标值 80–120%、Si–C 桥保留；外层 100 nm N/苯桥信号比相对中心 ≥2.0；PG-PMO 与 U-PMO 的 BET、孔容、主孔径、粒径、总 BTPU 含量分别匹配在 ±10%、±10%、±0.3 nm、±15%、±10% 内，不满足不得做空间因果比较；残余 CTAB ≤0.005 mmol/g 干料、溴 ≤50 µg/g、24 h 水浸出液季铵表面活性剂不得高于方法定量限；pH 6.5–8.0 ζ 电位 ≤+5 mV、可滴定正电 IEC ≤0.02 mmol/g，超限即按混合/离子交换材料处理并终止主方案；24 h 浸出 TOC ≤0.5 mg/g、Si ≤0.5 mg/g、质量损失 ≤1%。连续两次合成不能同时满足空间梯度与匹配对照即触发 M0-STOP，不以改成均匀 PMO 续命。<b>安全注记：</b>异氰酸酯硅烷需低温滴加与惰性气氛；CTAB 提取液按危险废液处置；全流程禁用可能接触样品的含氟聚合物耗材以防 PFAS 背景。</p>
+</div></details>
+<details class="sec"><summary>⑤ 验证逻辑</summary><div class="secbody">
+<p>分层浓度 T1 各 10 ng/L（环境层）、T2 各 100 ng/L（方法层）、T3 各 1 µg/L（结构层，结论不外推）。水基质：超纯水 pH 7.2；合成二级出水（HCO₃⁻ 3.0、Cl⁻ 2.0、SO₄²⁻ 0.50、NO₃⁻ 0.30、PO₄³⁻ 0.05、Ca²⁺ 1.5、Mg²⁺ 0.50、Na⁺ 5.0 mM，pH 7.2）；两座市政厂各两个日期 0.45 µm 过滤真实二级出水（记录 UV254、SUVA、LC-OCD/SEC EfOM 分级，不用商业腐殖酸替代）。批量实验 0.50 g/L、20 °C、端对端 30 rpm、七时间点，三独立批次每批三重复，EPA 1633A 同位素稀释 LC-MS/MS，全流程禁用含氟耗材。</p>
+<p><b>预注册三主终点：</b>G_spatial——PG-PMO 对 U-PMO 四成员 Kd 几何均值比 ≥2.0、95% CI 下限 >1.25、最差成员 ≥1.5；G_two-zone——完整体相对 U-only 与 Ph-only 的 T2 实际出水 Kd 均提高且脲×苯桥交互项为正、95% CI 不跨 0，仅相加解释则仿生协同主张失败；G_class-matrix——T1 实际出水 60 min 各成员去除 ≥80%、Kd 保留率 ≥0.60、PFAS 类对五种无关微污染物 Kd 比 ≥3，逐成员报告、禁止只报总 PFAS。排除离子交换：摄取不得伴随等当量 Cl⁻/Br⁻/NO₃⁻ 释放，容量若可由 ≤0.02 mmol/g 正电 IEC 完整解释则终止。固定床 4.6 mm×50 mm、EBCT 4.3–5.0 min、突破 C/C0=0.10、主门最差成员 ≥1000 BV；再生五周期（10 BV 乙醇/水+0.10 M NaCl pH 10 洗脱），每周期回收 90–110%、第五周期最差成员容量 ≥首周期 85%。盲法编码、批次混合效应模型、Holm 校正。<b>七条停止线：</b>M0/Q0/B0/C0/S0/R0/P0-STOP，任一触发即撤回高质量设计候选，不得以正电、氟化链、蛋白或贵金属修补。</p>
+</div></details>
+<details class="sec"><summary>⑥ 质量依据与三方立场</summary><div class="secbody">
+<p>单轮从零深研文件（2026-07-25），文件内无 r1→rn 迭代，流程为独立候选冻结（冻结时未读取旧 PFAS 方案，冻结后旧方案只用于查重与失败模式审计）→攻击→审查裁决→评分。正式纸面评分 <b>88/100</b>（文件明示除 SC-P02 外其余候选均为诊断分），六维 18/21/17/13/10/9。最终裁决 <b>E1_mechanism_validation_ready</b>，推荐进入实验负责人审核；SC-P01/P04/P05 为不可删的因果对照而非备选方案；其余六候选（SC-P03 瓶形孔、SC-P06/07 聚酰胺、SC-P08 聚脲球、SC-P09 脲-苯乙烯-DVB 珠、SC-P10 热响应微凝胶）终止。三道门：仿生故事门通过；材料与实验科学门通过到 E1；工程验证门通过 E1、未达到 E2（2 mm 珠、长周期二级出水柱、再生与完整浸出尚需实验）。攻击者五项承重风险（CTAB 残留伪装 AER、延迟共缩合未必成梯度、普通疏水/总脲量或可解释、2023 含胺/氟 PMO 与 2026 Pd 笼直接先例、5–10 µm 颗粒压降），审查者判五项风险均已转为前置 QC 与对照可进 E1，但仅代表第一轮机制实验可执行，不代表材料性能已证实，也不授权采购或实验。总结卷载：跨分支独立审查列 A 级、评工程潜力最高；负责人 U-017 不接受微米级径向基团梯度作为强仿生硬对应、分子尺度硬对应重建在途。</p>
+</div></details>
+<details class="sec"><summary>⑦ 诚实限制</summary><div class="secbody">
+<p>①88 分不是性能预测，高质量之处在于确切材料、最近先例、最差成员判据、同组成空间消融、IEC/CTAB 排伪、二级出水竞争、固定床、再生、浸出、统计与停止条件闭合，只有实验通过全部门才可升为论文主材料；②脲桥 PMO 可制备与延迟共缩合可改变介孔硅功能分布各有文献支持，但 BTPU 在 BTEB-PMO 中形成可重复孔口富集无先例证明；③外层 100 nm 元素比不能自动代表孔道入口的分子尺度分布；④微量 CTAB 残留即可在 ng/L PFAS 实验中造成伪阳性（设 Q0-STOP 与 ≤0.005 mmol/g、溴 ≤50 µg/g 硬阈值）；⑤中性双 NH 的水相净收益受水合/去溶剂代价控制（TauA 教训），C0/S0 停止线以真实二级出水为准；⑥5–10 µm 颗粒只作 E1 高压微柱实体，压降与通量不得外推市政尺度，E2 才采用可去除海藻酸盐成形法转 2 mm 珠并重新计入全部惰性质量与传质损失；⑦最近先例强（E168 含胺/氟 PMO、E170 中性脲 POP、E169 Pd 笼、E173/E174 受限水），增量被严格限定为无氟、近零 IEC、孔端中性脲梯度相对同组成均匀体的实际水因果增益；⑧任一 STOP 触发不得以正电、氟化链、蛋白或贵金属修补。另据总结卷：负责人 U-017 裁决下空间梯度机制主张为未决状态，当前版本只能视为机制验证准备就绪的假设。</p>
+</div></details>
+</div>
+</div>
+
+<!-- 卡片 6 -->
+<div class="card" id="card6">
+<div class="cardhead">
+<h3>卡片 6 · DCP20-01 / EPS-DCA-SIP · 2,6-DCP 抗 DOM 水化层与浅层识别</h3>
+<div class="sub tag-row">
+<span class="badge b-wait">86 · concept_valid（环境门阻断）</span><span class="badge b-B">独立审查 B 级 · 决定性前置门</span><span class="badge b-wait">U-021 停核壳，改载体先行架构筛选</span>
+分支：<code>main</code>　源：<code>rounds/bpa_dcp_20x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md</code>
+</div></div>
+<div class="body">
+<details class="sec" open><summary>① 科学/工程难题</summary><div class="secbody">
+<p>目标场景：市政二级出水痕量 2,6-DCP 抛光；<b>环境门 conditional_not_closed</b>——西澳官方多厂二级处理水回用计划直接检出 2,6-DCP（16 种酚中 11 种检出，2,6-DCP 属检出率 >30% 的五种，KWRP 与 Beenyup WWTP 中位数显著不同 p=0.001，并有季节分析），但第二条独立合格来源仍缺：CSIRO 两厂报告 LOQ 为 10,000 ng/L 信息量不足，WA 风险评估数据表受 1–5 µg/L LOR 和基质干扰限制，WHO 汇编的德国污水厂数据年代久远且无可审计 LOQ/分析相态，天津五 STP 研究最终出水检出物不含 2,6-DCP。2,6-DCP 在 pH 6.5–8.0 窗口内以中性酚与酚盐形态混合。</p>
+<p><b>痛点一：</b>DOM 非特异竞争强；四个位置异构体的疏水性与 pKa 相近，把 pKa 单调差、疏水性、普通阴离子交换、普通印迹或 tick 气味响应当成位置异构体硬选择性均不能成立——tick 文献显示 2,4-DCP 可模拟 2,6-DCP，是反证而非正证。<b>痛点二：</b>直接先例拥挤——PAS/SiO₂ 表面印迹、双单体 SERS-MIP、多模板 MIP、β-CD 氯酚捕获、Janus 多受体材料均已存在；主张不能是首次 MIP；深腔传质慢、模板泄漏与平台拥挤是通病。<b>基线排除：</b>普通阴离子交换（IX-STOP：永久 IEC >0.10 mmol/g 或反离子交换主导即终止主材料分类）、pKa 单调性（不算创新，高 pH 仅用于再生）、普通疏水/普通印迹名称（真正贡献是水化屏障后置浅腔在 DOM 中相对等组成错位/删除体的增益，由 C3 无 HEMA 与 C5 均匀共聚对照读出）。</p>
+</div></details>
+<details class="sec" open><summary>② 仿生故事（活性污泥 EPS 屏障 + DHPB/PceA 姿态约束）</summary><div class="secbody">
+<p><b>两层证据，不混写。</b>主功能原型（功能同源）：实际活性污泥体系中，EPS 作为保护屏障把 2,6-DCP 从水相转移到污泥分相；长期培养研究报告约 26% 初始质量进入污泥吸附相、73±2% 仍在溶解相，说明屏障有效但不是高容量神话。材料只迁移"先穿过非离子水化层、再进入低极性滞留域"的功能组织，不使用原 EPS 或蛋白。结构支持原型（姿态约束级）：DHPB–2,6-DCP（PDB 7M1I，1.66 Å）与 PceA–2,6-DCP（PDB 5MA0，1.90 Å）两套独立直接复合物；前者还显示 2,4 与 2,6 异构体占据不同位置；后者的高度疏水活性位点把羟基端朝向催化中心；二者只约束假模板腔的姿态（疏水腔内的定向酚氧端加 2,6 双氯轮廓），不声称蛋白结合本身就是污水去除。</p>
+<p><b>可转译原理：</b>水化屏障后置加浅腔姿态约束。<b>硬对应条目（源文件未使用 H 编号）：</b>HEMA 非离子水化外层对应 EPS 保护屏障，降低大 DOM 的非特异占位；NVP 羰基在浅腔底为中性酚 OH 提供氢键受体，对应定向酚氧端；交联腔保存 2,6 双氯对称轮廓，对应 7M1I/5MA0 约束的 2,6 取代几何。<b>诚实边界：</b>EPS 数据表明屏障有效但非高容量；蛋白复合物仅用于姿态约束而非去除机制；方案真正贡献是水化屏障后置浅腔在 DOM 中相对等组成错位/删除体的增益，不是 MIP 名称或 pKa 开关；若屏障后置浅腔与对照组合被完整占用则终止独立发表主张。</p>
+</div></details>
+<details class="sec" open><summary>③ 材料设计方案（原核壳版本，U-021 后停止，存档）</summary><div class="secbody">
+<p><b>唯一实体：</b>核壳复合珠。芯：150–300 µm、宏孔 20–80 nm 的 St/DVB（70/30 摩尔进料）珠，湿态抗压可装短柱。壳：占干复合体 25±5 wt%；HEMA/NVP/EGDMA 摩尔比 45/15/40；平均干壳 1–5 µm，连通到芯的开放宏孔。假模板：2,6-二氯苯甲醚（2,6-DCA），相对 NVP 1:4；它保留 2,6 双氯轮廓和芳环，O-甲基使模板与目标可在 GC/LC 中完全区分（实现无目标泄漏）；未检索到其用于 2,6-DCP 印迹的直接先例。</p>
+<p><b>识别元：</b>HEMA 形成非离子水化外层以降低大 DOM 的非特异占位（屏障）；NVP 羰基在浅腔底为中性酚 OH 提供受体（酚氧锚）；交联腔保存 2,6 双氯对称轮廓（位置几何）。工作机理分工：pH 5.5 机制臂隔离形状效应，pH 7.0 工程臂评价真实形态混合；高 pH 仅用于再生，不把 pKa 单调性算作创新。</p>
+<p><b>因果对照系列（完整六体）：</b>C0 完整 DCP20-01；C1 无模板等组成 NIP（删除形状记忆）；C2 2,4-DCA 假模板错位体（检验取代位置而非氯含量）；C3 无 HEMA 的等腔密度体（检验水化屏障）；C4 无 NVP、以 St 等摩尔替代（检验酚氧锚）；C5 均匀共聚而非延迟投料体（检验空间组织）；工程基准：商用 GAC、2,6-DCP 直接模板 PAS-MIP 文献复现或最接近商购 MIP、裸 St-DVB 芯。创新清单：A/B/C/D/E 条件通过。</p>
+</div></details>
+<details class="sec" open><summary>④ 合成方法（原核壳草案，U-021 后停止）</summary><div class="secbody">
+<p>一锅两段悬浮聚合草案（10 g 干固体 E1 批，面向 100 g 湿珠）。<b>第一步种珠：</b>水相 1 wt% PVA、0.2 wt% NaCl，氮气脱氧；油相 A 为 St/DVB、甲苯/庚烷致孔剂、AIBN 0.8 wt%；70 °C、300–500 rpm 形成种珠，转化约 35–45%。<b>第二步延迟壳层：</b>油相 B（HEMA/NVP/EGDMA 45/15/40、2,6-DCA、少量 AIBN 和与 A 相相容的乙腈/甲苯）用 30–45 min 滴加，使其优先在已形成珠的外层聚合而不是新成核。<b>第三步固化：</b>70 °C 8 h，80 °C 2 h。<b>第四步后处理：</b>筛取 150–300 µm；乙醇/水循环洗，随后 10% 乙醇水洗到连续三次洗液 2,6-DCA 均低于方法 LOQ 且总回收质量闭合 90–110%。<b>放行/QC 判据（MFG-STOP）：</b>若 B 相独立成核 >5 wt%、壳质量不在 20–30 wt%、或 ToF-SIMS/截面 Raman 不能确认 HEMA/NVP 外层富集，不进入吸附实验。路线为常规自由基悬浮聚合（AIBN 引发剂），源文件未列高危试剂条目。注意：总结卷记载负责人 U-021 已停止该核壳路线、改载体先行架构筛选，本合成草案为源文件所载的原设计内容。</p>
+</div></details>
+<details class="sec"><summary>⑤ 验证逻辑</summary><div class="secbody">
+<p>分层实验四臂。<b>M0 形状机制臂：</b>pH 5.5±0.1、10 mM NaCl，2,6-/2,4-/2,5-/3,5-DCP 各 10 µg/L 混合，n=5；以实测 pKa 修正形态，要求去除形态差后 C0 对 2,4-DCP 的 α ≥1.5，且 C0-C2 与 C0-C1 的效应方向一致；另用 2,6-二甲基酚和 2,6-二氟酚作尺寸/电子探针。<b>M1 场景臂：</b>pH 原样（通常 6.5–8.0），10/100/1000 ng/L，两厂三时点二级出水、过滤/未过滤成对，DOM 0/2/5/10 mg-C/L 与硬度、碳酸氢根、硫酸根、氯离子分层；环境门关闭前可以准备方法与加标，但不能把加标结果写成真实出现性能。<b>M2 屏障因果臂：</b>C0 与 C3 先按可及浅腔密度配平；纯水 Kd 差必须 ≤15%，而 5 mg-C/L DOM 中 C0 的 Kd 保留率要比 C3 高 ≥25 个百分点，才允许把增益归于水化屏障。<b>M3 再生/短柱臂：</b>0.05 M NaOH 加 20% 乙醇、5 BV；五循环后工作容量 ≥80%，2,6-DCA/单体/低聚物浸出均过安全门；10 cm×4.6 mm 短柱、EBCT 2–5 min，只做可操作性，不用柱数据替代 M0 机制。<b>七条不可下调停止线：</b>ENV-STOP（第二个独立二级出水来源仍无可用 LOQ/采样位置/分析相态，不得标 E1）；POSE-STOP（pH 5.5 修正后 α(2,6/2,4)<1.5 或 C2 不产生方向性反转，终止位置识别主张）；BARRIER-STOP（C0 相对 C3 的 DOM 保留增益 <25 个百分点，删除 EPS 屏障主张，不能靠提高 HEMA 凑线）；TEMPLATE-STOP（2,6-DCA 洗脱不闭合或运行中超过 LOQ，终止该批）；MFG-STOP（壳层空间 QC 不过，不能用总体组成替代空间证据）；IX-STOP（永久 IEC >0.10 mmol/g 或反离子交换主导，终止主材料分类）；MATRIX-STOP（任一厂基质中 C0 保留纯水 Kd <40%，不进入 E2）。</p>
+</div></details>
+<details class="sec"><summary>⑥ 质量依据与三方立场</summary><div class="secbody">
+<p>单轮 20×2 深度设计（2026-07-25），无 r1→rn 轨迹。纸面诊断分 86/100，六维 18/22/17/12/9/8（与 BPA20-01 同分）。最终裁决：<b>concept_valid，不能正式 E1 释放</b>；材料层面未决 high 已变成可证伪停止线，唯一仍然阻断正式释放的 critical 是环境场景证据不足；状态严格保持 concept_valid，不能写成"E1 只差实验"；一旦第二条合格场景来源入账，只需重新审核 ENV-STOP 和分析方法，不需要重新发明材料。DCP 20 案淘汰：没有把任何方案正式标为 E1；DCP20-01 是唯一同时保住直接目标生物过程、位置异构体姿态、非离子交换、可成珠、DOM 因果对照和无目标模板泄漏的方案；DCP20-07（7M1I 姿态约束 triptycene-NVP POP 珠，82）与 DCP20-08（5MA0 姿态约束 β-酮烯胺 COF，83）科学新颖度高但 E1 原料与制造风险更高；DCP20-08 为概念备份，仅在 DCP20-01 因印迹先例失去原创性且环境门已关闭时重开。总结卷载：独立审查 B 级（只做决定性前置门）；负责人 U-021 停核壳、改载体先行架构筛选（比较活性炭、层级孔碳和低本底无机载体，以印迹增量、孔堵塞、DOM 耐受和装柱性能裁决，不预设活性炭必胜）。</p>
+</div></details>
+<details class="sec"><summary>⑦ 诚实限制</summary><div class="secbody">
+<p>①环境场景门未关闭是唯一 critical——第二独立二级出水来源不合格（WHO 汇编德国数据年代久远且无可审计 LOQ/分析相态，CSIRO LOQ 10,000 ng/L 信息量不足，WA 数据表受 LOR 与基质干扰限制，天津五 STP 最终出水未检出），结论是条件改善而非硬门关闭；②EPS 转移数据（约 26% 进污泥相、73±2% 仍在溶解相）表明屏障有效但非高容量，不支持高容量神话；③若查到 2,6-DCA 假模板同构先例则 E 维降分；若屏障后置浅腔与对照组合被完整占用则终止独立发表主张；④所有阈值为停止线而非已证性能；⑤tick 文献 2,4-DCP 模拟 2,6-DCP 是反证而非正证，位置选择性必须过 pH 5.5 形态修正后 α ≥1.5 门；⑥从头构筑核壳被负责人 U-021 判为过度依赖（后续裁决停止核壳、改载体先行，此为源文件之后的事件）；⑦2,6-DCP 在二级出水中真实出现浓度与形态分布仍待第二条合格来源入账，加标实验不能替代真实场景。</p>
+</div></details>
+</div>
+</div>
+</section>
+
+<section id="cardsB">
+<h2>四、千方案计划通过、负责人尚未首次裁决（卡片 7–12）</h2>
+<p>以下六条为 fresh_1000 台账中具备完整 <code>_passed.md</code> 与闭环记录的通过方案（Qwen 六条中的 S05/S14/S17/S26/S27/S32，Ultimate 延续期两条 S34/S51）。S14 与卡片 1 BPA20-01 同源，讨论对象为 main 版。全部为纸面设计，性能未证实。</p>
+
+<!-- 卡片 7 -->
+<div class="card" id="card7">
+<div class="cardhead">
+<h3>卡片 7 · S05 / PFOA A02 · PAF-1 孔口预组织双脲氧阴离子洞</h3>
+<div class="sub tag-row">
+<span class="badge b-pass">85 · passed（千方案计划首个通过）</span><span class="badge b-C">独立审查 C 级 · 研究假设</span><span class="badge b-wait">未裁决</span>
+分支：<code>Qwen</code>　源：<code>rounds/fresh_1000/pfoa/SCHEMES/S05_A02_urea-oxyanion-hole-POP_passed.md</code>
+</div></div>
+<div class="body">
+<details class="sec" open><summary>① 科学/工程难题</summary><div class="secbody">
+<p>PFOA 在 pH 6–9 几乎完全解离为单价羧酸根（pKa≈0，E12），头基呈平面 C2v 构型、O–C–O 约 120°、O···O 约 2.2 Å、氧上电荷约 −0.5 且离域，属极弱氢键碱，水相中受强水合竞争；阳离子吸附剂则落入硫酸盐过补偿陷阱。需在 mM 量级背景阴离子（SO₄²⁻、HCO₃⁻）中选择性结合；PFAS 同系物按链长呈亲和力梯度，长链置换短链。出水浓度 0.5–数十 ng/L。</p>
+</div></details>
+<details class="sec" open><summary>② 仿生故事（蛋白酶氧阴离子洞）</summary><div class="secbody">
+<p><b>生物原型：</b>蛋白酶氧阴离子洞（丝氨酸蛋白酶主链 NH 对、木瓜蛋白酶 Gln19、枯草杆菌蛋白酶 Asn155，E1），自然功能是在埋藏低介电口袋内以定向预组织氢键稳定催化过渡态四面体氧负离子，属可迁移的识别与稳定化功能。<b>机制证据：</b>Asn155→Leu 使 kcat 降 200–300 倍（E2，PNAS 1986），Gln19→Ala 与 Gln19→Ser 分别降 60 与 600 倍（E3，Biochemistry 1991），单个定向氢键贡献约 2.4–3.8 kcal/mol；预组织低介电环境免除溶剂与偶极重排代价（E4）。<b>可转译原理：</b>定向、预组织、低介电遮蔽——文件诚实标注其为 Cram 与 Lehn 以降通用超分子原则，非原型特异提取，且量值不迁移至底物态羧酸根。<b>硬对应主张：</b>H1 限于原理启发层——刚性呫吨 V 形骨架预固定汇聚双脲四 NH 阵列，几何匹配平面羧酸根双齿构型（NH···O 目标 1.8–2.2 Å），辅以 H2 孔口疏水遮蔽；真实设计谱系为双脲受体超分子家族（E16、E24），生物羧酸根原型精氨酸胍基因硫酸盐陷阱被刻意回避。</p>
+</div></details>
+<details class="sec" open><summary>③ 材料设计方案</summary><div class="secbody">
+<p><b>唯一实体：</b>PAF-1 孔口预组织双脲氧阴离子洞多孔有机聚合物，主变体 M1-pm。组成：PAF-1 骨架（四(4-溴苯基)甲烷 Yamamoto 偶联，全烃芳烃不含氟）经氯甲基化、叠氮化后，以铜催化点击化学接枝刚性双脲隙缝单体；单体由 4,5-二氨基呫吨（主，E26 直接合成文献）或 1,8-二氨基呫吨、1,8-二氨基三蝶烯（备）加 2.2 当量 4-乙炔基苯基异氰酸酯制得。空间组织：脲阵列位于孔口与外表面（隙缝单体约 1.5–2.0 nm 大于笼间窗口 0.6–0.7 nm，后接枝只能落在孔口）；孔内节点变体 M1-in 走共聚与前体转化第二路径。识别元为汇聚双脲四 NH 阵列（头基几何识别）+ 全氟尾疏水锚定（机制 C）+ 二价脱溶剂化门控（机制 A）。配套等骨架因子系列 M0 裸 PAF-1、M1-Me、M1-flex、M1c、M2a（NDMB 季铵）、M2b（FNDMB）、M3 与模型化合物 MC1/MC1-Me 用于因果解耦。</p>
+</div></details>
+<details class="sec" open><summary>④ 合成方法</summary><div class="secbody">
+<p><b>PAF-1 骨架：</b>四(4-溴苯基)甲烷经 Ni(COD)₂/2,2'-联吡啶 Yamamoto 偶联制得（通行条件待核原文）。<b>氯甲基化：</b>多聚甲醛/AcOH/H₃PO₄/HCl 约 90 °C（BCME 列安全评审）。<b>叠氮化：</b>过量 NaN₃ 于 DMF 60 °C 24 h。<b>隙缝单体：</b>4,5-二氨基呫吨 + 2.2 当量 4-乙炔基苯基异氰酸酯，无水二氯甲烷或 THF 室温 12 h，柱层析+重结晶纯化；4,5 与 1,8 异构体汇聚几何由 DFT 预筛裁定。<b>点击接枝：</b>PAF-1-CH₂N₃ + ≥10 当量炔基单体，CuSO₄/抗坏血酸钠（或 CuBr/PMDTA），THF/水 50 °C 氮气 24–48 h，过量苄基叠氮封端，EDTA 洗铜并索氏提取。M2a/M2b 由苄氯分别与 N,N-二甲基丁胺、N,N-二甲基五氟丁胺季铵化（CHN 目标 2.7、1.9 mmol/g）。残余叠氮以丙炔醇、残余苄氯以乙醇钠封端，残余碱性胺低于脲负荷 1%。<b>QC：</b>元素分析、FTIR（脲 C=O 1640–1660 cm⁻¹）、固体 ¹³C/¹⁵N 2D 谱、N₂/CO₂ 吸附、浸润量热、TGA、XPS 及桥连分数。</p>
+</div></details>
+<details class="sec"><summary>⑤ 验证逻辑</summary><div class="secbody">
+<p>因果对照为三重解离：M1-pm 对 M1-Me 等立体阻断 + F0 每脲位水合焓润湿校正隔离 NH 供体贡献；M1-pm 对 M1-flex 电子匹配柔性对照隔离预组织贡献；M2a 对 M2b 隔离氟亲和增量。证伪门：F1 模型同碳全氟配对分离因子 ≤1.2 且同 C8 PFOA/PFOS <1.5 证伪机制 B；F2 以 1 mM 硫酸盐三分支判中性优势；F5 基质判据。go/no-go：阶段 −1 模型水相结合序判决带（≥2 判 H_design、≤1.2 判 H_lit）；阶段 0 De 门控（特征扩散时间 < EBCT/3）；S_A+1 要求 M1-pm 对 M0 的 Kd 倍数 ≥1.5、对 M1-Me ≥2 且润湿校正后可分辨；S_eng 为 50 ng/L 进料 4 ng/L 穿透 ≥2000 BV。</p>
+</div></details>
+<details class="sec"><summary>⑥ 质量依据与三方立场</summary><div class="secbody">
+<p>轨迹 r1 61–71（四批次）→r2 72–76→r3 77（0c/1h）→r4 85 pass（0c/0h）。方案裁决判 85 恰落通过线，A02r4-01 与 A02r4-02 列为放行后必修项。跨分支独立审查分层 C（保留为研究假设）：全部机制未经实验，背书只能来自阶段 −1 与阶段 0，机制 B 双负锚低先验，S_full 先验很低。负责人尚未裁决。</p>
+</div></details>
+<details class="sec"><summary>⑦ 诚实限制</summary><div class="secbody">
+<p>①机制 B 面对 E16 与 E23 双负锚，方案自认大概率失败，S_full 先验标注很低；②机制 A 为中性疏水孔材料共有基底，创新完全系于 S_A+1 可分辨，而全氟羧酸根为极弱氢键碱，埋藏放大原则在孔口暴露位点不能运作（A02r4-03）；③M1-Me 仅移除双脲 4 NH 中呫吨侧 2 个，非完全等立体（A02r4-01，放行后必修）；④M1-pm 孔口对 NOM 与小分子羧酸的羧酸根同构负债在设计层不可消解；⑤E24 全文未读。</p>
+</div></details>
+</div>
+</div>
+
+<!-- 卡片 8 -->
+<div class="card" id="card8">
+<div class="cardhead">
+<h3>卡片 8 · S14 / BPA A01 · DmpR 型固定酚锚 + 桥连区空间门 COF（与卡片 1 同源）</h3>
+<div class="sub tag-row">
+<span class="badge b-pass">86 · passed（千方案计划第二通过）</span><span class="badge b-A">同源 main 版 BPA20-01 列 A 级</span><span class="badge b-wait">讨论对象为同源 BPA20-01</span>
+分支：<code>Qwen</code>　源：<code>rounds/fresh_1000/bpa/SCHEMES/S14_A01_DmpR-anchor-gate-COF_passed.md</code>
+</div></div>
+<div class="body">
+<p class="small">仿生故事、材料设计与合成以卡片 1（BPA20-01）为准（二者一致）；本卡记录 S14 的迭代轨迹与同源关系。</p>
+<details class="sec" open><summary>迭代轨迹（五轮攻防）</summary><div class="secbody">
+<p>r1=71（0c/2h：I1 成功判据与机制脱钩未合取、I2 非晶 HCP 无固定口袋几何使锚门解耦前提失效）→r2=82（0c/2h，BPA 历轮最强；选晶态 β-酮烯胺 COF 闭合 I2、合取门禁闭合 I1、读毕 Park 2020 PDB 6IY8 全文并坐标复算、自我纠错 E135K 误译；新增 2 high）→r3=83（0c/0h，两条 high 实质闭合：H1 选项甲 ΔΔG_wall 分项预算 + S2 硬 go/no-go、H2 穷尽 11 路线全文不可得登记监督者门；唯一阻断为两处文件级订正）→r4=84（0c/0h，M-A/M-B/L-1–L-5/P-1 全部 resolved：定义式反号订正、α-ΔΔG 0.45 kJ/mol、BPA pKa 经 PMC 全文直读改标 Bautista-Toledo 2005 新增 E34；裁决者明示文件级补件后预期 85–86 通过）→r5=86 pass（0c/0h，文件级补件 A4-1 至 A4-7 与 L-R1 全闭合；维度 18/22/17/12/9/8；裁决者确认 85 线未降、零 high 判通过；残余 N1 medium C1-B 位点归属不阻断）。监督者授 r5 最终补件轮（区别于 PFOA A07 结构性终止：A01 零 high、架构完整、缺口文件级可闭合）兑现裁决者 85–86 预测；G-E17 监督者门挂起待机构访问（E17=Zhao 2022 Sep Purif Technol 297:121489，Elsevier 付费封闭获取、无仓库副本，解析需机构订阅或通讯作者请求）；P(S2)≈20–30% 低先验诚实声明。</p>
+</div></details>
+<details class="sec"><summary>三方立场</summary><div class="secbody">
+<p>方案裁决 pass（86，千方案计划第二通过）；跨分支独立审查将其 main 同源版 BPA20-01 列 A 级（卡片 1）；负责人对同源版 U-019 较有兴趣、下一轮详细讨论，S14 本体未获单独裁决。</p>
+</div></details>
+</div>
+</div>
+
+<!-- 卡片 9 -->
+<div class="card" id="card9">
+<div class="cardhead">
+<h3>卡片 9 · S26 / NP A01 · ipso α-四级碳拓扑形状选择深腔笼（全计划最高分）</h3>
+<div class="sub tag-row">
+<span class="badge b-pass">92 · passed（千方案计划第四通过）</span><span class="badge b-C">独立审查：初判 B，二轮改判 C</span><span class="badge b-wait">未裁决</span>
+分支：<code>Qwen</code>　源：<code>rounds/fresh_1000/np/SCHEMES/S26_A01_ipso-alpha-quaternary-topology-cavity_passed.md</code>
+</div></div>
+<div class="body">
+<details class="sec" open><summary>① 科学/工程难题</summary><div class="secbody">
+<p>壬基酚在水相以中性分子存在（酚羟基 pKa≈10.2–10.3，pH 7 静电机制无效），技术品含约 20 种异构体；活性污泥去除率虽达 90–99%，出水残留恰为 α-位阻最大、雌激素活性最高且最抗降解的支链异构体（E6、E7、E9）。酚羟基为烷基酚家族共有头基，仅凭头基无 NP 选择性；支链/直链 logKow 近简并，分配型吸附无区分力。二级出水 0.53–1.4 µg/L。</p>
+</div></details>
+<details class="sec" open><summary>② 仿生故事（Sphingobium ipso 羟基化途径的逆读标尺）</summary><div class="secbody">
+<p><b>生物原型：</b>Sphingobium xenophagum Bayram 与 Sphingomonas sp. TTNP3 的 ipso 羟基化途径，其可迁移自然功能为底物判别（识别功能，不以毒性靶标为据）：α-四级碳对位烷基酚进入 ipso 碳羟化伴 1,2-烷基迁移的降解序列，α-二级与 α-三级碳异构体（含线性 4-n-NP）不进入或速率显著偏低（E1、E2、E4）；卤代 NP 竞争抑制表明对位取代酚共用识别位点、酚羟基锚定属识别组成部分（E8）。<b>机制证据：</b>E1（Gabriel 2005 JBC 途径鉴定）、E7（Lu 2015，PMID 25462736，出水残留与立体效应指数正相关 R²=0.76，富集 NP193a/b、NP110a、NP194）与 PDB 5M22（TTNP3 氢醌 1,2-双加氧酶晶体结构）。<b>可转译原理：</b>α-取代拓扑的几何读取 + 酚羟基对位锚定的二维正交识别，加"生物留下、材料捕获"的应用端逆读标尺。<b>硬对应三条：</b>HC1 闭腔底深腔轮廓匹配 α-四级碳 C9 分支丛，明示为几何统计对应（生物侧系稳定中间体阳离子特征的电子效应判据，无已知形状互补口袋，化学反应部分明确排除）；HC2 笼口边缘氢键供受体阵列固定酚羟基取向；HC3 材料滞留 Kd 与立体效应指数正相关且与 logKow 不相关（统计层面逆读标尺）。<b>二轮复审改判 C 的理由：</b>生物 ipso 代谢的承重是碳正离子电子稳定，不存在对应的天然形状识别腔；材料用完全不同的深腔主客体机制重新解释拓扑。</p>
+</div></details>
+<details class="sec" open><summary>③ 材料设计方案</summary><div class="secbody">
+<p><b>唯一实体：</b>间苯二酚芳烃扩壁深腔笼（vase 型闭底碗）经温和成网化学共价固定于分级孔多孔网络的笼交联网络；另设下缘羧酸化水溶性模型笼用于本征 1:1 结合测量。组成：间苯二酚芳烃笼单元，苯并咪唑酮或喹喏啉缩合一阶至两阶扩壁；腔口边缘氢键供受体阵列（2-吡啶酮或酰胺二级腔口）；下缘双把手（路线 A 降冰片烯、路线 B 乙烯基）供成网。空间组织：闭腔底深度 D 匹配 α-四级碳 C9 紧凑分支丛轴向尺寸且短于线性 C9 链全长（约 1.1 nm），线性异构体须付链弯折罚或尾段暴露于水，支链异构体可完全入腔；腔口孔径 W 匹配分支丛横向动力学直径；下缘固定于孔壁几何阻断笼-笼二聚界面；HIPE 模板成 50–300 µm 大孔珠加介孔造孔窗。识别元：形状互补（焓接触 + 闭底几何失配罚）为主选择性维，酚羟基腔口锚定为正交第二维，疏水效应仅作结合驱动力；体积受限使 uptake 可饱和（Langmuir 型）、不随 logKow 单调。对照三件套：空白载体、扩腔笼网络、腔口甲基化笼网络。</p>
+</div></details>
+<details class="sec" open><summary>④ 合成方法</summary><div class="secbody">
+<p><b>Step 0 建模门：</b>GFN2-xTB 与 B3LYP-D3 构象搜索，显式溶剂 PMF（umbrella sampling 或元动力学）预筛 2–3 个候选笼，go 判据 1:1 ΔΔG(α-q 对 4-n) ≥ 约 1.5 kJ/mol 且 2:1 胶囊不反转顺序。<b>Step 1 笼库：</b>间苯二酚芳烃前体经苯并咪唑酮或喹喏啉缩合扩壁，腔口二级功能化（2-吡啶酮或酰胺），下缘把手（降冰片烯酰基或乙烯基）与羧酸化水溶衍生物，¹H/¹³C NMR 与高分辨质谱确证。<b>Step 2 本征结合门：</b>ITC 与 ¹H NMR 滴定、Job 图 + DOSY 定化学计量、ROESY 定取向，SF ≥1.5 方放行。<b>Step 3 单异构体库：</b>技术 NP 制备液相分离 + 苯酚与确定壬烯的 Friedel-Crafts 定向烷基化，GC-MS 与 NMR 定结构，商品异构体（4-n-NP、4-tert-OP、2-NP、3-NP）直接采购。<b>Step 4 成网：</b>路线 A 降冰片烯笼 + 亚苯基桥联双-1,2,4,5-四嗪连接体，无催化 IEDDA 点击，室温、水兼容溶剂、放氮生成二氢哒嗪连接；路线 B 乙烯基笼 + DVB-80，AIBN 自由基悬浮聚合，HIPE 模板成 50–300 µm 大孔珠；索氏抽提（二氯甲烷与甲醇），超临界 CO₂ 干燥。<b>QC 前置三项：</b>¹H NMR vase 芳环图样完整、¹³C CP-MAS 无新增上缘取代信号、客体置换 ¹H NMR 腔口可及，缺一不得进入选择性测量；另含 N₂ 吸脱附、FTIR、TGA、SEM、压汞与残留单体 GC-MS。</p>
+</div></details>
+<details class="sec"><summary>⑤ 验证逻辑</summary><div class="secbody">
+<p>因果对照：三件套（空白载体、扩腔笼、腔口甲基化笼）全程全谱全浓度并行；logKow 零检验（相关系数绝对值 <0.3）兼查摩尔体积单调；Kd 对立体效应描述符回归显式纳入 α-二级、α-三级、α-四级三档；等温线形状检验（Langmuir 饱和对 Freundlich 分配）；DOSY + Job 图区分 1:1 与 2:1 胶囊。两级 go/no-go 门先于成网：Step 0 建模门 ΔΔG ≥ 约 1.5 kJ/mol；Step 2 可溶笼 1:1 门 SF(α-q 对 4-n) ≥1.5 且 ROESY 取向一致，低于 1.5 判 H1 证伪并角度终止，≥3 为完全成功层。真实基质：市政二级出水加标 + 本底与 DOC 匹配超纯水对照，出水 SF ≥ 超纯水 50%；床层 EBCT 5–10 min 与颗粒活性炭并排；再生 5 循环容量保持 ≥80%、SF 漂移 ≤20%；泄漏报告限 styrene 10 µg/L、无监管值物种 0.075 µg/L，超限即格式失败。失败判据 F1–F10 逐条映射 H1–H5。</p>
+</div></details>
+<details class="sec"><summary>⑥ 质量依据与三方立场</summary><div class="secbody">
+<p>轨迹 r1=82（台账 high 1、medium 4、low 5；两项通过裁决硬前置为 E7 相关方向核验与交联剂 CMR 及泄漏锚定）→r2=92 pass（合计 +10：因果闭环 18/20、选择性机制 24/25、可转译性 18/20、原创性 13/15、可证伪与对照 10/10、证据完整性 9/10），未决 critical/high 为 0。隔离裁决者 r2 裁决 pass，独立核验确认台账 10 条实质闭合；隔离攻击者本轮未见 medium 级以上新缺陷。跨分支独立审查初判 B（决定性前置门），第二轮复审改判 C；负责人尚未裁决。</p>
+</div></details>
+<details class="sec"><summary>⑦ 诚实限制</summary><div class="secbody">
+<p>①无酶-底物复合物晶体结构支撑，生物侧 α-四级碳判据系稳定中间体阳离子特征的电子效应，材料侧以几何腔互补重读同一拓扑变量，对应属几何统计对应、链强度先天有限；②网络 1:1 模式与胶囊抑制论证未经文献先例验证，属设计假设，octa acid 谱系线性链偏好为原型固有低先验风险（已设 F1 与 F10 直接证伪）；③水相中性柔性客体形状区分绝对量级可能低于 2 倍；④NP 专属再生文献空白，间苯二酚芳烃下缘酚盐化碱失稳为具体未验证机制；⑤全部文献未读全文、均不构成 verified；⑥二氢哒嗪连接长期水相水解稳定性未验证。深腔笼多步合成成本不占优，方案定位机制验证型研究。</p>
+</div></details>
+</div>
+</div>
+
+<!-- 卡片 10 -->
+<div class="card" id="card10">
+<div class="cardhead">
+<h3>卡片 10 · S27 / Dieldrin A01 · exo-环氧桥方酰胺双氢键识别腔</h3>
+<div class="sub tag-row">
+<span class="badge b-pass">89 · passed（千方案计划第五通过）</span><span class="badge b-C">独立审查：初判 B，二轮改判 C</span><span class="badge b-wait">未裁决</span>
+分支：<code>Qwen</code>　源：<code>rounds/fresh_1000/dieldrin/SCHEMES/S27_A01_exo-epoxide-dual-Hbond-cavity_passed.md</code>
+</div></div>
+<div class="body">
+<details class="sec" open><summary>① 科学/工程难题</summary><div class="secbody">
+<p>狄氏剂在水相以中性非解离分子存在，水溶度 0.110 mg/L（20 °C），logKow 5.40，无氢键供体、无 pKa、无电荷把手，唯一弱氢键受体为 6,7-环氧桥氧；监管基准低至 ng/L 级（WQC 3.86 ng/L），识别须从强疏水本底中解耦环氧几何信息。异狄氏剂（仅环氧取向相反）为最严格竞争物；静电/氢键/酸碱维度全不可用。</p>
+</div></details>
+<details class="sec" open><summary>② 仿生故事（Rdl/GABA 门控氯通道——毒性靶标仅作机制原型）</summary><div class="secbody">
+<p><b>生物原型：</b>果蝇 Rdl 基因 GABA 门控氯通道：跨膜段围成环二烯类结合的刚性疏水孔腔，是狄氏剂唯一被证的直接结合机制。该位点属毒效靶标，按 T9 纪律仅作机制原型；可迁移的自然功能是"刚性疏水腔内单一极性接触对笼状配体结合的开关式调制"这一可调制性与几何读出原理。<b>机制证据：</b>ffrench-Constant 1993（Nature 363:449，A302S 单点突变引入羟基即改写结合并赋予抗性，记载方向为削弱）、Cole 1995（[³H]EBOB 结合位点改变）、Abalis 1985（立体专一性结合）、Casida 2015 综述；无狄氏剂-蛋白共晶（T10），孔腔几何为文献链推断。<b>可转译原理：</b>受限疏水腔容纳笼状骨架并定位取向，腔口预组织双氢键供体对 exo-环氧氧作几何依赖读出。<b>硬对应两条：</b>HC1 为 SBA-15 孔壁苯基疏水层构成的受限疏水腔对应 Rdl 疏水孔腔，仅作疏水分选承载层，明示不声称低介电微环境；HC2 为腔口方酰胺双 NH 双齿供体对应 A302 位单一极性接触的调制读出，exo/endo 区分为连续可及性差异，系综期望 ΔΔG_geo 约 1–3 kJ/mol。<b>方向性限定：</b>原型记载方向为削弱，人工水相增强方向为本方案独立假设，无原型背书，仅由方酰胺受体化学（E9/E10/E13）背书并由供体有无配对实验检验。<b>二轮复审改判 C 的理由：</b>Rdl/GABA 是毒性靶点结合而非环境捕获；突变信息指向减弱结合，材料却假定增强；方酰胺物种和孔内几何亦不成立。</p>
+</div></details>
+<details class="sec" open><summary>③ 材料设计方案</summary><div class="secbody">
+<p><b>唯一实体：</b>方酰胺功能化疏水介孔硅胶 Sq-Ph-SBA-15。载体 SBA-15 孔径约 6–8 nm、厚壁（水热稳定性优于 MCM-41），孔壁接枝苯基疏水层构成受限疏水腔，容纳横截面约 0.9–1.0 nm 的笼状骨架；腔口接枝预合成 N-(3-三乙氧基硅丙基)-N'-苄基方酰胺双 NH 双齿供体，几何朝向腔口，接枝量设计 0.1–0.4 mmol/g。识别元为方酰胺双 NH 对 exo-环氧氧的双点螯合氢键，与疏水腔分配构成两正交识别维：疏水腔定位笼骨架取向，供体阵列按环氧几何读出。平行供体强弱系列为脲（Urea-Ph-SBA-15）与硫脲（TU-Ph-SBA-15）。因果对照材料为 N,N'-二甲基方酰胺接枝组（四取代、无供氢 NH）与无供体 Ph-SBA-15 空白组；MCM-41（约 2–3 nm）作孔径对照。</p>
+</div></details>
+<details class="sec" open><summary>④ 合成方法</summary><div class="secbody">
+<p><b>步骤一：</b>P123 三嵌段共聚物为模板、正硅酸乙酯为硅源，酸性条件水热晶化约 100 °C、24 h，过滤洗涤干燥，550 °C 煅烧 6 h 除模板；小角 XRD 与 N₂ 吸脱附表征孔径约 6–8 nm、比表面积约 600–800 m²/g。<b>步骤二：</b>煅烧 SBA-15 于无水甲苯中与苯基三甲氧基硅烷回流接枝（约 110 °C、12–24 h），无水溶剂洗涤干燥得 Ph-SBA-15，一部分留作空白对照；另取 Ph-SBA-15 以 3-氨丙基三乙氧基硅烷引入氨基连接臂得 Ph-SBA-15-NH₂。<b>步骤三主路线（预合成 + 一步接枝）：</b>方酸二乙酯先与 3-氨丙基三乙氧基硅烷 1.0 当量于乙醇中室温至 40 °C 反应 12–24 h 得单酰胺单酯中间体（单 NH），再与苄基胺 1.0–1.2 当量于 50–60 °C 反应 12–24 h 完成二取代，得 N-(3-三乙氧基硅丙基)-N'-苄基方酰胺；溶液相纯化并以 ¹H/¹³C NMR、HRMS、元素分析确认双 NH 双齿结构后，于稀甲苯/乙醇中 80 °C 接枝 Ph-SBA-15。QC 判据：接枝步不触方酰胺环，齿合度由预合成物种锁定。脲系列以苯基异氰酸酯、硫脲系列以苯基异硫氰酸酯偶联 Ph-SBA-15-NH₂。<b>步骤四：</b>元素分析（N、S）定接枝量、红外、固体 ¹³C/²⁹Si 核磁、热重、N₂ 吸脱附、zeta 电位-pH 滴定（pH 3–10）测表面首级 pKa（文献常见值约 3–4）。</p>
+</div></details>
+<details class="sec"><summary>⑤ 验证逻辑</summary><div class="secbody">
+<p><b>第一道 go/no-go 为阶段 0 模型化合物水相滴定（合成前置，不经此关不合成材料）：</b>N,N'-二苯基方酰胺对环己烯氧化物与 1,2-环氧己烷，¹H NMR 化学位移滴定为主、ITC 交叉验证（DMSO 助溶剂 ≤2%）；go 线 K(环氧) ≥10 M⁻¹，终止线 K ≤3 M⁻¹（转 A04 卤键或 A16 Lewis 酸变体），caution 带 3–10 M⁻¹；羰基门 K(环己酮)/K(环氧己烷) >50 触发孔口尺寸窗口变体。<b>关键因果对照七组：</b>供体缺如同批次配对（EF_endrin ≥1.8 且 95% 置信区间不跨 1，为核心解耦）、供体强弱序列单调性（脲 < 硫脲 < 方酰胺）、脂质归一化对 Kow 谱偏离、羰基占据监测、可溶环氧竞争置换、van't Hoff 温度序列、MD 构象采样 + 固体 ¹H-¹³C HETCOR 近接探测。<b>材料级成功判据：</b>超纯水三元竞争（0.5–50 ng/L）α_present(狄/异) ≥2.5 且 EF_endrin ≥1.8、EF_aldrin ≥2.5，真实基质 α_present ≥1.8，5 循环甲醇洗脱后 Kd 与 α 保留 ≥80%。</p>
+</div></details>
+<details class="sec"><summary>⑥ 质量依据与三方立场</summary><div class="secbody">
+<p>轨迹 r1=70（未决 high 2、medium 5、low 4）→r2=89 pass。第 1 轮 11 条台账经复算与路径验证全部实质闭合：H1 logKow 勘误与 EF 判据重构、H2 同批次配对 EF 判据、M1 撤销低介电声称并前置阶段 0 滴定、M2 预合成路线修复双 NH 齿合度、M3 原型证据降调为调制性、M4 几何预组织连续化、M5 羰基探针重定位。方案裁决 pass（89 达 85 线，创新性清单通过，D 维明确创新）；独立审查（攻击者）判定稳健、可进入评分，附三条 medium 精化建议（艾氏剂对工程范围、方酰胺电离混淆、湿/干困境）记为通过后精化提示项；跨分支独立审查初判 B，第二轮复审改判 C；负责人尚未裁决。</p>
+</div></details>
+<details class="sec"><summary>⑦ 诚实限制</summary><div class="secbody">
+<p>中心风险为水相氢键被竞争水化削弱：环氧氧为弱受体，扣除双侧去溶剂化与孔内残余水竞争后净收益可能仅 1–3 kJ/mol，水相环氧-方酰胺结合为零先例测量，整个设计系于此赌注。介孔表面非晶无序使几何预组织为统计系综，exo/endo 分辨或被平均化；无狄氏剂-蛋白共晶且原型记载方向为削弱，增强方向无原型背书；ng/L 填充床动力学无先例；羰基竞争为机制固有上限（供体在化学上无法区分环氧氧与羰基氧）；方酰胺表面 pKa 约 3–4 或致阴离子化混淆 EF 归因。另注独立审查指出 6–8 nm 孔相对约 1 nm 客体过大、先苯基化会消耗后续接枝硅醇。艾氏剂与异狄氏剂 logKow（6.50/5.20）为汇编级 metadata，绝对值未独立全文复核。</p>
+</div></details>
+</div>
+</div>
+
+<!-- 卡片 11 -->
+<div class="card" id="card11">
+<div class="cardhead">
+<h3>卡片 11 · S34 / Octocrylene A01 · 供体-受体 CT 识别腔</h3>
+<div class="sub tag-row">
+<span class="badge b-pass">85 · passed（第 7 通过，Ultimate 延续期）</span><span class="badge b-C">独立审查 C 级 · 科学赌注</span><span class="badge b-wait">未裁决</span>
+分支：<code>Ultimate</code>　源：<code>rounds/fresh_1000/octocrylene/SCHEMES/S34_A01_donor-acceptor-CT-cavity_passed.md</code>
+</div></div>
+<div class="body">
+<details class="sec" open><summary>① 科学/工程难题</summary><div class="secbody">
+<p>奥克立林（OC，CAS 6197-30-4）为紫外过滤剂，logKow 约 6.1–7.5，水相中性弱极性；其 α-氰基-二苯基丙烯酸酯核因氰基致双键电子亏缺，既造成氧化/氯化惰性（臭氧二级速率常数 kO3：OC 1.58 对 EHMC 5.25×10⁴ M⁻¹s⁻¹，Hopkins 2017 PMID 28535480 核验，低约 3.3×10⁴ 倍），又使该核成为芳腔 CT 受体，即"疼痛-机制同源"：惰性与识别把手同出一个电子学根源。高疏水使活性炭一律强吸附但无选择性；中性无解离，离子交换与 pH 摆动再生不可用。二级出水 ng/L–低 µg/L 级。</p>
+</div></details>
+<details class="sec" open><summary>② 仿生故事（光合反应中心电子互补预组织 + 真黑素富电子表面）</summary><div class="secbody">
+<p><b>生物原型两条硬对应：</b>H1 紫色细菌光合反应中心特殊对富电子 π 供体面的电子互补预组织（Deisenhofer 1985/Allen 1987；电子互补选择性耦合原理，非蛋白转译为孔壁供体面）；H3 真黑素/柱芳烃富电子表面隔离电子亏缺客体（Lindquist 1977；Ogoshi 2014/2024 水相富电子腔-电子亏缺客体 CT 激基复合物）。H2（Moser-Dutton 距离标度律，PMID 1311417 核验）降为一般刚性预组织使能论证，不作硬对应宣称，如实呈现 RC 功能为光驱电荷分离而非吸附的转译落差。<b>可转译原理：</b>孔壁电子密度可调的预组织富电子芳腔对电子亏缺客体的 CT 结合自由能增量 ΔΔG_CT 可测且随供体强度单调。</p>
+</div></details>
+<details class="sec" open><summary>③ 材料设计方案</summary><div class="secbody">
+<p>三个独立验证格式：其一，β-酮烯胺水解稳定 COF 的孔壁电子密度梯度三成员（D=烷氧供体壁/N=中性壁/A=非联苯胺电子贫壁），为核心因果对照系列；其二，供体强化谱学平台 TTF-COF（TTF 起始氧化电位 +0.34 V vs Ag/AgCl，MeCN，核验，强 π 供体；参比电极口径 r1 为 SCE、r3 为 Ag/AgCl，经对抗核验确认）；其三，离散亚胺分子笼/大环（Cooper 型多孔有机笼族的电子梯度取代系列：三醛苯并/均苯三甲醛与供体/中性/受体二胺经 [4+6]/[2+3] 亚胺缩合成笼），孔径由笼拓扑固定、与孔壁电子取代解耦，区别于 COF 周期框架与柱芳烃小腔。识别单元均为非蛋白人工识别单元。选择性机制分三层：第一层疏水预浓缩（前置、非选择性来源）；第二层腔内 CT（选择性来源，主判据）；第三层刚性有限腔几何窗口（使能）。</p>
+</div></details>
+<details class="sec" open><summary>④ 合成方法</summary><div class="secbody">
+<p>COF 平台按 β-酮烯胺缩合常规窗口（醛胺缩合、溶剂热）；TTF-COF 以四硫富瓦烯四醛/二胺构建；离散笼以三醛节点与电子梯度二胺（供体：烷氧基二胺；中性：苯二胺；受体：苯并噻二唑/三嗪二胺）经亚胺缩合成笼（Cooper 多孔有机笼成熟化学），若特定电子贫笼合成不可得，降级为"COF+柱芳烃双格式+定性趋势"并如实标注（降级路径明确，不阻断）。CMR 闭合：非联苯胺受体二胺首选加防护。</p>
+</div></details>
+<details class="sec"><summary>⑤ 验证逻辑</summary><div class="secbody">
+<p><b>Stage −1 计算门（前置）：</b>DFT-SAPT 预示三成员 |ΔΔ(CT+ind)| < 约 RT 或符号序错乱，合成前降优先级/终止。<b>通过判据（须全部）：</b>D 端 α(OC/EHMC) ≥3；供体强度单调且疏水解耦成立（接触角协变量 + OC/HHCB 对）；去氰基类似物 q(OC)/q(类似物) >1.5；CT 归属为谱学 ≥2 项并行 SAPT CT/诱导分量显著；q_m(OC) ≥20 mg/g；二级出水去除 ≥80%、5 循环容量 ≥80%、二苯甲酮泄漏 <1%。<b>失败判据（任一）：</b>D/N/A 三成员 α 统计等价（CT=0）；全谱 α 与 logKow 线性 R²>0.9（纯疏水，命中 T1）；去氰基类似物结合不低于 OC；CT 谱学 + SAPT 全缺。</p>
+</div></details>
+<details class="sec"><summary>⑥ 质量依据与三方立场</summary><div class="secbody">
+<p>轨迹 r1=75（0c/2h：水相中性客体 CT 幅度不确定、供体-受体二分过简）→r2=83（0c/0h，闭合两 high：合成前 DFT-SAPT 预筛门 + 实测电子学描述符替代跨语境 σp，反转降为加分项；kO3 升 verified）→r3=85 pass（0c/0h，清偿承重证据债：TTF +0.34 V、Moser PMID 1311417 外部核验；稳固离散分子笼第三格式；原创口径精确收敛为"首例中性高疏水水污染物/首例紫外过滤剂的供体-受体 CT 选择性捕获 + 孔壁电子密度同拓扑因果归因系列"，禁称全球首例）。方案裁决 85 通过；跨分支独立审查列 C 级（研究假设，水相 CT 增量为科学赌注，背书只能来自 Stage −1 与实测）；负责人尚未裁决。注意：本条文件完整、闭环、零未决 critical/high，C 级分层针对科学先验而非文件完整性。</p>
+</div></details>
+<details class="sec"><summary>⑦ 诚实限制</summary><div class="secbody">
+<p>主选择性主张为未经实验证实的科学赌注，方案以 Stage −1 计算 go/no-go 预筛门 + 完整可证伪判据前置，属机制确证型研究；归属依赖多支柱间接证据；无新方法学贡献（诚实边界）；RC 转译距离偏大（H2 降级后更诚实但不加分）；一般 CT 捕获（碘/硝基芳烃传感）主题已占用致增量收窄；ng/L 床层性能显式依赖 A19 预浓缩协作，本角度床层判据限 µg/L 机理工况；非承重辅助引用入正文前须逐条全文核定。</p>
+</div></details>
+</div>
+</div>
+
+<!-- 卡片 12 -->
+<div class="card" id="card12">
+<div class="cardhead">
+<h3>卡片 12 · S51 / DDT A01 · 脱氯化氢酶 β-消除双基序反应性识别笼</h3>
+<div class="sub tag-row">
+<span class="badge b-pass">86 · passed（第 8 通过，DDT 首个通过）</span><span class="badge b-D">独立审查 D 级 · 现版本停止（证据完整性 6/10）</span><span class="badge b-wait">未裁决（DDT 方向整体收缩）</span>
+分支：<code>Ultimate</code>　源：<code>rounds/fresh_1000/ddt/SCHEMES/S51_A01_dehydrochlorinase-dual-motif_passed.md</code>（r2 通过稿）与 <code>_revise.md</code>、<code>S28_A01_*_r1/r2/r3.md</code>（同角度早期迭代）
+</div></div>
+<div class="body">
+<div class="warn"><b>重要分歧：</b>本条方案裁决为 86 分 pass，但跨分支独立审查列 D 级（现版本停止）——证据完整性 6/10（酶学核心文献 Clark 1984/Sternburg 1954/GSTe2 2005 均仅 metadata_verified 未全文核验）与"捕获不转化"化学窗口问题。两个立场如实并列。</div>
+<details class="sec" open><summary>① 科学/工程难题</summary><div class="secbody">
+<p>p,p'-DDT（C₁₄H₉Cl₅，MW 354.5，logKow 6.5–6.9）在环境中经脱氯化氢生成 DDE，该反应由 DDT 脱氯化氢酶催化（Clark 1984；Sternburg 1954；伊蚊 GSTe2，2005）。DDT/DDE/DDD 共享双(4-氯苯基)骨架，仅 C1 桥取代不同（DDT 为 -CCl₃ 四面体含桥碳叔氢，DDE 为 =CCl₂ 平面烯烃，DDD 为 -CHCl₂），中性无解离，静电/氢键/酸碱全不可用。地表水溶解相 0.1–5 ng/L。本方案取脱氯化氢酶 β-消除读出为机制原型，反转利用该读出，构建"识别 DDT 桥氢与 -CCl₃ 轮廓但不触发消除"的反应性识别腔。</p>
+</div></details>
+<details class="sec" open><summary>② 仿生故事（脱氯化氢酶双基序的反转读出）</summary><div class="secbody">
+<p><b>可转译原理：</b>双基序（碱性位点 C–H 接触 + 卤素/轮廓结合位点）对 DDT 相对 DDE/DDD 的几何与电子读出。酶以碱性基序攫取桥氢、以极性环境稳定氯离去；方案反转该读出，只识别不催化。<b>诚实边界（方案自识）：</b>DDT/DDE logKow 基线 α 约 2.5、DDT/DDD α 约 8，双基序增量 ΔΔG 3–8 kJ/mol 仅为疏水基线的 8–20% 微扰，DDT/DDD 方向的双基序贡献几乎确定被淹没；r2 裁决要求放弃 DDT/DDD 声称，聚焦 DDT/DDE 方向（扣除基线后 α>2）。<b>"捕获不转化"安全性：</b>以 Born 方程论证低介电腔（ε 约 2–4）去稳定 E2 极性过渡态，安全裕度 >95 kJ/mol；但残余 H1 风险为腔内有效介电极低可能使 TMP 碱有效 pKa 偏移 5–15 单位，侵蚀安全裕度，须材料原位验证。预组织原理引 Cram 1986（Angew Chem Int Ed 25:1039-1057，DOI 10.1002/anie.198610391）；<b>核验层级源文件不一致：</b>通过稿/_revise.md/design_r1 均标 metadata_verified，仅 design_r2 自报 full_text（经对抗核验披露）。</p>
+</div></details>
+<details class="sec" open><summary>③ 材料设计方案</summary><div class="secbody">
+<p>r1 架构为 HCP（超交联聚合物）内双基序位点：碱性位点（TMP 型位阻碱）与 -CCl₃ 亚腔。r2 裁决指出 HCP 中 -CCl₃ 亚腔精度难保证（±0.5 Å），建议切换至离散笼架构：POC（多孔有机笼）/间苯二酚芳烃（resorcinarene）笼替代 HCP，精度从 ±0.5 Å 提升至 ±0.2 Å。r2 六维 14/17/13/14/9/6 = 86（r1 为 73：设计 77→攻击 1c/2h→裁决 revise；r2：设计 88→攻击 0c/0h→裁决 pass）。</p>
+</div></details>
+<details class="sec" open><summary>④ 合成方法</summary><div class="secbody">
+<p>文件未给出完整 SOP（证据完整性 6/10 的构成部分）；r2 裁决路径为：先做 DFT 闭合"捕获不转化"（计算 C–H···TMP 氢键能 vs E2 消除能垒），再切换至离散笼架构（POC/间苯二酚芳烃笼合成），随后全文核验酶学核心文献（Lipke 1959/Wang 2008）。独立审查另指出：源稿把 TpPa-1 残余醛、4-amino-TEMPO、位阻碱 TMP 和 5-iodotriazole 的作用混在一起，无法形成确定空间结构。</p>
+</div></details>
+<details class="sec"><summary>⑤ 验证逻辑</summary><div class="secbody">
+<p>因果对照：DDE（脱 HCl 产物，无桥氢）、DDD（还原脱氯产物，桥氢保留但氯位变化）、dicofol（羟基化 DDT，极性端变化）三组结构类似物；DFT 判据：识别态热力学稳定而消除态动力学受阻（C–H···TMP 氢键能 vs E2 能垒）。选择性声称收窄为 DDT/DDE 方向（扣除 logKow 基线后 α>2）。失败判据：双基序增量扣除基线后统计不显著，或材料原位 pKa 偏移使消除裕度低于预注册线。</p>
+</div></details>
+<details class="sec"><summary>⑥ 质量依据与三方立场</summary><div class="secbody">
+<p>同角度早期迭代 S28 A01 经 r1–r3；S51 A01 r1=73→r2=86 pass（Born 方程安全裕度论证、离散笼修订路径、声称收窄至 DDT/DDE）。方案裁决 86 通过（六维 14/17/13/14/9/6）；跨分支独立审查列 D 级（现版本停止：证据完整性 6/10、核心文献 metadata_verified、"捕获不转化"化学窗口存疑、源稿材料路线混在一起无法形成确定空间结构）；负责人尚未逐一裁决（U 系列未含本条，但 U-018 已停 main 侧 DDT50-01，DDT 方向整体处于收缩状态）。台账注：STATUS.yaml passed_list 漏载本条（汇总 9 vs 逐项 10 的差即由此）。</p>
+</div></details>
+<details class="sec"><summary>⑦ 诚实限制</summary><div class="secbody">
+<p>①证据完整性 6/10 为通过时即存在的已知短板（酶学核心文献三条均 metadata_verified）；②logKow 基线淹没使 DDT/DDD 方向双基序声称不可成立（方案自识并已收窄）；③低介电腔 pKa 偏移风险无法仅凭溶液化学排除；④HCP 精度不足（±0.5 Å）为 r2 裁决认定的架构缺陷，离散笼（resorcinarene/POC）修订路径尚未实例化；⑤独立审查认定的"源稿把多条路线混在一起"问题在 r2 文件中部分存在。若重启，须按独立审查要求：先全文核验酶学文献、实例化离散笼单体与 SOP、闭合三相质量平衡。</p>
+</div></details>
+</div>
+</div>
+</section>
+
+<section id="cardsC">
+<h2>五、已停高分方案（存档，不得读作现行方案）</h2>
+<p>以下两条在 2026-07-31 独立审查中列 A/B 级、纸面裁决 E1_ready/concept_valid，但负责人首轮裁决判停。本章存档其完整设计内容，供未来若重启时参照；重启视为新方案。</p>
+
+<!-- 卡片 13 -->
+<div class="card" id="card13">
+<div class="cardhead">
+<h3>卡片 13 · DDT50-01 / LPO-SIP · C12 软相有序浅印迹水合珠</h3>
+<div class="sub tag-row">
+<span class="badge b-pass">87 · E1_ready（二轮复审撤销 E1 含义）</span><span class="badge b-A">独立审查 A 级 · 机制可证伪性最好</span><span class="badge b-stop">U-018 合成可操性不可接受，当前版本停止</span>
+分支：<code>main</code>　源：<code>rounds/genx_ddt_50x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md</code> §6
+</div></div>
+<div class="body">
+<details class="sec" open><summary>① 科学/工程难题</summary><div class="secbody">
+<p>目标场景：市政二级出水抛光，DDT 家族亚 ng/L——波兰 144 份处理污水样品中 p,p'-DDT 平均 0.05±0.07 ng/L、范围 0.04–0.28 ng/L、检出 79%，总 DDT/DDE/DDD 平均约 0.16 ng/L（E193）；香港两座污水厂研究原水总 DDTs 约 6 ng/L 并显示处理/固液分配差异（E194）。场景通过，但要求亚 ng/L 方法和固液分相：二级出水中的 DDT 很容易由固相分配主导，环境端必须分别报告全水样、0.45 µm 滤液和截留颗粒，吸附床主判据只用滤液，全水样用于评估工程预过滤边界，不把颗粒沉降写成吸附。</p>
+<p><b>痛点一：</b>自由水相浓度极低、贴近方法检出限，DDT→DDE/DDD 进样口降解与瓶壁损失可能先于材料机制成为限制；家族成员 DDE/DDD 可能提前穿透，不允许总 DDTs 掩盖。<b>痛点二：</b>活性炭对 DDT 家族亲和极强，亚 ng/L 自由水相 logK<sub>AC</sub> 约 8.47–9.26（E197），DDT 共价溶胶-凝胶印迹、DDT/DDE/DDD 磁性假模板 MIP 和 DDT 分析 MIP 均已存在（E198–E200），所以主张不能是"首次 DDT MIP"或"比纯水 GAC 容量高"；增量必须能把膜相态、形状记忆、DOM 屏障和普通疏水吸附逐项拆开。<b>基线排除：</b>普通疏水分配（LDPE 纯吸收、PDMS 软聚合物、稻壳/松木生物炭、椰壳 GAC 与再生活性炭等外部基准）、全体积软相非特异吸收（C8/C18 等摩尔脂链、无 LMA 同腔、自支撑全体积珠对照）、形状记忆缺失体（NIP）与位向错配体（2,2'-二氯二苯甲烷错位 dummy）、DOM 假增益（无 HEMA 对照配平纯水 Kd 后比较）。</p>
+</div></details>
+<details class="sec" open><summary>② 仿生故事（膜脂链长/相态/胆固醇调节 DDT 分配）</summary><div class="secbody">
+<p><b>生物原型：</b>人工和天然膜的 DDT 分配不是单一 logKow——在磷脂膜中，脂链长度、相变和 50 mol% 胆固醇可使分配发生大幅改变（50 mol% 胆固醇使分配约从 260,000 降至 120,000，E195）；DDT 从乳糜微粒向组织的转移快于且独立于胆固醇酯核心脂质转移（E196），说明局部软相与界面释放比总脂质含量更接近功能变量。这是可迁移的分配/转运调节功能（膜相态与界面可达性调节疏水物分配），非毒性靶蛋白。直接先例边界：GAC logK<sub>AC</sub> 8.47–9.26 与共价/磁性印迹先例意味着增量不在容量而在机制可拆分性。</p>
+<p><b>硬对应条目（源文件 §6.2 三行表：生物事实→材料实现→预注册预测→因果对照）：</b>其一，膜分配随脂链长度与相态改变 → LMA C12 软域、C8/C18 保持等摩尔疏水基团；预测 DDT 家族 Kd 对 C8/C12/C18 呈峰值或非单调而不是仅随碳数上升；对照 DDT50-11/12 加 DSC 与湿态自由体积。其二，DDT 从乳糜微粒向组织的释放快于核心胆固醇酯 → 1–3 µm 浅壳而非全体积 LMA 块体；预测浅壳在相同 LMA 质量下具有更快吸附且不牺牲家族最差成员；对照均匀共聚 DDT50-17 与自支撑 DDT50-10。其三，生物膜仍会富集许多疏水物、不能自动证明 DDT 选择性 → 非目标 dummy 浅腔加 HEMA 水化口；预测 NIP、错位 dummy 和无 HEMA 分别失去形状、位向和 DOM 保留增益；对照 DDT50-14/15/16。<b>诚实边界：</b>4-VBP 承担可量化的刚性双芳环界面，不声称氯特异结合；原型为膜物理化学的分配调节而非特异性蛋白结合；DDT 本身不得作模板。</p>
+</div></details>
+<details class="sec" open><summary>③ 材料设计方案</summary><div class="secbody">
+<p><b>唯一实体：</b>核壳珠 LPO-SIP。芯：St/DVB=70/30（摩尔），150–300 µm，开放宏孔 20–80 nm。外壳：干复合体 30±5 wt%，HEMA/LMA/EGDMA/4-VBP = 35/30/30/5（摩尔），干壳 1–3 µm；LMA（lauryl methacrylate）承担 C12 低有序软域；4-VBP（4-vinylbiphenyl）承担可量化的刚性双芳环界面，不声称氯特异结合。假模板：4,4'-二氯二苯甲烷，相对 4-VBP 0.5 当量；目标 DDT 本身不得作模板。空间组织：同锅延迟投料使壳层单体富集于外层 1–3 µm（软分配域与浅腔位于界面、HEMA 水化口朝外），独立成核 >5 wt% 或截面测量不能证明外层富集即 MFG-STOP。</p>
+<p><b>识别元：</b>C12 软域相态有序分配（膜有序度维）+ 双对氯苯几何浅腔（dummy 形状记忆维）+ HEMA 水化口（DOM 屏障维）。<b>因果对照系列（六类同批制备）：</b>DDT50-11 C8 辛基甲基丙烯酸酯版（短链脂相对照）；DDT50-12 C18 硬脂基甲基丙烯酸酯版（长链高有序对照）；DDT50-13 无 LMA 同腔珠（删除软相）；DDT50-14 无 HEMA 同腔珠（删除水化口）；DDT50-15 无假模板 NIP（删除形状记忆）；DDT50-16 2,2'-二氯二苯甲烷错位 dummy（对氯位错配）；DDT50-17 均匀共聚而非壳层富集（删除浅腔空间组织）。外部基准：商用椰壳 GAC、再生活性炭、POM 被动采样薄片、LDPE 珠、PDMS 多孔颗粒、生物炭。匹配判据：完整体与 C8/C18/无 LMA/无 HEMA/NIP/错位 dummy 的壳质量 ±5%、孔容 ±10%、粒径 ±10%。形态 QC：壳质量、截面 Raman/ToF-SIMS 的 LMA/HEMA 外层富集、DSC 软域转变、湿态接触角、N₂/压汞孔结构、粒径和湿态抗压。</p>
+</div></details>
+<details class="sec" open><summary>④ 合成方法（判停原因所在）</summary><div class="secbody">
+<p>同锅延迟投料路线。<b>第一步种珠：</b>PVA/NaCl 水相中先使 St/DVB/甲苯-庚烷/AIBN 油滴成种珠，聚合至约 35–45% 转化（源文件本节未单列种珠温度与搅拌速度，同批 DCP 草案给的是 70 °C、300–500 rpm）。<b>第二步延迟壳层：</b>于 30–45 min 内滴加含 HEMA/LMA/EGDMA/4-VBP、dummy（4,4'-二氯二苯甲烷，相对 4-VBP 0.5 当量）、少量 AIBN 和与芯相兼容的乙酸乙酯/甲苯壳层液。<b>第三步固化：</b>70 °C 8 h、80 °C 2 h。变体规则：C8/C18 只用等摩尔辛基/硬脂基甲基丙烯酸酯替换 LMA，其余投料和壳质量目标不变。<b>第四步假模板洗脱：</b>乙酸乙酯/异丙醇梯度，连续三次洗液低于方法 LOQ，质量闭合 90–110%。<b>放行/QC 判据：</b>形态 QC 全套；MFG-STOP 触发条件为独立成核 >5 wt%、壳质量不在 25–35 wt%、或 4-VBP/LMA/HEMA 不能被截面测量证明富集于外 1–3 µm，触发即不进入 DDT 测试。<b>负责人判停理由（总结卷）正在于此 1–3 µm 薄壳多单体延迟聚合的可操作性与成功率。</b></p>
+</div></details>
+<details class="sec"><summary>⑤ 验证逻辑</summary><div class="secbody">
+<p><b>M0 机制层（µg/L）：</b>四目标各 1 µg/L 加竞争物 PCB-153、HCB、dicofol、chlorpyrifos、anthracene、phenanthrene、BPA 各 1 µg/L；玻璃体系，载体溶剂 ≤0.01%，n=5；输出自由水相 Kd、动力学半时和质量平衡，不用 qmax 排名。<b>M1 场景层（ng/L）：</b>四目标各 0.05/0.5/5 ng/L，两厂三时点二级出水，每份分未过滤、0.45 µm 滤液和截留颗粒三相；吸附床主判据只用滤液。<b>M2 DOM 因果：</b>Suwannee River NOM 0/2/5/10 mg-C/L 加真实 EfOM；完整体与无 HEMA 对照先匹配纯水 Kd ±15%，再比较 5 mg-C/L Kd 保留率。<b>M3 短柱：</b>10 cm×4.6 mm，EBCT 2/5/10 min，GAC 等床体积；穿透按家族最差成员 C/C0=0.1 和 0.5 报告；五次 80% 异丙醇/20% 乙酸乙酯再生后工作容量 ≥80%，同时做溶剂回收和 DDT 质量闭合。分析：EPA Method 1699 HRGC/HRMS 或经验证的同位素稀释 GC-MS/MS，每样萃取前加对应 ¹³C 标记物，序列中持续监控 DDT→DDE/DDD 进样口降解；任何批次 DDT 分解 >20%、空白 >ML 或回收不合格均整批无效。</p>
+<p><b>硬通过线五条：</b>PACKING-PASS（C12 完整体对四目标几何均值 Kd 高于 C8 和 C18 各 ≥1.5 倍，DSC/湿态自由体积校正后仍成立，否则删除膜有序度主张）；POSE-PASS（完整体对 DDT 家族/七竞争物的选择性至少比 NIP 和错位 dummy 高 1.5 倍、95% CI 下限 >1，否则降级为普通软相吸附剂）；BARRIER-PASS（纯水匹配后完整体在 5 mg-C/L EfOM 中 Kd 保留率比无 HEMA 高 ≥25 个百分点，否则删除水化屏障主张）；FAMILY-PASS（0.5 ng/L 二级出水滤液家族最差成员去除率 ≥70%，不允许总 DDTs 掩盖 DDE/DDD 提前穿透）；GAC-PASS（不要求容量超过 GAC，要求在相同初始床压降和床体积下 EfOM 中家族最差成员 BV0.1 不低于 GAC，或在选择性/再生溶剂消耗上出现预注册优势，两者均无则停止工程升级）。终止线：TEMPLATE/ANALYTICAL/MATRIX/PACKING-STOP（加 MFG-STOP），触发后不能靠提高 LMA、加永久电荷或改用 DDT 直接模板救场。</p>
+</div></details>
+<details class="sec"><summary>⑥ 质量依据与三方立场</summary><div class="secbody">
+<p>单轮 50×2 深度设计（2026-07-25），无 r1→rn 轨迹。纸面评分 <b>87/100</b>，六维 18/22/18/13/9/7；创新清单 A✓B✓C✓D✓E✓ 全通过。最终裁决：E1_ready，且是 100 案中唯一同时通过环境门、创新门、三道 owner gate、E1 完整性和零未决 critical/high 的方案，因此其 87 分可作为正式 E1 优先级（其余 100 案分数均为纸面诊断分）。DDT 50 案淘汰统计：E1_ready 1、concept_valid 12、control_only 22、terminated 15；只推荐 DDT50-01 进入正式 E1，先合成完整体加 6 个对照共 7 个同批材料，先过 M0 再进亚 ng/L；DDT50-02/03（C10/C14 脂链峰位后备，84/83）不在首批平行合成，仅在 C12 峰位不清但显示非单调趋势时进入第二轮链长细化。总结卷载：独立审查列 A 级、评机制可证伪性最好、工程优先级第三，并指出二级出水中 DDT 多在颗粒相、浓度极低、GAC 基线极强，分析与瓶壁损失可能先于材料机制成为限制；二轮复审撤销 E1_ready 含义、改为"重建薄壳制造路线后才可 M0"；负责人 U-018 判合成路线可操作性和成功率过低，当前方案不再继续，原 St/DVB 核壳路线停止，不再以更复杂的表面引发聚合修补，未来重启视为新方案。</p>
+</div></details>
+<details class="sec"><summary>⑦ 诚实限制</summary><div class="secbody">
+<p>①全部性能数字为预注册判据而非实测，未采购、未合成、未产生性能数据；②生物原型是膜分配物理化学而非特异蛋白结合，4-VBP 不声称氯特异结合；③目标 DDT 本身不得作模板，模板洗脱闭合（三次洗液低于 LOQ、质量闭合 90–110%）为硬门；④亚 ng/L 分析、进样口降解与瓶壁损失为第一风险，故设 ¹³C 内标、分解 >20% 整批无效与三相报告；⑤GAC-PASS 明示不要求容量超过 GAC，工程升级只在选择性/再生溶剂消耗出现预注册优势或 BV0.1 不低于 GAC 时才成立；⑥颗粒相主导与 GAC 极强基线使分析与瓶壁损失可能先于材料机制成为限制；⑦承重死因为薄壳合成（同锅延迟投料、1–3 µm 壳厚、多单体外层富集 QC）的可操作性与成功率；⑧当前版本已停止，本节内容为存档供未来若重启时参照，不得读作现行方案。</p>
+</div></details>
+</div>
+</div>
+
+<!-- 卡片 14 -->
+<div class="card" id="card14">
+<div class="cardhead">
+<h3>卡片 14 · GX50-01 / BGE-SIP · GenX 支化醚几何浅腔水合珠</h3>
+<div class="sub tag-row">
+<span class="badge b-wait">84 · concept_valid（M0-blocked，1 未决 critical）</span><span class="badge b-B">独立审查 B 级 · 决定性前置门</span><span class="badge b-stop">U-020 整体一般，当前版本停止</span>
+分支：<code>main</code>　源：<code>rounds/genx_ddt_50x2_deep_design_20260725/DEEP_DESIGN_AND_SCORECARD.md</code> §4
+</div></div>
+<div class="body">
+<details class="sec" open><summary>① 科学/工程难题</summary><div class="secbody">
+<p>目标场景：市政二级出水抛光。九座美国市政厂最终出水中 HFPO-DA 67% 检出（E001）；米兰城市河流研究的 WWTP 出水为 2.5–72 ng/L、均值 35±31 ng/L（E187）；场景判为 passed_with_concentration_variability。<b>痛点一：</b>HFPO-DA 为支化醚羧酸根阴离子，头基强水合，受 mM 级 HCO₃⁻/SO₄²⁻/Cl⁻ 与 DOM 竞争；直接先例已覆盖大部分直观设计空间——阴离子交换树脂、季铵硅胶、含氟离子交换聚合物、含氟/胺 PMO、阳离子 Pd 笼和 GenX-MIP 传感器分别占据了"正电荷 + 疏水/氟亲和 + 模板腔"的组合（E168、E169、E188–E192）。<b>痛点二：</b>新方案必须由空间组织和同组成反事实承担增量；GenX 的醚支化几何增益不能由总电荷、疏水性（logD）、孔容或动力学单调解释（GENERIC-STOP 证伪门）；不得使用含氟单体（氟负担）与 GenX 直接模板（模板泄漏）；旧 HSA 三点分叉口袋路线已被裁定不能证明可独立转译的协同位点（7Z57 只证明 HSA 中存在两个 HFPO-DA 占位，E186），本轮只作负对照（GX50-38 terminated/historical）。<b>基线排除：</b>离子交换（任何永久 IEC >0.10 mmol/g 使主材料归类为离子交换并终止）、logD/疏水单调性、孔容与动力学单调性、DOM 非特异占位（C4 无 HEMA 对照）；外部基准 SC-P02、Qgel 型季铵硅胶和 GAC 用于锚定普通机制贡献。<b>工程定位：</b>GenX 类群去除当前主线仍是已通过 E1 释放的 SC-P02（四元混合逐成员报告、不声称 GenX 专一）；GX50-01 只承担无永久电荷、无含氟吸附相、无昂贵主客体前提下的醚支化几何额外增益验证，必须先通过 2–3 周 M0。</p>
+</div></details>
+<details class="sec" open><summary>② 仿生故事（Bug 羧酸钳 + TauA 水化判别）</summary><div class="secbody">
+<p><b>生物原型：</b>Bug 家族羧酸钳提供"头基固定 + 第二结构域判别"的天然功能（E163）；TauA 提供"相同头基下由水化/去溶剂化决定亲和差异"的天然功能（E164）——二者属可迁移的识别/分配原理而非毒性靶标。<b>负原型教训：</b>7Z57 是含肉豆蔻酸的 HSA–HFPO-DA 三元晶体，只证明 HSA 中存在两个 HFPO-DA 占位（E186），不证明旧三点口袋；旧评审已裁定 HSA 路线不能证明一个可独立转译的羧酸加醚氧加分化轮廓协同位点，本轮 HSA 路线只作为负对照。<b>可转译原理：</b>用非含氟、非目标假模板冻结支化醚羧酸的浅表几何；以脲基羧酸钳承担头基定位、以 HEMA 水化层承担 DOM 屏障，两个功能分区分别删除验证。<b>硬对应条目（源文件未使用 H 编号；创新清单 A✓ B△ C△ D✓ E✓，B/C 尚需 M0/证据关闭）：</b>N-(4-vinylbenzyl)脲的脲基对应 Bug 钳的中性氢键头基固定（C1 无模板与外部 Qgel/AER 对照界定贡献）；2-甲氧基-2-甲基丙酸假模板浅腔对应 GenX 的 α-支化醚几何（C2 无醚 dummy 2-甲基丙酸删除醚几何、C3 直链醚 dummy 3-甲氧基丙酸删除 α-支化，按预注册方向检验）；HEMA 水化外壳对应 DOM 屏障功能（C4 无 HEMA 删除验证）。<b>诚实边界：</b>B 与 C 维为 △（非抽象对应与可测增量均待 M0 关闭）；未决 critical 为非含氟 dummy 几何必须显示预注册 GenX 差异效应；原型只到 Bug/TauA 的一般原理层级，无 GenX 特异蛋白原型（总结卷载此为负责人判停理由之一：生物原型说服力不足）。</p>
+</div></details>
+<details class="sec" open><summary>③ 材料设计方案</summary><div class="secbody">
+<p><b>唯一实体：</b>核壳珠 BGE-SIP。芯：St/DVB=70/30（摩尔），甲苯/庚烷致孔，150–300 µm，开放宏孔 20–80 nm。壳：干复合体 25±5 wt%，HEMA/NVP/EGDMA/N-(4-乙烯基苄基)脲 = 40/15/35/10（摩尔），平均干壳厚 1–2 µm。假模板：2-甲氧基-2-甲基丙酸（非含氟、非目标），相对脲单体 0.5 当量；模板必须用 LC-MS/GC-MS 与 HFPO-DA 完全分离。空间组织：同锅延迟投料使壳层单体富集于外层形成浅腔；均匀共聚而不做外壳富集为空间删除体（C5）。</p>
+<p><b>识别元：</b>脲基羧酸钳（中性氢键供体对 HFPO-DA 羧酸头的定位）+ α-支化醚浅腔几何（dummy 冻结的支化轮廓）+ HEMA 非离子水化层（DOM 屏障）。<b>因果对照系列：</b>C1 无假模板 NIP（删除形状记忆）；C2 无醚 dummy 即 2-甲基丙酸版（删除醚几何）；C3 直链醚 dummy 即 3-甲氧基丙酸版（删除 α-支化）；C4 无 HEMA（删除 DOM 水化屏障）；C5 均匀共聚而非外壳富集（删除浅腔空间组织）。外部基准：SC-P02、Qgel 型季铵硅胶、GAC。匹配判据：所有珠匹配干壳质量 ±5%、可及脲位点 ±10%、粒径 D50 ±10%、孔容 ±10%；任何永久 IEC >0.10 mmol/g 使主材料归类为离子交换并终止。后备关系：GX50-02（2-异丙氧基丙酸假模板版，83）与 GX50-03（双假模板 1:1 壳，83）是 M0 失败时的假模板几何备选，不是并行主线，不得三案并行宣称成功。</p>
+</div></details>
+<details class="sec" open><summary>④ 合成方法</summary><div class="secbody">
+<p><b>第一步识别单体：</b>N-(4-vinylbenzyl)脲先由 4-vinylbenzylamine 与氰酸钾一步反应制备，并用 NMR/LC 确认纯度和残余胺；若该单体不能以一批次获得且纯度 ≥95%，触发 MONOMER-STOP，不临时更换成胍/季铵单体。<b>第二步种珠：</b>以 1 wt% PVA/0.2 wt% NaCl 水相悬浮 St/DVB/甲苯-庚烷/AIBN 油滴，70 °C 聚合至约 35–45% 转化。<b>第三步延迟壳层：</b>用 30–45 min 滴加已经与 dummy 预平衡的壳层单体液（HEMA/NVP/EGDMA/脲单体 40/15/35/10 加 2-甲氧基-2-甲基丙酸），70 °C 8 h、80 °C 2 h。<b>第四步后处理：</b>筛取 150–300 µm，以乙醇/水和稀碳酸氢盐循环洗脱 dummy，三次洗液均低于 LOQ 才进入吸附测试。<b>放行/QC 判据：</b>干壳质量 ±5%、可及脲位点 ±10%、粒径 D50 ±10%、孔容 ±10% 与对照匹配；永久 IEC >0.10 mmol/g 即归类离子交换并终止。路线为常规自由基悬浮聚合加一步脲化单体合成，源文件未列高危试剂条目。</p>
+</div></details>
+<details class="sec"><summary>⑤ 验证逻辑</summary><div class="secbody">
+<p>M0 冻结包（2–3 周、50–100 mg 级完整体加 5 个反事实）。机制筛查：10 µg/L HFPO-DA/PFOA/PFHxA/PFBA/PFBS/ADONA（可得时加 C6O4）；pH 6.5–7.5、2 mM HCO₃⁻、1 mM SO₄²⁻、10 mM Cl⁻、DOC 0/5 mg-C/L，n=5。主要交互：材料身份 × 污染物。<b>硬判据：</b>GX50-01 相对 C1 的 GenX 增益至少 1.5 倍，且该增益至少为 PFOA、PFHxA、PFBA 的两倍；C2 与 C3 必须按预注册方向降低/移动 GenX 优势。<b>DOM 门：</b>在二级出水 5 mg-C/L 等效 DOM 下，GX50-01 的 GenX Kd 保留率必须 ≥50%，并且相对 C4 的保留优势 ≥20 个百分点。<b>停止线：</b>DUMMY-STOP（C2/C3 不产生方向性差异）；GENERIC-STOP（结果可由 logD、总电荷、孔容或动力学单调解释）；MATRIX-STOP（优势在 DOM/盐中消失）；LEACH-STOP（假模板或单体超过方法 LOQ）；任一触发即不进入 E1，不允许改用 GenX 直接模板补救。M0 通过后的 E1 才降至 10/50/200 ng/L，并按 EPA 1633A 做同位素稀释、全过程空白、材料本底和质量平衡。</p>
+</div></details>
+<details class="sec"><summary>⑥ 质量依据与三方立场</summary><div class="secbody">
+<p>单轮 50×2 深度设计（2026-07-25），无 r1→rn 轨迹。纸面评分 <b>84/100</b>，六维 18/21/17/13/9/6；创新清单 A✓ B△ C△ D✓ E✓。最终裁决：<b>concept_valid（M0-blocked），不是 E1</b>；GenX 50 案中 E1_ready 为 0（concept_valid 12、control_only 17、terminated 21）。含一个必须实验关闭的 critical：非含氟 dummy 几何必须显示预注册 GenX 差异效应；不得用 84 分宣称已通过，M0 通过后才能改标 E1。真实推荐与资源顺序：用于立即验证 GenX 去除的是既有 SC-P02 E1 包（GenX 作为不可被类均值遮蔽的成员）；用于验证 GenX 专属增量的只做 GX50-01 的 50–100 mg 级 M0 完整体加 5 个反事实，不同时消耗资源并行 10 案；GX50-02/03 是 M0 失败时的假模板几何备选。总结卷载：独立审查 B 级（只做决定性前置门）；负责人 U-020 判"整体一般、合成过于理想化、生物原型说服力不足"，当前版本停止，原计划 pre-M0 不再开展。</p>
+</div></details>
+<details class="sec"><summary>⑦ 诚实限制</summary><div class="secbody">
+<p>①含一个必须实验关闭的 critical（非含氟 dummy 几何有效性），84 分为诊断分、不得宣称已通过；②GenX/PFOA 差异不能由总电荷、疏水性或孔结构解释，GENERIC-STOP 为该主张的证伪门；③B 维与 C 维均为 △（非抽象对应与人工材料可测增量待 M0/证据关闭）；④原型只到 Bug 钳头基固定加 TauA 水化/去溶剂的一般原理，无 GenX 特异蛋白原型，生物原型说服力有限；⑤HSA 路线教训：7Z57 只证明两个占位，旧三点口袋不可复活，HSA 系候选（GX50-38/39/40）全部终止或超范围；⑥永久 IEC >0.10 mmol/g 即终止并归类离子交换，不得以胍/季铵单体临时替换（MONOMER-STOP）；⑦任一停止线触发不得改用 GenX 直接模板补救。总结卷记载的负责人裁决：U-020 整体一般、合成过于理想化、生物原型说服力不足，当前版本停止——合成理想化与原型说服力为审查者指出的承重风险。</p>
+</div></details>
+</div>
+</div>
+</section>
+
+<section id="hist">
+<h2>六、历史产物（旧合同，仅存审计，不作现行方案）</h2>
+<p>以下产物在 2026-07-19 方法学校正（75c8144）前完成，污染物主线转向有机/新污染物后转为历史审计产物，不进入现行评审。其中 D1-A/D1-B 为项目唯一走完三轮对抗并获 design pass 的完整方案对，FcRn 线为校正前唯一做到实验交接版深度的 ROX 方案。提取内容已对抗核验（状态结论、门禁阈值、SOP 数值均与源文件一致）。</p>
+
+<!-- D1-A -->
+<div class="card" id="histD1A">
+<div class="cardhead">
+<h3>历史 1 · D1-A · 合成双臂磷酸盐肽夹（PstS/PBP 启发）· 历史主案</h3>
+<div class="sub tag-row">
+<span class="badge b-hist">93/100 · primary/pass（design pass）</span>
+分支：全分支　源：<code>rounds/round_3/D1A_FINAL.md</code>、<code>REVIEW_D1A.md</code>、<code>FINAL_SCORECARD.md</code>
+</div></div>
+<div class="body">
+<details class="sec" open><summary>① 科学/工程难题</summary><div class="secbody">
+<p>目标物为二级出水中磷酸盐，设计同时覆盖标准配水（M1：Pi 1.30 mg P/L、硫酸盐 67 mg/L、硝酸盐 8.50 mg/L、DOM 3.30 mg/L）与本地同批二级出水实测组成，批量实验设 Pi 0.1/1/10 mg P/L 三档，pH 7.20±0.10、25 °C。<b>痛点一：</b>磷酸盐在高背景竞争阴离子（SO₄²⁻/HCO₃⁻/Cl⁻/NO₃⁻/砷酸根，先等活度后按本地代表性摩尔过量）与 DOM、Ca/Mg/Fe/Al 共存下保持低浓度溶解态，必须与沉淀、金属桥联、胶体截留等假性去除严格分离——方案规定过滤前后去除差异 ≤5%、粒径/浊度不得超空白+3SD、材料上不得出现与 P 同步的金属共沉积，否则判为沉淀/桥联/胶体截留不计入口袋吸附。<b>痛点二：</b>需在水中构建对称预组织的胍基/脲基双臂跨臂口袋，对磷酸盐相对多种竞争阴离子同时给出选择性（α 下限）、绝对载量（Γacc≥10 µmol/g-dry、facc≥0.50）、柱性能（BV10≥50）、温和再生与成本（受体≤1000 RMB/g、Ctreat≤100 RMB/m³ 且≤商用树脂成本 10 倍）及蛋白酶/微生物稳定性，且静态几何、工作水相距离变化、锁开因果、工程增量须全部通过才能称硬对应。<b>基线排除：</b>普通正电荷离子交换（商用强碱树脂与 R-Rand 错位池）、空白支架非特异吸附（OEG 琼脂糖空白）、沉淀/金属桥联/胶体截留（金属总量与溶解量同步测定、P/金属共定位排查）、P7 类水凝胶基准同条件对比。</p>
+</div></details>
+<details class="sec" open><summary>② 仿生故事（E. coli PstS/PBP 磷酸盐结合蛋白）</summary><div class="secbody">
+<p><b>生物事实按 P1–P4 分账：</b>同一 E. coli T141D 变体存在 apo 结构 1OIB 与磷酸根结合结构 1IXG（P1/P2 支持 apo/bound、完全包埋、多点氢键与受限水合；E. coli PBP 口袋存在完全脱水和 12 个氢键，另一 C. perfringens PBP-1 的 9 残基/14 氢键只属于该蛋白不得外推）；PBP 荧光动力学支持先结合后闭合，PiBP-FRET 与固定化 PBP 证明构象响应可读取（P3/P4，P4 为传感先例不证明吸附床性能）。<b>可转译设计原理（待验证中心假说）：</b>对称预组织的胍基/脲基双臂在水中形成跨臂磷酸盐口袋；磷酸盐占据后缩短臂间距离并降低竞争置换；温和解吸使受体重新开放。<b>硬对应采取 Gate 化而非编号条目：</b>只有 M0 静态几何映射（1OIB/1IXG 刚体叠合、磷中心口袋体积/供体方向四类映射、R-Flex 构象采样覆盖 PBP 相对距离变化）、S1 水相静态选择性、L0 锁开因果（R-Lock 开放、不可闭合且静态可比）、D1 工作水相动态（占据同步寿命 FRET + 25 °C 同位素编辑 ROESY 同方向、置换 Gdyn）全部通过，才称 PstS/PBP 启发的静态—动态硬对应。<b>诚实边界：</b>蛋白事实不能推出人工肽夹的选择性、载量或再生条件；蛋白闭合与释放可分但生理释放不可移植，再生只能靠温和碱/盐/竞争配体筛查；任何一级失败按第 12 节切换，不以新桥、Zn 位点或追加官能团补救；本稿未报告任何实验结果。</p>
+</div></details>
+<details class="sec" open><summary>③ 材料设计方案</summary><div class="secbody">
+<p><b>唯一实体：</b>交联大孔氨基琼脂糖上固定化的合成双臂肽受体 R-Flex。受体共同核心 (Arm-A)-Nα-Lys[Nε-(Arm-B)]-CO-AzAla-NH₂，AzAla 侧链叠氮为唯一表面锚点；每臂固定序列 βAla-Cit-Arg-Lys(X)-Cys(Y)，含一个 Cit 侧链脲、一个 Arg 胍基与主链酰胺，不加 Zn；吸附体 X=Ac，两端 Cys 以碘乙酰胺封闭为 CAM。识别元为两胍基+两脲基+主链酰胺构成的跨臂磷酸盐口袋（供体次序为 R-Flex 特有）。空间组织：支架按实测可接近胺 20 mol% 接 DBCO-NHS、40 mol% 接 mPEG-NHS（Mn 约 2 kDa）、40 mol% 乙酰化；DBCO 位点以 1.05 当量受体 SPAAC 接枝，未反应 DBCO 用 10 当量 azidoethanol 封闭；主材料受体组成 99 mol% 无标记 R-Flex + 1 mol% FRET 报告体（裂解后统计接 5-FAM/5-TAMRA 并 HPLC 分离唯一双标物）。<b>因果对照材料系列：</b>R-NMR（A 臂 ¹³C/¹⁵N-Arg/Cit 同位素编辑 ROESY 第二结构读数）；R-Lock（两端 Cys 由唯一刚性试剂 4,4″-bis(maleimidomethyl)-p-terphenyl 分子内桥连，冻结候选不预设开态）；R-Scramble（主因果对照，两臂均固定为 Arg-βAla-Cit-Lys-Cys，破坏供体次序而保留锚点计量与元素组成）；R-Rand（四种一锚点双臂支化异构体等摩尔池）；单臂删除体 R-Aonly/R-Bonly 及其按实测摩尔浓度临用现配的 1:1 非共价混合物；空白/OEG 琼脂糖、商用强碱树脂、P7 类水凝胶为工程基准。</p>
+</div></details>
+<details class="sec" open><summary>④ 合成方法</summary><div class="secbody">
+<p><b>固相合成（0.10 mmol 标称）：</b>Rink amide resin（0.3–0.6 mmol/g）无水 DMF 室温溶胀 30 min、氮气保护；Fmoc 脱保护 20% v/v 哌啶/DMF 2×5 min；偶联氨基酸 4.0 eq、HATU 3.8 eq、DIPEA 8.0 eq，DMF 室温 30 min，支化核心及 Arg/Cit 位点双偶联；先偶联 Fmoc-AzAla-OH，再偶联中心支化专用 Fmoc-Lys(Dde)-OH，两臂内部 Lys 固定用 Fmoc-Lys(Boc)-OH；去中心 α-Fmoc 后沿 α-N 构建 A 臂 βAla-Cit-Arg-Lys(Boc)-Cys(Trt)，Ac₂O/DIPEA 各 10 eq 封 N 端；2% v/v 肼/DMF 5×3 min 去 Dde 构建 B 臂并封端。中心 Dde 去除后与全裂解后各做一次叠氮放行（FTIR 保留 azide 吸收 + DBCO 显色探针 SPAAC 转化率 ≥90%，不通过整批报废）。裂解 TFA/TIS/H₂O/EDT=92.5/2.5/2.5/2.5 室温 2 h，≥10 倍体积预冷乙醚沉淀，RP-HPLC 初纯，分析纯度 ≥95%；Cys 以碘乙酰胺 2.2 eq、20 mM HEPES pH 7.2 室温避光 60 min 封闭。<b>R-Lock 桥连：</b>Ellman 确认 1.8–2.2 自由巯基/分子，前体 0.10 mM、双马来酰亚胺 1.02 eq（DMSO≤5%）、氮气 4 °C 16 h；放行须 LC-MS/DOSY/Ellman 证明单分子双加成主产物纯度 ≥95%、0.05–0.50 mM 无浓度依赖聚集，双马来酰亚胺纯度 <95% 或不可得即 L0 失败不自制替代品。<b>固定化（5 mL 湿床）：</b>氨基琼脂糖水洗 10 BV、DMF 洗 5 BV，TNBS 测可接近胺；DBCO-NHS 0.20 eq、mPEG-NHS 0.40 eq、DIPEA 1.5 eq，无水 DMF、氮气、25 °C 2 h；乙酸酐 0.40 eq 封 30 min；受体 1.05 eq/实测 DBCO 于 10 mM HEPES pH 7.2、4 °C 16 h SPAAC；azidoethanol 10 eq 25 °C 2 h 封闭；湿态 4 °C、HEPES+0.02% NaN₃ 避光 ≤7 d，实验前无叠氮缓冲液洗 20 BV，不得冷冻。<b>安全注记：</b>DMF/哌啶/肼/TFA/EDT/乙腈/乙醚通风橱操作，肼废液单独标识，含叠氮储液不得酸化或接触铜/铅排水管，砷酸根竞争液按含砷危废。</p>
+</div></details>
+<details class="sec"><summary>⑤ 验证逻辑与失败合同</summary><div class="secbody">
+<p>Gate 顺序 M0→S1→L0→D1→固相/柱/再生，任一失败即停止固定化并切换，不得用高浓度、有机助溶剂或换缓冲掩盖。S1 水相静态：10 mM HEPES/10 mM NaCl pH 7.2、25 °C，受体 10 µM、Pi 0–200 µM，αPi/X 对硫酸盐/碳酸氢根/砷酸根 95% CI 下限 >2，Gscr 与 Grand 各竞争物 95% CI 下限 ≥1.5，Garm≥1.5，单臂及 1:1 混合物不得复制联合门槛。L0：R-Lock 与 R-Flex FRET 距离差 ≤0.20 nm，pKa/Kd/α/初始速率/水合敏感化学位移落 0.80–1.25 倍等效区间。D1：距离变化 ≥max(0.30 nm, 3σ)，Gdyn=kdisp,Lock/kdisp,Flex 95% CI 下限 ≥1.25。柱门槛：Γacc≥10 µmol/g-dry、facc≥0.50、BV10≥50、Qcol≥0.25 mg P/g-dry 且 ≥0.050 mg P/mL-bed、Udyn≥0.50、压降 ≤空白 1.20 倍、α 高于商用树脂与 P7；每材料 3 独立批次各 3 根柱，质量平衡 90–110% 否则该柱无效。再生候选用独立耗竭床筛查，P 回收 90–110%、开态恢复、损失 ≤10%、肽/染料 <LoQ。</p>
+</div></details>
+<details class="sec"><summary>⑥ 质量依据</summary><div class="secbody">
+<p>污染物筛选磷酸盐列第 1（综合分 95）；对抗评分 Round 1=78→Round 2=83→Round 3 D1-A=93。终审轨迹：首轮 89/100 revise，2 项 design high（单臂对照不可执行；qth,access 单位错误 1000 倍）→限域复审两项均关闭，最终 93/100 pass，0 critical 0 high。六维终选分：科学因果闭环 19/20、选择性吸附机制 18/20、仿生保真度 18/20、原创性 13/15、实验可证伪性与对照质量 15/15、证据完整性 10/10。pass 仅表示实验方案完整、可执行且有明确失败合同，不表示材料已获实验性能；D1-A 因原创性、纯有机稳定性和论文因果链更强为主案。后经 U-012 磷酸盐不作论文主目标、U-016 历史审计保留（不得删除）。</p>
+</div></details>
+</div>
+</div>
+
+<!-- D1-B -->
+<div class="card" id="histD1B">
+<div class="cardhead">
+<h3>历史 2 · D1-B · C 端固定化 PBP 痕量抛光床 · 历史备选</h3>
+<div class="sub tag-row">
+<span class="badge b-hist">89/100 · backup/pass（design pass）</span>
+分支：全分支　源：<code>rounds/round_3/D1B_FINAL.md</code>、<code>REVIEW_D1B.md</code>、<code>FINAL_SCORECARD.md</code>
+</div></div>
+<div class="body">
+<details class="sec" open><summary>① 科学/工程难题</summary><div class="secbody">
+<p>每个大分子蛋白最多提供一个磷酸盐位点，D1-B 仅定位为低 Cin 条件下的痕量抛光备选，不主张高容量或主体除磷。目标形态：二级出水中溶解态磷酸盐 0.10 mg P/L 量级，与高背景阴离子、DOM、Ca/Mg/Fe/Al 共存。<b>痛点一：</b>痕量磷须在 50 BV 内被选择性捕获，竞争阴离子摩尔过量（机制批次实验固定为 Pi 的 100 倍，322.8 μM），沉淀/金属共沉积/胶体截留必须排除。<b>痛点二：</b>蛋白吸附床位点密度天花板低（1:1 位点），须同时解决定向固定身份可测（sortase 结点检出）、活性保留（factive≥0.50）、构象报告（2 mol% MDCC 亚群等价性）、蛋白泄漏（<固定量 0.1%）、蛋白酶/微生物稳定、温和再生与成本（Costmax=5000 RMB/1.0 mL 论文验证床）；P4 传感先例不能证明本材料的位点密度、吸附床容量、二级出水选择性、再生或寿命。<b>基线排除：</b>支架离子交换/非特异截留（B-BLANK）、失活蛋白背景（B-INACT 70 °C 30 min）、通用阴离子交换（RESIN-1 唯一强碱性Ⅰ型季铵 Cl⁻ 型树脂）、传感响应不得替代吸附床资格。</p>
+</div></details>
+<details class="sec" open><summary>② 仿生故事（真实 PBP 直接保留原生口袋）</summary><div class="secbody">
+<p><b>生物原型：</b>真实 E. coli phosphate-binding protein（PBP，PstS），直接保留原生静态口袋和结合后闭合动态，避免重新构造蛋白口袋。证据分账：P1/P2 支持 apo/bound 结构（1OIB/1IXG 共用 321 aa 成熟 T141D 链）、完全包埋、多点氢键与受限水合；P3 直接支持 A197C-MDCC 的先结合后构象变化动力学；P4 只证明可固定化与 FRET/电位响应，属传感先例。<b>可转译原理：</b>不拆分口袋直接固定完整 PBP；C 端单点连接只统一固定端点，裂隙可达性仍须实测；2 mol% MDCC-PBP 与 98 mol% 同构建体共固定证明固定后占据时可逆构象响应。<b>硬对应条目：</b>静态硬对应（完整 PBP 定向固定，高背景阴离子中保留口袋依赖占据而非支架离子交换，因果对照 B-D56N/B-INACT/B-BLANK/RESIN-1）；动态硬对应（98:2 共固定，占据量与时间分辨 MDCC 同步、解吸后基线复位）；单点共价固定工艺（LPETG–GGG sortase 单点连接，生物来源不证明 C 端固定优于随机固定故不主张取向增量）；可逆释放（来源没有可移植的 PBP 再生条件，冻结乙酸/NaCl 温和洗脱并复位，属待证材料变量）。<b>诚实边界：</b>只有静态占据、动态报告、共价身份和工程床性能分别通过删位、失活、无报告体、空白和强树脂对照，才能使用"机制保持型蛋白—材料"表述。</p>
+</div></details>
+<details class="sec" open><summary>③ 材料设计方案</summary><div class="secbody">
+<p><b>唯一实体（B-ORI）：</b>定向固定真实 PBP 于 90–150 μm 交联氨基化大孔琼脂糖微球。蛋白组成：98 mol% NEM-PBP(A197C)-LPETG 与 2 mol% MDCC-PBP(A197C)-LPETG。主蛋白构建体唯一冻结为 pelB|PBP-321(T141D/A197C)|LPETG|HHHHHH；序列以受控附件 PBP_CONSTRUCTS.fasta 与 PBP_CONSTRUCT_PROVENANCE.md 为唯一文本来源，四个 SHA-256 冻结值，克隆前须过 SEQ-ID-01。空间组织与定向手柄：支架胺先接 DBCO（总 DBCO 0.10 equiv，其中 1 mol% 为 DBCO-PEG-disulfide-NHS 可裂解分析手柄），随后点击 H-GGGK(N₃)-NH₂（2.0 equiv/实测 DBCO），由 Lys 侧链叠氮固定、N 端 GGG 暴露给 sortase；剩余表面胺用 2 kDa mPEG-NHS（0.80 equiv）封端并乙酰化残余胺；Cys197 主亚群 NEM 封端、2 mol% MDCC。<b>因果对照系列：</b>B-ORI（完整 D1-B）、B-NOREP（100% NEM 无报告体）、B-D56N（T141D/D56N/A197C 口袋扰动，折叠可比方可归因）、B-INACT（固定后 70 °C 30 min，只作背景上限）、B-RAND（可选探索性随机赖氨酸固定，不承担取向因果/pass/失败合同）、B-BLANK（GGG/OEG 支架不加 PBP 经历 sortase 全洗涤）、SOL-PBP（同批可溶参照不作床容量基准）、RESIN-1（唯一强碱Ⅰ型季铵 Cl⁻ 型树脂，IECwet 与 COA 偏差 >15% 拒收）。</p>
+</div></details>
+<details class="sec" open><summary>④ 合成方法（重组表达 + sortase 固定）</summary><div class="secbody">
+<p><b>（1）表达纯化：</b>主构建体与 D56N 对照分别克隆入 pET-22b(+)，pelB 周质表达；50 mL LB 37 °C 12–16 h → 1% 转接 1 L Terrific Broth 至 OD600 0.6–0.8；IPTG 0.20 mM、18 °C 180 rpm 诱导 16 h；周质渗透休克（20% sucrose/30 mM Tris/1 mM EDTA pH 8.0 → 冰冷 5 mM MgSO₄），全程禁用磷酸盐缓冲液；Ni-NTA 纯化；SEC 分单体；放行 SDS-PAGE≥95%、SEC 单体 ≥90%、intact LC-MS 与验收序列相符；fapo≥0.95，再结合 0.90–1.10。<b>（2）Cys197 封端与报告亚群：</b>TCEP 0.5 mM 4 °C 15 min；98% 主亚群 NEM 1.10 eq 4 °C 避光 60 min，2% 报告亚群 MDCC 1.10 eq 4 °C 避光 2 h；各亚群 Kd/kon/koff/再结合/apo 相对差异 ≤20% 且活性 ≥未修饰双变体 80%；按摩尔混 98:2，固定后 MDCC 摩尔分数须 2.0%±0.5% 否则报废。<b>（3）支架：</b>1.0 mL packed 氨基琼脂糖，TNBS 测 nNH₂；DBCO-NHS 0.099 equiv + DBCO-PEG-disulfide-NHS 0.001 equiv + mPEG-NHS 0.80 equiv，碳酸氢盐 pH 8.3/10% DMSO，22 °C 2 h；乙酸酐 30 min；H-GGGK(N₃)-NH₂ 2.0 equiv 22 °C 4 h。<b>（4）sortase 固定：</b>SORTASE-ID-01 冻结为 S. aureus sortase A Δ59-His6；100 μL 床预试取 Yfix；正式 1.0 mL 床，PBP 浓度用反算 Cfeed,min=0.5381/Yfix mM（不得固定 100 μM），sortase 5 mol% 且 ≥5 U/μmol PBP；50 mM Tris/150 mM NaCl/10 mM CaCl₂ pH 7.5、25 °C 避光端对端 4 h；洗涤 10 BV 缓冲/10 BV 0.5 M NaCl/10 BV 20 mM imidazole，Ni-NTA 磁珠去酶；每批 2% 支架 TCEP 裂解分析手柄，LC-MS/MS 检出 LPET-GGGK 结点肽并量化水解；8 M urea/1 M NaCl 1 h 共价保留 ≥90%；结点不可检出/水解或非特异主导/酶去除失败整批报废。<b>批次放行红线：</b>序列不符、纯度单体不达标、亚群活性低于门槛、磷酸盐背景 >LoQ、负载不闭合、初始泄漏 >0.1% 均不得用后续吸附表现补救。</p>
+</div></details>
+<details class="sec"><summary>⑤ 质量依据</summary><div class="secbody">
+<p>Round 1/Round 2 为重开备选，Round 3=89。终审轨迹：首轮 80/100 revise（5 类 design high）→第一次限域复审 86/100 revise（柱前 BVmax,active 门漏乘 Umin；B-RAND 1% 可裂解释放子群有偏）→第二次限域复审 89/100 pass（0 critical 0 high；D1B-01 closed、D1B-05 closed by claim removal——B-RAND 彻底移出资格链、不主张取向增量）。六维终选分：因果闭环 19/20、选择性吸附机制 19/20、仿生保真度 18/20、原创性 10/15、可证伪性与对照 14/15、证据完整性 9/10。pass 只表示完整、可执行、可被失败合同裁决；D1-B 保留天然蛋白机制但单位床负载、成本和生物稳定性风险更高故为备选；切换规则：D1-B 只在 D1-A 机制或再生切换条件满足且 D1-B 预检通过时启动。</p>
+</div></details>
+</div>
+</div>
+
+<!-- FcRn -->
+<div class="card" id="histFcRn">
+<div class="cardhead">
+<h3>历史 3 · FcRn pH 开关 PVI 刷 GAC（ROX 侧实验交接版）</h3>
+<div class="sub tag-row">
+<span class="badge b-hist">未走六维评分 · 完整设计方案待实验验证（GLM 遗产）</span>
+分支：全分支　源：<code>rounds/rox_deep_design_1/ROX_PH_RESPONSIVE_COMPLETE_DESIGN.md</code>（PFBS 侧同源物见 <code>pfoa_deep_design_1/PFBS_CD_GAC_V2_REVISED_DESIGN.md</code> 与 <code>pfbs_afi_admission/R1A_SCHEME_CONCEPT.md</code>）
+</div></div>
+<div class="body">
+<details class="sec" open><summary>① 科学/工程难题</summary><div class="secbody">
+<p>ROX 14 元大环内酯，去糖胺二甲基铵 pKa 约 8.8–9.0，pH 5–8.5 全程以阳离子为主（pH 7.0 约 99%、pH 8.5 约 70%），分子尺度 1.5–2 nm、TPSA 217、强水合；ROX N-oxide 共轭酸 pKaH 约 4–5（三甲胺 N-oxide 4.65 类比，待步骤 0b 实测），捕获窗口内 99% 以上中性；N-desmethyl ROX 窗口内仍以阳离子为主。三组分极性与电荷跨度大导致：单一疏水分配对三者无分辨且无温和再生途径；单一离子交换对阳离子无分子分辨，位点被背景 Na⁺/Ca²⁺/Mg²⁺ 消耗；三组分难以同床捕获同条件再生。<b>痛点一（动态行为维，再生苛刻）：</b>常规炭吸附对 ROX 类大分子依赖疏水分配，再生靠热或溶剂；缺乏可在 pH 5.0–5.5 稀酸、常温、无溶剂条件下翻转亲和力的识别界面。<b>痛点二（静态结构维，锚点缺失）：</b>痕量阳离子大环内酯在高离子强度与 DOM 背景下需要定向静电锚点。<b>基线排除：</b>pH 惰性疏水分数（石墨微晶面深层疏水截留无 pH 杠杆，被刻意降权，由步骤 0a 杀死判据门控——空白氧化炭 pH 7.5 吸附后转 pH 5.5 脱附 2 h 保留率超过 40–50% 即触发降权预案或改写主张）；总容量掩盖可开关分数（所有容量须附同条件空白 AC 对照与可开关分数报告）。</p>
+</div></details>
+<details class="sec" open><summary>② 仿生故事（FcRn 组氨酸 pH 开关）</summary><div class="secbody">
+<p><b>生物原型：</b>新生儿 Fc 受体（FcRn）与 IgG 的组氨酸 pH 开关（抗体回收转运功能；可迁移的是其开关化学与锚点化学，而非蛋白功能本身）。<b>机制证据：</b>IgG Fc CH2-CH3 连接区（Ile253、His310、Met428、His433、Asn434、His435、His436）对接 FcRn α1/α2 与 β2-微球蛋白，化学计量 2:1；pH≤6.0–6.5 时界面 3–4 个组氨酸咪唑环质子化为咪唑鎓，His435 插入 FcRn Trp133 疏水口袋并与 Glu115 形成盐桥，His310 接触 Glu116/Asp130，KD 约 10–70 nM；pH 7.4 去质子化盐桥断裂亲和力下降不低于 100 倍；有效 Hill 系数约 2，转变表观 pKa 约 6.5–7.0，较游离组氨酸 6.0 上移 0.5–1.0 单位；开关化学本质是静电与互变异构切换无大构象变化；晶体结构 PDB 1I1A、1FRU、1EXU、4NOU。非蛋白类似物先例（转移依据）：His-Sepharose 中性捕获 pH 5–6 洗脱、FcRn 模拟肽配基 pH 触发洗脱、PVI 类 pH 响应捕获与再生、PVI 可接枝碳表面。<b>可转译原理四条：</b>P1 簇集咪唑协同质子化开关（刷内任一位点邻近可及咪唑 ≥3，表观 pKa 中点 6.0–6.5 优选 ≤6.3）；P2 微环境表观 pKa 放置；P3 羧酸根-阳离子盐桥定向锚点（Glu115-His435 盐桥 → 表面/刷内 -COO⁻ 对 ROX 去糖胺铵）；P4 差动比值验收（以 Q(7.5)/Q(5.5)≥5–10 与盐矩阵保持率验收）。<b>硬对应两条：</b>HC-1 动态行为维（化学同一加设计原理级硬对应，方向为工程反转）、HC-2 静态结构维（锚点化学硬对应）。<b>方向反转诚实声明（关键）：</b>FcRn 天然方向与本设计需求相反（低 pH 结合、高 pH 释放）；本设计释放方向首引工程化回收抗体先例 Igawa 2010（DOI 10.1038/nbt.1691，CDR 扫描引入组氨酸使抗原结合 pH 7.4 强、pH 5.5–6.0 弱，已核实），FcRn 仅作机理来源；任何对外表述不得把释放方向归于 FcRn 天然行为。</p>
+</div></details>
+<details class="sec" open><summary>③ 材料设计方案</summary><div class="secbody">
+<p><b>唯一实体：</b>介孔主导颗粒活性炭（GAC，20–40 目）表面受控氧化并经 ARGET SI-ATRP 接枝聚（1-乙烯基咪唑-co-HEMA）短刷的复合材料（AC-g-P(VI-co-HEMA)）。平台选型：优先介孔（2–10 nm）占比高、微孔占比低的牌号，BET 目标 600–1000 m²/g——ROX 1.5–2 nm 本就不能进入微孔，降低微孔份额即降低无 pH 杠杆的深层疏水截留份额。<b>空间组织（由内向外四层）：</b>第 1 层受控氧化，羧酸根 0.3–0.8 mmol/g（Boehm 滴定）、BET 保持率 ≥70%；第 2 层引发剂锚定，BiBB 限量投料使表面 Br 0.02–0.05 mmol/g（XPS 定量，逐批放行）；第 3 层 PVI 刷，DP 上限 20–30（等长线约 5–8 nm，介孔内以短刷为主），接枝量 10–25 wt%（TGA），刷内共聚 HEMA 10–15 mol%（羟基给体覆盖 N-oxide 的 N→O 氧并稀释电荷密度），MAA 0–3 mol% 仅作表观 pKa 微调旋钮默认不用；第 4 层条件启用轻度交联（固定阳离子 ≤8%，仅浸出不合格时启用）。识别元：表面/刷内羧酸根盐桥锚点（HC-2）、塌缩刷链咪唑簇、HEMA 羟基、残余石墨面（刻意降权）。表观 pKa 中点目标 6.0–6.5：pH 7.5 捕获态中性分数 91–97%，pH 5.0–5.5 释放态质子化 83–97%；最佳捕获区间如实标为 pH 7.0–8.5。<b>因果对照系列：</b>AC-g-QPVI（季铵化永久阳离子）、AC-g-PVP（中性刷）、AC-g-PMAA（决定性对照——若 PVI 相对 PMAA 在 Q(7.5)/Q(5.5) 上无统计显著增量则咪唑开关主张失败、HC-1 撤回降级为羧酸开关工程材料）、N-甲基化梯度 0/5/10/20%（等效组氨酸突变扫描）、接枝量梯度 5/10/25 wt%、羧酸根甲酯化样品（去锚点）、等羧酸根密度羧化树脂、空白 AC。</p>
+</div></details>
+<details class="sec" open><summary>④ 合成方法（10 g 批量台式 SOP）</summary><div class="secbody">
+<p><b>步骤 0a 杀死判据（释放物理门控）：</b>候选介孔主导 GAC 经步骤 1 氧化条件处理后，pH 7.5、150 mM NaCl + 1 mM CaCl₂ 背景下吸附 ROX（1 mg/L）至平衡，转 pH 5.5 稀盐酸脱附 2 h，保留率不超过 40–50% 方可继续；超标依次更换更低微孔份额牌号、氧化度上限内微调，仍超标则承认溶剂辅助并改写温和性主张。<b>步骤 0b 形态测量：</b>ROX N-oxide pKaH 与 N-desmethyl ROX pKa 实测（电位滴定或 pH 依赖 LC 保留），三组分 speciation 曲线入档后机理文本冻结。<b>步骤 1 受控氧化：</b>10 g AC（0.1 mol/L HCl 预洗、干燥）+ 200 mL 6 mol/L HNO₃，70 °C 回流 4 h，洗至 pH 恒定，60 °C 真空干燥；QC Boehm 羧酸根 0.3–0.8 mmol/g、BET 保持率 ≥70%。<b>步骤 2 引发剂锚定：</b>氮气下氧化 AC 悬浮于 150 mL 无水二氯甲烷，加三乙胺 0.5–1.0 mmol，冰浴滴加 BiBB 0.3–0.6 mmol（约 0.07–0.14 g），室温 24 h；QC XPS Br 3d 0.02–0.05 mmol/g 逐批放行。<b>步骤 3 ARGET SI-ATRP：</b>AC-Br、DMF/水（4:1）100 mL、1-乙烯基咪唑（[单体]:[表面 Br] 约 50:1）、HEMA 10–15 mol%、可选 MAA、PMDETA，通氮后加 CuBr 与抗坏血酸，50 °C 6–12 h 至接枝量 10–25 wt%；VI-Cu 相容性小试先行（VI 为强铜配体已知可降解 ATRP 控制），失败启用后功能化预案；母液 GPC 估链长，介孔保持率 ≥60%。<b>步骤 4 除铜：</b>EDTA + 稀酸洗涤，ICP-MS 残余铜 <50 µg/g（假设性指标须验证）。<b>步骤 7 放行门槛 (a)–(h)：</b>容量 ≥空白 AC 1.3 倍；pH 5.5 稀盐酸 2 h 再生率 ROX+N-desmethyl ≥80%；单循环不可逆损失 ≤2%、20 循环保持率 ≥80%；连续 3 次酸浸泡后滤液 TOC/A254 不高于空白；表观 pKa 中点 6.0–6.5；氯暴露 panel 后 pH 边缘漂移 ≤0.3；再生液管理方案入档；三标准品质量平衡闭合（回收率 90–110%）。<b>备用低成本路线：</b>水相自由基接枝（K₂S₂O₈ 引发，70 °C），无铜无 BiBB，让渡链长分布/表观 pKa 精调/浸出控制。释放液规程：默认 pH 5.0–5.5 稀盐酸（不用柠檬酸避免多价羧酸根与咪唑鎓成对占位），常温再平衡；再生率不足分级降级 0.1–0.5 mol/L NaCl 或 10–20% 乙醇，每级降级须声明温和性让步。</p>
+</div></details>
+<details class="sec"><summary>⑤ 质量依据与历史地位</summary><div class="secbody">
+<p>设计竞赛分：设计 1（pH 响应 PVI 接枝活性炭）=58、设计 2（pH 响应 MIP）=52、设计 3（电化学再生）=63（最高分但生物原型弱否决为主路线）；主路线为重新设计的 AC-g-P(VI-co-HEMA) GAC，未走六维评分，文档状态为完整设计方案待实验验证，下一步为步骤 0。工作流元数据：wdgafk9gf，12 agents，182 次工具调用，663,847 tokens，112.8 分钟，2026-07-19 00:30 完成。历史地位：fresh_1000 从零基础按新合同重建后，本方案作为审计产物保留；其"两维硬对应真仿生"框架与 PVI 刷碳表面接枝路线在方法学校正后的规约下须重新走准入门方可复活，不得直接沿用旧状态。先验注记（对抗核验修正）：ROX MIP 先例中分离因子 1.21 属于化工进展 2016 二氧化硅表面印迹层（J Chromatogr B 2016 为另一条 ROX 模板分子印迹先例，未附该数值）。</p>
+</div></details>
+</div>
+</div>
+
+<!-- OG1 -->
+<div class="card" id="histOG1">
+<div class="cardhead">
+<h3>历史 4 · PFBS-CD-OG1 · 取向 β-CD 单层 GAC（已建议终止材料化路线）</h3>
+<div class="sub tag-row">
+<span class="badge b-hist">未走六维评分 · 完整设计方案；终止备忘录："必须舍弃，不可通过优化成为高质量方案"（待 Pan Yao 最终批准）</span>
+分支：全分支　源：<code>rounds/pfoa_deep_design_1/PFBS_CD_OG1_COMPLETE_DESIGN.md</code> + <code>PFBS_CD_GAC_V2_TERMINATION_RECOMMENDATION.md</code>
+</div></div>
+<div class="body">
+<details class="sec" open><summary>① 科学/工程难题</summary><div class="secbody">
+<p>市政二级出水中 PFBS 50–500 ng/L，磺酸头基在所有相关 pH 下完全解离，与高浓度硫酸盐/碳酸氢盐/氯化物及 DOM 竞争。<b>痛点一（台账锚定三事实）：</b>其一疏水分配失效——C4 全氟尾太短不足以驱动进入炭微孔，GAC 对 PFBS 约 5,000–20,000 床体积即突破，而 PFOA/PFOS 为 100,000–300,000+ BV；其二静电捕获被排斥或无选择性；其三阳离子路线被仓库自身冻结反例取消资格——阳离子 β-CD 聚合物在 1 mM Na₂SO₄ 中 PFBS 去除率从约 94% 跌至约 38%，PFOS 保持近 79%（E056，百分数待全文复核），胍基 motif 漂向硫酸盐，电荷型短链捕获在本项目内为封闭路径。<b>痛点二：</b>单体亲和 Ka 约 2.5×10³ M⁻¹ 在 1 µg/L 下算术上不足，处理目标要求表观复合 Kd≥10⁴ L/kg（1 µg/L、1 mM Na₂SO₄ 中），相当于对可溶单体约 10⁴ 倍有效亲和增强。<b>盈亏平衡规则：</b>复合材料必须对 PFBS 交付至少 3 倍 GAC 床寿命，否则无商业案例。</p>
+</div></details>
+<details class="sec" open><summary>② 仿生故事（β-CD 结构模块 + GPR43 功能原理双原型分工）</summary><div class="secbody">
+<p><b>原型 1（结构模块，β-环糊精）：</b>CGTase 作用于淀粉产生的环状七糖（工业产量 >10,000 t/yr），是定义明确的单分子而非统计聚合物；截锥几何由结晶环糊精水合物与包合物 X 射线晶体学确立（内腔直径 6.0–6.5 Å、腔深 7.9 Å；宽口二次羟基带、窄口一次羟基带）。结合证据（含强制更正）：PFBS 亲和基准为三项 ITC 研究共识——Xiao 2019（ES&T Lett）、Wang 2020（ES:Nano）、Gao 2021（JPCB），Ka 约 2.2–2.8×10³ M⁻¹；Weiss-Errico 与 O'Shea 2017 系 γ-CD 研究须重标，只支持腔匹配对照（β>γ 排序）；亲和随全氟链长上升，故 β-CD 提供的是几何选择性非静电识别而非内禀短链偏好。<b>原型 2（功能原理，GPR43/FFAR2 短链羧酸受体）：</b>突变验证极性核心 Arg180/Arg255/His242（Stoddart et al., J. Biol. Chem. 2008, 283(47):32913-32924）定义浅极性口袋；已验证药理为 C2–C5 羧酸盐有活性、C6+ 无活性、C1 无活性；不复制任何残基、胍基或蛋白几何。<b>可转译原理五条：</b>P1 中性腔包合替代静电捕获（无硫酸盐脆性）；P2 深度限制门——β-CD 7.9 Å 腔是同一门的物理实现，C4 尾完全容纳、更长尾每 CF₂ 增量埋藏递减，但不主张复合体水平 α(PFBS/PFOS)>1；P3 中性极性口缘作头基接触区；P4 取向控制（一次面单点拴系使宽口朝向溶液，幅度 UNVERIFIED，由 HC3 因果检验）；P5 层-载体分工。<b>硬对应四条：</b>HC1 腔几何识别（证伪：金刚烷-1-羧酸置换 <50% 或腔尺寸系列非 β>γ>α）；HC2 层面贡献上的链长门（每可及腔 ΔKd 须显著平于 M0 的强长链偏斜谱且 C-silica 复现）；HC3 进入面取向（取向/随机 Ka 比 ≥1.5）；HC4 工程生存门（失败一律终止）。<b>诚实边界：</b>仿生强度中等；PFAS 为异生物质，终止备忘录侦察确认无任何进化出处理全氟烷基物质的生物系统。</p>
+</div></details>
+<details class="sec" open><summary>③ 材料设计方案</summary><div class="secbody">
+<p><b>唯一实体：</b>核壳颗粒复合材料 PFBS-CD-OG1（oriented-gate cyclodextrin on granular activated carbon）。核：烟煤基 GAC，12×40 目，BET 900–1100 m²/g。壳：氧化外表面上的 mono-6-amino-6-deoxy-β-CD 共价单分子层，每个 CD 仅经窄一次面单一酰胺键拴系至表面羧基，宽二次面朝向溶液，CD 载量 5–15 wt%（约 0.04–0.13 mmol 腔/g）；残余表面羧基以乙醇胺封端使净层中性。识别元三区固定空间排布：非极性腔（唯一捕获位点）、宽口二次羟基带（头基中性极性接触区）、单一一次面酰胺拴系（取向锁）。BET 保持率门 ≥母体 GAC 的 80%。<b>刻意省略（每条对应一次攻击）：</b>无胍基/任何阳离子基团（硫酸盐陷阱）；无五氟苯基/任何氟化组分；无锌/任何金属；无聚多巴胺/壳聚糖/海藻酸盐；无环氧氯丙烷（IARC 2A）。<b>因果对照系列（冻结）：</b>M0 空白洗涤 GAC；M-ox 仅氧化 GAC；C-random 天然 β-CD 非选择性偶联（取向因果检验）；C-silica 无孔硅胶珠上同一取向 CD 层（非吸附载体对照）；C-alpha/C-gamma 等摩尔载量腔匹配系列；C-load 5/10/15 wt% 载量系列。可选高亲和臂（非默认）：对苯二甲酰氯界面交联拴系 CD 层生长刚性无氟网络皮层，以 FTO 意见为门。</p>
+</div></details>
+<details class="sec" open><summary>④ 合成方法</summary><div class="secbody">
+<p><b>GATE G0（可溶相验证，任何炭工作之前，第 1–6 周，毫克级）：</b>以 ITC 与 ¹⁹F NMR 测 mono-6-amino-β-CD 及其酰胺封端形式的 Ka(PFBS) 与 Ka(GenX)，介质为超纯水、1 mM Na₂SO₄、加等摩尔 PFOA 竞争者；杀死判据：拴系模型口缘化学不得把 Ka 压到 2.2–2.8×10³ M⁻¹ 基准以下，PFBS 占据须在 1 mM 硫酸盐中存活。<b>主路线（取向单层，全部步骤低于 60 °C、水相缓冲液）：</b>步骤 1 GAC 预处理——0.1 M HCl 继 0.01 M NaOH 洗涤、105 °C 干燥；2 M HNO₃ 60 °C 温和氧化 3 h；门：BET 损失 <20%、Boehm 羧基 0.5–1.0 mmol/g。步骤 2 前体——mono-6-amino-6-deoxy-β-CD 市购或由 β-CD 两步制备（mono-6-甲苯磺酰化后经叠氮化还原或氨解），NMR 与 MS 确证。步骤 3 取向偶联——GAC 羧基以 EDC/NHS 于 0.1 M MES pH 5.5 活化 30 min，再与 mono-6-NH₂-CD 在 HEPES pH 7.4 室温温和混合反应 24 h；每个 CD 的唯一 6-氨基强制一次面拴系；残余活化酯与羧基以乙醇胺封端。步骤 4 接枝专属 QC——共价分数、可及腔计数（金刚烷-1-羧酸摄取）、XPS 表面组成、TGA CD wt%（目标 5–15%）、BET 与 NLDFT 孔映射、pH 7 zeta、浸出（7 天浸泡加热/pH 应力）。步骤 5 正确浓度性能 QA——100–500 ng/L PFBS 批摄取 LC-MS/MS，Freundlich 拟合跨 0.1–100 µg/L；四基质混合协议（超纯水、1 mM Na₂SO₄、NaCl/NaHCO₃ 基质、真实二级出水）；DOM panel 0–10 mg/L TOC。<b>再生：</b>甲醇或 50% 乙醇 + 0.1–0.5% NaCl，40–50 °C，2–4 床体积（协议类别已在交联 CD 聚合物上验证，Ling et al. 2020）；预注册门 ≥5 循环每循环容量损失 <10% 且全质量平衡。<b>成本：</b>台式约 350–780 USD/kg（EDC/NHS 活化位点为主要成本驱动）；中试 15–45 USD/kg（CDI 或三聚氯氰替代偶联 10–30 USD/kg、mono-6-NH₂-CD 50–150 USD/kg、GAC 2–4 USD/kg），低于 5 元/g 上限两个数量级。</p>
+</div></details>
+<details class="sec"><summary>⑤ 终止备忘录要点（2026-07-19）</summary><div class="secbody">
+<p>裁决"必须舍弃，不可通过优化成为高质量方案"，对象是 β-CD 接枝 GAC 这一具体材料答案而非短链 PFAS 问题；天花板算术 0.88 mol/kg × 约 2.5×10³ M⁻¹ ≈ 2.2×10³ L/kg（敏感度核查 8.8×10³ 仍低于目标）；创新性低于下限（新增 Water Research 2024、ESPR 2022、JMCA 2025、台账 E057）；仿生框架不成立（Fluc 通道/氟乙酸脱卤酶、Acidimicrobium A6 遭质疑、FACT 级硬对应 0–1 条）；四条优化路径逐条证伪（盈亏平衡需 1.2–42 倍床寿命等）；状态未提交、Pan Yao 最终批准；v1（OG1）保留为历史审计文件不删除不改写。设计竞赛分：设计 1（GPR43 多点识别）=46 失败（胍基硫酸盐陷阱）、设计 2（锌酶配位）=39 失败、设计 3（环糊精主客体）=54 最高分入选、设计 4（生物膜 EPS）=36 失败。工作流元数据：wydj333t5，10 agents，124 次工具调用，558,475 tokens，63.7 分钟，2026-07-18 18:46 完成。</p>
+</div></details>
+</div>
+</div>
+</section>
+
+<section id="brief">
+<h2>七、简卡：裁决卷宗其余设计线（C/D 级，不进入高质量层）</h2>
+<p>以下各线见 Ultimate 分支 <code>deliverables/attachments/HUMAN_ADJUDICATION_DOSSIER_20_SCHEMES_2026-07-31.md</code>。卷宗未载其数值分数，仅给处置类别；独立审查分层为 C 级四条、D 级三条（S34 与 S51 已升为完整卡片，见第四、五章）。列出以便对照，不代表推荐。</p>
+
+<div class="card">
+<div class="cardhead"><h3>Octocrylene A04（S45）· Michael 反应性捕获 <span class="badge b-C">C 级</span></h3>
+<div class="sub">源：<code>Ultimate:rounds/fresh_1000/octocrylene/SCHEMES/S45_A04_Michael-covalent-capture_revise.md</code></div></div>
+<div class="body"><p>原型为 GSH/GST 对亲电不饱和分子的亲核解毒；材料为 CMK-3 表面氧化后经 EDC/NHS 偶联哌嗪、或以 GPTMS 固定哌嗪的仲胺反应性捕获。属反应性去除而非可逆吸附。裁决：先做 OC 与模型仲胺的溶液动力学、产物结构、EHMC 对照及 pH/水分数扫描；无可靠产物或速率低于预设门即停。核心风险：OC 双键 β 位连两个苯基、高度拥挤，水中仲胺快速加成不能由氰基/酯基自动推出。</p></div>
+</div>
+
+<div class="card">
+<div class="cardhead"><h3>BPA PXR 双锚协同线（R2_S05_A01）<span class="badge b-C">C 级</span></h3>
+<div class="sub">源：<code>Ultimate:rounds/fresh_1000_R2/bpa/SCHEMES/R2_S05_A01_PXR-bidentate-avidity-class-capture_revise.md</code></div></div>
+<div class="body"><p>面向 BPA/BPF/BPS/BPAF 类别。原型为 PXR"大疏水腔 + 少量极性锚"的定向混杂性；PXR 执行传感与代谢调控，不承担水相富集。材料仅写为大腔 POP/HCP 加两个间隔 0.8–1.0 nm 的脲/酰胺锚，无确切单体、锚距构筑方式与 SOP。裁决：双锚协同属人工叠加的超分子设计，并非 PXR 结构直接提供；须先做双锚、单锚与错间距双锚可溶模型，双锚结合自由能增量超过两个独立单锚之和、且双酚相对单酚出现可重复优势，才存在 avidity；否则停止。若成立，另立人工识别课题，不再强调 PXR 硬仿生。</p></div>
+</div>
+
+<div class="card">
+<div class="cardhead"><h3>β-HCH A08 / A12 <span class="badge b-C">C 级（A12 承重映射错误）</span></h3>
+<div class="sub">源：<code>Ultimate:rounds/fresh_1000/betahch/SCHEMES/S35_A08_shape-dipole-COF-cavity_r4.md</code>、<code>S55_A12_halide-stabilizing-cage-molecular_r3.md</code></div></div>
+<div class="body"><p>A08：原型为 LinB 变体对 β-HCH 转化命运的差异，但催化命运不等于结合选择性；材料设想 7–8 Å 极性 COF 孔道匹配六氯全赤道位盘状构象，湿态可达孔的单体与计量未冻结。A12：原型为 DhlA 的卤化物稳定穴，其稳定的是反应中离去的 Cl⁻，与中性 C–Cl 表面属不同电荷状态；材料为 10–14 Å 有机笼内硫脲 NH 阵列经亚胺缩合固载 SBA-15-NH₂。裁决：A08 只用离散 cavitand 或结构确证的孔径系列比较 α/β/γ/δ-HCH 验证形状维，极性贡献须在同孔径同润湿材料中单独删除；A12 无结构或热力学证据时删除 NH···C–Cl 主张。两者均不得进入材料验证。</p></div>
+</div>
+
+<div class="card">
+<div class="cardhead"><h3>PFHxS R2_S03 · bambusuril C6 链长窗口 <span class="badge b-C">C 级（初判 B，二轮改判）</span></h3>
+<div class="sub">源：<code>Ultimate:rounds/fresh_1000_R2/pfhxs/SCHEMES/R2_S03_A01_chaotropic-OAT4-C6-window_revise.md</code></div></div>
+<div class="body"><p>原型为生物阴离子通道的 Hofmeister 顺序与 OAT4 对不同 PFAS 的差异运输；但通道与 OAT4 执行跨膜运输，材料要做富集吸附，功能不同源。材料设想以 bambusuril 低水活度阴离子友好腔降低磺酸盐头基去溶剂化代价、以腔深限制链长，目标是 PFBS/PFHxS/PFOS 之间的非单调 C6 窗口；确切主体、外缘取代、连接位与固载载体均未定义。裁决：先冻结一个水溶性离散主体，用 ITC 与 NMR 测三种 PFAS 及硫酸盐、氯离子的结合自由能与盐度效应；只有离散主体在硫酸盐背景下出现 C6 非单调窗口才另立固载课题，多价固载不能替代该热力学门。</p></div>
+</div>
+
+<div class="card">
+<div class="cardhead"><h3>BDE-209 A07（S11_A07）· 含硼 COF 读取醚桥 <span class="badge b-D">D 级 · 现版本停止</span></h3>
+<div class="sub">源：<code>Ultimate:rounds/fresh_1000/bde209/SCHEMES/S11_A07_ether-bridge-discrimination-cavity_r5.md</code>（实为未裁决设计稿）</div></div>
+<div class="body"><p>原型概括为"疏水酶腔保护 Lewis 酸位点"，无具体自然结构支持多溴屏蔽下的醚 O 识别；材料设想 COF 内 Lewis 酸 B 配位中央醚 O，以无醚桥的 DBDPE 作对照。承重错误：源稿把标准 TpPa-1 误写为含均一自由 COF-NH₂，骨架缩合后大部分胺已成键，所需位点阵列并不存在；十氟联苯接枝亦无成立的位点化学；三配位强 Lewis 酸 B 在水中优先水合或失活。台账问题：STATUS.yaml 指向不存在的 <code>A07_r5_passed.md</code>，实际文件明写"待攻击-裁决、status: design"。若重启，先设计真实可合成的含硼离散主体或含硼骨架单体，按二苯醚、BDE-47、DBDPE、BDE-209 逐级证明水相配位与可及性，并闭合三相质量平衡。</p></div>
+</div>
+
+<div class="card">
+<div class="cardhead"><h3>Endosulfan A01 · 介孔 Lewis 酸催化水解 <span class="badge b-D">D 级 · 作为吸附剂停止</span></h3>
+<div class="sub">源：<code>Ultimate:rounds/fresh_1000/endosulfan/SCHEMES/_wip/A01_r3.md</code></div></div>
+<div class="body"><p>原型为天然矿物 Lewis 酸表面与微生物非氧化水解；材料为 Ti-SBA-15 或介孔 TiO₂，Ti(IV) 配位 S=O 并极化 C–O–S，亚单层烷基膦酸酯提供疏水预浓缩；TEOS/TTIP/P123 酸性共缩聚加水热煅烧或 EISA 在化学上可行。裁决：工程价值来自催化水解而非吸附容量与再生；中性 pH 速率、磷酸盐与 DOM 中毒、Ti 溶出、S(IV) 自氧化及产物毒性均未关闭。若另立课题应改名"介孔 Lewis 酸催化 endosulfan 选择性水解"，先用模型环亚硫酸酯与 µg/L 批次实验验证，不占用选择性吸附材料名额。</p></div>
+</div>
+</section>
+
+<section id="open">
+<h2>八、供人工审阅的开放问题清单</h2>
+<p>以下问题承接 2026-08-02 叙述卷第八章，供负责人逐条裁决。</p>
+<table>
+<tr><th style="width:40px">#</th><th>问题</th></tr>
+<tr><td>1</td><td><b>BPA20-01（第一优先）：</b>是否先以可溶模型（4-甲基苯酚/4-甲基吡啶 NMR 滴定或水相 ITC）读取锚增量，再决定 COF 路线去留；唯一单体配方冻结的责任与时点；C1-B 是否按独立审查意见改为电中性匹配对照。</td></tr>
+<tr><td>2</td><td><b>PFBS A17、ROX A01、PCP A04（U-022 三条）：</b>共同点是正面主张先验低（几何反差/肟醚读取/snug-fit SF）。保留讨论的产出形态是"最小决定性实验清单"还是"转为基础机理/对照课题"？PCP A04 的自评分数未在独立复核中存活，是否仍按 U-022 保留需要明示。</td></tr>
+<tr><td>3</td><td><b>SC-P02（U-017）：</b>分子尺度硬对应重建的具体科学命题是什么；若重建失败，该 88 分方案是作为非仿生材料课题重新分类，还是终止。</td></tr>
+<tr><td>4</td><td><b>DCP20-01（U-021）：</b>载体先行架构筛选的候选载体（颗粒活性炭、层级孔碳、低本底无机载体）与裁决指标（印迹增量、孔堵塞、DOM 耐受、总复合材料质量利用率、床层性能）是否冻结为一份独立 SPEC。</td></tr>
+<tr><td>5</td><td><b>八条未裁决通过方案（S05、S14、S17、S26、S27、S32、S34、S51）：</b>是否补入负责人裁决表。独立审查分层与方案裁决 pass 存在系统差异：S05/S17/S32/S34 列 C 级，S26/S27 列 B 级，S51 列 D 级，仅 S14 同源 main 版 BPA20-01 列 A 级。需要负责人就"通过但先验低/证据薄"的方案给出统一处置口径（E1、决定性前置门、研究假设/对照课题、或停止）。</td></tr>
+<tr><td>6</td><td><b>已停两条（DDT50-01、GX50-01）：</b>是否确认"当前版本停止、重启按新方案"的记录无需再补；DDT 家族去除是否暂以外部基准（GAC）收口，还是另立软相路线的新设计槽（注意 S51 为 DDT 方向另一条通过线，独立审查列 D 级，与 U-018 判停的 DDT50-01 属不同机制路线）。</td></tr>
+<tr><td>7</td><td><b>台账处置：</b>Ultimate STATUS.yaml 两项不一致（汇总 9 与逐项 10 之差、BDE-209 A07 文件错指）由谁在哪个分支修复；S51 是否补录进 passed_list；修复后是否重跑 <code>scripts/validate_repository.py</code> 与凭据扫描。</td></tr>
+<tr><td>8</td><td><b>FcRn/PVI/GAC 历史方案的定位：</b>该校正前唯一做到实验交接版深度的 ROX 方案（两维硬对应、完整 SOP 与杀死判据）是否需要在新合同下重走准入门复活，还是仅作审计产物存档；PFBS 侧同源物（PFBS_CD_GAC_V2、AFI R1b 模块）同此处置。</td></tr>
+</table>
+</section>
+
+
+</main>
+
+<footer>
+本卷由 Claude Code 于 2026-08-05 编制：提取自 main/Qwen/Ultimate/dsreview 分支源设计文件，经独立对抗式事实核验收敛；与 2026-08-02 全分支高质量方案叙述卷、2026-07-31 跨分支独立技术审查与 20 方案人工裁决底稿保持一致。<br>
+所有性能数字均为纸面设计判据或推断值，不构成任何采购、合成或实验授权。引用文献核验状态以各方案源文件证据台账为准。
+</footer>
+
+</body>
+</html>
